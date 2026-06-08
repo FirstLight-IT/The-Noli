@@ -20,9 +20,9 @@ public class InteractionDetector : MonoBehaviour
         {
             interactableInRange = interactable;
             interactable.showIcon(true);
+            interactable.incrementCounter();
             
-            Debug.Log("TRIGGERED!");
-
+            //Debug.Log("TRIGGERED!");
         }
     }
 

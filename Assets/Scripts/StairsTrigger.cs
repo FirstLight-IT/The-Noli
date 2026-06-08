@@ -10,11 +10,10 @@ public class StairsTrigger : MonoBehaviour
     {
         if (!collision.CompareTag("Player")) return;
 
-        // Just swap whatever state they're currently in
         downstairs.enabled = !downstairs.enabled;
         upstairs.enabled = !upstairs.enabled;
 
-        Debug.Log("meep");
+        Debug.Log("Stairs Collider Triggered");
     }
 
 
