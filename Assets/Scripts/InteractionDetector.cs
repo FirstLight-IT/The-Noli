@@ -5,7 +5,6 @@ public class InteractionDetector : MonoBehaviour
 {
     private IInteractable interactableInRange = null;
 
-
     public void onInteract(InputAction.CallbackContext context)
     {
         if (context.performed)

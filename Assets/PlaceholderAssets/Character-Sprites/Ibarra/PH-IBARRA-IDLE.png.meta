@@ -1,0 +1,1809 @@
+fileFormatVersion: 2
+guid: 39082b1631ecee840b4b9be9078db222
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3307235275463646010
+    second: (Compressed) spritesheets350pxIDLE_0
+  - first:
+      213: -4064744947681065422
+    second: (Compressed) spritesheets350pxIDLE_1
+  - first:
+      213: 8465840223695515070
+    second: (Compressed) spritesheets350pxIDLE_2
+  - first:
+      213: -6083788341443382067
+    second: (Compressed) spritesheets350pxIDLE_3
+  - first:
+      213: -1619537577914794460
+    second: (Compressed) spritesheets350pxIDLE_4
+  - first:
+      213: 783357764211474867
+    second: (Compressed) spritesheets350pxIDLE_5
+  - first:
+      213: 5637789854259217010
+    second: (Compressed) spritesheets350pxIDLE_6
+  - first:
+      213: 8268615174209198882
+    second: (Compressed) spritesheets350pxIDLE_7
+  - first:
+      213: 510305598526481210
+    second: (Compressed) spritesheets350pxIDLE_8
+  - first:
+      213: 3147177491934534448
+    second: (Compressed) spritesheets350pxIDLE_9
+  - first:
+      213: -1457700464617804908
+    second: (Compressed) spritesheets350pxIDLE_10
+  - first:
+      213: -7770187801488900895
+    second: (Compressed) spritesheets350pxIDLE_11
+  - first:
+      213: 2184589857289368167
+    second: (Compressed) spritesheets350pxIDLE_12
+  - first:
+      213: 5418519251133093787
+    second: (Compressed) spritesheets350pxIDLE_13
+  - first:
+      213: 1153458842150707869
+    second: (Compressed) spritesheets350pxIDLE_14
+  - first:
+      213: 3943749748519182772
+    second: (Compressed) spritesheets350pxIDLE_15
+  - first:
+      213: 4830361071777187147
+    second: (Compressed) spritesheets350pxIDLE_16
+  - first:
+      213: 3669342456794172747
+    second: (Compressed) spritesheets350pxIDLE_17
+  - first:
+      213: 6517389321991715846
+    second: (Compressed) spritesheets350pxIDLE_18
+  - first:
+      213: 4686898119118304144
+    second: (Compressed) spritesheets350pxIDLE_19
+  - first:
+      213: -3639075586625000277
+    second: (Compressed) spritesheets350pxIDLE_20
+  - first:
+      213: -8557903857418252567
+    second: (Compressed) spritesheets350pxIDLE_21
+  - first:
+      213: 5475054850547259359
+    second: (Compressed) spritesheets350pxIDLE_22
+  - first:
+      213: -6730065453047632547
+    second: (Compressed) spritesheets350pxIDLE_23
+  - first:
+      213: 7625830088866094276
+    second: (Compressed) spritesheets350pxIDLE_24
+  - first:
+      213: -698415901038422409
+    second: (Compressed) spritesheets350pxIDLE_25
+  - first:
+      213: 6447099866416273352
+    second: (Compressed) spritesheets350pxIDLE_26
+  - first:
+      213: 198344532562672136
+    second: (Compressed) spritesheets350pxIDLE_27
+  - first:
+      213: 735627028510292756
+    second: (Compressed) spritesheets350pxIDLE_28
+  - first:
+      213: 7831615961950029995
+    second: (Compressed) spritesheets350pxIDLE_29
+  - first:
+      213: 4938291422754886655
+    second: (Compressed) spritesheets350pxIDLE_30
+  - first:
+      213: -8893538585445858333
+    second: (Compressed) spritesheets350pxIDLE_31
+  - first:
+      213: 2239121738598364645
+    second: (Compressed) spritesheets350pxIDLE_32
+  - first:
+      213: 733367734227734227
+    second: (Compressed) spritesheets350pxIDLE_33
+  - first:
+      213: -8302674456433691649
+    second: (Compressed) spritesheets350pxIDLE_34
+  - first:
+      213: -1838183122766492808
+    second: (Compressed) spritesheets350pxIDLE_35
+  - first:
+      213: 8617584401403856855
+    second: (Compressed) spritesheets350pxIDLE_36
+  - first:
+      213: 3109278602557141041
+    second: (Compressed) spritesheets350pxIDLE_37
+  - first:
+      213: -4145701849591456974
+    second: (Compressed) spritesheets350pxIDLE_38
+  - first:
+      213: 8523434077278017742
+    second: (Compressed) spritesheets350pxIDLE_39
+  - first:
+      213: -2088714418916267627
+    second: (Compressed) spritesheets350pxIDLE_40
+  - first:
+      213: 5166816197565313257
+    second: (Compressed) spritesheets350pxIDLE_41
+  - first:
+      213: -8676731544679099514
+    second: (Compressed) spritesheets350pxIDLE_42
+  - first:
+      213: 6967316225959427231
+    second: (Compressed) spritesheets350pxIDLE_43
+  - first:
+      213: -5839692765460823250
+    second: (Compressed) spritesheets350pxIDLE_44
+  - first:
+      213: -713054791160349693
+    second: (Compressed) spritesheets350pxIDLE_45
+  - first:
+      213: 9014483006987134278
+    second: (Compressed) spritesheets350pxIDLE_46
+  - first:
+      213: -934061957623562332
+    second: (Compressed) spritesheets350pxIDLE_47
+  - first:
+      213: -8999116442699468694
+    second: (Compressed) spritesheets350pxIDLE_48
+  - first:
+      213: 2723258255206780197
+    second: (Compressed) spritesheets350pxIDLE_49
+  - first:
+      213: -496717331801071790
+    second: (Compressed) spritesheets350pxIDLE_50
+  - first:
+      213: 2279805660587544624
+    second: (Compressed) spritesheets350pxIDLE_51
+  - first:
+      213: 7293253404003862267
+    second: (Compressed) spritesheets350pxIDLE_52
+  - first:
+      213: 7824312843807410158
+    second: (Compressed) spritesheets350pxIDLE_53
+  - first:
+      213: 8568267908935842273
+    second: (Compressed) spritesheets350pxIDLE_54
+  - first:
+      213: 4697034126279010238
+    second: (Compressed) spritesheets350pxIDLE_55
+  - first:
+      213: 4890864608118080557
+    second: (Compressed) spritesheets350pxIDLE_56
+  - first:
+      213: -7074897253162701395
+    second: (Compressed) spritesheets350pxIDLE_57
+  - first:
+      213: -5975677807255540193
+    second: (Compressed) spritesheets350pxIDLE_58
+  - first:
+      213: -2771413764934640846
+    second: (Compressed) spritesheets350pxIDLE_59
+  - first:
+      213: 1957604729349187697
+    second: (Compressed) spritesheets350pxIDLE_60
+  - first:
+      213: -2890552719745267266
+    second: (Compressed) spritesheets350pxIDLE_61
+  - first:
+      213: -8832297609358849073
+    second: (Compressed) spritesheets350pxIDLE_62
+  - first:
+      213: -8659108636334604132
+    second: (Compressed) spritesheets350pxIDLE_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b198c14e64e264ea1f0f5065b1a401
+      internalID: 811489622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278937c324fc7c94f9200599c5a84517
+      internalID: 1613246935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e769f9d5cc31c4a4ba8b1045e02f520f
+      internalID: 929501435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa268d76fb5011941ae53369067beecb
+      internalID: -992048439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b16359b21f55d248ad63d2e03c79090
+      internalID: 453922579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_5
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cb14489c9434a459459c003c17ac69
+      internalID: -165981664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_6
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4d927331de87344bcb86a93f585425
+      internalID: -1132432573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_7
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 2450
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de37b8dfbf08684c9e1aeae1ea8d43a
+      internalID: -1080466758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690a5d5ea19ebf34280d46d422976afd
+      internalID: -101756516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a04361e46adae4a9401daf6d81ad59
+      internalID: 1580529297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_10
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0455352cb6a004246a41ed9777c4cb13
+      internalID: -1263463038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_11
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0768356e0dd564c9a2d1dfc016d145
+      internalID: -699454088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_12
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6a7bcad05ff6c4881be5e08e1ba678
+      internalID: 619204132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_13
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5d8c8e56aeb3c4385c307618f96301
+      internalID: 263522447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_14
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab00d42b3586e947a15d1caba7a6422
+      internalID: -286995440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_15
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f608473c92543841b917cc013fc65f0
+      internalID: -1122246539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d3c4c6f77833c41be9ecf9fa97963c
+      internalID: -719344089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa43f23645d5d94b974da3e2ed133c7
+      internalID: -1208187372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_18
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cac1b89304be946be2031b45d0739b
+      internalID: 217679314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_19
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd7160708fe4df43a867d174ec35d35
+      internalID: -1728423191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_20
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19000e743a2254f48ad4963351cc1e8a
+      internalID: -1952513181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_21
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd521e0721dcac43ab6e1e6ff22fece
+      internalID: -1231285091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_22
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39f8d39a37c8954189e70c176121040
+      internalID: -1846513294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_23
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641d3bcb6d46a0e45837625f677ae637
+      internalID: 1587946799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cd6c8ae598f2a44bc91c98510eafa6
+      internalID: -1373694929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_25
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5396402ecb2d1543b0b9a02bcb93715
+      internalID: -649227639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_26
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f576fc6800e5144a3d265ef5ed302b
+      internalID: 1036559027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_27
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17ee83cf13d3d24dabc2be720bb20c0
+      internalID: -337558529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_28
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bad092332940a4994a0994143ac3d2
+      internalID: 1609065903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_29
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7124cca040e884ca5edd810ee6761b
+      internalID: -1625103932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_30
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7abfc04e774ca9439a69ccca1a1b73c
+      internalID: 972488601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_31
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eefd316c4ced2a43aeea9d9a14735a5
+      internalID: 1466728095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f808ea8853191724ea3b98f2810d01f4
+      internalID: -763005816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_33
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1788cf963e246454aa91ede04e619454
+      internalID: 193022744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_34
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698bab6525097434686a8cc04336260e
+      internalID: 481416998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_35
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0166082c89fd0a4b85b9d8e82fcbe4d
+      internalID: 556895031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_36
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6993e62b4b5323b419f3785b39b0cd85
+      internalID: 920602628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_37
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d2a457cbd6cf540b1e5b70b95116cd
+      internalID: 1948765638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_38
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72892dcb902aad44387141ce922c5c2b
+      internalID: -1394215908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_39
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a7505d8a0c70f4285765b44011b68e
+      internalID: -1673000584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026946325d46768489f16648f2d8de64
+      internalID: -2066668166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_41
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167d657b7426fbf48bd18a4ccc2bfba0
+      internalID: -199455458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_42
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f7033d51f51a84a972ff042f06b25e
+      internalID: -1157585514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_43
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf48c753374ce34e80d068f23c5b03f
+      internalID: 1021851211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_44
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034bddf314414574cad81aec57a55526
+      internalID: -1101924376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_45
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b987182a2246d84c914fdf447c53876
+      internalID: -630163848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_46
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0553e5dd470f4e04cbd74a83329ec896
+      internalID: 1041494187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_47
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 700
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799423d02ee27104d9edf7e366bafe6d
+      internalID: -448951442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c86f172b6ab0034a9a52cbb044231c8
+      internalID: 1417964213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_49
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4140e020c296b924abb80cd768b92cbd
+      internalID: 578193548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_50
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87171b498b641cb45bb8c484704752cc
+      internalID: -1002456810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_51
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872bc0d55d96f9547941deca6c1bb3f0
+      internalID: -1729651552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_52
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a64b7a156f307143bd61918de523fff
+      internalID: -78894026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_53
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27245e52ee62a9b47871f642a5a2701b
+      internalID: 359644909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_54
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5bee14c82bfa249bb687cd2e558390
+      internalID: 974845231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_55
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 350
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fda8d24c9a26fd42a7ee9c558beca15
+      internalID: -44045879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be543770ef37d93489dad85c99d46ada
+      internalID: 955611032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_57
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abdbb7208234da498970cb9ca1d4f98
+      internalID: 974577983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_58
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf13fa414d00cc640b2cd987f67efb89
+      internalID: 562866876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_59
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06b461a62229bb4bae30dffc455bfd3
+      internalID: 1864188361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_60
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393a9776ef526dd429a9eb1c6bf881bc
+      internalID: 1266609677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_61
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de551c134e6cfa941932a33ae946595b
+      internalID: -1242608858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_62
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499da5aa77dfff74e85905ed85d292a9
+      internalID: 1141269853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PH-IBARRA-WALKING_63
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 0
+        width: 350
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74babe813a904047a84f35468d821e6
+      internalID: -1255642144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dbb1987bb67ad584a98d62119f865940
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":350.0,"y":350.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PH-IBARRA-WALKING_0: 811489622
+      PH-IBARRA-WALKING_1: 1613246935
+      PH-IBARRA-WALKING_10: -1263463038
+      PH-IBARRA-WALKING_11: -699454088
+      PH-IBARRA-WALKING_12: 619204132
+      PH-IBARRA-WALKING_13: 263522447
+      PH-IBARRA-WALKING_14: -286995440
+      PH-IBARRA-WALKING_15: -1122246539
+      PH-IBARRA-WALKING_16: -719344089
+      PH-IBARRA-WALKING_17: -1208187372
+      PH-IBARRA-WALKING_18: 217679314
+      PH-IBARRA-WALKING_19: -1728423191
+      PH-IBARRA-WALKING_2: 929501435
+      PH-IBARRA-WALKING_20: -1952513181
+      PH-IBARRA-WALKING_21: -1231285091
+      PH-IBARRA-WALKING_22: -1846513294
+      PH-IBARRA-WALKING_23: 1587946799
+      PH-IBARRA-WALKING_24: -1373694929
+      PH-IBARRA-WALKING_25: -649227639
+      PH-IBARRA-WALKING_26: 1036559027
+      PH-IBARRA-WALKING_27: -337558529
+      PH-IBARRA-WALKING_28: 1609065903
+      PH-IBARRA-WALKING_29: -1625103932
+      PH-IBARRA-WALKING_3: -992048439
+      PH-IBARRA-WALKING_30: 972488601
+      PH-IBARRA-WALKING_31: 1466728095
+      PH-IBARRA-WALKING_32: -763005816
+      PH-IBARRA-WALKING_33: 193022744
+      PH-IBARRA-WALKING_34: 481416998
+      PH-IBARRA-WALKING_35: 556895031
+      PH-IBARRA-WALKING_36: 920602628
+      PH-IBARRA-WALKING_37: 1948765638
+      PH-IBARRA-WALKING_38: -1394215908
+      PH-IBARRA-WALKING_39: -1673000584
+      PH-IBARRA-WALKING_4: 453922579
+      PH-IBARRA-WALKING_40: -2066668166
+      PH-IBARRA-WALKING_41: -199455458
+      PH-IBARRA-WALKING_42: -1157585514
+      PH-IBARRA-WALKING_43: 1021851211
+      PH-IBARRA-WALKING_44: -1101924376
+      PH-IBARRA-WALKING_45: -630163848
+      PH-IBARRA-WALKING_46: 1041494187
+      PH-IBARRA-WALKING_47: -448951442
+      PH-IBARRA-WALKING_48: 1417964213
+      PH-IBARRA-WALKING_49: 578193548
+      PH-IBARRA-WALKING_5: -165981664
+      PH-IBARRA-WALKING_50: -1002456810
+      PH-IBARRA-WALKING_51: -1729651552
+      PH-IBARRA-WALKING_52: -78894026
+      PH-IBARRA-WALKING_53: 359644909
+      PH-IBARRA-WALKING_54: 974845231
+      PH-IBARRA-WALKING_55: -44045879
+      PH-IBARRA-WALKING_56: 955611032
+      PH-IBARRA-WALKING_57: 974577983
+      PH-IBARRA-WALKING_58: 562866876
+      PH-IBARRA-WALKING_59: 1864188361
+      PH-IBARRA-WALKING_6: -1132432573
+      PH-IBARRA-WALKING_60: 1266609677
+      PH-IBARRA-WALKING_61: -1242608858
+      PH-IBARRA-WALKING_62: 1141269853
+      PH-IBARRA-WALKING_63: -1255642144
+      PH-IBARRA-WALKING_7: -1080466758
+      PH-IBARRA-WALKING_8: -101756516
+      PH-IBARRA-WALKING_9: 1580529297
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

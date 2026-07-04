@@ -1,29 +1,20 @@
-using System.Diagnostics.Tracing;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Plant : MonoBehaviour, IInteractable
+public class Artifact : MonoBehaviour, IInteractable
 {
     
     public bool beenInteracted { get; private set; }
-    public string plantID { get; private set; }
+    public string artifactID { get; private set; }
     public int counter { get; private set; } = 0;
 
     [SerializeField] private GameObject interactionIcon;
     
     void Start()
     {
-        plantID ??=  GlobalHelper.generateUniqueID(gameObject);
-        Debug.Log(plantID);
-        
+        artifactID ??= GlobalHelper.generateUniqueID(gameObject);
+        Debug.Log(artifactID);
     }
 
-    public void setInteracted()
-    {
-        beenInteracted = true;
-        //this is where the item will get unlocked in inverntory
-        //insert code here
-    }
 
 
     #region IInteractable Functions
@@ -37,12 +28,19 @@ public class Plant : MonoBehaviour, IInteractable
         public void showIcon(bool visible)
         {
             interactionIcon.SetActive(visible);
-            //trigger dialogue
+            //trigger E dialogue
         }
 
-        public bool interacted()
+        public void setInteracted()
         {
-            return beenInteracted;
+              beenInteracted = true;
+            //this is where the item will get unlocked in inventory
+            //insert code here
+        }
+
+        public bool canInteract()
+        {
+            return true;
         }
 
         public int incrementCounter()
@@ -59,5 +57,4 @@ public class Plant : MonoBehaviour, IInteractable
 
     #endregion
 
-   
 }
