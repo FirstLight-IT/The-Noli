@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewNPCDialogue", menuName = "NPC Dialogue")]
-public class NPCDialogueSO : ScriptableObject
+public class NPCDialogueData : ScriptableObject
 {
     public string NPCName;
     public Sprite portrait;

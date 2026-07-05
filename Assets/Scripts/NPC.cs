@@ -1,16 +1,21 @@
 
+using System;
 using UnityEngine;
 
 
 public class NPC : MonoBehaviour, IInteractable
 {
   
+    public static event Action<NPCDialogueData> OnNPCInteracted;
+    
     public bool beenInteracted {get; private set;}
     public string npcID {get; private set;}
     public int counter {get; private set;} = 0;
 
-   
+    [SerializeField] private NPCDialogueData NPCDialogueData;
     [SerializeField] private GameObject interactionIcon;
+
+    //private bool isDialogueActive, isTyping;
 
     void Start()
     {
@@ -19,16 +24,23 @@ public class NPC : MonoBehaviour, IInteractable
     }
 
    
+
     #region IInteractiable Functions
 
         public void interact()
         {
+            if(NPCDialogueData == null)
+                return;
+
             Debug.Log($"{gameObject.name} interacted");
             setInteracted();
 
-        
+            OnNPCInteracted ?.Invoke(NPCDialogueData);
 
         }
+
+
+
 
         public void showIcon(bool visible)
         {
