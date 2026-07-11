@@ -33,7 +33,6 @@ public class InteractionDetector : MonoBehaviour
         return closest;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
 

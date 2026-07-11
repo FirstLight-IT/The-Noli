@@ -1,0 +1,8 @@
+{
+  "conversationId": "test_convo",
+  "lines": [
+    { "speaker": "Padre Damaso", "text": "I HATE INDIOS, BRO!" },
+    { "speaker": "Blond Man", "text": "Nah, Gang...that's wrong to say" },
+    { "speaker": "Padre Damaso", "text": "Whatever, Bro!" }
+  ]
+}

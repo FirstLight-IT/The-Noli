@@ -1,0 +1,13 @@
+{
+  "conversationId": "test_convo",
+  "lines": [
+    { "speaker": "Blond Man", "text": "Ah, is this thing that you call tinola a variety of lotus which makes people—er—forgetful?" },
+    { "speaker": "Padre Damaso", "text": "Nothing of the kind! You’re getting absurd. Tinola is a stew of chicken and squash. How long has it been since you got here" },
+    { "speaker": "Blond Man", "text": "Four days." },
+    { "speaker": "Padre Damaso", "text": "Have you come as a government employee?" },
+    { "speaker": "Blond Man", "text": "No, sir, I’ve come at my own expense to study the country." },
+    { "speaker": "Padre Damaso", "text": "Man, what a rare bird! To come at one’s own expense and for such foolishness!" },
+    { "speaker": "Padre Damaso", "text": "What a wonder! When there are so many books! And with two fingerbreadths of forehead!" },
+    { "speaker": "Padre Damaso", "text": "Many have written books as big as that! With two fingerbreadths of forehead!" }
+  ]
+}
