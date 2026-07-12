@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using System;
 
 public class DialogueController : MonoBehaviour
 {
+    public static event Action<string> OnConversationFinished;
 
     public static DialogueController Instance {get; private set;}
 
@@ -32,19 +34,19 @@ public class DialogueController : MonoBehaviour
 
             if (!isDialogueActive)
             {
-                StartDialogue(data);
+                StartNPCDialogue(data);
             }
             else if(currentLineIndex + 1 < data.dialogueLines.Length || isTyping)
             {
-                NextLine(data);
+                NextNPCLine(data);
             }
             else
             {
-                EndDialogue();
+                EndNPCDialogue();
             }
         }
 
-        void StartDialogue(NPCDialogueData data)
+        void StartNPCDialogue(NPCDialogueData data)
         {
             
             dialoguePanel.SetActive(true);
@@ -54,10 +56,10 @@ public class DialogueController : MonoBehaviour
             nameText.SetText(data.NPCName);
             portraitImage.sprite = data.portrait;
 
-            StartCoroutine(TypeLine(data));
+            StartCoroutine(TypeNPCLine(data));
         }
         
-        public void EndDialogue()
+        public void EndNPCDialogue()
         {
             currentLineIndex = 0;
             isDialogueActive = false;
@@ -71,7 +73,7 @@ public class DialogueController : MonoBehaviour
             StopAllCoroutines();
         }
 
-        void NextLine(NPCDialogueData data)
+        void NextNPCLine(NPCDialogueData data)
         {
             
             if (isTyping)
@@ -80,7 +82,7 @@ public class DialogueController : MonoBehaviour
                 isTyping = false;
                 dialogueText.SetText(data.dialogueLines[currentLineIndex]);
 
-                ShowCloseButton(data);
+                ShowNPCCloseButton(data);
             }
             else
             {
@@ -89,11 +91,11 @@ public class DialogueController : MonoBehaviour
                 if(currentLineIndex >= data.dialogueLines.Length)
                     return;
                     
-            StartCoroutine(TypeLine(data)); 
+            StartCoroutine(TypeNPCLine(data)); 
             }
         }
 
-        IEnumerator TypeLine(NPCDialogueData data)
+        IEnumerator TypeNPCLine(NPCDialogueData data)
         {
             isTyping = true;
             dialogueText.SetText("");
@@ -105,10 +107,10 @@ public class DialogueController : MonoBehaviour
             }
             
             isTyping = false;
-            ShowCloseButton(data);
+            ShowNPCCloseButton(data);
         }
 
-        void ShowCloseButton(NPCDialogueData data)
+        void ShowNPCCloseButton(NPCDialogueData data)
         {
             if(currentLineIndex == data.dialogueLines.Length - 1)
                 dialogueCloseButton.gameObject.SetActive(true);
@@ -193,6 +195,8 @@ public class DialogueController : MonoBehaviour
 
         public void EndConversation()
         {
+            string finishedConversationId = activeConversation?.conversationId;
+
             activeConversation = null;
             currentLineIndex = 0;
             isDialogueActive = false;
@@ -202,6 +206,9 @@ public class DialogueController : MonoBehaviour
             portraitImage.sprite = null;
 
             dialoguePanel.SetActive(false);
+
+            if (!string.IsNullOrEmpty(finishedConversationId))
+                OnConversationFinished?.Invoke(finishedConversationId);
         }
     #endregion
 
@@ -209,13 +216,15 @@ public class DialogueController : MonoBehaviour
         void OnEnable()
         {
             NPC.OnNPCInteracted += HandleNPCInteraction;
-             ConversationTrigger.OnConversationInteracted += HandleConversationInteraction;
+            NPC.OnMissionConversationInteracted += HandleConversationInteraction;
+            ConversationTrigger.OnConversationInteracted += HandleConversationInteraction;
         }
         
         void OnDisable()
         {
             NPC.OnNPCInteracted -= HandleNPCInteraction;
-             ConversationTrigger.OnConversationInteracted -= HandleConversationInteraction;
+            NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
+            ConversationTrigger.OnConversationInteracted -= HandleConversationInteraction;
         }
     #endregion
 }

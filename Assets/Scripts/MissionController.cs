@@ -1,0 +1,212 @@
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class MissionController : MonoBehaviour
+{
+    [Header("Mission Library")]
+    [SerializeField] private MissionInfoSO[] missionInfos = new MissionInfoSO[0];
+    [SerializeField] private string missionToStart;
+
+    [Header("UI")]
+    [SerializeField] private TMP_Text objectiveText;
+
+    private readonly Dictionary<string, Mission> missions = new();
+    private Mission activeMission;
+    private MissionStep activeStep;
+
+    void OnEnable()
+    {
+        MissionEvents.OnMissionStepFinished += HandleMissionStepFinished;
+        MissionEvents.OnMissionObjectiveUpdated += HandleMissionObjectiveUpdated;
+    }
+
+    void Start()
+    {
+        BuildMissionLibrary();
+
+        if (!string.IsNullOrWhiteSpace(missionToStart))
+            StartMission(missionToStart);
+    }
+
+    void OnDisable()
+    {
+        MissionEvents.OnMissionStepFinished -= HandleMissionStepFinished;
+        MissionEvents.OnMissionObjectiveUpdated -= HandleMissionObjectiveUpdated;
+    }
+
+    public void StartMission(string missionId)
+    {
+        if (activeMission != null)
+        {
+            Debug.LogWarning($"Cannot start '{missionId}' while '{activeMission.Info.MissionId}' is active.", this);
+            return;
+        }
+
+        if (!missions.TryGetValue(missionId, out Mission mission))
+        {
+            Debug.LogWarning($"Mission '{missionId}' is not registered.", this);
+            return;
+        }
+
+        RefreshMissionAvailability();
+
+        if (mission.State != MissionState.Available)
+        {
+            Debug.LogWarning($"Mission '{missionId}' is currently {mission.State}.", this);
+            return;
+        }
+
+        mission.State = MissionState.InProgress;
+        activeMission = mission;
+
+        Debug.Log($"Mission started: {mission.Info.DisplayName}");
+        ActivateCurrentStep();
+    }
+
+    public MissionState GetMissionState(string missionId)
+    {
+        return missions.TryGetValue(missionId, out Mission mission)
+            ? mission.State
+            : MissionState.Locked;
+    }
+
+    private void BuildMissionLibrary()
+    {
+        missions.Clear();
+
+        foreach (MissionInfoSO info in missionInfos)
+        {
+            if (info == null || string.IsNullOrWhiteSpace(info.MissionId))
+            {
+                Debug.LogWarning("Every registered mission needs a Mission Info asset and a non-empty ID.", this);
+                continue;
+            }
+
+            if (missions.ContainsKey(info.MissionId))
+            {
+                Debug.LogError($"Duplicate mission ID: '{info.MissionId}'.", info);
+                continue;
+            }
+
+            missions.Add(info.MissionId, new Mission(info, MissionState.Locked));
+        }
+
+        RefreshMissionAvailability();
+    }
+
+    private void RefreshMissionAvailability()
+    {
+        foreach (Mission mission in missions.Values)
+        {
+            if (mission.State != MissionState.Locked)
+                continue;
+
+            if (ArePrerequisitesFinished(mission.Info))
+                mission.State = MissionState.Available;
+        }
+    }
+
+    private bool ArePrerequisitesFinished(MissionInfoSO info)
+    {
+        foreach (MissionInfoSO prerequisite in info.Prerequisites)
+        {
+            if (prerequisite == null ||
+                !missions.TryGetValue(prerequisite.MissionId, out Mission prerequisiteMission) ||
+                prerequisiteMission.State != MissionState.Finished)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private void ActivateCurrentStep()
+    {
+        if (activeMission == null)
+            return;
+
+        if (!activeMission.HasAnotherStep)
+        {
+            CompleteActiveMission();
+            return;
+        }
+
+        MissionStep stepPrefab = activeMission.Info.MissionStepPrefabs[activeMission.CurrentStepIndex];
+
+        if (stepPrefab == null)
+        {
+            Debug.LogError($"Mission '{activeMission.Info.MissionId}' has an empty step at index {activeMission.CurrentStepIndex}.", activeMission.Info);
+            return;
+        }
+
+        activeStep = Instantiate(stepPrefab, transform);
+        UpdateObjectiveUI(activeMission.Info.DisplayName, activeStep.ObjectiveDescription);
+        activeStep.Initialize(activeMission.Info.MissionId, activeMission.CurrentStepIndex);
+    }
+
+    private void HandleMissionObjectiveUpdated(string missionId, int stepIndex, string objective)
+    {
+        if (activeMission == null ||
+            activeMission.Info.MissionId != missionId ||
+            activeMission.CurrentStepIndex != stepIndex)
+        {
+            return;
+        }
+
+        UpdateObjectiveUI(activeMission.Info.DisplayName, objective);
+    }
+
+    private void HandleMissionStepFinished(string missionId, int stepIndex)
+    {
+        if (activeMission == null ||
+            activeMission.Info.MissionId != missionId ||
+            activeMission.CurrentStepIndex != stepIndex)
+        {
+            return;
+        }
+
+        if (activeStep != null)
+            Destroy(activeStep.gameObject);
+
+        activeStep = null;
+        activeMission.CurrentStepIndex++;
+        ActivateCurrentStep();
+    }
+
+    private void CompleteActiveMission()
+    {
+        Mission completedMission = activeMission;
+        completedMission.State = MissionState.Finished;
+        activeMission = null;
+
+        UpdateObjectiveUI(completedMission.Info.DisplayName, "Mission complete!");
+        Debug.Log($"Mission complete: {completedMission.Info.DisplayName}");
+
+        RefreshMissionAvailability();
+        TryStartNextAutomaticMission();
+    }
+
+    private void TryStartNextAutomaticMission()
+    {
+        foreach (MissionInfoSO info in missionInfos)
+        {
+            if (info == null || !info.AutoStartWhenAvailable)
+                continue;
+
+            if (missions.TryGetValue(info.MissionId, out Mission mission) &&
+                mission.State == MissionState.Available)
+            {
+                StartMission(info.MissionId);
+                return;
+            }
+        }
+    }
+
+    private void UpdateObjectiveUI(string missionName, string objective)
+    {
+        if (objectiveText != null)
+            objectiveText.SetText($"{missionName}\n{objective}");
+    }
+}
