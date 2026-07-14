@@ -88,8 +88,8 @@ public class Artifact : MonoBehaviour, IInteractable
 
         public void showIcon(bool visible)
         {
-            interactionIcon.SetActive(visible);
-            //trigger E dialogue
+            if (interactionIcon != null)
+                interactionIcon.SetActive(visible);
         }
 
         public void setInteracted()

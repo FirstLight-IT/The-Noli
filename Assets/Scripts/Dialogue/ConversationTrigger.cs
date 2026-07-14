@@ -10,14 +10,24 @@ public class ConversationTrigger : MonoBehaviour, IInteractable
     private Conversation conversation;
     private int counter = 0;
 
-    void Start()
+    void Awake()
     {
+        if (conversationJson == null)
+        {
+            Debug.LogError($"{gameObject.name} needs conversation JSON.", this);
+            return;
+        }
+
         conversation = JsonUtility.FromJson<Conversation>(conversationJson.text);
+
+        if (conversation == null || string.IsNullOrWhiteSpace(conversation.conversationId))
+            Debug.LogError($"{gameObject.name} has invalid conversation JSON.", this);
     }
 
     public void interact()
     {
-        OnConversationInteracted?.Invoke(conversation);
+        if (conversation != null)
+            OnConversationInteracted?.Invoke(conversation);
     }
 
     public void showIcon(bool visible) { }

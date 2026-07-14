@@ -43,7 +43,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bf2540f1fb23d94684c032f4e50a0ca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomArtifactsMissionStep
+  m_EditorClassIdentifier: Assembly-CSharp::InspectArtifactsMissionStep
   objectiveDescription: Inspect artifacts around the floor
   floorID: ground_floor
   requiredArtifactCount: 1

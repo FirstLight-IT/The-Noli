@@ -3,5 +3,6 @@ public enum MissionState
     Locked,
     Available,
     InProgress,
-    Finished
+    Finished,
+    Failed
 }

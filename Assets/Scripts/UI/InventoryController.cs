@@ -1,16 +1,16 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class InventoryController : MonoBehaviour
 {
+    public static bool IsJournalOpen { get; private set; }
 
     [SerializeField] GameObject menuCanvas;
    
     void Start()
     {
         menuCanvas.SetActive(false);
+        IsJournalOpen = false;
     }
 
     //toggle for the journal using Tab or I key. 
@@ -18,14 +18,21 @@ public class InventoryController : MonoBehaviour
     {
         if (context.performed)
         {
-            menuCanvas.SetActive(!menuCanvas.activeSelf);
+            IsJournalOpen = !IsJournalOpen;
+            menuCanvas.SetActive(IsJournalOpen);
         }
 
     }
 
     public void exitJournal()
     {
+        IsJournalOpen = false;
         menuCanvas.SetActive(false);
+    }
+
+    void OnDisable()
+    {
+        IsJournalOpen = false;
     }
 
 

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomArtifactsMissionStep : MissionStep
+public class InspectArtifactsMissionStep : MissionStep
 {
-    [Header("Random Artifact Step")]
+    [Header("Inspect Artifacts Step")]
     [SerializeField] private string floorID = "ground_floor";
     [SerializeField, Min(1)] private int requiredArtifactCount = 5;
 
@@ -26,10 +26,9 @@ public class RandomArtifactsMissionStep : MissionStep
 
         if (availableArtifacts.Count < requiredArtifactCount)
         {
-            Debug.LogError(
-                $"Random artifact step needs {requiredArtifactCount} artifacts on floor '{floorID}', " +
-                $"but only found {availableArtifacts.Count}.",
-                this);
+            FailStep(
+                $"Inspect artifacts step needs {requiredArtifactCount} artifacts on floor '{floorID}', " +
+                $"but only found {availableArtifacts.Count}.");
             return;
         }
 

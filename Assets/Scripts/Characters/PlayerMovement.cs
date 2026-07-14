@@ -12,24 +12,23 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
     }
 
-    
     void Update()
     {
-        rb.linearVelocity = inputMovement * movementSpeed;
+        Vector2 animationInput = IsMovementBlocked() ? Vector2.zero : inputMovement;
 
-        if(inputMovement != Vector2.zero)
+        if(animationInput != Vector2.zero)
         {
             animator.SetBool("isWalking", true);
-            animator.SetFloat("inputX", inputMovement.x);
-            animator.SetFloat("inputY", inputMovement.y);
+            animator.SetFloat("inputX", animationInput.x);
+            animator.SetFloat("inputY", animationInput.y);
 
-            filteredInput = Vector2.MoveTowards(filteredInput, inputMovement, Time.deltaTime * 12f);
+            filteredInput = Vector2.MoveTowards(filteredInput, animationInput, Time.deltaTime * 12f);
 
             float snapX = filteredInput.x > 0.3f ? 1 : (filteredInput.x < -0.3f ? -1 : 0);
             float snapY = filteredInput.y > 0.3f ? 1 : (filteredInput.y < -0.3f ? -1 : 0);
@@ -44,6 +43,19 @@ public class PlayerMovement : MonoBehaviour
             filteredInput = Vector2.zero;
         }
 
+    }
+
+    void FixedUpdate()
+    {
+        rb.linearVelocity = IsMovementBlocked()
+            ? Vector2.zero
+            : inputMovement * movementSpeed;
+    }
+
+    private static bool IsMovementBlocked()
+    {
+        return InventoryController.IsJournalOpen ||
+               (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive);
     }
 
     public void playerMovement(InputAction.CallbackContext context)

@@ -19,13 +19,13 @@ public class ArtifactMissionStep : MissionStep
     {
         if (targetArtifactInfo == null)
         {
-            Debug.LogError("Artifact mission step needs target Artifact Info.", this);
+            FailStep("Artifact mission step needs target Artifact Info.");
             return;
         }
 
         if (!Artifact.TryGetById(targetArtifactInfo.ArtifactID, out _))
         {
-            Debug.LogError($"Could not find an active artifact with ID '{targetArtifactInfo.ArtifactID}'.", this);
+            FailStep($"Could not find an active artifact with ID '{targetArtifactInfo.ArtifactID}'.");
             return;
         }
     }

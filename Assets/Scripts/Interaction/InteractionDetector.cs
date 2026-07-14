@@ -35,13 +35,11 @@ public class InteractionDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if(collision.TryGetComponent(out IInteractable interactable))
         {
-            interactablesInRange.Add(collision, interactable); 
+            interactablesInRange.Add(collision, interactable);
             interactable.showIcon(true);
             interactable.incrementCounter();
-            
         }
     }
 
@@ -53,8 +51,4 @@ public class InteractionDetector : MonoBehaviour
             interactablesInRange.Remove(collision);
         }
     }
-
-
-
 }
-

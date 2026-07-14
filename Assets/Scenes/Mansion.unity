@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 189352696}
   - component: {fileID: 189352699}
   - component: {fileID: 189352698}
+  - component: {fileID: 189352700}
   m_Layer: 0
   m_Name: FINALTEST-Furniture_0
   m_TagString: Untagged
@@ -810,8 +811,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1836600047
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7024813532705275506, guid: 2728c6b1567deab439b9e5fb15444c52, type: 3}
@@ -852,6 +853,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationTrigger
   conversationJson: {fileID: 4900000, guid: c40557fd4b9b5af46b254e200d106965, type: 3}
+--- !u!114 &189352700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189352695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a15ad25d6a4f4cc688fae58969c54191, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::TwoPointIsometricSort
+  spriteRenderer: {fileID: 189352696}
+  referenceTransform: {fileID: 1378986822}
+  referenceRenderer: {fileID: 65474291}
+  lineStart: {x: -2.2641423, y: -1.1187735}
+  lineEnd: {x: 2.208058, y: -0.24319553}
+  negativeSideBehind: 1
+  orderDifference: 1
 --- !u!68 &189352699
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -3717,6 +3737,7 @@ GameObject:
   - component: {fileID: 918440235}
   - component: {fileID: 918440236}
   - component: {fileID: 918440237}
+  - component: {fileID: 918440238}
   m_Layer: 0
   m_Name: NPC Damaso
   m_TagString: Untagged
@@ -3808,6 +3829,22 @@ MonoBehaviour:
   NPCDialogueData: {fileID: 11400000, guid: 11d5f5eb11398d941b90c17697b37b79, type: 2}
   interactionIcon: {fileID: 1453839477}
   missionIcon: {fileID: 561892542}
+--- !u!114 &918440238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918440234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
+  spriteRenderer: {fileID: 261601646}
+  orderOffset: 0
+  unitsPerLayer: 10
+  sortPointYOffset: 0
 --- !u!1 &930480526
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,6 +4815,7 @@ GameObject:
   - component: {fileID: 1378986823}
   - component: {fileID: 1378986826}
   - component: {fileID: 1378986827}
+  - component: {fileID: 1378986828}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4816,6 +4854,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   movementSpeed: 4
+--- !u!114 &1378986828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378986821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
+  spriteRenderer: {fileID: 65474291}
+  orderOffset: 0
+  unitsPerLayer: 10
+  sortPointYOffset: 0
 --- !u!50 &1378986825
 Rigidbody2D:
   serializedVersion: 5
@@ -5827,6 +5881,7 @@ GameObject:
   - component: {fileID: 1765918627}
   - component: {fileID: 1765918628}
   - component: {fileID: 1765918629}
+  - component: {fileID: 1765918630}
   m_Layer: 0
   m_Name: NPC Blond Man
   m_TagString: Untagged
@@ -5919,6 +5974,22 @@ MonoBehaviour:
   NPCDialogueData: {fileID: 11400000, guid: 738f8da1851a3da45ad2f54218aa26bb, type: 2}
   interactionIcon: {fileID: 1418857863}
   missionIcon: {fileID: 0}
+--- !u!114 &1765918630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765918626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
+  spriteRenderer: {fileID: 2113706280}
+  orderOffset: 0
+  unitsPerLayer: 10
+  sortPointYOffset: 0
 --- !u!1 &1779625746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,6 +6940,7 @@ GameObject:
   - component: {fileID: 2039410433}
   - component: {fileID: 2039410435}
   - component: {fileID: 2039410436}
+  - component: {fileID: 2039410437}
   m_Layer: 0
   m_Name: Artifact_Plant
   m_TagString: Untagged
@@ -6907,6 +6979,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Plant
   artifactData: {fileID: 11400000, guid: 6f37d235a72f4e67bd87ce35b2f8952d, type: 2}
   interactionIcon: {fileID: 150867422}
+--- !u!114 &2039410437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039410432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
+  spriteRenderer: {fileID: 1451197162}
+  orderOffset: 0
+  unitsPerLayer: 10
+  sortPointYOffset: -1.2
 --- !u!68 &2039410436
 EdgeCollider2D:
   m_ObjectHideFlags: 0

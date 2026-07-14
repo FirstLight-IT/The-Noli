@@ -18,13 +18,17 @@ public class MissionController : MonoBehaviour
     void OnEnable()
     {
         MissionEvents.OnMissionStepFinished += HandleMissionStepFinished;
+        MissionEvents.OnMissionStepFailed += HandleMissionStepFailed;
         MissionEvents.OnMissionObjectiveUpdated += HandleMissionObjectiveUpdated;
+    }
+
+    void Awake()
+    {
+        BuildMissionLibrary();
     }
 
     void Start()
     {
-        BuildMissionLibrary();
-
         if (!string.IsNullOrWhiteSpace(missionToStart))
             StartMission(missionToStart);
     }
@@ -32,7 +36,29 @@ public class MissionController : MonoBehaviour
     void OnDisable()
     {
         MissionEvents.OnMissionStepFinished -= HandleMissionStepFinished;
+        MissionEvents.OnMissionStepFailed -= HandleMissionStepFailed;
         MissionEvents.OnMissionObjectiveUpdated -= HandleMissionObjectiveUpdated;
+    }
+
+    private void HandleMissionStepFailed(string missionId, int stepIndex, string reason)
+    {
+        if (activeMission == null ||
+            activeMission.Info.MissionId != missionId ||
+            activeMission.CurrentStepIndex != stepIndex)
+        {
+            return;
+        }
+
+        Mission failedMission = activeMission;
+        failedMission.State = MissionState.Failed;
+        activeMission = null;
+
+        if (activeStep != null)
+            Destroy(activeStep.gameObject);
+
+        activeStep = null;
+        UpdateObjectiveUI(failedMission.Info.DisplayName, "Mission could not continue.");
+        Debug.LogError($"Mission '{missionId}' failed at step {stepIndex}: {reason}", failedMission.Info);
     }
 
     public void StartMission(string missionId)
@@ -61,6 +87,13 @@ public class MissionController : MonoBehaviour
         activeMission = mission;
 
         Debug.Log($"Mission started: {mission.Info.DisplayName}");
+
+        if (mission.Info.MissionStepPrefabs == null || mission.Info.MissionStepPrefabs.Length == 0)
+        {
+            HandleMissionStepFailed(mission.Info.MissionId, 0, "Mission has no step prefabs.");
+            return;
+        }
+
         ActivateCurrentStep();
     }
 
@@ -137,7 +170,10 @@ public class MissionController : MonoBehaviour
 
         if (stepPrefab == null)
         {
-            Debug.LogError($"Mission '{activeMission.Info.MissionId}' has an empty step at index {activeMission.CurrentStepIndex}.", activeMission.Info);
+            HandleMissionStepFailed(
+                activeMission.Info.MissionId,
+                activeMission.CurrentStepIndex,
+                "Mission contains an empty step prefab.");
             return;
         }
 

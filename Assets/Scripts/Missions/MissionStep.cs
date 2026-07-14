@@ -33,4 +33,13 @@ public abstract class MissionStep : MonoBehaviour
         isFinished = true;
         MissionEvents.FinishMissionStep(MissionId, StepIndex);
     }
+
+    protected void FailStep(string reason)
+    {
+        if (isFinished)
+            return;
+
+        isFinished = true;
+        MissionEvents.FailMissionStep(MissionId, StepIndex, reason);
+    }
 }

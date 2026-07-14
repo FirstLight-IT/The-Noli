@@ -1,230 +1,273 @@
+using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Collections;
-using System;
 
 public class DialogueController : MonoBehaviour
 {
     public static event Action<string> OnConversationFinished;
+    public static event Action<string, string> OnConversationFailed;
 
-    public static DialogueController Instance {get; private set;}
+    public static DialogueController Instance { get; private set; }
+    public bool IsDialogueActive { get; private set; }
 
     [SerializeField] private SpeakerRegistry speakerRegistry;
     [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private TMP_Text dialogueText, nameText;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text nameText;
     [SerializeField] private Image portraitImage;
     [SerializeField] private Button dialogueCloseButton;
 
+    private NPCDialogueData activeNPCDialogue;
     private Conversation activeConversation;
-    private bool isDialogueActive = false, isTyping;
-    int currentLineIndex;
-    
+    private bool isTyping;
+    private int currentLineIndex;
+
     void Awake()
     {
-        //Singleton Instance
-        if(Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
+        Instance = this;
     }
 
-    #region NPC Dialogue Methods
-        void HandleNPCInteraction(NPCDialogueData data)
-        {
+    void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
 
-            if (!isDialogueActive)
-            {
-                StartNPCDialogue(data);
-            }
-            else if(currentLineIndex + 1 < data.dialogueLines.Length || isTyping)
-            {
-                NextNPCLine(data);
-            }
-            else
-            {
-                EndNPCDialogue();
-            }
+    private void HandleNPCInteraction(NPCDialogueData data)
+    {
+        if (!IsDialogueActive)
+        {
+            StartNPCDialogue(data);
+            return;
         }
 
-        void StartNPCDialogue(NPCDialogueData data)
+        if (activeNPCDialogue == data)
+            AdvanceNPCDialogue();
+    }
+
+    private void StartNPCDialogue(NPCDialogueData data)
+    {
+        if (data == null || data.dialogueLines == null || data.dialogueLines.Length == 0)
         {
-            
-            dialoguePanel.SetActive(true);
-            isDialogueActive = true;
-            currentLineIndex = 0;
-
-            nameText.SetText(data.NPCName);
-            portraitImage.sprite = data.portrait;
-
-            StartCoroutine(TypeNPCLine(data));
+            Debug.LogError("NPC dialogue is missing its dialogue lines.", data);
+            return;
         }
-        
-        public void EndNPCDialogue()
-        {
-            currentLineIndex = 0;
-            isDialogueActive = false;
-            
-            dialogueText.SetText("");
-            nameText.SetText("");
-            portraitImage.sprite = null;
 
-            dialoguePanel.SetActive(false);
-            dialogueCloseButton.gameObject.SetActive(false);
+        activeNPCDialogue = data;
+        activeConversation = null;
+        currentLineIndex = 0;
+        IsDialogueActive = true;
+
+        dialoguePanel.SetActive(true);
+        dialogueCloseButton.gameObject.SetActive(false);
+        nameText.SetText(data.NPCName);
+        portraitImage.sprite = data.portrait;
+        StartCoroutine(TypeNPCLine());
+    }
+
+    private void AdvanceNPCDialogue()
+    {
+        if (isTyping)
+        {
             StopAllCoroutines();
-        }
-
-        void NextNPCLine(NPCDialogueData data)
-        {
-            
-            if (isTyping)
-            {
-                StopAllCoroutines();
-                isTyping = false;
-                dialogueText.SetText(data.dialogueLines[currentLineIndex]);
-
-                ShowNPCCloseButton(data);
-            }
-            else
-            {
-                currentLineIndex++;
-
-                if(currentLineIndex >= data.dialogueLines.Length)
-                    return;
-                    
-            StartCoroutine(TypeNPCLine(data)); 
-            }
-        }
-
-        IEnumerator TypeNPCLine(NPCDialogueData data)
-        {
-            isTyping = true;
-            dialogueText.SetText("");
-
-            foreach(char letter in data.dialogueLines[currentLineIndex])
-            {
-                dialogueText.text += letter;
-                yield return new WaitForSeconds(data.typingSpeed);   
-            }
-            
             isTyping = false;
-            ShowNPCCloseButton(data);
+            dialogueText.SetText(activeNPCDialogue.dialogueLines[currentLineIndex]);
+            ShowNPCCloseButton();
+            return;
         }
 
-        void ShowNPCCloseButton(NPCDialogueData data)
-        {
-            if(currentLineIndex == data.dialogueLines.Length - 1)
-                dialogueCloseButton.gameObject.SetActive(true);
-        }
-    #endregion
+        currentLineIndex++;
 
-    #region Conversation (Cutscene) Methods
-        void HandleConversationInteraction(Conversation conversation)
+        if (currentLineIndex >= activeNPCDialogue.dialogueLines.Length)
         {
-            if (!isDialogueActive)
-                StartConversation(conversation);
-            else if(currentLineIndex + 1 < activeConversation.lines.Count || isTyping)
-            {
-                AdvanceConversation();
-            }
-            else
-                EndConversation();
+            EndNPCDialogue();
+            return;
         }
 
-        public void StartConversation(Conversation conversation)
-        {
-            dialoguePanel.SetActive(true);
-            isDialogueActive = true;
-            activeConversation = conversation;
-            currentLineIndex = 0;
+        StartCoroutine(TypeNPCLine());
+    }
 
-            StartCoroutine(TypeConversationLine());
+    private IEnumerator TypeNPCLine()
+    {
+        isTyping = true;
+        dialogueText.SetText(string.Empty);
+
+        foreach (char letter in activeNPCDialogue.dialogueLines[currentLineIndex])
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(activeNPCDialogue.typingSpeed);
         }
 
-        void ShowCurrentConversationLine()
-        {
-            DialogueLine line = activeConversation.lines[currentLineIndex];
-            NPCDialogueData speaker = speakerRegistry.GetSpeaker(line.speaker);
+        isTyping = false;
+        ShowNPCCloseButton();
+    }
 
-            nameText.SetText(speaker.NPCName);
-            portraitImage.sprite = speaker.portrait;
-            dialogueText.SetText(line.text);
+    private void ShowNPCCloseButton()
+    {
+        dialogueCloseButton.gameObject.SetActive(
+            currentLineIndex == activeNPCDialogue.dialogueLines.Length - 1);
+    }
+
+    public void EndNPCDialogue()
+    {
+        StopAllCoroutines();
+        activeNPCDialogue = null;
+        ResetDialogueUI();
+    }
+
+    private void HandleConversationInteraction(Conversation conversation)
+    {
+        if (!IsDialogueActive)
+        {
+            StartConversation(conversation);
+            return;
         }
 
-        public void AdvanceConversation()
+        if (activeConversation == conversation)
+            AdvanceConversation();
+    }
+
+    public void StartConversation(Conversation conversation)
+    {
+        if (!ValidateConversation(conversation, out string reason))
         {
-            if (isTyping)
-            {
-                StopAllCoroutines();
-                isTyping = false;
-                DialogueLine line = activeConversation.lines[currentLineIndex];
-                dialogueText.SetText(line.text);
-                return;
-            }
-
-            currentLineIndex++;
-
-            if (currentLineIndex >= activeConversation.lines.Count)
-            {
-                EndConversation();
-            }
-            else
-            {
-                StartCoroutine(TypeConversationLine());
-            }
+            string conversationId = conversation?.conversationId;
+            Debug.LogError(reason, this);
+            OnConversationFailed?.Invoke(conversationId, reason);
+            return;
         }
 
-        IEnumerator TypeConversationLine()
+        activeConversation = conversation;
+        activeNPCDialogue = null;
+        currentLineIndex = 0;
+        IsDialogueActive = true;
+
+        dialoguePanel.SetActive(true);
+        dialogueCloseButton.gameObject.SetActive(false);
+        StartCoroutine(TypeConversationLine());
+    }
+
+    private void AdvanceConversation()
+    {
+        if (isTyping)
         {
-            DialogueLine line = activeConversation.lines[currentLineIndex];
-            NPCDialogueData speaker = speakerRegistry.GetSpeaker(line.speaker);
-
-            nameText.SetText(speaker.NPCName);
-            portraitImage.sprite = speaker.portrait;
-
-            isTyping = true;
-            dialogueText.SetText("");
-
-            foreach (char letter in line.text)
-            {
-                dialogueText.text += letter;
-                yield return new WaitForSeconds(speaker.typingSpeed);
-            }
-
+            StopAllCoroutines();
             isTyping = false;
-        } 
-
-        public void EndConversation()
-        {
-            string finishedConversationId = activeConversation?.conversationId;
-
-            activeConversation = null;
-            currentLineIndex = 0;
-            isDialogueActive = false;
-
-            dialogueText.SetText("");
-            nameText.SetText("");
-            portraitImage.sprite = null;
-
-            dialoguePanel.SetActive(false);
-
-            if (!string.IsNullOrEmpty(finishedConversationId))
-                OnConversationFinished?.Invoke(finishedConversationId);
+            dialogueText.SetText(activeConversation.lines[currentLineIndex].text);
+            return;
         }
-    #endregion
 
-    #region Event/Action Subscriptions
-        void OnEnable()
+        currentLineIndex++;
+
+        if (currentLineIndex >= activeConversation.lines.Count)
         {
-            NPC.OnNPCInteracted += HandleNPCInteraction;
-            NPC.OnMissionConversationInteracted += HandleConversationInteraction;
-            ConversationTrigger.OnConversationInteracted += HandleConversationInteraction;
+            EndConversation();
+            return;
         }
-        
-        void OnDisable()
+
+        StartCoroutine(TypeConversationLine());
+    }
+
+    private IEnumerator TypeConversationLine()
+    {
+        DialogueLine line = activeConversation.lines[currentLineIndex];
+        speakerRegistry.TryGetSpeaker(line.speaker, out NPCDialogueData speaker);
+
+        nameText.SetText(speaker.NPCName);
+        portraitImage.sprite = speaker.portrait;
+        dialogueText.SetText(string.Empty);
+        isTyping = true;
+
+        foreach (char letter in line.text)
         {
-            NPC.OnNPCInteracted -= HandleNPCInteraction;
-            NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
-            ConversationTrigger.OnConversationInteracted -= HandleConversationInteraction;
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(speaker.typingSpeed);
         }
-    #endregion
+
+        isTyping = false;
+    }
+
+    public void EndConversation()
+    {
+        StopAllCoroutines();
+        string finishedConversationId = activeConversation?.conversationId;
+        activeConversation = null;
+        ResetDialogueUI();
+
+        if (!string.IsNullOrWhiteSpace(finishedConversationId))
+            OnConversationFinished?.Invoke(finishedConversationId);
+    }
+
+    private bool ValidateConversation(Conversation conversation, out string reason)
+    {
+        if (conversation == null)
+        {
+            reason = "Cannot start a null conversation.";
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(conversation.conversationId))
+        {
+            reason = "Conversation is missing its conversation ID.";
+            return false;
+        }
+
+        if (conversation.lines == null || conversation.lines.Count == 0)
+        {
+            reason = $"Conversation '{conversation.conversationId}' has no lines.";
+            return false;
+        }
+
+        foreach (DialogueLine line in conversation.lines)
+        {
+            if (line == null || string.IsNullOrWhiteSpace(line.text))
+            {
+                reason = $"Conversation '{conversation.conversationId}' contains an empty line.";
+                return false;
+            }
+
+            if (speakerRegistry == null || !speakerRegistry.TryGetSpeaker(line.speaker, out _))
+            {
+                reason = $"Conversation '{conversation.conversationId}' references unknown speaker '{line?.speaker}'.";
+                return false;
+            }
+        }
+
+        reason = null;
+        return true;
+    }
+
+    private void ResetDialogueUI()
+    {
+        currentLineIndex = 0;
+        isTyping = false;
+        IsDialogueActive = false;
+        dialogueText.SetText(string.Empty);
+        nameText.SetText(string.Empty);
+        portraitImage.sprite = null;
+        dialogueCloseButton.gameObject.SetActive(false);
+        dialoguePanel.SetActive(false);
+    }
+
+    void OnEnable()
+    {
+        NPC.OnNPCInteracted += HandleNPCInteraction;
+        NPC.OnMissionConversationInteracted += HandleConversationInteraction;
+        ConversationTrigger.OnConversationInteracted += HandleConversationInteraction;
+    }
+
+    void OnDisable()
+    {
+        NPC.OnNPCInteracted -= HandleNPCInteraction;
+        NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
+        ConversationTrigger.OnConversationInteracted -= HandleConversationInteraction;
+    }
 }

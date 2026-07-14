@@ -77,8 +77,11 @@ public class NPC : MonoBehaviour, IInteractable
             missionIcon.SetActive(true);
     }
 
-    public void ClearMissionConversation()
+    public void ClearMissionConversation(Conversation expectedConversation = null)
     {
+        if (expectedConversation != null && activeMissionConversation != expectedConversation)
+            return;
+
         activeMissionConversation = null;
 
         if (missionIcon != null)
@@ -110,7 +113,8 @@ public class NPC : MonoBehaviour, IInteractable
 
         public void showIcon(bool visible)
         {
-            interactionIcon.SetActive(visible);
+            if (interactionIcon != null)
+                interactionIcon.SetActive(visible);
         }
 
         public void setInteracted()
