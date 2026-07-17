@@ -6,12 +6,19 @@ public class ConversationTrigger : MonoBehaviour, IInteractable
     public static event Action<Conversation> OnConversationInteracted;
 
     [SerializeField] private TextAsset conversationJson;
+    [SerializeField] private InteractableOutline interactionOutline;
 
     private Conversation conversation;
     private int counter = 0;
 
     void Awake()
     {
+        if (interactionOutline == null)
+            interactionOutline = GetComponent<InteractableOutline>();
+
+        if (interactionOutline == null && GetComponentInChildren<SpriteRenderer>() != null)
+            interactionOutline = gameObject.AddComponent<InteractableOutline>();
+
         if (conversationJson == null)
         {
             Debug.LogError($"{gameObject.name} needs conversation JSON.", this);
@@ -31,6 +38,11 @@ public class ConversationTrigger : MonoBehaviour, IInteractable
     }
 
     public void showIcon(bool visible) { }
+
+    public void showHighlight(bool visible)
+    {
+        interactionOutline?.SetHighlighted(visible);
+    }
 
     public void setInteracted() { }
 

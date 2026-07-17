@@ -371,7 +371,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 81
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1580529297, guid: 39082b1631ecee840b4b9be9078db222, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -733,7 +733,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2038920785
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9121756508032652171, guid: b7a331524fbd6de459d3693613f2114a, type: 3}
@@ -813,7 +813,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 80
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7024813532705275506, guid: 2728c6b1567deab439b9e5fb15444c52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -853,25 +853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationTrigger
   conversationJson: {fileID: 4900000, guid: c40557fd4b9b5af46b254e200d106965, type: 3}
---- !u!114 &189352700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189352695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15ad25d6a4f4cc688fae58969c54191, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::TwoPointIsometricSort
-  spriteRenderer: {fileID: 189352696}
-  referenceTransform: {fileID: 1378986822}
-  referenceRenderer: {fileID: 65474291}
-  lineStart: {x: -2.2641423, y: -1.1187735}
-  lineEnd: {x: 2.208058, y: -0.24319553}
-  negativeSideBehind: 1
-  orderDifference: 1
+  interactionOutline: {fileID: 0}
 --- !u!68 &189352699
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -918,6 +900,25 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &189352700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189352695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a15ad25d6a4f4cc688fae58969c54191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TwoPointIsometricSort
+  spriteRenderer: {fileID: 189352696}
+  referenceTransform: {fileID: 1378986822}
+  referenceRenderer: {fileID: 65474291}
+  lineStart: {x: -2.1838245, y: -1.1608858}
+  lineEnd: {x: 2.231614, y: -0.2019062}
+  negativeSideBehind: 1
+  orderDifference: 1
 --- !u!1 &209521817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1064,7 @@ GameObject:
   - component: {fileID: 210382214}
   - component: {fileID: 210382213}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Objectives Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,6 +1082,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 865406395}
   - {fileID: 2096895997}
   m_Father: {fileID: 1156922982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1237,7 +1239,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4696426949126629559, guid: bdff39503cfe820449d524e4c0e6c341, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1261,7 +1263,7 @@ GameObject:
   - component: {fileID: 298052469}
   - component: {fileID: 298052468}
   m_Layer: 5
-  m_Name: Dialogue Panel
+  m_Name: NPC Dialogue Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3254,7 +3256,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000af89788611b58792
+  m_ApplyToSortingLayers: d50d19ba0000000011b58792af897886
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3627,6 +3629,143 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.75
+--- !u!1 &865406394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865406395}
+  - component: {fileID: 865406397}
+  - component: {fileID: 865406396}
+  m_Layer: 5
+  m_Name: Objectives Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &865406395
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865406394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 210382212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.3811, y: 83.9}
+  m_SizeDelta: {x: 535.45, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &865406396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865406394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ACTIVE MISSIONS
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0632396139dbe2940bedeac97d3b6507, type: 2}
+  m_sharedMaterial: {fileID: -4616160028116289662, guid: 0632396139dbe2940bedeac97d3b6507, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: -9
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -1.9804688, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &865406397
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865406394}
+  m_CullTransparentMesh: 1
 --- !u!1 &899385954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,6 +3968,7 @@ MonoBehaviour:
   NPCDialogueData: {fileID: 11400000, guid: 11d5f5eb11398d941b90c17697b37b79, type: 2}
   interactionIcon: {fileID: 1453839477}
   missionIcon: {fileID: 561892542}
+  interactionOutline: {fileID: 0}
 --- !u!114 &918440238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3839,7 +3979,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
   spriteRenderer: {fileID: 261601646}
   orderOffset: 0
@@ -4072,8 +4212,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1172763179
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3639080516814038605, guid: ee1ffc5af36c35d48866ac077d6dcca3, type: 3}
@@ -4854,22 +4994,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   movementSpeed: 4
---- !u!114 &1378986828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378986821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
-  spriteRenderer: {fileID: 65474291}
-  orderOffset: 0
-  unitsPerLayer: 10
-  sortPointYOffset: 0
 --- !u!50 &1378986825
 Rigidbody2D:
   serializedVersion: 5
@@ -5052,6 +5176,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.023787657, y: 0.20219636}
   m_Size: {x: 0.58768225, y: 0.15157177}
   m_Direction: 1
+--- !u!114 &1378986828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378986821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
+  spriteRenderer: {fileID: 65474291}
+  orderOffset: 0
+  unitsPerLayer: 10
+  sortPointYOffset: 0
 --- !u!1 &1414984978
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,7 +5437,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 53
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6941706853065814016, guid: 074ff6e4b3dbe034291690bd27a1e8cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5974,6 +6114,7 @@ MonoBehaviour:
   NPCDialogueData: {fileID: 11400000, guid: 738f8da1851a3da45ad2f54218aa26bb, type: 2}
   interactionIcon: {fileID: 1418857863}
   missionIcon: {fileID: 0}
+  interactionOutline: {fileID: 0}
 --- !u!114 &1765918630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5984,7 +6125,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
   spriteRenderer: {fileID: 2113706280}
   orderOffset: 0
@@ -6484,6 +6625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationTrigger
   conversationJson: {fileID: 4900000, guid: 74a7c15cda23cba4d8df2d41c0a08afa, type: 3}
+  interactionOutline: {fileID: 0}
 --- !u!68 &1977593391
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -6979,22 +7121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Plant
   artifactData: {fileID: 11400000, guid: 6f37d235a72f4e67bd87ce35b2f8952d, type: 2}
   interactionIcon: {fileID: 150867422}
---- !u!114 &2039410437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039410432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
-  spriteRenderer: {fileID: 1451197162}
-  orderOffset: 0
-  unitsPerLayer: 10
-  sortPointYOffset: -1.2
+  interactionOutline: {fileID: 0}
 --- !u!68 &2039410436
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -7051,6 +7178,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &2039410437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039410432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b682fb1c1fa4f75a49c8cb33f8c7109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IsometricSort
+  spriteRenderer: {fileID: 1451197162}
+  orderOffset: 0
+  unitsPerLayer: 10
+  sortPointYOffset: -1.2
 --- !u!1 &2056970964
 GameObject:
   m_ObjectHideFlags: 0
@@ -7321,8 +7464,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7360,7 +7503,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 47.13391, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7472,7 +7615,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 19
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5887118414167783954, guid: 564dd8dd972b6e948a6e840aa36be5cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

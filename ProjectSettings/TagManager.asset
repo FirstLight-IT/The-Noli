@@ -38,14 +38,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background Layer
+    uniqueID: 3122204117
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Interaction buttons
-    uniqueID: 2256046511
-    locked: 0
-  - name: Front-TRY
+  - name: Exclamation Icons
     uniqueID: 2458367249
+    locked: 0
+  - name: Interaction Icons
+    uniqueID: 2256046511
     locked: 0
   m_RenderingLayers:
   - Default

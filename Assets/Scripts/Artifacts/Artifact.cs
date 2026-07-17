@@ -17,8 +17,18 @@ public class Artifact : MonoBehaviour, IInteractable
 
     [SerializeField] private ArtifactInfoSO artifactData;
     [SerializeField] private GameObject interactionIcon;
+    [SerializeField] private InteractableOutline interactionOutline;
 
     private string registeredArtifactID;
+
+    void Awake()
+    {
+        if (interactionOutline == null)
+            interactionOutline = GetComponent<InteractableOutline>();
+
+        if (interactionOutline == null)
+            interactionOutline = gameObject.AddComponent<InteractableOutline>();
+    }
 
     void OnEnable()
     {
@@ -90,6 +100,11 @@ public class Artifact : MonoBehaviour, IInteractable
         {
             if (interactionIcon != null)
                 interactionIcon.SetActive(visible);
+        }
+
+        public void showHighlight(bool visible)
+        {
+            interactionOutline?.SetHighlighted(visible);
         }
 
         public void setInteracted()

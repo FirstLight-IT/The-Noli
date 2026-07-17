@@ -18,12 +18,19 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField] private NPCDialogueData NPCDialogueData;
     [SerializeField] private GameObject interactionIcon;
     [SerializeField] private GameObject missionIcon;
+    [SerializeField] private InteractableOutline interactionOutline;
 
     private Conversation activeMissionConversation;
     private string registeredNpcID;
 
     void Awake()
     {
+        if (interactionOutline == null)
+            interactionOutline = GetComponent<InteractableOutline>();
+
+        if (interactionOutline == null)
+            interactionOutline = gameObject.AddComponent<InteractableOutline>();
+
         if (missionIcon != null)
             missionIcon.SetActive(false);
     }
@@ -115,6 +122,11 @@ public class NPC : MonoBehaviour, IInteractable
         {
             if (interactionIcon != null)
                 interactionIcon.SetActive(visible);
+        }
+
+        public void showHighlight(bool visible)
+        {
+            interactionOutline?.SetHighlighted(visible);
         }
 
         public void setInteracted()
