@@ -1,0 +1,29 @@
+{
+  "conversationId": "test_convo1",
+  "lines": [
+    { "speaker": "Blond Man", "text": "But can you tell me, Señor Laruja, what kind of man our host is?" },
+    { "speaker": "Blond Man", "text": "I haven’t been introduced to him yet." },
+    { "speaker": "Señor Laruja", "text": "They say that he has gone out." },
+    { "speaker": "Señor Laruja", "text": "I haven’t seen him either." },
+    { "speaker": "Fray Damaso", "text": "There’s no need of introductions here." },
+    { "speaker": "Fray Damaso", "text": "Santiago is made of the right stuff." },
+    { "speaker": "Señor Laruja", "text": "No, he’s not the man who invented gunpowder." },
+    { "speaker": "Doña Victorina", "text": "You too, Señor Laruja." },
+    { "speaker": "Doña Victorina", "text": "How could the poor man invent gunpowder if, as is said, the Chinese invented it centuries ago?" },
+    { "speaker": "Fray Damaso", "text": "The Chinese! Are you crazy?" },
+    { "speaker": "Fray Damaso", "text": "Out with you!" },
+    { "speaker": "Fray Damaso", "text": "A Franciscan, one of my Order, Fray What-do-you-call-him Savalls, invented it in the—ah the seventh century!" },
+    { "speaker": "Doña Victorina", "text": "A Franciscan?" },
+    { "speaker": "Doña Victorina", "text": "Well, he must have been a missionary in China, that Padre Savalls." },
+    { "speaker": "Fray Sibyla", "text": "Schwartz, perhaps you mean, señora." },
+    { "speaker": "Doña Victorina", "text": "I don’t know. Fray Damaso said a Franciscan and I was only repeating." },
+    { "speaker": "Fray Damaso", "text": "Well, Savalls or Chevas, what does it matter?" },
+    { "speaker": "Fray Damaso", "text": "The difference of a letter doesn’t make him a Chinaman." },
+    { "speaker": "Fray Sibyla", "text": "And in the fourteenth century, not the seventh." },
+    { "speaker": "Fray Damaso", "text": "Well, neither does a century more or less make him a Dominican." },
+    { "speaker": "Fray Sibyla", "text": "Don’t get angry, your Reverence." },
+    { "speaker": "Fray Sibyla", "text": "So much the better that he did invent it so as to save his brethren the trouble." },
+    { "speaker": "Doña Victorina", "text": "And did you say, Padre Sibyla, that it was in the fourteenth century?" },
+    { "speaker": "Doña Victorina", "text": "Was that before or after Christ?" }
+  ]
+}

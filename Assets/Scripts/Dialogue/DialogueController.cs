@@ -261,13 +261,11 @@ public class DialogueController : MonoBehaviour
     {
         NPC.OnNPCInteracted += HandleNPCInteraction;
         NPC.OnMissionConversationInteracted += HandleConversationInteraction;
-        ConversationTrigger.OnConversationInteracted += HandleConversationInteraction;
     }
 
     void OnDisable()
     {
         NPC.OnNPCInteracted -= HandleNPCInteraction;
         NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
-        ConversationTrigger.OnConversationInteracted -= HandleConversationInteraction;
     }
 }

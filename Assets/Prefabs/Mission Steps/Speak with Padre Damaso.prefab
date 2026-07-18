@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a6a4d188ab14b40810629daa2c12d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationMissionStep
-  objectiveDescription: Speak with Padre Damaso
-  targetNPCId: padre_damaso
-  conversationJson: {fileID: 4900000, guid: 74a7c15cda23cba4d8df2d41c0a08afa, type: 3}
+  objectiveDescription: Speak with fray Damaso
+  targetNPCId: fray_damaso
+  conversationJson: {fileID: 4900000, guid: a3493f524795a9842bc3eafbd2effe86, type: 3}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 564dd8dd972b6e948a6e840aa36be5cf
+guid: b45d037ab671a154da17833d44f3223e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5887118414167783954
-    second: BlondMan-small_0
+      213: -8600000088782356161
+    second: Guevara-Sketch-Compressed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlondMan-small_0
+      name: Guevara-Sketch-Compressed_0
       rect:
         serializedVersion: 2
-        x: 212
-        y: 118
-        width: 117
-        height: 317
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 99
+        y: 36
+        width: 478
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee54edc5ef0cc4ea0800000000000000
-      internalID: -5887118414167783954
+      spriteID: f31ccc7eb79a6a880800000000000000
+      internalID: -8600000088782356161
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6fd3a023dd5fa484fab8eed7646316da
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BlondMan-small_0: -5887118414167783954
+      Guevara-Sketch-Compressed_0: -8600000088782356161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

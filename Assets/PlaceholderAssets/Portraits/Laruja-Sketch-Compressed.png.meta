@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: bdff39503cfe820449d524e4c0e6c341
+guid: 888204882d06bc64dac0d2a764ad1dca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4696426949126629559
-    second: Damaso-small_0
+      213: 5380715626698292517
+    second: Laruja-Sketch-Compressed_0
+  - first:
+      213: 6237753554008672758
+    second: Laruja-Sketch-Compressed_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Damaso-small_0
+      name: Laruja-Sketch-Compressed_0
       rect:
         serializedVersion: 2
-        x: 219
-        y: 129
-        width: 122
-        height: 303
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 81
+        y: 33
+        width: 504
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9475cbf8290f2deb0800000000000000
-      internalID: -4696426949126629559
+      spriteID: 52dbebeaa542caa40800000000000000
+      internalID: 5380715626698292517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laruja-Sketch-Compressed_1
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 425
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f90e1feec3f09650800000000000000
+      internalID: 6237753554008672758
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 62f1dac9e86afbf4398bc9afff0d75ea
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Damaso-small_0: -4696426949126629559
+      Laruja-Sketch-Compressed_0: 5380715626698292517
+      Laruja-Sketch-Compressed_1: 6237753554008672758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

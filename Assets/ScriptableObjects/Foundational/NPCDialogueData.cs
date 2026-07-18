@@ -14,7 +14,5 @@ public class NPCDialogueData : ScriptableObject
     
     public float typingSpeed;
     public string[] dialogueLines;
-    public bool[] autoProgressLines;
-    public float autoProgressDelay;
 
 }

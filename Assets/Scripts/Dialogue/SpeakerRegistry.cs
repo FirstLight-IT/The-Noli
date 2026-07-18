@@ -26,14 +26,14 @@ public class SpeakerRegistry : MonoBehaviour
         }
     }
 
-    public bool TryGetSpeaker(string id, out NPCDialogueData speaker)
+    public bool TryGetSpeaker(string speakerName, out NPCDialogueData speaker)
     {
-        if (string.IsNullOrWhiteSpace(id))
+        if (string.IsNullOrWhiteSpace(speakerName))
         {
             speaker = null;
             return false;
         }
 
-        return lookup.TryGetValue(id, out speaker);
+        return lookup.TryGetValue(speakerName, out speaker);
     }
 }

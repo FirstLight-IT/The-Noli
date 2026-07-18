@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
-  m_Name: Blond Man
+  m_Name: Sibayla
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
-  npcID: blond_man
-  NPCName: Blond Man
-  portrait: {fileID: 4537843418018991142, guid: 1f281d7169b29604e8bf88921c35ae35, type: 3}
+  npcID: fray_sibyla
+  NPCName: Fray Sibyla
+  portrait: {fileID: -5502229652484179313, guid: 5c10deae04182a74a86e30f4a4a4a17b, type: 3}
   typingSpeed: 0.05
   dialogueLines:
-  - Hello there, Mr Ibarra. Pleasure to meet you, mate.
-  - If you'll excuse me, I still have a poem to write.
+  - ...

@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
   m_Name: Damaso
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueSO
-  npcID: padre_damaso
-  NPCName: Padre Damaso
+  npcID: fray_damaso
+  NPCName: Fray Damaso
   portrait: {fileID: -5372463453060383186, guid: dfb512c37edbc1a4186f758a9558d61e, type: 3}
   typingSpeed: 0.05
   dialogueLines:
   - Ibarra, HOW DARE YOU SAY THAT TO ME! Are you saying I was an abusive priest!!!!
   - GET OUT, You are worse than a smelly indio!!!
   - Bruh, I hate these goddamn indios, Can you believe this crap?
-  autoProgressLines: 
-  autoProgressDelay: 0
