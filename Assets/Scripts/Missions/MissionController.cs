@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MissionController : MonoBehaviour
 {
@@ -9,11 +11,17 @@ public class MissionController : MonoBehaviour
     [SerializeField] private string missionToStart;
 
     [Header("UI")]
-    [SerializeField] private TMP_Text objectiveText;
+    [SerializeField] private TMP_Text missionNameText;
+    [FormerlySerializedAs("objectiveText")]
+    [SerializeField] private TMP_Text objectiveDescriptionText;
+    [SerializeField] private GameObject missionCompletedPanel;
+    [SerializeField] private TMP_Text completedMissionNameText;
+    [SerializeField, Min(0f)] private float completionDisplayDuration = 3f;
 
     private readonly Dictionary<string, Mission> missions = new();
     private Mission activeMission;
     private MissionStep activeStep;
+    private bool isShowingMissionCompletion;
 
     void OnEnable()
     {
@@ -24,6 +32,9 @@ public class MissionController : MonoBehaviour
 
     void Awake()
     {
+        if (missionCompletedPanel != null)
+            missionCompletedPanel.SetActive(false);
+
         BuildMissionLibrary();
     }
 
@@ -63,6 +74,12 @@ public class MissionController : MonoBehaviour
 
     public void StartMission(string missionId)
     {
+        if (isShowingMissionCompletion)
+        {
+            Debug.LogWarning($"Cannot start '{missionId}' while mission completion is being shown.", this);
+            return;
+        }
+
         if (activeMission != null)
         {
             Debug.LogWarning($"Cannot start '{missionId}' while '{activeMission.Info.MissionId}' is active.", this);
@@ -217,10 +234,34 @@ public class MissionController : MonoBehaviour
         completedMission.State = MissionState.Finished;
         activeMission = null;
 
-        UpdateObjectiveUI(completedMission.Info.DisplayName, "Mission complete!");
+        if (missionNameText != null)
+            missionNameText.SetText(string.Empty);
+
+        if (objectiveDescriptionText != null)
+            objectiveDescriptionText.SetText(string.Empty);
+
         Debug.Log($"Mission complete: {completedMission.Info.DisplayName}");
 
         RefreshMissionAvailability();
+        StartCoroutine(ShowMissionCompletion(completedMission.Info.DisplayName));
+    }
+
+    private IEnumerator ShowMissionCompletion(string completedMissionName)
+    {
+        isShowingMissionCompletion = true;
+
+        if (completedMissionNameText != null)
+            completedMissionNameText.SetText(completedMissionName);
+
+        if (missionCompletedPanel != null)
+            missionCompletedPanel.SetActive(true);
+
+        yield return new WaitForSeconds(completionDisplayDuration);
+
+        if (missionCompletedPanel != null)
+            missionCompletedPanel.SetActive(false);
+
+        isShowingMissionCompletion = false;
         TryStartNextAutomaticMission();
     }
 
@@ -242,7 +283,10 @@ public class MissionController : MonoBehaviour
 
     private void UpdateObjectiveUI(string missionName, string objective)
     {
-        if (objectiveText != null)
-            objectiveText.SetText($"{missionName}\n{objective}");
+        if (missionNameText != null)
+            missionNameText.SetText(missionName);
+
+        if (objectiveDescriptionText != null)
+            objectiveDescriptionText.SetText(objective);
     }
 }

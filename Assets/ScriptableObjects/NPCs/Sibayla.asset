@@ -16,5 +16,12 @@ MonoBehaviour:
   NPCName: Fray Sibyla
   portrait: {fileID: -5502229652484179313, guid: 5c10deae04182a74a86e30f4a4a4a17b, type: 3}
   typingSpeed: 0.05
-  dialogueLines:
-  - ...
+  introductionLines:
+  - I am Fray Sibyla, a Dominican and the curate of Binondo.
+  - I prefer to consider my words carefully before speaking.
+  repeatDialogues:
+  - lines:
+    - One must distinguish carefully before passing judgment.
+    - Things are rarely as simple as they first appear.
+  - lines:
+    - ...

@@ -16,6 +16,10 @@ MonoBehaviour:
   NPCName: "Se\xF1or Laruja"
   portrait: {fileID: 5380715626698292517, guid: 888204882d06bc64dac0d2a764ad1dca, type: 3}
   typingSpeed: 0.05
-  dialogueLines:
-  - Ola, Senor.
-  - Please excuse me, I have a buffet to attend to.
+  introductionLines:
+  - "Se\xF1or Laruja. I have spent enough time in this country to form a few opinions
+    of my own."
+  repeatDialogues:
+  - lines:
+    - Take care when contradicting Fray Damaso.
+    - He does not enjoy being treated without proper deference.

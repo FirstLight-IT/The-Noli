@@ -16,7 +16,10 @@ MonoBehaviour:
   NPCName: Fray Damaso
   portrait: {fileID: -5372463453060383186, guid: dfb512c37edbc1a4186f758a9558d61e, type: 3}
   typingSpeed: 0.05
-  dialogueLines:
-  - Ibarra, HOW DARE YOU SAY THAT TO ME! Are you saying I was an abusive priest!!!!
-  - GET OUT, You are worse than a smelly indio!!!
-  - Bruh, I hate these goddamn indios, Can you believe this crap?
+  introductionLines:
+  - I am Fray Damaso, a Franciscan and former curate of San Diego.
+  - After more than twenty years in this country, I know its people well.
+  repeatDialogues:
+  - lines:
+    - Do not come to me with theories and fine speeches
+    - Experience has taught me more than any book could.

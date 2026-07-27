@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,9 +21,12 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Button dialogueCloseButton;
 
     private NPCDialogueData activeNPCDialogue;
+    private string[] activeNPCDialogueLines;
     private Conversation activeConversation;
     private bool isTyping;
     private int currentLineIndex;
+    private readonly HashSet<string> introducedNPCs = new();
+    private readonly Dictionary<string, int> nextRepeatDialogueByNPC = new();
 
     void Awake()
     {
@@ -55,13 +59,30 @@ public class DialogueController : MonoBehaviour
 
     private void StartNPCDialogue(NPCDialogueData data)
     {
-        if (data == null || data.dialogueLines == null || data.dialogueLines.Length == 0)
+        if (data == null)
         {
-            Debug.LogError("NPC dialogue is missing its dialogue lines.", data);
+            Debug.LogError("Cannot start dialogue for a null NPC.", this);
             return;
         }
 
+        string npcID = data.NpcID;
+        bool hasBeenIntroduced = !string.IsNullOrWhiteSpace(npcID) && introducedNPCs.Contains(npcID);
+        string[] selectedLines = hasBeenIntroduced
+            ? GetNextRepeatDialogue(data)
+            : data.introductionLines;
+
+        if (!HasDialogueLines(selectedLines))
+        {
+            string dialogueType = hasBeenIntroduced ? "repeat" : "introduction";
+            Debug.LogError($"NPC '{data.NPCName}' is missing its {dialogueType} dialogue lines.", data);
+            return;
+        }
+
+        if (!string.IsNullOrWhiteSpace(npcID))
+            introducedNPCs.Add(npcID);
+
         activeNPCDialogue = data;
+        activeNPCDialogueLines = selectedLines;
         activeConversation = null;
         currentLineIndex = 0;
         IsDialogueActive = true;
@@ -79,14 +100,14 @@ public class DialogueController : MonoBehaviour
         {
             StopAllCoroutines();
             isTyping = false;
-            dialogueText.SetText(activeNPCDialogue.dialogueLines[currentLineIndex]);
+            dialogueText.SetText(activeNPCDialogueLines[currentLineIndex]);
             ShowNPCCloseButton();
             return;
         }
 
         currentLineIndex++;
 
-        if (currentLineIndex >= activeNPCDialogue.dialogueLines.Length)
+        if (currentLineIndex >= activeNPCDialogueLines.Length)
         {
             EndNPCDialogue();
             return;
@@ -100,7 +121,7 @@ public class DialogueController : MonoBehaviour
         isTyping = true;
         dialogueText.SetText(string.Empty);
 
-        foreach (char letter in activeNPCDialogue.dialogueLines[currentLineIndex])
+        foreach (char letter in activeNPCDialogueLines[currentLineIndex])
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(activeNPCDialogue.typingSpeed);
@@ -113,14 +134,66 @@ public class DialogueController : MonoBehaviour
     private void ShowNPCCloseButton()
     {
         dialogueCloseButton.gameObject.SetActive(
-            currentLineIndex == activeNPCDialogue.dialogueLines.Length - 1);
+            currentLineIndex == activeNPCDialogueLines.Length - 1);
     }
 
     public void EndNPCDialogue()
     {
         StopAllCoroutines();
         activeNPCDialogue = null;
+        activeNPCDialogueLines = null;
         ResetDialogueUI();
+    }
+
+    private string[] GetNextRepeatDialogue(NPCDialogueData data)
+    {
+        if (data.repeatDialogues == null || data.repeatDialogues.Length == 0)
+            return null;
+
+        int nextIndex = nextRepeatDialogueByNPC.TryGetValue(data.NpcID, out int savedIndex)
+            ? savedIndex
+            : 0;
+
+        // Skip accidentally empty sequences without making the NPC unusable.
+        for (int offset = 0; offset < data.repeatDialogues.Length; offset++)
+        {
+            int index = (nextIndex + offset) % data.repeatDialogues.Length;
+            string[] lines = data.repeatDialogues[index]?.lines;
+            if (!HasDialogueLines(lines))
+                continue;
+
+            nextRepeatDialogueByNPC[data.NpcID] = (index + 1) % data.repeatDialogues.Length;
+            return lines;
+        }
+
+        return null;
+    }
+
+    private static bool HasDialogueLines(string[] lines)
+    {
+        if (lines == null || lines.Length == 0)
+            return false;
+
+        foreach (string line in lines)
+        {
+            if (string.IsNullOrWhiteSpace(line))
+                return false;
+        }
+
+        return true;
+    }
+
+    // Kept as the common UI entry point because existing Unity Button events
+    // are serialized with this method name.
+    public void EndDialogue()
+    {
+        if (activeConversation != null)
+        {
+            EndConversation();
+            return;
+        }
+
+        EndNPCDialogue();
     }
 
     private void HandleConversationInteraction(Conversation conversation)
@@ -162,6 +235,7 @@ public class DialogueController : MonoBehaviour
             StopAllCoroutines();
             isTyping = false;
             dialogueText.SetText(activeConversation.lines[currentLineIndex].text);
+            ShowConversationCloseButton();
             return;
         }
 
@@ -193,6 +267,13 @@ public class DialogueController : MonoBehaviour
         }
 
         isTyping = false;
+        ShowConversationCloseButton();
+    }
+
+    private void ShowConversationCloseButton()
+    {
+        dialogueCloseButton.gameObject.SetActive(
+            currentLineIndex == activeConversation.lines.Count - 1);
     }
 
     public void EndConversation()

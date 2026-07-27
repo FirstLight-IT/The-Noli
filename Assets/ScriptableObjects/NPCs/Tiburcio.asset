@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
-  m_Name: Guevara
+  m_Name: Tiburcio
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
-  npcID: lieutenant_guevara
-  NPCName: Lieutenant Guevara
-  portrait: {fileID: -8600000088782356161, guid: b45d037ab671a154da17833d44f3223e, type: 3}
+  npcID: don_tiburcio
+  NPCName: Don Tiburcio
+  portrait: {fileID: 4538051818922610589, guid: c01fa19f22a567d4a9cab5e615ca8a9d, type: 3}
   typingSpeed: 0.05
   introductionLines:
-  - Lieutenant Guevara, of the Civil Guard.
-  - I speak plainly, and I expect others to do the same.
+  - "Doctor de Espada\xF1a, at your service."
   repeatDialogues:
   - lines:
-    - Rank and authority must still answer to justice.
-    - I will not remain silent when an honorable man is slandered.
+    - This gathering is quite lively.
+    - I believe I am more comfortable observing the conversation than joining its
+      disputes.

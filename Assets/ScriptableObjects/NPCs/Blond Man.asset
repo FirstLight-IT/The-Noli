@@ -16,6 +16,10 @@ MonoBehaviour:
   NPCName: Blond Man
   portrait: {fileID: 4537843418018991142, guid: 1f281d7169b29604e8bf88921c35ae35, type: 3}
   typingSpeed: 0.05
-  dialogueLines:
-  - Hello there, Mr Ibarra. Pleasure to meet you, mate.
-  - If you'll excuse me, I still have a poem to write.
+  introductionLines:
+  - I am merely a traveler newly arrived from Europe.
+  - I came at my own expense to study this country.
+  repeatDialogues:
+  - lines:
+    - There is much here that I still do not understand
+    - but that is precisely why I came.

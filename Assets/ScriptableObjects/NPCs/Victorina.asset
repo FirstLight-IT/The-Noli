@@ -16,6 +16,10 @@ MonoBehaviour:
   NPCName: "Do\xF1a Victorina"
   portrait: {fileID: -7827563912223613409, guid: 36afaede06121314da7a09f3ac2106c9, type: 3}
   typingSpeed: 0.05
-  dialogueLines:
-  - Pleasure to meet you, senor red hair.
-  - May you enjot your stay here in the Philippines.
+  introductionLines:
+  - "I am Do\xF1a Victorina de Espada\xF1a\u2014the Doctora, as people call me."
+  - "This gentleman beside me is my husband, Doctor de Espada\xF1a."
+  repeatDialogues:
+  - lines:
+    - They say the Chinese invented gunpowder centuries ago.
+    - Surely such a well-known fact should not cause so much argument.
