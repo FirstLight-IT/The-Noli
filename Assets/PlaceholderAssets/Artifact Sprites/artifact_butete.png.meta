@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_butete_0
       rect:
         serializedVersion: 2
-        x: 230
-        y: 242
-        width: 86
-        height: 60
+        x: 239
+        y: 248
+        width: 68
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

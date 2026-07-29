@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_chair_2_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 183
-        width: 116
-        height: 178
+        x: 190
+        y: 144
+        width: 166
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

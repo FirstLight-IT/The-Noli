@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_stool_0
       rect:
         serializedVersion: 2
-        x: 244
-        y: 226
-        width: 57
-        height: 92
+        x: 237
+        y: 215
+        width: 71
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

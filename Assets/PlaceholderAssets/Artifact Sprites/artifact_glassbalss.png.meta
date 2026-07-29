@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_glassbalss_0
       rect:
         serializedVersion: 2
-        x: 194
-        y: 199
-        width: 159
-        height: 146
+        x: 220
+        y: 223
+        width: 107
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: -4069800789512603411
     second: placeholder-area-caida_0
-  - first:
-      213: 5122408230346082989
-    second: placeholder-area-caida_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,10 +129,10 @@ TextureImporter:
       name: placeholder-area-caida_0
       rect:
         serializedVersion: 2
-        x: 565
-        y: 262
-        width: 2950
-        height: 2881
+        x: 463
+        y: 917
+        width: 3228
+        height: 2340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,28 +143,6 @@ TextureImporter:
       bones: []
       spriteID: de83f72aeb92587c0800000000000000
       internalID: -4069800789512603411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: placeholder-area-caida_1
-      rect:
-        serializedVersion: 2
-        x: 3997
-        y: 2223
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: daac0545523761740800000000000000
-      internalID: 5122408230346082989
       vertices: []
       indices: 
       edges: []
@@ -187,7 +162,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       placeholder-area-caida_0: -4069800789512603411
-      placeholder-area-caida_1: 5122408230346082989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

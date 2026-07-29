@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_painting_1_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 165
-        width: 139
-        height: 215
+        x: 169
+        y: 113
+        width: 207
+        height: 319
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_cabinet_1_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 163
-        width: 164
-        height: 219
+        x: 157
+        y: 117
+        width: 232
+        height: 311
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

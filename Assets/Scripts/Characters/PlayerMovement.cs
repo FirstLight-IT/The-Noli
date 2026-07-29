@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     private static bool IsMovementBlocked()
     {
         return InventoryController.IsJournalOpen ||
+               ScreenFade.IsTransitioning ||
                (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive);
     }
 

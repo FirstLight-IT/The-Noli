@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_glasscabinet_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 153
-        width: 208
-        height: 239
+        x: 139
+        y: 119
+        width: 268
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

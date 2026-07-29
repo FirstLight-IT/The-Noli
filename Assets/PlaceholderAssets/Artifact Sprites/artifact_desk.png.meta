@@ -129,10 +129,10 @@ TextureImporter:
       name: artifact_desk_0
       rect:
         serializedVersion: 2
-        x: 180
-        y: 182
-        width: 185
-        height: 180
+        x: 155
+        y: 157
+        width: 235
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
