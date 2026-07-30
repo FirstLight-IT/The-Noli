@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d8892285dcb694b4f8ecbfd9ae4836cc
+guid: 26426902e22e1bc44aa24168d7ec502b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4069800789512603411
-    second: placeholder-area-caida_0
+      213: 3630434395318457533
+    second: placeholder-area-sala_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: placeholder-area-caida_0
+      name: placeholder-area-sala_0
       rect:
         serializedVersion: 2
-        x: 461
-        y: 917
-        width: 3228
-        height: 2401
+        x: 616
+        y: 1508
+        width: 3126
+        height: 2133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de83f72aeb92587c0800000000000000
-      internalID: -4069800789512603411
+      spriteID: db4115109d4e16230800000000000000
+      internalID: 3630434395318457533
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      placeholder-area-caida_0: -4069800789512603411
+      placeholder-area-sala_0: 3630434395318457533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

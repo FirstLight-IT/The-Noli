@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: d8892285dcb694b4f8ecbfd9ae4836cc
+guid: 9012143813de86544af8df485df68a5d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4069800789512603411
-    second: placeholder-area-caida_0
+      213: -7269417350802333638
+    second: placeholder-area-zagua_0
+  - first:
+      213: 6855142119866041221
+    second: placeholder-area-zagua_1
+  - first:
+      213: -6851885253418347953
+    second: placeholder-area-zagua_2
+  - first:
+      213: -1805133057487852367
+    second: placeholder-area-zagua_3
+  - first:
+      213: 4485181603035200215
+    second: placeholder-area-zagua_4
+  - first:
+      213: -2333003561804650288
+    second: placeholder-area-zagua_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: placeholder-area-caida_0
+      name: placeholder-area-zagua_0
       rect:
         serializedVersion: 2
-        x: 461
-        y: 917
-        width: 3228
-        height: 2401
+        x: 713
+        y: 536
+        width: 2821
+        height: 2293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +156,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de83f72aeb92587c0800000000000000
-      internalID: -4069800789512603411
+      spriteID: a30ad593f67dd1b90800000000000000
+      internalID: -7269417350802333638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: placeholder-area-zagua_1
+      rect:
+        serializedVersion: 2
+        x: 3592
+        y: 2222
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5830f6b107b522f50800000000000000
+      internalID: 6855142119866041221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: placeholder-area-zagua_2
+      rect:
+        serializedVersion: 2
+        x: 3603
+        y: 2202
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4213443aa639e0a0800000000000000
+      internalID: -6851885253418347953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: placeholder-area-zagua_3
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 1919
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc2f185c01e2f6e0800000000000000
+      internalID: -1805133057487852367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: placeholder-area-zagua_4
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 1829
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dab70a87e09e3e30800000000000000
+      internalID: 4485181603035200215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: placeholder-area-zagua_5
+      rect:
+        serializedVersion: 2
+        x: 3529
+        y: 1778
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8a9ee0f918f9fd0800000000000000
+      internalID: -2333003561804650288
       vertices: []
       indices: 
       edges: []
@@ -161,7 +286,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      placeholder-area-caida_0: -4069800789512603411
+      placeholder-area-zagua_0: -7269417350802333638
+      placeholder-area-zagua_1: 6855142119866041221
+      placeholder-area-zagua_2: -6851885253418347953
+      placeholder-area-zagua_3: -1805133057487852367
+      placeholder-area-zagua_4: 4485181603035200215
+      placeholder-area-zagua_5: -2333003561804650288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
