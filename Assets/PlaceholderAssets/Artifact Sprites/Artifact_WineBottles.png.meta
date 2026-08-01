@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4b092ae9fec5d4244aaecdb7d263fa0c
+guid: f8ba21e6af625a940ac9be1a934a81e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5047414949785427920
-    second: Artifact_BirdCage_0
+      213: 348513338548547283
+    second: Artifact_WineBottles_0
+  - first:
+      213: -7602634447079093361
+    second: Artifact_WineBottles_1
+  - first:
+      213: -5143549361463721963
+    second: Artifact_WineBottles_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Artifact_BirdCage_0
+      name: Artifact_WineBottles_0
       rect:
         serializedVersion: 2
-        x: 238
-        y: 224
-        width: 69
-        height: 97
+        x: 245
+        y: 244
+        width: 20
+        height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0dfd4fb87250c0640800000000000000
-      internalID: 5047414949785427920
+      spriteID: 3deebafe80b26d400800000000000000
+      internalID: 348513338548547283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artifact_WineBottles_1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 242
+        width: 19
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8bc3b830440e7690800000000000000
+      internalID: -7602634447079093361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artifact_WineBottles_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 240
+        width: 17
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51084418b117e98b0800000000000000
+      internalID: -5143549361463721963
       vertices: []
       indices: 
       edges: []
@@ -151,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a5cb03b839ed7ec47ad66d4187428ca7
+    spriteID: 7a7bee0f36872ac42b94c48037ac1e25
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Artifact_BirdCage_0: 5047414949785427920
+      Artifact_WineBottles_0: 348513338548547283
+      Artifact_WineBottles_1: -7602634447079093361
+      Artifact_WineBottles_2: -5143549361463721963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

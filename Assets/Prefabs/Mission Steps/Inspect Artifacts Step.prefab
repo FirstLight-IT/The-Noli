@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectArtifactsMissionStep
   objectiveDescription: Inspect artifacts around the floor
-  floorID: ground_floor
+  roomID: caida
   requiredArtifactCount: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 public class InspectArtifactsMissionStep : MissionStep
 {
     [Header("Inspect Artifacts Step")]
-    [SerializeField] private string floorID = "ground_floor";
+    [SerializeField] private string roomID;
     [SerializeField, Min(1)] private int requiredArtifactCount = 5;
 
     private readonly HashSet<string> availableArtifactIDs = new();
@@ -22,12 +22,12 @@ public class InspectArtifactsMissionStep : MissionStep
 
     protected override void OnStepActivated()
     {
-        List<Artifact> availableArtifacts = Artifact.GetActiveOnFloor(floorID);
+        List<Artifact> availableArtifacts = Artifact.GetActiveInRoom(roomID);
 
         if (availableArtifacts.Count < requiredArtifactCount)
         {
             FailStep(
-                $"Inspect artifacts step needs {requiredArtifactCount} artifacts on floor '{floorID}', " +
+                $"Inspect artifacts step needs {requiredArtifactCount} artifacts in room '{roomID}', " +
                 $"but only found {availableArtifacts.Count}.");
             return;
         }

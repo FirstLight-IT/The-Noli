@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4b092ae9fec5d4244aaecdb7d263fa0c
+guid: 933894e124e1184438461f2539bdc958
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5047414949785427920
-    second: Artifact_BirdCage_0
+      213: -339795791948335343
+    second: artifact_birdcage_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Artifact_BirdCage_0
+      name: artifact_birdcage_0
       rect:
         serializedVersion: 2
-        x: 238
-        y: 224
-        width: 69
-        height: 97
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 215
+        y: 192
+        width: 115
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0dfd4fb87250c0640800000000000000
-      internalID: 5047414949785427920
+      spriteID: 1173fbc078dc84bf0800000000000000
+      internalID: -339795791948335343
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a5cb03b839ed7ec47ad66d4187428ca7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Artifact_BirdCage_0: 5047414949785427920
+      artifact_birdcage_0: -339795791948335343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

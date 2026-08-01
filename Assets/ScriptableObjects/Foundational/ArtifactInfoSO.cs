@@ -6,15 +6,15 @@ public class ArtifactInfoSO : ScriptableObject
     [Header("Identity")]
     [SerializeField] private string artifactID;
     [SerializeField] private string displayName;
-    [SerializeField] private string floorID = "ground_floor";
+    [SerializeField] private string roomID;
 
     [Header("Journal Information")]
     [SerializeField] private Sprite image;
-    [SerializeField, TextArea] private string description;
+    [SerializeField, TextArea(3, 10)] private string[] description;
 
     public string ArtifactID => artifactID;
     public string DisplayName => displayName;
-    public string FloorID => floorID;
+    public string RoomID => roomID;
     public Sprite Image => image;
-    public string Description => description;
+    public string[] Description => description;
 }

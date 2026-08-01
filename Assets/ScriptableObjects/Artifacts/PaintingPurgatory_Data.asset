@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
-  m_Name: Painting-1
+  m_Name: PaintingPurgatory_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
-  artifactID: artifact_painting-1
-  displayName: Painting 1
-  roomID: ground_floor
-  image: {fileID: 0}
-  description: []
+  artifactID: artifact_painting_purgatory
+  displayName: '"Purgatory"'
+  roomID: caida
+  image: {fileID: -3267872726078466063, guid: 7a7bff2d64f203a4ea18bf32db8fa4ff, type: 3}
+  description:
+  - 'A religious painting depicting Purgatory hangs on the wall of the caida. '
+  - " Its grim subject contrasts sharply with the festive dinner being prepared beneath
+    it. \r\n "

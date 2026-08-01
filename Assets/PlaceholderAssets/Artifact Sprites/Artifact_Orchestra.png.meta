@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 4b092ae9fec5d4244aaecdb7d263fa0c
+guid: 93f02ff33255f7346a378e2c43965c23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5047414949785427920
-    second: Artifact_BirdCage_0
+      213: -5568871672692744698
+    second: Artifact_Orchestra_0
+  - first:
+      213: -833917321954795385
+    second: Artifact_Orchestra_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Artifact_BirdCage_0
+      name: Artifact_Orchestra_0
       rect:
         serializedVersion: 2
-        x: 238
-        y: 224
-        width: 69
-        height: 97
+        x: 140
+        y: 141
+        width: 75
+        height: 190
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0dfd4fb87250c0640800000000000000
-      internalID: 5047414949785427920
+      spriteID: 60ed96508b467b2b0800000000000000
+      internalID: -5568871672692744698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artifact_Orchestra_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 142
+        width: 271
+        height: 264
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780e6dc2d945d64f0800000000000000
+      internalID: -833917321954795385
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a5cb03b839ed7ec47ad66d4187428ca7
+    spriteID: f3439b43781560c40a12ec9f93276b96
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Artifact_BirdCage_0: 5047414949785427920
+      Artifact_Orchestra_0: -5568871672692744698
+      Artifact_Orchestra_1: -833917321954795385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

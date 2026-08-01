@@ -11,7 +11,7 @@ public class Artifact : MonoBehaviour, IInteractable
     
     public bool beenInteracted { get; private set; }
     public string ArtifactID => artifactData != null ? artifactData.ArtifactID : string.Empty;
-    public string FloorID => artifactData != null ? artifactData.FloorID : string.Empty;
+    public string RoomID => artifactData != null ? artifactData.RoomID : string.Empty;
     public ArtifactInfoSO ArtifactData => artifactData;
     public int counter { get; private set; } = 0;
 
@@ -71,13 +71,13 @@ public class Artifact : MonoBehaviour, IInteractable
         return ArtifactsById.TryGetValue(id, out artifact);
     }
 
-    public static List<Artifact> GetActiveOnFloor(string floorID)
+    public static List<Artifact> GetActiveInRoom(string roomID)
     {
         List<Artifact> artifacts = new();
 
         foreach (Artifact artifact in ArtifactsById.Values)
         {
-            if (artifact != null && artifact.FloorID == floorID)
+            if (artifact != null && artifact.RoomID == roomID)
                 artifacts.Add(artifact);
         }
 

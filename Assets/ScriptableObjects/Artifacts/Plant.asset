@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
   artifactID: artifact_plant
   displayName: Plant
-  floorID: ground_floor
+  roomID: ground_floor
   image: {fileID: 0}
-  description: A plant displayed inside the mansion.
+  description:
+  - A plant displayed inside the mansion.

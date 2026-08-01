@@ -56,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
     {
         return InventoryController.IsJournalOpen ||
                ScreenFade.IsTransitioning ||
-               (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive);
+               (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
+               (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
     }
 
     public void playerMovement(InputAction.CallbackContext context)
