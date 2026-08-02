@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
-  m_Name: DinningTable
+  m_Name: LargeTinolaTureen_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
-  artifactID: artifact_table
-  displayName: Dining Table
+  artifactID: artifact_largetinolatureen
+  displayName: Large Tinola Tureen
   roomID: caida
-  image: {fileID: 0}
-  description: []
+  image: {fileID: -7022264445349764511, guid: 48400063e223b6b43b6e4e276ec02728, type: 3}
+  description:
+  - "A large steaming tureen is brought to the table when dinner begins. It contains
+    the tinola specially ordered by Capitan Tiago to celebrate Ibarra\u2019s return. "

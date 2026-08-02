@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
-  m_Name: Painting-1
+  m_Name: PaintingHell_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
-  artifactID: artifact_painting-1
-  displayName: Painting 1
-  roomID: ground_floor
-  image: {fileID: 0}
-  description: []
+  artifactID: artifact_painting_hell
+  displayName: '"Hell" Painting'
+  roomID: caida
+  image: {fileID: 5196790875942621355, guid: a09ffe4b21499b147be1a23283d25b27, type: 3}
+  description:
+  - 'This painting presents a religious image of Hell. Its frightening subject is
+    among the strangely chosen decorations overlooking the feast. '

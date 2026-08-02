@@ -14,10 +14,10 @@ public class InteractionDetector : MonoBehaviour
 
     public void onInteract(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            GetClosestInteractable()?.interact();
-        }
+        if (!context.performed || InventoryController.IsJournalOpen)
+            return;
+
+        GetClosestInteractable()?.interact();
     }
 
     private IInteractable GetClosestInteractable()

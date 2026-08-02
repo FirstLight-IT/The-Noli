@@ -250,6 +250,11 @@ public class MissionController : MonoBehaviour
     {
         isShowingMissionCompletion = true;
 
+        // A mission can finish from the same interaction that opens dialogue.
+        // Keep the completion graphic out of the way until every dialogue UI closes.
+        while (IsAnyDialogueActive())
+            yield return null;
+
         if (completedMissionNameText != null)
             completedMissionNameText.SetText(completedMissionName);
 
@@ -263,6 +268,12 @@ public class MissionController : MonoBehaviour
 
         isShowingMissionCompletion = false;
         TryStartNextAutomaticMission();
+    }
+
+    private static bool IsAnyDialogueActive()
+    {
+        return (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
+               (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
     }
 
     private void TryStartNextAutomaticMission()

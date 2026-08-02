@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Artifact : MonoBehaviour, IInteractable
 {
-    private static readonly Dictionary<string, Artifact> ArtifactsById = new();
+    private static readonly Dictionary<string, HashSet<Artifact>> ArtifactsById = new();
 
     public static event Action<string> OnArtifactInteracted;
     public static event Action<ArtifactInfoSO> OnArtifactUnlocked;
@@ -44,23 +44,27 @@ public class Artifact : MonoBehaviour, IInteractable
             return;
         }
 
-        if (ArtifactsById.TryGetValue(ArtifactID, out Artifact existingArtifact) && existingArtifact != this)
+        registeredArtifactID = ArtifactID;
+
+        if (!ArtifactsById.TryGetValue(registeredArtifactID, out HashSet<Artifact> artifactInstances))
         {
-            Debug.LogError($"Duplicate artifact ID '{ArtifactID}' on {gameObject.name}.", this);
-            return;
+            artifactInstances = new HashSet<Artifact>();
+            ArtifactsById.Add(registeredArtifactID, artifactInstances);
         }
 
-        registeredArtifactID = ArtifactID;
-        ArtifactsById[registeredArtifactID] = this;
+        artifactInstances.Add(this);
+        beenInteracted = JournalUnlockRegistry.IsUnlocked("artifacts", ArtifactID);
     }
 
     void OnDisable()
     {
         if (!string.IsNullOrEmpty(registeredArtifactID) &&
-            ArtifactsById.TryGetValue(registeredArtifactID, out Artifact registeredArtifact) &&
-            registeredArtifact == this)
+            ArtifactsById.TryGetValue(registeredArtifactID, out HashSet<Artifact> artifactInstances))
         {
-            ArtifactsById.Remove(registeredArtifactID);
+            artifactInstances.Remove(this);
+
+            if (artifactInstances.Count == 0)
+                ArtifactsById.Remove(registeredArtifactID);
         }
 
         registeredArtifactID = null;
@@ -68,17 +72,34 @@ public class Artifact : MonoBehaviour, IInteractable
 
     public static bool TryGetById(string id, out Artifact artifact)
     {
-        return ArtifactsById.TryGetValue(id, out artifact);
+        artifact = null;
+
+        if (!ArtifactsById.TryGetValue(id, out HashSet<Artifact> artifactInstances))
+            return false;
+
+        foreach (Artifact instance in artifactInstances)
+        {
+            if (instance == null)
+                continue;
+
+            artifact = instance;
+            return true;
+        }
+
+        return false;
     }
 
     public static List<Artifact> GetActiveInRoom(string roomID)
     {
         List<Artifact> artifacts = new();
 
-        foreach (Artifact artifact in ArtifactsById.Values)
+        foreach (HashSet<Artifact> artifactInstances in ArtifactsById.Values)
         {
-            if (artifact != null && artifact.RoomID == roomID)
-                artifacts.Add(artifact);
+            foreach (Artifact artifact in artifactInstances)
+            {
+                if (artifact != null && artifact.RoomID == roomID)
+                    artifacts.Add(artifact);
+            }
         }
 
         return artifacts;
@@ -113,6 +134,7 @@ public class Artifact : MonoBehaviour, IInteractable
                 return;
 
             beenInteracted = true;
+            JournalUnlockRegistry.Unlock("artifacts", ArtifactID);
             OnArtifactUnlocked?.Invoke(artifactData);
         }
 

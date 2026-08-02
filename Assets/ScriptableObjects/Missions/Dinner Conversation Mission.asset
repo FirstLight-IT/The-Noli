@@ -15,7 +15,7 @@ MonoBehaviour:
   missionId: sala_gathering
   displayName: Sala Gathering
   prerequisites:
-  - {fileID: 11400000, guid: 1dfa38f6dc5717e4e82a8defaacc5594, type: 2}
+  - {fileID: 11400000, guid: acbc2b79ca274e8aa7779f8957592253, type: 2}
   autoStartWhenAvailable: 1
   missionStepPrefabs:
   - {fileID: 1169098587339280166, guid: 2b548e9cf48cdb643ae019e350a7d173, type: 3}
