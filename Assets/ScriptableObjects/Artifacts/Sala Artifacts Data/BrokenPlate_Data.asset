@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
+  m_Name: BrokenPlate_Data
+  m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  artifactID: artifact_brokenplate
+  displayName: Broken Plate
+  shortName: Broken Plate
+  roomID: sala
+  image: {fileID: 22703740625833566, guid: 3655bd8748ab5a54ab16129fc170461c, type: 3}
+  description:
+  - "The sound of a plate breaking gives Capitan Tiago\u2019s elderly cousin an excuse
+    to rush away and scold the servants responsible for the accident."

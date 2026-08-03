@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
+  m_Name: OrchestraInstruments_Data
+  m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  artifactID: artifact_orchestrainstruments
+  displayName: Orchestra Instruments
+  shortName: Instruments
+  roomID: caida
+  image: {fileID: -833917321954795385, guid: 93f02ff33255f7346a378e2c43965c23, type: 3}
+  description:
+  - "These instruments belong to the orchestra stationed in the caida during the
+    celebration. Their music can be heard by visitors even before they enter the
+    upper floor. \r "

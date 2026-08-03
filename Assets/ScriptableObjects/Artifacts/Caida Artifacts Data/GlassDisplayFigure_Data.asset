@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
+  m_Name: GlassDisplayFigure_Data
+  m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  artifactID: artifact_glassdisplaystatue
+  displayName: Glass Display Figurines
+  shortName: Display Figurines
+  roomID: caida
+  image: {fileID: -2523215614574402781, guid: ee1d54e32d460ff488fb2c767dfc42b7, type: 3}
+  description:
+  - "At the back of the caida stands a glass case set in a splendid and elegant Renaissance-style
+    framework, possibly made by Ar\xE9valo. Inside is a religious scene rendered
+    with extreme realism. "
+  - 'The display shows Our Lady of Peace and Prosperous Voyages, worshiped in Antipolo,
+    visiting Capitana Inez while disguised as a beggar. '
+  - 'Capitana Inez is shown during her sickness, with yellow and bluish tones that
+    make her appear almost like a decaying corpse. The figure is rendered with unsettling
+    realism. '
+  - 'Glasses and other objects associated with a long illness surround Capitana Inez.
+    They are reproduced so minutely that even their contents can be distinguished. '

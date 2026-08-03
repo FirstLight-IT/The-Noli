@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
+  m_Name: PaintingTheLastJudgement_Data
+  m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  artifactID: artifact_painting_thelastjudgement
+  displayName: '"The Last Judgement" Painting'
+  shortName: '"Last Judgement"'
+  roomID: caida
+  image: {fileID: -796498578834679908, guid: da3cc9dd1d9ce8b42a485cf095868d68, type: 3}
+  description:
+  - 'A religious painting portraying the Last Judgment hangs among the motley pictures
+    in the caida. It reminds viewers of the final judgment of humanity. '

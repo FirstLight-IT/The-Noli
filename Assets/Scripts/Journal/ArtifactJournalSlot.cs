@@ -56,7 +56,7 @@ public class ArtifactJournalSlot : MonoBehaviour
             lockedVisual.SetActive(!unlocked);
 
         if (label != null)
-            label.SetText(unlocked && artifact != null ? artifact.DisplayName : "Unknown");
+            label.SetText(unlocked && artifact != null ? artifact.ShortName : "Unknown");
 
         if (selectionGraphic != null)
             selectionGraphic.color = selectionColor;
