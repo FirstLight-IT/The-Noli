@@ -21,6 +21,7 @@ public class ArtifactDialogueController : MonoBehaviour
     [SerializeField] private Button closeButton;
 
     private ArtifactInfoSO activeArtifact;
+    private bool announceArtifactUnlockOnClose;
     private int currentPageIndex;
 
     private void Awake()
@@ -70,15 +71,16 @@ public class ArtifactDialogueController : MonoBehaviour
             return;
         }
 
-        OpenDialogue(artifact.ArtifactData);
+        OpenDialogue(artifact.ArtifactData, !artifact.beenInteracted);
     }
 
-    public void OpenDialogue(ArtifactInfoSO artifactInfo)
+    public void OpenDialogue(ArtifactInfoSO artifactInfo, bool announceUnlockOnClose = false)
     {
         if (!ValidateArtifactInfo(artifactInfo))
             return;
 
         activeArtifact = artifactInfo;
+        announceArtifactUnlockOnClose = announceUnlockOnClose;
         currentPageIndex = 0;
         IsDialogueActive = true;
 
@@ -120,7 +122,10 @@ public class ArtifactDialogueController : MonoBehaviour
 
     public void CloseDialogue()
     {
+        ArtifactInfoSO finishedArtifact = activeArtifact;
+        bool shouldAnnounceUnlock = announceArtifactUnlockOnClose;
         activeArtifact = null;
+        announceArtifactUnlockOnClose = false;
         currentPageIndex = 0;
         IsDialogueActive = false;
 
@@ -141,6 +146,9 @@ public class ArtifactDialogueController : MonoBehaviour
 
         if (dialoguePanel != null)
             dialoguePanel.SetActive(false);
+
+        if (shouldAnnounceUnlock && finishedArtifact != null)
+            UnlockNotificationController.ShowArtifact(finishedArtifact.DisplayName, finishedArtifact.Image);
     }
 
     private void RefreshPage()

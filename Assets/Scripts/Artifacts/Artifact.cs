@@ -113,8 +113,8 @@ public class Artifact : MonoBehaviour, IInteractable
         public void interact()
         {
             Debug.Log($"{gameObject.name} interacted");
-            setInteracted();
             OnArtifactInteracted?.Invoke(ArtifactID);
+            setInteracted();
         }
 
         public void showIcon(bool visible)

@@ -24,6 +24,7 @@ public class DialogueController : MonoBehaviour
     private string[] activeNPCDialogueLines;
     private Conversation activeConversation;
     private bool isTyping;
+    private bool announceNPCUnlockOnClose;
     private int currentLineIndex;
     private readonly HashSet<string> introducedNPCs = new();
     private readonly Dictionary<string, int> nextRepeatDialogueByNPC = new();
@@ -82,6 +83,7 @@ public class DialogueController : MonoBehaviour
             introducedNPCs.Add(npcID);
 
         activeNPCDialogue = data;
+        announceNPCUnlockOnClose = !hasBeenIntroduced;
         activeNPCDialogueLines = selectedLines;
         activeConversation = null;
         currentLineIndex = 0;
@@ -140,9 +142,18 @@ public class DialogueController : MonoBehaviour
     public void EndNPCDialogue()
     {
         StopAllCoroutines();
+        NPCDialogueData finishedNPC = activeNPCDialogue;
+        bool shouldAnnounceUnlock = announceNPCUnlockOnClose;
         activeNPCDialogue = null;
         activeNPCDialogueLines = null;
+        announceNPCUnlockOnClose = false;
         ResetDialogueUI();
+
+        if (shouldAnnounceUnlock && finishedNPC != null)
+        {
+            JournalUnlockRegistry.Unlock("characters", finishedNPC.NpcID);
+            UnlockNotificationController.ShowCharacter(finishedNPC.NPCName, finishedNPC.portrait);
+        }
     }
 
     private string[] GetNextRepeatDialogue(NPCDialogueData data)
