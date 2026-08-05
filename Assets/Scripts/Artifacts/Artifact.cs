@@ -8,6 +8,7 @@ public class Artifact : MonoBehaviour, IInteractable
 
     public static event Action<string> OnArtifactInteracted;
     public static event Action<ArtifactInfoSO> OnArtifactUnlocked;
+    public static event Action<ArtifactInfoSO> OnArtifactPassed;
     
     public bool beenInteracted { get; private set; }
     public string ArtifactID => artifactData != null ? artifactData.ArtifactID : string.Empty;
@@ -149,6 +150,7 @@ public class Artifact : MonoBehaviour, IInteractable
             {
                 counter++; 
                 Debug.Log($"Walk Passed {gameObject.name} - {counter}x");
+                OnArtifactPassed?.Invoke(artifactData);
                 
             }
                

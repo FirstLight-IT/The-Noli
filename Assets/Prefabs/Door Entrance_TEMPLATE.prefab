@@ -14,7 +14,7 @@ GameObject:
   m_Layer: 0
   m_Name: Door Entrance_TEMPLATE
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -91,6 +91,5 @@ MonoBehaviour:
   destination: {fileID: 0}
   teleportCooldown: 0.35
   unlockWhenMissionStarts: {fileID: 0}
-  lockedDialogueSpeaker: {fileID: 0}
   lockedDialogue: I really shouldn't be snooping around right now.
   lockedDialogueCooldown: 1

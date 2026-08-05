@@ -10,7 +10,6 @@ public class TeleportDoor : MonoBehaviour
     [Header("Mission Lock")]
     [Tooltip("Leave empty for a door that is always unlocked.")]
     [SerializeField] private MissionInfoSO unlockWhenMissionStarts;
-    [SerializeField] private NPCInfoSO lockedDialogueSpeaker;
     [SerializeField, TextArea] private string lockedDialogue =
         "I really shouldn't be snooping around right now.";
     [SerializeField, Min(0f)] private float lockedDialogueCooldown = 1f;
@@ -90,7 +89,7 @@ public class TeleportDoor : MonoBehaviour
         DialogueController dialogueController = DialogueController.Instance;
         NPCInfoSO speaker = PlayerCharacter.Instance != null
             ? PlayerCharacter.Instance.CurrentCharacter
-            : lockedDialogueSpeaker;
+            : null;
 
         if (dialogueController == null ||
             !dialogueController.ShowCharacterLine(speaker, lockedDialogue))

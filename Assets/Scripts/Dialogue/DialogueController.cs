@@ -23,10 +23,12 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Button dialogueCloseButton;
 
     private NPCInfoSO activeNPCDialogue;
+    private AmbientNPCInfoSO activeAmbientNPCDialogue;
     private string[] activeNPCDialogueLines;
     private Conversation activeConversation;
     private bool isTyping;
     private bool announceNPCUnlockOnClose;
+    private Action ambientDialogueFinished;
     private int currentLineIndex;
     private readonly HashSet<string> introducedNPCs = new();
     private readonly Dictionary<string, int> nextRepeatDialogueByNPC = new();
@@ -85,6 +87,8 @@ public class DialogueController : MonoBehaviour
             introducedNPCs.Add(npcID);
 
         activeNPCDialogue = data;
+        activeAmbientNPCDialogue = null;
+        ambientDialogueFinished = null;
         announceNPCUnlockOnClose = !hasBeenIntroduced;
         activeNPCDialogueLines = selectedLines;
         activeConversation = null;
@@ -94,6 +98,7 @@ public class DialogueController : MonoBehaviour
         dialoguePanel.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
         nameText.SetText(data.DisplayName);
+        portraitImage.gameObject.SetActive(true);
         portraitImage.sprite = data.Portrait;
         StartCoroutine(TypeNPCLine());
     }
@@ -104,6 +109,8 @@ public class DialogueController : MonoBehaviour
             return false;
 
         activeNPCDialogue = speaker;
+        activeAmbientNPCDialogue = null;
+        ambientDialogueFinished = null;
         activeNPCDialogueLines = new[] { line };
         activeConversation = null;
         announceNPCUnlockOnClose = false;
@@ -113,7 +120,34 @@ public class DialogueController : MonoBehaviour
         dialoguePanel.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
         nameText.SetText(speaker.DisplayName);
+        portraitImage.gameObject.SetActive(true);
         portraitImage.sprite = speaker.Portrait;
+        StartCoroutine(TypeNPCLine());
+        return true;
+    }
+
+    public bool ShowAmbientDialogue(
+        AmbientNPCInfoSO speaker,
+        string[] lines,
+        Action onFinished = null)
+    {
+        if (IsDialogueActive || speaker == null || !HasDialogueLines(lines))
+            return false;
+
+        activeNPCDialogue = null;
+        activeAmbientNPCDialogue = speaker;
+        activeNPCDialogueLines = lines;
+        activeConversation = null;
+        ambientDialogueFinished = onFinished;
+        announceNPCUnlockOnClose = false;
+        currentLineIndex = 0;
+        IsDialogueActive = true;
+
+        dialoguePanel.SetActive(true);
+        dialogueCloseButton.gameObject.SetActive(false);
+        nameText.SetText(speaker.DisplayName);
+        portraitImage.sprite = null;
+        portraitImage.gameObject.SetActive(false);
         StartCoroutine(TypeNPCLine());
         return true;
     }
@@ -125,7 +159,7 @@ public class DialogueController : MonoBehaviour
 
         if (activeConversation != null)
             AdvanceConversation();
-        else if (activeNPCDialogue != null)
+        else if (activeNPCDialogue != null || activeAmbientNPCDialogue != null)
             AdvanceNPCDialogue();
         else
             return false;
@@ -180,9 +214,12 @@ public class DialogueController : MonoBehaviour
     {
         StopAllCoroutines();
         NPCInfoSO finishedNPC = activeNPCDialogue;
+        Action finishedAmbientDialogue = ambientDialogueFinished;
         bool shouldAnnounceUnlock = announceNPCUnlockOnClose;
         activeNPCDialogue = null;
+        activeAmbientNPCDialogue = null;
         activeNPCDialogueLines = null;
+        ambientDialogueFinished = null;
         announceNPCUnlockOnClose = false;
         ResetDialogueUI();
 
@@ -191,6 +228,8 @@ public class DialogueController : MonoBehaviour
             JournalUnlockRegistry.Unlock("characters", finishedNPC.NpcID);
             UnlockNotificationController.ShowCharacter(finishedNPC.DisplayName, finishedNPC.Portrait);
         }
+
+        finishedAmbientDialogue?.Invoke();
     }
 
     private string[] GetNextRepeatDialogue(NPCInfoSO data)
@@ -268,10 +307,13 @@ public class DialogueController : MonoBehaviour
 
         activeConversation = conversation;
         activeNPCDialogue = null;
+        activeAmbientNPCDialogue = null;
+        ambientDialogueFinished = null;
         currentLineIndex = 0;
         IsDialogueActive = true;
 
         dialoguePanel.SetActive(true);
+        portraitImage.gameObject.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
         StartCoroutine(TypeConversationLine());
     }

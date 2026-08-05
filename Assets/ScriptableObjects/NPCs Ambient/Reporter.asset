@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
+  m_Name: Reporter
+  m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
+  displayName: Newspaper Reporter
+  dialogueVariations:
+  - lines:
+    - There may be something worth writing about before the evening is over.
+  - lines:
+    - Everyone is speaking, but no one is saying anything suitable for print.
+  - lines:
+    - I should remember who attended tonight. The names may become useful later.

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
+  m_Name: Gentleman
+  m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
+  displayName: Gentleman
+  dialogueVariations:
+  - lines:
+    - A fine gathering, is it not? Capitan Tiago has spared no expense.
+  - lines:
+    - I believe we have not been formally introduced.
+  - lines:
+    - The conversation has become rather tense. It may be wiser to remain here.
