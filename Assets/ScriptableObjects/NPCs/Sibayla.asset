@@ -11,11 +11,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
   m_Name: Sibayla
-  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   npcID: fray_sibyla
-  NPCName: Fray Sibyla
-  portrait: {fileID: -5502229652484179313, guid: 5c10deae04182a74a86e30f4a4a4a17b, type: 3}
-  typingSpeed: 0.05
+  displayName: Fray Sibyla
+  characterFullName: Hernando de la Sibyla
+  alias: None
+  characterCategory: Clergy / Dominican Friar
+  portrait: {fileID: 21300000, guid: 5c10deae04182a74a86e30f4a4a4a17b, type: 3}
+  description: A refined and intelligent Dominican friar known for speaking carefully
+    and arguing through precise distinctions. Although outwardly polite, he closely
+    observes the people and conflicts around him.
+  biography: "Fray Sibyla is a young Dominican friar serving as the curate of Binondo.
+    He formerly taught at the Colegio de San Juan de Letran and earned a reputation
+    as a highly skilled dialectician. During the gathering, he says little but listens
+    carefully and directs questions toward Fray D\xE1maso concerning his transfer
+    from San Diego. When the argument between D\xE1maso and Lieutenant Guevara intensifies,
+    Sibyla intervenes using elaborate distinctions designed to calm the dispute without
+    directly condemning his fellow friar."
+  characterFacts:
+  - He belongs to the Dominican order.
+  - He serves as the curate of Binondo.
+  - He formerly taught at the Colegio de San Juan de Letran.
+  - He is known as an accomplished dialectician.
+  - He is described as youthful, handsome, graceful and polished.
+  - He carefully weighs his words before speaking.
   introductionLines:
   - I am Fray Sibyla, a Dominican and the curate of Binondo.
   - I prefer to consider my words carefully before speaking.

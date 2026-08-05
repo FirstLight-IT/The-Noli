@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4921f30784f65db4ab8907b4733b101b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  NPCDialogueData: {fileID: 0}
+  npcData: {fileID: 0}
   interactionIcon: {fileID: 2733414623451522784}
   missionIcon: {fileID: 9084843016802941561}
   interactionOutline: {fileID: 0}

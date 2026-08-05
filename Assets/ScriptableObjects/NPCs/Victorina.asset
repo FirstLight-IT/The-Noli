@@ -11,11 +11,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
   m_Name: Victorina
-  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   npcID: dona_victorina
-  NPCName: "Do\xF1a Victorina"
-  portrait: {fileID: -7827563912223613409, guid: 36afaede06121314da7a09f3ac2106c9, type: 3}
-  typingSpeed: 0.05
+  displayName: Dona Victorina
+  characterFullName: "Victorina de los Reyes de Espada\xF1a"
+  alias: La Doctora Victorina
+  characterCategory: Filipino Elite / Socialite
+  portrait: {fileID: 21300000, guid: 36afaede06121314da7a09f3ac2106c9, type: 3}
+  description: A proud and highly pretentious Filipina socialite who imitates Spanish
+    fashion and behavior. She is outspoken, easily offended and deeply concerned
+    with appearances and social status.
+  biography: "Do\xF1a Victorina attends Capit\xE1n Tiago\u2019s gathering with her
+    husband, Don Tiburcio de Espada\xF1a. She wears an elaborate gown with a long
+    train and carefully arranged curls, or frizzes. During the dinner, she becomes
+    furious when Lieutenant Guevara steps on her dress and later criticizes his age
+    and military rank. Her questions about Europe and her references to Spain reveal
+    her desire to present herself as closely connected to Spanish society."
+  characterFacts:
+  - "She is married to Don Tiburcio de Espada\xF1a."
+  - She is Filipina.
+  - She imitates the clothing, speech and manners of Spanish women.
+  - She wears an elaborate gown with a long train.
+  - She is highly conscious of social position and appearances.
+  - She becomes angry when Lieutenant Guevara steps on her dress.
+  - She mocks Guevara for being old while still holding the rank of lieutenant.
   introductionLines:
   - "I am Do\xF1a Victorina de Espada\xF1a\u2014the Doctora, as people call me."
   - "This gentleman beside me is my husband, Doctor de Espada\xF1a."

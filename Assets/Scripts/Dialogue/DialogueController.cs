@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
+    private const float TypingSpeed = 0.05f;
+
     public static event Action<string> OnConversationFinished;
     public static event Action<string, string> OnConversationFailed;
 
@@ -20,7 +22,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image portraitImage;
     [SerializeField] private Button dialogueCloseButton;
 
-    private NPCDialogueData activeNPCDialogue;
+    private NPCInfoSO activeNPCDialogue;
     private string[] activeNPCDialogueLines;
     private Conversation activeConversation;
     private bool isTyping;
@@ -46,7 +48,7 @@ public class DialogueController : MonoBehaviour
             Instance = null;
     }
 
-    private void HandleNPCInteraction(NPCDialogueData data)
+    private void HandleNPCInteraction(NPCInfoSO data)
     {
         if (!IsDialogueActive)
         {
@@ -58,7 +60,7 @@ public class DialogueController : MonoBehaviour
             AdvanceNPCDialogue();
     }
 
-    private void StartNPCDialogue(NPCDialogueData data)
+    private void StartNPCDialogue(NPCInfoSO data)
     {
         if (data == null)
         {
@@ -75,7 +77,7 @@ public class DialogueController : MonoBehaviour
         if (!HasDialogueLines(selectedLines))
         {
             string dialogueType = hasBeenIntroduced ? "repeat" : "introduction";
-            Debug.LogError($"NPC '{data.NPCName}' is missing its {dialogueType} dialogue lines.", data);
+            Debug.LogError($"NPC '{data.DisplayName}' is missing its {dialogueType} dialogue lines.", data);
             return;
         }
 
@@ -91,8 +93,8 @@ public class DialogueController : MonoBehaviour
 
         dialoguePanel.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
-        nameText.SetText(data.NPCName);
-        portraitImage.sprite = data.portrait;
+        nameText.SetText(data.DisplayName);
+        portraitImage.sprite = data.Portrait;
         StartCoroutine(TypeNPCLine());
     }
 
@@ -126,7 +128,7 @@ public class DialogueController : MonoBehaviour
         foreach (char letter in activeNPCDialogueLines[currentLineIndex])
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(activeNPCDialogue.typingSpeed);
+            yield return new WaitForSeconds(TypingSpeed);
         }
 
         isTyping = false;
@@ -142,7 +144,7 @@ public class DialogueController : MonoBehaviour
     public void EndNPCDialogue()
     {
         StopAllCoroutines();
-        NPCDialogueData finishedNPC = activeNPCDialogue;
+        NPCInfoSO finishedNPC = activeNPCDialogue;
         bool shouldAnnounceUnlock = announceNPCUnlockOnClose;
         activeNPCDialogue = null;
         activeNPCDialogueLines = null;
@@ -152,11 +154,11 @@ public class DialogueController : MonoBehaviour
         if (shouldAnnounceUnlock && finishedNPC != null)
         {
             JournalUnlockRegistry.Unlock("characters", finishedNPC.NpcID);
-            UnlockNotificationController.ShowCharacter(finishedNPC.NPCName, finishedNPC.portrait);
+            UnlockNotificationController.ShowCharacter(finishedNPC.DisplayName, finishedNPC.Portrait);
         }
     }
 
-    private string[] GetNextRepeatDialogue(NPCDialogueData data)
+    private string[] GetNextRepeatDialogue(NPCInfoSO data)
     {
         if (data.repeatDialogues == null || data.repeatDialogues.Length == 0)
             return null;
@@ -264,17 +266,17 @@ public class DialogueController : MonoBehaviour
     private IEnumerator TypeConversationLine()
     {
         DialogueLine line = activeConversation.lines[currentLineIndex];
-        speakerRegistry.TryGetSpeaker(line.speaker, out NPCDialogueData speaker);
+        speakerRegistry.TryGetSpeaker(line.speaker, out NPCInfoSO speaker);
 
-        nameText.SetText(speaker.NPCName);
-        portraitImage.sprite = speaker.portrait;
+        nameText.SetText(speaker.DisplayName);
+        portraitImage.sprite = speaker.Portrait;
         dialogueText.SetText(string.Empty);
         isTyping = true;
 
         foreach (char letter in line.text)
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(speaker.typingSpeed);
+            yield return new WaitForSeconds(TypingSpeed);
         }
 
         isTyping = false;

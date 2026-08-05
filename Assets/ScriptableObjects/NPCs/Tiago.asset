@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
+  m_Name: Tiago
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
+  npcID: capitan_tiago
+  displayName: Capitan Tiago
+  characterFullName: Don Santiago de los Santos
+  alias: Don Santiago
+  characterCategory: Filipino Elite / Host
+  portrait: {fileID: 0}
+  description: "A wealthy and influential Filipino known throughout Manila for his
+    hospitality and grand social gatherings. He hosts the dinner celebrating the
+    safe return of Cris\xF3stomo Ibarra."
+  biography: "Don Santiago de los Santos, popularly known as Capit\xE1n Tiago, owns
+    the large house on Calle Anloague where the gathering takes place. His announcement
+    of the dinner quickly attracts the attention of Manila\u2019s social circles
+    because of his reputation as a generous host. He introduces Cris\xF3stomo Ibarra
+    as the son of his deceased friend and explains that the celebration is being
+    held in gratitude for the young man\u2019s safe return. Despite being the host,
+    Tiago is left without a seat when the guests gather around his table."
+  characterFacts:
+  - "He is popularly known as Capit\xE1n Tiago."
+  - He owns a large house on Calle Anloague.
+  - "He is considered one of Manila\u2019s most hospitable men."
+  - He is a wealthy and influential member of colonial society.
+  - He was a friend of Don Rafael Ibarra.
+  - "He hosts the dinner in thanksgiving for Ibarra\u2019s safe return."
+  - He orders tinola because Ibarra has been away from the country for years.
+  introductionLines: []
+  repeatDialogues: []

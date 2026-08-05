@@ -58,7 +58,7 @@ public class MeetCharactersMissionStep : MissionStep
             FinishStep();
     }
 
-    private void HandleNpcInteracted(NPCDialogueData dialogueData)
+    private void HandleNpcInteracted(NPCInfoSO dialogueData)
     {
         if (dialogueData == null ||
             !targetNpcIds.Contains(dialogueData.NpcID) ||

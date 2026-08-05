@@ -11,11 +11,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
   m_Name: Guevara
-  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   npcID: lieutenant_guevara
-  NPCName: Lieutenant Guevara
-  portrait: {fileID: -8600000088782356161, guid: b45d037ab671a154da17833d44f3223e, type: 3}
-  typingSpeed: 0.05
+  displayName: Lieutenant Guevara
+  characterFullName: Miguel Guevarra
+  alias: Teniente Guevara
+  characterCategory: Military / Civil Guard Officer
+  portrait: {fileID: 21300000, guid: b45d037ab671a154da17833d44f3223e, type: 3}
+  description: An elderly lieutenant of the Civil Guard with a stern appearance and
+    a direct manner of speaking. Unlike many of the guests, he openly defends the
+    honor of Don Rafael Ibarra.
+  biography: "Lieutenant Guevara is an old officer of the Civil Guard who knew Don
+    Rafael Ibarra personally. At Capit\xE1n Tiago\u2019s gathering, he challenges
+    Fray D\xE1maso\u2019s account of the controversy surrounding Don Rafael\u2019s
+    burial. Guevara describes Don Rafael as an honorable and worthy man and condemns
+    the removal of his body from the cemetery. When Cris\xF3stomo arrives, the lieutenant
+    welcomes him warmly and becomes emotional while speaking about his father."
+  characterFacts:
+  - He is an officer of the Civil Guard.
+  - He is described as tall, elderly and austere.
+  - He speaks in a harsh, brief and direct manner.
+  - He knew Don Rafael Ibarra personally.
+  - He considers Don Rafael one of the worthiest men in the Philippines.
+  - He rejects the claim that Don Rafael committed suicide.
+  - "He shows sympathy toward Cris\xF3stomo Ibarra."
   introductionLines:
   - Lieutenant Guevara, of the Civil Guard.
   - I speak plainly, and I expect others to do the same.

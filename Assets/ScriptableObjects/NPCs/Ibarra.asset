@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
+  m_Name: Ibarra
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
+  npcID: crisostomo_ibarra
+  displayName: Crisostomo Ibarra
+  characterFullName: "Juan Cris\xF3stomo Ibarra y Magsalin"
+  alias: "Don Cris\xF3stomo"
+  characterCategory: Protagonist / Filipino Ilustrado
+  portrait: {fileID: 0}
+  description: "A courteous and educated young Filipino who returns home after seven
+    years of study and travel in Europe. He is the son of the late Don Rafael Ibarra
+    and is deeply troubled by the mystery surrounding his father\u2019s death."
+  biography: "Juan Cris\xF3stomo Ibarra y Magsalin returns to the Philippines after
+    spending nearly seven years in Europe. Capit\xE1n Tiago introduces him as the
+    son of his deceased friend, Don Rafael Ibarra. Ibarra is surprised by Fray D\xE1maso\u2019s
+    cold reception because he remembers the friar as a frequent guest and apparent
+    friend of his father. Although D\xE1maso insults his education during dinner,
+    Ibarra restrains his anger, responds respectfully and leaves before the dispute
+    can worsen."
+  characterFacts:
+  - He is the son of Don Rafael Ibarra.
+  - He has recently returned from Europe.
+  - He was away from the Philippines for almost seven years.
+  - He spent time in Germany, Russian Poland and England.
+  - He is described as tall, healthy and youthful.
+  - His appearance shows faint traces of Spanish ancestry.
+  introductionLines: []
+  repeatDialogues: []

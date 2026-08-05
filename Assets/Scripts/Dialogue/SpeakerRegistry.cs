@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class SpeakerRegistry : MonoBehaviour
 {
-    [SerializeField] private List<NPCDialogueData> allSpeakers = new();
+    [SerializeField] private List<NPCInfoSO> allSpeakers = new();
 
-    private readonly Dictionary<string, NPCDialogueData> lookup =
+    private readonly Dictionary<string, NPCInfoSO> lookup =
         new(StringComparer.OrdinalIgnoreCase);
 
     void Awake()
     {
         lookup.Clear();
 
-        foreach (NPCDialogueData speaker in allSpeakers)
+        foreach (NPCInfoSO speaker in allSpeakers)
         {
-            if (speaker == null || string.IsNullOrWhiteSpace(speaker.NPCName))
+            if (speaker == null || string.IsNullOrWhiteSpace(speaker.DisplayName))
             {
                 Debug.LogError("Speaker Registry contains an empty speaker entry.", this);
                 continue;
             }
 
-            if (!lookup.TryAdd(speaker.NPCName, speaker))
-                Debug.LogError($"Speaker Registry contains duplicate speaker name '{speaker.NPCName}'.", speaker);
+            if (!lookup.TryAdd(speaker.DisplayName, speaker))
+                Debug.LogError($"Speaker Registry contains duplicate speaker name '{speaker.DisplayName}'.", speaker);
         }
     }
 
-    public bool TryGetSpeaker(string speakerName, out NPCDialogueData speaker)
+    public bool TryGetSpeaker(string speakerName, out NPCInfoSO speaker)
     {
         if (string.IsNullOrWhiteSpace(speakerName))
         {

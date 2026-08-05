@@ -11,11 +11,29 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
   m_Name: Laruja
-  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   npcID: senor_laruja
-  NPCName: "Se\xF1or Laruja"
-  portrait: {fileID: 5380715626698292517, guid: 888204882d06bc64dac0d2a764ad1dca, type: 3}
-  typingSpeed: 0.05
+  displayName: "Se\xF1or Laruja"
+  characterFullName: Laruja
+  alias: None
+  characterCategory: Civilian Guest
+  portrait: {fileID: 21300000, guid: 888204882d06bc64dac0d2a764ad1dca, type: 3}
+  description: "A small civilian guest familiar with colonial society in the Philippines.
+    He generally supports the opinions of Fray D\xE1maso and expresses prejudiced
+    views about Filipinos"
+  biography: "Se\xF1or Laruja is one of the civilians seated with Fray D\xE1maso,
+    Fray Sibyla, Lieutenant Guevara and the newly arrived Blond Man. He is described
+    as a very small man with a black beard and a noticeably large nose. When Fray
+    D\xE1maso asks him to confirm his accusations against Filipinos, Laruja agrees
+    with him. During dinner, he also questions Ibarra about his years abroad and
+    his observations of European society."
+  characterFacts:
+  - His first name is not revealed.
+  - He is described as very small.
+  - He has a black beard.
+  - He has a notably large nose.
+  - He is already familiar with life in the Philippines.
+  - "He supports Fray D\xE1maso\u2019s negative claims about Filipinos."
   introductionLines:
   - "Se\xF1or Laruja. I have spent enough time in this country to form a few opinions
     of my own."

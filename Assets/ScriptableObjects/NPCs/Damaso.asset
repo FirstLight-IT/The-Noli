@@ -13,9 +13,31 @@ MonoBehaviour:
   m_Name: Damaso
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueSO
   npcID: fray_damaso
-  NPCName: Fray Damaso
-  portrait: {fileID: -5372463453060383186, guid: dfb512c37edbc1a4186f758a9558d61e, type: 3}
-  typingSpeed: 0.05
+  displayName: Fray Damaso
+  characterFullName: "D\xE1maso Verdolagas"
+  alias: "Padre D\xE1maso"
+  characterCategory: Antagonist / Clergy / Franciscan Friar
+  portrait: {fileID: 21300000, guid: dfb512c37edbc1a4186f758a9558d61e, type: 3}
+  description: A loud, forceful and domineering Franciscan friar who formerly served
+    as the parish priest of San Diego. He speaks with great confidence and shows
+    open contempt toward Filipinos and government interference in religious authority.
+  biography: "Fray D\xE1maso is a Franciscan friar who claims to have lived in the
+    Philippines for twenty-three years. He served in San Diego for twenty years and
+    knew many of its residents through his position as their curate and confessor.
+    During Capit\xE1n Tiago\u2019s gathering, he argues that Filipinos are naturally
+    ignorant and indolent and condemns reforms introduced by the colonial government.
+    His hostility becomes especially clear when the discussion turns to the burial
+    of Don Rafael Ibarra and when he treats Cris\xF3stomo Ibarra with contempt."
+  characterFacts:
+  - He belongs to the Franciscan order.
+  - He served as the curate of San Diego for twenty years.
+  - He claims to have spent twenty-three years in the Philippines.
+  - "He was transferred from San Diego after the controversy involving Don Rafael\u2019s
+    remains."
+  - He speaks loudly and frequently interrupts other people.
+  - He strongly defends the authority of the friars.
+  - He expresses prejudiced views about Filipinos.
+  - He denies having been an intimate friend of Don Rafael.
   introductionLines:
   - I am Fray Damaso, a Franciscan and former curate of San Diego.
   - After more than twenty years in this country, I know its people well.

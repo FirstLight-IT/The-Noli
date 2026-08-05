@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7560214a2c335bd4e9cc29951d82c1e3, type: 3}
+  m_Name: Isabel
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
+  npcID: tia_isabel
+  displayName: "T\xEDa Isabel"
+  characterFullName: Isabel
+  alias: "T\xEDa Isabel, Capit\xE1n Tiago\u2019s Cousin "
+  characterCategory: Household Member / Hostess
+  portrait: {fileID: 0}
+  description: "An elderly and good-natured cousin of Capit\xE1n Tiago who receives
+    the female guests at his gathering. Although well-meaning, she struggles to speak
+    Spanish and soon becomes tired of her ceremonial duties."
+  biography: "Isabel is Capit\xE1n Tiago\u2019s cousin and the only woman initially
+    receiving the female guests at the gathering. She offers cigars and buyos to
+    the Spanish women and extends her hand for Filipino women to kiss in imitation
+    of the friars\u2019 social custom. She speaks Spanish poorly and quickly becomes
+    bored with the reception. After hearing a plate break, she rushes away to reprimand
+    the servants and does not return to her position."
+  characterFacts:
+  - "She is Capit\xE1n Tiago\u2019s cousin."
+  - Her name was not revealed til later.
+  - She is described as an elderly woman with a sweet face.
+  - She speaks Spanish poorly.
+  - She receives the female guests at the gathering.
+  - She offers cigars and buyos to Spanish women.
+  - She allows Filipino women to kiss her hand.
+  - She abandons the reception after hearing a plate break.
+  introductionLines: []
+  repeatDialogues: []
