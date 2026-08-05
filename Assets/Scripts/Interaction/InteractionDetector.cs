@@ -14,8 +14,18 @@ public class InteractionDetector : MonoBehaviour
 
     public void onInteract(InputAction.CallbackContext context)
     {
-        if (!context.performed || InventoryController.IsJournalOpen)
+        if (!context.performed ||
+            InventoryController.IsJournalOpen ||
+            MissionController.IsMissionCompletionVisible)
+        {
             return;
+        }
+
+        if (DialogueController.Instance != null &&
+            DialogueController.Instance.AdvanceActiveDialogue())
+        {
+            return;
+        }
 
         GetClosestInteractable()?.interact();
     }

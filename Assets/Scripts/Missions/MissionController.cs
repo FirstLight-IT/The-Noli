@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 public class MissionController : MonoBehaviour
 {
+    public static MissionController Instance { get; private set; }
+    public static bool IsMissionCompletionVisible { get; private set; }
+
     [Header("Mission Library")]
     [SerializeField] private MissionInfoSO[] missionInfos = new MissionInfoSO[0];
     [SerializeField] private string missionToStart;
@@ -32,6 +35,16 @@ public class MissionController : MonoBehaviour
 
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogError("Only one Mission Controller can be active at a time.", this);
+            enabled = false;
+            return;
+        }
+
+        Instance = this;
+        IsMissionCompletionVisible = false;
+
         if (missionCompletedPanel != null)
             missionCompletedPanel.SetActive(false);
 
@@ -49,6 +62,14 @@ public class MissionController : MonoBehaviour
         MissionEvents.OnMissionStepFinished -= HandleMissionStepFinished;
         MissionEvents.OnMissionStepFailed -= HandleMissionStepFailed;
         MissionEvents.OnMissionObjectiveUpdated -= HandleMissionObjectiveUpdated;
+
+        IsMissionCompletionVisible = false;
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
     }
 
     private void HandleMissionStepFailed(string missionId, int stepIndex, string reason)
@@ -119,6 +140,15 @@ public class MissionController : MonoBehaviour
         return missions.TryGetValue(missionId, out Mission mission)
             ? mission.State
             : MissionState.Locked;
+    }
+
+    public bool HasMissionStarted(MissionInfoSO missionInfo)
+    {
+        if (missionInfo == null)
+            return true;
+
+        MissionState state = GetMissionState(missionInfo.MissionId);
+        return state == MissionState.InProgress || state == MissionState.Finished;
     }
 
     private void BuildMissionLibrary()
@@ -261,7 +291,11 @@ public class MissionController : MonoBehaviour
         if (missionCompletedPanel != null)
             missionCompletedPanel.SetActive(true);
 
+        IsMissionCompletionVisible = true;
+
         yield return new WaitForSeconds(completionDisplayDuration);
+
+        IsMissionCompletionVisible = false;
 
         if (missionCompletedPanel != null)
             missionCompletedPanel.SetActive(false);

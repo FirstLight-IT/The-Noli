@@ -98,6 +98,41 @@ public class DialogueController : MonoBehaviour
         StartCoroutine(TypeNPCLine());
     }
 
+    public bool ShowCharacterLine(NPCInfoSO speaker, string line)
+    {
+        if (IsDialogueActive || speaker == null || string.IsNullOrWhiteSpace(line))
+            return false;
+
+        activeNPCDialogue = speaker;
+        activeNPCDialogueLines = new[] { line };
+        activeConversation = null;
+        announceNPCUnlockOnClose = false;
+        currentLineIndex = 0;
+        IsDialogueActive = true;
+
+        dialoguePanel.SetActive(true);
+        dialogueCloseButton.gameObject.SetActive(false);
+        nameText.SetText(speaker.DisplayName);
+        portraitImage.sprite = speaker.Portrait;
+        StartCoroutine(TypeNPCLine());
+        return true;
+    }
+
+    public bool AdvanceActiveDialogue()
+    {
+        if (!IsDialogueActive)
+            return false;
+
+        if (activeConversation != null)
+            AdvanceConversation();
+        else if (activeNPCDialogue != null)
+            AdvanceNPCDialogue();
+        else
+            return false;
+
+        return true;
+    }
+
     private void AdvanceNPCDialogue()
     {
         if (isTyping)

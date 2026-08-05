@@ -773,6 +773,7 @@ Transform:
   - {fileID: 1529032347}
   - {fileID: 1664390694}
   - {fileID: 1183563946}
+  - {fileID: 1743944860}
   m_Father: {fileID: 2058031624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &61505709 stripped
@@ -10560,6 +10561,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8156ce87b784f5644b97770502643544, type: 2}
   - {fileID: 11400000, guid: 02c65c89134ef8345bfc254dee00c3b9, type: 2}
   - {fileID: 11400000, guid: 5b99757e8e22d64499a666570ef99f3b, type: 2}
+  - {fileID: 11400000, guid: 3ecd47da0546bed47bceb320b0eec555, type: 2}
   missionToStart: explore_the_caida
   missionNameText: {fileID: 979587625}
   objectiveDescriptionText: {fileID: 2096895995}
@@ -19349,8 +19351,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743944859}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50.83023, y: -35.47442, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19364,7 +19366,7 @@ Transform:
   - {fileID: 924913151}
   - {fileID: 1710899754}
   - {fileID: 2095835132}
-  m_Father: {fileID: 1926747220}
+  m_Father: {fileID: 48720409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762835290
 GameObject:
@@ -20834,8 +20836,7 @@ Transform:
   m_LocalPosition: {x: -4.71023, y: 1.05558, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1743944860}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1932381547 stripped
@@ -20947,6 +20948,14 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 1728319286}
+    - target: {fileID: 4452187540415533013, guid: bb3ade129c312ab49b3e8e477907e92f, type: 3}
+      propertyPath: lockedDialogueSpeaker
+      value: 
+      objectReference: {fileID: 11400000, guid: 738f8da1851a3da45ad2f54218aa26bb, type: 2}
+    - target: {fileID: 4452187540415533013, guid: bb3ade129c312ab49b3e8e477907e92f, type: 3}
+      propertyPath: unlockWhenMissionStarts
+      value: 
+      objectReference: {fileID: 11400000, guid: acbc2b79ca274e8aa7779f8957592253, type: 2}
     - target: {fileID: 6762548460736062812, guid: bb3ade129c312ab49b3e8e477907e92f, type: 3}
       propertyPath: m_Name
       value: Door C2 Entrance
@@ -24232,6 +24241,14 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 7850446096341926916}
+    - target: {fileID: 4452187540415533013, guid: bb3ade129c312ab49b3e8e477907e92f, type: 3}
+      propertyPath: lockedDialogueSpeaker
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452187540415533013, guid: bb3ade129c312ab49b3e8e477907e92f, type: 3}
+      propertyPath: unlockWhenMissionStarts
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6762548460736062812, guid: bb3ade129c312ab49b3e8e477907e92f, type: 3}
       propertyPath: m_Name
       value: Door C1 Entrance

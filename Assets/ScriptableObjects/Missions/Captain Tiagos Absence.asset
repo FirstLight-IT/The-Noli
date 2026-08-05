@@ -17,4 +17,5 @@ MonoBehaviour:
   prerequisites:
   - {fileID: 11400000, guid: acbc2b79ca274e8aa7779f8957592253, type: 2}
   autoStartWhenAvailable: 1
-  missionStepPrefabs: []
+  missionStepPrefabs:
+  - {fileID: 5217455378940479564, guid: aeb40923d47e19e4a9c0b2d13920aef7, type: 3}

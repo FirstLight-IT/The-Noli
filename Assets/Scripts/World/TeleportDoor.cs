@@ -7,7 +7,16 @@ public class TeleportDoor : MonoBehaviour
     [SerializeField] private Transform destination;
     [SerializeField, Min(0f)] private float teleportCooldown = 0.35f;
 
+    [Header("Mission Lock")]
+    [Tooltip("Leave empty for a door that is always unlocked.")]
+    [SerializeField] private MissionInfoSO unlockWhenMissionStarts;
+    [SerializeField] private NPCInfoSO lockedDialogueSpeaker;
+    [SerializeField, TextArea] private string lockedDialogue =
+        "I really shouldn't be snooping around right now.";
+    [SerializeField, Min(0f)] private float lockedDialogueCooldown = 1f;
+
     private static float nextTeleportTime;
+    private float nextLockedDialogueTime;
 
     private void Reset()
     {
@@ -47,6 +56,12 @@ public class TeleportDoor : MonoBehaviour
             return;
         }
 
+        if (IsLocked())
+        {
+            ShowLockedDialogue();
+            return;
+        }
+
         nextTeleportTime = Time.time + teleportCooldown;
 
         if (ScreenFade.Instance != null &&
@@ -56,6 +71,34 @@ public class TeleportDoor : MonoBehaviour
         }
 
         Teleport(playerBody);
+    }
+
+    private bool IsLocked()
+    {
+        if (unlockWhenMissionStarts == null)
+            return false;
+
+        MissionController missionController = MissionController.Instance;
+        return missionController == null || !missionController.HasMissionStarted(unlockWhenMissionStarts);
+    }
+
+    private void ShowLockedDialogue()
+    {
+        if (Time.time < nextLockedDialogueTime)
+            return;
+
+        DialogueController dialogueController = DialogueController.Instance;
+        NPCInfoSO speaker = PlayerCharacter.Instance != null
+            ? PlayerCharacter.Instance.CurrentCharacter
+            : lockedDialogueSpeaker;
+
+        if (dialogueController == null ||
+            !dialogueController.ShowCharacterLine(speaker, lockedDialogue))
+        {
+            return;
+        }
+
+        nextLockedDialogueTime = Time.time + lockedDialogueCooldown;
     }
 
     private void Teleport(Rigidbody2D playerBody)

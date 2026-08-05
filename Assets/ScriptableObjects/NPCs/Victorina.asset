@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Victorina
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   npcID: dona_victorina
-  displayName: Dona Victorina
+  displayName: "Do\xF1a Victorina"
   characterFullName: "Victorina de los Reyes de Espada\xF1a"
   alias: La Doctora Victorina
   characterCategory: Filipino Elite / Socialite
