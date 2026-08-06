@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -14,7 +15,7 @@ public class TeleportDoor : MonoBehaviour
         "I really shouldn't be snooping around right now.";
     [SerializeField, Min(0f)] private float lockedDialogueCooldown = 1f;
 
-    private static float nextTeleportTime;
+    private static readonly Dictionary<EntityId, float> NextTeleportTimeByBody = new();
     private float nextLockedDialogueTime;
 
     private void Reset()
@@ -40,36 +41,55 @@ public class TeleportDoor : MonoBehaviour
             return;
         }
 
-        Rigidbody2D playerBody = other.attachedRigidbody;
+        Rigidbody2D enteringBody = other.attachedRigidbody;
 
-        if (playerBody == null ||
-            !playerBody.CompareTag("Player") ||
-            other.gameObject != playerBody.gameObject ||
-            ScreenFade.IsTransitioning)
+        if (enteringBody == null || other.gameObject != enteringBody.gameObject)
         {
             return;
         }
 
-        if (Time.time < nextTeleportTime)
+        bool isPlayer = enteringBody.CompareTag("Player");
+        NPCMovement npcMovement = enteringBody.GetComponent<NPCMovement>();
+
+        if (!isPlayer && npcMovement == null)
         {
             return;
         }
 
-        if (IsLocked())
+        if (isPlayer && ScreenFade.IsTransitioning)
+        {
+            return;
+        }
+
+        EntityId bodyID = enteringBody.GetEntityId();
+        if (NextTeleportTimeByBody.TryGetValue(bodyID, out float nextTeleportTime) &&
+            Time.time < nextTeleportTime)
+        {
+            return;
+        }
+
+        if (isPlayer && IsLocked())
         {
             ShowLockedDialogue();
             return;
         }
 
-        nextTeleportTime = Time.time + teleportCooldown;
+        NextTeleportTimeByBody[bodyID] = Time.time + teleportCooldown;
+
+        if (npcMovement != null)
+        {
+            Teleport(enteringBody);
+            npcMovement.HandleDoorTeleport();
+            return;
+        }
 
         if (ScreenFade.Instance != null &&
-            ScreenFade.Instance.BeginTransition(() => Teleport(playerBody)))
+            ScreenFade.Instance.BeginTransition(() => Teleport(enteringBody)))
         {
             return;
         }
 
-        Teleport(playerBody);
+        Teleport(enteringBody);
     }
 
     private bool IsLocked()
@@ -100,15 +120,15 @@ public class TeleportDoor : MonoBehaviour
         nextLockedDialogueTime = Time.time + lockedDialogueCooldown;
     }
 
-    private void Teleport(Rigidbody2D playerBody)
+    private void Teleport(Rigidbody2D body)
     {
-        if (playerBody == null || destination == null)
+        if (body == null || destination == null)
         {
             return;
         }
 
-        playerBody.linearVelocity = Vector2.zero;
-        playerBody.position = destination.position;
+        body.linearVelocity = Vector2.zero;
+        body.position = destination.position;
         Physics2D.SyncTransforms();
     }
 
