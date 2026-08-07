@@ -3,11 +3,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
-    [SerializeField]private float movementSpeed = 3f;
+    [Header("Movement")]
+    [SerializeField, Min(0f)] private float movementSpeed = 3f;
+    [SerializeField, Range(1f, 89f)] private float diagonalAngle = 30f;
 
     private Rigidbody2D rb;
     private Vector2 inputMovement;
+    private Vector2 movementDirection;
     private Vector2 filteredInput;
     private Animator animator;
     
@@ -20,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Vector2 animationInput = IsMovementBlocked() ? Vector2.zero : inputMovement;
+        movementDirection = ToIsometricDirection(inputMovement);
+        Vector2 animationInput = IsMovementBlocked() ? Vector2.zero : movementDirection;
 
         if(animationInput != Vector2.zero)
         {
@@ -49,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = IsMovementBlocked()
             ? Vector2.zero
-            : inputMovement * movementSpeed;
+            : movementDirection * movementSpeed;
     }
 
     private static bool IsMovementBlocked()
@@ -63,6 +66,20 @@ public class PlayerMovement : MonoBehaviour
     public void playerMovement(InputAction.CallbackContext context)
     {
         inputMovement = context.ReadValue<Vector2>();
+    }
+
+    private Vector2 ToIsometricDirection(Vector2 input)
+    {
+        float inputMagnitude = Mathf.Clamp01(input.magnitude);
+        if (inputMagnitude <= Mathf.Epsilon)
+            return Vector2.zero;
+
+        float angleInRadians = diagonalAngle * Mathf.Deg2Rad;
+        Vector2 angledInput = new(
+            input.x * Mathf.Cos(angleInRadians),
+            input.y * Mathf.Sin(angleInRadians));
+
+        return angledInput.normalized * inputMagnitude;
     }
 
 
