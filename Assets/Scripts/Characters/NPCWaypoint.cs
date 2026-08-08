@@ -4,7 +4,16 @@ public class NPCWaypoint : MonoBehaviour
 {
     [SerializeField] private NPCWaypoint[] neighbours = new NPCWaypoint[0];
 
+    [Header("Patrol Wait")]
+    [SerializeField] private bool overrideWaitTime;
+    [SerializeField, Min(0f)] private float waitTime;
+
     public NPCWaypoint[] Neighbours => neighbours;
+
+    public float GetWaitTime(float defaultWaitTime)
+    {
+        return overrideWaitTime ? waitTime : defaultWaitTime;
+    }
 
     private void OnDrawGizmos()
     {

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(NPCMover))]
 public class NPCPatrol : MonoBehaviour
 {
+    public event Action<NPCWaypoint> WaypointReached;
+
     [Header("Patrol")]
     [SerializeField] private bool patrolOnStart = true;
     [SerializeField, Min(0f)] private float waitAtWaypoint = 1f;
@@ -27,10 +30,14 @@ public class NPCPatrol : MonoBehaviour
     private NPCWaypoint targetNetworkWaypoint;
     private NPCWaypoint lastReachedNetworkWaypoint;
     private NPCWaypoint previousNetworkWaypoint;
+    private bool targetIsBlockedAlternative;
 
     public bool IsPatrolling => isPatrolling;
     public bool IsSuspended { get; private set; }
     public bool PatrolOnStart => patrolOnStart;
+    public bool UsesWaypointNetwork => useWaypointNetwork;
+    public NPCWaypoint CurrentNetworkWaypoint => lastReachedNetworkWaypoint;
+    public bool LastWaypointWasBlockedAlternative { get; private set; }
 
     private void Awake()
     {
@@ -67,6 +74,11 @@ public class NPCPatrol : MonoBehaviour
 
     public void BeginPatrol()
     {
+        BeginPatrolAt(useWaypointNetwork ? startingWaypoint : null);
+    }
+
+    public void BeginPatrolAt(NPCWaypoint networkStartingWaypoint)
+    {
         if (TryGetComponent(out NPCFixedRoute fixedRoute) && fixedRoute.IsFollowingRoute)
             fixedRoute.CancelRoute();
 
@@ -80,7 +92,11 @@ public class NPCPatrol : MonoBehaviour
         patrolDirection = 1;
         previousNetworkWaypoint = null;
         lastReachedNetworkWaypoint = null;
-        targetNetworkWaypoint = useWaypointNetwork ? startingWaypoint : null;
+        targetIsBlockedAlternative = false;
+        LastWaypointWasBlockedAlternative = false;
+        targetNetworkWaypoint = useWaypointNetwork
+            ? networkStartingWaypoint != null ? networkStartingWaypoint : startingWaypoint
+            : null;
 
         if (GetCurrentTarget() == null)
         {
@@ -141,22 +157,49 @@ public class NPCPatrol : MonoBehaviour
         {
             previousNetworkWaypoint = lastReachedNetworkWaypoint;
             lastReachedNetworkWaypoint = targetNetworkWaypoint;
+            LastWaypointWasBlockedAlternative = targetIsBlockedAlternative;
+            WaypointReached?.Invoke(lastReachedNetworkWaypoint);
+
+            if (!isPatrolling)
+                return;
         }
 
-        if (waitAtWaypoint <= 0f)
+        float waitDuration = GetCurrentWaypointWaitTime();
+        if (waitDuration <= 0f)
         {
             AdvancePatrol();
             return;
         }
 
-        waitRoutine = StartCoroutine(WaitThenAdvance());
+        waitRoutine = StartCoroutine(WaitThenAdvance(waitDuration));
     }
 
-    private IEnumerator WaitThenAdvance()
+    private IEnumerator WaitThenAdvance(float waitDuration)
     {
-        yield return new WaitForSeconds(waitAtWaypoint);
+        yield return new WaitForSeconds(waitDuration);
         waitRoutine = null;
         AdvancePatrol();
+    }
+
+    private float GetCurrentWaypointWaitTime()
+    {
+        if (useWaypointNetwork)
+        {
+            return lastReachedNetworkWaypoint != null
+                ? lastReachedNetworkWaypoint.GetWaitTime(waitAtWaypoint)
+                : waitAtWaypoint;
+        }
+
+        Transform reachedWaypoint = waypoints != null &&
+                                    currentWaypointIndex >= 0 &&
+                                    currentWaypointIndex < waypoints.Length
+            ? waypoints[currentWaypointIndex]
+            : null;
+
+        return reachedWaypoint != null &&
+               reachedWaypoint.TryGetComponent(out NPCWaypoint waypoint)
+            ? waypoint.GetWaitTime(waitAtWaypoint)
+            : waitAtWaypoint;
     }
 
     private void AdvancePatrol()
@@ -170,6 +213,7 @@ public class NPCPatrol : MonoBehaviour
             targetNetworkWaypoint = nextWaypoint != null
                 ? nextWaypoint
                 : lastReachedNetworkWaypoint;
+            targetIsBlockedAlternative = false;
         }
         else
             AdvanceSimplePatrol();
@@ -187,6 +231,7 @@ public class NPCPatrol : MonoBehaviour
             return;
 
         targetNetworkWaypoint = alternative;
+        targetIsBlockedAlternative = true;
         mover.MoveTo(targetNetworkWaypoint.transform);
     }
 
@@ -209,7 +254,7 @@ public class NPCPatrol : MonoBehaviour
         if (waypointChoices.Count == 0)
             return null;
 
-        return waypointChoices[Random.Range(0, waypointChoices.Count)];
+        return waypointChoices[UnityEngine.Random.Range(0, waypointChoices.Count)];
     }
 
     private void AddNeighbourChoices(

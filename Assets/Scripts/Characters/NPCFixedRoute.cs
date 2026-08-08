@@ -19,6 +19,7 @@ public class NPCFixedRoute : MonoBehaviour
 
     private NPCMover mover;
     private NPCPatrol patrol;
+    private Transform[] activeRoutePoints;
     private Coroutine waitRoutine;
     private int currentPointIndex;
     private bool isFollowingRoute;
@@ -59,13 +60,19 @@ public class NPCFixedRoute : MonoBehaviour
 
     public void BeginRoute()
     {
-        if (routePoints == null || routePoints.Length == 0)
+        TryBeginRoute(routePoints, true);
+    }
+
+    public bool TryBeginRoute(Transform[] requestedRoutePoints, bool allowPatrolResume)
+    {
+        if (requestedRoutePoints == null || requestedRoutePoints.Length == 0)
         {
             Debug.LogWarning($"{gameObject.name} has no fixed NPC route points.", this);
-            return;
+            return false;
         }
 
-        shouldResumePatrol = resumePatrolAfterRoute &&
+        shouldResumePatrol = allowPatrolResume &&
+                             resumePatrolAfterRoute &&
                              patrol != null &&
                              (patrol.IsPatrolling || patrol.IsSuspended || patrol.PatrolOnStart);
 
@@ -79,8 +86,10 @@ public class NPCFixedRoute : MonoBehaviour
         }
 
         currentPointIndex = 0;
+        activeRoutePoints = requestedRoutePoints;
         isFollowingRoute = true;
         MoveToCurrentPoint();
+        return true;
     }
 
     public void CancelRoute()
@@ -91,6 +100,7 @@ public class NPCFixedRoute : MonoBehaviour
         waitRoutine = null;
         isFollowingRoute = false;
         shouldResumePatrol = false;
+        activeRoutePoints = null;
         mover.Stop();
     }
 
@@ -99,8 +109,8 @@ public class NPCFixedRoute : MonoBehaviour
         if (!isFollowingRoute)
             return;
 
-        Transform reachedPoint = currentPointIndex < routePoints.Length
-            ? routePoints[currentPointIndex]
+        Transform reachedPoint = currentPointIndex < activeRoutePoints.Length
+            ? activeRoutePoints[currentPointIndex]
             : null;
 
         if (reachedPoint != null &&
@@ -135,8 +145,8 @@ public class NPCFixedRoute : MonoBehaviour
         currentPointIndex++;
 
         // The teleport itself completes an explicitly listed arrival point.
-        if (currentPointIndex < routePoints.Length &&
-            IsMatchingArrivalPoint(routePoints[currentPointIndex], arrivalPoint))
+        if (currentPointIndex < activeRoutePoints.Length &&
+            IsMatchingArrivalPoint(activeRoutePoints[currentPointIndex], arrivalPoint))
         {
             currentPointIndex++;
         }
@@ -155,7 +165,7 @@ public class NPCFixedRoute : MonoBehaviour
 
     private void ContinueAfterOptionalWait()
     {
-        if (currentPointIndex >= routePoints.Length)
+        if (currentPointIndex >= activeRoutePoints.Length)
         {
             CompleteRoute();
             return;
@@ -179,22 +189,23 @@ public class NPCFixedRoute : MonoBehaviour
 
     private void MoveToCurrentPoint()
     {
-        while (currentPointIndex < routePoints.Length && routePoints[currentPointIndex] == null)
+        while (currentPointIndex < activeRoutePoints.Length && activeRoutePoints[currentPointIndex] == null)
             currentPointIndex++;
 
-        if (currentPointIndex >= routePoints.Length)
+        if (currentPointIndex >= activeRoutePoints.Length)
         {
             CompleteRoute();
             return;
         }
 
-        mover.MoveTo(routePoints[currentPointIndex]);
+        mover.MoveTo(activeRoutePoints[currentPointIndex]);
     }
 
     private void CompleteRoute()
     {
         mover.Stop();
         isFollowingRoute = false;
+        activeRoutePoints = null;
 
         bool resumePatrol = shouldResumePatrol && patrol != null;
         shouldResumePatrol = false;
