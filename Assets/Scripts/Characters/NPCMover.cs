@@ -14,8 +14,7 @@ public class NPCMover : MonoBehaviour
 
     [Header("Isometric Movement")]
     [SerializeField] private bool isometricMovementOnly;
-    [Tooltip("0.5 gives classic 2:1 isometric diagonals. 1 gives 45-degree diagonals.")]
-    [SerializeField, Range(0.1f, 1f)] private float isometricSlope = 0.5f;
+    [SerializeField, Range(1f, 89f)] private float diagonalAngle = IsometricGeometry.GroundAngle;
 
     [Header("Physics")]
     [SerializeField, Min(1f)] private float bodyMass = 1000f;
@@ -31,7 +30,6 @@ public class NPCMover : MonoBehaviour
     private Vector2 isometricCorner;
     private bool hasIsometricCorner;
     private float blockedTime;
-    private bool hasReportedBlocked;
     private bool isPhysicsPaused;
 
     public bool HasDestination => destination != null;
@@ -98,9 +96,9 @@ public class NPCMover : MonoBehaviour
             IsBlocked = true;
             blockedTime += Time.fixedDeltaTime;
 
-            if (!hasReportedBlocked && blockedTime >= blockedNoticeDelay)
+            if (blockedTime >= blockedNoticeDelay)
             {
-                hasReportedBlocked = true;
+                blockedTime = 0f;
                 Blocked?.Invoke();
             }
 
@@ -134,6 +132,21 @@ public class NPCMover : MonoBehaviour
         StopBody();
     }
 
+    public bool IsPathImmediatelyBlocked(Transform target)
+    {
+        if (target == null || body == null)
+            return true;
+
+        // Network selection intentionally checks the direct connection, matching
+        // the original waypoint-network behaviour. Isometric path splitting only
+        // applies after a destination has been selected.
+        Vector2 direction = ((Vector2)target.position - body.position).normalized;
+        float checkDistance = obstacleClearance + 0.1f;
+
+        return direction != Vector2.zero &&
+               body.Cast(direction, obstacleFilter, obstacleHits, checkDistance) > 0;
+    }
+
     public void NotifyTeleported(Transform arrivalPoint)
     {
         destination = null;
@@ -150,28 +163,33 @@ public class NPCMover : MonoBehaviour
         if (!isometricMovementOnly || destination == null)
             return;
 
-        Vector2 start = body.position;
-        Vector2 offset = (Vector2)destination.position - start;
-        float slope = Mathf.Max(0.1f, isometricSlope);
+        isometricCorner = GetFirstIsometricPathPoint(body.position, destination.position);
+        hasIsometricCorner = Vector2.Distance(isometricCorner, destination.position) > arrivalDistance;
+    }
 
-        // Express the destination as movement along the two isometric ground axes:
-        // axis A = (1, slope), axis B = (-1, slope).
-        float axisAAmount = (offset.x + offset.y / slope) * 0.5f;
-        float axisBAmount = (offset.y / slope - offset.x) * 0.5f;
-        float axisLength = Mathf.Sqrt(1f + slope * slope);
-        float axisADistance = Mathf.Abs(axisAAmount) * axisLength;
-        float axisBDistance = Mathf.Abs(axisBAmount) * axisLength;
+    private Vector2 GetFirstIsometricPathPoint(Vector2 start, Vector2 end)
+    {
+        if (!isometricMovementOnly)
+            return end;
 
-        // A destination already on one isometric axis needs no intermediate turn.
-        if (axisADistance <= arrivalDistance || axisBDistance <= arrivalDistance)
-            return;
+        float radians = diagonalAngle * Mathf.Deg2Rad;
+        float cosine = Mathf.Max(0.01f, Mathf.Cos(radians));
+        float sine = Mathf.Max(0.01f, Mathf.Sin(radians));
+        Vector2 offset = end - start;
 
-        // Travel the longer leg first, then make one clean turn toward the destination.
-        isometricCorner = axisADistance >= axisBDistance
-            ? start + new Vector2(axisAAmount, axisAAmount * slope)
-            : start + new Vector2(-axisBAmount, axisBAmount * slope);
+        float rightAmount = (offset.x / cosine + offset.y / sine) * 0.5f;
+        float leftAmount = (offset.y / sine - offset.x / cosine) * 0.5f;
 
-        hasIsometricCorner = true;
+        if (Mathf.Abs(rightAmount) <= arrivalDistance ||
+            Mathf.Abs(leftAmount) <= arrivalDistance)
+        {
+            return end;
+        }
+
+        // Travel the longer leg first, then make one clean isometric turn.
+        return Mathf.Abs(rightAmount) >= Mathf.Abs(leftAmount)
+            ? start + IsometricGeometry.Axis(diagonalAngle, 1f) * rightAmount
+            : start + IsometricGeometry.Axis(diagonalAngle, -1f) * leftAmount;
     }
 
     private static bool IsMovementGloballyPaused()
@@ -203,7 +221,6 @@ public class NPCMover : MonoBehaviour
     {
         IsBlocked = false;
         blockedTime = 0f;
-        hasReportedBlocked = false;
     }
 
     private void StopBody()

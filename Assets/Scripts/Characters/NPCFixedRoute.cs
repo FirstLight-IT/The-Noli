@@ -9,6 +9,8 @@ public class NPCFixedRoute : MonoBehaviour
 
     [Header("Test Controls")]
     [SerializeField] private bool followRouteOnStart;
+    [Tooltip("Resume a sibling NPC Patrol after this scripted route finishes.")]
+    [SerializeField] private bool resumePatrolAfterRoute = true;
 
     [Header("Route")]
     [SerializeField] private Transform[] routePoints = new Transform[0];
@@ -16,15 +18,18 @@ public class NPCFixedRoute : MonoBehaviour
     [SerializeField, Min(0f)] private float teleportArrivalTolerance = 0.25f;
 
     private NPCMover mover;
+    private NPCPatrol patrol;
     private Coroutine waitRoutine;
     private int currentPointIndex;
     private bool isFollowingRoute;
+    private bool shouldResumePatrol;
 
     public bool IsFollowingRoute => isFollowingRoute;
 
     private void Awake()
     {
         mover = GetComponent<NPCMover>();
+        TryGetComponent(out patrol);
     }
 
     private void OnEnable()
@@ -49,6 +54,7 @@ public class NPCFixedRoute : MonoBehaviour
 
         waitRoutine = null;
         isFollowingRoute = false;
+        shouldResumePatrol = false;
     }
 
     public void BeginRoute()
@@ -58,6 +64,13 @@ public class NPCFixedRoute : MonoBehaviour
             Debug.LogWarning($"{gameObject.name} has no fixed NPC route points.", this);
             return;
         }
+
+        shouldResumePatrol = resumePatrolAfterRoute &&
+                             patrol != null &&
+                             (patrol.IsPatrolling || patrol.IsSuspended || patrol.PatrolOnStart);
+
+        if (patrol != null && patrol.IsPatrolling)
+            patrol.SuspendPatrol();
 
         if (waitRoutine != null)
         {
@@ -77,6 +90,7 @@ public class NPCFixedRoute : MonoBehaviour
 
         waitRoutine = null;
         isFollowingRoute = false;
+        shouldResumePatrol = false;
         mover.Stop();
     }
 
@@ -181,6 +195,14 @@ public class NPCFixedRoute : MonoBehaviour
     {
         mover.Stop();
         isFollowingRoute = false;
+
+        bool resumePatrol = shouldResumePatrol && patrol != null;
+        shouldResumePatrol = false;
+
+        if (resumePatrol)
+            patrol.ResumePatrol();
+
+        // External mission logic runs last, so it can override the resumed patrol.
         RouteCompleted?.Invoke();
     }
 }

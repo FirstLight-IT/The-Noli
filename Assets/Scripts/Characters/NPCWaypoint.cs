@@ -14,11 +14,16 @@ public class NPCWaypoint : MonoBehaviour
         if (neighbours == null)
             return;
 
-        Gizmos.color = new Color(0.2f, 0.85f, 1f, 0.45f);
+        NPCIsometricGrid grid = GetComponentInParent<NPCIsometricGrid>();
         foreach (NPCWaypoint neighbour in neighbours)
         {
             if (neighbour != null)
+            {
+                Gizmos.color = grid == null || grid.IsAxisAligned(transform.position, neighbour.transform.position)
+                    ? new Color(0.2f, 0.85f, 1f, 0.6f)
+                    : new Color(1f, 0.3f, 0.15f, 0.9f);
                 Gizmos.DrawLine(transform.position, neighbour.transform.position);
+            }
         }
     }
 }

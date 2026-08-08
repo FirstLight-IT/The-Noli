@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField, Min(0f)] private float movementSpeed = 3f;
-    [SerializeField, Range(1f, 89f)] private float diagonalAngle = 30f;
+    [SerializeField, Range(1f, 89f)] private float diagonalAngle = IsometricGeometry.GroundAngle;
 
     private Rigidbody2D rb;
     private Vector2 inputMovement;
