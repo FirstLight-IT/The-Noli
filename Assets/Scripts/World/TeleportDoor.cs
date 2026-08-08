@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -8,6 +7,10 @@ public class TeleportDoor : MonoBehaviour
     [SerializeField] private Transform destination;
     [SerializeField, Min(0f)] private float teleportCooldown = 0.35f;
 
+    [Header("NPC Teleport Settings")]
+    [Tooltip("Optional NPC-only landing point. This does not change the player's Destination.")]
+    [SerializeField] private Transform npcDestination;
+
     [Header("Mission Lock")]
     [Tooltip("Leave empty for a door that is always unlocked.")]
     [SerializeField] private MissionInfoSO unlockWhenMissionStarts;
@@ -15,7 +18,7 @@ public class TeleportDoor : MonoBehaviour
         "I really shouldn't be snooping around right now.";
     [SerializeField, Min(0f)] private float lockedDialogueCooldown = 1f;
 
-    private static readonly Dictionary<EntityId, float> NextTeleportTimeByBody = new();
+    private static float nextPlayerTeleportTime;
     private float nextLockedDialogueTime;
 
     private void Reset()
@@ -43,53 +46,50 @@ public class TeleportDoor : MonoBehaviour
 
         Rigidbody2D enteringBody = other.attachedRigidbody;
 
-        if (enteringBody == null || other.gameObject != enteringBody.gameObject)
+        if (enteringBody == null ||
+            !enteringBody.CompareTag("Player") ||
+            other.isTrigger ||
+            ScreenFade.IsTransitioning)
         {
             return;
         }
 
-        bool isPlayer = enteringBody.CompareTag("Player");
-        NPCMovement npcMovement = enteringBody.GetComponent<NPCMovement>();
-
-        if (!isPlayer && npcMovement == null)
+        if (Time.time < nextPlayerTeleportTime)
         {
             return;
         }
 
-        if (isPlayer && ScreenFade.IsTransitioning)
-        {
-            return;
-        }
-
-        EntityId bodyID = enteringBody.GetEntityId();
-        if (NextTeleportTimeByBody.TryGetValue(bodyID, out float nextTeleportTime) &&
-            Time.time < nextTeleportTime)
-        {
-            return;
-        }
-
-        if (isPlayer && IsLocked())
+        if (IsLocked())
         {
             ShowLockedDialogue();
             return;
         }
 
-        NextTeleportTimeByBody[bodyID] = Time.time + teleportCooldown;
-
-        if (npcMovement != null)
-        {
-            Teleport(enteringBody);
-            npcMovement.HandleDoorTeleport();
-            return;
-        }
+        nextPlayerTeleportTime = Time.time + teleportCooldown;
 
         if (ScreenFade.Instance != null &&
-            ScreenFade.Instance.BeginTransition(() => Teleport(enteringBody)))
+            ScreenFade.Instance.BeginTransition(() => Teleport(enteringBody, destination)))
         {
             return;
         }
 
-        Teleport(enteringBody);
+        Teleport(enteringBody, destination);
+    }
+
+    public bool TeleportNPC(NPCMover mover)
+    {
+        if (mover == null)
+            return false;
+
+        Rigidbody2D npcBody = mover.GetComponent<Rigidbody2D>();
+        Transform npcLandingPoint = npcDestination != null ? npcDestination : destination;
+
+        if (npcBody == null || npcLandingPoint == null)
+            return false;
+
+        Teleport(npcBody, npcLandingPoint);
+        mover.NotifyTeleported(npcLandingPoint);
+        return true;
     }
 
     private bool IsLocked()
@@ -120,15 +120,15 @@ public class TeleportDoor : MonoBehaviour
         nextLockedDialogueTime = Time.time + lockedDialogueCooldown;
     }
 
-    private void Teleport(Rigidbody2D body)
+    private static void Teleport(Rigidbody2D body, Transform landingPoint)
     {
-        if (body == null || destination == null)
+        if (body == null || landingPoint == null)
         {
             return;
         }
 
         body.linearVelocity = Vector2.zero;
-        body.position = destination.position;
+        body.position = landingPoint.position;
         Physics2D.SyncTransforms();
     }
 

@@ -264,21 +264,6 @@ public class NPCMovement : MonoBehaviour
         return body.Cast(direction, obstacleFilter, obstacleHits, distance) > 0;
     }
 
-    public void HandleDoorTeleport()
-    {
-        StopMoving();
-        blockedTime = 0f;
-
-        if (useWaypointNetwork)
-        {
-            RecordNetworkWaypointArrival();
-            ChooseNextNetworkWaypoint();
-            return;
-        }
-
-        AdvanceSimplePatrol();
-    }
-
     private void AdvanceSimplePatrol()
     {
         if (waypoints == null || waypoints.Length == 0)

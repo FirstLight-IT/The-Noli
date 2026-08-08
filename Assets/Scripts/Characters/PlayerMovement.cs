@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementDirection;
     private Vector2 filteredInput;
     private Animator animator;
+    private StairsTrigger activeSlope;
     
 
     void Awake()
@@ -22,7 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movementDirection = ToIsometricDirection(inputMovement);
+        movementDirection = activeSlope != null
+            ? activeSlope.GetSlopeMovement(inputMovement, diagonalAngle)
+            : ToIsometricDirection(inputMovement);
+
         Vector2 animationInput = IsMovementBlocked() ? Vector2.zero : movementDirection;
 
         if(animationInput != Vector2.zero)
@@ -82,5 +86,17 @@ public class PlayerMovement : MonoBehaviour
         return angledInput.normalized * inputMagnitude;
     }
 
+    public void EnterSlope(StairsTrigger slope)
+    {
+        activeSlope = slope;
+    }
+
+    public void ExitSlope(StairsTrigger slope)
+    {
+        if (activeSlope == slope)
+        {
+            activeSlope = null;
+        }
+    }
 
 }
