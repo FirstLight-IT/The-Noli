@@ -17,7 +17,7 @@ MonoBehaviour:
   characterFullName: Isabel
   alias: "T\xEDa Isabel, Capit\xE1n Tiago\u2019s Cousin "
   characterCategory: Household Member / Hostess
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 7f3666917c32d5b4c9e885371d1ff39a, type: 3}
   description: "An elderly and good-natured cousin of Capit\xE1n Tiago who receives
     the female guests at his gathering. Although well-meaning, she struggles to speak
     Spanish and soon becomes tired of her ceremonial duties."
@@ -36,5 +36,11 @@ MonoBehaviour:
   - She offers cigars and buyos to Spanish women.
   - She allows Filipino women to kiss her hand.
   - She abandons the reception after hearing a plate break.
-  introductionLines: []
-  repeatDialogues: []
+  introductionLines:
+  - Good evening. I am Isabel, a cousin of Capitan Tiago. I am helping receive his
+    guests tonight.
+  - ...
+  - "Jes\xFAs! Just wait, you rascals!"
+  repeatDialogues:
+  - lines:
+    - ...

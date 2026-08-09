@@ -36,5 +36,8 @@ MonoBehaviour:
   - He was a friend of Don Rafael Ibarra.
   - "He hosts the dinner in thanksgiving for Ibarra\u2019s safe return."
   - He orders tinola because Ibarra has been away from the country for years.
-  introductionLines: []
-  repeatDialogues: []
+  introductionLines:
+  - ...
+  repeatDialogues:
+  - lines:
+    - ...

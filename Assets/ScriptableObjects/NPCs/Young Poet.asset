@@ -17,7 +17,7 @@ MonoBehaviour:
   characterFullName: "A\u2014\u2014\u2014"
   alias: Strange Youth
   characterCategory: Writer / Civilian Guest
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 0273c0d72b9430545a5c2d10b2d7fe05, type: 3}
   description: A young Filipino poet who has stopped writing because he refuses to
     produce dishonest or degrading work. His brief appearance reveals the dangers
     faced by writers who express uncomfortable truths.
@@ -36,5 +36,8 @@ MonoBehaviour:
   - He refuses to lie or degrade himself through his work.
   - He mentions that a writer was imprisoned for expressing a truth in verse.
   - He represents the risks faced by writers under colonial censorship.
-  introductionLines: []
-  repeatDialogues: []
+  introductionLines:
+  - ...
+  repeatDialogues:
+  - lines:
+    - ...

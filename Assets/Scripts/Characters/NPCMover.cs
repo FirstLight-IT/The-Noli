@@ -104,7 +104,7 @@ public class NPCMover : MonoBehaviour
         Vector2 direction = (destinationPosition - currentPosition).normalized;
         float checkDistance = movementSpeed * Time.fixedDeltaTime + obstacleClearance;
 
-        if (body.Cast(direction, obstacleFilter, obstacleHits, checkDistance) > 0)
+        if (HasBlockingHit(direction, checkDistance))
         {
             StopBody();
             IsBlocked = true;
@@ -157,8 +157,30 @@ public class NPCMover : MonoBehaviour
         Vector2 direction = ((Vector2)target.position - body.position).normalized;
         float checkDistance = obstacleClearance + 0.1f;
 
-        return direction != Vector2.zero &&
-               body.Cast(direction, obstacleFilter, obstacleHits, checkDistance) > 0;
+        return direction != Vector2.zero && HasBlockingHit(direction, checkDistance);
+    }
+
+    private bool HasBlockingHit(Vector2 direction, float distance)
+    {
+        int hitCount = body.Cast(direction, obstacleFilter, obstacleHits, distance);
+
+        for (int i = 0; i < hitCount; i++)
+        {
+            Collider2D hitCollider = obstacleHits[i].collider;
+            if (hitCollider == null)
+                continue;
+
+            NPCMover otherMover = hitCollider.GetComponentInParent<NPCMover>();
+            bool ignoresThisNPC = ignoreOtherNPCs &&
+                                  otherMover != null &&
+                                  otherMover != this &&
+                                  otherMover.ignoreOtherNPCs;
+
+            if (!ignoresThisNPC)
+                return true;
+        }
+
+        return false;
     }
 
     public void NotifyTeleported(Transform arrivalPoint)
@@ -208,7 +230,8 @@ public class NPCMover : MonoBehaviour
 
     private static bool IsMovementGloballyPaused()
     {
-        return (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
+        return (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
+               (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
                (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
     }
 

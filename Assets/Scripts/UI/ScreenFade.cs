@@ -13,22 +13,54 @@ public class ScreenFade : MonoBehaviour
     [SerializeField, Min(0f)] private float holdDuration = 0.05f;
     [SerializeField, Min(0f)] private float fadeInDuration = 0.25f;
 
+    [Header("Scene Entry")]
+    [Tooltip("Start black and fade in when this scene opens.")]
+    [SerializeField] private bool fadeInOnStart;
+    [Tooltip("Time to keep the new scene covered while its first-frame setup finishes.")]
+    [SerializeField, Min(0f)] private float fadeInDelay = 0.25f;
+    [Tooltip("Fade duration used only when this scene first opens.")]
+    [SerializeField, Min(0f)] private float sceneEntryFadeDuration = 1.5f;
+
     private CanvasGroup canvasGroup;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Debug.LogWarning("More than one ScreenFade exists in the scene.", this);
-            enabled = false;
-            return;
-        }
-
+        // Scene-local fades replace the outgoing scene's reference immediately.
+        // This is necessary because the new scene can awaken before Unity finishes
+        // destroying every object from the previous scene.
         Instance = this;
         canvasGroup = GetComponent<CanvasGroup>();
-        canvasGroup.alpha = 0f;
+        transform.SetAsLastSibling();
+        canvasGroup.alpha = fadeInOnStart ? 1f : 0f;
         canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = fadeInOnStart;
+    }
+
+    private void Start()
+    {
+        if (fadeInOnStart)
+            StartCoroutine(FadeInOnSceneStart());
+    }
+
+    private IEnumerator FadeInOnSceneStart()
+    {
+        IsTransitioning = true;
+
+        // Guarantee that the incoming scene renders fully black at least once
+        // before the alpha begins changing.
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+        Canvas.ForceUpdateCanvases();
+        yield return new WaitForEndOfFrame();
+
+        if (fadeInDelay > 0f)
+            yield return new WaitForSecondsRealtime(fadeInDelay);
+
+        yield return FadeTo(0f, sceneEntryFadeDuration);
+
+        canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
+        IsTransitioning = false;
     }
 
     private void OnDestroy()
@@ -87,10 +119,8 @@ public class ScreenFade : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.unscaledDeltaTime;
-            canvasGroup.alpha = Mathf.Lerp(
-                startAlpha,
-                targetAlpha,
-                Mathf.Clamp01(elapsed / duration));
+            float progress = Mathf.Clamp01(elapsed / duration);
+            canvasGroup.alpha = Mathf.SmoothStep(startAlpha, targetAlpha, progress);
             yield return null;
         }
 

@@ -18,4 +18,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02c65c89134ef8345bfc254dee00c3b9, type: 2}
   autoStartWhenAvailable: 1
   missionStepPrefabs:
+  - {fileID: 7698739149608351756, guid: 066199fdd6755bd46ac8744554e01243, type: 3}
   - {fileID: 60195340919201570, guid: f0fe510e3b4349547b023b7028c4f0be, type: 3}

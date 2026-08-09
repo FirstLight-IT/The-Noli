@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return InventoryController.IsJournalOpen ||
                ScreenFade.IsTransitioning ||
+               (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
                (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
                (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
     }

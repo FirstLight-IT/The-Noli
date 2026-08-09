@@ -135,5 +135,6 @@ public class StairsTrigger : MonoBehaviour
         Gizmos.DrawLine(bottom.position, top.position);
         Gizmos.DrawSphere(bottom.position, 0.08f);
         Gizmos.DrawSphere(top.position, 0.08f);
+
     }
 }

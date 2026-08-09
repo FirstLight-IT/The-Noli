@@ -21,6 +21,12 @@ public class InteractionDetector : MonoBehaviour
             return;
         }
 
+        if (NarrationController.Instance != null &&
+            NarrationController.Instance.AdvanceActiveNarration())
+        {
+            return;
+        }
+
         if (DialogueController.Instance != null &&
             DialogueController.Instance.AdvanceActiveDialogue())
         {
@@ -38,6 +44,9 @@ public class InteractionDetector : MonoBehaviour
 
         foreach (var kvp in interactablesInRange)
         {
+            if (!kvp.Value.canInteract())
+                continue;
+
             float sqrDist = (myPos - (Vector2)kvp.Key.transform.position).sqrMagnitude;
             if (sqrDist < closestSqrDist)
             {
@@ -52,6 +61,9 @@ public class InteractionDetector : MonoBehaviour
     private void RefreshHighlight()
     {
         RemoveInvalidEntries();
+
+        foreach (var kvp in interactablesInRange)
+            kvp.Value.showIcon(kvp.Value.canInteract());
 
         IInteractable closest = GetClosestInteractable();
         if (ReferenceEquals(closest, highlightedInteractable))
@@ -87,7 +99,7 @@ public class InteractionDetector : MonoBehaviour
         if(collision.TryGetComponent(out IInteractable interactable))
         {
             interactablesInRange[collision] = interactable;
-            interactable.showIcon(true);
+            interactable.showIcon(interactable.canInteract());
             interactable.incrementCounter();
             RefreshHighlight();
         }

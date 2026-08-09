@@ -25,7 +25,8 @@ public class InventoryController : MonoBehaviour
 
     private static bool IsAnyDialogueActive()
     {
-        return (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
+        return (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
+               (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
                (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
     }
 

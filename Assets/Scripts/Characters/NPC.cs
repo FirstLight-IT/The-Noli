@@ -25,6 +25,9 @@ public class NPC : MonoBehaviour, IInteractable
 
     private Conversation activeMissionConversation;
     private string registeredNpcID;
+    private bool interactionEnabled = true;
+
+    public bool IsInteractionEnabled => interactionEnabled;
 
     void Awake()
     {
@@ -99,11 +102,25 @@ public class NPC : MonoBehaviour, IInteractable
             missionIcon.SetActive(false);
     }
 
+    public void SetInteractionEnabled(bool enabled)
+    {
+        interactionEnabled = enabled;
+
+        if (interactionEnabled)
+            return;
+
+        showIcon(false);
+        showHighlight(false);
+    }
+
 
     #region IInteractiable Functions
 
         public void interact()
         {
+            if (!interactionEnabled)
+                return;
+
             if(!beenInteracted)
                 setInteracted();
 
@@ -143,10 +160,7 @@ public class NPC : MonoBehaviour, IInteractable
             OnNPCUnlocked?.Invoke(npcData);
         }
 
-        public bool canInteract()
-        {
-            return true;
-        }
+        public bool canInteract() => interactionEnabled;
 
         public int incrementCounter()
         {
