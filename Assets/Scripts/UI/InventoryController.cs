@@ -16,7 +16,7 @@ public class InventoryController : MonoBehaviour
     //toggle for the journal using Tab or I key. 
     public void toggleJournal(InputAction.CallbackContext context)
     {
-        if (!context.performed || IsAnyDialogueActive())
+        if (!context.performed || ChapterController.IsChapterOpening || IsAnyDialogueActive())
             return;
 
         IsJournalOpen = !IsJournalOpen;

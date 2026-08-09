@@ -230,7 +230,8 @@ public class NPCMover : MonoBehaviour
 
     private static bool IsMovementGloballyPaused()
     {
-        return (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
+        return ChapterController.IsChapterOpening ||
+               (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
                (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
                (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
     }

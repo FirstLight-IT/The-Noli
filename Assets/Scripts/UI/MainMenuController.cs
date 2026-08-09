@@ -10,6 +10,7 @@ public sealed class MainMenuController : MonoBehaviour
     private const string MansionSceneName = "Mansion";
 
     [SerializeField] private Button newGameButton;
+    [SerializeField] private string newGameChapterId = "chapter_1";
 
     private bool isLoading;
 
@@ -26,6 +27,8 @@ public sealed class MainMenuController : MonoBehaviour
 
         if (newGameButton != null)
             newGameButton.interactable = false;
+
+        ChapterController.RequestChapter(newGameChapterId);
 
         if (ScreenFade.Instance == null ||
             !ScreenFade.Instance.BeginTransition(LoadMansion))

@@ -51,7 +51,8 @@ public class NarrationController : MonoBehaviour
         // Let the mission and other scene controllers finish their Start methods first.
         yield return null;
 
-        if (playOpeningOnStart)
+        // ChapterController owns the ordered title-card -> narration flow when present.
+        if (playOpeningOnStart && ChapterController.Instance == null)
             Play(openingSequence);
     }
 
@@ -78,6 +79,15 @@ public class NarrationController : MonoBehaviour
         narrationPanel.SetActive(true);
         SetCloseButtonVisible(false);
         ShowCurrentPassage();
+        return true;
+    }
+
+    public bool Play(NarrationSequenceSO sequence, string missionIdToStartAfter)
+    {
+        if (!Play(sequence))
+            return false;
+
+        missionToStartAfterOpening = missionIdToStartAfter;
         return true;
     }
 

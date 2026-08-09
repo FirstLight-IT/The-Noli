@@ -15,6 +15,7 @@ public class InteractionDetector : MonoBehaviour
     public void onInteract(InputAction.CallbackContext context)
     {
         if (!context.performed ||
+            ChapterController.IsChapterOpening ||
             InventoryController.IsJournalOpen ||
             MissionController.IsMissionCompletionVisible)
         {
