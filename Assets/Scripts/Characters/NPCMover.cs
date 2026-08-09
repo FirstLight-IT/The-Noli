@@ -1,9 +1,12 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class NPCMover : MonoBehaviour
 {
+    private static readonly HashSet<NPCMover> ActiveMovers = new();
+
     public event Action Arrived;
     public event Action Blocked;
     public event Action<Transform> Teleported;
@@ -17,6 +20,7 @@ public class NPCMover : MonoBehaviour
     [SerializeField, Range(1f, 89f)] private float diagonalAngle = IsometricGeometry.GroundAngle;
 
     [Header("Physics")]
+    [SerializeField] private bool ignoreOtherNPCs = true;
     [SerializeField, Min(1f)] private float bodyMass = 1000f;
     [SerializeField, Min(0f)] private float obstacleClearance = 0.05f;
     [SerializeField, Min(0f)] private float blockedNoticeDelay = 1f;
@@ -24,6 +28,7 @@ public class NPCMover : MonoBehaviour
     private readonly RaycastHit2D[] obstacleHits = new RaycastHit2D[8];
 
     private Rigidbody2D body;
+    private Collider2D[] bodyColliders;
     private RigidbodyConstraints2D movementConstraints;
     private ContactFilter2D obstacleFilter;
     private Transform destination;
@@ -39,6 +44,7 @@ public class NPCMover : MonoBehaviour
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        bodyColliders = GetComponentsInChildren<Collider2D>(true);
         body.mass = bodyMass;
         body.gravityScale = 0f;
 
@@ -47,6 +53,14 @@ public class NPCMover : MonoBehaviour
 
         obstacleFilter = new ContactFilter2D { useTriggers = false };
         obstacleFilter.SetLayerMask(Physics2D.AllLayers);
+    }
+
+    private void OnEnable()
+    {
+        foreach (NPCMover otherMover in ActiveMovers)
+            SetNPCPairCollision(otherMover, false);
+
+        ActiveMovers.Add(this);
     }
 
     private void FixedUpdate()
@@ -231,12 +245,36 @@ public class NPCMover : MonoBehaviour
 
     private void OnDisable()
     {
+        ActiveMovers.Remove(this);
+
         if (body == null)
             return;
 
         StopBody();
         body.constraints = movementConstraints;
         isPhysicsPaused = false;
+    }
+
+    private void SetNPCPairCollision(NPCMover otherMover, bool shouldCollide)
+    {
+        if (!ignoreOtherNPCs || otherMover == null || !otherMover.ignoreOtherNPCs)
+            return;
+
+        Collider2D[] otherColliders = otherMover.bodyColliders;
+        if (bodyColliders == null || otherColliders == null)
+            return;
+
+        foreach (Collider2D ownCollider in bodyColliders)
+        {
+            if (ownCollider == null)
+                continue;
+
+            foreach (Collider2D otherCollider in otherColliders)
+            {
+                if (otherCollider != null)
+                    Physics2D.IgnoreCollision(ownCollider, otherCollider, !shouldCollide);
+            }
+        }
     }
 
     private void Reset()

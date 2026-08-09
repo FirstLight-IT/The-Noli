@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(NPCMover))]
 public class NPCPatrol : MonoBehaviour
 {
+    private const float BlockedRerouteRetryDelay = 0.25f;
+
     public event Action<NPCWaypoint> WaypointReached;
 
     [Header("Patrol")]
@@ -31,6 +33,8 @@ public class NPCPatrol : MonoBehaviour
     private NPCWaypoint lastReachedNetworkWaypoint;
     private NPCWaypoint previousNetworkWaypoint;
     private bool targetIsBlockedAlternative;
+    private bool isReturningToReroute;
+    private NPCWaypoint blockedDestinationToAvoid;
 
     public bool IsPatrolling => isPatrolling;
     public bool IsSuspended { get; private set; }
@@ -94,6 +98,8 @@ public class NPCPatrol : MonoBehaviour
         lastReachedNetworkWaypoint = null;
         targetIsBlockedAlternative = false;
         LastWaypointWasBlockedAlternative = false;
+        isReturningToReroute = false;
+        blockedDestinationToAvoid = null;
         targetNetworkWaypoint = useWaypointNetwork
             ? networkStartingWaypoint != null ? networkStartingWaypoint : startingWaypoint
             : null;
@@ -152,6 +158,13 @@ public class NPCPatrol : MonoBehaviour
     {
         if (!isPatrolling)
             return;
+
+        if (useWaypointNetwork && isReturningToReroute)
+        {
+            isReturningToReroute = false;
+            TryContinueBlockedReroute();
+            return;
+        }
 
         if (useWaypointNetwork)
         {
@@ -223,16 +236,41 @@ public class NPCPatrol : MonoBehaviour
 
     private void HandleBlocked()
     {
-        if (!isPatrolling || !useWaypointNetwork || lastReachedNetworkWaypoint == null)
+        if (!isPatrolling ||
+            !useWaypointNetwork ||
+            lastReachedNetworkWaypoint == null ||
+            isReturningToReroute)
+        {
             return;
+        }
 
-        NPCWaypoint alternative = ChooseNeighbour(targetNetworkWaypoint);
+        blockedDestinationToAvoid = targetNetworkWaypoint;
+        isReturningToReroute = true;
+        targetNetworkWaypoint = lastReachedNetworkWaypoint;
+        mover.MoveTo(lastReachedNetworkWaypoint.transform);
+    }
+
+    private void TryContinueBlockedReroute()
+    {
+        NPCWaypoint alternative = ChooseNeighbour(blockedDestinationToAvoid);
         if (alternative == null)
+        {
+            waitRoutine = StartCoroutine(RetryBlockedReroute());
             return;
+        }
 
         targetNetworkWaypoint = alternative;
         targetIsBlockedAlternative = true;
         mover.MoveTo(targetNetworkWaypoint.transform);
+    }
+
+    private IEnumerator RetryBlockedReroute()
+    {
+        yield return new WaitForSeconds(BlockedRerouteRetryDelay);
+        waitRoutine = null;
+
+        if (isPatrolling)
+            TryContinueBlockedReroute();
     }
 
     private NPCWaypoint ChooseNeighbour(NPCWaypoint excludedDestination)
