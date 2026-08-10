@@ -12,9 +12,13 @@ public sealed class ChapterDataSO : ScriptableObject
     [SerializeField] private NarrationSequenceSO openingNarration;
     [SerializeField] private string startingMissionId;
 
+    [Header("Journal")]
+    [SerializeField] private GlossaryDataSO glossary;
+
     public string ChapterId => chapterId;
     public string ChapterLabel => chapterLabel;
     public string Title => title;
     public NarrationSequenceSO OpeningNarration => openingNarration;
     public string StartingMissionId => startingMissionId;
+    public GlossaryDataSO Glossary => glossary;
 }

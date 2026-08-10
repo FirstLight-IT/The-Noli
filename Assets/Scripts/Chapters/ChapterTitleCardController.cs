@@ -67,6 +67,11 @@ public sealed class ChapterTitleCardController : MonoBehaviour
         SetVisible(true);
     }
 
+    public void HideImmediately()
+    {
+        SetVisible(false);
+    }
+
     public IEnumerator DisplayPreparedCard(Action onBleedIn)
     {
         if (!gameObject.activeInHierarchy)

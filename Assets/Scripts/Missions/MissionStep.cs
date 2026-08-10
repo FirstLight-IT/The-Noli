@@ -5,6 +5,7 @@ public abstract class MissionStep : MonoBehaviour
     [SerializeField, TextArea] private string objectiveDescription;
 
     public string ObjectiveDescription => objectiveDescription;
+    public virtual string JournalDescription => objectiveDescription;
 
     protected string MissionId { get; private set; }
     protected int StepIndex { get; private set; }

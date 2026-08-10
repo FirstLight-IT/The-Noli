@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public sealed class ChapterController : MonoBehaviour
@@ -25,12 +26,30 @@ public sealed class ChapterController : MonoBehaviour
     [SerializeField] private ChapterContent[] chapterContents = Array.Empty<ChapterContent>();
 
     [Header("Shared Opening UI")]
+    [SerializeField] private bool showTitleCard;
     [SerializeField] private ChapterTitleCardController titleCard;
     [SerializeField] private NarrationController narrationController;
 
     private ChapterDataSO activeChapter;
 
     public ChapterDataSO ActiveChapter => activeChapter;
+
+    public IEnumerable<ChapterDataSO> ConfiguredChapters
+    {
+        get
+        {
+            HashSet<ChapterDataSO> yielded = new();
+
+            if (defaultChapter != null && yielded.Add(defaultChapter))
+                yield return defaultChapter;
+
+            foreach (ChapterContent content in chapterContents)
+            {
+                if (content?.Chapter != null && yielded.Add(content.Chapter))
+                    yield return content.Chapter;
+            }
+        }
+    }
 
     public static void RequestChapter(string chapterId)
     {
@@ -58,6 +77,7 @@ public sealed class ChapterController : MonoBehaviour
         IsChapterOpening = true;
         activeChapter = ResolveActiveChapter();
         ConfigureChapterContent();
+        UnlockActiveChapterGlossary();
     }
 
     private IEnumerator Start()
@@ -73,7 +93,12 @@ public sealed class ChapterController : MonoBehaviour
             narrationController = NarrationController.Instance;
 
         if (titleCard != null)
-            titleCard.Prepare(activeChapter);
+        {
+            if (showTitleCard)
+                titleCard.Prepare(activeChapter);
+            else
+                titleCard.HideImmediately();
+        }
 
         // Give ScreenFade.Start time to begin the Mansion's scene-entry fade.
         yield return null;
@@ -83,7 +108,7 @@ public sealed class ChapterController : MonoBehaviour
 
         bool narrationStarted = false;
 
-        if (titleCard != null)
+        if (showTitleCard && titleCard != null)
         {
             yield return titleCard.DisplayPreparedCard(
                 () => narrationStarted = TryStartOpeningNarration());
@@ -164,5 +189,13 @@ public sealed class ChapterController : MonoBehaviour
 
             content.ContentRoot.SetActive(content.Chapter == activeChapter);
         }
+    }
+
+    private void UnlockActiveChapterGlossary()
+    {
+        if (activeChapter?.Glossary == null)
+            return;
+
+        JournalUnlockRegistry.Unlock(GlossaryJournalController.CollectionID, activeChapter.ChapterId);
     }
 }

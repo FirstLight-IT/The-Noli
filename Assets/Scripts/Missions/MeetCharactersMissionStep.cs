@@ -16,6 +16,8 @@ public class MeetCharactersMissionStep : MissionStep
     private readonly HashSet<string> targetNpcIds = new();
     private readonly HashSet<string> metNpcIds = new();
 
+    public override string JournalDescription => BuildCharacterList(includeMetCharacters: true);
+
     void OnEnable()
     {
         NPC.OnNPCInteracted += HandleNpcInteracted;
@@ -75,19 +77,24 @@ public class MeetCharactersMissionStep : MissionStep
 
     private void UpdateProgressObjective()
     {
-        List<string> remainingNames = new();
+        UpdateObjective(BuildCharacterList(includeMetCharacters: false));
+    }
 
-        foreach (CharacterTarget character in characters)
+    private string BuildCharacterList(bool includeMetCharacters)
+    {
+        List<string> names = new();
+
+        if (characters != null)
         {
-            if (!metNpcIds.Contains(character.npcId))
-                remainingNames.Add(character.displayName);
+            foreach (CharacterTarget character in characters)
+            {
+                if (includeMetCharacters || !metNpcIds.Contains(character.npcId))
+                    names.Add($"• {character.displayName}");
+            }
         }
 
-        string remaining = remainingNames.Count > 0
-            ? $" Remaining: {string.Join(", ", remainingNames)}"
-            : string.Empty;
-
-        UpdateObjective(
-            $"{ObjectiveDescription} ({metNpcIds.Count}/{targetNpcIds.Count}).{remaining}");
+        return names.Count == 0
+            ? ObjectiveDescription
+            : $"{ObjectiveDescription}\n{string.Join("\n", names)}";
     }
 }

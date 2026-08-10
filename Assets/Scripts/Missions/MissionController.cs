@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,7 @@ public class MissionController : MonoBehaviour
 {
     public static MissionController Instance { get; private set; }
     public static bool IsMissionCompletionVisible { get; private set; }
+    public static event Action OnMissionStatesChanged;
 
     [Header("Mission Library")]
     [SerializeField] private MissionInfoSO[] missionInfos = new MissionInfoSO[0];
@@ -25,6 +27,7 @@ public class MissionController : MonoBehaviour
     private Mission activeMission;
     private MissionStep activeStep;
     private bool isShowingMissionCompletion;
+    private string currentObjective = string.Empty;
 
     void OnEnable()
     {
@@ -84,6 +87,7 @@ public class MissionController : MonoBehaviour
         Mission failedMission = activeMission;
         failedMission.State = MissionState.Failed;
         activeMission = null;
+        OnMissionStatesChanged?.Invoke();
 
         if (activeStep != null)
             Destroy(activeStep.gameObject);
@@ -123,6 +127,7 @@ public class MissionController : MonoBehaviour
 
         mission.State = MissionState.InProgress;
         activeMission = mission;
+        OnMissionStatesChanged?.Invoke();
 
         Debug.Log($"Mission started: {mission.Info.DisplayName}");
 
@@ -141,6 +146,11 @@ public class MissionController : MonoBehaviour
             ? mission.State
             : MissionState.Locked;
     }
+
+    public IEnumerable<MissionInfoSO> MissionInfos => missionInfos;
+    public MissionInfoSO ActiveMissionInfo => activeMission?.Info;
+    public int ActiveMissionStepIndex => activeMission?.CurrentStepIndex ?? -1;
+    public string CurrentObjective => currentObjective;
 
     public bool HasMissionStarted(MissionInfoSO missionInfo)
     {
@@ -270,9 +280,12 @@ public class MissionController : MonoBehaviour
         if (objectiveDescriptionText != null)
             objectiveDescriptionText.SetText(string.Empty);
 
+        currentObjective = string.Empty;
+
         Debug.Log($"Mission complete: {completedMission.Info.DisplayName}");
 
         RefreshMissionAvailability();
+        OnMissionStatesChanged?.Invoke();
         StartCoroutine(ShowMissionCompletion(completedMission.Info.DisplayName));
     }
 
@@ -329,10 +342,14 @@ public class MissionController : MonoBehaviour
 
     private void UpdateObjectiveUI(string missionName, string objective)
     {
+        currentObjective = objective ?? string.Empty;
+
         if (missionNameText != null)
             missionNameText.SetText(missionName);
 
         if (objectiveDescriptionText != null)
             objectiveDescriptionText.SetText(objective);
+
+        OnMissionStatesChanged?.Invoke();
     }
 }
