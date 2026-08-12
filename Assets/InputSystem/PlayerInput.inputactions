@@ -180,6 +180,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ab93359a-c43e-4ffb-8a91-19db2e984d7f",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "fed623c7-2d45-4eec-8b19-1fd826e1d8a9",
                     "path": "<Keyboard>/i",
                     "interactions": "",
@@ -196,6 +207,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "ToggleJournal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1d94892-6139-44eb-b9e4-35f6c6e04572",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "ToggleJournal",
                     "isComposite": false,
                     "isPartOfComposite": false
