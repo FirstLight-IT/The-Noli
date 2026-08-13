@@ -3,7 +3,7 @@ using UnityEngine;
 public class NPCIsometricGrid : MonoBehaviour
 {
     [SerializeField, Min(0.1f)] private float spacing = 1f;
-    [SerializeField, Range(1, 30)] private int gridRadius = 8;
+    [SerializeField, Range(1, 80)] private int gridRadius = 8;
     [SerializeField] private bool alwaysShowGrid = true;
 
     public float Spacing => spacing;
