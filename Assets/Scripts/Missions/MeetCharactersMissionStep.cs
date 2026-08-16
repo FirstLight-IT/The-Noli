@@ -50,14 +50,38 @@ public class MeetCharactersMissionStep : MissionStep
                 return;
             }
 
-            if (NPC.TryGetById(character.npcId, out NPC npc) && npc.beenInteracted)
+            if (JournalUnlockRegistry.IsUnlocked(
+                    JournalUnlockRegistry.CharacterCollection,
+                    character.npcId) ||
+                (NPC.TryGetById(character.npcId, out NPC npc) && npc.beenInteracted))
+            {
                 metNpcIds.Add(character.npcId);
+            }
         }
 
-        UpdateProgressObjective();
+        RefreshProgressAndCompleteIfReady();
+    }
 
-        if (metNpcIds.Count == targetNpcIds.Count)
-            FinishStep();
+    public override MissionStepProgressSaveData CaptureProgress()
+    {
+        MissionStepProgressSaveData progress = new();
+        progress.completedTargetIds.AddRange(metNpcIds);
+        progress.Normalize();
+        return progress;
+    }
+
+    protected override void RestoreProgress(MissionStepProgressSaveData savedProgress)
+    {
+        if (savedProgress?.completedTargetIds != null)
+        {
+            foreach (string npcId in savedProgress.completedTargetIds)
+            {
+                if (targetNpcIds.Contains(npcId))
+                    metNpcIds.Add(npcId);
+            }
+        }
+
+        RefreshProgressAndCompleteIfReady();
     }
 
     private void HandleNpcInteracted(NPCInfoSO dialogueData)
@@ -69,6 +93,11 @@ public class MeetCharactersMissionStep : MissionStep
             return;
         }
 
+        RefreshProgressAndCompleteIfReady();
+    }
+
+    private void RefreshProgressAndCompleteIfReady()
+    {
         UpdateProgressObjective();
 
         if (metNpcIds.Count == targetNpcIds.Count)

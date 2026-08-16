@@ -17,4 +17,7 @@ MonoBehaviour:
   title: The Social Gathering
   openingNarration: {fileID: 11400000, guid: 721102afbf139644b90a935243621579, type: 2}
   startingMissionId: explore_the_caida
+  finalMissionId: captain_tiago_absence
+  completionQuizJson: {fileID: 4900000, guid: 14ca3dc8d20841b19bb9a90c6c1e5e30, type: 3}
+  quizSceneName: ChapterQuiz
   glossary: {fileID: 11400000, guid: ef9e7378e55d48edb7ebf4ce3cec69c5, type: 2}

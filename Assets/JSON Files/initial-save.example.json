@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "1.0",
+  "saveRevision": 0,
+  "createdAtUtc": "",
+  "lastSavedAtUtc": "",
+  "lastSaveReason": "NewGameStarted",
+  "activeChapterId": "chapter_1",
+  "player": {
+    "currentCharacterId": "crisostomo_ibarra"
+  },
+  "journal": {
+    "unlockedCharacterIds": [],
+    "unlockedArtifactIds": [],
+    "unlockedGlossaryChapterIds": [
+      "chapter_1"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterId": "chapter_1",
+      "state": "InProgress",
+      "isUnlocked": true,
+      "completedEver": false,
+      "completionCount": 0,
+      "startedAtUtc": "",
+      "completedAtUtc": "",
+      "firstCompletedAtUtc": "",
+      "checkpoint": {
+        "hasPosition": true,
+        "sceneName": "Mansion",
+        "position": {
+          "x": -3.83,
+          "y": 40.9
+        }
+      },
+      "missions": [
+        {
+          "missionId": "explore_the_caida",
+          "state": "InProgress",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        },
+        {
+          "missionId": "meet_the_guests",
+          "state": "Locked",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        },
+        {
+          "missionId": "meet_new_guests",
+          "state": "Locked",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        },
+        {
+          "missionId": "witness_the_argument",
+          "state": "Locked",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        },
+        {
+          "missionId": "captain_tiago_absence",
+          "state": "Locked",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        },
+        {
+          "missionId": "the_sala_gathering",
+          "state": "Locked",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        },
+        {
+          "missionId": "the_san_diego_transfer",
+          "state": "Locked",
+          "currentStepIndex": 0,
+          "stepProgress": {
+            "completedTargetIds": []
+          }
+        }
+      ],
+      "worldFlags": [],
+      "quiz": {
+        "state": "NotStarted",
+        "attemptNumber": 0,
+        "selectionSeed": 0,
+        "languageCode": "en",
+        "selectedQuestionIds": [],
+        "optionOrders": [],
+        "answers": [],
+        "score": 0,
+        "maxScore": 0,
+        "startedAtUtc": "",
+        "submittedAtUtc": "",
+        "completedAtUtc": ""
+      },
+      "analytics": {
+        "sessionCount": 1,
+        "playTimeSeconds": 0.0,
+        "missionStepsCompleted": 0,
+        "artifactsUnlocked": 0,
+        "charactersUnlocked": 0,
+        "dialogueInteractions": 0,
+        "doorTransitions": 0,
+        "customCounters": []
+      }
+    }
+  ]
+}

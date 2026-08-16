@@ -68,12 +68,12 @@ public class TeleportDoor : MonoBehaviour
         nextPlayerTeleportTime = Time.time + teleportCooldown;
 
         if (ScreenFade.Instance != null &&
-            ScreenFade.Instance.BeginTransition(() => Teleport(enteringBody, destination)))
+            ScreenFade.Instance.BeginTransition(() => TeleportPlayer(enteringBody)))
         {
             return;
         }
 
-        Teleport(enteringBody, destination);
+        TeleportPlayer(enteringBody);
     }
 
     public bool TeleportNPC(NPCMover mover)
@@ -130,6 +130,12 @@ public class TeleportDoor : MonoBehaviour
         body.linearVelocity = Vector2.zero;
         body.position = landingPoint.position;
         Physics2D.SyncTransforms();
+    }
+
+    private void TeleportPlayer(Rigidbody2D playerBody)
+    {
+        Teleport(playerBody, destination);
+        SaveGameManager.RecordPlayerDoorTransition();
     }
 
     private void OnDrawGizmosSelected()

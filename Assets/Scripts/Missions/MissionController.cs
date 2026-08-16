@@ -10,6 +10,8 @@ public class MissionController : MonoBehaviour
     public static MissionController Instance { get; private set; }
     public static bool IsMissionCompletionVisible { get; private set; }
     public static event Action OnMissionStatesChanged;
+    public static event Action<string, int> OnMissionStepAdvanced;
+    public static event Action<string> OnMissionCompletionPresented;
 
     [Header("Mission Library")]
     [SerializeField] private MissionInfoSO[] missionInfos = new MissionInfoSO[0];
@@ -27,6 +29,7 @@ public class MissionController : MonoBehaviour
     private Mission activeMission;
     private MissionStep activeStep;
     private bool isShowingMissionCompletion;
+    private bool hasRestoredProgress;
     private string currentObjective = string.Empty;
 
     void OnEnable()
@@ -56,7 +59,7 @@ public class MissionController : MonoBehaviour
 
     void Start()
     {
-        if (!string.IsNullOrWhiteSpace(missionToStart))
+        if (!hasRestoredProgress && !string.IsNullOrWhiteSpace(missionToStart))
             StartMission(missionToStart);
     }
 
@@ -147,6 +150,145 @@ public class MissionController : MonoBehaviour
             : MissionState.Locked;
     }
 
+    public int GetMissionStepIndex(string missionId)
+    {
+        return missions.TryGetValue(missionId, out Mission mission)
+            ? mission.CurrentStepIndex
+            : 0;
+    }
+
+    public MissionStepProgressSaveData GetMissionStepProgress(string missionId)
+    {
+        if (activeMission == null ||
+            activeStep == null ||
+            !string.Equals(activeMission.Info.MissionId, missionId, StringComparison.Ordinal))
+        {
+            return new MissionStepProgressSaveData();
+        }
+
+        return activeStep.CaptureProgress() ?? new MissionStepProgressSaveData();
+    }
+
+    public bool RestoreMissionProgress(IEnumerable<MissionSaveData> savedMissions)
+    {
+        if (savedMissions == null)
+        {
+            Debug.LogWarning("Cannot restore missions because the save contains no mission data.", this);
+            return false;
+        }
+
+        List<MissionSaveData> savedProgress = new();
+
+        foreach (MissionSaveData savedMission in savedMissions)
+        {
+            if (savedMission != null && !string.IsNullOrWhiteSpace(savedMission.missionId))
+                savedProgress.Add(savedMission);
+        }
+
+        if (savedProgress.Count == 0)
+        {
+            Debug.LogWarning(
+                "The save contains no mission progress, so the chapter will use its normal starting mission.",
+                this);
+            return false;
+        }
+
+        hasRestoredProgress = true;
+        StopAllCoroutines();
+        isShowingMissionCompletion = false;
+        IsMissionCompletionVisible = false;
+
+        if (missionCompletedPanel != null)
+            missionCompletedPanel.SetActive(false);
+
+        if (activeStep != null)
+            Destroy(activeStep.gameObject);
+
+        activeStep = null;
+        activeMission = null;
+        currentObjective = string.Empty;
+
+        foreach (Mission mission in missions.Values)
+        {
+            mission.State = MissionState.Locked;
+            mission.CurrentStepIndex = 0;
+        }
+
+        HashSet<string> restoredMissionIds = new(StringComparer.Ordinal);
+        MissionStepProgressSaveData activeStepProgress = null;
+
+        foreach (MissionSaveData savedMission in savedProgress)
+        {
+            if (!restoredMissionIds.Add(savedMission.missionId))
+            {
+                Debug.LogWarning(
+                    $"The save contains duplicate mission progress for '{savedMission.missionId}'.",
+                    this);
+                continue;
+            }
+
+            if (!missions.TryGetValue(savedMission.missionId, out Mission mission))
+            {
+                Debug.LogWarning(
+                    $"Saved mission '{savedMission.missionId}' is not registered in this chapter.",
+                    this);
+                continue;
+            }
+
+            if (!Enum.TryParse(savedMission.state, false, out MissionState restoredState))
+            {
+                Debug.LogWarning(
+                    $"Saved mission '{savedMission.missionId}' has invalid state '{savedMission.state}'.",
+                    this);
+                continue;
+            }
+
+            int stepCount = mission.Info.MissionStepPrefabs?.Length ?? 0;
+            mission.CurrentStepIndex = Mathf.Clamp(savedMission.currentStepIndex, 0, stepCount);
+
+            if (restoredState == MissionState.InProgress)
+            {
+                if (activeMission != null)
+                {
+                    Debug.LogWarning(
+                        $"Only one mission can be restored in progress. '{savedMission.missionId}' was reset to Available.",
+                        this);
+                    restoredState = MissionState.Available;
+                }
+                else if (mission.CurrentStepIndex >= stepCount)
+                {
+                    restoredState = MissionState.Finished;
+                }
+                else
+                {
+                    activeMission = mission;
+                    activeStepProgress = savedMission.stepProgress;
+                }
+            }
+
+            mission.State = restoredState;
+        }
+
+        RefreshMissionAvailability();
+
+        if (activeMission != null)
+        {
+            ActivateCurrentStep(activeStepProgress);
+        }
+        else
+        {
+            if (missionNameText != null)
+                missionNameText.SetText(string.Empty);
+
+            if (objectiveDescriptionText != null)
+                objectiveDescriptionText.SetText(string.Empty);
+
+            OnMissionStatesChanged?.Invoke();
+        }
+
+        return true;
+    }
+
     public IEnumerable<MissionInfoSO> MissionInfos => missionInfos;
     public MissionInfoSO ActiveMissionInfo => activeMission?.Info;
     public int ActiveMissionStepIndex => activeMission?.CurrentStepIndex ?? -1;
@@ -212,7 +354,7 @@ public class MissionController : MonoBehaviour
         return true;
     }
 
-    private void ActivateCurrentStep()
+    private void ActivateCurrentStep(MissionStepProgressSaveData savedProgress = null)
     {
         if (activeMission == null)
             return;
@@ -236,7 +378,10 @@ public class MissionController : MonoBehaviour
 
         activeStep = Instantiate(stepPrefab, transform);
         UpdateObjectiveUI(activeMission.Info.DisplayName, activeStep.ObjectiveDescription);
-        activeStep.Initialize(activeMission.Info.MissionId, activeMission.CurrentStepIndex);
+        activeStep.Initialize(
+            activeMission.Info.MissionId,
+            activeMission.CurrentStepIndex,
+            savedProgress);
     }
 
     private void HandleMissionObjectiveUpdated(string missionId, int stepIndex, string objective)
@@ -266,6 +411,7 @@ public class MissionController : MonoBehaviour
         activeStep = null;
         activeMission.CurrentStepIndex++;
         ActivateCurrentStep();
+        OnMissionStepAdvanced?.Invoke(missionId, stepIndex);
     }
 
     private void CompleteActiveMission()
@@ -286,10 +432,12 @@ public class MissionController : MonoBehaviour
 
         RefreshMissionAvailability();
         OnMissionStatesChanged?.Invoke();
-        StartCoroutine(ShowMissionCompletion(completedMission.Info.DisplayName));
+        StartCoroutine(ShowMissionCompletion(
+            completedMission.Info.MissionId,
+            completedMission.Info.DisplayName));
     }
 
-    private IEnumerator ShowMissionCompletion(string completedMissionName)
+    private IEnumerator ShowMissionCompletion(string completedMissionId, string completedMissionName)
     {
         isShowingMissionCompletion = true;
 
@@ -314,6 +462,7 @@ public class MissionController : MonoBehaviour
             missionCompletedPanel.SetActive(false);
 
         isShowingMissionCompletion = false;
+        OnMissionCompletionPresented?.Invoke(completedMissionId);
         TryStartNextAutomaticMission();
     }
 

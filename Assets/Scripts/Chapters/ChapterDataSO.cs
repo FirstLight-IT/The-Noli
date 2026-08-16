@@ -12,6 +12,11 @@ public sealed class ChapterDataSO : ScriptableObject
     [SerializeField] private NarrationSequenceSO openingNarration;
     [SerializeField] private string startingMissionId;
 
+    [Header("Completion Quiz")]
+    [SerializeField] private string finalMissionId;
+    [SerializeField] private TextAsset completionQuizJson;
+    [SerializeField] private string quizSceneName = SaveGameManager.QuizSceneName;
+
     [Header("Journal")]
     [SerializeField] private GlossaryDataSO glossary;
 
@@ -20,5 +25,10 @@ public sealed class ChapterDataSO : ScriptableObject
     public string Title => title;
     public NarrationSequenceSO OpeningNarration => openingNarration;
     public string StartingMissionId => startingMissionId;
+    public string FinalMissionId => finalMissionId;
+    public TextAsset CompletionQuizJson => completionQuizJson;
+    public string QuizSceneName => string.IsNullOrWhiteSpace(quizSceneName)
+        ? SaveGameManager.QuizSceneName
+        : quizSceneName;
     public GlossaryDataSO Glossary => glossary;
 }

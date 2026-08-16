@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class ChapterController : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public sealed class ChapterController : MonoBehaviour
     [SerializeField] private NarrationController narrationController;
 
     private ChapterDataSO activeChapter;
+    private bool resumeFromAutosave;
+    private bool quizTransitionStarted;
 
     public ChapterDataSO ActiveChapter => activeChapter;
 
@@ -76,6 +79,7 @@ public sealed class ChapterController : MonoBehaviour
         Instance = this;
         IsChapterOpening = true;
         activeChapter = ResolveActiveChapter();
+        resumeFromAutosave = SaveGameManager.IsAutosaveRestorePending;
         ConfigureChapterContent();
         UnlockActiveChapterGlossary();
     }
@@ -86,6 +90,17 @@ public sealed class ChapterController : MonoBehaviour
         {
             Debug.LogError("Chapter Controller has no valid chapter to open.", this);
             IsChapterOpening = false;
+            yield break;
+        }
+
+        if (resumeFromAutosave)
+        {
+            if (titleCard != null)
+                titleCard.HideImmediately();
+
+            IsChapterOpening = false;
+            yield return null;
+            TryResumePendingQuiz();
             yield break;
         }
 
@@ -135,6 +150,84 @@ public sealed class ChapterController : MonoBehaviour
                narrationController.Play(
                    activeChapter.OpeningNarration,
                    activeChapter.StartingMissionId);
+    }
+
+    private void OnEnable()
+    {
+        MissionController.OnMissionCompletionPresented += HandleMissionCompletionPresented;
+    }
+
+    private void OnDisable()
+    {
+        MissionController.OnMissionCompletionPresented -= HandleMissionCompletionPresented;
+    }
+
+    private void HandleMissionCompletionPresented(string missionId)
+    {
+        if (activeChapter == null ||
+            !string.Equals(missionId, activeChapter.FinalMissionId, StringComparison.Ordinal))
+        {
+            return;
+        }
+
+        BeginQuizTransition();
+    }
+
+    private void TryResumePendingQuiz()
+    {
+        if (activeChapter == null ||
+            activeChapter.CompletionQuizJson == null ||
+            MissionController.Instance == null ||
+            string.IsNullOrWhiteSpace(activeChapter.FinalMissionId))
+        {
+            return;
+        }
+
+        ChapterSaveData savedChapter = SaveGameManager.CurrentData?.FindChapter(activeChapter.ChapterId);
+        bool quizHasNotStarted = savedChapter?.quiz == null ||
+                                 string.Equals(
+                                     savedChapter.quiz.state,
+                                     QuizProgressState.NotStarted.ToString(),
+                                     StringComparison.Ordinal);
+
+        if (quizHasNotStarted &&
+            MissionController.Instance.GetMissionState(activeChapter.FinalMissionId) == MissionState.Finished)
+        {
+            BeginQuizTransition();
+        }
+    }
+
+    private void BeginQuizTransition()
+    {
+        if (quizTransitionStarted || activeChapter?.CompletionQuizJson == null)
+            return;
+
+        if (!ChapterQuizJsonLoader.TryLoad(
+                activeChapter.CompletionQuizJson,
+                out ChapterQuizDefinition quiz,
+                out string error) ||
+            !SaveGameManager.BeginChapterQuiz(quiz, out error))
+        {
+            Debug.LogError($"The chapter quiz could not begin: {error}", this);
+            return;
+        }
+
+        quizTransitionStarted = true;
+        StartCoroutine(TransitionToQuizWhenReady());
+    }
+
+    private IEnumerator TransitionToQuizWhenReady()
+    {
+        while (ScreenFade.IsTransitioning)
+            yield return null;
+
+        void LoadQuiz()
+        {
+            SceneManager.LoadScene(activeChapter.QuizSceneName);
+        }
+
+        if (ScreenFade.Instance == null || !ScreenFade.Instance.BeginTransition(LoadQuiz))
+            LoadQuiz();
     }
 
     private void OnDestroy()

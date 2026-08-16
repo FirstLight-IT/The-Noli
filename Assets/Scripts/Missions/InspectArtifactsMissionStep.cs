@@ -33,9 +33,40 @@ public class InspectArtifactsMissionStep : MissionStep
         }
 
         foreach (Artifact artifact in availableArtifacts)
+        {
             availableArtifactIDs.Add(artifact.ArtifactID);
 
-        UpdateProgressObjective();
+            if (JournalUnlockRegistry.IsUnlocked(
+                    JournalUnlockRegistry.ArtifactCollection,
+                    artifact.ArtifactID))
+            {
+                inspectedArtifactIDs.Add(artifact.ArtifactID);
+            }
+        }
+
+        RefreshProgressAndCompleteIfReady();
+    }
+
+    public override MissionStepProgressSaveData CaptureProgress()
+    {
+        MissionStepProgressSaveData progress = new();
+        progress.completedTargetIds.AddRange(inspectedArtifactIDs);
+        progress.Normalize();
+        return progress;
+    }
+
+    protected override void RestoreProgress(MissionStepProgressSaveData savedProgress)
+    {
+        if (savedProgress?.completedTargetIds != null)
+        {
+            foreach (string artifactID in savedProgress.completedTargetIds)
+            {
+                if (availableArtifactIDs.Contains(artifactID))
+                    inspectedArtifactIDs.Add(artifactID);
+            }
+        }
+
+        RefreshProgressAndCompleteIfReady();
     }
 
     private void HandleArtifactInteracted(string artifactID)
@@ -43,6 +74,11 @@ public class InspectArtifactsMissionStep : MissionStep
         if (!availableArtifactIDs.Contains(artifactID) || !inspectedArtifactIDs.Add(artifactID))
             return;
 
+        RefreshProgressAndCompleteIfReady();
+    }
+
+    private void RefreshProgressAndCompleteIfReady()
+    {
         UpdateProgressObjective();
 
         if (inspectedArtifactIDs.Count >= requiredArtifactCount)

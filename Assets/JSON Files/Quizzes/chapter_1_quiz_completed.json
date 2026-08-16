@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 2,
+  "settings": {
+    "chapterId": "chapter_1",
+    "questionsPerAttempt": 5,
+    "nextChapterId": "chapter_2",
+    "defaultLanguageCode": "en"
+  },
+  "answerKey": [
+    {
+      "questionId": "ch1_q01",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q02",
+      "correctOptionId": "choice_1"
+    },
+    {
+      "questionId": "ch1_q03",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q04",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q05",
+      "correctOptionId": "choice_4"
+    },
+    {
+      "questionId": "ch1_q06",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q07",
+      "correctOptionId": "choice_3"
+    },
+    {
+      "questionId": "ch1_q08",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q09",
+      "correctOptionId": "choice_3"
+    },
+    {
+      "questionId": "ch1_q10",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q11",
+      "correctOptionId": "choice_1"
+    },
+    {
+      "questionId": "ch1_q12",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q13",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q14",
+      "correctOptionId": "choice_2"
+    },
+    {
+      "questionId": "ch1_q15",
+      "correctOptionId": "choice_3"
+    }
+  ],
+  "languages": [
+    {
+      "languageCode": "en",
+      "languageLabel": "English",
+      "ui": {
+        "title": "Chapter I Quiz",
+        "instructions": "Answer all five questions, then press Submit. Your answers are autosaved.",
+        "submitLabel": "Submit",
+        "resultsTitle": "Quiz Results",
+        "scoreFormat": "You scored {0} out of {1}.",
+        "answeredFormat": "Answered {0} of {1}",
+        "yourAnswerFormat": "Your answer: {0}",
+        "correctAnswerFormat": "Correct answer: {0}",
+        "explanationFormat": "Explanation: {0}",
+        "noAnswerLabel": "No answer",
+        "finishChapterLabel": "Finish Chapter",
+        "incompleteMessage": "Please answer every question before submitting.",
+        "unavailableTitle": "Quiz Unavailable",
+        "returnToMenuLabel": "Return to Main Menu"
+      },
+      "questions": [
+        {
+          "questionId": "ch1_q01",
+          "prompt": "Who gave the dinner that became the talk of Binondo and nearby districts?",
+          "explanation": "Capitan Tiago gave the dinner, which quickly became the topic of conversation in Binondo and nearby districts.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Fray Damaso"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Capitan Tiago"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Señor Laruja"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Fray Sibyla"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q02",
+          "prompt": "Where was Capitan Tiago's house located?",
+          "explanation": "The gathering was held at Capitan Tiago's house on Calle Anloague.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Calle Anloague"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "San Diego"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Tondo"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "San Juan de Letran"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q03",
+          "prompt": "What was the spacious hallway at the top of the staircase called?",
+          "explanation": "The spacious hallway reached after going up the stairs was called the caida.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Sala"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Caida"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Zaguan"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Azotea"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q04",
+          "prompt": "What two purposes did the caida serve that evening?",
+          "explanation": "That evening, the caida served as both the dining room and a place for the orchestra.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Reception room and bedroom"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Dining room and place for the orchestra"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Chapel and dining room"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Kitchen and reception room"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q05",
+          "prompt": "Which of the following was NOT one of the religious paintings named in the caida?",
+          "explanation": "The named paintings included Purgatory, Hell, The Last Judgment, The Death of the Just, and The Death of the Sinner. The Last Supper was not listed.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Purgatory"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Hell"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "The Last Judgment"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "The Last Supper"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q06",
+          "prompt": "What could be glimpsed through the wooden arches on the river side?",
+          "explanation": "The wooden arches afforded glimpses of a terrace with arbors and bowers.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "A courtyard with a fountain"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "A terrace with arbors and bowers"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "The kitchen"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "A stable"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q07",
+          "prompt": "What expensive instrument stood on a raised platform in the sala?",
+          "explanation": "A grand piano of great price stood on a raised platform in the sala.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Harp"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Organ"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Grand piano"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Violin"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q08",
+          "prompt": "Who was the youthful Dominican friar and curate of Binondo?",
+          "explanation": "Fray Sibyla was the youthful Dominican friar and the curate of Binondo.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Fray Damaso"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Fray Sibyla"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Padre Salvi"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Padre Irene"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q09",
+          "prompt": "How long did Fray Damaso say he had stayed in San Diego?",
+          "explanation": "Fray Damaso said that he had stayed in the town of San Diego for twenty years.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Seven years"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Ten years"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Twenty years"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Twenty-three years"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q10",
+          "prompt": "According to Fray Damaso, what was tinola?",
+          "explanation": "Fray Damaso explained that tinola was a stew of chicken and squash.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "A rice cake"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "A stew of chicken and squash"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "A Spanish wine"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "A kind of lotus"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q11",
+          "prompt": "How long had the rubicund young foreigner been in the Philippines?",
+          "explanation": "When Fray Damaso asked how long he had been there, the young man answered that he had arrived four days earlier.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Four days"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Four weeks"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Four months"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "One year"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q12",
+          "prompt": "What caused the argument between Fray Damaso and the lieutenant to become heated?",
+          "explanation": "Their dispute centered on a corpse that had been removed from a cemetery and the authorities' punishment of Fray Damaso.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "The quality of the dinner"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "The treatment of a corpse removed from a cemetery and the punishment of Fray Damaso"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "The ownership of Capitan Tiago's land"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "The lieutenant's criticism of the friars' clothing"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q13",
+          "prompt": "According to the lieutenant, why was the dead man's only son unable to protest what happened to his father's corpse?",
+          "explanation": "The lieutenant explained that the dead man's only son was in Europe at the time.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "He was imprisoned."
+            },
+            {
+              "optionId": "choice_2",
+              "text": "He was in Europe."
+            },
+            {
+              "optionId": "choice_3",
+              "text": "He was serving in the army."
+            },
+            {
+              "optionId": "choice_4",
+              "text": "He did not know his father."
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q14",
+          "prompt": "Who arrived together after the lieutenant withdrew from the group?",
+          "explanation": "Doctor De Espadaña and his wife, Doña Victorina, arrived among the later guests.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Capitan Tiago and Ibarra"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Doctor De Espadaña and Doña Victorina"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Capitan Tinong and the young poet"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Two newspaper reporters"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q15",
+          "prompt": "What event interrupts the conversation at the very end of Chapter I?",
+          "explanation": "Chapter I ends when two persons enter the room, leading directly into the events of Chapter II.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Dinner is announced."
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Fray Damaso leaves the house."
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Two persons enter the room."
+            },
+            {
+              "optionId": "choice_4",
+              "text": "The orchestra begins playing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "languageLabel": "Filipino",
+      "ui": {
+        "title": "Pagsusulit sa Kabanata I",
+        "instructions": "Sagutin ang limang tanong, pagkatapos ay pindutin ang Ipasa. Awtomatikong sine-save ang iyong mga sagot.",
+        "submitLabel": "Ipasa",
+        "resultsTitle": "Resulta ng Pagsusulit",
+        "scoreFormat": "Nakakuha ka ng {0} sa {1}.",
+        "answeredFormat": "Nasagutan ang {0} sa {1}",
+        "yourAnswerFormat": "Iyong sagot: {0}",
+        "correctAnswerFormat": "Tamang sagot: {0}",
+        "explanationFormat": "Paliwanag: {0}",
+        "noAnswerLabel": "Walang sagot",
+        "finishChapterLabel": "Tapusin ang Kabanata",
+        "incompleteMessage": "Sagutin muna ang lahat ng tanong bago ipasa.",
+        "unavailableTitle": "Hindi Magamit ang Pagsusulit",
+        "returnToMenuLabel": "Bumalik sa Main Menu"
+      },
+      "questions": [
+        {
+          "questionId": "ch1_q01",
+          "prompt": "Who gave the dinner that became the talk of Binondo and nearby districts?",
+          "explanation": "Capitan Tiago gave the dinner, which quickly became the topic of conversation in Binondo and nearby districts.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Fray Damaso"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Capitan Tiago"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Señor Laruja"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Fray Sibyla"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q02",
+          "prompt": "Where was Capitan Tiago's house located?",
+          "explanation": "The gathering was held at Capitan Tiago's house on Calle Anloague.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Calle Anloague"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "San Diego"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Tondo"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "San Juan de Letran"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q03",
+          "prompt": "What was the spacious hallway at the top of the staircase called?",
+          "explanation": "The spacious hallway reached after going up the stairs was called the caida.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Sala"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Caida"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Zaguan"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Azotea"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q04",
+          "prompt": "What two purposes did the caida serve that evening?",
+          "explanation": "That evening, the caida served as both the dining room and a place for the orchestra.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Reception room and bedroom"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Dining room and place for the orchestra"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Chapel and dining room"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Kitchen and reception room"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q05",
+          "prompt": "Which of the following was NOT one of the religious paintings named in the caida?",
+          "explanation": "The named paintings included Purgatory, Hell, The Last Judgment, The Death of the Just, and The Death of the Sinner. The Last Supper was not listed.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Purgatory"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Hell"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "The Last Judgment"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "The Last Supper"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q06",
+          "prompt": "What could be glimpsed through the wooden arches on the river side?",
+          "explanation": "The wooden arches afforded glimpses of a terrace with arbors and bowers.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "A courtyard with a fountain"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "A terrace with arbors and bowers"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "The kitchen"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "A stable"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q07",
+          "prompt": "What expensive instrument stood on a raised platform in the sala?",
+          "explanation": "A grand piano of great price stood on a raised platform in the sala.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Harp"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Organ"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Grand piano"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Violin"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q08",
+          "prompt": "Who was the youthful Dominican friar and curate of Binondo?",
+          "explanation": "Fray Sibyla was the youthful Dominican friar and the curate of Binondo.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Fray Damaso"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Fray Sibyla"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Padre Salvi"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Padre Irene"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q09",
+          "prompt": "How long did Fray Damaso say he had stayed in San Diego?",
+          "explanation": "Fray Damaso said that he had stayed in the town of San Diego for twenty years.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Seven years"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Ten years"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Twenty years"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Twenty-three years"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q10",
+          "prompt": "According to Fray Damaso, what was tinola?",
+          "explanation": "Fray Damaso explained that tinola was a stew of chicken and squash.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "A rice cake"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "A stew of chicken and squash"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "A Spanish wine"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "A kind of lotus"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q11",
+          "prompt": "How long had the rubicund young foreigner been in the Philippines?",
+          "explanation": "When Fray Damaso asked how long he had been there, the young man answered that he had arrived four days earlier.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Four days"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Four weeks"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Four months"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "One year"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q12",
+          "prompt": "What caused the argument between Fray Damaso and the lieutenant to become heated?",
+          "explanation": "Their dispute centered on a corpse that had been removed from a cemetery and the authorities' punishment of Fray Damaso.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "The quality of the dinner"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "The treatment of a corpse removed from a cemetery and the punishment of Fray Damaso"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "The ownership of Capitan Tiago's land"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "The lieutenant's criticism of the friars' clothing"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q13",
+          "prompt": "According to the lieutenant, why was the dead man's only son unable to protest what happened to his father's corpse?",
+          "explanation": "The lieutenant explained that the dead man's only son was in Europe at the time.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "He was imprisoned."
+            },
+            {
+              "optionId": "choice_2",
+              "text": "He was in Europe."
+            },
+            {
+              "optionId": "choice_3",
+              "text": "He was serving in the army."
+            },
+            {
+              "optionId": "choice_4",
+              "text": "He did not know his father."
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q14",
+          "prompt": "Who arrived together after the lieutenant withdrew from the group?",
+          "explanation": "Doctor De Espadaña and his wife, Doña Victorina, arrived among the later guests.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Capitan Tiago and Ibarra"
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Doctor De Espadaña and Doña Victorina"
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Capitan Tinong and the young poet"
+            },
+            {
+              "optionId": "choice_4",
+              "text": "Two newspaper reporters"
+            }
+          ]
+        },
+        {
+          "questionId": "ch1_q15",
+          "prompt": "What event interrupts the conversation at the very end of Chapter I?",
+          "explanation": "Chapter I ends when two persons enter the room, leading directly into the events of Chapter II.",
+          "options": [
+            {
+              "optionId": "choice_1",
+              "text": "Dinner is announced."
+            },
+            {
+              "optionId": "choice_2",
+              "text": "Fray Damaso leaves the house."
+            },
+            {
+              "optionId": "choice_3",
+              "text": "Two persons enter the room."
+            },
+            {
+              "optionId": "choice_4",
+              "text": "The orchestra begins playing."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

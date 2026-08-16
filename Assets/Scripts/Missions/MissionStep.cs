@@ -14,12 +14,32 @@ public abstract class MissionStep : MonoBehaviour
 
     public void Initialize(string missionId, int stepIndex)
     {
+        Initialize(missionId, stepIndex, null);
+    }
+
+    public void Initialize(
+        string missionId,
+        int stepIndex,
+        MissionStepProgressSaveData savedProgress)
+    {
         MissionId = missionId;
         StepIndex = stepIndex;
         OnStepActivated();
+
+        if (!isFinished && savedProgress != null)
+            RestoreProgress(savedProgress);
     }
 
     protected abstract void OnStepActivated();
+
+    public virtual MissionStepProgressSaveData CaptureProgress()
+    {
+        return new MissionStepProgressSaveData();
+    }
+
+    protected virtual void RestoreProgress(MissionStepProgressSaveData savedProgress)
+    {
+    }
 
     protected void UpdateObjective(string objective)
     {

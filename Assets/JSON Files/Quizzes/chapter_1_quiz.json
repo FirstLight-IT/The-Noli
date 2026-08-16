@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+
+  "settings": {
+    "chapterId": "chapter_1",
+    "questionsPerAttempt": 5,
+    "nextChapterId": "chapter_2",
+    "defaultLanguageCode": "en"
+  },
+
+  "answerKey": [
+    { "questionId": "ch1_q01", "correctOptionId": "choice_1" },
+    { "questionId": "ch1_q02", "correctOptionId": "choice_2" },
+    { "questionId": "ch1_q03", "correctOptionId": "choice_3" },
+    { "questionId": "ch1_q04", "correctOptionId": "choice_4" },
+    { "questionId": "ch1_q05", "correctOptionId": "choice_1" },
+    { "questionId": "ch1_q06", "correctOptionId": "choice_2" },
+    { "questionId": "ch1_q07", "correctOptionId": "choice_3" },
+    { "questionId": "ch1_q08", "correctOptionId": "choice_4" },
+    { "questionId": "ch1_q09", "correctOptionId": "choice_1" },
+    { "questionId": "ch1_q10", "correctOptionId": "choice_2" }
+  ],
+
+  "languages": [
+    {
+      "languageCode": "en",
+      "languageLabel": "English",
+
+      "ui": {
+        "title": "Chapter I Quiz",
+        "instructions": "Answer all five questions, then press Submit. Your answers are autosaved.",
+        "submitLabel": "Submit",
+        "resultsTitle": "Quiz Results",
+        "scoreFormat": "You scored {0} out of {1}.",
+        "answeredFormat": "Answered {0} of {1}",
+        "yourAnswerFormat": "Your answer: {0}",
+        "correctAnswerFormat": "Correct answer: {0}",
+        "explanationFormat": "Explanation: {0}",
+        "noAnswerLabel": "No answer",
+        "finishChapterLabel": "Finish Chapter",
+        "incompleteMessage": "Please answer every question before submitting.",
+        "unavailableTitle": "Quiz Unavailable",
+        "returnToMenuLabel": "Return to Main Menu"
+      },
+
+      "questions": [
+        {
+          "questionId": "ch1_q01",
+          "prompt": "Placeholder question 1 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 1.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q02",
+          "prompt": "Placeholder question 2 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 2.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q03",
+          "prompt": "Placeholder question 3 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 3.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q04",
+          "prompt": "Placeholder question 4 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 4.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q05",
+          "prompt": "Placeholder question 5 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 5.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q06",
+          "prompt": "Placeholder question 6 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 6.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q07",
+          "prompt": "Placeholder question 7 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 7.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q08",
+          "prompt": "Placeholder question 8 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 8.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q09",
+          "prompt": "Placeholder question 9 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 9.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        },
+        {
+          "questionId": "ch1_q10",
+          "prompt": "Placeholder question 10 - replace this text in the JSON file.",
+          "explanation": "Placeholder explanation for question 10.",
+          "options": [
+            { "optionId": "choice_1", "text": "Placeholder answer one" },
+            { "optionId": "choice_2", "text": "Placeholder answer two" },
+            { "optionId": "choice_3", "text": "Placeholder answer three" },
+            { "optionId": "choice_4", "text": "Placeholder answer four" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "languageCode": "fil",
+      "languageLabel": "Filipino",
+
+      "ui": {
+        "title": "Pagsusulit sa Kabanata I",
+        "instructions": "Sagutin ang limang tanong, pagkatapos ay pindutin ang Ipasa. Awtomatikong sine-save ang iyong mga sagot.",
+        "submitLabel": "Ipasa",
+        "resultsTitle": "Resulta ng Pagsusulit",
+        "scoreFormat": "Nakakuha ka ng {0} sa {1}.",
+        "answeredFormat": "Nasagutan ang {0} sa {1}",
+        "yourAnswerFormat": "Iyong sagot: {0}",
+        "correctAnswerFormat": "Tamang sagot: {0}",
+        "explanationFormat": "Paliwanag: {0}",
+        "noAnswerLabel": "Walang sagot",
+        "finishChapterLabel": "Tapusin ang Kabanata",
+        "incompleteMessage": "Sagutin muna ang lahat ng tanong bago ipasa.",
+        "unavailableTitle": "Hindi Magamit ang Pagsusulit",
+        "returnToMenuLabel": "Bumalik sa Main Menu"
+      },
+
+      "questions": [
+        {
+          "questionId": "ch1_q01",
+          "prompt": "Pansamantalang tanong 1 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 1.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q02",
+          "prompt": "Pansamantalang tanong 2 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 2.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q03",
+          "prompt": "Pansamantalang tanong 3 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 3.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q04",
+          "prompt": "Pansamantalang tanong 4 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 4.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q05",
+          "prompt": "Pansamantalang tanong 5 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 5.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q06",
+          "prompt": "Pansamantalang tanong 6 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 6.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q07",
+          "prompt": "Pansamantalang tanong 7 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 7.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q08",
+          "prompt": "Pansamantalang tanong 8 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 8.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q09",
+          "prompt": "Pansamantalang tanong 9 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 9.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        },
+        {
+          "questionId": "ch1_q10",
+          "prompt": "Pansamantalang tanong 10 - palitan ang tekstong ito sa JSON file.",
+          "explanation": "Pansamantalang paliwanag para sa tanong 10.",
+          "options": [
+            { "optionId": "choice_1", "text": "Pansamantalang sagot isa" },
+            { "optionId": "choice_2", "text": "Pansamantalang sagot dalawa" },
+            { "optionId": "choice_3", "text": "Pansamantalang sagot tatlo" },
+            { "optionId": "choice_4", "text": "Pansamantalang sagot apat" }
+          ]
+        }
+      ]
+    }
+  ]
+}
