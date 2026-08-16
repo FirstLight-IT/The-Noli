@@ -9,15 +9,22 @@ using UnityEngine.SceneManagement;
 public sealed class SaveGameManager : MonoBehaviour
 {
     private const float PeriodicCheckpointInterval = 30f;
+    private const string ActiveSlotPlayerPrefsKey = "TheNoli.NormalSave.ActiveSlot";
+    public const int SaveSlotCount = 3;
     public const string QuizSceneName = "ChapterQuiz";
 
     public static SaveGameManager Instance { get; private set; }
     public static GameSaveData CurrentData => Instance != null ? Instance.currentData : null;
     public static string AutosavePath => Instance != null ? Instance.fileService.SavePath : string.Empty;
+    public static int ActiveSlotNumber => Instance != null
+        ? Instance.activeSlotNumber
+        : SaveFileService.MinimumSlotNumber;
     public static bool IsAutosaveRestorePending =>
         Instance != null && Instance.autosaveRestorePending;
 
     private SaveFileService fileService;
+    private string saveDirectory;
+    private int activeSlotNumber = SaveFileService.MinimumSlotNumber;
     private GameSaveData currentData;
     private Coroutine pendingSaveRoutine;
     private string pendingSaveReason;
@@ -53,7 +60,27 @@ public sealed class SaveGameManager : MonoBehaviour
         }
 
         Instance = this;
-        fileService = new SaveFileService(Application.persistentDataPath);
+        saveDirectory = Application.persistentDataPath;
+
+        if (!SaveFileService.TryMigrateLegacySaveToSlotOne(
+                saveDirectory,
+                out bool migrated,
+                out string migrationError))
+        {
+            Debug.LogError(migrationError, this);
+        }
+        else if (migrated)
+        {
+            Debug.Log("The previous autosave was safely migrated into Save Slot 1.", this);
+        }
+
+        activeSlotNumber = Mathf.Clamp(
+            PlayerPrefs.GetInt(
+                ActiveSlotPlayerPrefsKey,
+                SaveFileService.MinimumSlotNumber),
+            SaveFileService.MinimumSlotNumber,
+            SaveFileService.MaximumSlotNumber);
+        fileService = new SaveFileService(saveDirectory, activeSlotNumber);
     }
 
     private void OnEnable()
@@ -84,10 +111,60 @@ public sealed class SaveGameManager : MonoBehaviour
         return Instance.HasLoadableAutosave();
     }
 
+    public static bool HasAnySaveSlot()
+    {
+        EnsureInstance();
+
+        for (int slotNumber = SaveFileService.MinimumSlotNumber;
+             slotNumber <= SaveFileService.MaximumSlotNumber;
+             slotNumber++)
+        {
+            if (Instance.HasLoadableSlot(slotNumber))
+                return true;
+        }
+
+        return false;
+    }
+
+    public static SaveSlotInfo GetSaveSlotInfo(int slotNumber)
+    {
+        EnsureInstance();
+        return Instance.GetSaveSlotInfoInternal(slotNumber);
+    }
+
+    public static bool BeginNewGameInSlot(
+        int slotNumber,
+        string chapterId,
+        out string error)
+    {
+        EnsureInstance();
+        return Instance.BeginNewGameInSlotInternal(
+            slotNumber,
+            chapterId,
+            overwriteExisting: false,
+            out error);
+    }
+
+    public static bool TryLoadSlot(int slotNumber, out string error)
+    {
+        EnsureInstance();
+        return Instance.TryLoadSlotInternal(slotNumber, out error);
+    }
+
+    public static bool TryDeleteSlot(int slotNumber, out string error)
+    {
+        EnsureInstance();
+        return Instance.TryDeleteSlotInternal(slotNumber, out error);
+    }
+
     public static bool BeginNewGame(string chapterId)
     {
         EnsureInstance();
-        return Instance.BeginNewGameInternal(chapterId);
+        return Instance.BeginNewGameInSlotInternal(
+            Instance.activeSlotNumber,
+            chapterId,
+            overwriteExisting: true,
+            out _);
     }
 
     public static bool TryLoadAutosave(out string error)
@@ -517,31 +594,77 @@ public sealed class SaveGameManager : MonoBehaviour
                string.Equals(progress.state, state.ToString(), StringComparison.Ordinal);
     }
 
-    private bool BeginNewGameInternal(string chapterId)
+    private bool BeginNewGameInSlotInternal(
+        int slotNumber,
+        string chapterId,
+        bool overwriteExisting,
+        out string error)
     {
+        if (!TryValidateSlotNumber(slotNumber, out error))
+            return false;
+
+        SaveFileService targetService = new(saveDirectory, slotNumber);
+        bool hasExistingProgress = targetService.HasValidSave() ||
+                                   (activeSlotNumber == slotNumber && currentData != null);
+
+        if (hasExistingProgress && !overwriteExisting)
+        {
+            error = $"Save Slot {slotNumber} already contains a game.";
+            return false;
+        }
+
+        if (currentData != null &&
+            activeSlotNumber != slotNumber &&
+            !SaveNow("SaveSlotChanged"))
+        {
+            error = $"The active Save Slot {activeSlotNumber} could not be saved before switching slots.";
+            return false;
+        }
+
+        ActivateSlot(slotNumber);
         autosaveRestorePending = false;
         isApplyingRestore = false;
         JournalUnlockRegistry.Clear();
         currentData = CreateNewSave(chapterId);
 
-        if (pendingSaveRoutine != null)
+        if (!SaveNow("NewGameStarted", startFresh: true))
         {
-            StopCoroutine(pendingSaveRoutine);
-            pendingSaveRoutine = null;
-            pendingSaveReason = null;
+            error = $"A new game could not be created in Save Slot {slotNumber}.";
+            return false;
         }
 
-        return SaveNow("NewGameStarted", startFresh: true);
+        error = string.Empty;
+        return true;
     }
 
     private bool TryLoadAutosaveInternal(out string error)
     {
-        if (!fileService.TryLoad(out GameSaveData loadedData, out error))
+        return TryLoadSlotInternal(activeSlotNumber, out error);
+    }
+
+    private bool TryLoadSlotInternal(int slotNumber, out string error)
+    {
+        if (!TryValidateSlotNumber(slotNumber, out error))
             return false;
+
+        if (currentData != null && !SaveNow("BeforeSaveSlotLoad"))
+        {
+            error = $"Save Slot {activeSlotNumber} could not be saved before loading another slot.";
+            return false;
+        }
+
+        SaveFileService targetService = new(saveDirectory, slotNumber);
+
+        if (!targetService.TryLoad(out GameSaveData loadedData, out error))
+        {
+            error = $"Save Slot {slotNumber} could not be loaded. {error}";
+            return false;
+        }
 
         if (!TryValidateContinuation(loadedData, out error))
             return false;
 
+        ActivateSlot(slotNumber);
         currentData = loadedData;
         RestoreJournal(currentData.journal);
         autosaveRestorePending = !string.Equals(
@@ -559,10 +682,93 @@ public sealed class SaveGameManager : MonoBehaviour
         return true;
     }
 
+    private bool TryDeleteSlotInternal(int slotNumber, out string error)
+    {
+        if (!TryValidateSlotNumber(slotNumber, out error))
+            return false;
+
+        SaveFileService targetService = new(saveDirectory, slotNumber);
+
+        if (!targetService.TryDeleteAll(out error))
+        {
+            error = $"Save Slot {slotNumber} could not be deleted. {error}";
+            return false;
+        }
+
+        if (slotNumber == activeSlotNumber)
+        {
+            CancelPendingAutosave();
+            currentData = null;
+            autosaveRestorePending = false;
+            isApplyingRestore = false;
+            timeSinceLastSave = 0f;
+            JournalUnlockRegistry.Clear();
+        }
+
+        error = string.Empty;
+        return true;
+    }
+
+    private SaveSlotInfo GetSaveSlotInfoInternal(int slotNumber)
+    {
+        if (!TryValidateSlotNumber(slotNumber, out string error))
+            throw new ArgumentOutOfRangeException(nameof(slotNumber), error);
+
+        SaveFileService slotService = new(saveDirectory, slotNumber);
+
+        return slotService.TryLoad(out GameSaveData saveData, out _) &&
+               TryValidateContinuation(saveData, out _)
+            ? SaveSlotInfo.FromSave(slotNumber, saveData)
+            : SaveSlotInfo.Empty(slotNumber);
+    }
+
     private bool HasLoadableAutosave()
     {
         return fileService.TryLoad(out GameSaveData saveData, out _) &&
                TryValidateContinuation(saveData, out _);
+    }
+
+    private bool HasLoadableSlot(int slotNumber)
+    {
+        if (!TryValidateSlotNumber(slotNumber, out _))
+            return false;
+
+        SaveFileService slotService = new(saveDirectory, slotNumber);
+        return slotService.TryLoad(out GameSaveData saveData, out _) &&
+               TryValidateContinuation(saveData, out _);
+    }
+
+    private void ActivateSlot(int slotNumber)
+    {
+        CancelPendingAutosave();
+        activeSlotNumber = slotNumber;
+        fileService = new SaveFileService(saveDirectory, activeSlotNumber);
+        PlayerPrefs.SetInt(ActiveSlotPlayerPrefsKey, activeSlotNumber);
+        PlayerPrefs.Save();
+    }
+
+    private void CancelPendingAutosave()
+    {
+        if (pendingSaveRoutine != null)
+            StopCoroutine(pendingSaveRoutine);
+
+        pendingSaveRoutine = null;
+        pendingSaveReason = null;
+    }
+
+    private static bool TryValidateSlotNumber(int slotNumber, out string error)
+    {
+        if (slotNumber >= SaveFileService.MinimumSlotNumber &&
+            slotNumber <= SaveFileService.MaximumSlotNumber)
+        {
+            error = string.Empty;
+            return true;
+        }
+
+        error =
+            $"Save slot must be between {SaveFileService.MinimumSlotNumber} " +
+            $"and {SaveFileService.MaximumSlotNumber}.";
+        return false;
     }
 
     private static bool TryValidateContinuation(GameSaveData saveData, out string error)

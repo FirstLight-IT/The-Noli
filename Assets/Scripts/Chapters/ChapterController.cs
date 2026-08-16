@@ -221,6 +221,12 @@ public sealed class ChapterController : MonoBehaviour
         while (ScreenFade.IsTransitioning)
             yield return null;
 
+        if (titleCard != null)
+            yield return titleCard.DisplayChapterCompletion(activeChapter);
+
+        while (ScreenFade.IsTransitioning)
+            yield return null;
+
         void LoadQuiz()
         {
             SceneManager.LoadScene(activeChapter.QuizSceneName);

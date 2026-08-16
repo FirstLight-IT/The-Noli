@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using System.Text;
 using NUnit.Framework;
+using UnityEngine;
 
 public sealed class SaveFileServiceTests
 {
@@ -142,6 +144,68 @@ public sealed class SaveFileServiceTests
 
         Assert.That(service.TryLoad(out _, out _), Is.False,
             "A fresh game must not fall back to the previous playthrough.");
+    }
+
+    [Test]
+    public void ThreeSlots_SaveAndLoadIndependently()
+    {
+        SaveFileService slotOne = new(testDirectory, 1);
+        SaveFileService slotTwo = new(testDirectory, 2);
+        SaveFileService slotThree = new(testDirectory, 3);
+
+        Assert.That(slotOne.TrySave(CreateSave(11), out string slotOneError),
+            Is.True, slotOneError);
+        Assert.That(slotTwo.TrySave(CreateSave(22), out string slotTwoError),
+            Is.True, slotTwoError);
+
+        Assert.That(slotOne.TryLoad(out GameSaveData loadedOne, out string loadOneError),
+            Is.True, loadOneError);
+        Assert.That(slotTwo.TryLoad(out GameSaveData loadedTwo, out string loadTwoError),
+            Is.True, loadTwoError);
+        Assert.That(slotThree.TryLoad(out _, out _), Is.False);
+        Assert.That(loadedOne.saveRevision, Is.EqualTo(11));
+        Assert.That(loadedTwo.saveRevision, Is.EqualTo(22));
+        Assert.That(slotOne.SavePath, Is.Not.EqualTo(slotTwo.SavePath));
+    }
+
+    [Test]
+    public void LegacyAutosave_IsCopiedIntoSlotOneWithoutDeletingTheOriginal()
+    {
+        GameSaveData legacySave = CreateSave(37);
+        string legacyPath = Path.Combine(testDirectory, SaveFileService.SaveFileName);
+        Directory.CreateDirectory(testDirectory);
+        File.WriteAllText(
+            legacyPath,
+            JsonUtility.ToJson(legacySave, true),
+            new UTF8Encoding(false));
+
+        Assert.That(
+            SaveFileService.TryMigrateLegacySaveToSlotOne(
+                testDirectory,
+                out bool migrated,
+                out string migrationError),
+            Is.True,
+            migrationError);
+        Assert.That(migrated, Is.True);
+        Assert.That(File.Exists(legacyPath), Is.True,
+            "Migration should copy the legacy save instead of destructively moving it.");
+
+        SaveFileService slotOne = new(testDirectory, 1);
+        Assert.That(slotOne.TryLoad(out GameSaveData loaded, out string loadError),
+            Is.True, loadError);
+        Assert.That(loaded.saveRevision, Is.EqualTo(37));
+
+        Assert.That(slotOne.TryDeleteAll(out string deleteError), Is.True, deleteError);
+        Assert.That(
+            SaveFileService.TryMigrateLegacySaveToSlotOne(
+                testDirectory,
+                out bool migratedAgain,
+                out string secondMigrationError),
+            Is.True,
+            secondMigrationError);
+        Assert.That(migratedAgain, Is.False);
+        Assert.That(slotOne.HasValidSave(), Is.False,
+            "Deleting Slot 1 must not cause the legacy save to be imported again.");
     }
 
     [Test]

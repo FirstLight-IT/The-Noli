@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e4059bb30241efbb71e9ca381f234b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChapterQuizController
-  quizJson: {fileID: 4900000, guid: 14ca3dc8d20841b19bb9a90c6c1e5e30, type: 3}
+  quizJson: {fileID: 4900000, guid: 5d63ebf340932da4992f5ac73ffe44ba, type: 3}
   view: {fileID: 100003}
   mainMenuSceneName: MainMenu
 --- !u!114 &100003

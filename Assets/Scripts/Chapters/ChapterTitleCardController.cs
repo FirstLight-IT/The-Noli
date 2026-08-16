@@ -21,6 +21,10 @@ public sealed class ChapterTitleCardController : MonoBehaviour
     [Tooltip("When the next opening element begins: 0 is the start of the fade, 1 is after the card is gone.")]
     [SerializeField, Range(0f, 1f)] private float bleedInStart = 0.45f;
 
+    [Header("Chapter Completion")]
+    [SerializeField, Min(0f)] private float completionFadeInDuration = 0.5f;
+    [SerializeField, Min(0f)] private float completionDisplayDuration = 2.5f;
+
     private CanvasGroup canvasGroup;
     private bool editorPreviewDirty;
 
@@ -70,6 +74,48 @@ public sealed class ChapterTitleCardController : MonoBehaviour
     public void HideImmediately()
     {
         SetVisible(false);
+    }
+
+    public IEnumerator DisplayChapterCompletion(ChapterDataSO chapter)
+    {
+        if (chapter == null)
+            yield break;
+
+        if (canvasGroup == null)
+            canvasGroup = GetComponent<CanvasGroup>();
+
+        if (chapterLabelText != null)
+            chapterLabelText.SetText(chapter.ChapterLabel);
+
+        if (chapterTitleText != null)
+            chapterTitleText.SetText("Chapter Complete");
+
+        gameObject.SetActive(true);
+        transform.SetAsLastSibling();
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = true;
+
+        if (completionFadeInDuration > 0f)
+        {
+            float elapsed = 0f;
+
+            while (elapsed < completionFadeInDuration)
+            {
+                elapsed += Time.unscaledDeltaTime;
+                float progress = Mathf.Clamp01(elapsed / completionFadeInDuration);
+                canvasGroup.alpha = Mathf.SmoothStep(0f, 1f, progress);
+                yield return null;
+            }
+        }
+
+        canvasGroup.alpha = 1f;
+
+        if (completionDisplayDuration > 0f)
+            yield return new WaitForSecondsRealtime(completionDisplayDuration);
+
+        // Remain visible while ScreenFade covers the scene. The card disappears
+        // naturally when the quiz scene replaces the current scene.
     }
 
     public IEnumerator DisplayPreparedCard(Action onBleedIn)

@@ -46,28 +46,76 @@ public sealed class MainMenuController : MonoBehaviour
     }
 
     /// <summary>
+    /// Starts a new game in an empty normal-game save slot.
+    /// SaveSlotMenuController calls this after the player chooses a slot.
+    /// </summary>
+    public void StartNewGameInSlot(int slotNumber)
+    {
+        TryStartNewGameInSlot(slotNumber);
+    }
+
+    public bool TryStartNewGameInSlot(int slotNumber)
+    {
+        if (isLoading)
+            return false;
+
+        isLoading = true;
+        SetButtonsInteractable(false);
+
+        if (!SaveGameManager.BeginNewGameInSlot(
+                slotNumber,
+                newGameChapterId,
+                out string error))
+        {
+            Debug.LogError($"New Game failed: {error}", this);
+            isLoading = false;
+            RefreshButtons();
+            return false;
+        }
+
+        ChapterController.RequestChapter(newGameChapterId);
+        BeginMansionTransition();
+        return true;
+    }
+
+    /// <summary>
     /// Continues from the single autosave slot. Assign this method to the
     /// Load Game button's On Click event.
     /// </summary>
     public void LoadGame()
     {
+        LoadGameFromSlot(SaveGameManager.ActiveSlotNumber);
+    }
+
+    /// <summary>
+    /// Loads the selected normal-game save slot and continues from its latest
+    /// gameplay or quiz checkpoint.
+    /// </summary>
+    public void LoadGameFromSlot(int slotNumber)
+    {
+        TryLoadGameFromSlot(slotNumber);
+    }
+
+    public bool TryLoadGameFromSlot(int slotNumber)
+    {
         if (isLoading)
-            return;
+            return false;
 
         isLoading = true;
         SetButtonsInteractable(false);
 
-        if (!SaveGameManager.TryLoadAutosave(out string error))
+        if (!SaveGameManager.TryLoadSlot(slotNumber, out string error))
         {
             Debug.LogError($"Load Game failed: {error}", this);
             isLoading = false;
             RefreshButtons();
-            return;
+            return false;
         }
 
         GameSaveData saveData = SaveGameManager.CurrentData;
         ChapterController.RequestChapter(saveData.activeChapterId);
         BeginSceneTransition(SaveGameManager.GetContinueSceneName());
+        return true;
     }
 
     private void BeginMansionTransition()
@@ -86,13 +134,13 @@ public sealed class MainMenuController : MonoBehaviour
         }
     }
 
-    private void RefreshButtons()
+    public void RefreshButtons()
     {
         if (newGameButton != null)
             newGameButton.interactable = !isLoading;
 
         if (loadGameButton != null)
-            loadGameButton.interactable = !isLoading && SaveGameManager.HasAutosave();
+            loadGameButton.interactable = !isLoading && SaveGameManager.HasAnySaveSlot();
     }
 
     private void SetButtonsInteractable(bool interactable)

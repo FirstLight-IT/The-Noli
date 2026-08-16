@@ -5,22 +5,113 @@ using UnityEngine;
 
 public sealed class SaveFileService
 {
+    public const int MinimumSlotNumber = 1;
+    public const int MaximumSlotNumber = 3;
+    public const string SlotSaveFileNameFormat = "save_slot_{0}.json";
+    private const string SlotMigrationMarkerFileName = "normal_save_slots.initialized";
+
+    // Kept only so saves made before the slot system can be migrated safely.
     public const string SaveFileName = "autosave.json";
 
+    private readonly int slotNumber;
     private readonly string savePath;
     private readonly string backupPath;
     private readonly string temporaryPath;
 
+    public int SlotNumber => slotNumber;
     public string SavePath => savePath;
 
     public SaveFileService(string saveDirectory)
+        : this(saveDirectory, MinimumSlotNumber)
+    {
+    }
+
+    public SaveFileService(string saveDirectory, int slotNumber)
     {
         if (string.IsNullOrWhiteSpace(saveDirectory))
             throw new ArgumentException("A save directory is required.", nameof(saveDirectory));
 
-        savePath = Path.Combine(saveDirectory, SaveFileName);
+        ValidateSlotNumber(slotNumber);
+        this.slotNumber = slotNumber;
+        savePath = GetSlotSavePath(saveDirectory, slotNumber);
         backupPath = savePath + ".bak";
         temporaryPath = savePath + ".tmp";
+    }
+
+    public static string GetSlotSavePath(string saveDirectory, int slotNumber)
+    {
+        if (string.IsNullOrWhiteSpace(saveDirectory))
+            throw new ArgumentException("A save directory is required.", nameof(saveDirectory));
+
+        ValidateSlotNumber(slotNumber);
+        return Path.Combine(
+            saveDirectory,
+            string.Format(SlotSaveFileNameFormat, slotNumber));
+    }
+
+    public static bool TryMigrateLegacySaveToSlotOne(
+        string saveDirectory,
+        out bool migrated,
+        out string error)
+    {
+        migrated = false;
+
+        if (string.IsNullOrWhiteSpace(saveDirectory))
+        {
+            error = "A save directory is required.";
+            return false;
+        }
+
+        string migrationMarkerPath = Path.Combine(
+            saveDirectory,
+            SlotMigrationMarkerFileName);
+
+        if (File.Exists(migrationMarkerPath))
+        {
+            error = string.Empty;
+            return true;
+        }
+
+        SaveFileService slotOne = new(saveDirectory, MinimumSlotNumber);
+
+        if (slotOne.HasValidSave())
+        {
+            return TryWriteMigrationMarker(migrationMarkerPath, out error);
+        }
+
+        string legacyPath = Path.Combine(saveDirectory, SaveFileName);
+        string legacyBackupPath = legacyPath + ".bak";
+        string legacyTemporaryPath = legacyPath + ".tmp";
+        GameSaveData legacyData;
+        string legacyError;
+
+        if (!TryReadSave(legacyPath, out legacyData, out string primaryError) &&
+            !TryReadSave(legacyBackupPath, out legacyData, out string backupError) &&
+            !TryReadSave(legacyTemporaryPath, out legacyData, out string temporaryError))
+        {
+            bool legacyFilesExist = File.Exists(legacyPath) ||
+                                    File.Exists(legacyBackupPath) ||
+                                    File.Exists(legacyTemporaryPath);
+
+            if (!legacyFilesExist)
+                return TryWriteMigrationMarker(migrationMarkerPath, out error);
+
+            legacyError =
+                $"Primary legacy save: {primaryError} " +
+                $"Backup legacy save: {backupError} " +
+                $"Temporary legacy save: {temporaryError}";
+            error = $"The previous autosave could not be migrated. {legacyError}";
+            return false;
+        }
+
+        if (!slotOne.TrySaveFresh(legacyData, out error))
+        {
+            error = $"The previous autosave was found but could not be copied into Slot 1. {error}";
+            return false;
+        }
+
+        migrated = true;
+        return TryWriteMigrationMarker(migrationMarkerPath, out error);
     }
 
     public bool HasValidSave()
@@ -200,6 +291,26 @@ public sealed class SaveFileService
         stream.Flush(true);
     }
 
+    private static bool TryWriteMigrationMarker(string path, out string error)
+    {
+        try
+        {
+            string directory = Path.GetDirectoryName(path);
+
+            if (!string.IsNullOrEmpty(directory))
+                Directory.CreateDirectory(directory);
+
+            WriteAllTextAndFlush(path, DateTime.UtcNow.ToString("O"));
+            error = string.Empty;
+            return true;
+        }
+        catch (Exception exception)
+        {
+            error = $"The save-slot migration marker could not be written: {exception.Message}";
+            return false;
+        }
+    }
+
     private void TryDeleteTemporaryFile()
     {
         try
@@ -216,5 +327,16 @@ public sealed class SaveFileService
     {
         if (File.Exists(path))
             File.Delete(path);
+    }
+
+    private static void ValidateSlotNumber(int slotNumber)
+    {
+        if (slotNumber < MinimumSlotNumber || slotNumber > MaximumSlotNumber)
+        {
+            throw new ArgumentOutOfRangeException(
+                nameof(slotNumber),
+                slotNumber,
+                $"Save slot must be between {MinimumSlotNumber} and {MaximumSlotNumber}.");
+        }
     }
 }

@@ -10149,7 +10149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChapterController
   defaultChapter: {fileID: 11400000, guid: 93a423738faf484795026e94ee10c22f, type: 2}
   chapterContents: []
-  showTitleCard: 0
+  showTitleCard: 1
   titleCard: {fileID: 951290462}
   narrationController: {fileID: 904082923}
 --- !u!1 &525258765
@@ -18568,6 +18568,8 @@ MonoBehaviour:
   displayDuration: 2.5
   fadeOutDuration: 0.75
   bleedInStart: 0.1
+  completionFadeInDuration: 0.5
+  completionDisplayDuration: 2.5
 --- !u!225 &951290463
 CanvasGroup:
   m_ObjectHideFlags: 0

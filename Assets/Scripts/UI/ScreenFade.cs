@@ -79,6 +79,7 @@ public class ScreenFade : MonoBehaviour
             return false;
         }
 
+        transform.SetAsLastSibling();
         StartCoroutine(FadeOutAndIn(actionAtFullFade));
         return true;
     }
