@@ -97,6 +97,33 @@ public class NPCFixedRoute : MonoBehaviour
                route.RoutePoints.Length > 0;
     }
 
+    public bool TryApplyCompletedRoute(string routeId)
+    {
+        if (!TryGetRouteDestination(routeId, out Transform destination))
+        {
+            Debug.LogWarning(
+                $"{gameObject.name} has no valid destination for fixed NPC route '{routeId}'.",
+                this);
+            return false;
+        }
+
+        CancelRoute();
+
+        Vector2 destinationPosition = destination.position;
+        Rigidbody2D body = GetComponent<Rigidbody2D>();
+
+        if (body != null)
+            body.position = destinationPosition;
+        else
+            transform.position = new Vector3(
+                destinationPosition.x,
+                destinationPosition.y,
+                transform.position.z);
+
+        Physics2D.SyncTransforms();
+        return true;
+    }
+
     public bool TryBeginRoute(string routeId)
     {
         if (!TryGetRoute(routeId, out RouteDefinition route))
@@ -160,6 +187,25 @@ public class NPCFixedRoute : MonoBehaviour
         }
 
         return matchingRoute != null;
+    }
+
+    private bool TryGetRouteDestination(string routeId, out Transform destination)
+    {
+        destination = null;
+
+        if (!TryGetRoute(routeId, out RouteDefinition route) || route.RoutePoints == null)
+            return false;
+
+        for (int index = route.RoutePoints.Length - 1; index >= 0; index--)
+        {
+            if (route.RoutePoints[index] == null)
+                continue;
+
+            destination = route.RoutePoints[index];
+            return true;
+        }
+
+        return false;
     }
 
     public void CancelRoute()

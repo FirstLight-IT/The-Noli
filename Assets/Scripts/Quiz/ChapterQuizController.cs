@@ -107,7 +107,10 @@ public sealed class ChapterQuizController : MonoBehaviour
     {
         QuizInterfaceText text = CurrentInterfaceText();
         questionViews.Clear();
-        view.ShowQuestions(text, GetAnsweredStatus(text));
+        view.ShowQuestions(
+            text,
+            GetAnsweredStatus(text),
+            progress.isPracticeAttempt);
 
         for (int index = 0; index < progress.selectedQuestionIds.Count; index++)
         {
@@ -175,7 +178,10 @@ public sealed class ChapterQuizController : MonoBehaviour
     {
         QuizInterfaceText text = CurrentInterfaceText();
         questionViews.Clear();
-        view.ShowResults(text, Format(text.scoreFormat, progress.score, progress.maxScore));
+        view.ShowResults(
+            text,
+            GetScoreSummary(text),
+            progress.isPracticeAttempt);
 
         for (int index = 0; index < progress.selectedQuestionIds.Count; index++)
         {
@@ -248,6 +254,22 @@ public sealed class ChapterQuizController : MonoBehaviour
         }
 
         return Format(text.answeredFormat, answered, progress.selectedQuestionIds.Count);
+    }
+
+    private string GetScoreSummary(QuizInterfaceText text)
+    {
+        if (!progress.isPracticeAttempt)
+            return Format(text.scoreFormat, progress.score, progress.maxScore);
+
+        string practiceScore = Format(
+            text.practiceScoreFormat,
+            progress.score,
+            progress.maxScore);
+        QuizAttemptResultSaveData official = progress.officialAttempt;
+        string officialScore = official?.isRecorded == true
+            ? Format(text.officialScoreFormat, official.score, official.maxScore)
+            : text.officialScoreUnavailable;
+        return $"{practiceScore}\n{officialScore}";
     }
 
     private bool IsState(QuizProgressState state)

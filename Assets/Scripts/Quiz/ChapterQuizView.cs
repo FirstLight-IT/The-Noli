@@ -117,12 +117,16 @@ public sealed class ChapterQuizView : MonoBehaviour
         });
     }
 
-    public void ShowQuestions(QuizInterfaceText text, string answeredStatus)
+    public void ShowQuestions(
+        QuizInterfaceText text,     
+        string answeredStatus,
+        bool isPracticeAttempt)
     {
         ClearDynamicViews();
         SetPage(questionPage);
-        titleText.SetText(text.title);
-        instructionsText.SetText(text.instructions);
+        titleText.SetText(isPracticeAttempt ? text.practiceTitle : text.title);
+        instructionsText.SetText(
+            isPracticeAttempt ? text.practiceInstructions : text.instructions);
         answeredStatusText.SetText(answeredStatus);
         questionMessageText.SetText(string.Empty);
         submitButtonText.SetText(text.submitLabel);
@@ -146,13 +150,18 @@ public sealed class ChapterQuizView : MonoBehaviour
         questionMessageText.SetText(value ?? string.Empty);
     }
 
-    public void ShowResults(QuizInterfaceText text, string score)
+    public void ShowResults(
+        QuizInterfaceText text,
+        string score,
+        bool isPracticeAttempt)
     {
         ClearDynamicViews();
         SetPage(resultsPage);
-        resultsTitleText.SetText(text.resultsTitle);
+        resultsTitleText.SetText(
+            isPracticeAttempt ? text.practiceResultsTitle : text.resultsTitle);
         scoreText.SetText(score);
-        finishChapterButtonText.SetText(text.finishChapterLabel);
+        finishChapterButtonText.SetText(
+            isPracticeAttempt ? text.finishPracticeLabel : text.finishChapterLabel);
     }
 
     public QuizResultView AddResult()

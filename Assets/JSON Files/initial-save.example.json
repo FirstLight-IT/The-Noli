@@ -115,6 +115,10 @@
         "charactersUnlocked": 0,
         "dialogueInteractions": 0,
         "doorTransitions": 0,
+        "missionConversationsCompleted": 0,
+        "missionConversationLinesViewed": 0,
+        "missionConversationLinesSkipped": 0,
+        "missionConversationSkipRatePercent": 0.0,
         "customCounters": []
       }
     }

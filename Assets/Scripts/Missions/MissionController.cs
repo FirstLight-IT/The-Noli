@@ -270,6 +270,7 @@ public class MissionController : MonoBehaviour
         }
 
         RefreshMissionAvailability();
+        RestoreCompletedMissionStepWorldState();
 
         if (activeMission != null)
         {
@@ -287,6 +288,32 @@ public class MissionController : MonoBehaviour
         }
 
         return true;
+    }
+
+    private void RestoreCompletedMissionStepWorldState()
+    {
+        foreach (MissionInfoSO info in missionInfos)
+        {
+            if (info == null ||
+                !missions.TryGetValue(info.MissionId, out Mission mission) ||
+                info.MissionStepPrefabs == null)
+            {
+                continue;
+            }
+
+            int completedStepCount = Mathf.Clamp(
+                mission.CurrentStepIndex,
+                0,
+                info.MissionStepPrefabs.Length);
+
+            for (int stepIndex = 0; stepIndex < completedStepCount; stepIndex++)
+            {
+                MissionStep stepPrefab = info.MissionStepPrefabs[stepIndex];
+
+                if (stepPrefab is NPCMovementMissionStep movementStep)
+                    movementStep.ApplyCompletedWorldState();
+            }
+        }
     }
 
     public IEnumerable<MissionInfoSO> MissionInfos => missionInfos;

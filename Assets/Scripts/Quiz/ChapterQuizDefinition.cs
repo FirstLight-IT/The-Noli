@@ -306,6 +306,14 @@ public sealed class QuizInterfaceText
     public string incompleteMessage = "Please answer every question before submitting.";
     public string unavailableTitle = "Quiz Unavailable";
     public string returnToMenuLabel = "Return to Main Menu";
+    public string practiceTitle = "Practice Quiz";
+    public string practiceInstructions =
+        "This is a practice attempt. Your official first-attempt score will not change.";
+    public string practiceResultsTitle = "Practice Results";
+    public string practiceScoreFormat = "Practice score: {0} out of {1}.";
+    public string officialScoreFormat = "Official first-attempt score: {0} out of {1}.";
+    public string officialScoreUnavailable = "Official first-attempt score unavailable.";
+    public string finishPracticeLabel = "Finish Replay";
 }
 
 [Serializable]

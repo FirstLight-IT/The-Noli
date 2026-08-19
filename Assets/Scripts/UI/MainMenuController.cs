@@ -118,6 +118,51 @@ public sealed class MainMenuController : MonoBehaviour
         return true;
     }
 
+    public bool TryContinueChapter(ChapterDataSO chapter)
+    {
+        if (!CanOpenChapter(chapter))
+            return false;
+
+        isLoading = true;
+        SetButtonsInteractable(false);
+
+        if (!SaveGameManager.SelectChapterForContinue(chapter.ChapterId, out string error))
+        {
+            Debug.LogError($"Continue Chapter failed: {error}", this);
+            isLoading = false;
+            RefreshButtons();
+            return false;
+        }
+
+        ChapterController.RequestChapter(chapter.ChapterId);
+        BeginSceneTransition(SaveGameManager.GetContinueSceneName());
+        return true;
+    }
+
+    public bool TryStartChapter(ChapterDataSO chapter, bool replayCompletedChapter)
+    {
+        if (!CanOpenChapter(chapter))
+            return false;
+
+        isLoading = true;
+        SetButtonsInteractable(false);
+
+        if (!SaveGameManager.StartChapter(
+                chapter.ChapterId,
+                replayCompletedChapter,
+                out string error))
+        {
+            Debug.LogError($"Start Chapter failed: {error}", this);
+            isLoading = false;
+            RefreshButtons();
+            return false;
+        }
+
+        ChapterController.RequestChapter(chapter.ChapterId);
+        BeginMansionTransition();
+        return true;
+    }
+
     private void BeginMansionTransition()
     {
         BeginSceneTransition(MansionSceneName);
@@ -150,6 +195,28 @@ public sealed class MainMenuController : MonoBehaviour
 
         if (loadGameButton != null)
             loadGameButton.interactable = interactable;
+    }
+
+    private bool CanOpenChapter(ChapterDataSO chapter)
+    {
+        if (isLoading)
+            return false;
+
+        if (chapter == null)
+        {
+            Debug.LogError("A chapter definition is required.", this);
+            return false;
+        }
+
+        if (!chapter.ContentAvailable)
+        {
+            Debug.LogWarning(
+                $"{chapter.ChapterLabel} cannot open because its content is not available yet.",
+                this);
+            return false;
+        }
+
+        return true;
     }
 
     private static void LoadScene(string sceneName)

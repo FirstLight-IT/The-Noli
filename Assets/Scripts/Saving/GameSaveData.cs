@@ -190,11 +190,56 @@ public sealed class ChapterSaveData
             missions[i].Normalize();
         }
 
-        worldFlags ??= new List<string>();
+        worldFlags = NormalizeWorldFlags(worldFlags);
         quiz ??= new ChapterQuizSaveData();
         quiz.Normalize();
+        quiz.MigrateLegacyOfficialResult(
+            completedEver &&
+            completionCount <= 1 &&
+            string.Equals(state, "Completed", StringComparison.Ordinal));
         analytics ??= new ChapterAnalyticsSaveData();
-        analytics.customCounters ??= new List<AnalyticsCounterSaveData>();
+        analytics.Normalize();
+    }
+
+    public bool HasWorldFlag(string flagId)
+    {
+        return !string.IsNullOrWhiteSpace(flagId) &&
+               worldFlags != null &&
+               worldFlags.Contains(flagId.Trim());
+    }
+
+    public bool AddWorldFlag(string flagId)
+    {
+        if (string.IsNullOrWhiteSpace(flagId))
+            return false;
+
+        worldFlags ??= new List<string>();
+        string normalizedFlag = flagId.Trim();
+
+        if (worldFlags.Contains(normalizedFlag))
+            return false;
+
+        worldFlags.Add(normalizedFlag);
+        worldFlags.Sort(StringComparer.Ordinal);
+        return true;
+    }
+
+    private static List<string> NormalizeWorldFlags(List<string> source)
+    {
+        HashSet<string> uniqueFlags = new(StringComparer.Ordinal);
+
+        if (source != null)
+        {
+            foreach (string flag in source)
+            {
+                if (!string.IsNullOrWhiteSpace(flag))
+                    uniqueFlags.Add(flag.Trim());
+            }
+        }
+
+        List<string> normalizedFlags = new(uniqueFlags);
+        normalizedFlags.Sort(StringComparer.Ordinal);
+        return normalizedFlags;
     }
 }
 
@@ -202,6 +247,7 @@ public sealed class ChapterSaveData
 public sealed class ChapterQuizSaveData
 {
     public string state = QuizProgressState.NotStarted.ToString();
+    public bool isPracticeAttempt;
     public int attemptNumber;
     public int selectionSeed;
     public string languageCode = "en";
@@ -213,6 +259,10 @@ public sealed class ChapterQuizSaveData
     public string startedAtUtc = string.Empty;
     public string submittedAtUtc = string.Empty;
     public string completedAtUtc = string.Empty;
+    public QuizAttemptResultSaveData officialAttempt = new();
+    public List<QuizAttemptResultSaveData> practiceAttempts = new();
+
+    public bool HasOfficialResult => officialAttempt?.isRecorded == true;
 
     public void Normalize()
     {
@@ -226,6 +276,22 @@ public sealed class ChapterQuizSaveData
         selectedQuestionIds ??= new List<string>();
         optionOrders ??= new List<QuizOptionOrderSaveData>();
         answers ??= new List<QuizAnswerSaveData>();
+        officialAttempt ??= new QuizAttemptResultSaveData();
+        officialAttempt.Normalize();
+        practiceAttempts ??= new List<QuizAttemptResultSaveData>();
+
+        for (int index = practiceAttempts.Count - 1; index >= 0; index--)
+        {
+            QuizAttemptResultSaveData attempt = practiceAttempts[index];
+
+            if (attempt == null || !attempt.isRecorded)
+            {
+                practiceAttempts.RemoveAt(index);
+                continue;
+            }
+
+            attempt.Normalize();
+        }
 
         HashSet<string> uniqueQuestions = new(StringComparer.Ordinal);
         List<string> normalizedQuestions = new();
@@ -280,6 +346,50 @@ public sealed class ChapterQuizSaveData
 
             if (!answeredQuestions.Add(answer.questionId))
                 answers.RemoveAt(i);
+        }
+    }
+
+    public ChapterQuizSaveData CreateFreshAttempt()
+    {
+        Normalize();
+        List<QuizAttemptResultSaveData> preservedPracticeAttempts = new();
+
+        foreach (QuizAttemptResultSaveData attempt in practiceAttempts)
+            preservedPracticeAttempts.Add(attempt.Clone());
+
+        return new ChapterQuizSaveData
+        {
+            languageCode = languageCode,
+            officialAttempt = officialAttempt.Clone(),
+            practiceAttempts = preservedPracticeAttempts
+        };
+    }
+
+    public void RecordOfficialResultIfMissing()
+    {
+        officialAttempt ??= new QuizAttemptResultSaveData();
+
+        if (!officialAttempt.isRecorded)
+            officialAttempt.CopyFrom(this);
+    }
+
+    public void RecordPracticeResult()
+    {
+        practiceAttempts ??= new List<QuizAttemptResultSaveData>();
+        QuizAttemptResultSaveData recordedAttempt = new();
+        recordedAttempt.CopyFrom(this);
+        practiceAttempts.Add(recordedAttempt);
+    }
+
+    public void MigrateLegacyOfficialResult(bool shouldMigrate)
+    {
+        if (!shouldMigrate || HasOfficialResult || maxScore <= 0)
+            return;
+
+        if (string.Equals(state, QuizProgressState.Submitted.ToString(), StringComparison.Ordinal) ||
+            string.Equals(state, QuizProgressState.Completed.ToString(), StringComparison.Ordinal))
+        {
+            RecordOfficialResultIfMissing();
         }
     }
 
@@ -384,6 +494,136 @@ public sealed class ChapterQuizSaveData
 
         order.optionIds = optionIds != null ? new List<string>(optionIds) : new List<string>();
         order.Normalize();
+    }
+}
+
+[Serializable]
+public sealed class QuizAttemptResultSaveData
+{
+    public bool isRecorded;
+    public int attemptNumber;
+    public int selectionSeed;
+    public string languageCode = "en";
+    public List<string> selectedQuestionIds = new();
+    public List<QuizOptionOrderSaveData> optionOrders = new();
+    public List<QuizAnswerSaveData> answers = new();
+    public int score;
+    public int maxScore;
+    public string startedAtUtc = string.Empty;
+    public string submittedAtUtc = string.Empty;
+    public string completedAtUtc = string.Empty;
+
+    public void CopyFrom(ChapterQuizSaveData source)
+    {
+        if (source == null)
+            return;
+
+        isRecorded = true;
+        attemptNumber = source.attemptNumber;
+        selectionSeed = source.selectionSeed;
+        languageCode = source.languageCode;
+        selectedQuestionIds = new List<string>(source.selectedQuestionIds);
+        optionOrders = CloneOptionOrders(source.optionOrders);
+        answers = CloneAnswers(source.answers);
+        score = source.score;
+        maxScore = source.maxScore;
+        startedAtUtc = source.startedAtUtc;
+        submittedAtUtc = source.submittedAtUtc;
+        completedAtUtc = source.completedAtUtc;
+        Normalize();
+    }
+
+    public QuizAttemptResultSaveData Clone()
+    {
+        return new QuizAttemptResultSaveData
+        {
+            isRecorded = isRecorded,
+            attemptNumber = attemptNumber,
+            selectionSeed = selectionSeed,
+            languageCode = languageCode,
+            selectedQuestionIds = new List<string>(selectedQuestionIds),
+            optionOrders = CloneOptionOrders(optionOrders),
+            answers = CloneAnswers(answers),
+            score = score,
+            maxScore = maxScore,
+            startedAtUtc = startedAtUtc,
+            submittedAtUtc = submittedAtUtc,
+            completedAtUtc = completedAtUtc
+        };
+    }
+
+    public void Normalize()
+    {
+        attemptNumber = Math.Max(0, attemptNumber);
+        score = Math.Max(0, score);
+        maxScore = Math.Max(0, maxScore);
+        languageCode = string.IsNullOrWhiteSpace(languageCode) ? "en" : languageCode.Trim();
+        selectedQuestionIds ??= new List<string>();
+        optionOrders ??= new List<QuizOptionOrderSaveData>();
+        answers ??= new List<QuizAnswerSaveData>();
+
+        for (int index = optionOrders.Count - 1; index >= 0; index--)
+        {
+            if (optionOrders[index] == null)
+                optionOrders.RemoveAt(index);
+            else
+                optionOrders[index].Normalize();
+        }
+
+        for (int index = answers.Count - 1; index >= 0; index--)
+        {
+            QuizAnswerSaveData answer = answers[index];
+
+            if (answer == null || string.IsNullOrWhiteSpace(answer.questionId))
+                answers.RemoveAt(index);
+        }
+    }
+
+    private static List<QuizOptionOrderSaveData> CloneOptionOrders(
+        IEnumerable<QuizOptionOrderSaveData> source)
+    {
+        List<QuizOptionOrderSaveData> clones = new();
+
+        if (source == null)
+            return clones;
+
+        foreach (QuizOptionOrderSaveData order in source)
+        {
+            if (order == null)
+                continue;
+
+            clones.Add(new QuizOptionOrderSaveData
+            {
+                questionId = order.questionId,
+                optionIds = order.optionIds != null
+                    ? new List<string>(order.optionIds)
+                    : new List<string>()
+            });
+        }
+
+        return clones;
+    }
+
+    private static List<QuizAnswerSaveData> CloneAnswers(IEnumerable<QuizAnswerSaveData> source)
+    {
+        List<QuizAnswerSaveData> clones = new();
+
+        if (source == null)
+            return clones;
+
+        foreach (QuizAnswerSaveData answer in source)
+        {
+            if (answer == null)
+                continue;
+
+            clones.Add(new QuizAnswerSaveData
+            {
+                questionId = answer.questionId,
+                selectedAnswerId = answer.selectedAnswerId
+            });
+        }
+
+        return clones;
     }
 }
 
@@ -507,13 +747,51 @@ public sealed class MissionStepProgressSaveData
 public sealed class ChapterAnalyticsSaveData
 {
     public int sessionCount;
+    public int chapterRestarts;
     public double playTimeSeconds;
     public int missionStepsCompleted;
     public int artifactsUnlocked;
     public int charactersUnlocked;
     public int dialogueInteractions;
     public int doorTransitions;
+    public int missionConversationsCompleted;
+    public int missionConversationLinesViewed;
+    public int missionConversationLinesSkipped;
+    public double missionConversationSkipRatePercent;
     public List<AnalyticsCounterSaveData> customCounters = new();
+
+    public void RecordMissionConversationReading(int linesViewed, int linesSkipped)
+    {
+        int safeLinesViewed = Math.Max(0, linesViewed);
+        int safeLinesSkipped = Math.Clamp(linesSkipped, 0, safeLinesViewed);
+
+        missionConversationsCompleted = Math.Max(0, missionConversationsCompleted) + 1;
+        missionConversationLinesViewed = Math.Max(0, missionConversationLinesViewed) +
+                                         safeLinesViewed;
+        missionConversationLinesSkipped = Math.Max(0, missionConversationLinesSkipped) +
+                                          safeLinesSkipped;
+        UpdateMissionConversationSkipRate();
+    }
+
+    public void Normalize()
+    {
+        dialogueInteractions = Math.Max(0, dialogueInteractions);
+        missionConversationsCompleted = Math.Max(0, missionConversationsCompleted);
+        missionConversationLinesViewed = Math.Max(0, missionConversationLinesViewed);
+        missionConversationLinesSkipped = Math.Clamp(
+            missionConversationLinesSkipped,
+            0,
+            missionConversationLinesViewed);
+        customCounters ??= new List<AnalyticsCounterSaveData>();
+        UpdateMissionConversationSkipRate();
+    }
+
+    private void UpdateMissionConversationSkipRate()
+    {
+        missionConversationSkipRatePercent = missionConversationLinesViewed > 0
+            ? missionConversationLinesSkipped * 100d / missionConversationLinesViewed
+            : 0d;
+    }
 }
 
 [Serializable]

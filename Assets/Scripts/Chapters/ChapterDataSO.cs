@@ -8,6 +8,10 @@ public sealed class ChapterDataSO : ScriptableObject
     [SerializeField] private string chapterLabel;
     [SerializeField] private string title;
 
+    [Header("Availability")]
+    [Tooltip("Only enable this after the chapter's gameplay content and scene setup are ready.")]
+    [SerializeField] private bool contentAvailable;
+
     [Header("Opening")]
     [SerializeField] private NarrationSequenceSO openingNarration;
     [SerializeField] private string startingMissionId;
@@ -23,6 +27,7 @@ public sealed class ChapterDataSO : ScriptableObject
     public string ChapterId => chapterId;
     public string ChapterLabel => chapterLabel;
     public string Title => title;
+    public bool ContentAvailable => contentAvailable;
     public NarrationSequenceSO OpeningNarration => openingNarration;
     public string StartingMissionId => startingMissionId;
     public string FinalMissionId => finalMissionId;

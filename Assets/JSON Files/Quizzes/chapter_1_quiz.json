@@ -40,7 +40,14 @@
         "finishChapterLabel": "Finish Chapter",
         "incompleteMessage": "Please answer every question before submitting.",
         "unavailableTitle": "Quiz Unavailable",
-        "returnToMenuLabel": "Return to Main Menu"
+        "returnToMenuLabel": "Return to Main Menu",
+        "practiceTitle": "Chapter I Practice Quiz",
+        "practiceInstructions": "This is a practice attempt. Your official first-attempt score will not change.",
+        "practiceResultsTitle": "Practice Results",
+        "practiceScoreFormat": "Practice score: {0} out of {1}.",
+        "officialScoreFormat": "Official first-attempt score: {0} out of {1}.",
+        "officialScoreUnavailable": "Official first-attempt score unavailable.",
+        "finishPracticeLabel": "Finish Replay"
       },
 
       "questions": [
@@ -175,7 +182,14 @@
         "finishChapterLabel": "Tapusin ang Kabanata",
         "incompleteMessage": "Sagutin muna ang lahat ng tanong bago ipasa.",
         "unavailableTitle": "Hindi Magamit ang Pagsusulit",
-        "returnToMenuLabel": "Bumalik sa Main Menu"
+        "returnToMenuLabel": "Bumalik sa Main Menu",
+        "practiceTitle": "Pagsasanay na Pagsusulit sa Kabanata I",
+        "practiceInstructions": "Pagsasanay lamang ito. Hindi mababago ang opisyal mong marka sa unang pagsubok.",
+        "practiceResultsTitle": "Resulta ng Pagsasanay",
+        "practiceScoreFormat": "Marka sa pagsasanay: {0} sa {1}.",
+        "officialScoreFormat": "Opisyal na marka sa unang pagsubok: {0} sa {1}.",
+        "officialScoreUnavailable": "Hindi available ang opisyal na marka sa unang pagsubok.",
+        "finishPracticeLabel": "Tapusin ang Muling Paglalaro"
       },
 
       "questions": [

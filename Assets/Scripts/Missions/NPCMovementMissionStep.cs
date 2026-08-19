@@ -29,6 +29,44 @@ public class NPCMovementMissionStep : MissionStep
         RestoreInteractionStates();
     }
 
+    public bool ApplyCompletedWorldState()
+    {
+        if (movementTargets == null || movementTargets.Length == 0)
+            return false;
+
+        bool appliedEveryTarget = true;
+
+        foreach (MovementTarget target in movementTargets)
+        {
+            if (string.IsNullOrWhiteSpace(target.npcId) ||
+                string.IsNullOrWhiteSpace(target.routeId))
+            {
+                appliedEveryTarget = false;
+                continue;
+            }
+
+            if (!NPC.TryGetById(target.npcId, out NPC npc))
+            {
+                Debug.LogWarning(
+                    $"Could not restore completed movement for NPC '{target.npcId}' because it is not active.",
+                    this);
+                appliedEveryTarget = false;
+                continue;
+            }
+
+            if (!npc.TryGetComponent(out NPCFixedRoute route) ||
+                !route.TryApplyCompletedRoute(target.routeId))
+            {
+                Debug.LogWarning(
+                    $"Could not restore completed route '{target.routeId}' for NPC '{target.npcId}'.",
+                    npc);
+                appliedEveryTarget = false;
+            }
+        }
+
+        return appliedEveryTarget;
+    }
+
     protected override void OnStepActivated()
     {
         if (movementTargets == null || movementTargets.Length == 0)

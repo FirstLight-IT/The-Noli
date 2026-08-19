@@ -29,6 +29,7 @@ public sealed class SaveGameManager : MonoBehaviour
     private Coroutine pendingSaveRoutine;
     private string pendingSaveReason;
     private bool applicationPaused;
+    private bool manuallyPaused;
     private bool skipNextPlayTimeFrame;
     private float timeSinceLastSave;
     private bool autosaveRestorePending;
@@ -88,6 +89,7 @@ public sealed class SaveGameManager : MonoBehaviour
         JournalUnlockRegistry.OnEntryUnlocked += HandleJournalEntryUnlocked;
         MissionController.OnMissionStatesChanged += HandleMissionStatesChanged;
         MissionController.OnMissionStepAdvanced += HandleMissionStepFinished;
+        DialogueController.OnConversationReadingCompleted += HandleConversationReadingCompleted;
         SceneManager.sceneLoaded += HandleSceneLoaded;
     }
 
@@ -96,6 +98,7 @@ public sealed class SaveGameManager : MonoBehaviour
         JournalUnlockRegistry.OnEntryUnlocked -= HandleJournalEntryUnlocked;
         MissionController.OnMissionStatesChanged -= HandleMissionStatesChanged;
         MissionController.OnMissionStepAdvanced -= HandleMissionStepFinished;
+        DialogueController.OnConversationReadingCompleted -= HandleConversationReadingCompleted;
         SceneManager.sceneLoaded -= HandleSceneLoaded;
     }
 
@@ -157,6 +160,45 @@ public sealed class SaveGameManager : MonoBehaviour
         return Instance.TryDeleteSlotInternal(slotNumber, out error);
     }
 
+    public static bool SelectChapterForContinue(string chapterId, out string error)
+    {
+        EnsureInstance();
+        return Instance.SelectChapterForContinueInternal(chapterId, out error);
+    }
+
+    public static bool StartChapter(
+        string chapterId,
+        bool replayCompletedChapter,
+        out string error)
+    {
+        EnsureInstance();
+        return Instance.StartChapterInternal(
+            chapterId,
+            replayCompletedChapter,
+            out error);
+    }
+
+    public static bool RestartActiveChapter(out string error)
+    {
+        EnsureInstance();
+        return Instance.RestartActiveChapterInternal(out error);
+    }
+
+    public static bool SaveImmediately(string reason, out string error)
+    {
+        EnsureInstance();
+        return Instance.SaveImmediatelyInternal(reason, out error);
+    }
+
+    public static void SetManualPause(bool paused)
+    {
+        EnsureInstance();
+        Instance.manuallyPaused = paused;
+
+        if (!paused)
+            Instance.skipNextPlayTimeFrame = true;
+    }
+
     public static bool BeginNewGame(string chapterId)
     {
         EnsureInstance();
@@ -177,6 +219,33 @@ public sealed class SaveGameManager : MonoBehaviour
     {
         EnsureInstance();
         Instance.QueueAutosave(reason);
+    }
+
+    public static bool HasActiveChapterWorldFlag(string flagId)
+    {
+        EnsureInstance();
+
+        if (Instance.currentData == null || string.IsNullOrWhiteSpace(flagId))
+            return false;
+
+        ChapterSaveData chapter = Instance.currentData.FindChapter(
+            Instance.currentData.activeChapterId);
+        return chapter != null && chapter.HasWorldFlag(flagId);
+    }
+
+    public static void RecordActiveChapterWorldFlag(string flagId)
+    {
+        EnsureInstance();
+
+        if (string.IsNullOrWhiteSpace(flagId))
+            return;
+
+        Instance.EnsureCurrentSave();
+        ChapterSaveData chapter = Instance.currentData.GetOrCreateChapter(
+            Instance.currentData.activeChapterId);
+
+        if (chapter != null && chapter.AddWorldFlag(flagId))
+            Instance.QueueAutosave("ChapterWorldStateChanged");
     }
 
     public static void RecordPlayerDoorTransition()
@@ -279,9 +348,13 @@ public sealed class SaveGameManager : MonoBehaviour
             return true;
         }
 
-        int nextAttemptNumber = Math.Max(1, progress.attemptNumber + 1);
+        bool isPracticeAttempt = chapter.completedEver || progress.HasOfficialResult;
+        int nextAttemptNumber = isPracticeAttempt
+            ? progress.practiceAttempts.Count + 1
+            : 1;
         int seed = unchecked(Environment.TickCount ^ currentData.saveRevision ^ nextAttemptNumber);
         progress.state = QuizProgressState.InProgress.ToString();
+        progress.isPracticeAttempt = isPracticeAttempt;
         progress.attemptNumber = nextAttemptNumber;
         progress.selectionSeed = seed;
         progress.languageCode = quiz.ResolveLanguageCode(progress.languageCode);
@@ -446,8 +519,15 @@ public sealed class SaveGameManager : MonoBehaviour
         if (!IsQuizState(progress, QuizProgressState.Completed))
         {
             string now = GetUtcTimestamp();
+            bool isPracticeAttempt = progress.isPracticeAttempt;
             progress.state = QuizProgressState.Completed.ToString();
             progress.completedAtUtc = now;
+
+            if (isPracticeAttempt)
+                progress.RecordPracticeResult();
+            else
+                progress.RecordOfficialResultIfMissing();
+
             chapter.state = "Completed";
             chapter.completedAtUtc = now;
             chapter.completionCount++;
@@ -458,7 +538,7 @@ public sealed class SaveGameManager : MonoBehaviour
                 chapter.firstCompletedAtUtc = now;
             }
 
-            if (!string.IsNullOrWhiteSpace(quiz.NextChapterId))
+            if (!isPracticeAttempt && !string.IsNullOrWhiteSpace(quiz.NextChapterId))
             {
                 ChapterSaveData nextChapter = currentData.GetOrCreateChapter(quiz.NextChapterId);
                 nextChapter.isUnlocked = true;
@@ -471,7 +551,11 @@ public sealed class SaveGameManager : MonoBehaviour
             }
         }
 
-        if (!SaveNow("ChapterCompleted"))
+        string saveReason = progress.isPracticeAttempt
+            ? "PracticeQuizCompleted"
+            : "ChapterCompleted";
+
+        if (!SaveNow(saveReason))
         {
             error = "Chapter completion could not be autosaved.";
             return false;
@@ -633,6 +717,209 @@ public sealed class SaveGameManager : MonoBehaviour
             return false;
         }
 
+        error = string.Empty;
+        return true;
+    }
+
+    private bool SelectChapterForContinueInternal(string chapterId, out string error)
+    {
+        if (!TryGetSelectableChapter(chapterId, out ChapterSaveData chapter, out error))
+            return false;
+
+        if (!string.Equals(chapter.state, "InProgress", StringComparison.Ordinal))
+        {
+            error = $"Chapter '{chapterId}' is not currently in progress.";
+            return false;
+        }
+
+        string previousChapterId = currentData.activeChapterId;
+        bool changedChapter = !string.Equals(
+            previousChapterId,
+            chapter.chapterId,
+            StringComparison.Ordinal);
+
+        currentData.activeChapterId = chapter.chapterId;
+
+        if (changedChapter)
+            chapter.analytics.sessionCount++;
+
+        if (!SaveNow("ActiveChapterSelected"))
+        {
+            currentData.activeChapterId = previousChapterId;
+
+            if (changedChapter)
+                chapter.analytics.sessionCount = Math.Max(0, chapter.analytics.sessionCount - 1);
+
+            error = "The selected chapter could not be saved.";
+            return false;
+        }
+
+        autosaveRestorePending = !string.Equals(
+            SceneManager.GetActiveScene().name,
+            QuizSceneName,
+            StringComparison.Ordinal);
+        error = string.Empty;
+        return true;
+    }
+
+    private bool StartChapterInternal(
+        string chapterId,
+        bool replayCompletedChapter,
+        out string error)
+    {
+        if (!TryGetSelectableChapter(chapterId, out ChapterSaveData existingChapter, out error))
+            return false;
+
+        if (replayCompletedChapter && !existingChapter.completedEver)
+        {
+            error = $"Chapter '{chapterId}' has not been completed and cannot be replayed yet.";
+            return false;
+        }
+
+        if (!replayCompletedChapter &&
+            !string.Equals(existingChapter.state, "NotStarted", StringComparison.Ordinal))
+        {
+            error = $"Chapter '{chapterId}' has already been started.";
+            return false;
+        }
+
+        string reason = replayCompletedChapter
+            ? "ChapterReplayStarted"
+            : "ChapterStarted";
+        return ResetChapterAttempt(existingChapter, reason, false, out error);
+    }
+
+    private bool RestartActiveChapterInternal(out string error)
+    {
+        if (currentData == null || string.IsNullOrWhiteSpace(currentData.activeChapterId))
+        {
+            error = "No active chapter is available to restart.";
+            return false;
+        }
+
+        if (!TryGetSelectableChapter(
+                currentData.activeChapterId,
+                out ChapterSaveData existingChapter,
+                out error))
+        {
+            return false;
+        }
+
+        return ResetChapterAttempt(existingChapter, "ChapterRestarted", true, out error);
+    }
+
+    private bool ResetChapterAttempt(
+        ChapterSaveData existingChapter,
+        string reason,
+        bool countAsRestart,
+        out string error)
+    {
+        int chapterIndex = currentData.chapters.IndexOf(existingChapter);
+        string previousChapterId = currentData.activeChapterId;
+        bool previousRestorePending = autosaveRestorePending;
+        string now = GetUtcTimestamp();
+        ChapterSaveData resetChapter = new()
+        {
+            chapterId = existingChapter.chapterId,
+            state = "InProgress",
+            isUnlocked = true,
+            completedEver = existingChapter.completedEver,
+            completionCount = existingChapter.completionCount,
+            startedAtUtc = now,
+            completedAtUtc = string.Empty,
+            firstCompletedAtUtc = existingChapter.firstCompletedAtUtc,
+            checkpoint = new ChapterCheckpointSaveData(),
+            missions = new List<MissionSaveData>(),
+            worldFlags = new List<string>(),
+            quiz = existingChapter.quiz?.CreateFreshAttempt() ?? new ChapterQuizSaveData(),
+            analytics = existingChapter.analytics ?? new ChapterAnalyticsSaveData()
+        };
+
+        resetChapter.analytics.sessionCount++;
+
+        if (countAsRestart)
+            resetChapter.analytics.chapterRestarts++;
+
+        currentData.chapters[chapterIndex] = resetChapter;
+        currentData.activeChapterId = resetChapter.chapterId;
+        autosaveRestorePending = false;
+        isApplyingRestore = false;
+
+        CancelPendingAutosave();
+
+        if (!SaveNow(reason, captureRuntimeState: false))
+        {
+            resetChapter.analytics.sessionCount = Math.Max(
+                0,
+                resetChapter.analytics.sessionCount - 1);
+
+            if (countAsRestart)
+            {
+                resetChapter.analytics.chapterRestarts = Math.Max(
+                    0,
+                    resetChapter.analytics.chapterRestarts - 1);
+            }
+
+            currentData.chapters[chapterIndex] = existingChapter;
+            currentData.activeChapterId = previousChapterId;
+            autosaveRestorePending = previousRestorePending;
+            error = "The chapter could not be prepared and autosaved.";
+            return false;
+        }
+
+        error = string.Empty;
+        return true;
+    }
+
+    private bool SaveImmediatelyInternal(string reason, out string error)
+    {
+        if (currentData == null)
+        {
+            error = "There is no active game to save.";
+            return false;
+        }
+
+        CancelPendingAutosave();
+
+        if (!SaveNow(reason))
+        {
+            error = "The game could not be saved. Check the Console for details.";
+            return false;
+        }
+
+        error = string.Empty;
+        return true;
+    }
+
+    private bool TryGetSelectableChapter(
+        string chapterId,
+        out ChapterSaveData chapter,
+        out string error)
+    {
+        chapter = null;
+
+        if (currentData == null)
+        {
+            error = "Load a save slot before selecting a chapter.";
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(chapterId))
+        {
+            error = "A chapter ID is required.";
+            return false;
+        }
+
+        chapter = currentData.FindChapter(chapterId.Trim());
+
+        if (chapter == null || !chapter.isUnlocked)
+        {
+            error = $"Chapter '{chapterId}' is locked.";
+            chapter = null;
+            return false;
+        }
+
+        chapter.Normalize();
         error = string.Empty;
         return true;
     }
@@ -842,6 +1129,24 @@ public sealed class SaveGameManager : MonoBehaviour
         QueueAutosave("MissionStepFinished");
     }
 
+    private void HandleConversationReadingCompleted(ConversationReadingResult result)
+    {
+        if (isApplyingRestore || result == null)
+            return;
+
+        EnsureCurrentSave();
+
+        ChapterSaveData activeChapter = GetActiveChapter();
+
+        if (activeChapter == null)
+            return;
+
+        activeChapter.analytics.RecordMissionConversationReading(
+            result.LinesViewed,
+            result.RapidlySkippedLines);
+        QueueAutosave("ConversationReadingCompleted");
+    }
+
     private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (!autosaveRestorePending || currentData == null)
@@ -980,7 +1285,7 @@ public sealed class SaveGameManager : MonoBehaviour
 
     private void Update()
     {
-        if (applicationPaused ||
+        if (applicationPaused || manuallyPaused ||
             currentData == null ||
             (ChapterController.Instance == null &&
              !string.Equals(SceneManager.GetActiveScene().name, QuizSceneName, StringComparison.Ordinal)) ||
@@ -1068,12 +1373,18 @@ public sealed class SaveGameManager : MonoBehaviour
         SaveNow(reason);
     }
 
-    private bool SaveNow(string reason, bool startFresh = false)
+    private bool SaveNow(
+        string reason,
+        bool startFresh = false,
+        bool captureRuntimeState = true)
     {
         if (currentData == null)
             return false;
 
-        CaptureCommonState();
+        if (captureRuntimeState)
+            CaptureCommonState();
+        else
+            currentData.Normalize();
 
         int previousRevision = currentData.saveRevision;
         string previousSavedAt = currentData.lastSavedAtUtc;

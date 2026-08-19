@@ -43,7 +43,7 @@ public sealed class SaveSlotView : MonoBehaviour
         primaryButton.interactable = canUsePrimary;
         primaryButtonText.SetText(isNewGameMode
             ? slot.HasSave ? "Occupied" : "Start New Game"
-            : slot.HasSave ? "Continue" : "Empty");
+            : slot.HasSave ? "Select Chapter" : "Empty");
 
         deleteButton.gameObject.SetActive(slot.HasSave);
         deleteButton.interactable = slot.HasSave;

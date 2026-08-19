@@ -49,15 +49,11 @@ public class MeetCharactersMissionStep : MissionStep
                 FailStep($"Meet characters step contains duplicate NPC ID '{character.npcId}'.");
                 return;
             }
-
-            if (JournalUnlockRegistry.IsUnlocked(
-                    JournalUnlockRegistry.CharacterCollection,
-                    character.npcId) ||
-                (NPC.TryGetById(character.npcId, out NPC npc) && npc.beenInteracted))
-            {
-                metNpcIds.Add(character.npcId);
-            }
         }
+
+        // Journal discoveries are permanent across chapter replays, but this
+        // collection represents conversations in the current chapter attempt.
+        // Continue/load restores it through RestoreProgress instead.
 
         RefreshProgressAndCompleteIfReady();
     }

@@ -33,16 +33,11 @@ public class InspectArtifactsMissionStep : MissionStep
         }
 
         foreach (Artifact artifact in availableArtifacts)
-        {
             availableArtifactIDs.Add(artifact.ArtifactID);
 
-            if (JournalUnlockRegistry.IsUnlocked(
-                    JournalUnlockRegistry.ArtifactCollection,
-                    artifact.ArtifactID))
-            {
-                inspectedArtifactIDs.Add(artifact.ArtifactID);
-            }
-        }
+        // Journal discoveries are permanent across chapter replays, but this
+        // collection represents interactions in the current chapter attempt.
+        // Continue/load restores it through RestoreProgress instead.
 
         RefreshProgressAndCompleteIfReady();
     }

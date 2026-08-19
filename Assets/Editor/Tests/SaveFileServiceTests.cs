@@ -50,6 +50,7 @@ public sealed class SaveFileServiceTests
         chapter.checkpoint.position.y = -8.5f;
         chapter.analytics.playTimeSeconds = 42.5;
         chapter.analytics.missionStepsCompleted = 3;
+        chapter.analytics.RecordMissionConversationReading(10, 2);
         chapter.quiz.state = QuizProgressState.InProgress.ToString();
         chapter.quiz.selectionSeed = 12345;
         chapter.quiz.languageCode = "fil";
@@ -95,6 +96,10 @@ public sealed class SaveFileServiceTests
         Assert.That(loadedChapter.checkpoint.position.y, Is.EqualTo(-8.5f));
         Assert.That(loadedChapter.analytics.playTimeSeconds, Is.EqualTo(42.5));
         Assert.That(loadedChapter.analytics.missionStepsCompleted, Is.EqualTo(3));
+        Assert.That(loadedChapter.analytics.missionConversationsCompleted, Is.EqualTo(1));
+        Assert.That(loadedChapter.analytics.missionConversationLinesViewed, Is.EqualTo(10));
+        Assert.That(loadedChapter.analytics.missionConversationLinesSkipped, Is.EqualTo(2));
+        Assert.That(loadedChapter.analytics.missionConversationSkipRatePercent, Is.EqualTo(20d));
         Assert.That(loadedChapter.missions, Has.Count.EqualTo(1));
         Assert.That(loadedChapter.missions[0].missionId, Is.EqualTo("explore_the_caida"));
         Assert.That(loadedChapter.missions[0].state, Is.EqualTo("InProgress"));

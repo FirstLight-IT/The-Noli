@@ -11,6 +11,7 @@ public class DialogueController : MonoBehaviour
 
     public static event Action<string> OnConversationFinished;
     public static event Action<string, string> OnConversationFailed;
+    public static event Action<ConversationReadingResult> OnConversationReadingCompleted;
 
     public static DialogueController Instance { get; private set; }
     public bool IsDialogueActive { get; private set; }
@@ -21,16 +22,20 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Image portraitImage;
     [SerializeField] private Button dialogueCloseButton;
+    [Tooltip("A line counts as skipped when the player reveals it, then advances within this many seconds.")]
+    [SerializeField, Min(0f)] private float rapidAdvanceWindowSeconds = 1f;
 
     private NPCInfoSO activeNPCDialogue;
     private AmbientNPCInfoSO activeAmbientNPCDialogue;
     private string[] activeNPCDialogueLines;
     private Conversation activeConversation;
+    private ConversationSkipTracker conversationSkipTracker;
     private bool isTyping;
     private bool announceNPCUnlockOnClose;
     private Action ambientDialogueFinished;
     private int currentLineIndex;
     private readonly HashSet<string> introducedNPCs = new();
+    private readonly HashSet<string> newlyUnlockedNPCs = new();
     private readonly Dictionary<string, int> nextRepeatDialogueByNPC = new();
 
     void Awake()
@@ -89,7 +94,7 @@ public class DialogueController : MonoBehaviour
         activeNPCDialogue = data;
         activeAmbientNPCDialogue = null;
         ambientDialogueFinished = null;
-        announceNPCUnlockOnClose = !hasBeenIntroduced;
+        announceNPCUnlockOnClose = newlyUnlockedNPCs.Remove(npcID);
         activeNPCDialogueLines = selectedLines;
         activeConversation = null;
         currentLineIndex = 0;
@@ -225,7 +230,6 @@ public class DialogueController : MonoBehaviour
 
         if (shouldAnnounceUnlock && finishedNPC != null)
         {
-            JournalUnlockRegistry.Unlock("characters", finishedNPC.NpcID);
             UnlockNotificationController.ShowCharacter(finishedNPC.DisplayName, finishedNPC.Portrait);
         }
 
@@ -306,6 +310,7 @@ public class DialogueController : MonoBehaviour
         }
 
         activeConversation = conversation;
+        conversationSkipTracker = new ConversationSkipTracker(rapidAdvanceWindowSeconds);
         activeNPCDialogue = null;
         activeAmbientNPCDialogue = null;
         ambientDialogueFinished = null;
@@ -325,10 +330,12 @@ public class DialogueController : MonoBehaviour
             StopAllCoroutines();
             isTyping = false;
             dialogueText.SetText(activeConversation.lines[currentLineIndex].text);
+            conversationSkipTracker.MarkTypewriterSkipped(Time.unscaledTime);
             ShowConversationCloseButton();
             return;
         }
 
+        conversationSkipTracker.CompleteLine(Time.unscaledTime);
         currentLineIndex++;
 
         if (currentLineIndex >= activeConversation.lines.Count)
@@ -344,6 +351,7 @@ public class DialogueController : MonoBehaviour
     {
         DialogueLine line = activeConversation.lines[currentLineIndex];
         speakerRegistry.TryGetSpeaker(line.speaker, out NPCInfoSO speaker);
+        conversationSkipTracker.BeginLine();
 
         nameText.SetText(speaker.DisplayName);
         portraitImage.sprite = speaker.Portrait;
@@ -370,8 +378,21 @@ public class DialogueController : MonoBehaviour
     {
         StopAllCoroutines();
         string finishedConversationId = activeConversation?.conversationId;
+        ConversationReadingResult readingResult = null;
+
+        if (activeConversation != null && conversationSkipTracker != null)
+        {
+            conversationSkipTracker.CompleteLine(Time.unscaledTime);
+            readingResult = conversationSkipTracker.CompleteConversation(
+                finishedConversationId);
+        }
+
         activeConversation = null;
+        conversationSkipTracker = null;
         ResetDialogueUI();
+
+        if (readingResult != null)
+            OnConversationReadingCompleted?.Invoke(readingResult);
 
         if (!string.IsNullOrWhiteSpace(finishedConversationId))
             OnConversationFinished?.Invoke(finishedConversationId);
@@ -430,13 +451,22 @@ public class DialogueController : MonoBehaviour
 
     void OnEnable()
     {
+        NPC.OnNPCUnlocked += HandleNPCUnlocked;
         NPC.OnNPCInteracted += HandleNPCInteraction;
         NPC.OnMissionConversationInteracted += HandleConversationInteraction;
     }
 
     void OnDisable()
     {
+        NPC.OnNPCUnlocked -= HandleNPCUnlocked;
         NPC.OnNPCInteracted -= HandleNPCInteraction;
         NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
+        newlyUnlockedNPCs.Clear();
+    }
+
+    private void HandleNPCUnlocked(NPCInfoSO data)
+    {
+        if (data != null && !string.IsNullOrWhiteSpace(data.NpcID))
+            newlyUnlockedNPCs.Add(data.NpcID);
     }
 }

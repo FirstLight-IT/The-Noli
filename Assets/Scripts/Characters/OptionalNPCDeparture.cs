@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(NPC), typeof(NPCFixedRoute))]
 public class OptionalNPCDeparture : MonoBehaviour
 {
-    private const string CharacterCollection = "characters";
+    private const string DepartureWorldFlagPrefix = "npc_departed:";
 
     [SerializeField] private string departureRouteId;
     [SerializeField] private GameObject[] revealAfterDeparture = new GameObject[0];
@@ -25,7 +25,7 @@ public class OptionalNPCDeparture : MonoBehaviour
 
     private void OnEnable()
     {
-        NPC.OnNPCUnlocked += HandleNPCUnlocked;
+        NPC.OnNPCInteracted += HandleNPCInteracted;
         fixedRoute.RouteCompleted += HandleRouteCompleted;
     }
 
@@ -33,21 +33,19 @@ public class OptionalNPCDeparture : MonoBehaviour
     {
         SetRewardsActive(false);
 
-        // Restore the completed state when returning to this scene during the
-        // same play session. Save/load can use the same journal registry later.
-        if (JournalUnlockRegistry.IsUnlocked(CharacterCollection, npc.NpcID))
+        if (SaveGameManager.HasActiveChapterWorldFlag(GetDepartureWorldFlag()))
             ApplyCompletedState();
     }
 
     private void OnDisable()
     {
-        NPC.OnNPCUnlocked -= HandleNPCUnlocked;
+        NPC.OnNPCInteracted -= HandleNPCInteracted;
         fixedRoute.RouteCompleted -= HandleRouteCompleted;
     }
 
-    private void HandleNPCUnlocked(NPCInfoSO unlockedNPC)
+    private void HandleNPCInteracted(NPCInfoSO interactedNPC)
     {
-        if (departureStarted || unlockedNPC == null || unlockedNPC.NpcID != npc.NpcID)
+        if (departureStarted || interactedNPC == null || interactedNPC.NpcID != npc.NpcID)
             return;
 
         if (!fixedRoute.TryBeginRoute(departureRouteId))
@@ -64,8 +62,16 @@ public class OptionalNPCDeparture : MonoBehaviour
 
     private void HandleRouteCompleted()
     {
-        if (departureStarted)
-            ApplyCompletedState();
+        if (!departureStarted)
+            return;
+
+        SaveGameManager.RecordActiveChapterWorldFlag(GetDepartureWorldFlag());
+        ApplyCompletedState();
+    }
+
+    private string GetDepartureWorldFlag()
+    {
+        return DepartureWorldFlagPrefix + npc.NpcID;
     }
 
     private void ApplyCompletedState()

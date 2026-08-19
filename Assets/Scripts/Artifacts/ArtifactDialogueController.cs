@@ -71,7 +71,10 @@ public class ArtifactDialogueController : MonoBehaviour
             return;
         }
 
-        OpenDialogue(artifact.ArtifactData, !artifact.beenInteracted);
+        bool isNewJournalEntry = !JournalUnlockRegistry.IsUnlocked(
+            JournalUnlockRegistry.ArtifactCollection,
+            artifact.ArtifactID);
+        OpenDialogue(artifact.ArtifactData, isNewJournalEntry);
     }
 
     public void OpenDialogue(ArtifactInfoSO artifactInfo, bool announceUnlockOnClose = false)

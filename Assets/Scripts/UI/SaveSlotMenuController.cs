@@ -18,6 +18,7 @@ public sealed class SaveSlotMenuController : MonoBehaviour
 
     [Header("Connections")]
     [SerializeField] private MainMenuController mainMenuController;
+    [SerializeField] private ChapterSelectionMenuController chapterSelectionMenuController;
     [Tooltip("Assign Save Slot 1, Save Slot 2, then Save Slot 3 in this exact order.")]
     [SerializeField] private SaveSlotView[] slotViews = new SaveSlotView[SaveGameManager.SaveSlotCount];
 
@@ -122,8 +123,24 @@ public sealed class SaveSlotMenuController : MonoBehaviour
             return;
 
         BeginBusyState();
-        if (!mainMenuController.TryLoadGameFromSlot(slotNumber))
+        if (!chapterSelectionMenuController.ShowForSlot(
+                slotNumber,
+                ReturnFromChapterSelection,
+                out string error))
+        {
+            SetMessage(error);
             EndBusyState();
+            return;
+        }
+
+        isBusy = false;
+        panelRoot.SetActive(false);
+    }
+
+    private void ReturnFromChapterSelection()
+    {
+        isBusy = false;
+        Show(MenuMode.LoadGame);
     }
 
     private void RequestDelete(int slotNumber)
@@ -188,7 +205,8 @@ public sealed class SaveSlotMenuController : MonoBehaviour
     private bool TryValidate(out string error)
     {
         if (panelRoot == null || titleText == null || closeButton == null ||
-            mainMenuController == null || slotViews == null ||
+            mainMenuController == null || chapterSelectionMenuController == null ||
+            slotViews == null ||
             slotViews.Length != SaveGameManager.SaveSlotCount)
         {
             error = "Save Slot Menu Controller has unassigned UI references.";
