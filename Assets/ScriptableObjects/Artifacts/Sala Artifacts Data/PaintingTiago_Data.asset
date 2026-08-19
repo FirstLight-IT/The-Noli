@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: PaintingTiago_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_painting_tiago
-  displayName: Capitan Tiago Oil Painting
-  shortName: '"Capitan Tiago"'
   roomID: sala
   image: {fileID: 2330279981552903013, guid: 81f9d0b018f1e314c8dc38d69045f82a, type: 3}
-  description:
-  - 'The painting shows a handsome man in formal dress, rigid and erect, holding
-    a tasseled cane in stiff fingers covered with rings. His pose seems to declare
-    how well dressed and dignified he is. '

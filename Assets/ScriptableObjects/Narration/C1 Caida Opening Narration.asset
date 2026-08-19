@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e889cd833be6a47951cdc2581c842a, type: 3}
   m_Name: C1 Caida Opening Narration
   m_EditorClassIdentifier: Assembly-CSharp::NarrationSequenceSO
-  passages:
-  - Up the stairs, we immediately find ourselves in a spacious hallway, called there,
-    for some unknown reason, the caida, which tonight serves as the dining-room and
-    at the same time affords a place for the orchestra.
+  localizedDataJson: {fileID: 4900000, guid: 60952f70a9981cd4fb0861d28f6d4c95, type: 3}
+  narrationId: c1_caida_opening_narration

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "missions": [
+    {
+      "missionId": "captain_tiago_absence",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Captain Tiago's Absence"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Ang Pagliban ni Kapitan Tiago"
+        }
+      ]
+    },
+    {
+      "missionId": "explore_the_caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Explore the Caida"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Galugarin ang Caida"
+        }
+      ]
+    },
+    {
+      "missionId": "meet_new_guests",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Meet New Guests"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Kilalanin ang mga Bagong Panauhin"
+        }
+      ]
+    },
+    {
+      "missionId": "meet_the_guests",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Meet the Guests"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Kilalanin ang mga Panauhin"
+        }
+      ]
+    },
+    {
+      "missionId": "the_sala_gathering",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "The Sala Gathering"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Ang Pagtitipon sa Sala"
+        }
+      ]
+    },
+    {
+      "missionId": "the_san_diego_transfer",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "The Sand Diego Transfer"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Ang Paglipat sa San Diego"
+        }
+      ]
+    },
+    {
+      "missionId": "witness_the_argument",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Witness the Argument"
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Saksihan ang Pagtatalo"
+        }
+      ]
+    }
+  ]
+}

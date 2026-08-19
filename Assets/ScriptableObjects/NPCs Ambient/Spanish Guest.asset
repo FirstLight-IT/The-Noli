@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: Spanish Guest
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: Spanish Guest
-  dialogueVariations:
-  - lines:
-    - The house is certainly grand, though rather crowded.
-  - lines:
-    - These gatherings always begin with conversation and end with an argument.
-  - lines:
-    - I was told that nearly everyone of importance would be here tonight.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_spanish_guest

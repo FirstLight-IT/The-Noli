@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "chapters": [
+    {
+      "chapterId": "chapter_1",
+      "languages": [
+        { "languageCode": "en", "chapterLabel": "Chapter I", "title": "The Social Gathering" },
+        { "languageCode": "fil", "chapterLabel": "Kabanata I", "title": "Isang Handaan" }
+      ]
+    },
+    {
+      "chapterId": "chapter_2",
+      "languages": [
+        { "languageCode": "en", "chapterLabel": "Chapter II", "title": "Crisostomo Ibarra" },
+        { "languageCode": "fil", "chapterLabel": "Kabanata II", "title": "Si Crisostomo Ibarra" }
+      ]
+    },
+    {
+      "chapterId": "chapter_3",
+      "languages": [
+        { "languageCode": "en", "chapterLabel": "Chapter III", "title": "The Dinner" },
+        { "languageCode": "fil", "chapterLabel": "Kabanata III", "title": "Ang Hapunan" }
+      ]
+    }
+  ]
+}

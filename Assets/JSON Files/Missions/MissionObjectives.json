@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "objectives": [
+    {
+      "objectiveId": "c1_guevera_leaves_group",
+      "languages": [
+        { "languageCode": "en", "description": "Lieutenant Guevara Leaves Group" },
+        { "languageCode": "fil", "description": "Pag-alis ni Tenyente Guevara sa Grupo" }
+      ]
+    },
+    {
+      "objectiveId": "c1_inspect_artifacts_step",
+      "languages": [
+        { "languageCode": "en", "description": "Inspect artifacts around the floor" },
+        { "languageCode": "fil", "description": "Siyasatin ang mga artifact sa paligid ng sahig" }
+      ]
+    },
+    {
+      "objectiveId": "c1_meet_new_guests",
+      "languages": [
+        { "languageCode": "en", "description": "Talk to:" },
+        { "languageCode": "fil", "description": "Kausapin ang mga sumusunod:" }
+      ]
+    },
+    {
+      "objectiveId": "c1_meet_the_guests",
+      "languages": [
+        { "languageCode": "en", "description": "Talk to:" },
+        { "languageCode": "fil", "description": "Kausapin ang mga sumusunod:" }
+      ]
+    },
+    {
+      "objectiveId": "c1_talk_to_fray_damaso",
+      "languages": [
+        { "languageCode": "en", "description": "Talk to Fray Damaso" },
+        { "languageCode": "fil", "description": "Kausapin si Padre Damaso" }
+      ]
+    },
+    {
+      "objectiveId": "c1_talk_to_fray_sibayla",
+      "languages": [
+        { "languageCode": "en", "description": "Talk to Fray Sibayla" },
+        { "languageCode": "fil", "description": "Kausapin si Padre Sibayla" }
+      ]
+    },
+    {
+      "objectiveId": "c1_talk_to_lieutenant_guevara",
+      "languages": [
+        { "languageCode": "en", "description": "Talk to Lieutenant Guevara" },
+        { "languageCode": "fil", "description": "Kausapin si Tenyente Guevara" }
+      ]
+    },
+    {
+      "objectiveId": "c1_talk_to_senor_laruja",
+      "languages": [
+        { "languageCode": "en", "description": "Talk to Senor Laruja" },
+        { "languageCode": "fil", "description": "Kausapin si Senyor Laruja" }
+      ]
+    },
+    {
+      "objectiveId": "c1_wait_for_new_guests",
+      "languages": [
+        { "languageCode": "en", "description": "Wait for Doña Victorina and Don Tiburcio's arrival." },
+        { "languageCode": "fil", "description": "Hintayin ang pagdating nina Doña Victorina at Don Tiburcio." }
+      ]
+    }
+  ]
+}

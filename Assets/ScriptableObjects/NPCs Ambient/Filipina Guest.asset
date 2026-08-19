@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: Filipina Guest
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: Filipina Guest
-  dialogueVariations:
-  - lines:
-    - There are so many strangers here tonight.
-  - lines:
-    - I wonder when we shall finally be called to dinner.
-  - lines:
-    - Please speak softly. Everyone seems to be listening.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_filipina_guest

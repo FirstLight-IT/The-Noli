@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationMissionStep
   objectiveDescription: Talk to Senor Laruja
+  localizedObjectiveJson: {fileID: 4900000, guid: 2fe9043572e0c2a4eafeaa1bd15c3655, type: 3}
+  objectiveId: c1_talk_to_senor_laruja
   targetNPCId: senor_laruja
   conversationJson: {fileID: 4900000, guid: 1d4396e0dfc5e014883fa8bfd79ded7b, type: 3}

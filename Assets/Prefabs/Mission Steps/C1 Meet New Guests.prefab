@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeetCharactersMissionStep
   objectiveDescription: 'Talk to:'
+  localizedObjectiveJson: {fileID: 4900000, guid: 2fe9043572e0c2a4eafeaa1bd15c3655, type: 3}
+  objectiveId: c1_meet_new_guests
   characters:
   - npcId: dona_victorina
     displayName: "Do\xF1a Victorina"

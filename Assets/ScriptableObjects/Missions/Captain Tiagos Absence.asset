@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df394b0e26c3fe488c395a9422330f8, type: 3}
   m_Name: Captain Tiagos Absence
   m_EditorClassIdentifier: Assembly-CSharp::MissionInfoSO
+  localizedDataJson: {fileID: 4900000, guid: c0f4d285d9f370847a81b9c5d2d2d06a, type: 3}
   missionId: captain_tiago_absence
-  displayName: Captain Tiago's Absence
   prerequisites:
   - {fileID: 11400000, guid: acbc2b79ca274e8aa7779f8957592253, type: 2}
   autoStartWhenAvailable: 1

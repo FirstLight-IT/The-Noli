@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: PaintingTheDeathOfTheJust_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_painting_thedeathofthejust
-  displayName: '"The Death of the Just" Painting'
-  shortName: '"Death of the Just"'
   roomID: caida
   image: {fileID: -3405111645377292131, guid: a6556a6a9e8dc4d48834c8e0643adbd5, type: 3}
-  description:
-  - 'This religious painting depicts the death of a righteous person. It hangs in
-    the dining area beside other images dealing with death, judgment, and the afterlife. '

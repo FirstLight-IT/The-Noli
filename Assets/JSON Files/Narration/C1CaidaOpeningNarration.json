@@ -1,0 +1,18 @@
+{
+  "narrationId": "c1_caida_opening_narration",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "passages": [
+        "Up the stairs, we immediately find ourselves in a spacious hallway, called there, for some unknown reason, the caida, which tonight serves as the dining-room and at the same time affords a place for the orchestra."
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "passages": [
+        ""
+      ]
+    }
+  ]
+}

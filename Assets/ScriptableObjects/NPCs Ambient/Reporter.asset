@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: Reporter
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: Newspaper Reporter
-  dialogueVariations:
-  - lines:
-    - There may be something worth writing about before the evening is over.
-  - lines:
-    - Everyone is speaking, but no one is saying anything suitable for print.
-  - lines:
-    - I should remember who attended tonight. The names may become useful later.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_newspaper_reporter

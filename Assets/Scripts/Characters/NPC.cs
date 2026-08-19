@@ -126,7 +126,6 @@ public class NPC : MonoBehaviour, IInteractable
 
             if (activeMissionConversation != null)
             {
-                Debug.Log($"{gameObject.name} started a mission conversation");
                 OnMissionConversationInteracted?.Invoke(activeMissionConversation);
                 return;
             }
@@ -134,7 +133,6 @@ public class NPC : MonoBehaviour, IInteractable
             if(npcData == null)
                 return;
 
-            Debug.Log($"{gameObject.name} started their default dialogue");
             OnNPCInteracted ?.Invoke(npcData);
 
         }
@@ -167,8 +165,6 @@ public class NPC : MonoBehaviour, IInteractable
             if (!beenInteracted)
             {
                 counter++; 
-                Debug.Log($"Walk Passed {gameObject.name} - {counter}x");
-                
             }
                 
             return counter;

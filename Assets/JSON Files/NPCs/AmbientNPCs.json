@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "npcs": [
+    {
+      "npcId": "ambient_cadet",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Cadet",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Look over there. Do you recognize that gentleman?"
+              ]
+            },
+            {
+              "lines": [
+                "Keep your voice down, or someone may hear us."
+              ]
+            },
+            {
+              "lines": [
+                "This evening is far more entertaining than I expected."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Kadete",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Tumingin ka roon. Kilala mo ba ang ginoong iyon?"
+              ]
+            },
+            {
+              "lines": [
+                "Hinaan mo ang iyong boses, baka may makarinig sa atin."
+              ]
+            },
+            {
+              "lines": [
+                "Higit na kawili-wili ang gabing ito kaysa sa inaasahan ko."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_filipina_guest",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Filipina Guest",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "There are so many strangers here tonight."
+              ]
+            },
+            {
+              "lines": [
+                "I wonder when we shall finally be called to dinner."
+              ]
+            },
+            {
+              "lines": [
+                "Please speak softly. Everyone seems to be listening."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Panauhing Pilipina",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Napakaraming estranghero rito ngayong gabi."
+              ]
+            },
+            {
+              "lines": [
+                "Kailan kaya tayo sa wakas tatawagin para sa hapunan?"
+              ]
+            },
+            {
+              "lines": [
+                "Mahina lamang ang pagsasalita. Tila nakikinig ang lahat."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_foreign_guest",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Foreign Guest",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "We have walked across this room several times already."
+              ]
+            },
+            {
+              "lines": [
+                "There is much noise, yet very little appears to be happening."
+              ]
+            },
+            {
+              "lines": [
+                "Perhaps the meal will provide more interest than the conversation."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Dayuhang Panauhin",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Ilang ulit na nating nilakad ang silid na ito."
+              ]
+            },
+            {
+              "lines": [
+                "Napakaingay, ngunit tila kakaunti lamang ang nangyayari."
+              ]
+            },
+            {
+              "lines": [
+                "Marahil ay mas kawili-wili ang pagkain kaysa sa usapan."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_gentleman",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Gentleman",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "A fine gathering, is it not? Capitan Tiago has spared no expense."
+              ]
+            },
+            {
+              "lines": [
+                "I believe we have not been formally introduced."
+              ]
+            },
+            {
+              "lines": [
+                "The conversation has become rather tense. It may be wiser to remain here."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Ginoo",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Magandang pagtitipon, hindi ba? Hindi nagtipid si Kapitan Tiago."
+              ]
+            },
+            {
+              "lines": [
+                "Sa palagay ko ay hindi pa tayo pormal na naipakilala sa isa't isa."
+              ]
+            },
+            {
+              "lines": [
+                "Medyo umiigting na ang usapan. Marahil ay mas mabuting manatili rito."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_house_servant",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "House Servant",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Everything must be ready before the guests begin complaining."
+              ]
+            },
+            {
+              "lines": [
+                "Careful around the plates. We have already broken enough for one evening."
+              ]
+            },
+            {
+              "lines": [
+                "Pardon me. I must carry these dishes to the dining table."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Katulong sa Bahay",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Dapat maging handa ang lahat bago magsimulang magreklamo ang mga panauhin."
+              ]
+            },
+            {
+              "lines": [
+                "Mag-ingat sa mga plato. Sapat na ang nabasag natin ngayong gabi."
+              ]
+            },
+            {
+              "lines": [
+                "Paumanhin. Kailangan kong dalhin ang mga putahe sa hapag-kainan."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_musician",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Musician",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "The guests are growing louder. We may have to play with greater force."
+              ]
+            },
+            {
+              "lines": [
+                "Keep the tempo steady. The evening has only just begun."
+              ]
+            },
+            {
+              "lines": [
+                "Another piece after this one, unless they finally call everyone to dinner."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Musikero",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Lalong lumalakas ang ingay ng mga panauhin. Baka kailangan nating tumugtog nang mas malakas."
+              ]
+            },
+            {
+              "lines": [
+                "Panatilihing pantay ang kumpas. Nagsisimula pa lamang ang gabi."
+              ]
+            },
+            {
+              "lines": [
+                "Isa pang tugtugin pagkatapos nito, maliban kung tawagin na rin sa wakas ang lahat para sa hapunan."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_newspaper_reporter",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Newspaper Reporter",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "There may be something worth writing about before the evening is over."
+              ]
+            },
+            {
+              "lines": [
+                "Everyone is speaking, but no one is saying anything suitable for print."
+              ]
+            },
+            {
+              "lines": [
+                "I should remember who attended tonight. The names may become useful later."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mamamahayag",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Maaaring may mangyaring karapat-dapat isulat bago matapos ang gabi."
+              ]
+            },
+            {
+              "lines": [
+                "Nagsasalita ang lahat, ngunit walang nagsasabi ng anumang angkop ilathala."
+              ]
+            },
+            {
+              "lines": [
+                "Dapat kong tandaan kung sino ang mga dumalo ngayong gabi. Maaaring mapakinabangan ang mga pangalan nila balang araw."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_shopkeeper",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Shopkeeper",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Business has been slow, but gatherings like this are good for meeting customers."
+              ]
+            },
+            {
+              "lines": [
+                "Have you seen the decorations? They must have cost a considerable amount."
+              ]
+            },
+            {
+              "lines": [
+                "I know several people here by face, though very few by name."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Tindero",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Mahina ang negosyo, ngunit mainam ang ganitong mga pagtitipon upang makatagpo ng mga mamimili."
+              ]
+            },
+            {
+              "lines": [
+                "Nakita mo ba ang mga dekorasyon? Tiyak na malaki ang ginastos para sa mga iyon."
+              ]
+            },
+            {
+              "lines": [
+                "Kilala ko sa mukha ang ilan sa mga narito, bagaman kakaunti lamang ang kilala ko sa pangalan."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_spanish_guest",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Spanish Guest",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "The house is certainly grand, though rather crowded."
+              ]
+            },
+            {
+              "lines": [
+                "These gatherings always begin with conversation and end with an argument."
+              ]
+            },
+            {
+              "lines": [
+                "I was told that nearly everyone of importance would be here tonight."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Panauhing Espanyol",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Talagang maringal ang bahay, bagaman medyo masikip."
+              ]
+            },
+            {
+              "lines": [
+                "Laging nagsisimula sa kuwentuhan ang mga pagtitipong ito at nagtatapos sa pagtatalo."
+              ]
+            },
+            {
+              "lines": [
+                "Sinabi sa akin na halos lahat ng mahahalagang tao ay narito ngayong gabi."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "ambient_waiter",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Waiter",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "“Dinner will be served shortly. Please remain near the dining area."
+              ]
+            },
+            {
+              "lines": [
+                "Would you care for wine, or perhaps a glass of water?"
+              ]
+            },
+            {
+              "lines": [
+                "Please excuse me. This dish must be served while it is still hot."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Tagapagsilbi",
+          "dialogueVariations": [
+            {
+              "lines": [
+                "Ihahain na ang hapunan maya-maya. Mangyaring manatili malapit sa silid-kainan."
+              ]
+            },
+            {
+              "lines": [
+                "Nais ba ninyo ng alak, o marahil ay isang basong tubig?"
+              ]
+            },
+            {
+              "lines": [
+                "Paumanhin po. Kailangang ihain ang putaheng ito habang mainit pa."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

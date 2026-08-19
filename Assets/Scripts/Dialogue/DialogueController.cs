@@ -29,6 +29,7 @@ public class DialogueController : MonoBehaviour
     private AmbientNPCInfoSO activeAmbientNPCDialogue;
     private string[] activeNPCDialogueLines;
     private Conversation activeConversation;
+    private List<DialogueLine> activeConversationLines;
     private ConversationSkipTracker conversationSkipTracker;
     private bool isTyping;
     private bool announceNPCUnlockOnClose;
@@ -79,7 +80,7 @@ public class DialogueController : MonoBehaviour
         bool hasBeenIntroduced = !string.IsNullOrWhiteSpace(npcID) && introducedNPCs.Contains(npcID);
         string[] selectedLines = hasBeenIntroduced
             ? GetNextRepeatDialogue(data)
-            : data.introductionLines;
+            : data.IntroductionLines;
 
         if (!HasDialogueLines(selectedLines))
         {
@@ -238,7 +239,7 @@ public class DialogueController : MonoBehaviour
 
     private string[] GetNextRepeatDialogue(NPCInfoSO data)
     {
-        if (data.repeatDialogues == null || data.repeatDialogues.Length == 0)
+        if (data.RepeatDialogueCount == 0)
             return null;
 
         int nextIndex = nextRepeatDialogueByNPC.TryGetValue(data.NpcID, out int savedIndex)
@@ -246,14 +247,14 @@ public class DialogueController : MonoBehaviour
             : 0;
 
         // Skip accidentally empty sequences without making the NPC unusable.
-        for (int offset = 0; offset < data.repeatDialogues.Length; offset++)
+        for (int offset = 0; offset < data.RepeatDialogueCount; offset++)
         {
-            int index = (nextIndex + offset) % data.repeatDialogues.Length;
-            string[] lines = data.repeatDialogues[index]?.lines;
+            int index = (nextIndex + offset) % data.RepeatDialogueCount;
+            string[] lines = data.GetRepeatDialogueLines(index);
             if (!HasDialogueLines(lines))
                 continue;
 
-            nextRepeatDialogueByNPC[data.NpcID] = (index + 1) % data.repeatDialogues.Length;
+            nextRepeatDialogueByNPC[data.NpcID] = (index + 1) % data.RepeatDialogueCount;
             return lines;
         }
 
@@ -310,6 +311,7 @@ public class DialogueController : MonoBehaviour
         }
 
         activeConversation = conversation;
+        activeConversationLines = conversation.ResolveLines(GameLanguage.CurrentCode);
         conversationSkipTracker = new ConversationSkipTracker(rapidAdvanceWindowSeconds);
         activeNPCDialogue = null;
         activeAmbientNPCDialogue = null;
@@ -329,7 +331,7 @@ public class DialogueController : MonoBehaviour
         {
             StopAllCoroutines();
             isTyping = false;
-            dialogueText.SetText(activeConversation.lines[currentLineIndex].text);
+            dialogueText.SetText(activeConversationLines[currentLineIndex].text);
             conversationSkipTracker.MarkTypewriterSkipped(Time.unscaledTime);
             ShowConversationCloseButton();
             return;
@@ -338,7 +340,7 @@ public class DialogueController : MonoBehaviour
         conversationSkipTracker.CompleteLine(Time.unscaledTime);
         currentLineIndex++;
 
-        if (currentLineIndex >= activeConversation.lines.Count)
+        if (currentLineIndex >= activeConversationLines.Count)
         {
             EndConversation();
             return;
@@ -349,8 +351,8 @@ public class DialogueController : MonoBehaviour
 
     private IEnumerator TypeConversationLine()
     {
-        DialogueLine line = activeConversation.lines[currentLineIndex];
-        speakerRegistry.TryGetSpeaker(line.speaker, out NPCInfoSO speaker);
+        DialogueLine line = activeConversationLines[currentLineIndex];
+        speakerRegistry.TryGetSpeaker(line.speakerId, out NPCInfoSO speaker);
         conversationSkipTracker.BeginLine();
 
         nameText.SetText(speaker.DisplayName);
@@ -371,7 +373,7 @@ public class DialogueController : MonoBehaviour
     private void ShowConversationCloseButton()
     {
         dialogueCloseButton.gameObject.SetActive(
-            currentLineIndex == activeConversation.lines.Count - 1);
+            currentLineIndex == activeConversationLines.Count - 1);
     }
 
     public void EndConversation()
@@ -388,6 +390,7 @@ public class DialogueController : MonoBehaviour
         }
 
         activeConversation = null;
+        activeConversationLines = null;
         conversationSkipTracker = null;
         ResetDialogueUI();
 
@@ -412,13 +415,15 @@ public class DialogueController : MonoBehaviour
             return false;
         }
 
-        if (conversation.lines == null || conversation.lines.Count == 0)
+        List<DialogueLine> resolvedLines = conversation.ResolveLines(GameLanguage.CurrentCode);
+
+        if (resolvedLines == null || resolvedLines.Count == 0)
         {
-            reason = $"Conversation '{conversation.conversationId}' has no lines.";
+            reason = $"Conversation '{conversation.conversationId}' has no usable language block.";
             return false;
         }
 
-        foreach (DialogueLine line in conversation.lines)
+        foreach (DialogueLine line in resolvedLines)
         {
             if (line == null || string.IsNullOrWhiteSpace(line.text))
             {
@@ -426,9 +431,9 @@ public class DialogueController : MonoBehaviour
                 return false;
             }
 
-            if (speakerRegistry == null || !speakerRegistry.TryGetSpeaker(line.speaker, out _))
+            if (speakerRegistry == null || !speakerRegistry.TryGetSpeaker(line.speakerId, out _))
             {
-                reason = $"Conversation '{conversation.conversationId}' references unknown speaker '{line?.speaker}'.";
+                reason = $"Conversation '{conversation.conversationId}' references unknown speaker '{line?.speakerId}'.";
                 return false;
             }
         }

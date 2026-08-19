@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: Cadet
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: Cadet
-  dialogueVariations:
-  - lines:
-    - Look over there. Do you recognize that gentleman?
-  - lines:
-    - Keep your voice down, or someone may hear us.
-  - lines:
-    - This evening is far more entertaining than I expected.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_cadet

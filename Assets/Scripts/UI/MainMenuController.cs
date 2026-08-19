@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,13 +13,48 @@ public sealed class MainMenuController : MonoBehaviour
 
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button loadGameButton;
+    [SerializeField] private TMP_Dropdown languageDropdown;
     [SerializeField] private string newGameChapterId = "chapter_1";
 
     private bool isLoading;
 
     private void Start()
     {
+        BindLanguageDropdown();
         RefreshButtons();
+    }
+
+    private void OnDestroy()
+    {
+        if (languageDropdown != null)
+            languageDropdown.onValueChanged.RemoveListener(HandleLanguageChanged);
+    }
+
+    private void BindLanguageDropdown()
+    {
+        if (languageDropdown == null)
+        {
+            Debug.LogWarning("Main Menu has no language dropdown assigned.", this);
+            return;
+        }
+
+        languageDropdown.onValueChanged.RemoveListener(HandleLanguageChanged);
+        languageDropdown.ClearOptions();
+        languageDropdown.AddOptions(new List<TMP_Dropdown.OptionData>
+        {
+            new("English"),
+            new("Filipino")
+        });
+
+        int selectedIndex = GameLanguage.CurrentCode == "fil" ? 1 : 0;
+        languageDropdown.SetValueWithoutNotify(selectedIndex);
+        languageDropdown.RefreshShownValue();
+        languageDropdown.onValueChanged.AddListener(HandleLanguageChanged);
+    }
+
+    private void HandleLanguageChanged(int selectedIndex)
+    {
+        GameLanguage.Set(selectedIndex == 1 ? "fil" : "en");
     }
 
     /// <summary>

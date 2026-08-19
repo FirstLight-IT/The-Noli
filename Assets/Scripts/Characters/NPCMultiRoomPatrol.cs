@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -15,7 +16,7 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         [Tooltip("The first waypoint used when this room becomes active.")]
         public NPCWaypoint startingWaypoint = null;
 
-        [Tooltip("The NPC leaves only after the timer expires and it next reaches this waypoint.")]
+        [Tooltip("After the room timer expires, the NPC follows the waypoint network to this exit.")]
         public NPCWaypoint exitWaypoint = null;
 
         [Min(0f)] public float minimumPatrolSeconds = 20f;
@@ -125,7 +126,7 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         if (patrol.CurrentNetworkWaypoint == room.exitWaypoint &&
             !patrol.LastWaypointWasBlockedAlternative)
         {
-            BeginTransition();
+            BeginTransition(room.exitWaypoint);
         }
     }
 
@@ -134,20 +135,26 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         if (!isRunning || !mayLeaveCurrentRoom)
             return;
 
-        if (waypoint == rooms[currentRoomIndex].exitWaypoint &&
-            !patrol.LastWaypointWasBlockedAlternative)
-        {
-            BeginTransition();
-        }
+        BeginTransition(waypoint);
     }
 
-    private void BeginTransition()
+    private void BeginTransition(NPCWaypoint departureWaypoint)
     {
         RoomStage room = rooms[currentRoomIndex];
+        if (!TryBuildTransitionRoute(departureWaypoint, room, out Transform[] transitionRoute))
+        {
+            Debug.LogError(
+                $"{gameObject.name} cannot reach the {room.roomName} exit through its waypoint network.",
+                this);
+            isRunning = false;
+            mayLeaveCurrentRoom = false;
+            return;
+        }
+
         mayLeaveCurrentRoom = false;
         patrol.SuspendPatrol();
 
-        if (fixedRoute.TryBeginRoute(room.routeToNextRoom, false))
+        if (fixedRoute.TryBeginRoute(transitionRoute, false))
             return;
 
         Debug.LogError(
@@ -155,6 +162,84 @@ public class NPCMultiRoomPatrol : MonoBehaviour
             this);
         patrol.ResumePatrol();
         isRunning = false;
+    }
+
+    private static bool TryBuildTransitionRoute(
+        NPCWaypoint departureWaypoint,
+        RoomStage room,
+        out Transform[] transitionRoute)
+    {
+        transitionRoute = Array.Empty<Transform>();
+
+        if (departureWaypoint == null ||
+            room == null ||
+            room.exitWaypoint == null ||
+            room.routeToNextRoom == null ||
+            room.routeToNextRoom.Length == 0 ||
+            !TryBuildWaypointPath(departureWaypoint, room.exitWaypoint, out List<NPCWaypoint> waypointPath))
+        {
+            return false;
+        }
+
+        List<Transform> routePoints = new(
+            waypointPath.Count + room.routeToNextRoom.Length);
+
+        foreach (NPCWaypoint waypoint in waypointPath)
+            routePoints.Add(waypoint.transform);
+
+        routePoints.AddRange(room.routeToNextRoom);
+        transitionRoute = routePoints.ToArray();
+        return transitionRoute.Length > 0;
+    }
+
+    private static bool TryBuildWaypointPath(
+        NPCWaypoint start,
+        NPCWaypoint destination,
+        out List<NPCWaypoint> path)
+    {
+        path = new List<NPCWaypoint>();
+
+        if (start == null || destination == null)
+            return false;
+
+        if (start == destination)
+            return true;
+
+        Queue<NPCWaypoint> searchQueue = new();
+        Dictionary<NPCWaypoint, NPCWaypoint> previousWaypoints = new();
+        searchQueue.Enqueue(start);
+        previousWaypoints.Add(start, null);
+
+        while (searchQueue.Count > 0)
+        {
+            NPCWaypoint current = searchQueue.Dequeue();
+            if (current.Neighbours == null)
+                continue;
+
+            foreach (NPCWaypoint neighbour in current.Neighbours)
+            {
+                if (neighbour == null || previousWaypoints.ContainsKey(neighbour))
+                    continue;
+
+                previousWaypoints.Add(neighbour, current);
+                if (neighbour == destination)
+                {
+                    NPCWaypoint pathWaypoint = destination;
+                    while (pathWaypoint != start)
+                    {
+                        path.Add(pathWaypoint);
+                        pathWaypoint = previousWaypoints[pathWaypoint];
+                    }
+
+                    path.Reverse();
+                    return true;
+                }
+
+                searchQueue.Enqueue(neighbour);
+            }
+        }
+
+        return false;
     }
 
     private void HandleTransitionCompleted()

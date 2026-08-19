@@ -1,0 +1,588 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "artifacts": [
+    {
+      "artifactId": "artifact_chineselantern",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Chinese Lantern",
+          "shortName": "Lantern",
+          "description": [
+            "Costly Chinese lanterns hang from the ceiling of the caida. Their decorative light helps conceal the room’s otherwise grim and unsettling collection of religious images. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Lámparang Tsino",
+          "shortName": "Lámpara",
+          "description": [
+            "Nakasabit sa kisame ang maririkit at mamahaling lámparang gawa sa China. Bahagi ang mga ito ng mga palamuting inilagay sa caida upang pagtakpan ang tila masamang pahiwatig ng mga larawang nakapaligid sa silid."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_dinnerplates",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Dinner Plates",
+          "shortName": "Plates",
+          "description": [
+            "Plates are used to serve portions of tinola to the guests. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Pinggan",
+          "shortName": "Pinggan",
+          "description": [
+            "Ginagamit ang mga pinggan sa paghahain ng tinola sa mga panauhin."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_driedbotetefish",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Dried Botete Fish",
+          "shortName": "Dried Botete",
+          "description": [
+            "These dried and inflated fish, called botetes, hang from the ceiling as curious decorations. Their swollen bodies give them a strange and memorable appearance."
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Tuyong Isdang Botete",
+          "shortName": "Tuyong Botete",
+          "description": [
+            "Nakasabit bilang palamuti ang mga tuyong isdang botete na hinipan upang bumintog. Dahil sa kanilang namamagang anyo, kakaiba at madaling matandaan ang mga ito."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_emptybirdcage",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Empty Bird Cage",
+          "shortName": "Bird Cage",
+          "description": [
+            "Bird cages without birds hang from the ceiling as decorations. Their emptiness gives them an unusual and somewhat lifeless appearance. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Walang-Lamang Hawla ng Ibon",
+          "shortName": "Hawla ng Ibon",
+          "description": [
+            "Nakasabit bilang mga palamuti ang mga hawlang walang ibon. Ang kawalan ng laman ng mga ito ay nagbibigay sa kanila ng kakaiba at tila walang-buhay na anyo."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_fadedairplant",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Faded Air Plants",
+          "shortName": "Air Plant",
+          "description": [
+            "Faded air plants hang among the decorations of the caida. Their withered condition contrasts with the expense and extravagance of the gathering. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Lantang Halamang Nakabitin",
+          "shortName": "Halamang Nakabitin",
+          "description": [
+            "Nakasabit sa mga palamuti ng caida ang mga lantang halaman. Ang kanilang pagkalanta ay taliwas sa karangyaan at malaking gastos ng pagtitipon."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_frostedglassglobes",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Frosted-Glass Globes",
+          "shortName": "Glass Globes",
+          "description": [
+            "A red globe made of frosted glass hangs among the ceiling decorations, adding colored light to the caida.",
+            "A green frosted-glass globe hangs from the ceiling as part of Capitan Tiago’s costly decorations. ",
+            "A blue globe of frosted glass hangs beside the other colored globes, contributing to the festive illumination of the room. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Bolang Kristal",
+          "shortName": "Bolang Kristal",
+          "description": [
+            "Isang pulang bolang kristal na may azogue ang nakasabit kasama ng mga palamuti sa kisame.",
+            "Isang berdeng bolang kristal na may azogue ang nakasabit sa kisame bilang bahagi ng mamahaling mga palamuti ni Capitan Tiago.",
+            "Isang asul na bolang kristal na may azogue ang nakasabit katabi ng iba pang makukulay na bola."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_glassdisplaystatue",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Glass Display Figurines",
+          "shortName": "Display Figurines",
+          "description": [
+            "At the back of the caida stands a glass case set in a splendid and elegant Renaissance-style framework, possibly made by Arévalo. Inside is a religious scene rendered with extreme realism. ",
+            "The display shows Our Lady of Peace and Prosperous Voyages, worshiped in Antipolo, visiting Capitana Inez while disguised as a beggar. ",
+            "Capitana Inez is shown during her sickness, with yellow and bluish tones that make her appear almost like a decaying corpse. The figure is rendered with unsettling realism. ",
+            "Glasses and other objects associated with a long illness surround Capitana Inez. They are reproduced so minutely that even their contents can be distinguished. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Pigurin sa Salaming Display",
+          "shortName": "Mga Pigurin",
+          "description": [
+            "Sa dulo ng caida ay makikita, sa loob ng isang maringal at magandang Renaissance-style na balangkas na gawa ni Arévalo, ang isang display na kinaroroonan ng dalawang matandang babae.",
+            "Ipinakikita sa display ang Nuestra Señora de la Paz y Buen Viaje, na sinasamba sa Antipolo, na dumadalaw kay Capitana Inés sa anyo ng isang babaeng namamalimos.",
+            "Ipinakikita si Capitana Inés habang may sakit; dahil sa dilaw at asul na kulay ng kanyang mukha, tila isa na siyang bangkay na nabubulok. Nakababagabag ang pagiging makatotohanan ng pagkakalarawan.",
+            "Nasa paligid ni Capitana Inés ang mga baso at iba pang kagamitang karaniwang naiipon sa mahabang pagkakasakit. Napakadetalyado ng pagkakagawa sa mga ito na maging ang kanilang laman ay makikita."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_largetinolatureen",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Large Tinola Tureen",
+          "shortName": "Tinola Tureen",
+          "description": [
+            "A large steaming tureen is brought to the table when dinner begins. It contains the tinola specially ordered by Capitan Tiago to celebrate Ibarra’s return. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Malaking Tureen ng Tinola",
+          "shortName": "Tureen ng Tinola",
+          "description": [
+            "Isang malaking umuusok na tureen ang dinadala sa mesa sa pagsisimula ng hapunan. Nilalaman nito ang tinolang sadyang ipinahanda ni Capitan Tiago upang ipagdiwang ang pagbabalik ni Ibarra."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_orchestrainstruments",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Orchestra Instruments",
+          "shortName": "Instruments",
+          "description": [
+            "These instruments belong to the orchestra stationed in the caida during the celebration. Their music can be heard by visitors even before they enter the upper floor. \r "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Instrumento ng Orkestra",
+          "shortName": "Mga Instrumento",
+          "description": [
+            "Ang mga instrumentong ito ay ginagamit ng orkestrang nasa caida sa panahon ng pagtitipon. Naririnig ng mga panauhin ang kanilang tugtog bago pa man sila makarating sa itaas na palapag."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_painting_hell",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "\"Hell\" Painting",
+          "shortName": "\"Hell\"",
+          "description": [
+            "This painting presents a religious image of Hell. Its frightening subject is among the strangely chosen decorations overlooking the feast. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Pinturang \"Ang Impiyerno\"",
+          "shortName": "\"Ang Impiyerno\"",
+          "description": [
+            "Isa ito sa mga larawang panrelihiyon na nakasabit sa mga dingding: \"Ang Impiyerno.\" Ang nakatatakot na paksa nito ay kapansin-pansing katabi ng mga paghahanda para sa handaan."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_painting_purgatory",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "\"Purgatory\" Painting",
+          "shortName": "\"Purgatory\"",
+          "description": [
+            "A religious painting depicting Purgatory hangs on the wall of the caida.  Its grim subject contrasts sharply with the festive dinner being prepared beneath it.  "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Pinturang \"Ang Purgatoryo\"",
+          "shortName": "\"Ang Purgatoryo\"",
+          "description": [
+            "Isang larawang panrelihiyon tungkol sa \"Ang Purgatoryo\" ang nakasabit sa dingding ng caida. Ang malagim nitong paksa ay kapansin-pansing taliwas sa masayang hapunang inihahanda sa silid."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_painting_thedeathofthejust",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "\"The Death of the Just\" Painting",
+          "shortName": "\"Death of the Just\"",
+          "description": [
+            "This religious painting depicts the death of a righteous person. It hangs in the dining area beside other images dealing with death, judgment, and the afterlife. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Pinturang \"Ang Pagkamatay ng Banal\"",
+          "shortName": "\"Pagkamatay ng Banal\"",
+          "description": [
+            "Ang larawang panrelihiyong ito, \"Ang Pagkamatay ng Banal,\" ay nakasabit kasama ng iba pang mga larawang tumatalakay sa kamatayan, paghuhukom, at kabilang-buhay."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_painting_thedeathofthesinner",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "\"The Death of the Sinner\"",
+          "shortName": "\"Death of the Sinner\"",
+          "description": [
+            "This painting depicts the death of a sinner. Its disturbing subject contributes to the dark and solemn collection decorating the walls of the dining room. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "\"Ang Pagkamatay ng Makasalanan\"",
+          "shortName": "\"Pagkamatay ng Makasalanan\"",
+          "description": [
+            "Inilalarawan ng larawang ito ang \"Ang Pagkamatay ng Makasalanan.\" Ang nakababagabag nitong paksa ay bahagi ng madilim at taimtim na koleksiyon ng mga larawang nakasabit sa silid-kainan."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_painting_thelastjudgement",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "\"The Last Judgement\" Painting",
+          "shortName": "\"Last Judgement\"",
+          "description": [
+            "A religious painting portraying the Last Judgment hangs among the motley pictures in the caida. It reminds viewers of the final judgment of humanity. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Pinturang \"Ang Huling Paghuhukom\"",
+          "shortName": "\"Huling Paghuhukom\"",
+          "description": [
+            "Ang larawang panrelihiyong \"Ang Huling Paghuhukom\" ay nakasabit kasama ng iba pang sari-saring larawan sa caida. Ipinapaalala nito sa tumitingin ang huling paghuhukom sa sangkatauhan."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_plant",
+      "roomId": "ground_floor",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Plant",
+          "shortName": "",
+          "description": [
+            "A plant displayed inside the mansion."
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Halaman",
+          "shortName": "",
+          "description": [
+            "Isang halamang nakadispley sa loob ng mansiyon."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_tinola",
+      "roomId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Bowl of Tinola",
+          "shortName": "Tinola",
+          "description": [
+            "Tinola is described as a stew made with chicken and squash. Capitan Tiago orders it especially for Ibarra, believing that he has not tasted it during his years in Europe. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mangkok ng Tinola",
+          "shortName": "Tinola",
+          "description": [
+            "Ang tinola ay pagkaing gawa sa inahing manok at upo. Sadyang ipinahanda ito ni Capitan Tiago para kay Ibarra, sa pag-aakalang hindi niya ito natikman sa mga taon niyang nasa Europa."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_englishdata",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "English Biscuits",
+          "shortName": "Biscuits",
+          "description": [
+            "English biscuits are placed on the small table beside the bottles of wine, serving as refreshments for the guests."
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Biskwit na Ingles",
+          "shortName": "Biskwit",
+          "description": [
+            "May mga biskwit na Ingles sa maliit na mesa katabi ng mga bote ng alak, bilang pagkain para sa mga panauhin."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_brokenplate",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Broken Plate",
+          "shortName": "Broken Plate",
+          "description": [
+            "The sound of a plate breaking gives Capitan Tiago’s elderly cousin an excuse to rush away and scold the servants responsible for the accident."
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Basag na Pinggan",
+          "shortName": "Basag na Pinggan",
+          "description": [
+            "Sinamantala ng matandang pinsan ni Capitan Tiago ang paglagapak ng isang pinggang nabasag upang mabilis na lumabas habang nagbubulong ng pagsaway."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_buyos",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Plate of Cigars and Buyos",
+          "shortName": "Cigars and Buyos",
+          "description": [
+            "A plate containing cigars and buyos is offered to the Spanish ladies by Capitan Tiago’s elderly cousin as part of her duties in receiving the guests."
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Pinggan ng Tabako at Buyo",
+          "shortName": "Tabako at Buyo",
+          "description": [
+            "Isang pinggan ng tabako at buyo ang iniaalok ng matandang pinsan ni Capitan Tiago sa mga babaeng Espanyol bilang bahagi ng kanyang pagtanggap sa mga panauhin."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_chandelier",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Chandelier",
+          "shortName": "Chandelier",
+          "description": [
+            "Gleaming chandeliers illuminate the sala. Their brilliance helps display the wealth and elegance of Capitan Tiago’s home. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Araña",
+          "shortName": "Araña",
+          "description": [
+            "Nagniningning ang mga araña sa sala. Ang kanilang liwanag ay nakadaragdag sa pagpapakita ng yaman at karangyaan ng bahay ni Capitan Tiago."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_europeanchair",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "European Chairs",
+          "shortName": "European Chairs",
+          "description": [
+            "Elegant European chairs furnish the sala. They may be uncomfortable and unhealthy, but Capitan Tiago values their display of luxury more than the comfort of his guests."
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Silyang Europeo",
+          "shortName": "Silyang Europeo",
+          "description": [
+            "Magaganda ang mga silyang Europeo sa sala, bagaman marahil ay hindi maginhawang gamitin at maaari pang makasama sa katawan. Higit na pinahahalagahan ni Capitan Tiago ang karangyaan ng mga ito kaysa sa kaginhawahan ng kanyang mga panauhin."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_mirrors",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Massive Mirrors",
+          "shortName": "Mirrors",
+          "description": [
+            "Massive mirrors decorate the sala, reflecting the guests, chandeliers, and brilliant lighting of the gathering. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Malalaking Salamin",
+          "shortName": "Mga Salamin",
+          "description": [
+            "Napakalalaking salamin ang nagpapalamuti sa sala, sa gitna ng mga panauhin at ng nagniningning na mga araña."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_ourlady",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Images of Our Lady",
+          "shortName": "Our Lady",
+          "description": [
+            "Different likenesses of Our Lady hang on the walls of the sala. Their presence seems to encourage silence and religious behavior among the assembled women. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Larawan ng Nuestra Señora",
+          "shortName": "Nuestra Señora",
+          "description": [
+            "Nakasabit sa mga dingding ng sala ang mga larawan ng iba't ibang Nuestra Señora. Tila ang mga ito ang pumipilit sa mga dalagang manahimik at magpakahinhing lubos."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_painting_tiago",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Capitan Tiago Oil Painting",
+          "shortName": "\"Capitan Tiago\"",
+          "description": [
+            "The painting shows a handsome man in formal dress, rigid and erect, holding a tasseled cane in stiff fingers covered with rings. His pose seems to declare how well dressed and dignified he is. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Larawang Langis ni Capitan Tiago",
+          "shortName": "\"Capitan Tiago\"",
+          "description": [
+            "Makikita sa larawang langis ang isang makisig na lalaking nakapormal, unat at tuwid na tulad ng bastong may borlas na hawak ng kanyang matitigas na daliring puno ng mga singsing. Wari'y ipinagmamalaki ng kanyang anyo kung gaano siya karikit manamit at kagalang-galang."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_piano",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Grand Piano",
+          "shortName": "piano",
+          "description": [
+            "A grand piano of great price stands on a raised platform in the sala. On this particular evening, its additional virtue is that no one is playing it. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Grand Piano",
+          "shortName": "Piano",
+          "description": [
+            "Sa ibabaw ng isang tarima ay may isang mainam at napakamahal na grand piano. Lalo itong mahalaga sa gabing ito sapagkat walang sinumang tumutugtog nito."
+          ]
+        }
+      ]
+    },
+    {
+      "artifactId": "artifact_wine",
+      "roomId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Fancy Wine Bottles",
+          "shortName": "Wine Bottles",
+          "description": [
+            "Bottles of wine stand on the small table around which several male guests gather and debate. "
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Mga Maringal na Bote ng Alak",
+          "shortName": "Mga Bote ng Alak",
+          "description": [
+            "May mga bote ng alak sa maliit na mesang pinalilibutan ng ilang lalaking panauhing masiglang nag-uusap at nagtatalo."
+          ]
+        }
+      ]
+    }
+  ]
+}

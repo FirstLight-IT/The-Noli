@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: Waiter
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: Waiter
-  dialogueVariations:
-  - lines:
-    - "\u201CDinner will be served shortly. Please remain near the dining area."
-  - lines:
-    - Would you care for wine, or perhaps a glass of water?
-  - lines:
-    - Please excuse me. This dish must be served while it is still hot.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_waiter

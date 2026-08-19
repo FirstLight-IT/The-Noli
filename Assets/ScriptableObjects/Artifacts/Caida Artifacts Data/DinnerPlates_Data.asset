@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: DinnerPlates_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_dinnerplates
-  displayName: Dinner Plates
-  shortName: Plates
   roomID: caida
   image: {fileID: 439542894343639503, guid: 8f88da8b6ac368d45a882122284f813f, type: 3}
-  description:
-  - 'Plates are used to serve portions of tinola to the guests. '

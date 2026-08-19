@@ -1,14 +1,88 @@
 {
   "conversationId": "san_diego_transfer",
-  "lines": [
-    { "speaker": "Fray Sibyla", "text": "Did your Reverence, Fray Damaso, say that you had been twenty years in the town of San Diego and that you had left it?" },
-    { "speaker": "Fray Sibyla", "text": "Wasn’t your Reverence satisfied with the town?" },
-    { "speaker": "Fray Damaso", "text": "No!" },
-    { "speaker": "Fray Sibyla", "text": "It must be painful to leave a town where one has been for twenty years and which he knows as well as the clothes he wears." },
-    { "speaker": "Fray Sibyla", "text": "I certainly was sorry to leave Kamiling and that after I had been there only a few months." },
-    { "speaker": "Fray Sibyla", "text": "But my superiors did it for the good of the Orders for my own good." },
-    { "speaker": "Fray Damaso", "text": "Either Religion is a fact or it is not!" },
-    { "speaker": "Fray Damaso", "text": "That is, either the curates are free or they are not! The country is going to ruin, it is lost!" },
-    { "speaker": "Señor Laruja", "text": "He’s in a bad humor because you haven’t treated him with deference." } 
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Did your Reverence, Fray Damaso, say that you had been twenty years in the town of San Diego and that you had left it?"
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Wasn’t your Reverence satisfied with the town?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "No!"
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "It must be painful to leave a town where one has been for twenty years and which he knows as well as the clothes he wears."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "I certainly was sorry to leave Kamiling and that after I had been there only a few months."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "But my superiors did it for the good of the Orders for my own good."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Either Religion is a fact or it is not!"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "That is, either the curates are free or they are not! The country is going to ruin, it is lost!"
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "He’s in a bad humor because you haven’t treated him with deference."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Sinasabi ng inyong Kagalang-galang, Padre Damaso, na kayo'y nanirahan nang dalawampung taon sa bayang San Diego at kayo'y umalis doon..."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Hindi po ba kinalulugdan ng inyong Kagalang-galang ang bayang iyon?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Hindi!"
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Marahil nga'y nakapagpapighati ang iwan ang isang bayang tinahanan nang dalawampung taon at napagkikilalang tulad sa habitong suot."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Sa ganang akin lamang naman, dinaramdam kong iwan ang Camiling, gayong iilang buwan akong nanirahan doon..."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Ngunit yao'y ginawa ng mga pinuno sa ikagagaling ng Kapisanan... at sa ikagagaling ko naman."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "O may Relihiyon o wala!"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Sa makatuwid baga'y, o ang mga kura'y may kalayaan o wala! Napapahamak ang lupaing ito, nasa kapahamakan!"
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "Masama ang loob dahil hindi ninyo binigyan ng Reverencia!"
+        }
+      ]
+    }
   ]
 }

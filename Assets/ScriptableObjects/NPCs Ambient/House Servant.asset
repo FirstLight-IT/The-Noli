@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: House Servant
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: House Servant
-  dialogueVariations:
-  - lines:
-    - Everything must be ready before the guests begin complaining.
-  - lines:
-    - Careful around the plates. We have already broken enough for one evening.
-  - lines:
-    - Pardon me. I must carry these dishes to the dining table.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_house_servant

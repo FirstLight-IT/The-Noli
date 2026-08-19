@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: FadedAirPlant_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_fadedairplant
-  displayName: Faded Air Plants
-  shortName: Air Plant
   roomID: caida
   image: {fileID: -7073360509117258405, guid: 82edf57ce2e2a2b48ba32ebf72a4dd51, type: 3}
-  description:
-  - 'Faded air plants hang among the decorations of the caida. Their withered condition
-    contrasts with the expense and extravagance of the gathering. '

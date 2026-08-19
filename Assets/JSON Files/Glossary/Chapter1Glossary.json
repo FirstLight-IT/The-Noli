@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "entries": [
+    {
+      "entryId": "caida",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Caida",
+          "category": "Architecture",
+          "meaning": "A spacious upper hallway used for dining and the orchestra during the gathering."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Caida",
+          "category": "Arkitektura",
+          "meaning": "Maluwang na bulwagan sa itaas na ginamit sa kainan at para sa orkestra."
+        }
+      ]
+    },
+    {
+      "entryId": "sala",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Sala",
+          "category": "Architecture",
+          "meaning": "The main reception room where Capitan Tiago's guests gather and socialize."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Sala",
+          "category": "Arkitektura",
+          "meaning": "Pangunahing silid-tanggapan kung saan nagtitipon at nag-uusap ang mga panauhin ni Capitan Tiago."
+        }
+      ]
+    },
+    {
+      "entryId": "azotea",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Azotea",
+          "category": "Architecture",
+          "meaning": "An open terrace or outdoor area adjoining the upper floor of the house."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Azotea",
+          "category": "Arkitektura",
+          "meaning": "Bukas na terasa o panlabas na bahaging karugtong ng itaas na palapag ng bahay."
+        }
+      ]
+    },
+    {
+      "entryId": "indio",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Indio",
+          "category": "Colonial Society",
+          "meaning": "Spanish colonial term used to refer to the native inhabitants of the Philippines."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Indio",
+          "category": "Lipunang Kolonyal",
+          "meaning": "Katawagang kolonyal ng mga Espanyol para sa mga katutubong naninirahan sa Pilipinas."
+        }
+      ]
+    },
+    {
+      "entryId": "friar",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Friar",
+          "category": "Religion",
+          "meaning": "A member of a Catholic religious order, such as Damaso and Sibyla."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Prayle",
+          "category": "Relihiyon",
+          "meaning": "Kasapi ng isang orden ng Simbahang Katolika, gaya nina Damaso at Sibyla."
+        }
+      ]
+    },
+    {
+      "entryId": "curate",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Curate",
+          "category": "Religion",
+          "meaning": "A priest responsible for the religious affairs of a parish or town."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Kura",
+          "category": "Relihiyon",
+          "meaning": "Paring nangangasiwa sa mga gawaing panrelihiyon ng isang parokya o bayan."
+        }
+      ]
+    },
+    {
+      "entryId": "coadjutor",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Coadjutor",
+          "category": "Religion",
+          "meaning": "An assistant priest who helps the parish priest perform his duties."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Koadyutor",
+          "category": "Relihiyon",
+          "meaning": "Katulong na pari na tumutulong sa kura sa kanyang mga tungkulin."
+        }
+      ]
+    },
+    {
+      "entryId": "heretic",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Heretic",
+          "category": "Religion",
+          "meaning": "Someone whose beliefs are considered contrary to established Church doctrine."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Erehe",
+          "category": "Relihiyon",
+          "meaning": "Taong may paniniwalang itinuturing na salungat sa opisyal na aral ng Simbahan."
+        }
+      ]
+    },
+    {
+      "entryId": "civil_guard",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Civil Guard",
+          "category": "Government",
+          "meaning": "The colonial police force in which Lieutenant Guevara serves."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Guardia Civil",
+          "category": "Pamahalaan",
+          "meaning": "Puwersang panseguridad ng pamahalaang kolonyal na kinabibilangan ni Tenyente Guevara."
+        }
+      ]
+    },
+    {
+      "entryId": "governor_general",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Governor-General",
+          "category": "Government",
+          "meaning": "The highest-ranking representative of Spanish colonial authority in the Philippines."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Gobernador-Heneral",
+          "category": "Pamahalaan",
+          "meaning": "Pinakamataas na kinatawan ng pamahalaang kolonyal ng Espanya sa Pilipinas."
+        }
+      ]
+    },
+    {
+      "entryId": "tobacco_monopoly",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Tobacco Monopoly",
+          "category": "Economy",
+          "meaning": "A government-controlled tobacco system whose abolition is discussed by the guests."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Monopolyo sa Tabako",
+          "category": "Ekonomiya",
+          "meaning": "Sistemang kontrolado ng pamahalaan sa tabako na binanggit sa usapan ng mga panauhin."
+        }
+      ]
+    },
+    {
+      "entryId": "morisqueta",
+      "languages": [
+        {
+          "languageCode": "en",
+          "term": "Morisqueta",
+          "category": "Food / Expression",
+          "meaning": "A term for cooked rice used by Damaso when describing his years here."
+        },
+        {
+          "languageCode": "fil",
+          "term": "Morisqueta",
+          "category": "Pagkain / Pahayag",
+          "meaning": "Katawagan sa lutong kanin na ginamit ni Damaso sa paglalarawan ng kanyang paninirahan."
+        }
+      ]
+    }
+  ]
+}

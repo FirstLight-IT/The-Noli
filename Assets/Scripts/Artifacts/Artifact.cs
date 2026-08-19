@@ -113,7 +113,6 @@ public class Artifact : MonoBehaviour, IInteractable
 
         public void interact()
         {
-            Debug.Log($"{gameObject.name} interacted");
             OnArtifactInteracted?.Invoke(ArtifactID);
             setInteracted();
         }
@@ -149,9 +148,7 @@ public class Artifact : MonoBehaviour, IInteractable
             if (!beenInteracted)
             {
                 counter++; 
-                Debug.Log($"Walk Passed {gameObject.name} - {counter}x");
                 OnArtifactPassed?.Invoke(artifactData);
-                
             }
                
             return counter;

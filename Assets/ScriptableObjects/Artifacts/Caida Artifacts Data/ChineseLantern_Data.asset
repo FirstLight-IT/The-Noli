@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: ChineseLantern_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_chineselantern
-  displayName: Chinese Lantern
-  shortName: Lantern
   roomID: caida
   image: {fileID: 1826027395848021005, guid: 7aebdeb69f58dcb4f9a384461bc6dfd9, type: 3}
-  description:
-  - "Costly Chinese lanterns hang from the ceiling of the caida. Their decorative
-    light helps conceal the room\u2019s otherwise grim and unsettling collection
-    of religious images. "

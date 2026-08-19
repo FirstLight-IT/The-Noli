@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165f36eb286449c59577d840a2a8c68c, type: 3}
   m_Name: Chapter 2
   m_EditorClassIdentifier: Assembly-CSharp::ChapterDataSO
+  localizedDataJson: {fileID: 4900000, guid: 5be2d645c5f7807409a7cd19a4828e25, type: 3}
   chapterId: chapter_2
-  chapterLabel: Chapter II
-  title: Coming Soon
   contentAvailable: 0
   openingNarration: {fileID: 0}
   startingMissionId:

@@ -132,8 +132,6 @@ public class MissionController : MonoBehaviour
         activeMission = mission;
         OnMissionStatesChanged?.Invoke();
 
-        Debug.Log($"Mission started: {mission.Info.DisplayName}");
-
         if (mission.Info.MissionStepPrefabs == null || mission.Info.MissionStepPrefabs.Length == 0)
         {
             HandleMissionStepFailed(mission.Info.MissionId, 0, "Mission has no step prefabs.");
@@ -454,8 +452,6 @@ public class MissionController : MonoBehaviour
             objectiveDescriptionText.SetText(string.Empty);
 
         currentObjective = string.Empty;
-
-        Debug.Log($"Mission complete: {completedMission.Info.DisplayName}");
 
         RefreshMissionAvailability();
         OnMissionStatesChanged?.Invoke();

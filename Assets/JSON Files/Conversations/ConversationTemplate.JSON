@@ -1,20 +1,24 @@
 {
-  "conversationId": "test_convo1",
-  "lines": [
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" },
-    { "speaker": "", "text": "" }
+  "conversationId": "example_conversation",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "npc_id_here",
+          "text": "English dialogue here."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "npc_id_here",
+          "text": ""
+        }
+      ]
+    }
   ]
 }

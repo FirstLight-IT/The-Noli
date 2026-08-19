@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: OurLady_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_ourlady
-  displayName: Images of Our Lady
-  shortName: Our Lady
   roomID: sala
   image: {fileID: -783674722414317215, guid: d9a1730535a65fc4bb5e486df4270843, type: 3}
-  description:
-  - 'Different likenesses of Our Lady hang on the walls of the sala. Their presence
-    seems to encourage silence and religious behavior among the assembled women. '

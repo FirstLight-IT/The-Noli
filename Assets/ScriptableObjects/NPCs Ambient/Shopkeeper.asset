@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614e59f27a24a24cabac99b0dc8fcd9, type: 3}
   m_Name: Shopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
-  displayName: Shopkeeper
-  dialogueVariations:
-  - lines:
-    - Business has been slow, but gatherings like this are good for meeting customers.
-  - lines:
-    - Have you seen the decorations? They must have cost a considerable amount.
-  - lines:
-    - I know several people here by face, though very few by name.
+  localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
+  npcID: ambient_shopkeeper

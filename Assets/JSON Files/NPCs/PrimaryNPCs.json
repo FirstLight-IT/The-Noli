@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "npcs": [
+    {
+      "npcId": "blond_man",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Blond Man",
+          "characterFullName": "No Name",
+          "alias": "Rubicund Youth",
+          "characterCategory": "Foreign Visitor / Neutral",
+          "description": "An unnamed young foreigner who has only recently arrived in the Philippines. Curious and observant, he questions the prejudiced claims made by the more experienced guests instead of accepting them without examination.",
+          "biography": "The Blond Man attends Capitán Tiago’s gathering only four days after arriving in the Philippines. He explains that he came at his own expense to study the country rather than as a government employee. During his conversation with Fray Dámaso, he questions whether the supposed indolence of Filipinos is natural or the result of colonial conditions. After the dinner, he records observations for a work he calls Colonial Studies.",
+          "characterFacts": [
+            "His real name is not revealed.",
+            "He has been in the Philippines for only four days.",
+            "He came to study the country at his own expense.",
+            "He is not a government employee.",
+            "He questions Fray Dámaso’s negative generalizations about Filipinos.",
+            "He writes notes for a work titled Colonial Studies."
+          ],
+          "introductionLines": [
+            "I am merely a traveler newly arrived from Europe.",
+            "I came at my own expense to study this country."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "There is much here that I still do not understand",
+                "but that is precisely why I came."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Binatang Blond",
+          "characterFullName": "Walang Pangalan",
+          "alias": "Mapulang Binata",
+          "characterCategory": "Dayuhang Bisita / Neutral",
+          "description": "Isang hindi pinangalanang batang dayuhan na kararating lamang sa Pilipinas. Mausisa at mapagmasid, kinukuwestiyon niya ang mga mapanghusgang pahayag ng mga mas makaranasang panauhin sa halip na tanggapin ang mga ito nang hindi sinusuri.",
+          "biography": "Dumalo ang Binatang Blond sa pagtitipon ni Kapitan Tiago apat na araw lamang matapos dumating sa Pilipinas. Ipinaliwanag niyang dumating siya sa sariling gastos upang pag-aralan ang bansa at hindi bilang kawani ng pamahalaan. Sa pakikipag-usap kay Padre Damaso, tinanong niya kung likas ba ang sinasabing katamaran ng mga Pilipino o bunga ng mga kalagayang kolonyal. Pagkatapos ng hapunan, itinala niya ang kaniyang mga obserbasyon para sa isang akdang tinawag niyang Mga Pag-aaral na Kolonyal.",
+          "characterFacts": [
+            "Hindi ibinunyag ang kaniyang tunay na pangalan.",
+            "Apat na araw pa lamang siya sa Pilipinas.",
+            "Dumating siya upang pag-aralan ang bansa sa sarili niyang gastos.",
+            "Hindi siya kawani ng pamahalaan.",
+            "Kinukuwestiyon niya ang mga negatibong paglalahat ni Padre Damaso tungkol sa mga Pilipino.",
+            "Nagsusulat siya ng mga tala para sa akdang pinamagatang Mga Pag-aaral na Kolonyal."
+          ],
+          "introductionLines": [
+            "Isa lamang akong manlalakbay na kararating mula sa Europa.",
+            "Dumating ako sa sarili kong gastos upang pag-aralan ang bansang ito."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Marami pa akong hindi nauunawaan dito",
+                "ngunit iyon mismo ang dahilan kung bakit ako dumating."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "fray_damaso",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Fray Damaso",
+          "characterFullName": "Dámaso Verdolagas",
+          "alias": "Padre Dámaso",
+          "characterCategory": "Antagonist / Clergy / Franciscan Friar",
+          "description": "A loud, forceful and domineering Franciscan friar who formerly served as the parish priest of San Diego. He speaks with great confidence and shows open contempt toward Filipinos and government interference in religious authority.",
+          "biography": "Fray Dámaso is a Franciscan friar who claims to have lived in the Philippines for twenty-three years. He served in San Diego for twenty years and knew many of its residents through his position as their curate and confessor. During Capitán Tiago’s gathering, he argues that Filipinos are naturally ignorant and indolent and condemns reforms introduced by the colonial government. His hostility becomes especially clear when the discussion turns to the burial of Don Rafael Ibarra and when he treats Crisóstomo Ibarra with contempt.",
+          "characterFacts": [
+            "He belongs to the Franciscan order.",
+            "He served as the curate of San Diego for twenty years.",
+            "He claims to have spent twenty-three years in the Philippines.",
+            "He was transferred from San Diego after the controversy involving Don Rafael’s remains.",
+            "He speaks loudly and frequently interrupts other people.",
+            "He strongly defends the authority of the friars.",
+            "He expresses prejudiced views about Filipinos.",
+            "He denies having been an intimate friend of Don Rafael."
+          ],
+          "introductionLines": [
+            "I am Fray Damaso, a Franciscan and former curate of San Diego.",
+            "After more than twenty years in this country, I know its people well."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Do not come to me with theories and fine speeches",
+                "Experience has taught me more than any book could."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Padre Damaso",
+          "characterFullName": "Dámaso Verdolagas",
+          "alias": "Padre Dámaso",
+          "characterCategory": "Kontrabida / Klero / Pransiskanong Prayle",
+          "description": "Isang maingay, mapuwersa, at mapang-utos na Pransiskanong prayle na dating nagsilbing kura paroko ng San Diego. Nagsasalita siya nang may matinding pagtitiwala sa sarili at hayagang hinahamak ang mga Pilipino at ang pakikialam ng pamahalaan sa kapangyarihang panrelihiyon.",
+          "biography": "Si Padre Dámaso ay isang Pransiskanong prayle na nagsasabing dalawampu't tatlong taon na siyang naninirahan sa Pilipinas. Naglingkod siya sa San Diego nang dalawampung taon at nakilala ang marami sa mga naninirahan doon bilang kanilang kura at kumpesor. Sa pagtitipon ni Kapitan Tiago, iginiit niyang likas na mangmang at tamad ang mga Pilipino at tinuligsa ang mga repormang ipinatupad ng pamahalaang kolonyal. Lalong nahayag ang kaniyang pagkapoot nang mapag-usapan ang paglilibing kay Don Rafael Ibarra at nang hamakin niya si Crisóstomo Ibarra.",
+          "characterFacts": [
+            "Kabilang siya sa orden ng mga Pransiskano.",
+            "Naglingkod siya bilang kura ng San Diego nang dalawampung taon.",
+            "Sinasabi niyang dalawampu't tatlong taon na siya sa Pilipinas.",
+            "Inilipat siya mula sa San Diego matapos ang kontrobersiya sa mga labi ni Don Rafael.",
+            "Malakas siyang magsalita at madalas sumabat sa iba.",
+            "Mariin niyang ipinagtatanggol ang kapangyarihan ng mga prayle.",
+            "Nagpapahayag siya ng mapanghusgang pananaw tungkol sa mga Pilipino.",
+            "Itinatanggi niyang naging matalik siyang kaibigan ni Don Rafael."
+          ],
+          "introductionLines": [
+            "Ako si Padre Damaso, isang Pransiskano at dating kura ng San Diego.",
+            "Matapos ang mahigit dalawampung taon sa bansang ito, kilalang-kilala ko ang mga mamamayan nito."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Huwag mo akong lapitan dala ang mga teorya at magagandang talumpati",
+                "Mas marami akong natutuhan sa karanasan kaysa sa maituturo ng alinmang aklat."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "lieutenant_guevara",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Lieutenant Guevara",
+          "characterFullName": "Miguel Guevarra",
+          "alias": "Teniente Guevara",
+          "characterCategory": "Military / Civil Guard Officer",
+          "description": "An elderly lieutenant of the Civil Guard with a stern appearance and a direct manner of speaking. Unlike many of the guests, he openly defends the honor of Don Rafael Ibarra.",
+          "biography": "Lieutenant Guevara is an old officer of the Civil Guard who knew Don Rafael Ibarra personally. At Capitán Tiago’s gathering, he challenges Fray Dámaso’s account of the controversy surrounding Don Rafael’s burial. Guevara describes Don Rafael as an honorable and worthy man and condemns the removal of his body from the cemetery. When Crisóstomo arrives, the lieutenant welcomes him warmly and becomes emotional while speaking about his father.",
+          "characterFacts": [
+            "He is an officer of the Civil Guard.",
+            "He is described as tall, elderly and austere.",
+            "He speaks in a harsh, brief and direct manner.",
+            "He knew Don Rafael Ibarra personally.",
+            "He considers Don Rafael one of the worthiest men in the Philippines.",
+            "He rejects the claim that Don Rafael committed suicide.",
+            "He shows sympathy toward Crisóstomo Ibarra."
+          ],
+          "introductionLines": [
+            "Lieutenant Guevara, of the Civil Guard.",
+            "I speak plainly, and I expect others to do the same."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Rank and authority must still answer to justice.",
+                "I will not remain silent when an honorable man is slandered."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Tenyente Guevara",
+          "characterFullName": "Miguel Guevarra",
+          "alias": "Tenyente Guevara",
+          "characterCategory": "Militar / Opisyal ng Guardia Civil",
+          "description": "Isang matandang tenyente ng Guardia Civil na may mabagsik na anyo at tuwirang paraan ng pagsasalita. Hindi tulad ng maraming panauhin, hayagan niyang ipinagtatanggol ang dangal ni Don Rafael Ibarra.",
+          "biography": "Si Tenyente Guevara ay isang matandang opisyal ng Guardia Civil na personal na nakakilala kay Don Rafael Ibarra. Sa pagtitipon ni Kapitan Tiago, kinontra niya ang salaysay ni Padre Dámaso tungkol sa kontrobersiya sa paglilibing kay Don Rafael. Inilarawan ni Guevara si Don Rafael bilang marangal at karapat-dapat na tao at tinuligsa ang pag-alis sa bangkay nito mula sa sementeryo. Pagdating ni Crisóstomo, magiliw siyang tinanggap ng tenyente at naging emosyonal habang nagsasalita tungkol sa ama nito.",
+          "characterFacts": [
+            "Isa siyang opisyal ng Guardia Civil.",
+            "Inilarawan siyang matangkad, matanda, at mabagsik.",
+            "Mabagsik, maikli, at tuwiran siyang magsalita.",
+            "Personal niyang nakilala si Don Rafael Ibarra.",
+            "Itinuturing niya si Don Rafael na isa sa mga pinakakarapat-dapat na tao sa Pilipinas.",
+            "Tinatanggihan niya ang paratang na nagpakamatay si Don Rafael.",
+            "Nagpapakita siya ng malasakit kay Crisóstomo Ibarra."
+          ],
+          "introductionLines": [
+            "Tenyente Guevara, ng Guardia Civil.",
+            "Tuwiran akong magsalita, at inaasahan kong gayon din ang iba."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Kahit ang ranggo at kapangyarihan ay dapat managot sa katarungan.",
+                "Hindi ako mananahimik kapag sinisiraan ang isang marangal na tao."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "crisostomo_ibarra",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Crisostomo Ibarra",
+          "characterFullName": "Juan Crisóstomo Ibarra y Magsalin",
+          "alias": "Don Crisóstomo",
+          "characterCategory": "Protagonist / Filipino Ilustrado",
+          "description": "A courteous and educated young Filipino who returns home after seven years of study and travel in Europe. He is the son of the late Don Rafael Ibarra and is deeply troubled by the mystery surrounding his father’s death.",
+          "biography": "Juan Crisóstomo Ibarra y Magsalin returns to the Philippines after spending nearly seven years in Europe. Capitán Tiago introduces him as the son of his deceased friend, Don Rafael Ibarra. Ibarra is surprised by Fray Dámaso’s cold reception because he remembers the friar as a frequent guest and apparent friend of his father. Although Dámaso insults his education during dinner, Ibarra restrains his anger, responds respectfully and leaves before the dispute can worsen.",
+          "characterFacts": [
+            "He is the son of Don Rafael Ibarra.",
+            "He has recently returned from Europe.",
+            "He was away from the Philippines for almost seven years.",
+            "He spent time in Germany, Russian Poland and England.",
+            "He is described as tall, healthy and youthful.",
+            "His appearance shows faint traces of Spanish ancestry."
+          ],
+          "introductionLines": [],
+          "repeatDialogues": []
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Crisostomo Ibarra",
+          "characterFullName": "Juan Crisóstomo Ibarra y Magsalin",
+          "alias": "Don Crisóstomo",
+          "characterCategory": "Protagonista / Pilipinong Ilustrado",
+          "description": "Isang magalang at edukadong binatang Pilipino na umuwi matapos ang pitong taong pag-aaral at paglalakbay sa Europa. Anak siya ng yumaong si Don Rafael Ibarra at lubhang nababagabag sa hiwagang bumabalot sa pagkamatay ng kaniyang ama.",
+          "biography": "Bumalik sa Pilipinas si Juan Crisóstomo Ibarra y Magsalin matapos ang halos pitong taon sa Europa. Ipinakilala siya ni Kapitan Tiago bilang anak ng kaniyang yumaong kaibigang si Don Rafael Ibarra. Nagulat si Ibarra sa malamig na pagtanggap ni Padre Dámaso sapagkat naaalala niyang madalas itong bumisita at tila kaibigan ng kaniyang ama. Bagaman hinamak ni Dámaso ang kaniyang edukasyon sa hapunan, pinigil ni Ibarra ang galit, magalang na tumugon, at umalis bago pa lumala ang alitan.",
+          "characterFacts": [
+            "Anak siya ni Don Rafael Ibarra.",
+            "Kararating lamang niya mula sa Europa.",
+            "Halos pitong taon siyang nawala sa Pilipinas.",
+            "Nanirahan siya sa Alemanya, Polonyang Ruso, at Inglatera.",
+            "Inilarawan siyang matangkad, malusog, at bata.",
+            "Makikita sa kaniyang anyo ang bahagyang bakas ng lahing Espanyol."
+          ],
+          "introductionLines": [],
+          "repeatDialogues": []
+        }
+      ]
+    },
+    {
+      "npcId": "tia_isabel",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Tía Isabel",
+          "characterFullName": "Isabel",
+          "alias": "Tía Isabel, Capitán Tiago’s Cousin ",
+          "characterCategory": "Household Member / Hostess",
+          "description": "An elderly and good-natured cousin of Capitán Tiago who receives the female guests at his gathering. Although well-meaning, she struggles to speak Spanish and soon becomes tired of her ceremonial duties.",
+          "biography": "Isabel is Capitán Tiago’s cousin and the only woman initially receiving the female guests at the gathering. She offers cigars and buyos to the Spanish women and extends her hand for Filipino women to kiss in imitation of the friars’ social custom. She speaks Spanish poorly and quickly becomes bored with the reception. After hearing a plate break, she rushes away to reprimand the servants and does not return to her position.",
+          "characterFacts": [
+            "She is Capitán Tiago’s cousin.",
+            "Her name was not revealed til later.",
+            "She is described as an elderly woman with a sweet face.",
+            "She speaks Spanish poorly.",
+            "She receives the female guests at the gathering.",
+            "She offers cigars and buyos to Spanish women.",
+            "She allows Filipino women to kiss her hand.",
+            "She abandons the reception after hearing a plate break."
+          ],
+          "introductionLines": [
+            "Good evening. I am Isabel, a cousin of Capitan Tiago. I am helping receive his guests tonight.",
+            "...",
+            "Jesús! Just wait, you rascals!"
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Tiya Isabel",
+          "characterFullName": "Isabel",
+          "alias": "Tiya Isabel, Pinsan ni Kapitan Tiago",
+          "characterCategory": "Kasambahay / Punong-abala",
+          "description": "Isang matanda at mabait na pinsan ni Kapitan Tiago na tumatanggap sa mga babaeng panauhin sa kaniyang pagtitipon. Bagaman may mabuting hangarin, nahihirapan siyang magsalita ng Espanyol at agad napapagod sa kaniyang mga seremonyal na tungkulin.",
+          "biography": "Si Isabel ay pinsan ni Kapitan Tiago at ang tanging babaeng unang tumatanggap sa mga babaeng panauhin sa pagtitipon. Nag-aalok siya ng tabako at buyo sa mga Espanyola at inilalahad ang kamay upang hagkan ng mga Pilipina bilang paggaya sa kaugaliang panlipunan ng mga prayle. Mahina siyang magsalita ng Espanyol at agad naiinip sa pagtanggap. Nang makarinig ng nabasag na plato, nagmadali siyang umalis upang pagalitan ang mga katulong at hindi na bumalik sa kaniyang puwesto.",
+          "characterFacts": [
+            "Pinsan siya ni Kapitan Tiago.",
+            "Hindi ibinunyag ang kaniyang pangalan hanggang sa bandang huli.",
+            "Inilarawan siyang matandang babae na may maamong mukha.",
+            "Mahina siyang magsalita ng Espanyol.",
+            "Tinatanggap niya ang mga babaeng panauhin sa pagtitipon.",
+            "Nag-aalok siya ng tabako at buyo sa mga Espanyola.",
+            "Hinahayaan niyang hagkan ng mga Pilipina ang kaniyang kamay.",
+            "Iniwan niya ang pagtanggap nang makarinig ng nabasag na plato."
+          ],
+          "introductionLines": [
+            "Magandang gabi. Ako si Isabel, pinsan ni Kapitan Tiago. Tumutulong akong tumanggap sa kaniyang mga panauhin ngayong gabi.",
+            "...",
+            "Jesús! Maghintay lang kayo, mga salbahe!"
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "senor_laruja",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Señor Laruja",
+          "characterFullName": "Laruja",
+          "alias": "None",
+          "characterCategory": "Civilian Guest",
+          "description": "A small civilian guest familiar with colonial society in the Philippines. He generally supports the opinions of Fray Dámaso and expresses prejudiced views about Filipinos",
+          "biography": "Señor Laruja is one of the civilians seated with Fray Dámaso, Fray Sibyla, Lieutenant Guevara and the newly arrived Blond Man. He is described as a very small man with a black beard and a noticeably large nose. When Fray Dámaso asks him to confirm his accusations against Filipinos, Laruja agrees with him. During dinner, he also questions Ibarra about his years abroad and his observations of European society.",
+          "characterFacts": [
+            "His first name is not revealed.",
+            "He is described as very small.",
+            "He has a black beard.",
+            "He has a notably large nose.",
+            "He is already familiar with life in the Philippines.",
+            "He supports Fray Dámaso’s negative claims about Filipinos."
+          ],
+          "introductionLines": [
+            "Señor Laruja. I have spent enough time in this country to form a few opinions of my own."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Take care when contradicting Fray Damaso.",
+                "He does not enjoy being treated without proper deference."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Senyor Laruja",
+          "characterFullName": "Laruja",
+          "alias": "Wala",
+          "characterCategory": "Sibilyang Panauhin",
+          "description": "Isang maliit na sibilyang panauhin na pamilyar sa lipunang kolonyal sa Pilipinas. Karaniwan niyang sinasang-ayunan ang mga opinyon ni Padre Dámaso at nagpapahayag ng mapanghusgang pananaw tungkol sa mga Pilipino.",
+          "biography": "Si Senyor Laruja ay isa sa mga sibilyang nakaupo kasama nina Padre Dámaso, Padre Sibyla, Tenyente Guevara, at ng kararating na Lalaking Blond. Inilarawan siyang napakaliit na lalaki na may itim na balbas at kapansin-pansing malaking ilong. Nang hilingin ni Padre Dámaso na patunayan niya ang mga paratang nito laban sa mga Pilipino, sumang-ayon si Laruja. Sa hapunan, tinanong din niya si Ibarra tungkol sa mga taon nito sa ibang bansa at sa mga obserbasyon nito sa lipunang Europeo.",
+          "characterFacts": [
+            "Hindi ibinunyag ang kaniyang unang pangalan.",
+            "Inilarawan siyang napakaliit.",
+            "Mayroon siyang itim na balbas.",
+            "Kapansin-pansing malaki ang kaniyang ilong.",
+            "Pamilyar na siya sa buhay sa Pilipinas.",
+            "Sinusuportahan niya ang mga negatibong pahayag ni Padre Dámaso tungkol sa mga Pilipino."
+          ],
+          "introductionLines": [
+            "Senyor Laruja. Sapat na ang panahong inilagi ko sa bansang ito upang makabuo ng sarili kong mga opinyon."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Mag-ingat kapag sinasalungat si Padre Damaso.",
+                "Hindi niya gusto ang pagtrato sa kaniya nang walang nararapat na paggalang."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "fray_sibyla",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Fray Sibyla",
+          "characterFullName": "Hernando de la Sibyla",
+          "alias": "None",
+          "characterCategory": "Clergy / Dominican Friar",
+          "description": "A refined and intelligent Dominican friar known for speaking carefully and arguing through precise distinctions. Although outwardly polite, he closely observes the people and conflicts around him.",
+          "biography": "Fray Sibyla is a young Dominican friar serving as the curate of Binondo. He formerly taught at the Colegio de San Juan de Letran and earned a reputation as a highly skilled dialectician. During the gathering, he says little but listens carefully and directs questions toward Fray Dámaso concerning his transfer from San Diego. When the argument between Dámaso and Lieutenant Guevara intensifies, Sibyla intervenes using elaborate distinctions designed to calm the dispute without directly condemning his fellow friar.",
+          "characterFacts": [
+            "He belongs to the Dominican order.",
+            "He serves as the curate of Binondo.",
+            "He formerly taught at the Colegio de San Juan de Letran.",
+            "He is known as an accomplished dialectician.",
+            "He is described as youthful, handsome, graceful and polished.",
+            "He carefully weighs his words before speaking."
+          ],
+          "introductionLines": [
+            "I am Fray Sibyla, a Dominican and the curate of Binondo.",
+            "I prefer to consider my words carefully before speaking."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "One must distinguish carefully before passing judgment.",
+                "Things are rarely as simple as they first appear."
+              ]
+            },
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Padre Sibyla",
+          "characterFullName": "Hernando de la Sibyla",
+          "alias": "Wala",
+          "characterCategory": "Klero / Dominikanong Prayle",
+          "description": "Isang pino at matalinong Dominikanong prayle na kilala sa maingat na pagsasalita at pangangatwiran sa pamamagitan ng tiyak na mga pagkakaiba. Bagaman magalang sa panlabas, masusi niyang pinagmamasdan ang mga tao at tunggalian sa paligid niya.",
+          "biography": "Si Padre Sibyla ay isang batang Dominikanong prayle na nagsisilbing kura ng Binondo. Dati siyang nagturo sa Colegio de San Juan de Letran at nakilala bilang napakahusay na dialektiko. Sa pagtitipon, kakaunti ang kaniyang sinasabi ngunit maingat siyang nakikinig at nagtatanong kay Padre Dámaso tungkol sa paglipat nito mula sa San Diego. Nang tumindi ang pagtatalo nina Dámaso at Tenyente Guevara, namagitan si Sibyla gamit ang masalimuot na mga pagkakaiba upang payapain ang alitan nang hindi tuwirang kinokondena ang kapuwa prayle.",
+          "characterFacts": [
+            "Kabilang siya sa orden ng mga Dominikano.",
+            "Nagsisilbi siyang kura ng Binondo.",
+            "Dati siyang nagturo sa Colegio de San Juan de Letran.",
+            "Kilala siya bilang mahusay na dialektiko.",
+            "Inilarawan siyang bata, makisig, elegante, at pino.",
+            "Maingat niyang tinitimbang ang kaniyang mga salita bago magsalita."
+          ],
+          "introductionLines": [
+            "Ako si Padre Sibyla, isang Dominikano at kura ng Binondo.",
+            "Mas nais kong maingat na pag-isipan ang aking mga salita bago magsalita."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Dapat munang maingat na kilalanin ang mga pagkakaiba bago humatol.",
+                "Bihirang maging kasingpayak ang mga bagay gaya ng unang tingin."
+              ]
+            },
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "capitan_tiago",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Capitan Tiago",
+          "characterFullName": "Don Santiago de los Santos",
+          "alias": "Don Santiago",
+          "characterCategory": "Filipino Elite / Host",
+          "description": "A wealthy and influential Filipino known throughout Manila for his hospitality and grand social gatherings. He hosts the dinner celebrating the safe return of Crisóstomo Ibarra.",
+          "biography": "Don Santiago de los Santos, popularly known as Capitán Tiago, owns the large house on Calle Anloague where the gathering takes place. His announcement of the dinner quickly attracts the attention of Manila’s social circles because of his reputation as a generous host. He introduces Crisóstomo Ibarra as the son of his deceased friend and explains that the celebration is being held in gratitude for the young man’s safe return. Despite being the host, Tiago is left without a seat when the guests gather around his table.",
+          "characterFacts": [
+            "He is popularly known as Capitán Tiago.",
+            "He owns a large house on Calle Anloague.",
+            "He is considered one of Manila’s most hospitable men.",
+            "He is a wealthy and influential member of colonial society.",
+            "He was a friend of Don Rafael Ibarra.",
+            "He hosts the dinner in thanksgiving for Ibarra’s safe return.",
+            "He orders tinola because Ibarra has been away from the country for years."
+          ],
+          "introductionLines": [
+            "..."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Kapitan Tiago",
+          "characterFullName": "Don Santiago de los Santos",
+          "alias": "Don Santiago",
+          "characterCategory": "Pilipinong Elite / Punong-abala",
+          "description": "Isang mayaman at maimpluwensiyang Pilipino na kilala sa buong Maynila dahil sa kaniyang pagiging mapagpatuloy at mariringal na pagtitipon. Siya ang nagdaos ng hapunang nagdiriwang sa ligtas na pagbabalik ni Crisóstomo Ibarra.",
+          "biography": "Si Don Santiago de los Santos, na mas kilala bilang Kapitan Tiago, ang may-ari ng malaking bahay sa Calle Anloague kung saan ginanap ang pagtitipon. Mabilis na pumukaw sa mga lipunang panlipunan ng Maynila ang kaniyang paanyaya sa hapunan dahil kilala siyang mapagbigay na punong-abala. Ipinakilala niya si Crisóstomo Ibarra bilang anak ng kaniyang yumaong kaibigan at ipinaliwanag na idinaraos ang pagdiriwang bilang pasasalamat sa ligtas na pagbabalik ng binata. Sa kabila ng pagiging punong-abala, nawalan ng upuan si Tiago nang magtipon ang mga panauhin sa kaniyang hapag.",
+          "characterFacts": [
+            "Mas kilala siya bilang Kapitan Tiago.",
+            "Nagmamay-ari siya ng malaking bahay sa Calle Anloague.",
+            "Itinuturing siyang isa sa mga pinakamapagpatuloy na lalaki sa Maynila.",
+            "Mayaman at maimpluwensiya siyang kasapi ng lipunang kolonyal.",
+            "Kaibigan siya ni Don Rafael Ibarra.",
+            "Idinaos niya ang hapunan bilang pasasalamat sa ligtas na pagbabalik ni Ibarra.",
+            "Nag-utos siya ng tinola dahil ilang taon nang wala sa bansa si Ibarra."
+          ],
+          "introductionLines": [
+            "..."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "don_tiburcio",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Don Tiburcio",
+          "characterFullName": "Tiburcio de Espadaña",
+          "alias": "Doctor de Espadaña",
+          "characterCategory": "Civilian / Physician",
+          "description": "A timid and physically impaired Spanish doctor who speaks with a stutter. He is the husband of the proud and outspoken Doña Victorina.",
+          "biography": "Don Tiburcio de Espadaña attends Capitán Tiago’s dinner with his wife, Doña Victorina. He is described as lame and answers others mostly in short phrases because of his stutter. During dinner, he shyly attempts to join the conversation by asking Ibarra whether he encountered a Polish acquaintance while traveling in Europe. His quiet and hesitant behavior contrasts sharply with his wife’s forceful personality.",
+          "characterFacts": [
+            "He is married to Doña Victorina.",
+            "He is Spanish.",
+            "He has a noticeable stutter.",
+            "He is timid and speaks cautiously.",
+            "His wife frequently speaks more confidently than he does."
+          ],
+          "introductionLines": [
+            "Doctor de Espadaña, at your service."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "This gathering is quite lively.",
+                "I believe I am more comfortable observing the conversation than joining its disputes."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Don Tiburcio",
+          "characterFullName": "Tiburcio de Espadaña",
+          "alias": "Doktor de Espadaña",
+          "characterCategory": "Sibilyan / Manggagamot",
+          "description": "Isang mahiyain at may kapansanang pisikal na Espanyol na doktor na nauutal magsalita. Siya ang asawa ng mapagmataas at prangkang si Doña Victorina.",
+          "biography": "Dumalo si Don Tiburcio de Espadaña sa hapunan ni Kapitan Tiago kasama ang kaniyang asawang si Doña Victorina. Inilarawan siyang pilay at kadalasang maiikling parirala lamang ang isinasagot dahil sa kaniyang pagkautal. Sa hapunan, nahihiya niyang sinubukang sumali sa usapan sa pagtatanong kay Ibarra kung nakatagpo nito ang isang kakilalang Polako habang naglalakbay sa Europa. Malaking kaibahan ang kaniyang tahimik at alanganing kilos sa mapuwersang personalidad ng kaniyang asawa.",
+          "characterFacts": [
+            "Asawa niya si Doña Victorina.",
+            "Isa siyang Espanyol.",
+            "Kapansin-pansin ang kaniyang pagkautal.",
+            "Mahiyain siya at maingat magsalita.",
+            "Madalas na mas may kumpiyansang magsalita ang kaniyang asawa kaysa sa kaniya."
+          ],
+          "introductionLines": [
+            "Doktor de Espadaña, handang maglingkod sa inyo."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Napakasigla ng pagtitipong ito.",
+                "Sa palagay ko ay mas komportable akong pagmasdan ang usapan kaysa sumali sa mga pagtatalo nito."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "capitan_tinong",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Capitan Tinong",
+          "characterFullName": "Tinong",
+          "alias": "None",
+          "characterCategory": "Filipino Elite / Civilian Guest",
+          "description": "A friendly and prosperous Filipino acquaintance of Capitán Tiago. He warmly welcomes Ibarra and invites the newly returned young man to visit his home.",
+          "biography": "Capitán Tinong approaches Ibarra shortly after the young man introduces himself to the other guests. He explains that he is a friend of Capitán Tiago and that he knew Don Rafael Ibarra. Tinong invites Crisóstomo to dine at his house in Tondo, although Ibarra must decline because he plans to leave for San Diego the following morning. His cheerful reception provides a sharp contrast to Fray Dámaso’s hostility.",
+          "characterFacts": [
+            "He lives in Tondo.",
+            "He is a friend of Capitán Tiago.",
+            "He warmly welcomes Crisóstomo home.",
+            "He invites Ibarra to dine at his house.",
+            "He is described as smiling and amiable.",
+            "He wears native-style clothing with diamond shirt studs."
+          ],
+          "introductionLines": [
+            "..."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Kapitan Tinong",
+          "characterFullName": "Tinong",
+          "alias": "Wala",
+          "characterCategory": "Pilipinong Elite / Sibilyang Panauhin",
+          "description": "Isang palakaibigan at maunlad na Pilipinong kakilala ni Kapitan Tiago. Magiliw niyang tinanggap si Ibarra at inanyayahan ang kararating na binata na dumalaw sa kaniyang tahanan.",
+          "biography": "Nilapitan ni Kapitan Tinong si Ibarra matapos ipakilala ng binata ang sarili sa ibang mga panauhin. Ipinaliwanag niyang kaibigan siya ni Kapitan Tiago at kilala niya si Don Rafael Ibarra. Inanyayahan ni Tinong si Crisóstomo na kumain sa kaniyang bahay sa Tondo, ngunit kinailangang tumanggi ni Ibarra dahil balak niyang umalis patungong San Diego kinabukasan. Ang masaya niyang pagtanggap ay malaking kaibahan sa pagkapoot ni Padre Dámaso.",
+          "characterFacts": [
+            "Nakatira siya sa Tondo.",
+            "Kaibigan siya ni Kapitan Tiago.",
+            "Magiliw niyang tinanggap sa pag-uwi si Crisóstomo.",
+            "Inanyayahan niya si Ibarra na kumain sa kaniyang bahay.",
+            "Inilarawan siyang nakangiti at palakaibigan.",
+            "Nakasuot siya ng katutubong kasuotan na may mga butones na diyamante sa kamiseta."
+          ],
+          "introductionLines": [
+            "..."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "dona_victorina",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Doña Victorina",
+          "characterFullName": "Victorina de los Reyes de Espadaña",
+          "alias": "La Doctora Victorina",
+          "characterCategory": "Filipino Elite / Socialite",
+          "description": "A proud and highly pretentious Filipina socialite who imitates Spanish fashion and behavior. She is outspoken, easily offended and deeply concerned with appearances and social status.",
+          "biography": "Doña Victorina attends Capitán Tiago’s gathering with her husband, Don Tiburcio de Espadaña. She wears an elaborate gown with a long train and carefully arranged curls, or frizzes. During the dinner, she becomes furious when Lieutenant Guevara steps on her dress and later criticizes his age and military rank. Her questions about Europe and her references to Spain reveal her desire to present herself as closely connected to Spanish society.",
+          "characterFacts": [
+            "She is married to Don Tiburcio de Espadaña.",
+            "She is Filipina.",
+            "She imitates the clothing, speech and manners of Spanish women.",
+            "She wears an elaborate gown with a long train.",
+            "She is highly conscious of social position and appearances.",
+            "She becomes angry when Lieutenant Guevara steps on her dress.",
+            "She mocks Guevara for being old while still holding the rank of lieutenant."
+          ],
+          "introductionLines": [
+            "I am Doña Victorina de Espadaña—the Doctora, as people call me.",
+            "This gentleman beside me is my husband, Doctor de Espadaña."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "They say the Chinese invented gunpowder centuries ago.",
+                "Surely such a well-known fact should not cause so much argument."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Doña Victorina",
+          "characterFullName": "Victorina de los Reyes de Espadaña",
+          "alias": "La Doctora Victorina",
+          "characterCategory": "Pilipinong Elite / Sosyalita",
+          "description": "Isang mapagmataas at labis na mapagkunwaring Pilipinang sosyalita na gumagaya sa moda at asal ng mga Espanyol. Prangka siya, madaling masaktan, at labis na nag-aalala sa anyo at katayuan sa lipunan.",
+          "biography": "Dumalo si Doña Victorina sa pagtitipon ni Kapitan Tiago kasama ang kaniyang asawang si Don Tiburcio de Espadaña. Nakasuot siya ng magarbong bestida na may mahabang laylayan at maingat na inayos na mga kulot. Sa hapunan, nagalit siya nang matapakan ni Tenyente Guevara ang kaniyang bestida at kalaunan ay pinuna ang edad at ranggo nito sa militar. Ang kaniyang mga tanong tungkol sa Europa at mga pagtukoy sa Espanya ay nagpapakita ng hangarin niyang magmukhang malapit sa lipunang Espanyol.",
+          "characterFacts": [
+            "Asawa niya si Don Tiburcio de Espadaña.",
+            "Isa siyang Pilipina.",
+            "Ginagaya niya ang pananamit, pananalita, at asal ng mga Espanyola.",
+            "Nakasuot siya ng magarbong bestida na may mahabang laylayan.",
+            "Labis siyang mapagmatyag sa katayuan sa lipunan at sa panlabas na anyo.",
+            "Nagagalit siya nang matapakan ni Tenyente Guevara ang kaniyang bestida.",
+            "Kinukutya niya si Guevara dahil matanda na ito ngunit tenyente pa rin ang ranggo."
+          ],
+          "introductionLines": [
+            "Ako si Doña Victorina de Espadaña—ang Doctora, gaya ng tawag sa akin ng mga tao.",
+            "Ang ginoong katabi ko ay ang aking asawa, si Doktor de Espadaña."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "Sinasabing naimbento ng mga Tsino ang pulbura ilang siglo na ang nakalipas.",
+                "Tiyak na hindi dapat pagmulan ng napakaraming pagtatalo ang isang kilalang katotohanan."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "npcId": "young_poet",
+      "languages": [
+        {
+          "languageCode": "en",
+          "displayName": "Young Poet",
+          "characterFullName": "A———",
+          "alias": "Strange Youth",
+          "characterCategory": "Writer / Civilian Guest",
+          "description": "A young Filipino poet who has stopped writing because he refuses to produce dishonest or degrading work. His brief appearance reveals the dangers faced by writers who express uncomfortable truths.",
+          "biography": "The Young Poet introduces himself to Ibarra only as “A———,” leaving his complete identity undisclosed. Ibarra recognizes him as a poet whose works helped preserve his enthusiasm for the Philippines while he was abroad. The poet explains that he no longer writes because truthful expression can lead to imprisonment or exile. He then withdraws from the group after referring to a writer who was nearly exiled for placing an obvious truth into verse.",
+          "characterFacts": [
+            "His complete name is deliberately withheld.",
+            "He identifies himself only as “A———.”",
+            "He is recognized by Ibarra as a poet.",
+            "His writing inspired Ibarra while he was in Europe.",
+            "He has stopped writing.",
+            "He refuses to lie or degrade himself through his work.",
+            "He mentions that a writer was imprisoned for expressing a truth in verse.",
+            "He represents the risks faced by writers under colonial censorship."
+          ],
+          "introductionLines": [
+            "..."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        },
+        {
+          "languageCode": "fil",
+          "displayName": "Batang Makata",
+          "characterFullName": "A———",
+          "alias": "Kakaibang Binata",
+          "characterCategory": "Manunulat / Sibilyang Panauhin",
+          "description": "Isang batang makatang Pilipino na tumigil sa pagsusulat dahil tumatanggi siyang gumawa ng hindi tapat o nakabababang akda. Ipinakikita ng kaniyang maikling paglitaw ang mga panganib na kinakaharap ng mga manunulat na nagpapahayag ng hindi komportableng katotohanan.",
+          "biography": "Nagpakilala ang Batang Makata kay Ibarra bilang “A———” lamang, kaya nanatiling lihim ang kaniyang buong pagkakakilanlan. Nakilala siya ni Ibarra bilang makatang ang mga akda ay tumulong upang mapanatili ang sigla nito para sa Pilipinas habang nasa ibang bansa. Ipinaliwanag ng makata na hindi na siya sumusulat sapagkat maaaring humantong sa pagkabilanggo o pagpapatapon ang tapat na pagpapahayag. Pagkatapos ay lumayo siya sa pangkat matapos tukuyin ang isang manunulat na muntik nang ipatapon dahil isinatitik nito sa tula ang isang malinaw na katotohanan.",
+          "characterFacts": [
+            "Sadyang hindi ibinunyag ang kaniyang buong pangalan.",
+            "Ipinakilala lamang niya ang sarili bilang “A———.”",
+            "Nakilala siya ni Ibarra bilang isang makata.",
+            "Nagbigay-inspirasyon kay Ibarra ang kaniyang mga akda habang nasa Europa ito.",
+            "Tumigil na siya sa pagsusulat.",
+            "Tumatanggi siyang magsinungaling o ibaba ang sarili sa pamamagitan ng kaniyang akda.",
+            "Binanggit niyang may manunulat na ibinilanggo dahil nagpahayag ng katotohanan sa tula.",
+            "Kinakatawan niya ang mga panganib na kinakaharap ng mga manunulat sa ilalim ng kolonyal na sensura."
+          ],
+          "introductionLines": [
+            "..."
+          ],
+          "repeatDialogues": [
+            {
+              "lines": [
+                "..."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

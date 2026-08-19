@@ -1,11 +1,64 @@
 {
   "conversationId": "meet_new_guests",
-  "lines": [
-    { "speaker": "Blond Man", "text": "Good evening, señora. I do not believe we have been introduced." },
-    { "speaker": "Doña Victorina", "text": "Good evening. I am Doña Victorina," },
-    { "speaker": "Doña Victorina", "text": "and this is my husband, Doctor de Espadaña." },
-    { "speaker": "Don Tiburcio", "text": "At your service, señor." },
-    { "speaker": "Doña Victorina", "text": "We have only just arrived. Please, do not let us interrupt the gathering." },
-    { "speaker": "Blond Man", "text": "It is a pleasure to meet you both." }
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "blond_man",
+          "text": "Good evening, señora. I do not believe we have been introduced."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Good evening. I am Doña Victorina,"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "and this is my husband, Doctor de Espadaña."
+        },
+        {
+          "speakerId": "don_tiburcio",
+          "text": "At your service, señor."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "We have only just arrived. Please, do not let us interrupt the gathering."
+        },
+        {
+          "speakerId": "blond_man",
+          "text": "It is a pleasure to meet you both."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "blond_man",
+          "text": "Magandang gabi, ginang. Sa palagay ko'y hindi pa tayo naipakikilala sa isa't isa."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Magandang gabi. Ako si Doña Victorina,"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "at ito ang aking asawa, si Doctor de Espadaña."
+        },
+        {
+          "speakerId": "don_tiburcio",
+          "text": "Naglilingkod sa inyo, señor."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Kararating lamang namin. Huwag sana ninyong hayaang makaabala kami sa pagtitipon."
+        },
+        {
+          "speakerId": "blond_man",
+          "text": "Ikinagagalak kong makilala kayong dalawa."
+        }
+      ]
+    }
   ]
 }

@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: DriedBoteteFish_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_driedbotetefish
-  displayName: Dried Botete Fish
-  shortName: Dried Botete
   roomID: caida
   image: {fileID: 4145285722370130500, guid: 00b702a887fb05f478d8f1bebb6fe68e, type: 3}
-  description:
-  - These dried and inflated fish, called botetes, hang from the ceiling as curious
-    decorations. Their swollen bodies give them a strange and memorable appearance.

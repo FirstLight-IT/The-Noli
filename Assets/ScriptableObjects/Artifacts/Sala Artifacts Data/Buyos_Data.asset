@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: Buyos_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_buyos
-  displayName: Plate of Cigars and Buyos
-  shortName: Cigars and Buyos
   roomID: sala
   image: {fileID: -2636438677477268766, guid: 0fe2d1b2490ab884391d577d73c65460, type: 3}
-  description:
-  - "A plate containing cigars and buyos is offered to the Spanish ladies by Capitan
-    Tiago\u2019s elderly cousin as part of her duties in receiving the guests."

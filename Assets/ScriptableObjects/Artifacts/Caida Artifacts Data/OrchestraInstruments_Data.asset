@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d6b7e0a96a43c19344e2a6c310a4f1, type: 3}
   m_Name: OrchestraInstruments_Data
   m_EditorClassIdentifier: Assembly-CSharp::ArtifactInfoSO
+  localizedDataJson: {fileID: 4900000, guid: df1e9ea9baaa20044be2e985d1272bc0, type: 3}
   artifactID: artifact_orchestrainstruments
-  displayName: Orchestra Instruments
-  shortName: Instruments
   roomID: caida
   image: {fileID: -833917321954795385, guid: 93f02ff33255f7346a378e2c43965c23, type: 3}
-  description:
-  - "These instruments belong to the orchestra stationed in the caida during the
-    celebration. Their music can be heard by visitors even before they enter the
-    upper floor. \r "

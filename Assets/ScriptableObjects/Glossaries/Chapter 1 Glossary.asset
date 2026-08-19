@@ -12,10 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a03f8e8a7c24829bba89ecf2e190e70, type: 3}
   m_Name: Chapter 1 Glossary
   m_EditorClassIdentifier: Assembly-CSharp::GlossaryDataSO
-  entries:
-  - term: Indio
-    category: insult
-    meaning: means filipino retard....like you, the player.
-  - term: Meep
-    category: The Cat
-    meaning: The cutesy cat from the Dominise Household.
+  localizedDataJson: {fileID: 4900000, guid: 3414769bdc33b404e8cb057d668b77a3, type: 3}

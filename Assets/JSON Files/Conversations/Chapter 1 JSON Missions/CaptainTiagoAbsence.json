@@ -1,29 +1,208 @@
 {
   "conversationId": "captain_tiago_absence",
-  "lines": [
-    { "speaker": "Blond Man", "text": "But can you tell me, Señor Laruja, what kind of man our host is?" },
-    { "speaker": "Blond Man", "text": "I haven’t been introduced to him yet." },
-    { "speaker": "Señor Laruja", "text": "They say that he has gone out." },
-    { "speaker": "Señor Laruja", "text": "I haven’t seen him either." },
-    { "speaker": "Fray Damaso", "text": "There’s no need of introductions here." },
-    { "speaker": "Fray Damaso", "text": "Santiago is made of the right stuff." },
-    { "speaker": "Señor Laruja", "text": "No, he’s not the man who invented gunpowder." },
-    { "speaker": "Doña Victorina", "text": "You too, Señor Laruja." },
-    { "speaker": "Doña Victorina", "text": "How could the poor man invent gunpowder if, as is said, the Chinese invented it centuries ago?" },
-    { "speaker": "Fray Damaso", "text": "The Chinese! Are you crazy?" },
-    { "speaker": "Fray Damaso", "text": "Out with you!" },
-    { "speaker": "Fray Damaso", "text": "A Franciscan, one of my Order, Fray What-do-you-call-him Savalls, invented it in the—ah the seventh century!" },
-    { "speaker": "Doña Victorina", "text": "A Franciscan?" },
-    { "speaker": "Doña Victorina", "text": "Well, he must have been a missionary in China, that Padre Savalls." },
-    { "speaker": "Fray Sibyla", "text": "Schwartz, perhaps you mean, señora." },
-    { "speaker": "Doña Victorina", "text": "I don’t know. Fray Damaso said a Franciscan and I was only repeating." },
-    { "speaker": "Fray Damaso", "text": "Well, Savalls or Chevas, what does it matter?" },
-    { "speaker": "Fray Damaso", "text": "The difference of a letter doesn’t make him a Chinaman." },
-    { "speaker": "Fray Sibyla", "text": "And in the fourteenth century, not the seventh." },
-    { "speaker": "Fray Damaso", "text": "Well, neither does a century more or less make him a Dominican." },
-    { "speaker": "Fray Sibyla", "text": "Don’t get angry, your Reverence." },
-    { "speaker": "Fray Sibyla", "text": "So much the better that he did invent it so as to save his brethren the trouble." },
-    { "speaker": "Doña Victorina", "text": "And did you say, Padre Sibyla, that it was in the fourteenth century?" },
-    { "speaker": "Doña Victorina", "text": "Was that before or after Christ?" }
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "blond_man",
+          "text": "But can you tell me, Señor Laruja, what kind of man our host is?"
+        },
+        {
+          "speakerId": "blond_man",
+          "text": "I haven’t been introduced to him yet."
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "They say that he has gone out."
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "I haven’t seen him either."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "There’s no need of introductions here."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Santiago is made of the right stuff."
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "No, he’s not the man who invented gunpowder."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "You too, Señor Laruja."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "How could the poor man invent gunpowder if, as is said, the Chinese invented it centuries ago?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "The Chinese! Are you crazy?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Out with you!"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "A Franciscan, one of my Order, Fray What-do-you-call-him Savalls, invented it in the—ah the seventh century!"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "A Franciscan?"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Well, he must have been a missionary in China, that Padre Savalls."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Schwartz, perhaps you mean, señora."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "I don’t know. Fray Damaso said a Franciscan and I was only repeating."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Well, Savalls or Chevas, what does it matter?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "The difference of a letter doesn’t make him a Chinaman."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "And in the fourteenth century, not the seventh."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Well, neither does a century more or less make him a Dominican."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Don’t get angry, your Reverence."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "So much the better that he did invent it so as to save his brethren the trouble."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "And did you say, Padre Sibyla, that it was in the fourteenth century?"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Was that before or after Christ?"
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "blond_man",
+          "text": "Ngunit masasabi po ba ninyo sa akin, Ginoong Laruja, kung anong tao kaya ang may-ari ng bahay?"
+        },
+        {
+          "speakerId": "blond_man",
+          "text": "Ako'y hindi pa naipakikilala sa kanya."
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "Ang sabi nila'y umalis daw."
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "Ako ma'y hindi ko pa siya nakikita."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Dito'y hindi kailangan ang mga pagpapakilala!"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Si Santiago'y isang taong mabait."
+        },
+        {
+          "speakerId": "senor_laruja",
+          "text": "Isang taong hindi nakatuklas ng pulbura."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Kayo po naman, Ginoong Laruja!"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Paano po bang matutuklasan pa ng abang iyon ang pulbura, ay ayon sa sabi'y natuklasan na ito ng mga Intsik noong malaong panahon?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Ng mga Intsik? Nasisira ba ang isip ninyo?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Tumahan nga kayo!"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Ang nakatuklas ng paggawa ng pulbura'y isang Franciscano, isa sa aming samahan, Fray... hindi ko maalaman... Savalls, noong siglong... ikapito!"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Isang Franciscano?"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Marahil naging misyonero sa China ang Padre Savalls na iyan."
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Marahil Schwartz ang ibig po ninyong sabihin, ginang."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Hindi ko alam; sinabi ni Fray Damasong Franciscano: wala akong ginawa kundi inulit ko lamang ang kanyang sinabi."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Mabuti! Savalls o Chevas, ano ngayon?"
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Hindi dahil sa isang letra ay magiging Intsik siya!"
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "At noong ikalabing-apat na siglo at hindi noong ikapito."
+        },
+        {
+          "speakerId": "fray_damaso",
+          "text": "Mabuti, datapwat hindi sa paglabis o pagkulang ng isang siglo'y magiging Dominicano na siya!"
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Aba, huwag po sanang magalit ang inyong Kagalang-galang!"
+        },
+        {
+          "speakerId": "fray_sibyla",
+          "text": "Lalong mabuti kung siya ang nakatuklas ng paggawa ng pulbura, sapagkat sa gayo'y naibsan na niya sa pagpapagod sa gayong bagay ang kanyang mga kapatid."
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "At sinasabi po ninyo, Padre Sibyla, na nangyari ang bagay na iyon noong ikalabing-apat na siglo?"
+        },
+        {
+          "speakerId": "dona_victorina",
+          "text": "Nang hindi pa o nang makapagkatawang-tao na si Cristo?"
+        }
+      ]
+    }
   ]
 }
