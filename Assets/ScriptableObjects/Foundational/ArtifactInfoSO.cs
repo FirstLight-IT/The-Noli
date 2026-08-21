@@ -23,6 +23,7 @@ public sealed class ArtifactLanguageContent
     public string displayName = string.Empty;
     public string shortName = string.Empty;
     public string[] description = Array.Empty<string>();
+    public string[] hintDialogueLines = Array.Empty<string>();
 }
 
 public static class ArtifactJson
@@ -39,6 +40,27 @@ public static class ArtifactJson
         if (Usable(requested)) return requested;
         ArtifactLanguageContent fallback = Find(entry, database.defaultLanguageCode);
         return Usable(fallback) ? fallback : entry.languages.Find(Usable);
+    }
+
+    public static string[] ResolveHintDialogueLines(
+        TextAsset asset,
+        string artifactId,
+        string languageCode)
+    {
+        ArtifactDatabase database = Load(asset);
+        ArtifactJsonEntry entry = database?.artifacts?.Find(item =>
+            item != null && string.Equals(item.artifactId, artifactId, StringComparison.Ordinal));
+        if (entry?.languages == null)
+            return Array.Empty<string>();
+
+        ArtifactLanguageContent requested = Find(entry, languageCode);
+        if (HasUsableHint(requested))
+            return requested.hintDialogueLines;
+
+        ArtifactLanguageContent fallback = Find(entry, database.defaultLanguageCode);
+        return HasUsableHint(fallback)
+            ? fallback.hintDialogueLines
+            : Array.Empty<string>();
     }
 
     private static ArtifactDatabase Load(TextAsset asset)
@@ -58,6 +80,13 @@ public static class ArtifactJson
 
     private static bool Usable(ArtifactLanguageContent content) =>
         content != null && !string.IsNullOrWhiteSpace(content.displayName);
+
+    private static bool HasUsableHint(ArtifactLanguageContent content) =>
+        content?.hintDialogueLines != null &&
+        content.hintDialogueLines.Length > 0 &&
+        Array.TrueForAll(
+            content.hintDialogueLines,
+            line => !string.IsNullOrWhiteSpace(line));
 }
 
 [CreateAssetMenu(fileName = "New Artifact", menuName = "Artifacts/Artifact Info")]
@@ -84,4 +113,8 @@ public class ArtifactInfoSO : ScriptableObject
     public string RoomID => roomID;
     public Sprite Image => image;
     public string[] Description => LocalizedContent?.description ?? Array.Empty<string>();
+    public string[] HintDialogueLines => ArtifactJson.ResolveHintDialogueLines(
+        localizedDataJson,
+        artifactID,
+        GameLanguage.CurrentCode);
 }

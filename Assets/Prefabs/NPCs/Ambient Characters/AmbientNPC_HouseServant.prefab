@@ -24,18 +24,6 @@ PrefabInstance:
       propertyPath: artifactHints.Array.data[0].passesRequired
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2467173465767164909, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
-      propertyPath: artifactHints.Array.data[0].dialogueLines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2467173465767164909, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
-      propertyPath: 'artifactHints.Array.data[0].dialogueLines.Array.data[0]'
-      value: You should checkout the glass display found in the Caida.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2467173465767164909, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
-      propertyPath: 'artifactHints.Array.data[0].dialogueLines.Array.data[1]'
-      value: 'You can find it attached to the wall. '
-      objectReference: {fileID: 0}
     - target: {fileID: 2512939599337691593, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_Radius
       value: 0.39

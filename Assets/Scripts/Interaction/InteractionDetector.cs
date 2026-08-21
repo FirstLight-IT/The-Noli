@@ -35,6 +35,11 @@ public class InteractionDetector : MonoBehaviour
             return;
         }
 
+        // A hint pan blocks new world interactions, but active dialogue must
+        // still receive this button so the player can advance and close it.
+        if (AmbientNPC.IsHintCameraPanning)
+            return;
+
         GetClosestInteractable()?.interact();
     }
 

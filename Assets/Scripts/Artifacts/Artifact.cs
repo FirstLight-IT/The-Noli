@@ -90,6 +90,47 @@ public class Artifact : MonoBehaviour, IInteractable
         return false;
     }
 
+    public static bool TryGetByIdInRoom(string id, string roomID, out Artifact artifact)
+    {
+        artifact = null;
+
+        if (string.IsNullOrWhiteSpace(id) ||
+            !ArtifactsById.TryGetValue(id, out HashSet<Artifact> artifactInstances))
+        {
+            return false;
+        }
+
+        int matchingInstanceCount = 0;
+
+        foreach (Artifact instance in artifactInstances)
+        {
+            if (instance == null ||
+                !string.Equals(instance.RoomID, roomID, StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            matchingInstanceCount++;
+
+            // Entity IDs give duplicate scene objects a stable ordering for the
+            // duration of a play session instead of depending on HashSet iteration.
+            if (artifact == null ||
+                EntityId.ToULong(instance.GetEntityId()) <
+                EntityId.ToULong(artifact.GetEntityId()))
+                artifact = instance;
+        }
+
+        if (matchingInstanceCount > 1)
+        {
+            Debug.LogWarning(
+                $"Found {matchingInstanceCount} active artifacts with ID '{id}' in room " +
+                $"'{roomID}'. Using {artifact.gameObject.name}; artifact IDs should be unique.",
+                artifact);
+        }
+
+        return artifact != null;
+    }
+
     public static List<Artifact> GetActiveInRoom(string roomID)
     {
         List<Artifact> artifacts = new();

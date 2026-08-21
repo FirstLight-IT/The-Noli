@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 
 [Serializable]
@@ -6,29 +8,40 @@ public class AmbientArtifactHint
 {
     [SerializeField] private ArtifactInfoSO artifact;
     [SerializeField, Min(1)] private int passesRequired = 8;
-    [SerializeField, TextArea(2, 5)] private string[] dialogueLines;
 
     [NonSerialized] public int passCount;
     [NonSerialized] public bool isReady;
 
     public ArtifactInfoSO Artifact => artifact;
     public int PassesRequired => passesRequired;
-    public string[] DialogueLines => dialogueLines;
 }
 
 public class AmbientNPC : MonoBehaviour, IInteractable
 {
+    public static bool IsHintCameraPanning { get; private set; }
+
     [SerializeField] private AmbientNPCInfoSO npcData;
     [SerializeField] private AmbientArtifactHint[] artifactHints;
     [SerializeField] private GameObject interactionIcon;
     [SerializeField] private GameObject exclamationIcon;
     [SerializeField] private InteractableOutline interactionOutline;
 
+    [Header("Artifact Hint Camera")]
+    [SerializeField, Min(0.1f)] private float hintPanDuration = 1.5f;
+    [SerializeField, Min(0f)] private float hintFocusHoldDuration = 0.25f;
+    [SerializeField, Min(0.1f)] private float hintReturnDuration = 0.75f;
+
     private AmbientArtifactHint activeHint;
     private int nextDialogueVariation;
+    private CinemachineCamera hintCamera;
+    private Transform originalCameraFollow;
+    private GameObject hintCameraTarget;
+    private NPCMultiRoomPatrol multiRoomPatrol;
 
     private void Awake()
     {
+        multiRoomPatrol = GetComponent<NPCMultiRoomPatrol>();
+
         if (interactionOutline == null)
             interactionOutline = GetComponent<InteractableOutline>();
 
@@ -42,12 +55,20 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     {
         Artifact.OnArtifactPassed += HandleArtifactPassed;
         Artifact.OnArtifactUnlocked += HandleArtifactDiscovered;
+
+        if (multiRoomPatrol != null)
+            multiRoomPatrol.RoomChanged += HandleRoomChanged;
     }
 
     private void OnDisable()
     {
         Artifact.OnArtifactPassed -= HandleArtifactPassed;
         Artifact.OnArtifactUnlocked -= HandleArtifactDiscovered;
+
+        if (multiRoomPatrol != null)
+            multiRoomPatrol.RoomChanged -= HandleRoomChanged;
+
+        RestoreHintCameraImmediately();
     }
 
     private void HandleArtifactPassed(ArtifactInfoSO artifact)
@@ -94,7 +115,7 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         {
             foreach (AmbientArtifactHint hint in artifactHints)
             {
-                if (hint != null && hint.isReady)
+                if (hint != null && hint.isReady && IsHintInCurrentRoom(hint))
                 {
                     activeHint = hint;
                     break;
@@ -105,6 +126,28 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         SetHintIcon(activeHint != null);
     }
 
+    private void HandleRoomChanged(string roomID)
+    {
+        SelectReadyHint();
+    }
+
+    private bool IsHintInCurrentRoom(AmbientArtifactHint hint)
+    {
+        if (hint?.Artifact == null)
+            return false;
+
+        // Static ambient NPCs are placed in their configured hint room. Moving
+        // NPCs must be settled in the artifact's room before offering the hint.
+        if (multiRoomPatrol == null)
+            return true;
+
+        return !string.IsNullOrWhiteSpace(multiRoomPatrol.CurrentRoomID) &&
+               string.Equals(
+                   multiRoomPatrol.CurrentRoomID,
+                   hint.Artifact.RoomID,
+                   StringComparison.OrdinalIgnoreCase);
+    }
+
     public void interact()
     {
         if (DialogueController.Instance == null || npcData == null)
@@ -112,11 +155,8 @@ public class AmbientNPC : MonoBehaviour, IInteractable
 
         if (activeHint != null)
         {
-            AmbientArtifactHint shownHint = activeHint;
-            DialogueController.Instance.ShowAmbientDialogue(
-                npcData,
-                shownHint.DialogueLines,
-                () => FinishHint(shownHint));
+            if (!IsHintCameraPanning)
+                StartCoroutine(ShowHintWithCameraPan(activeHint));
             return;
         }
 
@@ -152,6 +192,127 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         hint.passCount = 0;
         hint.isReady = false;
         SelectReadyHint();
+    }
+
+    private IEnumerator ShowHintWithCameraPan(AmbientArtifactHint hint)
+    {
+        if (hint?.Artifact == null ||
+            !Artifact.TryGetByIdInRoom(
+                hint.Artifact.ArtifactID,
+                hint.Artifact.RoomID,
+                out Artifact artifact))
+        {
+            ShowHintDialogueWithoutPan(hint);
+            yield break;
+        }
+
+        hintCamera = GetActiveHintCamera();
+        if (hintCamera == null || hintCamera.Follow == null)
+        {
+            Debug.LogWarning(
+                $"{gameObject.name} could not pan to {artifact.gameObject.name} because the " +
+                "main camera has no active CinemachineCamera with a Follow target.",
+                this);
+            ShowHintDialogueWithoutPan(hint);
+            yield break;
+        }
+
+        IsHintCameraPanning = true;
+        originalCameraFollow = hintCamera.Follow;
+        hintCameraTarget = new GameObject("Artifact Hint Camera Target");
+        hintCameraTarget.hideFlags = HideFlags.HideAndDontSave;
+        hintCameraTarget.transform.position = originalCameraFollow.position;
+        hintCamera.Follow = hintCameraTarget.transform;
+
+        yield return MoveHintCameraTarget(
+            hintCameraTarget.transform.position,
+            artifact.transform.position,
+            hintPanDuration);
+
+        if (hintFocusHoldDuration > 0f)
+            yield return new WaitForSecondsRealtime(hintFocusHoldDuration);
+
+        bool dialogueStarted = DialogueController.Instance != null &&
+            DialogueController.Instance.ShowAmbientDialogue(
+                npcData,
+                hint.Artifact.HintDialogueLines,
+                () => StartCoroutine(ReturnFromHint(hint, true)));
+
+        if (!dialogueStarted)
+            yield return ReturnFromHint(hint, false);
+    }
+
+    private void ShowHintDialogueWithoutPan(AmbientArtifactHint hint)
+    {
+        if (hint?.Artifact == null || DialogueController.Instance == null)
+            return;
+
+        DialogueController.Instance.ShowAmbientDialogue(
+            npcData,
+            hint.Artifact.HintDialogueLines,
+            () => FinishHint(hint));
+    }
+
+    private IEnumerator ReturnFromHint(AmbientArtifactHint hint, bool finishHint)
+    {
+        if (hintCameraTarget != null && originalCameraFollow != null)
+        {
+            yield return MoveHintCameraTarget(
+                hintCameraTarget.transform.position,
+                originalCameraFollow.position,
+                hintReturnDuration);
+        }
+
+        RestoreHintCameraImmediately();
+
+        if (finishHint)
+            FinishHint(hint);
+    }
+
+    private IEnumerator MoveHintCameraTarget(Vector3 from, Vector3 to, float duration)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < duration && hintCameraTarget != null)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float progress = Mathf.Clamp01(elapsed / duration);
+            float easedProgress = Mathf.SmoothStep(0f, 1f, progress);
+            hintCameraTarget.transform.position = Vector3.LerpUnclamped(from, to, easedProgress);
+            yield return null;
+        }
+
+        if (hintCameraTarget != null)
+            hintCameraTarget.transform.position = to;
+    }
+
+    private static CinemachineCamera GetActiveHintCamera()
+    {
+        Camera mainCamera = Camera.main;
+        if (mainCamera == null ||
+            !mainCamera.TryGetComponent(out CinemachineBrain brain))
+        {
+            return null;
+        }
+
+        if (brain.ActiveVirtualCamera is CinemachineCameraManagerBase managerCamera)
+            return managerCamera.LiveChild as CinemachineCamera;
+
+        return brain.ActiveVirtualCamera as CinemachineCamera;
+    }
+
+    private void RestoreHintCameraImmediately()
+    {
+        if (hintCamera != null && originalCameraFollow != null)
+            hintCamera.Follow = originalCameraFollow;
+
+        if (hintCameraTarget != null)
+            Destroy(hintCameraTarget);
+
+        hintCamera = null;
+        originalCameraFollow = null;
+        hintCameraTarget = null;
+        IsHintCameraPanning = false;
     }
 
     public void showIcon(bool visible)

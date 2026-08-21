@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField, Min(0f)] private float movementSpeed = 3f;
     [SerializeField, Range(1f, 89f)] private float diagonalAngle = IsometricGeometry.GroundAngle;
+    [SerializeField, Range(0f, 0.95f)] private float mobileDeadzone = 0.2f;
 
     private Rigidbody2D rb;
     private Vector2 inputMovement;
@@ -65,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
                PauseMenuController.IsPaused ||
                ChapterController.IsChapterOpening ||
                ScreenFade.IsTransitioning ||
+               AmbientNPC.IsHintCameraPanning ||
                (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
                (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
                (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);
@@ -72,7 +74,36 @@ public class PlayerMovement : MonoBehaviour
 
     public void playerMovement(InputAction.CallbackContext context)
     {
-        inputMovement = context.ReadValue<Vector2>();
+        Vector2 input = context.ReadValue<Vector2>();
+        inputMovement = ShouldUseDiscreteInput()
+            ? QuantizeToEightWay(input, mobileDeadzone)
+            : input;
+    }
+
+    private static bool ShouldUseDiscreteInput()
+    {
+#if UNITY_EDITOR
+        // Allows the on-screen controls to be tested with a mouse in Play Mode.
+        return true;
+#else
+        return Application.isMobilePlatform;
+#endif
+    }
+
+    internal static Vector2 QuantizeToEightWay(Vector2 input, float deadzone)
+    {
+        if (input.magnitude <= deadzone)
+        {
+            return Vector2.zero;
+        }
+
+        const float DirectionStep = 45f;
+        float inputAngle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
+        float snappedAngle = Mathf.Round(inputAngle / DirectionStep) * DirectionStep * Mathf.Deg2Rad;
+
+        // A unit vector makes joystick distance irrelevant: movement is either
+        // stopped or at the full configured speed.
+        return new Vector2(Mathf.Cos(snappedAngle), Mathf.Sin(snappedAngle));
     }
 
     private Vector2 ToIsometricDirection(Vector2 input)

@@ -7,6 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(NPCMover), typeof(NPCPatrol), typeof(NPCFixedRoute))]
 public class NPCMultiRoomPatrol : MonoBehaviour
 {
+    public event Action<string> RoomChanged;
+
     [Serializable]
     private class RoomStage
     {
@@ -44,9 +46,15 @@ public class NPCMultiRoomPatrol : MonoBehaviour
     private int currentRoomIndex;
     private bool isRunning;
     private bool mayLeaveCurrentRoom;
+    private bool isTransitioning;
 
     public bool IsRunning => isRunning;
     public int CurrentRoomIndex => currentRoomIndex;
+    public string CurrentRoomID =>
+        !isRunning || isTransitioning || rooms == null ||
+        currentRoomIndex < 0 || currentRoomIndex >= rooms.Length
+            ? string.Empty
+            : NormalizeRoomID(rooms[currentRoomIndex].roomName);
 
     private void Awake()
     {
@@ -77,6 +85,7 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         roomTimerRoutine = null;
         isRunning = false;
         mayLeaveCurrentRoom = false;
+        isTransitioning = false;
     }
 
     public void BeginSchedule()
@@ -89,6 +98,7 @@ public class NPCMultiRoomPatrol : MonoBehaviour
 
         currentRoomIndex = 0;
         isRunning = true;
+        isTransitioning = false;
         BeginCurrentRoom();
     }
 
@@ -100,13 +110,17 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         roomTimerRoutine = null;
         isRunning = false;
         mayLeaveCurrentRoom = false;
+        isTransitioning = false;
+        RoomChanged?.Invoke(string.Empty);
     }
 
     private void BeginCurrentRoom()
     {
         RoomStage room = rooms[currentRoomIndex];
         mayLeaveCurrentRoom = false;
+        isTransitioning = false;
         patrol.BeginPatrolAt(room.startingWaypoint);
+        RoomChanged?.Invoke(CurrentRoomID);
 
         if (!HasNextRoom())
             return;
@@ -122,25 +136,72 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         roomTimerRoutine = null;
         mayLeaveCurrentRoom = true;
 
-        RoomStage room = rooms[currentRoomIndex];
-        if (patrol.CurrentNetworkWaypoint == room.exitWaypoint &&
-            !patrol.LastWaypointWasBlockedAlternative)
+        if (IsAtAssignedExit(patrol.CurrentNetworkWaypoint))
         {
-            BeginTransition(room.exitWaypoint);
+            BeginTransition(rooms[currentRoomIndex].exitWaypoint);
+            yield break;
         }
+
+        TryDirectPatrolToExit();
     }
 
     private void HandleWaypointReached(NPCWaypoint waypoint)
     {
         if (!isRunning || !mayLeaveCurrentRoom)
+        {
+            return;
+        }
+
+        if (IsAtAssignedExit(waypoint))
+        {
+            BeginTransition(waypoint);
+            return;
+        }
+
+        TryDirectPatrolToExit();
+    }
+
+    private void TryDirectPatrolToExit()
+    {
+        RoomStage room = rooms[currentRoomIndex];
+        if (room?.exitWaypoint == null || patrol.TrySetNavigationDestination(room.exitWaypoint))
             return;
 
-        BeginTransition(waypoint);
+        Debug.LogError(
+            $"{gameObject.name} cannot find a connected waypoint-network route to the " +
+            $"assigned {room.roomName} exit.",
+            this);
+    }
+
+    private bool IsAtAssignedExit(NPCWaypoint waypoint)
+    {
+        if (rooms == null ||
+            currentRoomIndex < 0 ||
+            currentRoomIndex >= rooms.Length)
+        {
+            return false;
+        }
+
+        RoomStage room = rooms[currentRoomIndex];
+        return room != null &&
+               waypoint != null &&
+               waypoint == room.exitWaypoint &&
+               patrol.CurrentNetworkWaypoint == room.exitWaypoint &&
+               !patrol.LastWaypointWasBlockedAlternative;
     }
 
     private void BeginTransition(NPCWaypoint departureWaypoint)
     {
         RoomStage room = rooms[currentRoomIndex];
+        if (!IsAtAssignedExit(departureWaypoint))
+        {
+            Debug.LogError(
+                $"{gameObject.name} was prevented from starting the {room.roomName} door route " +
+                "because it has not physically reached the assigned exit waypoint.",
+                this);
+            return;
+        }
+
         if (!TryBuildTransitionRoute(departureWaypoint, room, out Transform[] transitionRoute))
         {
             Debug.LogError(
@@ -152,16 +213,33 @@ public class NPCMultiRoomPatrol : MonoBehaviour
         }
 
         mayLeaveCurrentRoom = false;
+        isTransitioning = true;
+        RoomChanged?.Invoke(string.Empty);
+        patrol.ClearNavigationDestination();
         patrol.SuspendPatrol();
 
+        StartCoroutine(BeginFixedRouteAfterArrival(transitionRoute, room.roomName));
+    }
+
+    private IEnumerator BeginFixedRouteAfterArrival(Transform[] transitionRoute, string roomName)
+    {
+        // WaypointReached is raised from NPCMover.Arrived. Let that entire event
+        // finish before enabling NPCFixedRoute, otherwise listener order can make
+        // the new route consume the waypoint arrival that started it.
+        yield return null;
+
+        if (!isRunning || !isTransitioning)
+            yield break;
+
         if (fixedRoute.TryBeginRoute(transitionRoute, false))
-            return;
+            yield break;
 
         Debug.LogError(
-            $"{gameObject.name} cannot leave {room.roomName}: its route to the next room is empty.",
+            $"{gameObject.name} cannot leave {roomName}: its route to the next room is empty.",
             this);
         patrol.ResumePatrol();
         isRunning = false;
+        isTransitioning = false;
     }
 
     private static bool TryBuildTransitionRoute(
@@ -311,4 +389,9 @@ public class NPCMultiRoomPatrol : MonoBehaviour
     {
         return loopSchedule || roomIndex < rooms.Length - 1;
     }
+
+    private static string NormalizeRoomID(string roomName) =>
+        string.IsNullOrWhiteSpace(roomName)
+            ? string.Empty
+            : roomName.Trim().ToLowerInvariant().Replace(' ', '_');
 }

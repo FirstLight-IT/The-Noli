@@ -35,6 +35,7 @@ public class NPCPatrol : MonoBehaviour
     private bool targetIsBlockedAlternative;
     private bool isReturningToReroute;
     private NPCWaypoint blockedDestinationToAvoid;
+    private NPCWaypoint navigationDestination;
 
     public bool IsPatrolling => isPatrolling;
     public bool IsSuspended { get; private set; }
@@ -42,6 +43,7 @@ public class NPCPatrol : MonoBehaviour
     public bool UsesWaypointNetwork => useWaypointNetwork;
     public NPCWaypoint CurrentNetworkWaypoint => lastReachedNetworkWaypoint;
     public bool LastWaypointWasBlockedAlternative { get; private set; }
+    public NPCWaypoint NavigationDestination => navigationDestination;
 
     private void Awake()
     {
@@ -100,6 +102,7 @@ public class NPCPatrol : MonoBehaviour
         LastWaypointWasBlockedAlternative = false;
         isReturningToReroute = false;
         blockedDestinationToAvoid = null;
+        navigationDestination = null;
         targetNetworkWaypoint = useWaypointNetwork
             ? networkStartingWaypoint != null ? networkStartingWaypoint : startingWaypoint
             : null;
@@ -139,6 +142,20 @@ public class NPCPatrol : MonoBehaviour
         isPatrolling = false;
         IsSuspended = true;
         mover.Stop();
+    }
+
+    public bool TrySetNavigationDestination(NPCWaypoint destination)
+    {
+        if (!useWaypointNetwork || destination == null)
+            return false;
+
+        navigationDestination = destination;
+        return true;
+    }
+
+    public void ClearNavigationDestination()
+    {
+        navigationDestination = null;
     }
 
     public void ResumePatrol()
@@ -222,7 +239,26 @@ public class NPCPatrol : MonoBehaviour
 
         if (useWaypointNetwork)
         {
-            NPCWaypoint nextWaypoint = ChooseNeighbour(null);
+            NPCWaypoint nextWaypoint;
+
+            if (navigationDestination == null)
+            {
+                nextWaypoint = ChooseNeighbour(null);
+            }
+            else if (lastReachedNetworkWaypoint == navigationDestination)
+            {
+                navigationDestination = null;
+                nextWaypoint = lastReachedNetworkWaypoint;
+            }
+            else
+            {
+                TryFindNextStep(
+                    lastReachedNetworkWaypoint,
+                    navigationDestination,
+                    null,
+                    out nextWaypoint);
+            }
+
             targetNetworkWaypoint = nextWaypoint != null
                 ? nextWaypoint
                 : lastReachedNetworkWaypoint;
@@ -247,12 +283,21 @@ public class NPCPatrol : MonoBehaviour
         blockedDestinationToAvoid = targetNetworkWaypoint;
         isReturningToReroute = true;
         targetNetworkWaypoint = lastReachedNetworkWaypoint;
-        mover.MoveTo(lastReachedNetworkWaypoint.transform);
+        MoveAlongWaypointEdge(lastReachedNetworkWaypoint.transform);
     }
 
     private void TryContinueBlockedReroute()
     {
-        NPCWaypoint alternative = ChooseNeighbour(blockedDestinationToAvoid);
+        NPCWaypoint alternative = navigationDestination != null &&
+                                  TryFindNextStep(
+                                      lastReachedNetworkWaypoint,
+                                      navigationDestination,
+                                      blockedDestinationToAvoid,
+                                      out NPCWaypoint directedAlternative)
+            ? directedAlternative
+            : navigationDestination == null
+                ? ChooseNeighbour(blockedDestinationToAvoid)
+                : null;
         if (alternative == null)
         {
             waitRoutine = StartCoroutine(RetryBlockedReroute());
@@ -261,7 +306,59 @@ public class NPCPatrol : MonoBehaviour
 
         targetNetworkWaypoint = alternative;
         targetIsBlockedAlternative = true;
-        mover.MoveTo(targetNetworkWaypoint.transform);
+        MoveAlongWaypointEdge(targetNetworkWaypoint.transform);
+    }
+
+    private bool TryFindNextStep(
+        NPCWaypoint start,
+        NPCWaypoint destination,
+        NPCWaypoint excludedFirstStep,
+        out NPCWaypoint nextStep)
+    {
+        nextStep = null;
+
+        if (start == null || destination == null || start == destination)
+            return false;
+
+        Queue<NPCWaypoint> queue = new();
+        Dictionary<NPCWaypoint, NPCWaypoint> previous = new();
+        queue.Enqueue(start);
+        previous.Add(start, null);
+
+        while (queue.Count > 0)
+        {
+            NPCWaypoint current = queue.Dequeue();
+            if (current.Neighbours == null)
+                continue;
+
+            foreach (NPCWaypoint neighbour in current.Neighbours)
+            {
+                if (neighbour == null || previous.ContainsKey(neighbour))
+                    continue;
+
+                if (current == start &&
+                    (neighbour == excludedFirstStep || mover.IsPathImmediatelyBlocked(neighbour.transform)))
+                {
+                    continue;
+                }
+
+                previous.Add(neighbour, current);
+
+                if (neighbour == destination)
+                {
+                    NPCWaypoint step = destination;
+                    while (previous[step] != start)
+                        step = previous[step];
+
+                    nextStep = step;
+                    return true;
+                }
+
+                queue.Enqueue(neighbour);
+            }
+        }
+
+        return false;
     }
 
     private IEnumerator RetryBlockedReroute()
@@ -331,7 +428,20 @@ public class NPCPatrol : MonoBehaviour
             return;
         }
 
+        if (useWaypointNetwork)
+        {
+            MoveAlongWaypointEdge(target);
+            return;
+        }
+
         mover.MoveTo(target);
+    }
+
+    private void MoveAlongWaypointEdge(Transform target)
+    {
+        // A waypoint-network destination must stay on its selected graph edge.
+        // Free-form and fixed routes may still use isometric corner splitting.
+        mover.MoveDirectlyTo(target);
     }
 
     private void AdvanceSimplePatrol()

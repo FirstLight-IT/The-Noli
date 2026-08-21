@@ -59,6 +59,7 @@ public static class AmbientNPCJson
 
     private static bool Usable(AmbientNPCLanguageContent content) =>
         content != null && !string.IsNullOrWhiteSpace(content.displayName);
+
 }
 
 [CreateAssetMenu(fileName = "New Ambient NPC", menuName = "Characters/Ambient NPC Info")]

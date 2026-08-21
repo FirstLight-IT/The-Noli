@@ -138,6 +138,16 @@ public class NPCMover : MonoBehaviour
             StopBody();
     }
 
+    public void MoveDirectlyTo(Transform newDestination)
+    {
+        destination = newDestination;
+        hasIsometricCorner = false;
+        ResetBlockedState();
+
+        if (destination == null)
+            StopBody();
+    }
+
     public void Stop()
     {
         destination = null;
@@ -231,6 +241,7 @@ public class NPCMover : MonoBehaviour
     private static bool IsMovementGloballyPaused()
     {
         return ChapterController.IsChapterOpening ||
+               AmbientNPC.IsHintCameraPanning ||
                (NarrationController.Instance != null && NarrationController.Instance.IsNarrationActive) ||
                (DialogueController.Instance != null && DialogueController.Instance.IsDialogueActive) ||
                (ArtifactDialogueController.Instance != null && ArtifactDialogueController.Instance.IsDialogueActive);

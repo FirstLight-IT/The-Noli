@@ -119,6 +119,8 @@
         "missionConversationLinesViewed": 0,
         "missionConversationLinesSkipped": 0,
         "missionConversationSkipRatePercent": 0.0,
+        "engagementRatePercent": 0.0,
+        "artifactDiscoveryRatePercent": 0.0,
         "customCounters": []
       }
     }

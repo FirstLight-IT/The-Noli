@@ -10,6 +10,7 @@
           "languageCode": "en",
           "displayName": "Chinese Lantern",
           "shortName": "Lantern",
+          "hintDialogueLines": ["Look near the caida's ceiling for a decorative lantern."],
           "description": [
             "Costly Chinese lanterns hang from the ceiling of the caida. Their decorative light helps conceal the room’s otherwise grim and unsettling collection of religious images. "
           ]
@@ -18,6 +19,7 @@
           "languageCode": "fil",
           "displayName": "Lámparang Tsino",
           "shortName": "Lámpara",
+          "hintDialogueLines": ["Tumingin malapit sa kisame ng caida para sa isang palamuting lámpara."],
           "description": [
             "Nakasabit sa kisame ang maririkit at mamahaling lámparang gawa sa China. Bahagi ang mga ito ng mga palamuting inilagay sa caida upang pagtakpan ang tila masamang pahiwatig ng mga larawang nakapaligid sa silid."
           ]
@@ -32,6 +34,7 @@
           "languageCode": "en",
           "displayName": "Dinner Plates",
           "shortName": "Plates",
+          "hintDialogueLines": ["Look around the caida for the plates prepared for dinner."],
           "description": [
             "Plates are used to serve portions of tinola to the guests. "
           ]
@@ -40,6 +43,7 @@
           "languageCode": "fil",
           "displayName": "Mga Pinggan",
           "shortName": "Pinggan",
+          "hintDialogueLines": ["Hanapin sa caida ang mga pinggang inihanda para sa hapunan."],
           "description": [
             "Ginagamit ang mga pinggan sa paghahain ng tinola sa mga panauhin."
           ]
@@ -54,6 +58,7 @@
           "languageCode": "en",
           "displayName": "Dried Botete Fish",
           "shortName": "Dried Botete",
+          "hintDialogueLines": ["Look above you in the caida for an unusual dried fish decoration."],
           "description": [
             "These dried and inflated fish, called botetes, hang from the ceiling as curious decorations. Their swollen bodies give them a strange and memorable appearance."
           ]
@@ -62,6 +67,7 @@
           "languageCode": "fil",
           "displayName": "Tuyong Isdang Botete",
           "shortName": "Tuyong Botete",
+          "hintDialogueLines": ["Tumingala sa caida at hanapin ang kakaibang palamuting tuyong isda."],
           "description": [
             "Nakasabit bilang palamuti ang mga tuyong isdang botete na hinipan upang bumintog. Dahil sa kanilang namamagang anyo, kakaiba at madaling matandaan ang mga ito."
           ]
@@ -76,6 +82,7 @@
           "languageCode": "en",
           "displayName": "Empty Bird Cage",
           "shortName": "Bird Cage",
+          "hintDialogueLines": ["Check the decorations hanging from the caida's ceiling."],
           "description": [
             "Bird cages without birds hang from the ceiling as decorations. Their emptiness gives them an unusual and somewhat lifeless appearance. "
           ]
@@ -84,6 +91,7 @@
           "languageCode": "fil",
           "displayName": "Walang-Lamang Hawla ng Ibon",
           "shortName": "Hawla ng Ibon",
+          "hintDialogueLines": ["Suriin ang mga palamuting nakasabit sa kisame ng caida."],
           "description": [
             "Nakasabit bilang mga palamuti ang mga hawlang walang ibon. Ang kawalan ng laman ng mga ito ay nagbibigay sa kanila ng kakaiba at tila walang-buhay na anyo."
           ]
@@ -98,6 +106,7 @@
           "languageCode": "en",
           "displayName": "Faded Air Plants",
           "shortName": "Air Plant",
+          "hintDialogueLines": ["Look among the hanging decorations for a faded plant."],
           "description": [
             "Faded air plants hang among the decorations of the caida. Their withered condition contrasts with the expense and extravagance of the gathering. "
           ]
@@ -106,6 +115,7 @@
           "languageCode": "fil",
           "displayName": "Mga Lantang Halamang Nakabitin",
           "shortName": "Halamang Nakabitin",
+          "hintDialogueLines": ["Hanapin sa mga nakasabit na palamuti ang isang lantang halaman."],
           "description": [
             "Nakasabit sa mga palamuti ng caida ang mga lantang halaman. Ang kanilang pagkalanta ay taliwas sa karangyaan at malaking gastos ng pagtitipon."
           ]
@@ -120,6 +130,7 @@
           "languageCode": "en",
           "displayName": "Frosted-Glass Globes",
           "shortName": "Glass Globes",
+          "hintDialogueLines": ["Look toward the caida's ceiling for the colored glass globes."],
           "description": [
             "A red globe made of frosted glass hangs among the ceiling decorations, adding colored light to the caida.",
             "A green frosted-glass globe hangs from the ceiling as part of Capitan Tiago’s costly decorations. ",
@@ -130,6 +141,7 @@
           "languageCode": "fil",
           "displayName": "Mga Bolang Kristal",
           "shortName": "Bolang Kristal",
+          "hintDialogueLines": ["Tumingin sa kisame ng caida para sa mga makukulay na bolang kristal."],
           "description": [
             "Isang pulang bolang kristal na may azogue ang nakasabit kasama ng mga palamuti sa kisame.",
             "Isang berdeng bolang kristal na may azogue ang nakasabit sa kisame bilang bahagi ng mamahaling mga palamuti ni Capitan Tiago.",
@@ -151,6 +163,10 @@
             "The display shows Our Lady of Peace and Prosperous Voyages, worshiped in Antipolo, visiting Capitana Inez while disguised as a beggar. ",
             "Capitana Inez is shown during her sickness, with yellow and bluish tones that make her appear almost like a decaying corpse. The figure is rendered with unsettling realism. ",
             "Glasses and other objects associated with a long illness surround Capitana Inez. They are reproduced so minutely that even their contents can be distinguished. "
+          ],
+          "hintDialogueLines": [
+            "You should check out the glass display found in the caida.",
+            "You can find it attached to the wall."
           ]
         },
         {
@@ -162,6 +178,10 @@
             "Ipinakikita sa display ang Nuestra Señora de la Paz y Buen Viaje, na sinasamba sa Antipolo, na dumadalaw kay Capitana Inés sa anyo ng isang babaeng namamalimos.",
             "Ipinakikita si Capitana Inés habang may sakit; dahil sa dilaw at asul na kulay ng kanyang mukha, tila isa na siyang bangkay na nabubulok. Nakababagabag ang pagiging makatotohanan ng pagkakalarawan.",
             "Nasa paligid ni Capitana Inés ang mga baso at iba pang kagamitang karaniwang naiipon sa mahabang pagkakasakit. Napakadetalyado ng pagkakagawa sa mga ito na maging ang kanilang laman ay makikita."
+          ],
+          "hintDialogueLines": [
+            "Dapat mong tingnan ang salaming displey na matatagpuan sa caida.",
+            "Makikita mo itong nakakabit sa dingding."
           ]
         }
       ]
@@ -174,6 +194,7 @@
           "languageCode": "en",
           "displayName": "Large Tinola Tureen",
           "shortName": "Tinola Tureen",
+          "hintDialogueLines": ["Look near the dining table for a large serving tureen."],
           "description": [
             "A large steaming tureen is brought to the table when dinner begins. It contains the tinola specially ordered by Capitan Tiago to celebrate Ibarra’s return. "
           ]
@@ -182,6 +203,7 @@
           "languageCode": "fil",
           "displayName": "Malaking Tureen ng Tinola",
           "shortName": "Tureen ng Tinola",
+          "hintDialogueLines": ["Tumingin malapit sa hapag-kainan para sa malaking tureen."],
           "description": [
             "Isang malaking umuusok na tureen ang dinadala sa mesa sa pagsisimula ng hapunan. Nilalaman nito ang tinolang sadyang ipinahanda ni Capitan Tiago upang ipagdiwang ang pagbabalik ni Ibarra."
           ]
@@ -196,6 +218,7 @@
           "languageCode": "en",
           "displayName": "Orchestra Instruments",
           "shortName": "Instruments",
+          "hintDialogueLines": ["Look around the caida for the orchestra's instruments."],
           "description": [
             "These instruments belong to the orchestra stationed in the caida during the celebration. Their music can be heard by visitors even before they enter the upper floor. \r "
           ]
@@ -204,6 +227,7 @@
           "languageCode": "fil",
           "displayName": "Mga Instrumento ng Orkestra",
           "shortName": "Mga Instrumento",
+          "hintDialogueLines": ["Hanapin sa caida ang mga instrumento ng orkestra."],
           "description": [
             "Ang mga instrumentong ito ay ginagamit ng orkestrang nasa caida sa panahon ng pagtitipon. Naririnig ng mga panauhin ang kanilang tugtog bago pa man sila makarating sa itaas na palapag."
           ]
@@ -218,6 +242,7 @@
           "languageCode": "en",
           "displayName": "\"Hell\" Painting",
           "shortName": "\"Hell\"",
+          "hintDialogueLines": ["Examine the grim religious paintings on the caida's walls."],
           "description": [
             "This painting presents a religious image of Hell. Its frightening subject is among the strangely chosen decorations overlooking the feast. "
           ]
@@ -226,6 +251,7 @@
           "languageCode": "fil",
           "displayName": "Pinturang \"Ang Impiyerno\"",
           "shortName": "\"Ang Impiyerno\"",
+          "hintDialogueLines": ["Suriin ang malalagim na larawang panrelihiyon sa mga dingding ng caida."],
           "description": [
             "Isa ito sa mga larawang panrelihiyon na nakasabit sa mga dingding: \"Ang Impiyerno.\" Ang nakatatakot na paksa nito ay kapansin-pansing katabi ng mga paghahanda para sa handaan."
           ]
@@ -240,6 +266,7 @@
           "languageCode": "en",
           "displayName": "\"Purgatory\" Painting",
           "shortName": "\"Purgatory\"",
+          "hintDialogueLines": ["Search the caida's walls for a painting of Purgatory."],
           "description": [
             "A religious painting depicting Purgatory hangs on the wall of the caida.  Its grim subject contrasts sharply with the festive dinner being prepared beneath it.  "
           ]
@@ -248,6 +275,7 @@
           "languageCode": "fil",
           "displayName": "Pinturang \"Ang Purgatoryo\"",
           "shortName": "\"Ang Purgatoryo\"",
+          "hintDialogueLines": ["Hanapin sa mga dingding ng caida ang larawan ng Purgatoryo."],
           "description": [
             "Isang larawang panrelihiyon tungkol sa \"Ang Purgatoryo\" ang nakasabit sa dingding ng caida. Ang malagim nitong paksa ay kapansin-pansing taliwas sa masayang hapunang inihahanda sa silid."
           ]
@@ -262,6 +290,7 @@
           "languageCode": "en",
           "displayName": "\"The Death of the Just\" Painting",
           "shortName": "\"Death of the Just\"",
+          "hintDialogueLines": ["Look among the caida's religious paintings for a scene of a righteous death."],
           "description": [
             "This religious painting depicts the death of a righteous person. It hangs in the dining area beside other images dealing with death, judgment, and the afterlife. "
           ]
@@ -270,6 +299,7 @@
           "languageCode": "fil",
           "displayName": "Pinturang \"Ang Pagkamatay ng Banal\"",
           "shortName": "\"Pagkamatay ng Banal\"",
+          "hintDialogueLines": ["Hanapin sa mga larawang panrelihiyon sa caida ang tagpo ng pagkamatay ng isang banal."],
           "description": [
             "Ang larawang panrelihiyong ito, \"Ang Pagkamatay ng Banal,\" ay nakasabit kasama ng iba pang mga larawang tumatalakay sa kamatayan, paghuhukom, at kabilang-buhay."
           ]
@@ -284,6 +314,7 @@
           "languageCode": "en",
           "displayName": "\"The Death of the Sinner\"",
           "shortName": "\"Death of the Sinner\"",
+          "hintDialogueLines": ["Look for a dark painting about a sinner's final moments."],
           "description": [
             "This painting depicts the death of a sinner. Its disturbing subject contributes to the dark and solemn collection decorating the walls of the dining room. "
           ]
@@ -292,6 +323,7 @@
           "languageCode": "fil",
           "displayName": "\"Ang Pagkamatay ng Makasalanan\"",
           "shortName": "\"Pagkamatay ng Makasalanan\"",
+          "hintDialogueLines": ["Hanapin ang madilim na larawang tungkol sa huling sandali ng isang makasalanan."],
           "description": [
             "Inilalarawan ng larawang ito ang \"Ang Pagkamatay ng Makasalanan.\" Ang nakababagabag nitong paksa ay bahagi ng madilim at taimtim na koleksiyon ng mga larawang nakasabit sa silid-kainan."
           ]
@@ -306,6 +338,7 @@
           "languageCode": "en",
           "displayName": "\"The Last Judgement\" Painting",
           "shortName": "\"Last Judgement\"",
+          "hintDialogueLines": ["Search the caida's walls for a painting of humanity's final judgment."],
           "description": [
             "A religious painting portraying the Last Judgment hangs among the motley pictures in the caida. It reminds viewers of the final judgment of humanity. "
           ]
@@ -314,6 +347,7 @@
           "languageCode": "fil",
           "displayName": "Pinturang \"Ang Huling Paghuhukom\"",
           "shortName": "\"Huling Paghuhukom\"",
+          "hintDialogueLines": ["Hanapin sa mga dingding ng caida ang larawan ng huling paghuhukom sa sangkatauhan."],
           "description": [
             "Ang larawang panrelihiyong \"Ang Huling Paghuhukom\" ay nakasabit kasama ng iba pang sari-saring larawan sa caida. Ipinapaalala nito sa tumitingin ang huling paghuhukom sa sangkatauhan."
           ]
@@ -328,6 +362,7 @@
           "languageCode": "en",
           "displayName": "Plant",
           "shortName": "",
+          "hintDialogueLines": ["Look around the ground floor for a plant displayed inside the mansion."],
           "description": [
             "A plant displayed inside the mansion."
           ]
@@ -336,6 +371,7 @@
           "languageCode": "fil",
           "displayName": "Halaman",
           "shortName": "",
+          "hintDialogueLines": ["Hanapin sa unang palapag ang halamang nakadispley sa loob ng mansiyon."],
           "description": [
             "Isang halamang nakadispley sa loob ng mansiyon."
           ]
@@ -350,6 +386,7 @@
           "languageCode": "en",
           "displayName": "Bowl of Tinola",
           "shortName": "Tinola",
+          "hintDialogueLines": ["Look near the dinner setting for a bowl of tinola."],
           "description": [
             "Tinola is described as a stew made with chicken and squash. Capitan Tiago orders it especially for Ibarra, believing that he has not tasted it during his years in Europe. "
           ]
@@ -358,6 +395,7 @@
           "languageCode": "fil",
           "displayName": "Mangkok ng Tinola",
           "shortName": "Tinola",
+          "hintDialogueLines": ["Tumingin malapit sa hapag-kainan para sa isang mangkok ng tinola."],
           "description": [
             "Ang tinola ay pagkaing gawa sa inahing manok at upo. Sadyang ipinahanda ito ni Capitan Tiago para kay Ibarra, sa pag-aakalang hindi niya ito natikman sa mga taon niyang nasa Europa."
           ]
@@ -372,6 +410,7 @@
           "languageCode": "en",
           "displayName": "English Biscuits",
           "shortName": "Biscuits",
+          "hintDialogueLines": ["Check the small table in the sala for some English biscuits."],
           "description": [
             "English biscuits are placed on the small table beside the bottles of wine, serving as refreshments for the guests."
           ]
@@ -380,6 +419,7 @@
           "languageCode": "fil",
           "displayName": "Biskwit na Ingles",
           "shortName": "Biskwit",
+          "hintDialogueLines": ["Suriin ang maliit na mesa sa sala para sa mga biskwit na Ingles."],
           "description": [
             "May mga biskwit na Ingles sa maliit na mesa katabi ng mga bote ng alak, bilang pagkain para sa mga panauhin."
           ]
@@ -394,6 +434,7 @@
           "languageCode": "en",
           "displayName": "Broken Plate",
           "shortName": "Broken Plate",
+          "hintDialogueLines": ["Look around the sala for evidence of a servant's accident."],
           "description": [
             "The sound of a plate breaking gives Capitan Tiago’s elderly cousin an excuse to rush away and scold the servants responsible for the accident."
           ]
@@ -402,6 +443,7 @@
           "languageCode": "fil",
           "displayName": "Basag na Pinggan",
           "shortName": "Basag na Pinggan",
+          "hintDialogueLines": ["Hanapin sa sala ang bakas ng aksidenteng nagawa ng isang katulong."],
           "description": [
             "Sinamantala ng matandang pinsan ni Capitan Tiago ang paglagapak ng isang pinggang nabasag upang mabilis na lumabas habang nagbubulong ng pagsaway."
           ]
@@ -416,6 +458,7 @@
           "languageCode": "en",
           "displayName": "Plate of Cigars and Buyos",
           "shortName": "Cigars and Buyos",
+          "hintDialogueLines": ["Look for the plate offered to guests in the sala."],
           "description": [
             "A plate containing cigars and buyos is offered to the Spanish ladies by Capitan Tiago’s elderly cousin as part of her duties in receiving the guests."
           ]
@@ -424,6 +467,7 @@
           "languageCode": "fil",
           "displayName": "Pinggan ng Tabako at Buyo",
           "shortName": "Tabako at Buyo",
+          "hintDialogueLines": ["Hanapin ang pinggang iniaalok sa mga panauhin sa sala."],
           "description": [
             "Isang pinggan ng tabako at buyo ang iniaalok ng matandang pinsan ni Capitan Tiago sa mga babaeng Espanyol bilang bahagi ng kanyang pagtanggap sa mga panauhin."
           ]
@@ -438,6 +482,7 @@
           "languageCode": "en",
           "displayName": "Chandelier",
           "shortName": "Chandelier",
+          "hintDialogueLines": ["Look above the guests in the sala for a brilliant light fixture."],
           "description": [
             "Gleaming chandeliers illuminate the sala. Their brilliance helps display the wealth and elegance of Capitan Tiago’s home. "
           ]
@@ -446,6 +491,7 @@
           "languageCode": "fil",
           "displayName": "Araña",
           "shortName": "Araña",
+          "hintDialogueLines": ["Tumingala sa sala at hanapin ang nagniningning na ilawan."],
           "description": [
             "Nagniningning ang mga araña sa sala. Ang kanilang liwanag ay nakadaragdag sa pagpapakita ng yaman at karangyaan ng bahay ni Capitan Tiago."
           ]
@@ -460,6 +506,7 @@
           "languageCode": "en",
           "displayName": "European Chairs",
           "shortName": "European Chairs",
+          "hintDialogueLines": ["Examine the elegant seating arranged around the sala."],
           "description": [
             "Elegant European chairs furnish the sala. They may be uncomfortable and unhealthy, but Capitan Tiago values their display of luxury more than the comfort of his guests."
           ]
@@ -468,6 +515,7 @@
           "languageCode": "fil",
           "displayName": "Mga Silyang Europeo",
           "shortName": "Silyang Europeo",
+          "hintDialogueLines": ["Suriin ang mga eleganteng upuang nakahanay sa sala."],
           "description": [
             "Magaganda ang mga silyang Europeo sa sala, bagaman marahil ay hindi maginhawang gamitin at maaari pang makasama sa katawan. Higit na pinahahalagahan ni Capitan Tiago ang karangyaan ng mga ito kaysa sa kaginhawahan ng kanyang mga panauhin."
           ]
@@ -482,6 +530,7 @@
           "languageCode": "en",
           "displayName": "Massive Mirrors",
           "shortName": "Mirrors",
+          "hintDialogueLines": ["Look along the sala's walls for something reflecting the gathering."],
           "description": [
             "Massive mirrors decorate the sala, reflecting the guests, chandeliers, and brilliant lighting of the gathering. "
           ]
@@ -490,6 +539,7 @@
           "languageCode": "fil",
           "displayName": "Malalaking Salamin",
           "shortName": "Mga Salamin",
+          "hintDialogueLines": ["Tumingin sa mga dingding ng sala para sa bagay na sumasalamin sa pagtitipon."],
           "description": [
             "Napakalalaking salamin ang nagpapalamuti sa sala, sa gitna ng mga panauhin at ng nagniningning na mga araña."
           ]
@@ -504,6 +554,7 @@
           "languageCode": "en",
           "displayName": "Images of Our Lady",
           "shortName": "Our Lady",
+          "hintDialogueLines": ["Examine the devotional images hanging on the sala's walls."],
           "description": [
             "Different likenesses of Our Lady hang on the walls of the sala. Their presence seems to encourage silence and religious behavior among the assembled women. "
           ]
@@ -512,6 +563,7 @@
           "languageCode": "fil",
           "displayName": "Mga Larawan ng Nuestra Señora",
           "shortName": "Nuestra Señora",
+          "hintDialogueLines": ["Suriin ang mga larawang debosyonal na nakasabit sa mga dingding ng sala."],
           "description": [
             "Nakasabit sa mga dingding ng sala ang mga larawan ng iba't ibang Nuestra Señora. Tila ang mga ito ang pumipilit sa mga dalagang manahimik at magpakahinhing lubos."
           ]
@@ -526,6 +578,7 @@
           "languageCode": "en",
           "displayName": "Capitan Tiago Oil Painting",
           "shortName": "\"Capitan Tiago\"",
+          "hintDialogueLines": ["Look for a formal portrait displayed in the sala."],
           "description": [
             "The painting shows a handsome man in formal dress, rigid and erect, holding a tasseled cane in stiff fingers covered with rings. His pose seems to declare how well dressed and dignified he is. "
           ]
@@ -534,6 +587,7 @@
           "languageCode": "fil",
           "displayName": "Larawang Langis ni Capitan Tiago",
           "shortName": "\"Capitan Tiago\"",
+          "hintDialogueLines": ["Hanapin ang pormal na larawang nakadispley sa sala."],
           "description": [
             "Makikita sa larawang langis ang isang makisig na lalaking nakapormal, unat at tuwid na tulad ng bastong may borlas na hawak ng kanyang matitigas na daliring puno ng mga singsing. Wari'y ipinagmamalaki ng kanyang anyo kung gaano siya karikit manamit at kagalang-galang."
           ]
@@ -548,6 +602,7 @@
           "languageCode": "en",
           "displayName": "Grand Piano",
           "shortName": "piano",
+          "hintDialogueLines": ["Look toward the raised platform in the sala for a grand instrument."],
           "description": [
             "A grand piano of great price stands on a raised platform in the sala. On this particular evening, its additional virtue is that no one is playing it. "
           ]
@@ -556,6 +611,7 @@
           "languageCode": "fil",
           "displayName": "Grand Piano",
           "shortName": "Piano",
+          "hintDialogueLines": ["Tumingin sa nakataas na plataporma sa sala para sa isang malaking instrumento."],
           "description": [
             "Sa ibabaw ng isang tarima ay may isang mainam at napakamahal na grand piano. Lalo itong mahalaga sa gabing ito sapagkat walang sinumang tumutugtog nito."
           ]
@@ -570,6 +626,7 @@
           "languageCode": "en",
           "displayName": "Fancy Wine Bottles",
           "shortName": "Wine Bottles",
+          "hintDialogueLines": ["Check the small table where the male guests gather and debate."],
           "description": [
             "Bottles of wine stand on the small table around which several male guests gather and debate. "
           ]
@@ -578,6 +635,7 @@
           "languageCode": "fil",
           "displayName": "Mga Maringal na Bote ng Alak",
           "shortName": "Mga Bote ng Alak",
+          "hintDialogueLines": ["Suriin ang maliit na mesang pinagtitipunan at pinagtatalunan ng mga lalaking panauhin."],
           "description": [
             "May mga bote ng alak sa maliit na mesang pinalilibutan ng ilang lalaking panauhing masiglang nag-uusap at nagtatalo."
           ]
