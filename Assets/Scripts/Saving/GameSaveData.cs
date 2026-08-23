@@ -9,6 +9,7 @@ public sealed class GameSaveData
 
     public int schemaVersion = CurrentSchemaVersion;
     public string gameVersion = string.Empty;
+    public string playthroughId = Guid.NewGuid().ToString("N");
     public int saveRevision;
     public string createdAtUtc = string.Empty;
     public string lastSavedAtUtc = string.Empty;
@@ -20,6 +21,11 @@ public sealed class GameSaveData
 
     public void Normalize()
     {
+        if (string.IsNullOrWhiteSpace(playthroughId))
+            playthroughId = Guid.NewGuid().ToString("N");
+        else
+            playthroughId = playthroughId.Trim();
+
         player ??= new PlayerSaveData();
         journal ??= new JournalSaveData();
         chapters ??= new List<ChapterSaveData>();
@@ -172,6 +178,7 @@ public sealed class ChapterSaveData
     public List<string> worldFlags = new();
     public ChapterQuizSaveData quiz = new();
     public ChapterAnalyticsSaveData analytics = new();
+    public OfficialChapterAnalyticsSaveData officialAnalytics = new();
 
     public void Normalize()
     {
@@ -199,6 +206,20 @@ public sealed class ChapterSaveData
             string.Equals(state, "Completed", StringComparison.Ordinal));
         analytics ??= new ChapterAnalyticsSaveData();
         analytics.Normalize();
+        analytics.TryFinalizeEngagementScore(quiz.officialAttempt, completedEver);
+        officialAnalytics ??= new OfficialChapterAnalyticsSaveData();
+        officialAnalytics.Normalize();
+
+        if (!officialAnalytics.isRecorded && completedEver && completionCount <= 1)
+        {
+            string officialTimestamp = !string.IsNullOrWhiteSpace(firstCompletedAtUtc)
+                ? firstCompletedAtUtc
+                : completedAtUtc;
+            officialAnalytics.RecordIfMissing(
+                quiz.officialAttempt,
+                analytics,
+                officialTimestamp);
+        }
     }
 
     public bool HasWorldFlag(string flagId)
@@ -744,13 +765,80 @@ public sealed class MissionStepProgressSaveData
 }
 
 [Serializable]
+public sealed class OfficialChapterAnalyticsSaveData
+{
+    public bool isRecorded;
+    public string recordedAtUtc = string.Empty;
+    public int quizScore;
+    public int quizMaxScore;
+    public double quizScoreRatePercent;
+    public bool hasEngagementScore;
+    public double engagementRatePercent;
+    public double dialogueSkipRatePercent;
+    public double artifactDiscoveryRatePercent;
+    public double playTimeSeconds;
+
+    public bool RecordIfMissing(
+        QuizAttemptResultSaveData officialQuizResult,
+        ChapterAnalyticsSaveData analytics,
+        string timestampUtc)
+    {
+        if (isRecorded)
+            return false;
+
+        if (officialQuizResult?.isRecorded != true ||
+            analytics == null ||
+            !analytics.hasEngagementScore)
+            return false;
+
+        analytics.Normalize();
+        quizScore = Math.Max(0, officialQuizResult.score);
+        quizMaxScore = Math.Max(0, officialQuizResult.maxScore);
+        quizScoreRatePercent = quizMaxScore > 0
+            ? Math.Clamp(quizScore * 100d / quizMaxScore, 0d, 100d)
+            : 0d;
+        hasEngagementScore = analytics.hasEngagementScore;
+        engagementRatePercent = hasEngagementScore
+            ? analytics.engagementRatePercent
+            : 0d;
+        dialogueSkipRatePercent = analytics.missionConversationSkipRatePercent;
+        artifactDiscoveryRatePercent = analytics.artifactDiscoveryRatePercent;
+        playTimeSeconds = Math.Max(0d, analytics.playTimeSeconds);
+        recordedAtUtc = timestampUtc?.Trim() ?? string.Empty;
+        isRecorded = true;
+        Normalize();
+        return true;
+    }
+
+    public void Normalize()
+    {
+        recordedAtUtc ??= string.Empty;
+        quizScore = Math.Max(0, quizScore);
+        quizMaxScore = Math.Max(0, quizMaxScore);
+        quizScoreRatePercent = Math.Clamp(quizScoreRatePercent, 0d, 100d);
+        engagementRatePercent = hasEngagementScore
+            ? Math.Clamp(engagementRatePercent, 0d, 100d)
+            : 0d;
+        dialogueSkipRatePercent = Math.Clamp(dialogueSkipRatePercent, 0d, 100d);
+        artifactDiscoveryRatePercent = Math.Clamp(artifactDiscoveryRatePercent, 0d, 100d);
+        playTimeSeconds = Math.Max(0d, playTimeSeconds);
+    }
+}
+
+[Serializable]
 public sealed class ChapterAnalyticsSaveData
 {
+    private const double QuizWeight = 0.40d;
+    private const double ArtifactDiscoveryWeight = 0.35d;
+    private const double DialogueAttentionWeight = 0.25d;
+
     public int sessionCount;
     public int chapterRestarts;
     public double playTimeSeconds;
     public int missionStepsCompleted;
     public int artifactsUnlocked;
+    public int artifactsAvailable;
+    public double artifactDiscoveryRatePercent;
     public int charactersUnlocked;
     public int dialogueInteractions;
     public int doorTransitions;
@@ -758,7 +846,22 @@ public sealed class ChapterAnalyticsSaveData
     public int missionConversationLinesViewed;
     public int missionConversationLinesSkipped;
     public double missionConversationSkipRatePercent;
+    public bool hasEngagementScore;
+    public double engagementRatePercent;
     public List<AnalyticsCounterSaveData> customCounters = new();
+
+    public void RecordArtifactDiscovery(int totalArtifactCount)
+    {
+        artifactsUnlocked = Math.Max(0, artifactsUnlocked) + 1;
+        artifactsAvailable = Math.Max(artifactsAvailable, Math.Max(0, totalArtifactCount));
+        UpdateArtifactDiscoveryRate();
+    }
+
+    public void SetArtifactsAvailable(int totalArtifactCount)
+    {
+        artifactsAvailable = Math.Max(artifactsAvailable, Math.Max(0, totalArtifactCount));
+        UpdateArtifactDiscoveryRate();
+    }
 
     public void RecordMissionConversationReading(int linesViewed, int linesSkipped)
     {
@@ -773,8 +876,42 @@ public sealed class ChapterAnalyticsSaveData
         UpdateMissionConversationSkipRate();
     }
 
+    public bool TryFinalizeEngagementScore(
+        QuizAttemptResultSaveData officialQuizResult,
+        bool chapterCompleted)
+    {
+        if (hasEngagementScore)
+            return true;
+
+        if (!chapterCompleted ||
+            officialQuizResult?.isRecorded != true ||
+            officialQuizResult.maxScore <= 0 ||
+            artifactsAvailable <= 0 ||
+            missionConversationLinesViewed <= 0)
+        {
+            engagementRatePercent = 0d;
+            return false;
+        }
+
+        double quizRate = Math.Clamp(
+            officialQuizResult.score * 100d / officialQuizResult.maxScore,
+            0d,
+            100d);
+        double dialogueAttentionRate = 100d - missionConversationSkipRatePercent;
+
+        engagementRatePercent =
+            quizRate * QuizWeight +
+            artifactDiscoveryRatePercent * ArtifactDiscoveryWeight +
+            dialogueAttentionRate * DialogueAttentionWeight;
+        engagementRatePercent = Math.Clamp(engagementRatePercent, 0d, 100d);
+        hasEngagementScore = true;
+        return true;
+    }
+
     public void Normalize()
     {
+        artifactsUnlocked = Math.Max(0, artifactsUnlocked);
+        artifactsAvailable = Math.Max(0, artifactsAvailable);
         dialogueInteractions = Math.Max(0, dialogueInteractions);
         missionConversationsCompleted = Math.Max(0, missionConversationsCompleted);
         missionConversationLinesViewed = Math.Max(0, missionConversationLinesViewed);
@@ -783,7 +920,18 @@ public sealed class ChapterAnalyticsSaveData
             0,
             missionConversationLinesViewed);
         customCounters ??= new List<AnalyticsCounterSaveData>();
+        engagementRatePercent = hasEngagementScore
+            ? Math.Clamp(engagementRatePercent, 0d, 100d)
+            : 0d;
+        UpdateArtifactDiscoveryRate();
         UpdateMissionConversationSkipRate();
+    }
+
+    private void UpdateArtifactDiscoveryRate()
+    {
+        artifactDiscoveryRatePercent = artifactsAvailable > 0
+            ? Math.Min(artifactsUnlocked, artifactsAvailable) * 100d / artifactsAvailable
+            : 0d;
     }
 
     private void UpdateMissionConversationSkipRate()

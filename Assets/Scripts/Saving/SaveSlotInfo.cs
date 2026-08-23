@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public sealed class SaveSlotInfo
 {
@@ -10,6 +11,8 @@ public sealed class SaveSlotInfo
     public double TotalPlayTimeSeconds { get; }
     public string CreatedAtUtc { get; }
     public string LastSavedAtUtc { get; }
+    public string PlaythroughId { get; }
+    public IReadOnlyList<string> OfficialAnalyticsChapterIds { get; }
 
     private SaveSlotInfo(
         int slotNumber,
@@ -19,7 +22,9 @@ public sealed class SaveSlotInfo
         bool activeChapterCompleted,
         double totalPlayTimeSeconds,
         string createdAtUtc,
-        string lastSavedAtUtc)
+        string lastSavedAtUtc,
+        string playthroughId,
+        IReadOnlyList<string> officialAnalyticsChapterIds)
     {
         SlotNumber = slotNumber;
         HasSave = hasSave;
@@ -29,6 +34,8 @@ public sealed class SaveSlotInfo
         TotalPlayTimeSeconds = Math.Max(0d, totalPlayTimeSeconds);
         CreatedAtUtc = createdAtUtc ?? string.Empty;
         LastSavedAtUtc = lastSavedAtUtc ?? string.Empty;
+        PlaythroughId = playthroughId ?? string.Empty;
+        OfficialAnalyticsChapterIds = officialAnalyticsChapterIds ?? Array.Empty<string>();
     }
 
     public static SaveSlotInfo Empty(int slotNumber)
@@ -41,7 +48,9 @@ public sealed class SaveSlotInfo
             false,
             0d,
             string.Empty,
-            string.Empty);
+            string.Empty,
+            string.Empty,
+            Array.Empty<string>());
     }
 
     public static SaveSlotInfo FromSave(int slotNumber, GameSaveData saveData)
@@ -52,12 +61,19 @@ public sealed class SaveSlotInfo
         saveData.Normalize();
         ChapterSaveData activeChapter = saveData.FindChapter(saveData.activeChapterId);
         double totalPlayTime = 0d;
+        List<string> officialChapterIds = new();
 
         foreach (ChapterSaveData chapter in saveData.chapters)
         {
             if (chapter?.analytics != null)
                 totalPlayTime += Math.Max(0d, chapter.analytics.playTimeSeconds);
+
+            if (chapter?.officialAnalytics?.isRecorded == true &&
+                chapter.officialAnalytics.hasEngagementScore)
+                officialChapterIds.Add(chapter.chapterId);
         }
+
+        officialChapterIds.Sort(StringComparer.Ordinal);
 
         return new SaveSlotInfo(
             slotNumber,
@@ -67,6 +83,8 @@ public sealed class SaveSlotInfo
             activeChapter?.completedEver == true,
             totalPlayTime,
             saveData.createdAtUtc,
-            saveData.lastSavedAtUtc);
+            saveData.lastSavedAtUtc,
+            saveData.playthroughId,
+            officialChapterIds);
     }
 }

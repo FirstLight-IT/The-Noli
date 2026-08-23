@@ -174,6 +174,132 @@ public sealed class SaveFileServiceTests
     }
 
     [Test]
+    public void MoveToEmptySlot_MovesSaveAndRemovesGuestSource()
+    {
+        string guestDirectory = Path.Combine(testDirectory, "Guest");
+        string accountDirectory = Path.Combine(testDirectory, "Account");
+        SaveFileService guestSlot = new(guestDirectory, 2);
+        SaveFileService accountSlot = new(accountDirectory, 3);
+        Assert.That(guestSlot.TrySave(CreateSave(42), out string saveError),
+            Is.True, saveError);
+
+        Assert.That(guestSlot.TryMoveToEmptySlot(accountSlot, out string transferError),
+            Is.True, transferError);
+        Assert.That(guestSlot.HasAnySaveFiles(), Is.False);
+        Assert.That(accountSlot.TryLoad(out GameSaveData transferred, out string loadError),
+            Is.True, loadError);
+        Assert.That(transferred.saveRevision, Is.EqualTo(42));
+    }
+
+    [Test]
+    public void MoveToEmptySlot_NeverOverwritesAnOccupiedAccountSlot()
+    {
+        string guestDirectory = Path.Combine(testDirectory, "Guest");
+        string accountDirectory = Path.Combine(testDirectory, "Account");
+        SaveFileService guestSlot = new(guestDirectory, 1);
+        SaveFileService accountSlot = new(accountDirectory, 1);
+        Assert.That(guestSlot.TrySave(CreateSave(10), out string guestError),
+            Is.True, guestError);
+        Assert.That(accountSlot.TrySave(CreateSave(99), out string accountError),
+            Is.True, accountError);
+
+        Assert.That(guestSlot.TryMoveToEmptySlot(accountSlot, out _), Is.False);
+        Assert.That(guestSlot.HasValidSave(), Is.True);
+        Assert.That(accountSlot.TryLoad(out GameSaveData unchanged, out string loadError),
+            Is.True, loadError);
+        Assert.That(unchanged.saveRevision, Is.EqualTo(99));
+    }
+
+    [Test]
+    public void GuestSaveDirectory_IsScopedBelowThePersistentDataPath()
+    {
+        string guestDirectory = SaveStorageScope.GetGuestSaveDirectory(testDirectory);
+
+        Assert.That(
+            guestDirectory,
+            Is.EqualTo(Path.Combine(testDirectory, "Saves", "Guest")));
+    }
+
+    [Test]
+    public void AccountSaveDirectory_DependsOnPermanentAccountIdNotUsername()
+    {
+        string meepDirectory = SaveStorageScope.GetAccountSaveDirectory(
+            testDirectory,
+            "permanent-account-123");
+        string renamedMeepDirectory = SaveStorageScope.GetAccountSaveDirectory(
+            testDirectory,
+            "permanent-account-123");
+        string squimDirectory = SaveStorageScope.GetAccountSaveDirectory(
+            testDirectory,
+            "permanent-account-456");
+
+        Assert.That(renamedMeepDirectory, Is.EqualTo(meepDirectory));
+        Assert.That(squimDirectory, Is.Not.EqualTo(meepDirectory));
+        Assert.That(meepDirectory, Does.StartWith(
+            Path.Combine(testDirectory, "Saves", "Accounts")));
+        Assert.That(meepDirectory, Does.Not.Contain("meep"));
+    }
+
+    [Test]
+    public void UnscopedSlots_AreCopiedIntoGuestStorageWithoutDeletingSources()
+    {
+        SaveFileService sourceSlotOne = new(testDirectory, 1);
+        SaveFileService sourceSlotThree = new(testDirectory, 3);
+        Assert.That(sourceSlotOne.TrySave(CreateSave(11), out string slotOneError),
+            Is.True, slotOneError);
+        Assert.That(sourceSlotThree.TrySave(CreateSave(33), out string slotThreeError),
+            Is.True, slotThreeError);
+
+        string guestDirectory = SaveStorageScope.GetGuestSaveDirectory(testDirectory);
+        Assert.That(
+            SaveFileService.TryMigrateUnscopedSlots(
+                testDirectory,
+                guestDirectory,
+                out bool migrated,
+                out string migrationError),
+            Is.True,
+            migrationError);
+        Assert.That(migrated, Is.True);
+
+        SaveFileService guestSlotOne = new(guestDirectory, 1);
+        SaveFileService guestSlotThree = new(guestDirectory, 3);
+        Assert.That(guestSlotOne.TryLoad(out GameSaveData loadedOne, out string loadOneError),
+            Is.True, loadOneError);
+        Assert.That(guestSlotThree.TryLoad(out GameSaveData loadedThree, out string loadThreeError),
+            Is.True, loadThreeError);
+        Assert.That(loadedOne.saveRevision, Is.EqualTo(11));
+        Assert.That(loadedThree.saveRevision, Is.EqualTo(33));
+        Assert.That(File.Exists(sourceSlotOne.SavePath), Is.True);
+        Assert.That(File.Exists(sourceSlotThree.SavePath), Is.True);
+    }
+
+    [Test]
+    public void UnscopedMigration_NeverOverwritesAnExistingGuestSlot()
+    {
+        SaveFileService source = new(testDirectory, 1);
+        Assert.That(source.TrySave(CreateSave(10), out string sourceError),
+            Is.True, sourceError);
+
+        string guestDirectory = SaveStorageScope.GetGuestSaveDirectory(testDirectory);
+        SaveFileService guest = new(guestDirectory, 1);
+        Assert.That(guest.TrySave(CreateSave(99), out string guestError),
+            Is.True, guestError);
+
+        Assert.That(
+            SaveFileService.TryMigrateUnscopedSlots(
+                testDirectory,
+                guestDirectory,
+                out bool migrated,
+                out string migrationError),
+            Is.True,
+            migrationError);
+        Assert.That(migrated, Is.False);
+        Assert.That(guest.TryLoad(out GameSaveData loaded, out string loadError),
+            Is.True, loadError);
+        Assert.That(loaded.saveRevision, Is.EqualTo(99));
+    }
+
+    [Test]
     public void LegacyAutosave_IsCopiedIntoSlotOneWithoutDeletingTheOriginal()
     {
         GameSaveData legacySave = CreateSave(37);

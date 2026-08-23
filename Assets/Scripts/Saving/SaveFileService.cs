@@ -9,6 +9,7 @@ public sealed class SaveFileService
     public const int MaximumSlotNumber = 3;
     public const string SlotSaveFileNameFormat = "save_slot_{0}.json";
     private const string SlotMigrationMarkerFileName = "normal_save_slots.initialized";
+    private const string GuestScopeMigrationMarkerFileName = "unscoped_save_slots.migrated";
 
     // Kept only so saves made before the slot system can be migrated safely.
     public const string SaveFileName = "autosave.json";
@@ -114,11 +115,120 @@ public sealed class SaveFileService
         return TryWriteMigrationMarker(migrationMarkerPath, out error);
     }
 
+    public static bool TryMigrateUnscopedSlots(
+        string sourceDirectory,
+        string guestSaveDirectory,
+        out bool migrated,
+        out string error)
+    {
+        migrated = false;
+
+        if (string.IsNullOrWhiteSpace(sourceDirectory) ||
+            string.IsNullOrWhiteSpace(guestSaveDirectory))
+        {
+            error = "Source and Guest save directories are required.";
+            return false;
+        }
+
+        string migrationMarkerPath = Path.Combine(
+            guestSaveDirectory,
+            GuestScopeMigrationMarkerFileName);
+
+        if (File.Exists(migrationMarkerPath))
+        {
+            error = string.Empty;
+            return true;
+        }
+
+        for (int slotNumber = MinimumSlotNumber;
+             slotNumber <= MaximumSlotNumber;
+             slotNumber++)
+        {
+            SaveFileService destination = new(guestSaveDirectory, slotNumber);
+
+            // Never replace a save that already exists in the Guest namespace.
+            if (destination.HasValidSave())
+                continue;
+
+            SaveFileService source = new(sourceDirectory, slotNumber);
+
+            if (!source.TryLoad(out GameSaveData saveData, out _))
+                continue;
+
+            if (!destination.TrySaveFresh(saveData, out error))
+            {
+                error = $"Save Slot {slotNumber} could not be migrated to Guest storage. {error}";
+                return false;
+            }
+
+            migrated = true;
+        }
+
+        return TryWriteMigrationMarker(migrationMarkerPath, out error);
+    }
+
     public bool HasValidSave()
     {
         return TryReadSave(savePath, out _, out _) ||
                TryReadSave(backupPath, out _, out _) ||
                TryReadSave(temporaryPath, out _, out _);
+    }
+
+    public bool HasAnySaveFiles()
+    {
+        return File.Exists(savePath) ||
+               File.Exists(backupPath) ||
+               File.Exists(temporaryPath);
+    }
+
+    public bool TryMoveToEmptySlot(SaveFileService destination, out string error)
+    {
+        if (destination == null)
+        {
+            error = "A destination save slot is required.";
+            return false;
+        }
+
+        if (string.Equals(savePath, destination.savePath, StringComparison.OrdinalIgnoreCase))
+        {
+            error = "The source and destination save slots must be different.";
+            return false;
+        }
+
+        if (destination.HasAnySaveFiles())
+        {
+            error = "The receiving account slot is not empty.";
+            return false;
+        }
+
+        if (!TryLoad(out GameSaveData saveData, out string loadError))
+        {
+            error = $"The Guest save could not be loaded. {loadError}";
+            return false;
+        }
+
+        if (!destination.TrySaveFresh(saveData, out string saveError))
+        {
+            error = $"The Guest save could not be written to the account slot. {saveError}";
+            return false;
+        }
+
+        if (TryDeleteAll(out string deleteError))
+        {
+            error = string.Empty;
+            return true;
+        }
+
+        if (!destination.TryDeleteAll(out string rollbackError))
+        {
+            error =
+                $"The Guest save could not be removed after transfer. {deleteError} " +
+                $"The account copy also could not be rolled back. {rollbackError}";
+            return false;
+        }
+
+        error = $"The Guest save could not be removed, so the transfer was cancelled. {deleteError}";
+        return false;
     }
 
     public bool TryLoad(out GameSaveData saveData, out string error)

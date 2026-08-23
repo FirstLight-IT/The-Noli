@@ -9,6 +9,7 @@ public class Artifact : MonoBehaviour, IInteractable
     public static event Action<string> OnArtifactInteracted;
     public static event Action<ArtifactInfoSO> OnArtifactUnlocked;
     public static event Action<ArtifactInfoSO> OnArtifactPassed;
+    public static event Action<int> OnArtifactCatalogAvailable;
     
     public bool beenInteracted { get; private set; }
     public string ArtifactID => artifactData != null ? artifactData.ArtifactID : string.Empty;
@@ -54,6 +55,7 @@ public class Artifact : MonoBehaviour, IInteractable
         }
 
         artifactInstances.Add(this);
+        OnArtifactCatalogAvailable?.Invoke(artifactData.TotalArtifactCount);
         beenInteracted = JournalUnlockRegistry.IsUnlocked("artifacts", ArtifactID);
     }
 

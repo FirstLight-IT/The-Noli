@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,7 +27,9 @@ public sealed class SaveSlotMenuController : MonoBehaviour
 
     private MenuMode mode;
     private int pendingDeleteSlot = -1;
+    private int pendingAnalyticsSlot = -1;
     private bool isBusy;
+    private GlobalAnalyticsSubmissionStatus analyticsStatus;
 
     private void Awake()
     {
@@ -60,7 +65,7 @@ public sealed class SaveSlotMenuController : MonoBehaviour
             panelRoot.SetActive(false);
     }
 
-    private void Show(MenuMode requestedMode)
+    private async void Show(MenuMode requestedMode)
     {
         if (!TryValidate(out string error))
         {
@@ -70,12 +75,20 @@ public sealed class SaveSlotMenuController : MonoBehaviour
 
         mode = requestedMode;
         pendingDeleteSlot = -1;
+        pendingAnalyticsSlot = -1;
         isBusy = false;
+        analyticsStatus = null;
         closeButton.interactable = true;
         panelRoot.SetActive(true);
         titleText.SetText(mode == MenuMode.NewGame ? "Choose an Empty Slot" : "Load Game");
         SetMessage(string.Empty);
         RefreshSlots();
+
+        if (PlayerSession.CanSubmitGlobalAnalytics &&
+            PlayerSession.EffectiveRole != AccountRole.Librarian)
+        {
+            await LoadAnalyticsStatusAsync();
+        }
     }
 
     private void RefreshSlots()
@@ -99,7 +112,133 @@ public sealed class SaveSlotMenuController : MonoBehaviour
                     CancelDelete,
                     () => ConfirmDelete(slotNumber));
             }
+            else
+            {
+                BindAnalyticsAction(slotView, slotInfo);
+            }
         }
+    }
+
+    private async Task LoadAnalyticsStatusAsync()
+    {
+        GlobalAnalyticsStatusResult result =
+            await GlobalAnalyticsSubmissionService.GetStatusAsync();
+
+        if (panelRoot == null || !panelRoot.activeSelf)
+            return;
+
+        if (!result.Success)
+        {
+            SetMessage(result.Error);
+            return;
+        }
+
+        analyticsStatus = result.Status;
+        RefreshSlots();
+    }
+
+    private void BindAnalyticsAction(SaveSlotView slotView, SaveSlotInfo slotInfo)
+    {
+        if (analyticsStatus == null || !slotInfo.HasSave ||
+            slotInfo.OfficialAnalyticsChapterIds.Count == 0)
+        {
+            slotView.BindAnalytics(false, false, string.Empty, null);
+            return;
+        }
+
+        if (!analyticsStatus.hasOfficialPlaythrough)
+        {
+            bool confirming = pendingAnalyticsSlot == slotInfo.SlotNumber;
+            slotView.BindAnalytics(
+                true,
+                true,
+                confirming ? "Confirm Official Save" : "Use for Global Analytics",
+                () => RequestAnalyticsSubmission(slotInfo.SlotNumber));
+            return;
+        }
+
+        if (!string.Equals(
+                analyticsStatus.officialPlaythroughId,
+                slotInfo.PlaythroughId,
+                StringComparison.Ordinal))
+        {
+            slotView.BindAnalytics(true, false, "Another Save Is Official", null);
+            return;
+        }
+
+        HashSet<string> accepted = new(
+            analyticsStatus.acceptedChapterIds,
+            StringComparer.Ordinal);
+        bool hasNewChapter = false;
+
+        foreach (string chapterId in slotInfo.OfficialAnalyticsChapterIds)
+        {
+            if (!accepted.Contains(chapterId))
+            {
+                hasNewChapter = true;
+                break;
+            }
+        }
+
+        slotView.BindAnalytics(
+            true,
+            hasNewChapter,
+            hasNewChapter ? "Upload New Chapter Results" : "Analytics Up to Date",
+            hasNewChapter ? () => SubmitAnalytics(slotInfo.SlotNumber) : null);
+    }
+
+    private void RequestAnalyticsSubmission(int slotNumber)
+    {
+        if (isBusy)
+            return;
+
+        if (pendingAnalyticsSlot != slotNumber)
+        {
+            pendingAnalyticsSlot = slotNumber;
+            SetMessage(
+                $"Save Slot {slotNumber} will permanently become this account's official " +
+                "Global Analytics playthrough. Press Confirm Official Save to continue.");
+            RefreshSlots();
+            return;
+        }
+
+        SubmitAnalytics(slotNumber);
+    }
+
+    private async void SubmitAnalytics(int slotNumber)
+    {
+        if (isBusy)
+            return;
+
+        if (!SaveGameManager.TryGetSaveSlotData(
+                slotNumber,
+                out GameSaveData saveData,
+                out string error))
+        {
+            SetMessage(error);
+            return;
+        }
+
+        BeginBusyState();
+        SetMessage("Uploading official Global Analytics...");
+        AccountOperationResult result =
+            await GlobalAnalyticsSubmissionService.SubmitAsync(saveData);
+
+        if (!result.Success)
+        {
+            SetMessage(result.Error);
+            EndBusyState();
+            return;
+        }
+
+        pendingAnalyticsSlot = -1;
+        GlobalAnalyticsStatusResult statusResult =
+            await GlobalAnalyticsSubmissionService.GetStatusAsync();
+        analyticsStatus = statusResult.Success ? statusResult.Status : analyticsStatus;
+        SetMessage(statusResult.Success
+            ? "Global Analytics uploaded successfully."
+            : "Analytics were uploaded, but their current status could not be refreshed.");
+        EndBusyState();
     }
 
     private void HandlePrimaryAction(int slotNumber, SaveSlotInfo slotInfo)
@@ -149,6 +288,7 @@ public sealed class SaveSlotMenuController : MonoBehaviour
             return;
 
         pendingDeleteSlot = slotNumber;
+        pendingAnalyticsSlot = -1;
         SetMessage($"Confirm deletion of Save Slot {slotNumber}.");
         RefreshSlots();
     }

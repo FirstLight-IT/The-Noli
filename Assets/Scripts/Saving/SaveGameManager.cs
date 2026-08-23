@@ -10,6 +10,8 @@ public sealed class SaveGameManager : MonoBehaviour
 {
     private const float PeriodicCheckpointInterval = 30f;
     private const string ActiveSlotPlayerPrefsKey = "TheNoli.NormalSave.ActiveSlot";
+    private const string AccountActiveSlotPlayerPrefsKeyPrefix =
+        "TheNoli.AccountSave.ActiveSlot.";
     public const int SaveSlotCount = 3;
     public const string QuizSceneName = "ChapterQuiz";
 
@@ -23,6 +25,7 @@ public sealed class SaveGameManager : MonoBehaviour
         Instance != null && Instance.autosaveRestorePending;
 
     private SaveFileService fileService;
+    private string persistentDataPath;
     private string saveDirectory;
     private int activeSlotNumber = SaveFileService.MinimumSlotNumber;
     private GameSaveData currentData;
@@ -61,10 +64,10 @@ public sealed class SaveGameManager : MonoBehaviour
         }
 
         Instance = this;
-        saveDirectory = Application.persistentDataPath;
+        persistentDataPath = Application.persistentDataPath;
 
         if (!SaveFileService.TryMigrateLegacySaveToSlotOne(
-                saveDirectory,
+                persistentDataPath,
                 out bool migrated,
                 out string migrationError))
         {
@@ -75,9 +78,25 @@ public sealed class SaveGameManager : MonoBehaviour
             Debug.Log("The previous autosave was safely migrated into Save Slot 1.", this);
         }
 
+        string guestSaveDirectory = SaveStorageScope.GetGuestSaveDirectory(persistentDataPath);
+
+        if (!SaveFileService.TryMigrateUnscopedSlots(
+                persistentDataPath,
+                guestSaveDirectory,
+                out bool guestSavesMigrated,
+                out string guestMigrationError))
+        {
+            Debug.LogError(guestMigrationError, this);
+        }
+        else if (guestSavesMigrated)
+        {
+            Debug.Log("Existing device saves were safely migrated into Guest storage.", this);
+        }
+
+        saveDirectory = SaveStorageScope.GetCurrentSaveDirectory(persistentDataPath);
         activeSlotNumber = Mathf.Clamp(
             PlayerPrefs.GetInt(
-                ActiveSlotPlayerPrefsKey,
+                GetActiveSlotPlayerPrefsKey(),
                 SaveFileService.MinimumSlotNumber),
             SaveFileService.MinimumSlotNumber,
             SaveFileService.MaximumSlotNumber);
@@ -90,7 +109,9 @@ public sealed class SaveGameManager : MonoBehaviour
         MissionController.OnMissionStatesChanged += HandleMissionStatesChanged;
         MissionController.OnMissionStepAdvanced += HandleMissionStepFinished;
         DialogueController.OnConversationReadingCompleted += HandleConversationReadingCompleted;
+        Artifact.OnArtifactCatalogAvailable += HandleArtifactCatalogAvailable;
         SceneManager.sceneLoaded += HandleSceneLoaded;
+        PlayerSession.Changed += HandlePlayerSessionChanged;
     }
 
     private void OnDisable()
@@ -99,7 +120,9 @@ public sealed class SaveGameManager : MonoBehaviour
         MissionController.OnMissionStatesChanged -= HandleMissionStatesChanged;
         MissionController.OnMissionStepAdvanced -= HandleMissionStepFinished;
         DialogueController.OnConversationReadingCompleted -= HandleConversationReadingCompleted;
+        Artifact.OnArtifactCatalogAvailable -= HandleArtifactCatalogAvailable;
         SceneManager.sceneLoaded -= HandleSceneLoaded;
+        PlayerSession.Changed -= HandlePlayerSessionChanged;
     }
 
     private void OnDestroy()
@@ -133,6 +156,15 @@ public sealed class SaveGameManager : MonoBehaviour
     {
         EnsureInstance();
         return Instance.GetSaveSlotInfoInternal(slotNumber);
+    }
+
+    public static bool TryGetSaveSlotData(
+        int slotNumber,
+        out GameSaveData saveData,
+        out string error)
+    {
+        EnsureInstance();
+        return Instance.TryGetSaveSlotDataInternal(slotNumber, out saveData, out error);
     }
 
     public static bool BeginNewGameInSlot(
@@ -526,7 +558,21 @@ public sealed class SaveGameManager : MonoBehaviour
             if (isPracticeAttempt)
                 progress.RecordPracticeResult();
             else
+            {
                 progress.RecordOfficialResultIfMissing();
+                chapter.analytics.TryFinalizeEngagementScore(
+                    progress.officialAttempt,
+                    chapterCompleted: true);
+
+                if (!chapter.completedEver)
+                {
+                    chapter.officialAnalytics ??= new OfficialChapterAnalyticsSaveData();
+                    chapter.officialAnalytics.RecordIfMissing(
+                        progress.officialAttempt,
+                        chapter.analytics,
+                        now);
+                }
+            }
 
             chapter.state = "Completed";
             chapter.completedAtUtc = now;
@@ -1009,6 +1055,20 @@ public sealed class SaveGameManager : MonoBehaviour
             : SaveSlotInfo.Empty(slotNumber);
     }
 
+    private bool TryGetSaveSlotDataInternal(
+        int slotNumber,
+        out GameSaveData saveData,
+        out string error)
+    {
+        saveData = null;
+
+        if (!TryValidateSlotNumber(slotNumber, out error))
+            return false;
+
+        SaveFileService slotService = new(saveDirectory, slotNumber);
+        return slotService.TryLoad(out saveData, out error);
+    }
+
     private bool HasLoadableAutosave()
     {
         return fileService.TryLoad(out GameSaveData saveData, out _) &&
@@ -1030,8 +1090,41 @@ public sealed class SaveGameManager : MonoBehaviour
         CancelPendingAutosave();
         activeSlotNumber = slotNumber;
         fileService = new SaveFileService(saveDirectory, activeSlotNumber);
-        PlayerPrefs.SetInt(ActiveSlotPlayerPrefsKey, activeSlotNumber);
+        PlayerPrefs.SetInt(GetActiveSlotPlayerPrefsKey(), activeSlotNumber);
         PlayerPrefs.Save();
+    }
+
+    private void HandlePlayerSessionChanged()
+    {
+        if (currentData != null && !SaveNow("SaveOwnerChanged"))
+        {
+            Debug.LogError(
+                "The current save could not be written before changing save owners.",
+                this);
+        }
+
+        CancelPendingAutosave();
+        currentData = null;
+        autosaveRestorePending = false;
+        isApplyingRestore = false;
+        timeSinceLastSave = 0f;
+        JournalUnlockRegistry.Clear();
+
+        saveDirectory = SaveStorageScope.GetCurrentSaveDirectory(persistentDataPath);
+        activeSlotNumber = Mathf.Clamp(
+            PlayerPrefs.GetInt(
+                GetActiveSlotPlayerPrefsKey(),
+                SaveFileService.MinimumSlotNumber),
+            SaveFileService.MinimumSlotNumber,
+            SaveFileService.MaximumSlotNumber);
+        fileService = new SaveFileService(saveDirectory, activeSlotNumber);
+    }
+
+    private static string GetActiveSlotPlayerPrefsKey()
+    {
+        return PlayerSession.IsGuest
+            ? ActiveSlotPlayerPrefsKey
+            : AccountActiveSlotPlayerPrefsKeyPrefix + SaveStorageScope.GetCurrentOwnerKey();
     }
 
     private void CancelPendingAutosave()
@@ -1097,7 +1190,12 @@ public sealed class SaveGameManager : MonoBehaviour
         if (activeChapter != null)
         {
             if (collection == JournalUnlockRegistry.ArtifactCollection)
-                activeChapter.analytics.artifactsUnlocked++;
+            {
+                int totalArtifactCount = Artifact.TryGetById(entryId, out Artifact artifact)
+                    ? artifact.ArtifactData.TotalArtifactCount
+                    : activeChapter.analytics.artifactsAvailable;
+                activeChapter.analytics.RecordArtifactDiscovery(totalArtifactCount);
+            }
             else if (collection == JournalUnlockRegistry.CharacterCollection)
                 activeChapter.analytics.charactersUnlocked++;
         }
@@ -1145,6 +1243,19 @@ public sealed class SaveGameManager : MonoBehaviour
             result.LinesViewed,
             result.RapidlySkippedLines);
         QueueAutosave("ConversationReadingCompleted");
+    }
+
+    private void HandleArtifactCatalogAvailable(int totalArtifactCount)
+    {
+        if (isApplyingRestore || currentData == null || totalArtifactCount <= 0)
+            return;
+
+        ChapterSaveData activeChapter = currentData.FindChapter(currentData.activeChapterId);
+
+        if (activeChapter == null)
+            return;
+
+        activeChapter.analytics.SetArtifactsAvailable(totalArtifactCount);
     }
 
     private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)

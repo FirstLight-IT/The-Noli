@@ -11,16 +11,19 @@ public sealed class SaveSlotView : MonoBehaviour
     [SerializeField] private TMP_Text detailsText;
     [SerializeField] private TMP_Text primaryButtonText;
     [SerializeField] private TMP_Text deleteButtonText;
+    [SerializeField] private TMP_Text analyticsButtonText;
 
     [Header("Buttons")]
     [SerializeField] private Button primaryButton;
     [SerializeField] private Button deleteButton;
+    [SerializeField] private Button analyticsButton;
 
     public bool TryValidate(out string error)
     {
         if (slotTitleText == null || detailsText == null ||
             primaryButtonText == null || deleteButtonText == null ||
-            primaryButton == null || deleteButton == null)
+            analyticsButtonText == null || primaryButton == null ||
+            deleteButton == null || analyticsButton == null)
         {
             error = $"{name} has unassigned save-slot UI references.";
             return false;
@@ -51,6 +54,19 @@ public sealed class SaveSlotView : MonoBehaviour
 
         BindButton(primaryButton, primaryAction);
         BindButton(deleteButton, deleteAction);
+        analyticsButton.gameObject.SetActive(false);
+    }
+
+    public void BindAnalytics(
+        bool visible,
+        bool interactable,
+        string label,
+        Action action)
+    {
+        analyticsButton.gameObject.SetActive(visible);
+        analyticsButton.interactable = visible && interactable;
+        analyticsButtonText.SetText(label ?? string.Empty);
+        BindButton(analyticsButton, action);
     }
 
     public void BindDeleteConfirmation(Action cancelAction, Action confirmAction)
@@ -61,6 +77,7 @@ public sealed class SaveSlotView : MonoBehaviour
         deleteButton.gameObject.SetActive(true);
         deleteButton.interactable = true;
         deleteButtonText.SetText("Confirm Delete");
+        analyticsButton.gameObject.SetActive(false);
         BindButton(primaryButton, cancelAction);
         BindButton(deleteButton, confirmAction);
     }
@@ -69,6 +86,7 @@ public sealed class SaveSlotView : MonoBehaviour
     {
         primaryButton.interactable = interactable && primaryButton.interactable;
         deleteButton.interactable = interactable && deleteButton.interactable;
+        analyticsButton.interactable = interactable && analyticsButton.interactable;
     }
 
     private static void BindButton(Button button, Action action)

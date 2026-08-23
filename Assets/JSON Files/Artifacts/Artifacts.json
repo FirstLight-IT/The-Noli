@@ -355,30 +355,6 @@
       ]
     },
     {
-      "artifactId": "artifact_plant",
-      "roomId": "ground_floor",
-      "languages": [
-        {
-          "languageCode": "en",
-          "displayName": "Plant",
-          "shortName": "",
-          "hintDialogueLines": ["Look around the ground floor for a plant displayed inside the mansion."],
-          "description": [
-            "A plant displayed inside the mansion."
-          ]
-        },
-        {
-          "languageCode": "fil",
-          "displayName": "Halaman",
-          "shortName": "",
-          "hintDialogueLines": ["Hanapin sa unang palapag ang halamang nakadispley sa loob ng mansiyon."],
-          "description": [
-            "Isang halamang nakadispley sa loob ng mansiyon."
-          ]
-        }
-      ]
-    },
-    {
       "artifactId": "artifact_tinola",
       "roomId": "caida",
       "languages": [

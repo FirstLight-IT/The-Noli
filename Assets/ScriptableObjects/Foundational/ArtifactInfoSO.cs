@@ -42,6 +42,12 @@ public static class ArtifactJson
         return Usable(fallback) ? fallback : entry.languages.Find(Usable);
     }
 
+    public static int Count(TextAsset asset)
+    {
+        ArtifactDatabase database = Load(asset);
+        return database?.artifacts?.Count ?? 0;
+    }
+
     public static string[] ResolveHintDialogueLines(
         TextAsset asset,
         string artifactId,
@@ -106,6 +112,7 @@ public class ArtifactInfoSO : ScriptableObject
         ArtifactJson.Resolve(localizedDataJson, artifactID, GameLanguage.CurrentCode);
 
     public string ArtifactID => artifactID;
+    public int TotalArtifactCount => ArtifactJson.Count(localizedDataJson);
     public string DisplayName => LocalizedContent?.displayName ?? string.Empty;
     public string ShortName => string.IsNullOrWhiteSpace(LocalizedContent?.shortName)
         ? DisplayName

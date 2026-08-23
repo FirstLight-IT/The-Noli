@@ -20,12 +20,15 @@ public sealed class MainMenuController : MonoBehaviour
 
     private void Start()
     {
+        PlayerSession.Changed += RefreshButtons;
         BindLanguageDropdown();
         RefreshButtons();
     }
 
     private void OnDestroy()
     {
+        PlayerSession.Changed -= RefreshButtons;
+
         if (languageDropdown != null)
             languageDropdown.onValueChanged.RemoveListener(HandleLanguageChanged);
     }
