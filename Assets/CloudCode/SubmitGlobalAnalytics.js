@@ -191,3 +191,7 @@ function isSafeId(value) {
 function clean(value) {
   return typeof value === "string" ? value.trim() : "";
 }
+
+module.exports.params = {
+  submissionJson: { type: "String", required: true }
+};

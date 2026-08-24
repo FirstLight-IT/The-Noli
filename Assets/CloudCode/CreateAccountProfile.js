@@ -81,3 +81,11 @@ function clean(value) {
 function isValidEmail(value) {
   return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(value);
 }
+
+module.exports.params = {
+  username: { type: "String", required: true },
+  inGameName: { type: "String", required: true },
+  requestedRole: { type: "String", required: true },
+  fullName: { type: "String", required: false },
+  schoolEmail: { type: "String", required: false }
+};

@@ -117,3 +117,7 @@ async function saveVerification(cloudSave, context, value) {
 function clean(value) {
   return typeof value === "string" ? value.trim() : "";
 }
+
+module.exports.params = {
+  code: { type: "String", required: true }
+};

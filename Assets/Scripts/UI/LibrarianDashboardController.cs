@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -30,7 +29,10 @@ public sealed class LibrarianDashboardController : MonoBehaviour
     [SerializeField] private TMP_Text globalAveragePlaytimeText;
     [SerializeField] private TMP_Text globalResultsHeaderText;
     [SerializeField] private TMP_Text globalAnalyticsText;
-    [SerializeField] private TMP_Text globalAnalyticsRightText;
+    [SerializeField] private AnalyticsMetricBarView engagementMetric;
+    [SerializeField] private AnalyticsMetricBarView quizScoreMetric;
+    [SerializeField] private AnalyticsMetricBarView dialogueAttentionMetric;
+    [SerializeField] private AnalyticsMetricBarView artifactDiscoveryMetric;
 
     [Header("Teacher Verification")]
     [SerializeField] private TMP_Text teacherRequestText;
@@ -194,7 +196,7 @@ public sealed class LibrarianDashboardController : MonoBehaviour
                 "Chapter participants: 0");
             globalAnalyticsText.SetText(
                 "No official submissions have been received for this chapter yet.");
-            SetText(globalAnalyticsRightText, string.Empty);
+            SetMetricsVisible(false);
             return;
         }
 
@@ -206,27 +208,24 @@ public sealed class LibrarianDashboardController : MonoBehaviour
             $"<b>{FormatChapterLabel(chapter.chapterId)} AVERAGE RESULTS</b>\n" +
             $"Chapter participants: {chapter.participantCount}");
 
-        StringBuilder leftColumn = new();
-        leftColumn.AppendLine(FormatMetricBar(
-            "Engagement",
-            chapter.averageEngagementRatePercent));
-        leftColumn.AppendLine();
-        leftColumn.AppendLine(FormatMetricBar(
-            "Quiz Score",
-            chapter.averageQuizScoreRatePercent));
-
-        StringBuilder rightColumn = new();
-        rightColumn.AppendLine(FormatMetricBar(
+        globalAnalyticsText.SetText(string.Empty);
+        engagementMetric.SetValue("Engagement", chapter.averageEngagementRatePercent);
+        quizScoreMetric.SetValue("Quiz Score", chapter.averageQuizScoreRatePercent);
+        dialogueAttentionMetric.SetValue(
             "Dialogue Attention",
-            100d - chapter.averageDialogueSkipRatePercent));
-        rightColumn.AppendLine($"Dialogue skip rate: {chapter.averageDialogueSkipRatePercent:0.0}%");
-        rightColumn.AppendLine();
-        rightColumn.AppendLine(FormatMetricBar(
+            100d - chapter.averageDialogueSkipRatePercent,
+            $"Skip rate: {chapter.averageDialogueSkipRatePercent:0.0}%");
+        artifactDiscoveryMetric.SetValue(
             "Artifact Discovery",
-            chapter.averageArtifactDiscoveryRatePercent));
+            chapter.averageArtifactDiscoveryRatePercent);
+    }
 
-        globalAnalyticsText.SetText(leftColumn.ToString().TrimEnd());
-        SetText(globalAnalyticsRightText, rightColumn.ToString().TrimEnd());
+    private void SetMetricsVisible(bool visible)
+    {
+        engagementMetric?.SetVisible(visible);
+        quizScoreMetric?.SetVisible(visible);
+        dialogueAttentionMetric?.SetVisible(visible);
+        artifactDiscoveryMetric?.SetVisible(visible);
     }
 
     private static void SetText(TMP_Text target, string value)

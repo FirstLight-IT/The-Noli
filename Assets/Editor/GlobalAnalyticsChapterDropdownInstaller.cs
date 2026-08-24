@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public static class GlobalAnalyticsChapterDropdownInstaller
 {
     private const string ScenePath = "Assets/Scenes/LibrarianDashboard.unity";
-    private const string InstalledKey = "TheNoli.GlobalAnalyticsChapterDropdown.v4";
+    private const string InstalledKey = "TheNoli.GlobalAnalyticsChapterDropdown.v7";
 
     static GlobalAnalyticsChapterDropdownInstaller()
     {
@@ -84,8 +84,14 @@ public static class GlobalAnalyticsChapterDropdownInstaller
             "globalAveragePlaytimeText", "Global Average Playtime Text");
         SetTextReference(serializedController, dashboardScene,
             "globalResultsHeaderText", "Global Results Header Text");
-        SetTextReference(serializedController, dashboardScene,
-            "globalAnalyticsRightText", "Global Analytics Right Text");
+        SetMetricReference(serializedController, dashboardScene,
+            "engagementMetric", "Engagement Metric");
+        SetMetricReference(serializedController, dashboardScene,
+            "quizScoreMetric", "Quiz Score Metric");
+        SetMetricReference(serializedController, dashboardScene,
+            "dialogueAttentionMetric", "Dialogue Attention Metric");
+        SetMetricReference(serializedController, dashboardScene,
+            "artifactDiscoveryMetric", "Artifact Discovery Metric");
         serializedController.ApplyModifiedPropertiesWithoutUndo();
         EditorUtility.SetDirty(controller);
         EditorSceneManager.MarkSceneDirty(dashboardScene);
@@ -165,15 +171,114 @@ public static class GlobalAnalyticsChapterDropdownInstaller
             text.fontSize = 23f;
         }
 
-        GameObject rightText = FindChild(resultsPanel.transform,
+        GameObject oldRightText = FindChild(resultsPanel.transform,
             "Global Analytics Right Text");
-        if (rightText == null)
-            rightText = CreateText("Global Analytics Right Text", resultsPanel.transform,
-                string.Empty, 23f, TextAlignmentOptions.TopLeft).gameObject;
-        SetRect(rightText.GetComponent<RectTransform>(), new Vector2(0.5f, 0f),
-            new Vector2(1f, 0.78f), new Vector2(24f, 24f), new Vector2(-28f, -8f));
+        if (oldRightText != null)
+            Object.DestroyImmediate(oldRightText);
+
+        CreateOrUpdateMetric(resultsPanel.transform, "Engagement Metric", "Engagement",
+            new Vector2(0f, 0.39f), new Vector2(0.5f, 0.78f),
+            new Vector2(28f, 12f), new Vector2(-22f, -8f), false);
+        CreateOrUpdateMetric(resultsPanel.transform, "Quiz Score Metric", "Quiz Score",
+            Vector2.zero, new Vector2(0.5f, 0.39f),
+            new Vector2(28f, 14f), new Vector2(-22f, -6f), false);
+        CreateOrUpdateMetric(resultsPanel.transform, "Dialogue Attention Metric",
+            "Dialogue Attention", new Vector2(0.5f, 0.39f), new Vector2(1f, 0.78f),
+            new Vector2(22f, 12f), new Vector2(-28f, -8f), true);
+        CreateOrUpdateMetric(resultsPanel.transform, "Artifact Discovery Metric",
+            "Artifact Discovery", new Vector2(0.5f, 0f), new Vector2(1f, 0.39f),
+            new Vector2(22f, 14f), new Vector2(-28f, -6f), false);
 
         dropdown.transform.SetAsLastSibling();
+    }
+
+    private static void CreateOrUpdateMetric(
+        Transform parent,
+        string objectName,
+        string label,
+        Vector2 anchorMin,
+        Vector2 anchorMax,
+        Vector2 offsetMin,
+        Vector2 offsetMax,
+        bool hasSecondaryText)
+    {
+        GameObject metricObject = FindChild(parent, objectName);
+        if (metricObject == null)
+        {
+            metricObject = new GameObject(objectName, typeof(RectTransform),
+                typeof(AnalyticsMetricBarView));
+            metricObject.transform.SetParent(parent, false);
+        }
+
+        SetRect(metricObject.GetComponent<RectTransform>(), anchorMin, anchorMax,
+            offsetMin, offsetMax);
+
+        TMP_Text labelText = GetOrCreateText(metricObject.transform, "Label", label,
+            22f, TextAlignmentOptions.BottomLeft);
+        SetRect(labelText.rectTransform, new Vector2(0f, 0.58f), new Vector2(0.72f, 1f),
+            Vector2.zero, Vector2.zero);
+
+        TMP_Text percentageText = GetOrCreateText(metricObject.transform, "Percentage", "0.0%",
+            22f, TextAlignmentOptions.BottomRight);
+        SetRect(percentageText.rectTransform, new Vector2(0.72f, 0.58f), Vector2.one,
+            Vector2.zero, Vector2.zero);
+
+        GameObject barBackground = FindChild(metricObject.transform, "Bar Background");
+        if (barBackground == null)
+        {
+            barBackground = new GameObject("Bar Background", typeof(RectTransform), typeof(Image));
+            barBackground.transform.SetParent(metricObject.transform, false);
+        }
+        SetRect(barBackground.GetComponent<RectTransform>(), new Vector2(0f, 0.30f),
+            new Vector2(1f, 0.52f), Vector2.zero, Vector2.zero);
+        barBackground.GetComponent<Image>().color = new Color(0.25f, 0.23f, 0.20f, 1f);
+
+        GameObject fillObject = FindChild(barBackground.transform, "Fill");
+        if (fillObject == null)
+        {
+            fillObject = new GameObject("Fill", typeof(RectTransform), typeof(Image));
+            fillObject.transform.SetParent(barBackground.transform, false);
+        }
+        SetRect(fillObject.GetComponent<RectTransform>(), Vector2.zero, Vector2.one,
+            Vector2.zero, Vector2.zero);
+        Image fill = fillObject.GetComponent<Image>();
+        fill.color = new Color(0.84f, 0.61f, 0.22f, 1f);
+        fill.type = Image.Type.Simple;
+        RectTransform fillRect = fillObject.GetComponent<RectTransform>();
+        fillRect.anchorMin = Vector2.zero;
+        fillRect.anchorMax = new Vector2(0f, 1f);
+        fillRect.offsetMin = Vector2.zero;
+        fillRect.offsetMax = Vector2.zero;
+
+        TMP_Text secondaryText = null;
+        if (hasSecondaryText)
+        {
+            secondaryText = GetOrCreateText(metricObject.transform, "Secondary Text", string.Empty,
+                18f, TextAlignmentOptions.TopLeft);
+            SetRect(secondaryText.rectTransform, Vector2.zero, new Vector2(1f, 0.25f),
+                Vector2.zero, Vector2.zero);
+        }
+
+        SerializedObject serializedMetric = new(metricObject.GetComponent<AnalyticsMetricBarView>());
+        serializedMetric.FindProperty("labelText").objectReferenceValue = labelText;
+        serializedMetric.FindProperty("percentageText").objectReferenceValue = percentageText;
+        serializedMetric.FindProperty("fillRect").objectReferenceValue = fillRect;
+        serializedMetric.FindProperty("secondaryText").objectReferenceValue = secondaryText;
+        serializedMetric.ApplyModifiedPropertiesWithoutUndo();
+    }
+
+    private static TMP_Text GetOrCreateText(
+        Transform parent,
+        string objectName,
+        string value,
+        float fontSize,
+        TextAlignmentOptions alignment)
+    {
+        GameObject existing = FindChild(parent, objectName);
+        if (existing != null)
+            return existing.GetComponent<TMP_Text>();
+
+        return CreateText(objectName, parent, value, fontSize, alignment);
     }
 
     private static void SetTextReference(
@@ -186,6 +291,18 @@ public static class GlobalAnalyticsChapterDropdownInstaller
         GameObject target = FindGameObject(scene, objectName);
         if (property != null && target != null)
             property.objectReferenceValue = target.GetComponent<TMP_Text>();
+    }
+
+    private static void SetMetricReference(
+        SerializedObject serializedObject,
+        Scene scene,
+        string propertyName,
+        string objectName)
+    {
+        SerializedProperty property = serializedObject.FindProperty(propertyName);
+        GameObject target = FindGameObject(scene, objectName);
+        if (property != null && target != null)
+            property.objectReferenceValue = target.GetComponent<AnalyticsMetricBarView>();
     }
 
     private static GameObject CreatePanel(string name, Transform parent)
@@ -250,8 +367,24 @@ public static class GlobalAnalyticsChapterDropdownInstaller
         if (SessionState.GetBool(InstalledKey, false))
             return;
 
+        if (EditorApplication.isPlayingOrWillChangePlaymode)
+        {
+            EditorApplication.playModeStateChanged -= InstallAfterPlayMode;
+            EditorApplication.playModeStateChanged += InstallAfterPlayMode;
+            return;
+        }
+
         SessionState.SetBool(InstalledKey, true);
         Install();
+    }
+
+    private static void InstallAfterPlayMode(PlayModeStateChange state)
+    {
+        if (state != PlayModeStateChange.EnteredEditMode)
+            return;
+
+        EditorApplication.playModeStateChanged -= InstallAfterPlayMode;
+        EditorApplication.delayCall += InstallOnce;
     }
 
     private static TMP_Dropdown FindDropdown(Scene scene, string objectName)

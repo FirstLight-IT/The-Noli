@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: fbe15a8088a884b4fb0b1e84d48dc7c1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: fbc33bd6a5704c0881dc7a9ead54089b, type: 3}
+  Parameters:
+  - Name: username
+    ParameterType: 0
+    Required: 1
+  - Name: inGameName
+    ParameterType: 0
+    Required: 1
+  - Name: requestedRole
+    ParameterType: 0
+    Required: 1
+  - Name: fullName
+    ParameterType: 0
+    Required: 0
+  - Name: schoolEmail
+    ParameterType: 0
+    Required: 0
+  Source: 0

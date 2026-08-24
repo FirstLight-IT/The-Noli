@@ -1,4 +1,6 @@
 const { DataApi } = require("@unity-services/cloud-save-1.4");
+
+// This endpoint has no client parameters.
 const axios = require("axios-1.6");
 const _ = require("lodash-4.17");
 

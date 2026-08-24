@@ -1,5 +1,7 @@
 const { DataApi } = require("@unity-services/cloud-save-1.4");
 
+// This endpoint has no client parameters.
+
 const PROFILE_KEY = "account_profile";
 const SUBMISSION_KEY = "global_analytics_submission";
 const SUBMISSION_STATUS_KEY = "global_analytics_submission_status";

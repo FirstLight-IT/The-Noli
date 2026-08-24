@@ -154,3 +154,8 @@ async function sendVerificationEmail(secretManager, email, teacherName, code) {
     throw new Error(result?.message || "The verification email could not be sent.");
   }
 }
+
+module.exports.params = {
+  targetAccountId: { type: "String", required: true },
+  decision: { type: "String", required: true }
+};

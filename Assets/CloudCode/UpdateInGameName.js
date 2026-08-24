@@ -42,3 +42,7 @@ module.exports = async ({ params, context, logger }) => {
 function clean(value) {
   return typeof value === "string" ? value.trim() : "";
 }
+
+module.exports.params = {
+  inGameName: { type: "String", required: true }
+};
