@@ -276,13 +276,21 @@ public class MissionController : MonoBehaviour
         }
         else
         {
-            if (missionNameText != null)
-                missionNameText.SetText(string.Empty);
+            // A save can be written after one mission finishes but before the
+            // completion graphic starts the next automatic mission. Resume
+            // that available mission instead of restoring an empty objective.
+            TryStartNextAutomaticMission();
 
-            if (objectiveDescriptionText != null)
-                objectiveDescriptionText.SetText(string.Empty);
+            if (activeMission == null)
+            {
+                if (missionNameText != null)
+                    missionNameText.SetText(string.Empty);
 
-            OnMissionStatesChanged?.Invoke();
+                if (objectiveDescriptionText != null)
+                    objectiveDescriptionText.SetText(string.Empty);
+
+                OnMissionStatesChanged?.Invoke();
+            }
         }
 
         return true;

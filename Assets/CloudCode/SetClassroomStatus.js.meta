@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d8446380545e4406af90abcdd2dc0920
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: fbc33bd6a5704c0881dc7a9ead54089b, type: 3}
+  Parameters:
+  - Name: roomId
+    ParameterType: 0
+    Required: 1
+  - Name: status
+    ParameterType: 0
+    Required: 1
+  Source: 0

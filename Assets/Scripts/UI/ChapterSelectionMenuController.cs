@@ -53,15 +53,45 @@ public sealed class ChapterSelectionMenuController : MonoBehaviour
         if (!SaveGameManager.TryLoadSlot(slotNumber, out error))
             return false;
 
+        ShowLoadedSave(
+            $"Save Slot {slotNumber} - Select Chapter",
+            requestedBackAction);
+        return true;
+    }
+
+    public bool ShowForCurrentClassroom(
+        Action requestedBackAction,
+        out string error)
+    {
+        if (!TryValidate(out error))
+        {
+            Debug.LogError(error, this);
+            return false;
+        }
+
+        if (!SaveGameManager.IsUsingClassroomSave ||
+            SaveGameManager.CurrentData == null)
+        {
+            error = "No classroom save is currently loaded.";
+            return false;
+        }
+
+        ShowLoadedSave("Classroom Save - Select Chapter", requestedBackAction);
+        error = string.Empty;
+        return true;
+    }
+
+    private void ShowLoadedSave(string title, Action requestedBackAction)
+    {
         isBusy = false;
         pendingReplayChapterId = string.Empty;
         backAction = requestedBackAction;
         closeButton.interactable = true;
+        panelRoot.transform.SetAsLastSibling();
         panelRoot.SetActive(true);
-        titleText.SetText($"Save Slot {slotNumber} — Select Chapter");
+        titleText.SetText(title);
         SetMessage(string.Empty);
         RefreshChapters();
-        return true;
     }
 
     public void Hide()

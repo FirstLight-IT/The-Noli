@@ -12,11 +12,15 @@ public sealed class SaveGameManager : MonoBehaviour
     private const string ActiveSlotPlayerPrefsKey = "TheNoli.NormalSave.ActiveSlot";
     private const string AccountActiveSlotPlayerPrefsKeyPrefix =
         "TheNoli.AccountSave.ActiveSlot.";
+    private const string ClassroomActiveSlotPlayerPrefsKeyPrefix =
+        "TheNoli.ClassroomSave.ActiveSlot.";
     public const int SaveSlotCount = 3;
     public const string QuizSceneName = "ChapterQuiz";
 
     public static SaveGameManager Instance { get; private set; }
     public static GameSaveData CurrentData => Instance != null ? Instance.currentData : null;
+    public static bool IsUsingClassroomSave =>
+        Instance != null && !string.IsNullOrWhiteSpace(Instance.activeClassroomRoomId);
     public static string AutosavePath => Instance != null ? Instance.fileService.SavePath : string.Empty;
     public static int ActiveSlotNumber => Instance != null
         ? Instance.activeSlotNumber
@@ -37,6 +41,7 @@ public sealed class SaveGameManager : MonoBehaviour
     private float timeSinceLastSave;
     private bool autosaveRestorePending;
     private bool isApplyingRestore;
+    private string activeClassroomRoomId = string.Empty;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetStatics()
@@ -186,6 +191,23 @@ public sealed class SaveGameManager : MonoBehaviour
         return Instance.TryLoadSlotInternal(slotNumber, out error);
     }
 
+    public static bool TryOpenClassroomSave(
+        string roomId,
+        string firstChapterId,
+        out bool createdNewSave,
+        out string error)
+    {
+        EnsureInstance();
+        return Instance.TryOpenClassroomSaveInternal(
+            roomId, firstChapterId, out createdNewSave, out error);
+    }
+
+    public static bool UseNormalSaveScope(out string error)
+    {
+        EnsureInstance();
+        return Instance.SwitchSaveScope(string.Empty, out error);
+    }
+
     public static bool TryDeleteSlot(int slotNumber, out string error)
     {
         EnsureInstance();
@@ -214,6 +236,12 @@ public sealed class SaveGameManager : MonoBehaviour
     {
         EnsureInstance();
         return Instance.RestartActiveChapterInternal(out error);
+    }
+
+    public static bool CanRestartActiveChapter(out string error)
+    {
+        EnsureInstance();
+        return Instance.TryGetRestartableActiveChapter(out _, out error);
     }
 
     public static bool SaveImmediately(string reason, out string error)
@@ -837,21 +865,35 @@ public sealed class SaveGameManager : MonoBehaviour
 
     private bool RestartActiveChapterInternal(out string error)
     {
+        if (!TryGetRestartableActiveChapter(out ChapterSaveData existingChapter, out error))
+            return false;
+
+        return ResetChapterAttempt(existingChapter, "ChapterRestarted", true, out error);
+    }
+
+    private bool TryGetRestartableActiveChapter(
+        out ChapterSaveData chapter,
+        out string error)
+    {
+        chapter = null;
         if (currentData == null || string.IsNullOrWhiteSpace(currentData.activeChapterId))
         {
             error = "No active chapter is available to restart.";
             return false;
         }
 
-        if (!TryGetSelectableChapter(
-                currentData.activeChapterId,
-                out ChapterSaveData existingChapter,
-                out error))
+        if (!TryGetSelectableChapter(currentData.activeChapterId, out chapter, out error))
+            return false;
+
+        if (!string.IsNullOrWhiteSpace(activeClassroomRoomId) && !chapter.completedEver)
         {
+            error = "Classroom chapters cannot be restarted during their first playthrough.";
+            chapter = null;
             return false;
         }
 
-        return ResetChapterAttempt(existingChapter, "ChapterRestarted", true, out error);
+        error = string.Empty;
+        return true;
     }
 
     private bool ResetChapterAttempt(
@@ -973,6 +1015,74 @@ public sealed class SaveGameManager : MonoBehaviour
     private bool TryLoadAutosaveInternal(out string error)
     {
         return TryLoadSlotInternal(activeSlotNumber, out error);
+    }
+
+    private bool TryOpenClassroomSaveInternal(
+        string roomId,
+        string firstChapterId,
+        out bool createdNewSave,
+        out string error)
+    {
+        createdNewSave = false;
+        if (!PlayerSession.IsSignedIn || string.IsNullOrWhiteSpace(PlayerSession.AccountId))
+        {
+            error = "Sign in before opening a classroom save.";
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(roomId))
+        {
+            error = "A classroom ID is required.";
+            return false;
+        }
+
+        if (!SwitchSaveScope(roomId.Trim(), out error))
+            return false;
+
+        if (HasLoadableSlot(SaveFileService.MinimumSlotNumber))
+            return TryLoadSlotInternal(SaveFileService.MinimumSlotNumber, out error);
+
+        createdNewSave = true;
+        return BeginNewGameInSlotInternal(
+            SaveFileService.MinimumSlotNumber,
+            firstChapterId,
+            overwriteExisting: false,
+            out error);
+    }
+
+    private bool SwitchSaveScope(string classroomRoomId, out string error)
+    {
+        string requestedRoomId = classroomRoomId?.Trim() ?? string.Empty;
+        string targetDirectory = string.IsNullOrEmpty(requestedRoomId)
+            ? SaveStorageScope.GetCurrentSaveDirectory(persistentDataPath)
+            : SaveStorageScope.GetClassroomSaveDirectory(
+                persistentDataPath, PlayerSession.AccountId, requestedRoomId);
+
+        if (string.Equals(saveDirectory, targetDirectory, StringComparison.OrdinalIgnoreCase))
+        {
+            activeClassroomRoomId = requestedRoomId;
+            error = string.Empty;
+            return true;
+        }
+
+        if (currentData != null && !SaveNow("SaveScopeChanged"))
+        {
+            error = "The current game could not be saved before changing save types.";
+            return false;
+        }
+
+        CancelPendingAutosave();
+        currentData = null;
+        autosaveRestorePending = false;
+        isApplyingRestore = false;
+        timeSinceLastSave = 0f;
+        JournalUnlockRegistry.Clear();
+        activeClassroomRoomId = requestedRoomId;
+        saveDirectory = targetDirectory;
+        activeSlotNumber = SaveFileService.MinimumSlotNumber;
+        fileService = new SaveFileService(saveDirectory, activeSlotNumber);
+        error = string.Empty;
+        return true;
     }
 
     private bool TryLoadSlotInternal(int slotNumber, out string error)
@@ -1110,6 +1220,7 @@ public sealed class SaveGameManager : MonoBehaviour
         timeSinceLastSave = 0f;
         JournalUnlockRegistry.Clear();
 
+        activeClassroomRoomId = string.Empty;
         saveDirectory = SaveStorageScope.GetCurrentSaveDirectory(persistentDataPath);
         activeSlotNumber = Mathf.Clamp(
             PlayerPrefs.GetInt(
@@ -1122,6 +1233,13 @@ public sealed class SaveGameManager : MonoBehaviour
 
     private static string GetActiveSlotPlayerPrefsKey()
     {
+        if (Instance != null && !string.IsNullOrWhiteSpace(Instance.activeClassroomRoomId))
+        {
+            return ClassroomActiveSlotPlayerPrefsKeyPrefix +
+                   SaveStorageScope.GetCurrentOwnerKey() + "." +
+                   Instance.activeClassroomRoomId;
+        }
+
         return PlayerSession.IsGuest
             ? ActiveSlotPlayerPrefsKey
             : AccountActiveSlotPlayerPrefsKeyPrefix + SaveStorageScope.GetCurrentOwnerKey();
@@ -1492,6 +1610,17 @@ public sealed class SaveGameManager : MonoBehaviour
         if (currentData == null)
             return false;
 
+        if (fileService == null)
+        {
+            if (string.IsNullOrWhiteSpace(saveDirectory))
+            {
+                Debug.LogWarning("The save location was unavailable during shutdown.", this);
+                return false;
+            }
+
+            fileService = new SaveFileService(saveDirectory, activeSlotNumber);
+        }
+
         if (captureRuntimeState)
             CaptureCommonState();
         else
@@ -1514,6 +1643,11 @@ public sealed class SaveGameManager : MonoBehaviour
         if (saved)
         {
             timeSinceLastSave = 0f;
+            if (!string.IsNullOrWhiteSpace(activeClassroomRoomId) &&
+                ShouldSyncClassroomProgress(currentData.lastSaveReason))
+            {
+                ClassroomProgressSyncService.Queue(activeClassroomRoomId, currentData);
+            }
             return true;
         }
 
@@ -1522,6 +1656,16 @@ public sealed class SaveGameManager : MonoBehaviour
         currentData.lastSaveReason = previousReason;
         Debug.LogError(error, this);
         return false;
+    }
+
+    private static bool ShouldSyncClassroomProgress(string reason)
+    {
+        // The sync service only serializes finalized official chapter analytics.
+        // Navigation saves remain retry points for chapters completed while offline.
+        return reason == "ChapterCompleted" ||
+               reason == "ActiveChapterSelected" ||
+               reason == "ReturnToMainMenu" ||
+               reason == "SaveScopeChanged";
     }
 
     private void CaptureCommonState()

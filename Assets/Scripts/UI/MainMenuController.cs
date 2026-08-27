@@ -14,6 +14,7 @@ public sealed class MainMenuController : MonoBehaviour
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button loadGameButton;
     [SerializeField] private TMP_Dropdown languageDropdown;
+    [SerializeField] private ChapterSelectionMenuController chapterSelectionMenuController;
     [SerializeField] private string newGameChapterId = "chapter_1";
 
     private bool isLoading;
@@ -22,6 +23,8 @@ public sealed class MainMenuController : MonoBehaviour
     {
         PlayerSession.Changed += RefreshButtons;
         BindLanguageDropdown();
+        if (!SaveGameManager.UseNormalSaveScope(out string error))
+            Debug.LogError(error, this);
         RefreshButtons();
     }
 
@@ -73,6 +76,14 @@ public sealed class MainMenuController : MonoBehaviour
 
         SetButtonsInteractable(false);
 
+        if (!SaveGameManager.UseNormalSaveScope(out string scopeError))
+        {
+            Debug.LogError(scopeError, this);
+            isLoading = false;
+            RefreshButtons();
+            return;
+        }
+
         if (!SaveGameManager.BeginNewGame(newGameChapterId))
         {
             Debug.LogError("New Game could not create its initial autosave.", this);
@@ -101,6 +112,14 @@ public sealed class MainMenuController : MonoBehaviour
 
         isLoading = true;
         SetButtonsInteractable(false);
+
+        if (!SaveGameManager.UseNormalSaveScope(out string scopeError))
+        {
+            Debug.LogError(scopeError, this);
+            isLoading = false;
+            RefreshButtons();
+            return false;
+        }
 
         if (!SaveGameManager.BeginNewGameInSlot(
                 slotNumber,
@@ -144,6 +163,14 @@ public sealed class MainMenuController : MonoBehaviour
         isLoading = true;
         SetButtonsInteractable(false);
 
+        if (!SaveGameManager.UseNormalSaveScope(out string scopeError))
+        {
+            Debug.LogError(scopeError, this);
+            isLoading = false;
+            RefreshButtons();
+            return false;
+        }
+
         if (!SaveGameManager.TryLoadSlot(slotNumber, out string error))
         {
             Debug.LogError($"Load Game failed: {error}", this);
@@ -156,6 +183,54 @@ public sealed class MainMenuController : MonoBehaviour
         ChapterController.RequestChapter(saveData.activeChapterId);
         BeginSceneTransition(SaveGameManager.GetContinueSceneName());
         return true;
+    }
+
+    public bool TryPlayClassroom(string roomId)
+    {
+        if (isLoading)
+            return false;
+
+        isLoading = true;
+        SetButtonsInteractable(false);
+        if (!SaveGameManager.TryOpenClassroomSave(
+                roomId, newGameChapterId, out bool createdNewSave, out string error))
+        {
+            Debug.LogError($"Classroom game failed: {error}", this);
+            isLoading = false;
+            RefreshButtons();
+            return false;
+        }
+
+        if (createdNewSave)
+        {
+            ChapterController.RequestChapter(SaveGameManager.CurrentData.activeChapterId);
+            BeginMansionTransition();
+            return true;
+        }
+
+        isLoading = false;
+        RefreshButtons();
+        if (chapterSelectionMenuController == null ||
+            !chapterSelectionMenuController.ShowForCurrentClassroom(
+                ReturnFromClassroomChapterSelection,
+                out error))
+        {
+            Debug.LogError(
+                $"Classroom chapter selection failed: {error}",
+                this);
+            ReturnFromClassroomChapterSelection();
+            return false;
+        }
+
+        return true;
+    }
+
+    private void ReturnFromClassroomChapterSelection()
+    {
+        isLoading = false;
+        if (!SaveGameManager.UseNormalSaveScope(out string error))
+            Debug.LogError(error, this);
+        RefreshButtons();
     }
 
     public bool TryContinueChapter(ChapterDataSO chapter)

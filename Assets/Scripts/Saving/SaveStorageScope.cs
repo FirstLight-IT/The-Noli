@@ -8,6 +8,7 @@ public static class SaveStorageScope
     private const string SavesDirectoryName = "Saves";
     private const string GuestDirectoryName = "Guest";
     private const string AccountsDirectoryName = "Accounts";
+    private const string ClassroomsDirectoryName = "Classrooms";
 
     public static string GetGuestSaveDirectory(string persistentDataPath)
     {
@@ -49,16 +50,43 @@ public static class SaveStorageScope
             : GuestDirectoryName;
     }
 
+    public static string GetAccountClassroomsDirectory(
+        string persistentDataPath,
+        string accountId)
+    {
+        return Path.Combine(
+            GetAccountSaveDirectory(persistentDataPath, accountId),
+            ClassroomsDirectoryName);
+    }
+
+    public static string GetClassroomSaveDirectory(
+        string persistentDataPath,
+        string accountId,
+        string roomId)
+    {
+        if (string.IsNullOrWhiteSpace(roomId))
+            throw new ArgumentException("A classroom ID is required.", nameof(roomId));
+
+        return Path.Combine(
+            GetAccountClassroomsDirectory(persistentDataPath, accountId),
+            GetStorageKey(roomId));
+    }
+
     private static string GetAccountStorageKey(string accountId)
     {
         string normalizedAccountId = accountId.Trim();
 
+        return GetStorageKey(normalizedAccountId);
+    }
+
+    private static string GetStorageKey(string value)
+    {
         using SHA256 sha256 = SHA256.Create();
-        byte[] hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(normalizedAccountId));
+        byte[] hash = sha256.ComputeHash(Encoding.UTF8.GetBytes(value.Trim()));
         StringBuilder result = new(hash.Length * 2);
 
-        foreach (byte value in hash)
-            result.Append(value.ToString("x2"));
+        foreach (byte byteValue in hash)
+            result.Append(byteValue.ToString("x2"));
 
         return result.ToString();
     }

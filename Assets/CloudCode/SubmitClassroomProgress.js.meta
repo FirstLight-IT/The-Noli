@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0d1660f3fd0b4c3f808b8de654aedfd1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: fbc33bd6a5704c0881dc7a9ead54089b, type: 3}
+  Parameters:
+  - Name: roomId
+    ParameterType: 0
+    Required: 1
+  - Name: progressJson
+    ParameterType: 0
+    Required: 1
+  Source: 0

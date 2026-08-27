@@ -111,6 +111,7 @@ public sealed class PauseMenuController : MonoBehaviour
         isLeavingScene = false;
         SetStatus(string.Empty);
         ShowPausePage();
+        SetButtonsInteractable(true);
         panelRoot.SetActive(true);
         panelRoot.transform.SetAsLastSibling();
     }
@@ -129,6 +130,12 @@ public sealed class PauseMenuController : MonoBehaviour
     {
         if (!CanUseMenu())
             return;
+
+        if (!SaveGameManager.CanRestartActiveChapter(out string error))
+        {
+            SetStatus(error);
+            return;
+        }
 
         pendingAction = ConfirmationAction.RestartChapter;
         confirmationTitleText.SetText("Restart Chapter?");
@@ -291,7 +298,8 @@ public sealed class PauseMenuController : MonoBehaviour
     private void SetButtonsInteractable(bool interactable)
     {
         resumeButton.interactable = interactable;
-        restartChapterButton.interactable = interactable;
+        restartChapterButton.interactable = interactable &&
+            SaveGameManager.CanRestartActiveChapter(out _);
         returnToMainMenuButton.interactable = interactable;
         quitGameButton.interactable = interactable;
         confirmButton.interactable = interactable;
