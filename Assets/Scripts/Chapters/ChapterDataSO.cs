@@ -72,12 +72,18 @@ public sealed class ChapterDataSO : ScriptableObject
     [Tooltip("Only enable this after the chapter's gameplay content and scene setup are ready.")]
     [SerializeField] private bool contentAvailable;
 
+    [Header("Player")]
+    [SerializeField] private NPCInfoSO playerCharacter;
+
     [Header("Opening")]
     [SerializeField] private NarrationSequenceSO openingNarration;
-    [SerializeField] private string startingMissionId;
+
+    [Header("Mission Library")]
+    [SerializeField] private MissionInfoSO[] missions = Array.Empty<MissionInfoSO>();
+    [SerializeField] private MissionInfoSO startingMission;
 
     [Header("Completion Quiz")]
-    [SerializeField] private string finalMissionId;
+    [SerializeField] private MissionInfoSO finalMission;
     [SerializeField] private TextAsset completionQuizJson;
     [SerializeField] private string quizSceneName = SaveGameManager.QuizSceneName;
 
@@ -91,9 +97,13 @@ public sealed class ChapterDataSO : ScriptableObject
     public string ChapterLabel => LocalizedContent?.chapterLabel ?? string.Empty;
     public string Title => LocalizedContent?.title ?? string.Empty;
     public bool ContentAvailable => contentAvailable;
+    public NPCInfoSO PlayerCharacter => playerCharacter;
     public NarrationSequenceSO OpeningNarration => openingNarration;
-    public string StartingMissionId => startingMissionId;
-    public string FinalMissionId => finalMissionId;
+    public MissionInfoSO[] Missions => missions ?? Array.Empty<MissionInfoSO>();
+    public MissionInfoSO StartingMission => startingMission;
+    public MissionInfoSO FinalMission => finalMission;
+    public string StartingMissionId => startingMission != null ? startingMission.MissionId : string.Empty;
+    public string FinalMissionId => finalMission != null ? finalMission.MissionId : string.Empty;
     public TextAsset CompletionQuizJson => completionQuizJson;
     public string QuizSceneName => string.IsNullOrWhiteSpace(quizSceneName)
         ? SaveGameManager.QuizSceneName

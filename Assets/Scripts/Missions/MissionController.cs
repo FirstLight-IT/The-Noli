@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+[DefaultExecutionOrder(-100)]
 public class MissionController : MonoBehaviour
 {
     public static MissionController Instance { get; private set; }
@@ -14,7 +15,7 @@ public class MissionController : MonoBehaviour
     public static event Action<string> OnMissionCompletionPresented;
 
     [Header("Mission Library")]
-    [SerializeField] private MissionInfoSO[] missionInfos = new MissionInfoSO[0];
+    [SerializeField, HideInInspector] private MissionInfoSO[] missionInfos = new MissionInfoSO[0];
     [SerializeField] private string missionToStart;
 
     [Header("UI")]
@@ -26,6 +27,7 @@ public class MissionController : MonoBehaviour
     [SerializeField, Min(0f)] private float completionDisplayDuration = 3f;
 
     private readonly Dictionary<string, Mission> missions = new();
+    private MissionInfoSO[] activeMissionInfos = Array.Empty<MissionInfoSO>();
     private Mission activeMission;
     private MissionStep activeStep;
     private bool isShowingMissionCompletion;
@@ -54,6 +56,7 @@ public class MissionController : MonoBehaviour
         if (missionCompletedPanel != null)
             missionCompletedPanel.SetActive(false);
 
+        activeMissionInfos = ResolveMissionLibrary();
         BuildMissionLibrary();
     }
 
@@ -298,7 +301,7 @@ public class MissionController : MonoBehaviour
 
     private void RestoreCompletedMissionStepWorldState()
     {
-        foreach (MissionInfoSO info in missionInfos)
+        foreach (MissionInfoSO info in activeMissionInfos)
         {
             if (info == null ||
                 !missions.TryGetValue(info.MissionId, out Mission mission) ||
@@ -322,7 +325,7 @@ public class MissionController : MonoBehaviour
         }
     }
 
-    public IEnumerable<MissionInfoSO> MissionInfos => missionInfos;
+    public IEnumerable<MissionInfoSO> MissionInfos => activeMissionInfos;
     public MissionInfoSO ActiveMissionInfo => activeMission?.Info;
     public int ActiveMissionStepIndex => activeMission?.CurrentStepIndex ?? -1;
     public string CurrentObjective => currentObjective;
@@ -336,11 +339,30 @@ public class MissionController : MonoBehaviour
         return state == MissionState.InProgress || state == MissionState.Finished;
     }
 
+    private MissionInfoSO[] ResolveMissionLibrary()
+    {
+        ChapterDataSO activeChapter = ChapterController.Instance?.ActiveChapter;
+        if (activeChapter != null)
+            return activeChapter.Missions;
+
+#if UNITY_EDITOR
+        // Edit Mode tests create a Mission Controller without loading a scene.
+        // Runtime Mansion gameplay must always resolve missions from its chapter.
+        if (!Application.isPlaying && missionInfos != null)
+            return missionInfos;
+#endif
+
+        Debug.LogError(
+            "Mission Controller could not resolve an active chapter mission library.",
+            this);
+        return Array.Empty<MissionInfoSO>();
+    }
+
     private void BuildMissionLibrary()
     {
         missions.Clear();
 
-        foreach (MissionInfoSO info in missionInfos)
+        foreach (MissionInfoSO info in activeMissionInfos)
         {
             if (info == null || string.IsNullOrWhiteSpace(info.MissionId))
             {
@@ -506,7 +528,7 @@ public class MissionController : MonoBehaviour
 
     private void TryStartNextAutomaticMission()
     {
-        foreach (MissionInfoSO info in missionInfos)
+        foreach (MissionInfoSO info in activeMissionInfos)
         {
             if (info == null || !info.AutoStartWhenAvailable)
                 continue;

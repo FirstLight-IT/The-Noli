@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LibrarianDashboard.unity
     guid: 90e3139bea2333d4baf18cd51f757792
+  - enabled: 1
+    path: Assets/Scenes/TeacherClassroomDashboard.unity
+    guid: c3e654f839e8301438afced377956a85
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

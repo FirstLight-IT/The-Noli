@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[DefaultExecutionOrder(-300)]
 public class PlayerCharacter : MonoBehaviour
 {
     public static PlayerCharacter Instance { get; private set; }

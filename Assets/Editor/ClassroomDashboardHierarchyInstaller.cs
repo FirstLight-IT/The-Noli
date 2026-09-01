@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public static class ClassroomDashboardHierarchyInstaller
 {
     private const string ScenePath = "Assets/Scenes/MainMenu.unity";
-    private const string InstalledKey = "TheNoli.ClassroomDashboardHierarchy.v2";
+    private const string InstalledKey = "TheNoli.ClassroomDashboardHierarchy.v3";
     private const int StudentCardCount = 12;
 
     static ClassroomDashboardHierarchyInstaller()
@@ -18,47 +18,13 @@ public static class ClassroomDashboardHierarchyInstaller
         EditorApplication.delayCall += InstallOnce;
     }
 
-    [MenuItem("Tools/The Noli/Install Classroom Dashboard Hierarchy")]
+    [MenuItem("Tools/The Noli/Install Teacher Classroom Dashboard Scene")]
     public static void Install()
     {
-        if (EditorApplication.isPlayingOrWillChangePlaymode)
-            return;
-
-        Scene previousScene = SceneManager.GetActiveScene();
-        Scene mainMenuScene = SceneManager.GetSceneByPath(ScenePath);
-        bool openedForInstall = !mainMenuScene.IsValid() || !mainMenuScene.isLoaded;
-        if (openedForInstall)
-            mainMenuScene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Additive);
-
-        SceneManager.SetActiveScene(mainMenuScene);
-        ClassroomMenuController controller = FindController(mainMenuScene);
-        GameObject manageRoot = FindGameObject(mainMenuScene, "Manage Classrooms Root");
-        GameObject buttonTemplate = FindGameObject(mainMenuScene, "Sign Out Button");
-        if (controller == null || manageRoot == null || buttonTemplate == null)
-        {
-            Debug.LogError("The existing classroom UI could not be found for dashboard installation.");
-            RestoreScene(previousScene, mainMenuScene, openedForInstall);
-            return;
-        }
-
-        GameObject dashboardRoot = FindGameObject(mainMenuScene, "Classroom Dashboard Root");
-        if (dashboardRoot == null)
-            dashboardRoot = BuildDashboard(manageRoot.transform.parent, buttonTemplate);
-        UpgradeDashboard(mainMenuScene);
-
-        WireController(controller, mainMenuScene, dashboardRoot);
-        dashboardRoot.transform.SetAsLastSibling();
-        dashboardRoot.SetActive(false);
-
-        EditorUtility.SetDirty(controller);
-        EditorSceneManager.MarkSceneDirty(mainMenuScene);
-        EditorSceneManager.SaveScene(mainMenuScene);
-        AssetDatabase.SaveAssets();
-        RestoreScene(previousScene, mainMenuScene, openedForInstall);
-        Debug.Log("Installed the editable Classroom Dashboard hierarchy in MainMenu.");
+        TeacherClassroomDashboardSceneInstaller.Install();
     }
 
-    private static GameObject BuildDashboard(Transform parent, GameObject buttonTemplate)
+    internal static GameObject BuildDashboard(Transform parent, GameObject buttonTemplate)
     {
         GameObject root = new("Classroom Dashboard Root", typeof(RectTransform),
             typeof(Image), typeof(VerticalLayoutGroup));

@@ -2,6 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Flags]
+public enum AmbientNPCTag
+{
+    None = 0,
+    Girl = 1 << 0
+}
+
 [Serializable]
 public sealed class AmbientNPCDatabase
 {
@@ -71,11 +78,18 @@ public class AmbientNPCInfoSO : ScriptableObject
     [Header("Identity")]
     [SerializeField] private string npcID;
 
+    [Header("Mission Classification")]
+    [SerializeField] private AmbientNPCTag tags;
+
     private AmbientNPCLanguageContent LocalizedContent =>
         AmbientNPCJson.Resolve(localizedDataJson, npcID, GameLanguage.CurrentCode);
 
     public string NpcID => npcID;
+    public AmbientNPCTag Tags => tags;
     public string DisplayName => LocalizedContent?.displayName ?? string.Empty;
     public NPCDialogueSequence[] DialogueVariations =>
         LocalizedContent?.dialogueVariations ?? Array.Empty<NPCDialogueSequence>();
+
+    public bool HasTag(AmbientNPCTag tag) =>
+        tag != AmbientNPCTag.None && (tags & tag) == tag;
 }

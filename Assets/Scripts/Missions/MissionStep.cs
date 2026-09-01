@@ -27,6 +27,11 @@ public static class MissionObjectiveLocalizationJson
 {
     private static readonly Dictionary<TextAsset, MissionObjectiveLocalizationDatabase> Cache = new();
 
+    public static void ClearCache()
+    {
+        Cache.Clear();
+    }
+
     public static string Resolve(TextAsset asset, string objectiveId, string languageCode)
     {
         MissionObjectiveLocalizationDatabase database = Load(asset);

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public sealed class ClassroomMenuController : MonoBehaviour
@@ -777,18 +778,16 @@ public sealed class ClassroomMenuController : MonoBehaviour
         });
     }
 
-    private async void OpenClassroomDashboard()
+    private void OpenClassroomDashboard()
     {
-        if (isBusy || teacherClassrooms.Count == 0 || classroomDashboardRoot == null)
+        if (isBusy || teacherClassrooms.Count == 0 ||
+            selectedClassroomIndex < 0 ||
+            selectedClassroomIndex >= teacherClassrooms.Count)
             return;
 
-        dashboardStudentPage = 0;
-        dashboardData = null;
-        manageClassroomsRoot.SetActive(false);
-        classroomDashboardRoot.transform.SetAsLastSibling();
-        classroomDashboardRoot.SetActive(true);
-        RenderClassroomDashboard();
-        await LoadClassroomDashboardAsync();
+        TeacherClassroomDashboardLaunchContext.Set(
+            teacherClassrooms[selectedClassroomIndex]);
+        SceneManager.LoadScene(TeacherClassroomDashboardLaunchContext.SceneName);
     }
 
     private async void RefreshClassroomDashboard()

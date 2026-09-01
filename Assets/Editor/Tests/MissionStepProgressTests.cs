@@ -124,6 +124,150 @@ public sealed class MissionStepProgressTests
             Is.EqualTo(new[] { "character_test_1", "character_test_3" }));
     }
 
+    [Test]
+    public void EnterRoom_CompletesOnlyForMatchingRoom()
+    {
+        RoomArea targetRoom = CreateRoomArea("target_room");
+        RoomArea otherRoom = CreateRoomArea("other_room");
+
+        GameObject stepObject = Track(new GameObject("Enter Room Test Step"));
+        EnterRoomMissionStep step = stepObject.AddComponent<EnterRoomMissionStep>();
+        SetPrivateField(step, "targetRoomID", "target_room");
+
+        int completionCount = 0;
+        void HandleFinished(string missionId, int stepIndex)
+        {
+            if (missionId == "test_mission" && stepIndex == 2)
+                completionCount++;
+        }
+
+        MissionEvents.OnMissionStepFinished += HandleFinished;
+        try
+        {
+            step.Initialize("test_mission", 2);
+            Collider2D playerCollider = CreatePlayerCollider();
+
+            InvokeTrigger(otherRoom, "OnTriggerEnter2D", playerCollider);
+            Assert.That(completionCount, Is.Zero);
+
+            InvokeTrigger(targetRoom, "OnTriggerEnter2D", playerCollider);
+            Assert.That(completionCount, Is.EqualTo(1));
+
+            InvokeTrigger(targetRoom, "OnTriggerEnter2D", playerCollider);
+            Assert.That(completionCount, Is.EqualTo(1));
+        }
+        finally
+        {
+            MissionEvents.OnMissionStepFinished -= HandleFinished;
+        }
+    }
+
+    [Test]
+    public void EnterRoom_CompletesImmediatelyWhenPlayerIsAlreadyInside()
+    {
+        RoomArea targetRoom = CreateRoomArea("loaded_room");
+        InvokeTrigger(targetRoom, "OnTriggerEnter2D", CreatePlayerCollider());
+
+        GameObject stepObject = Track(new GameObject("Loaded Enter Room Test Step"));
+        EnterRoomMissionStep step = stepObject.AddComponent<EnterRoomMissionStep>();
+        SetPrivateField(step, "targetRoomID", "loaded_room");
+
+        int completionCount = 0;
+        void HandleFinished(string missionId, int stepIndex)
+        {
+            if (missionId == "test_mission" && stepIndex == 0)
+                completionCount++;
+        }
+
+        MissionEvents.OnMissionStepFinished += HandleFinished;
+        try
+        {
+            step.Initialize("test_mission", 0);
+            Assert.That(completionCount, Is.EqualTo(1));
+        }
+        finally
+        {
+            MissionEvents.OnMissionStepFinished -= HandleFinished;
+        }
+    }
+
+    [Test]
+    public void AmbientNpcTags_MatchAssignedMissionClassification()
+    {
+        AmbientNPCInfoSO npcData = Track(ScriptableObject.CreateInstance<AmbientNPCInfoSO>());
+        SetPrivateField(npcData, "tags", AmbientNPCTag.Girl);
+
+        Assert.That(npcData.HasTag(AmbientNPCTag.Girl), Is.True);
+        Assert.That(npcData.HasTag(AmbientNPCTag.None), Is.False);
+    }
+
+    [Test]
+    public void SpeakToAmbientNpcs_CountsDistinctMatchingNpcs()
+    {
+        GameObject stepObject = Track(new GameObject("Speak To Girls Test Step"));
+        SpeakToAmbientNPCsMissionStep step =
+            stepObject.AddComponent<SpeakToAmbientNPCsMissionStep>();
+        SetPrivateField(step, "requiredTag", AmbientNPCTag.Girl);
+        SetPrivateField(step, "requiredUniqueCount", 3);
+
+        int completionCount = 0;
+        void HandleFinished(string missionId, int stepIndex)
+        {
+            if (missionId == "chapter_2" && stepIndex == 1)
+                completionCount++;
+        }
+
+        MissionEvents.OnMissionStepFinished += HandleFinished;
+        try
+        {
+            step.Initialize("chapter_2", 1);
+
+            AmbientNPCInfoSO firstGirl = CreateAmbientNpcData("girl_1", AmbientNPCTag.Girl);
+            InvokeAmbientDialogueFinished(step, firstGirl);
+            InvokeAmbientDialogueFinished(step, firstGirl);
+            InvokeAmbientDialogueFinished(
+                step,
+                CreateAmbientNpcData("untagged_npc", AmbientNPCTag.None));
+
+            Assert.That(step.CaptureProgress().completedTargetIds, Is.EqualTo(new[] { "girl_1" }));
+            Assert.That(completionCount, Is.Zero);
+
+            InvokeAmbientDialogueFinished(
+                step,
+                CreateAmbientNpcData("girl_2", AmbientNPCTag.Girl));
+            InvokeAmbientDialogueFinished(
+                step,
+                CreateAmbientNpcData("girl_3", AmbientNPCTag.Girl));
+
+            Assert.That(completionCount, Is.EqualTo(1));
+        }
+        finally
+        {
+            MissionEvents.OnMissionStepFinished -= HandleFinished;
+        }
+    }
+
+    [Test]
+    public void SpeakToAmbientNpcs_RestoresPartialProgress()
+    {
+        GameObject stepObject = Track(new GameObject("Restored Speak To Girls Test Step"));
+        SpeakToAmbientNPCsMissionStep step =
+            stepObject.AddComponent<SpeakToAmbientNPCsMissionStep>();
+        SetPrivateField(step, "requiredTag", AmbientNPCTag.Girl);
+        SetPrivateField(step, "requiredUniqueCount", 3);
+
+        MissionStepProgressSaveData savedProgress = new()
+        {
+            completedTargetIds = new List<string> { "girl_1", "girl_2" }
+        };
+
+        step.Initialize("chapter_2", 1, savedProgress);
+
+        Assert.That(
+            step.CaptureProgress().completedTargetIds,
+            Is.EqualTo(new[] { "girl_1", "girl_2" }));
+    }
+
     private void CreateArtifact(string artifactId, string roomId)
     {
         ArtifactInfoSO data = Track(ScriptableObject.CreateInstance<ArtifactInfoSO>());
@@ -135,6 +279,52 @@ public sealed class MissionStepProgressTests
         Artifact artifact = artifactObject.AddComponent<Artifact>();
         SetPrivateField(artifact, "artifactData", data);
         artifactObject.SetActive(true);
+    }
+
+    private RoomArea CreateRoomArea(string roomId)
+    {
+        GameObject roomObject = Track(new GameObject(roomId));
+        BoxCollider2D collider = roomObject.AddComponent<BoxCollider2D>();
+        collider.isTrigger = true;
+        RoomArea roomArea = roomObject.AddComponent<RoomArea>();
+        SetPrivateField(roomArea, "roomID", roomId);
+        return roomArea;
+    }
+
+    private Collider2D CreatePlayerCollider()
+    {
+        GameObject playerObject = Track(new GameObject("Test Player"));
+        playerObject.tag = "Player";
+        playerObject.AddComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        return playerObject.AddComponent<BoxCollider2D>();
+    }
+
+    private AmbientNPCInfoSO CreateAmbientNpcData(string npcId, AmbientNPCTag tags)
+    {
+        AmbientNPCInfoSO npcData = Track(ScriptableObject.CreateInstance<AmbientNPCInfoSO>());
+        SetPrivateField(npcData, "npcID", npcId);
+        SetPrivateField(npcData, "tags", tags);
+        return npcData;
+    }
+
+    private static void InvokeAmbientDialogueFinished(
+        SpeakToAmbientNPCsMissionStep step,
+        AmbientNPCInfoSO npcData)
+    {
+        MethodInfo method = typeof(SpeakToAmbientNPCsMissionStep).GetMethod(
+            "HandleAmbientDialogueFinished",
+            BindingFlags.Instance | BindingFlags.NonPublic);
+        Assert.That(method, Is.Not.Null);
+        method.Invoke(step, new object[] { npcData });
+    }
+
+    private static void InvokeTrigger(RoomArea roomArea, string methodName, Collider2D collider)
+    {
+        MethodInfo method = typeof(RoomArea).GetMethod(
+            methodName,
+            BindingFlags.Instance | BindingFlags.NonPublic);
+        Assert.That(method, Is.Not.Null, $"Could not find method '{methodName}'.");
+        method.Invoke(roomArea, new object[] { collider });
     }
 
     private static void SetCharacterTargets(

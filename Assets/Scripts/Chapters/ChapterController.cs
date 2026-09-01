@@ -4,18 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[DefaultExecutionOrder(-200)]
 public sealed class ChapterController : MonoBehaviour
 {
-    [Serializable]
-    private sealed class ChapterContent
-    {
-        [SerializeField] private ChapterDataSO chapter;
-        [SerializeField] private GameObject contentRoot;
-
-        public ChapterDataSO Chapter => chapter;
-        public GameObject ContentRoot => contentRoot;
-    }
-
     public static ChapterController Instance { get; private set; }
     public static bool IsChapterOpening { get; private set; }
 
@@ -23,8 +14,8 @@ public sealed class ChapterController : MonoBehaviour
 
     [Header("Chapter Selection")]
     [SerializeField] private ChapterDataSO defaultChapter;
-    [Tooltip("Only the selected chapter's content root will be active. Shared Mansion objects should not be listed here.")]
-    [SerializeField] private ChapterContent[] chapterContents = Array.Empty<ChapterContent>();
+
+    [SerializeField, HideInInspector] private ChapterDataSO editorPlaytestChapter;
 
     [Header("Shared Opening UI")]
     [SerializeField] private bool showTitleCard;
@@ -32,10 +23,14 @@ public sealed class ChapterController : MonoBehaviour
     [SerializeField] private NarrationController narrationController;
 
     private ChapterDataSO activeChapter;
+    private ChapterContentRoot[] contentRoots = Array.Empty<ChapterContentRoot>();
     private bool resumeFromAutosave;
     private bool quizTransitionStarted;
 
     public ChapterDataSO ActiveChapter => activeChapter;
+    public ChapterDataSO DefaultChapter => defaultChapter;
+    public ChapterDataSO EditorPlaytestChapter => editorPlaytestChapter;
+    public IReadOnlyList<ChapterContentRoot> ContentRoots => contentRoots;
 
     public IEnumerable<ChapterDataSO> ConfiguredChapters
     {
@@ -46,10 +41,14 @@ public sealed class ChapterController : MonoBehaviour
             if (defaultChapter != null && yielded.Add(defaultChapter))
                 yield return defaultChapter;
 
-            foreach (ChapterContent content in chapterContents)
+            foreach (ChapterContentRoot contentRoot in contentRoots)
             {
-                if (content?.Chapter != null && yielded.Add(content.Chapter))
-                    yield return content.Chapter;
+                if (contentRoot != null &&
+                    contentRoot.Chapter != null &&
+                    yielded.Add(contentRoot.Chapter))
+                {
+                    yield return contentRoot.Chapter;
+                }
             }
         }
     }
@@ -57,6 +56,11 @@ public sealed class ChapterController : MonoBehaviour
     public static void RequestChapter(string chapterId)
     {
         requestedChapterId = chapterId;
+    }
+
+    public void SetEditorPlaytestChapter(ChapterDataSO chapter)
+    {
+        editorPlaytestChapter = chapter;
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -78,9 +82,11 @@ public sealed class ChapterController : MonoBehaviour
 
         Instance = this;
         IsChapterOpening = true;
+        RefreshContentRoots();
         activeChapter = ResolveActiveChapter();
         resumeFromAutosave = SaveGameManager.IsAutosaveRestorePending;
         ConfigureChapterContent();
+        ConfigurePlayer();
         UnlockActiveChapterGlossary();
     }
 
@@ -247,14 +253,19 @@ public sealed class ChapterController : MonoBehaviour
 
     private ChapterDataSO ResolveActiveChapter()
     {
-        if (!string.IsNullOrWhiteSpace(requestedChapterId))
+        bool hasExplicitChapterRequest = !string.IsNullOrWhiteSpace(requestedChapterId);
+        if (hasExplicitChapterRequest)
         {
-            foreach (ChapterContent content in chapterContents)
+            foreach (ChapterContentRoot contentRoot in contentRoots)
             {
-                if (content?.Chapter != null &&
-                    string.Equals(content.Chapter.ChapterId, requestedChapterId, StringComparison.Ordinal))
+                if (contentRoot != null &&
+                    contentRoot.Chapter != null &&
+                    string.Equals(
+                        contentRoot.Chapter.ChapterId,
+                        requestedChapterId,
+                        StringComparison.Ordinal))
                 {
-                    return content.Chapter;
+                    return contentRoot.Chapter;
                 }
             }
 
@@ -267,13 +278,26 @@ public sealed class ChapterController : MonoBehaviour
             Debug.LogWarning($"Requested chapter '{requestedChapterId}' is not configured. Using the default chapter.", this);
         }
 
+        if (!hasExplicitChapterRequest && Application.isEditor && editorPlaytestChapter != null)
+        {
+            foreach (ChapterContentRoot contentRoot in contentRoots)
+            {
+                if (contentRoot != null && contentRoot.Chapter == editorPlaytestChapter)
+                    return editorPlaytestChapter;
+            }
+
+            Debug.LogWarning(
+                $"Editor playtest chapter '{editorPlaytestChapter.ChapterId}' is not configured in this scene. Using the default chapter.",
+                this);
+        }
+
         if (defaultChapter != null)
             return defaultChapter;
 
-        foreach (ChapterContent content in chapterContents)
+        foreach (ChapterContentRoot contentRoot in contentRoots)
         {
-            if (content?.Chapter != null)
-                return content.Chapter;
+            if (contentRoot != null && contentRoot.Chapter != null)
+                return contentRoot.Chapter;
         }
 
         return null;
@@ -281,13 +305,103 @@ public sealed class ChapterController : MonoBehaviour
 
     private void ConfigureChapterContent()
     {
-        foreach (ChapterContent content in chapterContents)
+        foreach (ChapterContentRoot contentRoot in contentRoots)
         {
-            if (content?.ContentRoot == null)
+            if (contentRoot == null)
                 continue;
 
-            content.ContentRoot.SetActive(content.Chapter == activeChapter);
+            contentRoot.gameObject.SetActive(contentRoot.Chapter == activeChapter);
         }
+    }
+
+    public void PreviewChapterContent(ChapterDataSO chapter)
+    {
+        RefreshContentRoots();
+
+        foreach (ChapterContentRoot contentRoot in contentRoots)
+        {
+            if (contentRoot != null)
+                contentRoot.gameObject.SetActive(contentRoot.Chapter == chapter);
+        }
+    }
+
+    private void RefreshContentRoots()
+    {
+        ChapterContentRoot[] discoveredRoots = FindObjectsByType<ChapterContentRoot>(
+            FindObjectsInactive.Include);
+        List<ChapterContentRoot> sceneRoots = new();
+
+        foreach (ChapterContentRoot contentRoot in discoveredRoots)
+        {
+            if (contentRoot != null && contentRoot.gameObject.scene == gameObject.scene)
+                sceneRoots.Add(contentRoot);
+        }
+
+        contentRoots = sceneRoots.ToArray();
+    }
+
+    private void ConfigurePlayer()
+    {
+        if (activeChapter == null || PlayerCharacter.Instance == null)
+            return;
+
+        if (activeChapter.PlayerCharacter != null)
+            PlayerCharacter.Instance.SetCharacter(activeChapter.PlayerCharacter);
+
+        // Continue/load restores the saved checkpoint after scene load. Only a
+        // fresh chapter attempt should use the authored starting marker.
+        if (resumeFromAutosave)
+            return;
+
+        ChapterPlayerSpawn spawnPoint = FindPlayerSpawn(activeChapter);
+        if (spawnPoint == null)
+        {
+            Debug.LogWarning(
+                $"Chapter '{activeChapter.ChapterId}' has no player spawn point in this scene.",
+                this);
+            return;
+        }
+
+        Rigidbody2D playerBody = PlayerCharacter.Instance.GetComponent<Rigidbody2D>();
+        if (playerBody != null)
+        {
+            playerBody.linearVelocity = Vector2.zero;
+            playerBody.position = spawnPoint.transform.position;
+        }
+        else
+        {
+            PlayerCharacter.Instance.transform.position = spawnPoint.transform.position;
+        }
+
+        Physics2D.SyncTransforms();
+    }
+
+    private ChapterPlayerSpawn FindPlayerSpawn(ChapterDataSO chapter)
+    {
+        ChapterPlayerSpawn matchingSpawn = null;
+
+        foreach (ChapterPlayerSpawn spawn in FindObjectsByType<ChapterPlayerSpawn>(
+                     FindObjectsInactive.Include))
+        {
+            if (spawn == null ||
+                spawn.gameObject.scene != gameObject.scene ||
+                spawn.Chapter != chapter)
+            {
+                continue;
+            }
+
+            if (matchingSpawn != null)
+            {
+                Debug.LogError(
+                    $"Chapter '{chapter.ChapterId}' has more than one player spawn point.",
+                    this);
+                return null;
+            }
+
+            matchingSpawn = spawn;
+        }
+
+        return matchingSpawn;
     }
 
     private void UnlockActiveChapterGlossary()

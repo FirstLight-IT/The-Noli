@@ -19,6 +19,7 @@ public class AmbientArtifactHint
 public class AmbientNPC : MonoBehaviour, IInteractable
 {
     public static bool IsHintCameraPanning { get; private set; }
+    public static event Action<AmbientNPCInfoSO> OnAmbientDialogueFinished;
 
     [SerializeField] private AmbientNPCInfoSO npcData;
     [SerializeField] private AmbientArtifactHint[] artifactHints;
@@ -162,7 +163,12 @@ public class AmbientNPC : MonoBehaviour, IInteractable
 
         string[] dialogue = GetNextGenericDialogue();
         if (dialogue != null)
-            DialogueController.Instance.ShowAmbientDialogue(npcData, dialogue);
+        {
+            DialogueController.Instance.ShowAmbientDialogue(
+                npcData,
+                dialogue,
+                () => NotifyDialogueFinished());
+        }
     }
 
     private string[] GetNextGenericDialogue()
@@ -236,7 +242,11 @@ public class AmbientNPC : MonoBehaviour, IInteractable
             DialogueController.Instance.ShowAmbientDialogue(
                 npcData,
                 hint.Artifact.HintDialogueLines,
-                () => StartCoroutine(ReturnFromHint(hint, true)));
+                () =>
+                {
+                    NotifyDialogueFinished();
+                    StartCoroutine(ReturnFromHint(hint, true));
+                });
 
         if (!dialogueStarted)
             yield return ReturnFromHint(hint, false);
@@ -250,7 +260,17 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         DialogueController.Instance.ShowAmbientDialogue(
             npcData,
             hint.Artifact.HintDialogueLines,
-            () => FinishHint(hint));
+            () =>
+            {
+                NotifyDialogueFinished();
+                FinishHint(hint);
+            });
+    }
+
+    private void NotifyDialogueFinished()
+    {
+        if (npcData != null)
+            OnAmbientDialogueFinished?.Invoke(npcData);
     }
 
     private IEnumerator ReturnFromHint(AmbientArtifactHint hint, bool finishHint)

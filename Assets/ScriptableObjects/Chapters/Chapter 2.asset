@@ -15,9 +15,11 @@ MonoBehaviour:
   localizedDataJson: {fileID: 4900000, guid: 5be2d645c5f7807409a7cd19a4828e25, type: 3}
   chapterId: chapter_2
   contentAvailable: 0
+  playerCharacter: {fileID: 11400000, guid: 267694db082408048a4a501f49cdbe66, type: 2}
   openingNarration: {fileID: 0}
-  startingMissionId:
-  finalMissionId:
+  missions: []
+  startingMission: {fileID: 0}
+  finalMission: {fileID: 0}
   completionQuizJson: {fileID: 0}
   quizSceneName: ChapterQuiz
   glossary: {fileID: 0}

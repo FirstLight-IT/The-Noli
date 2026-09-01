@@ -15,9 +15,18 @@ MonoBehaviour:
   localizedDataJson: {fileID: 4900000, guid: 5be2d645c5f7807409a7cd19a4828e25, type: 3}
   chapterId: chapter_1
   contentAvailable: 1
+  playerCharacter: {fileID: 11400000, guid: 738f8da1851a3da45ad2f54218aa26bb, type: 2}
   openingNarration: {fileID: 11400000, guid: 721102afbf139644b90a935243621579, type: 2}
-  startingMissionId: explore_the_caida
-  finalMissionId: captain_tiago_absence
+  missions:
+  - {fileID: 11400000, guid: 1dfa38f6dc5717e4e82a8defaacc5594, type: 2}
+  - {fileID: 11400000, guid: acbc2b79ca274e8aa7779f8957592253, type: 2}
+  - {fileID: 11400000, guid: 2322b4c96ac51b94483db1917888580d, type: 2}
+  - {fileID: 11400000, guid: 8156ce87b784f5644b97770502643544, type: 2}
+  - {fileID: 11400000, guid: 02c65c89134ef8345bfc254dee00c3b9, type: 2}
+  - {fileID: 11400000, guid: 5b99757e8e22d64499a666570ef99f3b, type: 2}
+  - {fileID: 11400000, guid: 3ecd47da0546bed47bceb320b0eec555, type: 2}
+  startingMission: {fileID: 11400000, guid: 1dfa38f6dc5717e4e82a8defaacc5594, type: 2}
+  finalMission: {fileID: 11400000, guid: 3ecd47da0546bed47bceb320b0eec555, type: 2}
   completionQuizJson: {fileID: 4900000, guid: 14ca3dc8d20841b19bb9a90c6c1e5e30, type: 3}
   quizSceneName: ChapterQuiz
   glossary: {fileID: 11400000, guid: ef9e7378e55d48edb7ebf4ce3cec69c5, type: 2}
