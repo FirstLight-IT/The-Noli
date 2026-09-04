@@ -1,0 +1,72 @@
+{
+  "conversationId": "the_young_poet",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Then I have the honor of addressing the poet whose works have done so much to keep up my enthusiasm for my native land."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "It is said that you do not write any more, but I could not learn the reason."
+        },{
+          "speakerId": "young_poet",
+          "text": "The reason?"
+        },{
+          "speakerId": "young_poet",
+          "text": "Because one does not seek inspiration in order to debase himself and lie."
+        },{
+          "speakerId": "young_poet",
+          "text": "One writer has been imprisoned for having put a very obvious truth into verse."
+        },{
+          "speakerId": "young_poet",
+          "text": "They may have called me a poet but they shall not call me a fool."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "And may I enquire what that truth was?"
+        },{
+          "speakerId": "young_poet",
+          "text": "He said that the lion’s son is also a lion."
+        },{
+          "speakerId": "young_poet",
+          "text": "He came very near to being exiled for it."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Kung gayon, ikinararangal kong makausap ang makatang ang mga isinulat ay nakatulong upang mapanatili ang aking masidhing pagmamahal sa aking bayan."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Nabalitaan kong hindi na raw po kayo sumusulat, ngunit hindi ko nalaman ang dahilan."
+        },{
+          "speakerId": "young_poet",
+          "text": "Ang dahilan?"
+        },{
+          "speakerId": "young_poet",
+          "text": "Sapagkat hindi hinahanap ang inspirasyon upang hamakin ang sarili at magsinungaling"
+        },{
+          "speakerId": "young_poet",
+          "text": "Isang manunulat ang nilitis dahil isinulat niya sa tula ang isang katotohanang hindi maitatanggi."
+        },{
+          "speakerId": "young_poet",
+          "text": "Tinawag nila akong makata, ngunit hindi nila ako matatawag na hangal."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "At maaari ko po bang malaman kung ano ang katotohanang iyon?"
+        },{
+          "speakerId": "young_poet",
+          "text": "Sinabi lamang niya na ang anak ng leon ay leon din."
+        },{
+          "speakerId": "young_poet",
+          "text": "Muntik na siyang ipatapon dahil dito."
+        }
+      ]
+    }
+  ]
+}

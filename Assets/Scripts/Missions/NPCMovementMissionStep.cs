@@ -21,12 +21,10 @@ public class NPCMovementMissionStep : MissionStep
 
     private readonly Dictionary<NPCFixedRoute, Action> routeCompletedHandlers = new();
     private readonly HashSet<NPCFixedRoute> pendingRoutes = new();
-    private readonly Dictionary<NPC, bool> previousInteractionStates = new();
 
     void OnDisable()
     {
         UnsubscribeFromRoutes();
-        RestoreInteractionStates();
     }
 
     public bool ApplyCompletedWorldState()
@@ -120,11 +118,7 @@ public class NPCMovementMissionStep : MissionStep
             pendingRoutes.Add(route);
             requestedRouteIds.Add(route, target.routeId);
 
-            if (disableInteractionWhileMoving)
-                previousInteractionStates.Add(npc, npc.IsInteractionEnabled);
         }
-
-        SetTargetInteractionEnabled(false);
 
         if (waitForAllRoutesToFinish)
         {
@@ -143,17 +137,22 @@ public class NPCMovementMissionStep : MissionStep
             {
                 CancelPendingRoutes();
                 UnsubscribeFromRoutes();
-                RestoreInteractionStates();
                 FailStep($"Could not start the fixed route on '{route.gameObject.name}'.");
+                return;
+            }
+
+            if (disableInteractionWhileMoving &&
+                !route.TryDisableInteractionUntilRouteCompletes())
+            {
+                CancelPendingRoutes();
+                UnsubscribeFromRoutes();
+                FailStep($"Could not disable interaction while '{route.gameObject.name}' moves.");
                 return;
             }
         }
 
         if (!waitForAllRoutesToFinish)
-        {
-            RestoreInteractionStates();
             FinishStep();
-        }
     }
 
     private void HandleRouteCompleted(NPCFixedRoute completedRoute)
@@ -166,7 +165,6 @@ public class NPCMovementMissionStep : MissionStep
 
         if (pendingRoutes.Count == 0)
         {
-            RestoreInteractionStates();
             FinishStep();
         }
     }
@@ -189,23 +187,4 @@ public class NPCMovementMissionStep : MissionStep
         pendingRoutes.Clear();
     }
 
-    private void SetTargetInteractionEnabled(bool enabled)
-    {
-        foreach (NPC npc in previousInteractionStates.Keys)
-        {
-            if (npc != null)
-                npc.SetInteractionEnabled(enabled);
-        }
-    }
-
-    private void RestoreInteractionStates()
-    {
-        foreach (KeyValuePair<NPC, bool> entry in previousInteractionStates)
-        {
-            if (entry.Key != null)
-                entry.Key.SetInteractionEnabled(entry.Value);
-        }
-
-        previousInteractionStates.Clear();
-    }
 }

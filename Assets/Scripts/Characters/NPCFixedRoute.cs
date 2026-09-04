@@ -30,11 +30,14 @@ public class NPCFixedRoute : MonoBehaviour
 
     private NPCMover mover;
     private NPCPatrol patrol;
+    private NPC interactionNpc;
     private Transform[] activeRoutePoints;
     private Coroutine waitRoutine;
     private int currentPointIndex;
     private bool isFollowingRoute;
     private bool shouldResumePatrol;
+    private bool hasInteractionLock;
+    private bool interactionWasEnabled;
 
     public bool IsFollowingRoute => isFollowingRoute;
 
@@ -42,6 +45,7 @@ public class NPCFixedRoute : MonoBehaviour
     {
         mover = GetComponent<NPCMover>();
         TryGetComponent(out patrol);
+        TryGetComponent(out interactionNpc);
     }
 
     private void OnEnable()
@@ -67,6 +71,7 @@ public class NPCFixedRoute : MonoBehaviour
         waitRoutine = null;
         isFollowingRoute = false;
         shouldResumePatrol = false;
+        RestoreInteractionAfterRoute();
     }
 
     public void BeginRoute()
@@ -133,6 +138,23 @@ public class NPCFixedRoute : MonoBehaviour
         }
 
         return TryBeginRoute(route.RoutePoints, true);
+    }
+
+    public bool TryDisableInteractionUntilRouteCompletes()
+    {
+        if (!isFollowingRoute)
+            return false;
+
+        if (hasInteractionLock)
+            return true;
+
+        if (interactionNpc == null && !TryGetComponent(out interactionNpc))
+            return false;
+
+        interactionWasEnabled = interactionNpc.IsInteractionEnabled;
+        hasInteractionLock = true;
+        interactionNpc.SetInteractionEnabled(false);
+        return true;
     }
 
     public bool TryBeginRoute(Transform[] requestedRoutePoints, bool allowPatrolResume)
@@ -218,6 +240,7 @@ public class NPCFixedRoute : MonoBehaviour
         shouldResumePatrol = false;
         activeRoutePoints = null;
         mover.Stop();
+        RestoreInteractionAfterRoute();
     }
 
     private void HandleArrived()
@@ -329,7 +352,20 @@ public class NPCFixedRoute : MonoBehaviour
         if (resumePatrol)
             patrol.ResumePatrol();
 
+        RestoreInteractionAfterRoute();
+
         // External mission logic runs last, so it can override the resumed patrol.
         RouteCompleted?.Invoke();
+    }
+
+    private void RestoreInteractionAfterRoute()
+    {
+        if (!hasInteractionLock)
+            return;
+
+        if (interactionNpc != null)
+            interactionNpc.SetInteractionEnabled(interactionWasEnabled);
+
+        hasInteractionLock = false;
     }
 }

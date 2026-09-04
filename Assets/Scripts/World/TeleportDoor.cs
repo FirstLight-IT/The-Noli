@@ -14,6 +14,8 @@ public class TeleportDoor : MonoBehaviour
     [Header("Mission Lock")]
     [Tooltip("Leave empty for a door that is always unlocked.")]
     [SerializeField] private MissionInfoSO unlockWhenMissionStarts;
+    [Tooltip("The door also unlocks when any mission in this list has started.")]
+    [SerializeField] private MissionInfoSO[] additionalUnlockWhenAnyMissionStarts = new MissionInfoSO[0];
     [SerializeField, TextArea] private string lockedDialogue =
         "I really shouldn't be snooping around right now.";
     [SerializeField, Min(0f)] private float lockedDialogueCooldown = 1f;
@@ -94,11 +96,41 @@ public class TeleportDoor : MonoBehaviour
 
     private bool IsLocked()
     {
-        if (unlockWhenMissionStarts == null)
+        bool hasPrimaryUnlockMission = unlockWhenMissionStarts != null;
+        bool hasAdditionalUnlockMission = false;
+
+        if (additionalUnlockWhenAnyMissionStarts != null)
+        {
+            foreach (MissionInfoSO mission in additionalUnlockWhenAnyMissionStarts)
+            {
+                if (mission != null)
+                {
+                    hasAdditionalUnlockMission = true;
+                    break;
+                }
+            }
+        }
+
+        if (!hasPrimaryUnlockMission && !hasAdditionalUnlockMission)
             return false;
 
         MissionController missionController = MissionController.Instance;
-        return missionController == null || !missionController.HasMissionStarted(unlockWhenMissionStarts);
+        if (missionController == null)
+            return true;
+
+        if (hasPrimaryUnlockMission && missionController.HasMissionStarted(unlockWhenMissionStarts))
+            return false;
+
+        if (additionalUnlockWhenAnyMissionStarts != null)
+        {
+            foreach (MissionInfoSO mission in additionalUnlockWhenAnyMissionStarts)
+            {
+                if (mission != null && missionController.HasMissionStarted(mission))
+                    return false;
+            }
+        }
+
+        return true;
     }
 
     private void ShowLockedDialogue()

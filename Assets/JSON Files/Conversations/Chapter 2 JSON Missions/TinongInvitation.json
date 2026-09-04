@@ -1,0 +1,72 @@
+{
+  "conversationId": "tinong_invitation",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "capitan_tinong",
+          "text": "Señor Ibarra!"
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "I’ve been eager to make your acquaintance."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Capitan Tiago is a friend of mine and I knew your respected father."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "I am known as Capitan Tinong and live in Tondo, where you will always be welcome."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "I hope that you will honor me with a visit. Come and dine with us tomorrow."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Thank you!"
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "But tomorrow morning I must leave for San Diego."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "How unfortunate!"
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Then it will be on your return."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+          {
+          "speakerId": "capitan_tinong",
+          "text": "Ginoong Ibarra,!"
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "matagal ko nang ninanais na makilala kayo."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Matalik kong kaibigan si Kapitan Tiago, at nakilala ko rin ang inyong ama."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Ako si Kapitan Tinong at nakatira ako sa Tondo, kung saan palagi kayong malugod na tatanggapin."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Sana’y mapagbigyan ninyo ako ng inyong pagdalaw. Doon na po kayo kumain bukas!"
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Salamat po!"
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Ngunit pupunta po ako sa San Diego bukas."
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Sayang!"
+        }, {
+          "speakerId": "capitan_tinong",
+          "text": "Kung gayon, sa pagbabalik ninyo na lamang."
+        }
+      ]
+    }
+  ]
+}

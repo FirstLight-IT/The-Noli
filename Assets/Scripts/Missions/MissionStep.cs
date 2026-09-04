@@ -72,6 +72,10 @@ public static class MissionObjectiveLocalizationJson
 
 public abstract class MissionStep : MonoBehaviour
 {
+    [Header("Player Objective")]
+    [Tooltip("Disable this for story actions that should run in the mission sequence without appearing on the HUD or in the journal.")]
+    [SerializeField] private bool showAsPlayerObjective = true;
+
     [Header("Localized Objective")]
     [SerializeField] private TextAsset localizedObjectiveJson;
     [SerializeField] private string objectiveId;
@@ -85,6 +89,7 @@ public abstract class MissionStep : MonoBehaviour
             objectiveId,
             GameLanguage.CurrentCode) ?? objectiveDescription;
     public virtual string JournalDescription => ObjectiveDescription;
+    public bool ShowAsPlayerObjective => showAsPlayerObjective;
 
     protected string MissionId { get; private set; }
     protected int StepIndex { get; private set; }

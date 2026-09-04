@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: crisostomo_ibarra
-  portrait: {fileID: 0}
+  portrait: {fileID: 8015735204719111561, guid: 24a2286cfa880344f86fa98abdfa2ed4, type: 3}

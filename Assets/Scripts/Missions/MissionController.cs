@@ -158,6 +158,20 @@ public class MissionController : MonoBehaviour
             : 0;
     }
 
+    public bool IsPlayerObjectiveStep(string missionId, int stepIndex)
+    {
+        if (!missions.TryGetValue(missionId, out Mission mission) ||
+            mission.Info.MissionStepPrefabs == null ||
+            stepIndex < 0 ||
+            stepIndex >= mission.Info.MissionStepPrefabs.Length)
+        {
+            return false;
+        }
+
+        MissionStep step = mission.Info.MissionStepPrefabs[stepIndex];
+        return step != null && step.ShowAsPlayerObjective;
+    }
+
     public MissionStepProgressSaveData GetMissionStepProgress(string missionId)
     {
         if (activeMission == null ||
@@ -432,7 +446,9 @@ public class MissionController : MonoBehaviour
         }
 
         activeStep = Instantiate(stepPrefab, transform);
-        UpdateObjectiveUI(activeMission.Info.DisplayName, activeStep.ObjectiveDescription);
+        UpdateObjectiveUI(
+            activeMission.Info.DisplayName,
+            activeStep.ShowAsPlayerObjective ? activeStep.ObjectiveDescription : string.Empty);
         activeStep.Initialize(
             activeMission.Info.MissionId,
             activeMission.CurrentStepIndex,
@@ -448,7 +464,8 @@ public class MissionController : MonoBehaviour
             return;
         }
 
-        UpdateObjectiveUI(activeMission.Info.DisplayName, objective);
+        if (activeStep != null && activeStep.ShowAsPlayerObjective)
+            UpdateObjectiveUI(activeMission.Info.DisplayName, objective);
     }
 
     private void HandleMissionStepFinished(string missionId, int stepIndex)

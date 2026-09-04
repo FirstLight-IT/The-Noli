@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df394b0e26c3fe488c395a9422330f8, type: 3}
+  m_Name: Greet the Ladies
+  m_EditorClassIdentifier: Assembly-CSharp::MissionInfoSO
+  localizedDataJson: {fileID: 4900000, guid: f9ed4e2623db47439884ed58a584afc5, type: 3}
+  missionId: greet_the_ladies
+  prerequisites:
+  - {fileID: 11400000, guid: 7a01da55f14418940997c522745a1d80, type: 2}
+  autoStartWhenAvailable: 1
+  missionStepPrefabs:
+  - {fileID: 102217734278660232, guid: ceb99e84571fe70409164ae46fe3af01, type: 3}

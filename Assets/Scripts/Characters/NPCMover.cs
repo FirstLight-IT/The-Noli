@@ -34,11 +34,13 @@ public class NPCMover : MonoBehaviour
     private Transform destination;
     private Vector2 isometricCorner;
     private bool hasIsometricCorner;
+    private StairsTrigger activeSlope;
     private float blockedTime;
     private bool isPhysicsPaused;
 
     public bool HasDestination => destination != null;
     public bool IsBlocked { get; private set; }
+    public bool IsOnSlope => activeSlope != null;
     public Transform Destination => destination;
 
     private void Awake()
@@ -148,6 +150,24 @@ public class NPCMover : MonoBehaviour
             StopBody();
     }
 
+    public void EnterSlope(StairsTrigger slope)
+    {
+        if (slope == null || activeSlope == slope)
+            return;
+
+        activeSlope = slope;
+        PrepareIsometricPath();
+    }
+
+    public void ExitSlope(StairsTrigger slope)
+    {
+        if (activeSlope != slope)
+            return;
+
+        activeSlope = null;
+        PrepareIsometricPath();
+    }
+
     public void Stop()
     {
         destination = null;
@@ -206,7 +226,7 @@ public class NPCMover : MonoBehaviour
     {
         hasIsometricCorner = false;
 
-        if (!isometricMovementOnly || destination == null)
+        if (!isometricMovementOnly || destination == null || activeSlope != null)
             return;
 
         isometricCorner = GetFirstIsometricPathPoint(body.position, destination.position);
@@ -288,6 +308,7 @@ public class NPCMover : MonoBehaviour
         StopBody();
         body.constraints = movementConstraints;
         isPhysicsPaused = false;
+        activeSlope = null;
     }
 
     private void SetNPCPairCollision(NPCMover otherMover, bool shouldCollide)

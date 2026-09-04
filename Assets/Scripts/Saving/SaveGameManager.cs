@@ -1339,8 +1339,12 @@ public sealed class SaveGameManager : MonoBehaviour
 
         ChapterSaveData activeChapter = GetActiveChapter();
 
-        if (activeChapter != null)
+        if (activeChapter != null &&
+            (MissionController.Instance == null ||
+             MissionController.Instance.IsPlayerObjectiveStep(missionId, stepIndex)))
+        {
             activeChapter.analytics.missionStepsCompleted++;
+        }
 
         QueueAutosave("MissionStepFinished");
     }

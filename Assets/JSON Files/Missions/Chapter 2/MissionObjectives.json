@@ -1,5 +1,162 @@
 {
   "schemaVersion": 1,
   "defaultLanguageCode": "en",
-  "objectives": []
+  "objectives": [
+    {
+        "objectiveId": "welcome_home_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Enter the Mansion"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Pumasok sa Mansion"
+            }
+        ]
+    },
+    {
+        "objectiveId": "welcome_home_step_2",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Capitan Tiago"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Kapitan Tiago"
+            }
+        ]
+    },
+    {
+        "objectiveId": "welcome_home_step_3",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Follow Capitan Tiago to the Sala"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Sundan si Kapitan Tiago papunta sa Sala"
+            }
+        ]
+    },
+    {
+        "objectiveId": "welcome_home_step_4",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Capitan Tiago"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Kapitan Tiago"
+            }
+        ]
+    },
+    {
+        "objectiveId": "an_old_acquaintance_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Fray Damaso"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Padre Damaso"
+            }
+        ]
+    },
+    {
+        "objectiveId": "don_rafael_s_son_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Lieutenant Guevara"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Tenyente Guevara"
+            }
+        ]
+    },
+    {
+        "objectiveId": "greet_the_ladies_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to 3 ladies"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin ang 3 dalaga"
+            }
+        ]
+    },
+    {
+        "objectiveId": "introduce_yourself_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to 3 gentlemen"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin ang 3 ginoo"
+            }
+        ]
+    },
+    {
+        "objectiveId": "the_young_poet_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Meet the Young Poet"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kilalanin ang Batang Makata"
+            }
+        ]
+    },
+    {
+        "objectiveId": "the_young_poet_step_2",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to the Young Poet"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin ang Batang Makata"
+            }
+        ]
+    },
+    {
+        "objectiveId": "capitan_tinong_s_invitation_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Wait for Capitan Tinong's hasty arrival"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Hintayin ang Nagmamadaling Pagdating ni Kapitan Tinong"
+            }
+        ]
+    },
+    {
+        "objectiveId": "capitan_tinong_s_invitation_step_2",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Capitan Tinong"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Kapitan Tinong"
+            }
+        ]
+    }
+  ]
 }

@@ -62,13 +62,15 @@ public sealed class SpeakToAmbientNPCsMissionStep : MissionStep
         RefreshProgressAndCompleteIfReady();
     }
 
-    private void HandleAmbientDialogueFinished(AmbientNPCInfoSO npcData)
+    private void HandleAmbientDialogueFinished(
+        AmbientNPCInfoSO npcData,
+        string missionIdentity)
     {
         if (!isActive ||
             npcData == null ||
             !npcData.HasTag(requiredTag) ||
-            string.IsNullOrWhiteSpace(npcData.NpcID) ||
-            !spokenNpcIDs.Add(npcData.NpcID.Trim()))
+            string.IsNullOrWhiteSpace(missionIdentity) ||
+            !spokenNpcIDs.Add(missionIdentity.Trim()))
         {
             return;
         }

@@ -194,11 +194,18 @@ public sealed class MissionStepProgressTests
     [Test]
     public void AmbientNpcTags_MatchAssignedMissionClassification()
     {
-        AmbientNPCInfoSO npcData = Track(ScriptableObject.CreateInstance<AmbientNPCInfoSO>());
-        SetPrivateField(npcData, "tags", AmbientNPCTag.Girl);
+        AmbientNPCInfoSO girlData = Track(ScriptableObject.CreateInstance<AmbientNPCInfoSO>());
+        SetPrivateField(girlData, "tags", AmbientNPCTag.Girl);
 
-        Assert.That(npcData.HasTag(AmbientNPCTag.Girl), Is.True);
-        Assert.That(npcData.HasTag(AmbientNPCTag.None), Is.False);
+        AmbientNPCInfoSO gentlemanData =
+            Track(ScriptableObject.CreateInstance<AmbientNPCInfoSO>());
+        SetPrivateField(gentlemanData, "tags", AmbientNPCTag.Gentleman);
+
+        Assert.That(girlData.HasTag(AmbientNPCTag.Girl), Is.True);
+        Assert.That(girlData.HasTag(AmbientNPCTag.Gentleman), Is.False);
+        Assert.That(gentlemanData.HasTag(AmbientNPCTag.Gentleman), Is.True);
+        Assert.That(gentlemanData.HasTag(AmbientNPCTag.Girl), Is.False);
+        Assert.That(gentlemanData.HasTag(AmbientNPCTag.None), Is.False);
     }
 
     [Test]
@@ -223,21 +230,26 @@ public sealed class MissionStepProgressTests
             step.Initialize("chapter_2", 1);
 
             AmbientNPCInfoSO firstGirl = CreateAmbientNpcData("girl_1", AmbientNPCTag.Girl);
-            InvokeAmbientDialogueFinished(step, firstGirl);
-            InvokeAmbientDialogueFinished(step, firstGirl);
+            InvokeAmbientDialogueFinished(step, firstGirl, "girl_placement_1");
+            InvokeAmbientDialogueFinished(step, firstGirl, "girl_placement_1");
             InvokeAmbientDialogueFinished(
                 step,
-                CreateAmbientNpcData("untagged_npc", AmbientNPCTag.None));
+                CreateAmbientNpcData("untagged_npc", AmbientNPCTag.None),
+                "untagged_placement");
 
-            Assert.That(step.CaptureProgress().completedTargetIds, Is.EqualTo(new[] { "girl_1" }));
+            Assert.That(
+                step.CaptureProgress().completedTargetIds,
+                Is.EqualTo(new[] { "girl_placement_1" }));
             Assert.That(completionCount, Is.Zero);
 
             InvokeAmbientDialogueFinished(
                 step,
-                CreateAmbientNpcData("girl_2", AmbientNPCTag.Girl));
+                firstGirl,
+                "girl_placement_2");
             InvokeAmbientDialogueFinished(
                 step,
-                CreateAmbientNpcData("girl_3", AmbientNPCTag.Girl));
+                firstGirl,
+                "girl_placement_3");
 
             Assert.That(completionCount, Is.EqualTo(1));
         }
@@ -309,13 +321,14 @@ public sealed class MissionStepProgressTests
 
     private static void InvokeAmbientDialogueFinished(
         SpeakToAmbientNPCsMissionStep step,
-        AmbientNPCInfoSO npcData)
+        AmbientNPCInfoSO npcData,
+        string missionIdentity)
     {
         MethodInfo method = typeof(SpeakToAmbientNPCsMissionStep).GetMethod(
             "HandleAmbientDialogueFinished",
             BindingFlags.Instance | BindingFlags.NonPublic);
         Assert.That(method, Is.Not.Null);
-        method.Invoke(step, new object[] { npcData });
+        method.Invoke(step, new object[] { npcData, missionIdentity });
     }
 
     private static void InvokeTrigger(RoomArea roomArea, string methodName, Collider2D collider)

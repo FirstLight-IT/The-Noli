@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: capitan_tiago
-  portrait: {fileID: 0}
+  portrait: {fileID: -3617820742883084939, guid: 811e4f5302820794e93a4722a43d7fcd, type: 3}

@@ -1,0 +1,66 @@
+{
+  "conversationId": "an_old_acquiantance",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "What!"
+        },  {
+          "speakerId": "crisostomo_ibarra",
+          "text": "The curate of my native town! Padre Damaso,"
+        },  {
+          "speakerId": "crisostomo_ibarra",
+          "text": "my father’s intimate friend!"
+        },  {
+          "speakerId": "fray_damaso",
+          "text": "..."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "..."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Pardon me, perhaps I’m mistaken."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "You are not mistaken,"
+        },{
+          "speakerId": "fray_damaso",
+          "text": "but your father was never an intimate friend of mine."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Aba!"
+        },  {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Ang kura ng aking bayan! Si Padre Damaso,"
+        },  {
+          "speakerId": "crisostomo_ibarra",
+          "text": "ang matalik na kaibigan ng aking ama!"
+        },  {
+          "speakerId": "fray_damaso",
+          "text": "..."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "..."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Paumanhin po, marahil ay nagkamali ako."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Hindi ka nagkamali,"
+        },{
+          "speakerId": "fray_damaso",
+          "text": "ngunit kailanma’y hindi ako naging matalik na kaibigan ng iyong ama."
+        }
+      ]
+    }
+  ]
+}

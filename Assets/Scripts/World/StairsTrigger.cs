@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -6,6 +7,8 @@ public class StairsTrigger : MonoBehaviour
 {
     [SerializeField] private Transform bottom;
     [SerializeField] private Transform top;
+
+    private readonly HashSet<NPCMover> npcMoversInside = new();
 
     private void Awake()
     {
@@ -50,24 +53,36 @@ public class StairsTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (TryGetPlayerBody(other, out PlayerMovement player))
-        {
             player.EnterSlope(this);
+
+        if (TryGetNPCBody(other, out NPCMover npcMover))
+        {
+            npcMoversInside.Add(npcMover);
+            npcMover.EnterSlope(this);
         }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (TryGetPlayerBody(other, out PlayerMovement player))
-        {
             player.EnterSlope(this);
+
+        if (TryGetNPCBody(other, out NPCMover npcMover))
+        {
+            npcMoversInside.Add(npcMover);
+            npcMover.EnterSlope(this);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (TryGetPlayerBody(other, out PlayerMovement player))
-        {
             player.ExitSlope(this);
+
+        if (TryGetNPCBody(other, out NPCMover npcMover))
+        {
+            npcMoversInside.Remove(npcMover);
+            npcMover.ExitSlope(this);
         }
     }
 
@@ -75,9 +90,15 @@ public class StairsTrigger : MonoBehaviour
     {
         PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
         if (player != null)
-        {
             player.ExitSlope(this);
+
+        foreach (NPCMover npcMover in npcMoversInside)
+        {
+            if (npcMover != null)
+                npcMover.ExitSlope(this);
         }
+
+        npcMoversInside.Clear();
     }
 
     private void Reset()
@@ -113,7 +134,7 @@ public class StairsTrigger : MonoBehaviour
     private static bool TryGetPlayerBody(Collider2D other, out PlayerMovement player)
     {
         player = null;
-        if (other.isTrigger || other.attachedRigidbody == null)
+        if (other == null || other.isTrigger || other.attachedRigidbody == null)
         {
             return false;
         }
@@ -121,6 +142,17 @@ public class StairsTrigger : MonoBehaviour
         player = other.attachedRigidbody.GetComponent<PlayerMovement>();
         Collider2D bodyCollider = other.attachedRigidbody.GetComponent<Collider2D>();
         return player != null && other == bodyCollider;
+    }
+
+    private static bool TryGetNPCBody(Collider2D other, out NPCMover npcMover)
+    {
+        npcMover = null;
+        if (other == null || other.isTrigger || other.attachedRigidbody == null)
+            return false;
+
+        npcMover = other.attachedRigidbody.GetComponent<NPCMover>();
+        Collider2D bodyCollider = other.attachedRigidbody.GetComponent<Collider2D>();
+        return npcMover != null && other == bodyCollider;
     }
 
     private void OnDrawGizmosSelected()

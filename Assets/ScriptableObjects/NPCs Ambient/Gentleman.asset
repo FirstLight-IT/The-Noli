@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 73782d803c32d924c99ca0af9a327cde, type: 3}
   npcID: ambient_gentleman
+  tags: 2

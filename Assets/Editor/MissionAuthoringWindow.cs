@@ -16,6 +16,8 @@ public sealed class MissionAuthoringWindow : EditorWindow
     private const string MissionAssetsRoot = "Assets/ScriptableObjects/Missions";
     private const string MissionStepsRoot = "Assets/Prefabs/Mission Steps";
     private const string Chapter2Path = "Assets/ScriptableObjects/Chapters/Chapter 2.asset";
+    private const string DraftRelativePath = "UserSettings/TheNoli/MissionGroupBuilderDraft.json";
+    private const double DraftSaveDelaySeconds = 0.5d;
 
     private enum StepKind
     {
@@ -47,11 +49,47 @@ public sealed class MissionAuthoringWindow : EditorWindow
     {
         public bool expanded = true;
         public StepKind kind = StepKind.EnterRoom;
+        public bool showAsPlayerObjective = true;
         public string objectiveEnglish = string.Empty;
         public string objectiveFilipino = string.Empty;
         public ArtifactInfoSO targetArtifact;
         public string targetNpcId = string.Empty;
         public TextAsset conversationJson;
+        public string roomId = string.Empty;
+        public int requiredCount = 1;
+        public List<CharacterTargetDraft> characters = new();
+        public List<MovementTargetDraft> movementTargets = new();
+        public bool disableInteractionWhileMoving = true;
+        public bool waitForAllRoutesToFinish = true;
+        public AmbientNPCTag requiredTag = AmbientNPCTag.Girl;
+    }
+
+    [Serializable]
+    private sealed class MissionGroupDraftFile
+    {
+        public int version = 2;
+        public string chapterGuid = string.Empty;
+        public string missionNameEnglish = string.Empty;
+        public string missionNameFilipino = string.Empty;
+        public string missionId = string.Empty;
+        public string lastGeneratedMissionId = string.Empty;
+        public string prerequisiteGuid = string.Empty;
+        public bool autoStartWhenAvailable = true;
+        public bool makeChapterStartingMission;
+        public List<StepDraftFile> steps = new();
+    }
+
+    [Serializable]
+    private sealed class StepDraftFile
+    {
+        public bool expanded = true;
+        public StepKind kind = StepKind.EnterRoom;
+        public bool showAsPlayerObjective = true;
+        public string objectiveEnglish = string.Empty;
+        public string objectiveFilipino = string.Empty;
+        public string targetArtifactGuid = string.Empty;
+        public string targetNpcId = string.Empty;
+        public string conversationJsonGuid = string.Empty;
         public string roomId = string.Empty;
         public int requiredCount = 1;
         public List<CharacterTargetDraft> characters = new();
@@ -88,6 +126,10 @@ public sealed class MissionAuthoringWindow : EditorWindow
     [SerializeField] private List<StepDraft> steps = new();
     [SerializeField] private Vector2 scrollPosition;
 
+    [NonSerialized] private bool draftDirty;
+    [NonSerialized] private double draftSaveAt;
+    [NonSerialized] private string draftStatus = string.Empty;
+
     [MenuItem(MenuPath)]
     public static void Open()
     {
@@ -105,7 +147,9 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
     private void OnEnable()
     {
-        if (chapter == null)
+        bool restoredDraft = TryLoadDraft(out string loadError);
+
+        if (!restoredDraft && chapter == null)
         {
             chapter = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(Chapter2Path);
             makeChapterStartingMission = chapter != null && chapter.StartingMission == null;
@@ -113,10 +157,29 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
         if (steps == null || steps.Count == 0)
             steps = new List<StepDraft> { CreateStepDraft(StepKind.EnterRoom) };
+
+        if (!string.IsNullOrWhiteSpace(loadError))
+            draftStatus = loadError;
+    }
+
+    private void OnDisable()
+    {
+        if (draftDirty)
+            SaveDraft();
+    }
+
+    private void Update()
+    {
+        if (!draftDirty || EditorApplication.timeSinceStartup < draftSaveAt)
+            return;
+
+        SaveDraft();
+        Repaint();
     }
 
     private void OnGUI()
     {
+        EditorGUI.BeginChangeCheck();
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
 
         EditorGUILayout.LabelField("Mission Group Builder", EditorStyles.boldLabel);
@@ -124,6 +187,8 @@ public sealed class MissionAuthoringWindow : EditorWindow
             "A mission group contains one or more ordered step prefabs. Steps advance in order. " +
             "The Mission Complete graphic appears only after the final step in this group finishes.",
             MessageType.Info);
+
+        DrawDraftControls();
 
         DrawChapterField();
         DrawMissionGroupFields();
@@ -154,6 +219,36 @@ public sealed class MissionAuthoringWindow : EditorWindow
         }
 
         EditorGUILayout.EndScrollView();
+
+        if (EditorGUI.EndChangeCheck())
+            MarkDraftDirty();
+    }
+
+    private void DrawDraftControls()
+    {
+        EditorGUILayout.Space(4f);
+        EditorGUILayout.HelpBox(
+            "This unfinished mission group is saved automatically. You can close this window or Unity " +
+            "and continue later without creating the mission.",
+            MessageType.Info);
+
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Save Draft Now"))
+            SaveDraft(showConfirmation: true);
+
+        if (GUILayout.Button("Reload Saved Draft"))
+        {
+            if (!TryLoadDraft(out string error))
+                draftStatus = string.IsNullOrWhiteSpace(error) ? "No saved mission draft was found." : error;
+            else
+                draftStatus = "Saved mission draft reloaded.";
+
+            Repaint();
+        }
+        EditorGUILayout.EndHorizontal();
+
+        if (!string.IsNullOrWhiteSpace(draftStatus))
+            EditorGUILayout.LabelField(draftStatus, EditorStyles.miniLabel);
     }
 
     private void DrawChapterField()
@@ -248,12 +343,25 @@ public sealed class MissionAuthoringWindow : EditorWindow
             if (selectedKind != step.kind)
                 steps[index] = step = CreateStepDraft(selectedKind);
 
-            step.objectiveEnglish = EditorGUILayout.TextField(
-                "Objective (English)",
-                step.objectiveEnglish);
-            step.objectiveFilipino = EditorGUILayout.TextField(
-                "Objective (Filipino, optional)",
-                step.objectiveFilipino);
+            step.showAsPlayerObjective = EditorGUILayout.Toggle(
+                "Show As Player Objective",
+                step.showAsPlayerObjective);
+            if (step.showAsPlayerObjective)
+            {
+                step.objectiveEnglish = EditorGUILayout.TextField(
+                    "Objective (English)",
+                    step.objectiveEnglish);
+                step.objectiveFilipino = EditorGUILayout.TextField(
+                    "Objective (Filipino, optional)",
+                    step.objectiveFilipino);
+            }
+            else
+            {
+                EditorGUILayout.HelpBox(
+                    "This story action still runs in order, but it will not appear on the HUD, " +
+                    "in the journal, or in the objective JSON.",
+                    MessageType.None);
+            }
             DrawStepSpecificFields(step);
         }
 
@@ -261,6 +369,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
         if (listChanged)
         {
+            MarkDraftDirty();
             GUIUtility.ExitGUI();
             return true;
         }
@@ -268,7 +377,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
         return false;
     }
 
-    private static void DrawStepSpecificFields(StepDraft step)
+    private void DrawStepSpecificFields(StepDraft step)
     {
         switch (step.kind)
         {
@@ -319,7 +428,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
         }
     }
 
-    private static void DrawCharacterTargets(List<CharacterTargetDraft> targets)
+    private void DrawCharacterTargets(List<CharacterTargetDraft> targets)
     {
         EditorGUILayout.LabelField("Character Targets", EditorStyles.boldLabel);
         EditorGUILayout.BeginHorizontal();
@@ -336,16 +445,20 @@ public sealed class MissionAuthoringWindow : EditorWindow
             if (GUILayout.Button("X", GUILayout.Width(28f)))
             {
                 targets.RemoveAt(index);
+                MarkDraftDirty();
                 GUIUtility.ExitGUI();
             }
             EditorGUILayout.EndHorizontal();
         }
 
         if (GUILayout.Button("+ Add Character Target"))
+        {
             targets.Add(new CharacterTargetDraft());
+            MarkDraftDirty();
+        }
     }
 
-    private static void DrawMovementTargets(List<MovementTargetDraft> targets)
+    private void DrawMovementTargets(List<MovementTargetDraft> targets)
     {
         EditorGUILayout.LabelField("Movement Targets", EditorStyles.boldLabel);
         EditorGUILayout.BeginHorizontal();
@@ -362,13 +475,17 @@ public sealed class MissionAuthoringWindow : EditorWindow
             if (GUILayout.Button("X", GUILayout.Width(28f)))
             {
                 targets.RemoveAt(index);
+                MarkDraftDirty();
                 GUIUtility.ExitGUI();
             }
             EditorGUILayout.EndHorizontal();
         }
 
         if (GUILayout.Button("+ Add Movement Target"))
+        {
             targets.Add(new MovementTargetDraft());
+            MarkDraftDirty();
+        }
     }
 
     private void ShowAddStepMenu()
@@ -383,6 +500,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
                 () =>
                 {
                     steps.Add(CreateStepDraft(capturedKind));
+                    MarkDraftDirty();
                     Repaint();
                 });
         }
@@ -417,14 +535,18 @@ public sealed class MissionAuthoringWindow : EditorWindow
                !string.IsNullOrWhiteSpace(missionId) &&
                steps != null &&
                steps.Count > 0 &&
-               steps.All(step => step != null && !string.IsNullOrWhiteSpace(step.objectiveEnglish));
+               steps.All(step => step != null &&
+                                 (!step.showAsPlayerObjective ||
+                                  !string.IsNullOrWhiteSpace(step.objectiveEnglish)));
     }
 
     private void CreateMissionGroup()
     {
         missionId = Slugify(missionId);
         List<string> objectiveIds = Enumerable.Range(0, steps.Count)
-            .Select(index => $"{missionId}_step_{index + 1}")
+            .Select(index => steps[index].showAsPlayerObjective
+                ? $"{missionId}_step_{index + 1}"
+                : string.Empty)
             .ToList();
         string missionsJsonPath = ResolveChapterJsonPath("Missions.json");
         string objectivesJsonPath = ResolveChapterJsonPath("MissionObjectives.json");
@@ -570,7 +692,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
         ObjectiveFile objectiveFile = ReadJson<ObjectiveFile>(objectivesJsonPath);
         objectiveFile.objectives ??= new List<MissionObjectiveJsonEntry>();
-        foreach (string objectiveId in objectiveIds)
+        foreach (string objectiveId in objectiveIds.Where(id => !string.IsNullOrWhiteSpace(id)))
         {
             if (objectiveFile.objectives.Any(entry =>
                     entry != null && string.Equals(entry.objectiveId, objectiveId, StringComparison.Ordinal)))
@@ -599,7 +721,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
     private static bool ValidateStep(StepDraft step, int index, out string error)
     {
         string prefix = $"Step {index + 1} ({ObjectNames.NicifyVariableName(step.kind.ToString())})";
-        if (string.IsNullOrWhiteSpace(step.objectiveEnglish))
+        if (step.showAsPlayerObjective && string.IsNullOrWhiteSpace(step.objectiveEnglish))
         {
             error = $"{prefix} needs an English objective.";
             return false;
@@ -917,9 +1039,13 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
         ObjectiveFile objectiveFile = ReadJson<ObjectiveFile>(objectivesJsonPath);
         objectiveFile.objectives ??= new List<MissionObjectiveJsonEntry>();
+        List<MissionObjectiveJsonEntry> newObjectiveEntries = new();
         for (int index = 0; index < steps.Count; index++)
         {
             StepDraft step = steps[index];
+            if (!step.showAsPlayerObjective)
+                continue;
+
             MissionObjectiveJsonEntry objectiveEntry = new() { objectiveId = objectiveIds[index] };
             objectiveEntry.languages.Add(new MissionObjectiveLanguageContent
             {
@@ -935,6 +1061,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
                 });
             }
             objectiveFile.objectives.Add(objectiveEntry);
+            newObjectiveEntries.Add(objectiveEntry);
         }
 
         AppendJsonArrayEntries(
@@ -944,9 +1071,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
         AppendJsonArrayEntries(
             objectivesJsonPath,
             "objectives",
-            objectiveFile.objectives
-                .Skip(Mathf.Max(0, objectiveFile.objectives.Count - steps.Count))
-                .Select(entry => JsonUtility.ToJson(entry, true)));
+            newObjectiveEntries.Select(entry => JsonUtility.ToJson(entry, true)));
     }
 
     private MissionStep CreateStepPrefab(
@@ -962,9 +1087,13 @@ public sealed class MissionAuthoringWindow : EditorWindow
         {
             MissionStep step = AddStepComponent(stepObject, draft.kind);
             SerializedObject serializedStep = new(step);
-            serializedStep.FindProperty("localizedObjectiveJson").objectReferenceValue = objectivesJson;
-            serializedStep.FindProperty("objectiveId").stringValue = objectiveId;
-            serializedStep.FindProperty("objectiveDescription").stringValue = draft.objectiveEnglish.Trim();
+            serializedStep.FindProperty("showAsPlayerObjective").boolValue = draft.showAsPlayerObjective;
+            serializedStep.FindProperty("localizedObjectiveJson").objectReferenceValue =
+                draft.showAsPlayerObjective ? objectivesJson : null;
+            serializedStep.FindProperty("objectiveId").stringValue =
+                draft.showAsPlayerObjective ? objectiveId : string.Empty;
+            serializedStep.FindProperty("objectiveDescription").stringValue =
+                draft.showAsPlayerObjective ? draft.objectiveEnglish.Trim() : string.Empty;
             ConfigureStep(serializedStep, draft);
             serializedStep.ApplyModifiedPropertiesWithoutUndo();
 
@@ -1102,7 +1231,200 @@ public sealed class MissionAuthoringWindow : EditorWindow
         missionId = string.Empty;
         lastGeneratedMissionId = string.Empty;
         steps = new List<StepDraft> { CreateStepDraft(StepKind.EnterRoom) };
+        SaveDraft();
         Repaint();
+    }
+
+    private void MarkDraftDirty()
+    {
+        draftDirty = true;
+        draftSaveAt = EditorApplication.timeSinceStartup + DraftSaveDelaySeconds;
+        draftStatus = "Saving draft...";
+    }
+
+    private void SaveDraft(bool showConfirmation = false)
+    {
+        try
+        {
+            string absolutePath = GetDraftAbsolutePath();
+            string directory = Path.GetDirectoryName(absolutePath);
+            if (!string.IsNullOrWhiteSpace(directory))
+                Directory.CreateDirectory(directory);
+
+            MissionGroupDraftFile draft = CaptureDraft();
+            File.WriteAllText(
+                absolutePath,
+                JsonUtility.ToJson(draft, true),
+                new UTF8Encoding(false));
+
+            draftDirty = false;
+            draftStatus = $"Draft saved at {DateTime.Now:HH:mm:ss}.";
+
+            if (showConfirmation)
+            {
+                EditorUtility.DisplayDialog(
+                    "Mission Draft Saved",
+                    "Your unfinished mission group is saved. You can safely close this window or Unity.",
+                    "OK");
+            }
+        }
+        catch (Exception exception)
+        {
+            draftStatus = $"Could not save draft: {exception.Message}";
+            Debug.LogError($"Mission Group Builder could not save its draft: {exception}");
+        }
+    }
+
+    private bool TryLoadDraft(out string error)
+    {
+        error = string.Empty;
+        string absolutePath = GetDraftAbsolutePath();
+        if (!File.Exists(absolutePath))
+            return false;
+
+        try
+        {
+            MissionGroupDraftFile draft = JsonUtility.FromJson<MissionGroupDraftFile>(
+                File.ReadAllText(absolutePath));
+            if (draft == null || draft.version < 1 || draft.version > 2)
+            {
+                error = "The saved mission draft has an unsupported format.";
+                return false;
+            }
+
+            if (draft.version == 1)
+            {
+                foreach (StepDraftFile savedStep in draft.steps ?? new List<StepDraftFile>())
+                {
+                    if (savedStep != null)
+                        savedStep.showAsPlayerObjective = true;
+                }
+            }
+
+            ApplyDraft(draft);
+            draftDirty = false;
+            draftStatus = "Saved mission draft restored.";
+            return true;
+        }
+        catch (Exception exception)
+        {
+            error = $"Could not load saved draft: {exception.Message}";
+            Debug.LogError($"Mission Group Builder could not load its draft: {exception}");
+            return false;
+        }
+    }
+
+    private MissionGroupDraftFile CaptureDraft()
+    {
+        MissionGroupDraftFile draft = new()
+        {
+            chapterGuid = GetAssetGuid(chapter),
+            missionNameEnglish = missionNameEnglish,
+            missionNameFilipino = missionNameFilipino,
+            missionId = missionId,
+            lastGeneratedMissionId = lastGeneratedMissionId,
+            prerequisiteGuid = GetAssetGuid(prerequisite),
+            autoStartWhenAvailable = autoStartWhenAvailable,
+            makeChapterStartingMission = makeChapterStartingMission
+        };
+
+        foreach (StepDraft step in steps ?? new List<StepDraft>())
+        {
+            if (step == null)
+                continue;
+
+            draft.steps.Add(new StepDraftFile
+            {
+                expanded = step.expanded,
+                kind = step.kind,
+                showAsPlayerObjective = step.showAsPlayerObjective,
+                objectiveEnglish = step.objectiveEnglish,
+                objectiveFilipino = step.objectiveFilipino,
+                targetArtifactGuid = GetAssetGuid(step.targetArtifact),
+                targetNpcId = step.targetNpcId,
+                conversationJsonGuid = GetAssetGuid(step.conversationJson),
+                roomId = step.roomId,
+                requiredCount = step.requiredCount,
+                characters = step.characters ?? new List<CharacterTargetDraft>(),
+                movementTargets = step.movementTargets ?? new List<MovementTargetDraft>(),
+                disableInteractionWhileMoving = step.disableInteractionWhileMoving,
+                waitForAllRoutesToFinish = step.waitForAllRoutesToFinish,
+                requiredTag = step.requiredTag
+            });
+        }
+
+        return draft;
+    }
+
+    private void ApplyDraft(MissionGroupDraftFile draft)
+    {
+        chapter = LoadAssetByGuid<ChapterDataSO>(draft.chapterGuid);
+        missionNameEnglish = draft.missionNameEnglish ?? string.Empty;
+        missionNameFilipino = draft.missionNameFilipino ?? string.Empty;
+        missionId = draft.missionId ?? string.Empty;
+        lastGeneratedMissionId = draft.lastGeneratedMissionId ?? string.Empty;
+        prerequisite = LoadAssetByGuid<MissionInfoSO>(draft.prerequisiteGuid);
+        autoStartWhenAvailable = draft.autoStartWhenAvailable;
+        makeChapterStartingMission = draft.makeChapterStartingMission;
+        steps = new List<StepDraft>();
+
+        foreach (StepDraftFile savedStep in draft.steps ?? new List<StepDraftFile>())
+        {
+            if (savedStep == null)
+                continue;
+
+            steps.Add(new StepDraft
+            {
+                expanded = savedStep.expanded,
+                kind = savedStep.kind,
+                showAsPlayerObjective = savedStep.showAsPlayerObjective,
+                objectiveEnglish = savedStep.objectiveEnglish ?? string.Empty,
+                objectiveFilipino = savedStep.objectiveFilipino ?? string.Empty,
+                targetArtifact = LoadAssetByGuid<ArtifactInfoSO>(savedStep.targetArtifactGuid),
+                targetNpcId = savedStep.targetNpcId ?? string.Empty,
+                conversationJson = LoadAssetByGuid<TextAsset>(savedStep.conversationJsonGuid),
+                roomId = savedStep.roomId ?? string.Empty,
+                requiredCount = savedStep.requiredCount,
+                characters = savedStep.characters ?? new List<CharacterTargetDraft>(),
+                movementTargets = savedStep.movementTargets ?? new List<MovementTargetDraft>(),
+                disableInteractionWhileMoving = savedStep.disableInteractionWhileMoving,
+                waitForAllRoutesToFinish = savedStep.waitForAllRoutesToFinish,
+                requiredTag = savedStep.requiredTag
+            });
+        }
+
+        if (steps.Count == 0)
+            steps.Add(CreateStepDraft(StepKind.EnterRoom));
+    }
+
+    private static string GetAssetGuid(UnityEngine.Object asset)
+    {
+        if (asset == null)
+            return string.Empty;
+
+        string assetPath = AssetDatabase.GetAssetPath(asset);
+        return string.IsNullOrWhiteSpace(assetPath)
+            ? string.Empty
+            : AssetDatabase.AssetPathToGUID(assetPath);
+    }
+
+    private static T LoadAssetByGuid<T>(string guid) where T : UnityEngine.Object
+    {
+        if (string.IsNullOrWhiteSpace(guid))
+            return null;
+
+        string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+        return string.IsNullOrWhiteSpace(assetPath)
+            ? null
+            : AssetDatabase.LoadAssetAtPath<T>(assetPath);
+    }
+
+    private static string GetDraftAbsolutePath()
+    {
+        string projectRoot = Directory.GetParent(Application.dataPath)?.FullName ?? Directory.GetCurrentDirectory();
+        return Path.Combine(
+            projectRoot,
+            DraftRelativePath.Replace('/', Path.DirectorySeparatorChar));
     }
 
     private static T ReadJson<T>(string assetPath) where T : class, new()

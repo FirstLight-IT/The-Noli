@@ -3,13 +3,6 @@
   "defaultLanguageCode": "en",
   "objectives": [
     {
-      "objectiveId": "c1_guevera_leaves_group",
-      "languages": [
-        { "languageCode": "en", "description": "Lieutenant Guevara Leaves Group" },
-        { "languageCode": "fil", "description": "Pag-alis ni Tenyente Guevara sa Grupo" }
-      ]
-    },
-    {
       "objectiveId": "c1_inspect_artifacts_step",
       "languages": [
         { "languageCode": "en", "description": "Inspect artifacts around the floor" },

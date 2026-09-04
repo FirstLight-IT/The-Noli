@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df394b0e26c3fe488c395a9422330f8, type: 3}
+  m_Name: Welcome Home
+  m_EditorClassIdentifier: Assembly-CSharp::MissionInfoSO
+  localizedDataJson: {fileID: 4900000, guid: f9ed4e2623db47439884ed58a584afc5, type: 3}
+  missionId: welcome_home
+  prerequisites: []
+  autoStartWhenAvailable: 1
+  missionStepPrefabs:
+  - {fileID: 509292793321026646, guid: 1d4f6af2431e06c438410f42e71e7656, type: 3}
+  - {fileID: 1834575704886092671, guid: fac305aaefeb183449b409f5a845a498, type: 3}
+  - {fileID: 8125067974639124870, guid: 88aa3149359b4fdbb73dbee5aacb95ce, type: 3}
+  - {fileID: 4625810938746160156, guid: f10235f0b407fe243a11322f3db224a2, type: 3}
+  - {fileID: 6941738256014820375, guid: 76b62a6bc48244d9810bacfe049ff15e, type: 3}

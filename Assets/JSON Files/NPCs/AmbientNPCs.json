@@ -71,6 +71,18 @@
                 "Please speak softly. Everyone seems to be listening."
               ]
             }
+          ],
+          "missionDialogueOverrides": [
+            {
+              "missionId": "greet_the_ladies",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "..."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -90,6 +102,18 @@
             {
               "lines": [
                 "Mahina lamang ang pagsasalita. Tila nakikinig ang lahat."
+              ]
+            }
+          ],
+          "missionDialogueOverrides": [
+            {
+              "missionId": "greet_the_ladies",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "..."
+                  ]
+                }
               ]
             }
           ]
@@ -165,6 +189,28 @@
                 "The conversation has become rather tense. It may be wiser to remain here."
               ]
             }
+          ],
+          "missionDialogueOverrides": [
+            {
+              "missionId": "introduce_yourself",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "Ah, Se\u00f1or Ibarra. It is an honor to make your acquaintance."
+                  ]
+                },
+                {
+                  "lines": [
+                    "Welcome home, Se\u00f1or Ibarra. We have heard of your studies in Europe."
+                  ]
+                },
+                {
+                  "lines": [
+                    "Good evening. Capitan Tiago must be pleased to see you safely returned."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -184,6 +230,28 @@
             {
               "lines": [
                 "Medyo umiigting na ang usapan. Marahil ay mas mabuting manatili rito."
+              ]
+            }
+          ],
+          "missionDialogueOverrides": [
+            {
+              "missionId": "introduce_yourself",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "Ah, Se\u00f1or Ibarra. Isang karangalang makilala kayo."
+                  ]
+                },
+                {
+                  "lines": [
+                    "Maligayang pagbabalik, Se\u00f1or Ibarra. Nabalitaan namin ang inyong pag-aaral sa Europa."
+                  ]
+                },
+                {
+                  "lines": [
+                    "Magandang gabi. Tiyak na natutuwa si Kapitan Tiago sa inyong ligtas na pagbabalik."
+                  ]
+                }
               ]
             }
           ]
@@ -400,6 +468,18 @@
                 "I was told that nearly everyone of importance would be here tonight."
               ]
             }
+          ],
+          "missionDialogueOverrides": [
+            {
+              "missionId": "greet_the_ladies",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "..."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -419,6 +499,18 @@
             {
               "lines": [
                 "Sinabi sa akin na halos lahat ng mahahalagang tao ay narito ngayong gabi."
+              ]
+            }
+          ],
+          "missionDialogueOverrides": [
+            {
+              "missionId": "greet_the_ladies",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "..."
+                  ]
+                }
               ]
             }
           ]

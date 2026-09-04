@@ -17,8 +17,15 @@ MonoBehaviour:
   contentAvailable: 0
   playerCharacter: {fileID: 11400000, guid: 267694db082408048a4a501f49cdbe66, type: 2}
   openingNarration: {fileID: 0}
-  missions: []
-  startingMission: {fileID: 0}
+  missions:
+  - {fileID: 11400000, guid: 23705c7b1025c674e81ac893e3d61a5f, type: 2}
+  - {fileID: 11400000, guid: 1bfd5a1626c0c5847b6b95cd6843e17f, type: 2}
+  - {fileID: 11400000, guid: 7a01da55f14418940997c522745a1d80, type: 2}
+  - {fileID: 11400000, guid: 28666d0dc334dd34bb3d74d1c3f5d04b, type: 2}
+  - {fileID: 11400000, guid: 321ab806be53f7b4a994eb7c7b603bef, type: 2}
+  - {fileID: 11400000, guid: 71290300b6aca864c8ca9ee33264ba32, type: 2}
+  - {fileID: 11400000, guid: 8529da0f6702c51488d472f1eeaf9d6f, type: 2}
+  startingMission: {fileID: 11400000, guid: 23705c7b1025c674e81ac893e3d61a5f, type: 2}
   finalMission: {fileID: 0}
   completionQuizJson: {fileID: 0}
   quizSceneName: ChapterQuiz

@@ -1,0 +1,42 @@
+{
+  "conversationId": "tiago_introduces_ibarra",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "capitan_tiago",
+          "text": "Good evening, gentlemen!."
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Good evening, Padre!"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "I have the honor of presenting to you Don Crisostomo Ibarra, the son of my deceased friend."
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "The young gentleman has just arrived from Europe and I went to meet him."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "capitan_tiago",
+          "text": "Magandang gabi po, mga ginoo!"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Magandang gabi po, among!"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "May kapurihan akong ipakilala po sa inyo si Don Crisostomo Ibarra, na anak ng nasira kong kaibigan!."
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Bagong galing sa Europa ang ginoong ito, at siya'y aking sinalubong."
+        }
+      ]
+    }
+  ]
+}

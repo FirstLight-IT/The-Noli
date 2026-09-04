@@ -48,6 +48,63 @@ public sealed class NPCMovementRestoreTests
             Is.EqualTo(new Vector2(-2f, 11f)));
     }
 
+    [Test]
+    public void StairTrigger_UsesDirectMovementWhileNpcIsOnSlope()
+    {
+        GameObject stairsObject = Track(new GameObject("Test Stairs"));
+        BoxCollider2D stairsCollider = stairsObject.AddComponent<BoxCollider2D>();
+        stairsCollider.isTrigger = true;
+        StairsTrigger stairs = stairsObject.AddComponent<StairsTrigger>();
+
+        GameObject npcObject = Track(new GameObject("Test NPC"));
+        Rigidbody2D body = npcObject.AddComponent<Rigidbody2D>();
+        BoxCollider2D npcCollider = npcObject.AddComponent<BoxCollider2D>();
+        NPCMover mover = npcObject.AddComponent<NPCMover>();
+        SetPrivateField(mover, "body", body);
+        SetPrivateField(mover, "isometricMovementOnly", true);
+
+        GameObject destinationObject = Track(new GameObject("Slope Top"));
+        destinationObject.transform.position = new Vector3(-3f, 6f, 0f);
+
+        mover.MoveTo(destinationObject.transform);
+        Assert.That(GetPrivateField<bool>(mover, "hasIsometricCorner"), Is.True);
+
+        InvokeTrigger(stairs, "OnTriggerEnter2D", npcCollider);
+        Assert.That(mover.IsOnSlope, Is.True);
+        Assert.That(GetPrivateField<bool>(mover, "hasIsometricCorner"), Is.False);
+
+        InvokeTrigger(stairs, "OnTriggerExit2D", npcCollider);
+        Assert.That(mover.IsOnSlope, Is.False);
+        Assert.That(GetPrivateField<bool>(mover, "hasIsometricCorner"), Is.True);
+    }
+
+    [Test]
+    public void BackgroundMovementStep_KeepsInteractionDisabledUntilRouteEnds()
+    {
+        NPC npc = CreateNpcWithRoute(
+            "test_background_movement",
+            "walk_away",
+            new Vector2(4f, 2f));
+        NPCFixedRoute route = npc.GetComponent<NPCFixedRoute>();
+
+        GameObject stepObject = Track(new GameObject("Background NPC Movement Step"));
+        NPCMovementMissionStep step = stepObject.AddComponent<NPCMovementMissionStep>();
+        SetMovementTargets(step, ("test_background_movement", "walk_away"));
+        SetPrivateField(step, "disableInteractionWhileMoving", true);
+        SetPrivateField(step, "waitForAllRoutesToFinish", false);
+
+        step.Initialize("test_mission", 0);
+
+        Assert.That(route.IsFollowingRoute, Is.True);
+        Assert.That(npc.IsInteractionEnabled, Is.False);
+
+        UnityEngine.Object.DestroyImmediate(stepObject);
+        Assert.That(npc.IsInteractionEnabled, Is.False);
+
+        route.CancelRoute();
+        Assert.That(npc.IsInteractionEnabled, Is.True);
+    }
+
     private NPC CreateNpcWithRoute(string npcId, string routeId, Vector2 destination)
     {
         NPCInfoSO npcData = Track(ScriptableObject.CreateInstance<NPCInfoSO>());
@@ -117,6 +174,24 @@ public sealed class NPCMovementRestoreTests
     {
         createdObjects.Add(createdObject);
         return createdObject;
+    }
+
+    private static void InvokeTrigger(StairsTrigger stairs, string methodName, Collider2D collider)
+    {
+        MethodInfo method = typeof(StairsTrigger).GetMethod(
+            methodName,
+            BindingFlags.Instance | BindingFlags.NonPublic);
+        Assert.That(method, Is.Not.Null);
+        method.Invoke(stairs, new object[] { collider });
+    }
+
+    private static T GetPrivateField<T>(object target, string fieldName)
+    {
+        FieldInfo field = target.GetType().GetField(
+            fieldName,
+            BindingFlags.Instance | BindingFlags.NonPublic);
+        Assert.That(field, Is.Not.Null, $"Could not find field '{fieldName}'.");
+        return (T)field.GetValue(target);
     }
 
     private static void SetPrivateField(object target, string fieldName, object value)

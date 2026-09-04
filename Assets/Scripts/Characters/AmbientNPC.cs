@@ -19,9 +19,13 @@ public class AmbientArtifactHint
 public class AmbientNPC : MonoBehaviour, IInteractable
 {
     public static bool IsHintCameraPanning { get; private set; }
-    public static event Action<AmbientNPCInfoSO> OnAmbientDialogueFinished;
+    public static event Action<AmbientNPCInfoSO, string> OnAmbientDialogueFinished;
 
     [SerializeField] private AmbientNPCInfoSO npcData;
+    [SerializeField, Tooltip(
+        "Optional stable ID for missions that count individual ambient NPC placements. " +
+        "When blank, the NPC's scene hierarchy path is used.")]
+    private string missionIdentity;
     [SerializeField] private AmbientArtifactHint[] artifactHints;
     [SerializeField] private GameObject interactionIcon;
     [SerializeField] private GameObject exclamationIcon;
@@ -154,6 +158,18 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         if (DialogueController.Instance == null || npcData == null)
             return;
 
+        string activeMissionId = MissionController.Instance?.ActiveMissionInfo?.MissionId;
+        string[] missionDialogue = GetNextDialogue(
+            npcData.GetMissionDialogueVariations(activeMissionId));
+        if (missionDialogue != null)
+        {
+            DialogueController.Instance.ShowAmbientDialogue(
+                npcData,
+                missionDialogue,
+                () => NotifyDialogueFinished());
+            return;
+        }
+
         if (activeHint != null)
         {
             if (!IsHintCameraPanning)
@@ -161,7 +177,7 @@ public class AmbientNPC : MonoBehaviour, IInteractable
             return;
         }
 
-        string[] dialogue = GetNextGenericDialogue();
+        string[] dialogue = GetNextDialogue(npcData.DialogueVariations);
         if (dialogue != null)
         {
             DialogueController.Instance.ShowAmbientDialogue(
@@ -171,9 +187,8 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         }
     }
 
-    private string[] GetNextGenericDialogue()
+    private string[] GetNextDialogue(NPCDialogueSequence[] variations)
     {
-        NPCDialogueSequence[] variations = npcData.DialogueVariations;
         if (variations == null || variations.Length == 0)
             return null;
 
@@ -270,7 +285,36 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     private void NotifyDialogueFinished()
     {
         if (npcData != null)
-            OnAmbientDialogueFinished?.Invoke(npcData);
+            OnAmbientDialogueFinished?.Invoke(npcData, MissionIdentity);
+    }
+
+    public string MissionIdentity
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(missionIdentity))
+                return missionIdentity.Trim();
+
+            string npcId = string.IsNullOrWhiteSpace(npcData?.NpcID)
+                ? gameObject.name
+                : npcData.NpcID.Trim();
+            return $"{npcId}:{BuildHierarchyPath(transform)}";
+        }
+    }
+
+    private static string BuildHierarchyPath(Transform current)
+    {
+        if (current == null)
+            return string.Empty;
+
+        string path = current.name;
+        while (current.parent != null)
+        {
+            current = current.parent;
+            path = $"{current.name}/{path}";
+        }
+
+        return path;
     }
 
     private IEnumerator ReturnFromHint(AmbientArtifactHint hint, bool finishHint)

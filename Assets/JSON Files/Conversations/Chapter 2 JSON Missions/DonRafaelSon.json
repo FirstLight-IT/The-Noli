@@ -1,0 +1,60 @@
+{
+  "conversationId": "don_rafael_son",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "lieutenant_guevara",
+          "text": "Young man."
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Are you the son of Don Rafael Ibarra?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Yes, sir."
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Welcome back to your country!"
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "And may you be happier in it than your father was!"
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "I knew him well and can say that he was one of the worthiest and most honorable men in the Philippines."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Sir, the praise you bestow upon my father removes my doubts about the manner of his death, of which I, his son, am yet ignorant."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "lieutenant_guevara",
+          "text": "Binata."
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Ikaw ba ang anak ni Don Rafael Ibarra?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Opo, ginoo"
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Maligayang pagbabalik sa iyong bayan!"
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "At nawa’y maging higit na mapalad ka rito kaysa sa iyong ama!"
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Nakilala ko siyang mabuti, at masasabi kong isa siya sa mga pinakakarapat-dapat at pinakamarangal na tao sa Pilipinas."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Ginoo, ang papuring ibinibigay ninyo sa aking ama ay pumapawi sa aking mga pag-aalinlangan tungkol sa sinapit niyang kapalaran, na ako, bilang kanyang anak, ay hindi ko pa nalalaman."
+        }
+      ]
+    }
+  ]
+}

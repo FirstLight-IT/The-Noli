@@ -1,5 +1,97 @@
 {
   "schemaVersion": 1,
   "defaultLanguageCode": "en",
-  "missions": []
+  "missions": [
+    {
+        "missionId": "welcome_home",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Welcome Home"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Maligayang Pagbablik"
+            }
+        ]
+    },
+    {
+        "missionId": "an_old_acquaintance",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "An Old Acquaintance"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Isang Dating Kakilala"
+            }
+        ]
+    },
+    {
+        "missionId": "don_rafael_s_son",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Don Rafael's Son"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Anak ni Don Rafael"
+            }
+        ]
+    },
+    {
+        "missionId": "greet_the_ladies",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Greet the Ladies"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Batiin ang mga Dalaga"
+            }
+        ]
+    },
+    {
+        "missionId": "introduce_yourself",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Introduce Yourself"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Ipakilala ang Sarili"
+            }
+        ]
+    },
+    {
+        "missionId": "the_young_poet",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "The Young Poet"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Ang Batang Makata"
+            }
+        ]
+    },
+    {
+        "missionId": "capitan_tinong_s_invitation",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Capitan Tinong's Invitation"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Paanyaya ni Kapitan Tinong"
+            }
+        ]
+    }
+  ]
 }

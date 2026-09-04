@@ -101,6 +101,9 @@ public class MissionJournalController : MonoBehaviour
         MissionStep[] steps = mission.MissionStepPrefabs;
         for (int i = 0; i < steps.Length; i++)
         {
+            if (steps[i] != null && !steps[i].ShowAsPlayerObjective)
+                continue;
+
             string objective = i == controller.ActiveMissionStepIndex && !string.IsNullOrWhiteSpace(controller.CurrentObjective)
                 ? controller.CurrentObjective
                 : steps[i] != null ? steps[i].JournalDescription : "Missing mission step";
@@ -128,6 +131,9 @@ public class MissionJournalController : MonoBehaviour
 
             foreach (MissionStep step in mission.MissionStepPrefabs)
             {
+                if (step != null && !step.ShowAsPlayerObjective)
+                    continue;
+
                 string objective = step != null ? step.JournalDescription : "Missing mission step";
                 text.Append("\n- ").Append(EscapeRichText(objective));
             }
