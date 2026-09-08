@@ -1,0 +1,60 @@
+{
+  "conversationId": "fray_damaso_insult",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "fray_damaso",
+          "text": "And haven't you observed anything more than that?"
+        },{
+          "speakerId": "fray_damaso",
+          "text": "It wasn't worth while to squander your fortune to learn so trifling a thing."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Any schoolboy knows that."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "..."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Gentlemen, don't be surprised at the familiarity with which our former curate treats me."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "He treated me so when I was a child, and the years seem to make no difference in his Reverence."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "I appreciate it, too, because it recalls the days when his Reverence visited our home and honored my father's table."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "fray_damaso",
+          "text": "At wala ka na bang nakita kundi iyan lamang?"
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Hindi karapat-dapat na iwaldas mo ang iyong kayamanan upang wala kang malaman kundi ang napakaliit na bagay na iyan."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Sinumang musmos sa paaralan ay nalalaman iyan."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "..."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Mga ginoo, huwag kayong magtaka sa pakikitungo sa akin ng aming dating kura."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Ganyan ang pakikitungo niya sa akin noong ako'y musmos pa, at tila para sa kanya'y hindi lumilipas ang mga taon."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Ngunit kinikilala ko itong utang na loob, sapagkat ipinapaalala nito sa akin ang mga araw na madalas pumunta sa aming bahay ang kanyang Kagalang-galang at nakikisalo sa hapag ng aking ama."
+        }
+      ]
+    }
+  ]
+}

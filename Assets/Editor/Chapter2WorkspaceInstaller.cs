@@ -9,12 +9,148 @@ using UnityEngine.SceneManagement;
 public static class Chapter2WorkspaceInstaller
 {
     private const string MenuPath = "Tools/The Noli/Prepare Chapter Switching Workspace";
+    private const string Chapter3MenuPath = "Tools/The Noli/Prepare Chapter 3 Workspace";
     private const string ChapterBasePath = "Assets/Prefabs/Chapter_BASE.prefab";
     private const string Chapter1Path = "Assets/ScriptableObjects/Chapters/Chapter 1.asset";
     private const string Chapter2Path = "Assets/ScriptableObjects/Chapters/Chapter 2.asset";
+    private const string Chapter3Path = "Assets/ScriptableObjects/Chapters/Chapter 3.asset";
     private const string SpawnRootName = "Chapter Player Spawns";
     private const string Chapter1SpawnName = "Chapter 1 Player Spawn (Sala)";
     private const string Chapter2SpawnName = "Chapter 2 Player Spawn (Exterior)";
+    private const string Chapter3SpawnName = "Chapter 3 Player Spawn (Dining Area)";
+
+    [MenuItem(Chapter3MenuPath)]
+    public static void PrepareChapter3()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        if (!scene.IsValid() || !string.Equals(scene.name, "Mansion", StringComparison.Ordinal))
+        {
+            EditorUtility.DisplayDialog(
+                "Prepare Chapter 3 Workspace",
+                "Open the Mansion scene before running this command.",
+                "OK");
+            return;
+        }
+
+        ChapterController chapterController = UnityEngine.Object.FindAnyObjectByType<ChapterController>();
+        SpeakerRegistry speakerRegistry = FindSceneComponent<SpeakerRegistry>(scene);
+        ChapterDataSO chapter2 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(Chapter2Path);
+        ChapterDataSO chapter3 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(Chapter3Path);
+        GameObject chapterBase = AssetDatabase.LoadAssetAtPath<GameObject>(ChapterBasePath);
+        RoomArea diningArea = UnityEngine.Object.FindObjectsByType<RoomArea>(FindObjectsInactive.Include)
+            .FirstOrDefault(area =>
+                area != null &&
+                area.gameObject.scene == scene &&
+                string.Equals(area.RoomID, "dining_area", StringComparison.OrdinalIgnoreCase));
+
+        if (chapterController == null || speakerRegistry == null || chapter2 == null ||
+            chapter3 == null || chapterBase == null || diningArea == null)
+        {
+            EditorUtility.DisplayDialog(
+                "Prepare Chapter 3 Workspace",
+                "Setup needs the Mansion's Chapter Controller, Speaker Registry, dining-area Room Area, " +
+                "Chapter 2 and Chapter 3 assets, and the Chapter_BASE prefab.",
+                "OK");
+            return;
+        }
+
+        List<ChapterContentRoot> chapter2Roots = FindChapterBaseRoots(scene)
+            .Where(root => root.Chapter == chapter2 || root.name == "CHAPTER 2")
+            .ToList();
+        List<Transform> areaParents = chapter2Roots
+            .Select(root => root.transform.parent)
+            .Where(parent => parent != null)
+            .Distinct()
+            .ToList();
+
+        if (areaParents.Count == 0)
+        {
+            EditorUtility.DisplayDialog(
+                "Prepare Chapter 3 Workspace",
+                "No CHAPTER 2 area roots were found to mirror for Chapter 3.",
+                "OK");
+            return;
+        }
+
+        Undo.IncrementCurrentGroup();
+        int undoGroup = Undo.GetCurrentGroup();
+        Undo.SetCurrentGroupName("Prepare Chapter 3 Workspace");
+
+        int createdRootCount = 0;
+        foreach (Transform areaParent in areaParents)
+        {
+            ChapterContentRoot chapter3Root = FindSiblingChapterRoot(areaParent, "CHAPTER 3");
+            if (chapter3Root == null)
+            {
+                ChapterContentRoot referenceRoot = chapter2Roots.First(root =>
+                    root != null && root.transform.parent == areaParent);
+                GameObject created = PrefabUtility.InstantiatePrefab(
+                    chapterBase,
+                    areaParent) as GameObject;
+
+                if (created == null)
+                    continue;
+
+                Undo.RegisterCreatedObjectUndo(created, "Create CHAPTER 3 area content");
+                created.name = "CHAPTER 3";
+                created.transform.localPosition = referenceRoot.transform.localPosition;
+                created.transform.localRotation = referenceRoot.transform.localRotation;
+                created.transform.localScale = referenceRoot.transform.localScale;
+                chapter3Root = created.GetComponent<ChapterContentRoot>();
+                createdRootCount++;
+            }
+
+            AssignChapter(chapter3Root, chapter3);
+            Undo.RecordObject(chapter3Root.gameObject, "Disable CHAPTER 3 area content");
+            chapter3Root.gameObject.SetActive(false);
+        }
+
+        ConfigureChapterPlayerSpeakers(speakerRegistry, chapter3.PlayerCharacter);
+
+        Transform spawnRoot = FindSceneTransform(scene, SpawnRootName);
+        if (spawnRoot == null)
+        {
+            GameObject createdSpawnRoot = new(SpawnRootName);
+            SceneManager.MoveGameObjectToScene(createdSpawnRoot, scene);
+            Undo.RegisterCreatedObjectUndo(createdSpawnRoot, "Create chapter player spawn root");
+            spawnRoot = createdSpawnRoot.transform;
+        }
+
+        int createdSpawnCount = 0;
+        Collider2D diningCollider = diningArea.GetComponent<Collider2D>();
+        Vector3 diningPosition = diningCollider != null
+            ? diningCollider.bounds.center
+            : diningArea.transform.position;
+        ConfigurePlayerSpawn(
+            scene,
+            spawnRoot,
+            Chapter3SpawnName,
+            chapter3,
+            diningPosition,
+            ref createdSpawnCount);
+
+        ChapterContentRoot[] allRoots = FindChapterBaseRoots(scene).ToArray();
+        Undo.RecordObject(chapterController, "Select Chapter 3 for playtest");
+        Undo.RecordObjects(
+            allRoots.Select(root => root.gameObject).ToArray(),
+            "Preview Chapter 3 content");
+        chapterController.SetEditorPlaytestChapter(chapter3);
+        chapterController.PreviewChapterContent(chapter3);
+
+        EditorUtility.SetDirty(chapterController);
+        EditorSceneManager.MarkSceneDirty(scene);
+        Undo.CollapseUndoOperations(undoGroup);
+
+        int totalChapter3Roots = FindChapterBaseRoots(scene)
+            .Count(root => root.name == "CHAPTER 3" && root.Chapter == chapter3);
+
+        EditorUtility.DisplayDialog(
+            "Chapter 3 Workspace Ready",
+            $"Configured {totalChapter3Roots} Chapter 3 area roots ({createdRootCount} newly created) " +
+            $"and the dining-area player spawn ({createdSpawnCount} newly created). Chapter 3 is now " +
+            "selected for direct Mansion playtesting. No missions were created.",
+            "OK");
+    }
 
     [MenuItem(MenuPath)]
     public static void Prepare()

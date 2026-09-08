@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "objectives": [
+    {
+        "objectiveId": "take_your_place_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Capitan Tiago"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Capitan Tiago"
+            }
+        ]
+    },
+    {
+        "objectiveId": "the_dinner_conversation_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Fray Damaso"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Padre Damaso"
+            }
+        ]
+    },
+    {
+        "objectiveId": "the_dinner_conversation_step_2",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Señor Laruja"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Señor Laruja"
+            }
+        ]
+    },
+    {
+        "objectiveId": "fray_damaso_s_insult_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Fray Damaso"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Padre Damaso"
+            }
+        ]
+    },
+    {
+        "objectiveId": "leave_the_gathering_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Talk to Capitan Tiago"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Kausapin si Kapitan Tiago"
+            }
+        ]
+    },
+    {
+        "objectiveId": "leave_the_gathering_step_2",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Exit the Mansion"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Lumabas sa Mansyon"
+            }
+        ]
+    }
+  ]
+}

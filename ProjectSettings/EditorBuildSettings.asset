@@ -20,5 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeacherClassroomDashboard.unity
     guid: c3e654f839e8301438afced377956a85
+  - enabled: 1
+    path: Assets/Scenes/Social Interruption Minigame.unity
+    guid: 4c25062c0a579a34982735f5f5766cee
+  - enabled: 1
+    path: Assets/Scenes/Keeping Composure Minigame.unity
+    guid: 6c220f15e442ab1469c8dfe8762fc61d
+  - enabled: 1
+    path: Assets/Scenes/Greeting Etiquette Minigame.unity
+    guid: c9f9791ceef9e6e459289af7c971057f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

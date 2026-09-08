@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 
 public sealed class ChapterQuizController : MonoBehaviour
 {
+    [Tooltip("Legacy/default quiz used when no matching chapter definition is assigned.")]
     [SerializeField] private TextAsset quizJson;
+    [Tooltip("The quiz scene selects the definition matching the active saved chapter.")]
+    [SerializeField] private ChapterDataSO[] chapterDefinitions = Array.Empty<ChapterDataSO>();
     [SerializeField] private ChapterQuizView view;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
@@ -53,14 +56,15 @@ public sealed class ChapterQuizController : MonoBehaviour
 
     private bool TryPrepareQuiz(out string error)
     {
-        if (!ChapterQuizJsonLoader.TryLoad(quizJson, out quiz, out error))
-            return false;
-
         if (SaveGameManager.CurrentData == null &&
             !SaveGameManager.TryLoadAutosave(out error))
         {
             return false;
         }
+
+        TextAsset activeQuizJson = ResolveActiveQuizJson();
+        if (!ChapterQuizJsonLoader.TryLoad(activeQuizJson, out quiz, out error))
+            return false;
 
         if (!SaveGameManager.BeginChapterQuiz(quiz, out error))
             return false;
@@ -75,6 +79,28 @@ public sealed class ChapterQuizController : MonoBehaviour
 
         error = string.Empty;
         return true;
+    }
+
+    private TextAsset ResolveActiveQuizJson()
+    {
+        string activeChapterId = SaveGameManager.CurrentData?.activeChapterId;
+
+        if (!string.IsNullOrWhiteSpace(activeChapterId) && chapterDefinitions != null)
+        {
+            foreach (ChapterDataSO chapter in chapterDefinitions)
+            {
+                if (chapter != null &&
+                    string.Equals(
+                        chapter.ChapterId,
+                        activeChapterId,
+                        StringComparison.Ordinal))
+                {
+                    return chapter.CompletionQuizJson;
+                }
+            }
+        }
+
+        return quizJson;
     }
 
     private void BindLanguageDropdown()

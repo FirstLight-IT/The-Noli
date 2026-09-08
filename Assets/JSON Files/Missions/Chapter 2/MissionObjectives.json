@@ -157,6 +157,19 @@
                 "description": "Kausapin si Kapitan Tinong"
             }
         ]
+    },
+    {
+        "objectiveId": "dinner_is_served_step_1",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Proceed to the Dining Area"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Pumunta sa Silid-Kainan"
+            }
+        ]
     }
   ]
 }

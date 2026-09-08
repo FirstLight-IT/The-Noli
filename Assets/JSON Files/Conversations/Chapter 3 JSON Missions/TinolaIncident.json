@@ -1,0 +1,54 @@
+{
+  "conversationId": "tinola_incident",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Father Damaso, is something wrong?"
+        },{
+        "speakerId": "fray_damaso",
+          "text": "Hmph."
+        },{
+        "speakerId": "crisostomo_ibarra",
+          "text": "Is the tinola not to your liking?"
+        },{
+        "speakerId": "fray_damaso",
+          "text": "A neck and a tough wing..."
+        },{
+        "speakerId": "fray_damaso",
+          "text": "while the others are served the better pieces."
+        },{
+        "speakerId": "fray_damaso",
+          "text": "I've lost my appetite."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Padre Damaso, may problema po ba?"
+        },{
+        "speakerId": "fray_damaso",
+          "text": "Hmph."
+        },{
+        "speakerId": "crisostomo_ibarra",
+          "text": "Hindi po ba ninyo nagustuhan ang tinola?"
+        },{
+        "speakerId": "fray_damaso",
+          "text": "Isang leeg at matigas na pakpak..."
+        },{
+        "speakerId": "fray_damaso",
+          "text": "samantalang ang iba'y nabigyan ng mas magagandang bahagi."
+        },{
+        "speakerId": "fray_damaso",
+          "text": "Nawalan na ako ng gana."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "conversationId": "take_your_place",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "fray_damaso",
+          "text": "For you, Fray Sibyla."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "For you, Fray Damaso."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "You are an older friend of the family—the confessor of the deceased lady."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Age, dignity, and authority all favor you."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Not so very old, either!"
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Besides, you are the curate of the district."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Since you command it, I obey."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "I don't command it! I don't command it!"
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Lieutenant, here we are in the world and not in the church. The seat of honor belongs to you."
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "No. I decline."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "How's this, Don Santiago?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Aren't you going to sit down with us?"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Sit still, don't get up!"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "This fiesta is for the special purpose of giving thanks to the Virgin for your safe arrival."
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "I ordered tinola, as you doubtless have not tasted any for so long a time."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+          "speakerId": "fray_damaso",
+          "text": "Para sa inyo, Fray Sibyla."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Para sa inyo, Fray Damaso."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Kayo ang mas matagal nang kaibigan ng pamilyang ito—kumpesor ng yumaong ginang."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Nasa inyo ang edad, karangalan, at kapangyarihan."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Hindi naman ako ganoon katanda!"
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Bukod dito, kayo ang kura ng bayang ito."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Dahil ipinag-uutos ninyo, susunod ako."
+        },{
+          "speakerId": "fray_damaso",
+          "text": "Hindi ako nag-uutos! Hindi ako nag-uutos!"
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Ginoong Teniente, narito tayo sa mundo at wala sa simbahan. Nararapat sa inyo ang marangal na upuang ito."
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Hindi. Tumatanggi ako."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Bakit po, Don Santiago?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Hindi po ba kayo makikisalo sa amin?"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Manatili kayong nakaupo! Huwag kayong tumindig!"
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Ang pagdiriwang na ito ay ginawa upang magpasalamat sa Mahal na Birhen sa inyong ligtas na pagdating."
+        },{
+          "speakerId": "capitan_tiago",
+          "text": "Nagpagawa ako ng tinola para sa inyo. Marahil ay matagal na kayong hindi nakatitikim nito."
+        }
+      ]
+    }
+  ]
+}

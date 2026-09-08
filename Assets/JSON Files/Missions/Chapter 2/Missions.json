@@ -92,6 +92,19 @@
                 "displayName": "Paanyaya ni Kapitan Tinong"
             }
         ]
+    },
+    {
+        "missionId": "dinner_is_served",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Dinner is Served"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Handa na ang Hapunan"
+            }
+        ]
     }
   ]
 }

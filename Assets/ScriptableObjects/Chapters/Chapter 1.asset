@@ -27,6 +27,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ecd47da0546bed47bceb320b0eec555, type: 2}
   startingMission: {fileID: 11400000, guid: 1dfa38f6dc5717e4e82a8defaacc5594, type: 2}
   finalMission: {fileID: 11400000, guid: 3ecd47da0546bed47bceb320b0eec555, type: 2}
-  completionQuizJson: {fileID: 4900000, guid: 14ca3dc8d20841b19bb9a90c6c1e5e30, type: 3}
+  completionQuizJson: {fileID: 4900000, guid: 5d63ebf340932da4992f5ac73ffe44ba, type: 3}
   quizSceneName: ChapterQuiz
   glossary: {fileID: 11400000, guid: ef9e7378e55d48edb7ebf4ce3cec69c5, type: 2}

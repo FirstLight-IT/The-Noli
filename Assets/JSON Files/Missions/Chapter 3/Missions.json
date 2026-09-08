@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguageCode": "en",
+  "missions": [
+    {
+        "missionId": "take_your_place",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Take Your Place"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Pumuwesto sa Hapag"
+            }
+        ]
+    },
+    {
+        "missionId": "the_dinner_conversation",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "The Dinner Conversation"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Ang Usapan sa Hapunan"
+            }
+        ]
+    },
+    {
+        "missionId": "fray_damaso_s_insult",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Fray Damaso's Insult"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Ang Pang-iinsulto ni Fray Damaso"
+            }
+        ]
+    },
+    {
+        "missionId": "leave_the_gathering",
+        "languages": [
+            {
+                "languageCode": "en",
+                "displayName": "Leave the Gathering"
+            },
+            {
+                "languageCode": "fil",
+                "displayName": "Umalis sa Pagtitipon"
+            }
+        ]
+    }
+  ]
+}

@@ -200,17 +200,7 @@ public class DialogueController : MonoBehaviour
         isTyping = true;
         dialogueText.SetText(string.Empty);
 
-        string line = activeNPCDialogueLines[currentLineIndex];
-        if (string.Equals(line, "...", StringComparison.Ordinal))
-        {
-            dialogueText.SetText("...");
-            dialogueText.ForceMeshUpdate();
-            isTyping = false;
-            ShowNPCCloseButton();
-            yield break;
-        }
-
-        foreach (char letter in line)
+        foreach (char letter in activeNPCDialogueLines[currentLineIndex])
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(TypingSpeed);

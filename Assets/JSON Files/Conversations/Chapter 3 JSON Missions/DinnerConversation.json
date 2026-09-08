@@ -1,0 +1,199 @@
+{
+  "conversationId": "dinner_conversation",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "senor_laruja",
+          "text": "How long have you been away from the country?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Almost seven years."
+        },{
+          "speakerId": "senor_laruja",
+          "text": "Then you have probably forgotten all about it."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Quite the contrary."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Even if my country does seem to have forgotten me, I have always thought about it."
+        },{
+          "speakerId": "blond_man",
+          "text": "How do you mean that it has forgotten you?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "I mean that it has been a year since I have received any news from here."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": " so that I find myself a stranger who does not yet know how and when his father died."
+        },{
+          "speakerId": "lieutenant_guevara",
+          "text": "Ah!"
+        },{
+          "speakerId": "dona_victorina",
+          "text": "And where were you that you didn't telegraph?"
+        },{
+          "speakerId": "dona_victorina",
+          "text": "When we were married we telegraphed to the Peninsula."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Señora, for the past two years I have been in the northern part of Europe, in Germany and Russian Poland."
+        },{
+          "speakerId": "don_tiburcio",
+          "text": "I—I knew in S-Spain a P-Pole from W-Warsaw, c-called S-Stadtnitzki, if I r-remember c-correctly."
+        },{
+          "speakerId": "don_tiburcio",
+          "text": "P-Perhaps you s-saw him?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "It's very likely, but just at this moment I don't recall him."
+        },{
+          "speakerId": "don_tiburcio",
+          "text": "B-But you c-couldn't have c-confused him with anyone else."
+        },{
+          "speakerId": "don_tiburcio",
+          "text": "He was r-ruddy as gold and t-talked Spanish very b-badly."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Those are good clues, but unfortunately while there I talked Spanish only in a few consulates."
+        },{
+          "speakerId": "dona_victorina",
+          "text": "How then did you get along?"
+        },{
+          "speakerId": "dona_victorina",
+          "text": "The language of the country served my needs, madam."
+        },{
+          "speakerId": "fray_sibyla",
+          "text": "Do you also speak English?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "I stayed in England a year among people who talked nothing but English."
+        },{
+          "speakerId": "blond_man",
+          "text": "Which country of Europe pleased you the most?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "After Spain, my second fatherland, any country of free Europe."
+        },{
+          "speakerId": "senor_laruja",
+          "text": "And you who seem to have traveled so much, tell us what do you consider the most notable thing that you have seen?"
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Notable—in what way?"
+        },{
+          "speakerId": "senor_laruja",
+          "text": "For example, in regard to the life of the people—the social, political, religious life—in general, in its essential features—as a whole."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "Frankly, I like everything in those people, setting aside the national pride of each one."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "But before visiting a country, I tried to familiarize myself with its history, its Exodus, if I may so speak, and afterwards I found everything quite natural."
+        },{
+          "speakerId": "crisostomo_ibarra",
+          "text": "I have observed that the prosperity or misery of each people is in direct proportion to its liberties or its prejudices and, accordingly, to the sacrifices or the selfishness of its forefathers."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+        {
+        "speakerId": "senor_laruja",
+        "text": "Gaano pong panahon kayong napaalis sa lupaing ito?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Pitong taon halos."
+        },{
+        "speakerId": "senor_laruja",
+        "text": "Aba! Kung gayon, marahil ay nalimutan na ninyo ang lupaing ito?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Baligtad po."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Bagaman ang kinagisnan kong lupa ay tila nalilimutan ako, lagi ko siyang inaalala."
+        },{
+        "speakerId": "blond_man",
+        "text": "Ano po ang ibig ninyong sabihin?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Ibig kong sabihing may isang taon na ngayong hindi ako tumatanggap ng anumang balita tungkol sa bayang ito."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Hanggang sa para akong isang di-tagarito na hindi man lamang nalalaman kung kailan at kung paano namatay ang kanyang ama."
+        },{
+        "speakerId": "lieutenant_guevara",
+        "text": "Ah!"
+        },{
+        "speakerId": "dona_victorina",
+        "text": "At saan naroon po kayo at hindi kayo nagtelegrama?"
+        },{
+        "speakerId": "dona_victorina",
+        "text": "Nagtelegrama kami sa Peninsula nang kami'y pakasal."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Ginang, nitong huling dalawang taon ay naroon ako sa dakong hilaga ng Europa, sa Alemanya at sa Polonyang Ruso."
+        },{
+        "speakerId": "don_tiburcio",
+        "text": "Na... na... nakilala ko sa Espanya ang isang Polakong taga-Warsaw, na ang pangalan ay Stadtnitzki, kung hindi masama ang aking pagkakatanda."
+        },{
+        "speakerId": "don_tiburcio",
+        "text": "Hindi po ba ninyo siya nakita?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Marahil po, ngunit sa sandaling ito'y hindi ko siya naaalala."
+        },{
+        "speakerId": "don_tiburcio",
+        "text": "Aba, hindi siya maaaring mapagkamalan sa iba!"
+        },{
+        "speakerId": "don_tiburcio",
+        "text": "Mapula ang kanyang buhok at totoong masamang mag-Espanyol."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Mabubuting pagkakakilanlan, ngunit sa kasamaang-palad ay hindi ako nagsasalita roon ng wikang Espanyol, maliban na lamang sa ilang konsulado."
+        },{
+        "speakerId": "dona_victorina",
+        "text": "At paano ang inyong ginagawang pamumuhay?"
+        },{
+        "speakerId": "dona_victorina",
+        "text": "Ginagamit ko po ang wika ng lupaing aking pinaglálakbayan, ginang."
+        },{
+        "speakerId": "fray_sibyla",
+        "text": "Marunong po ba naman kayo ng Ingles?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Nanirahan akong isang taon sa Inglatera, kasama ng mga taong Ingles lamang ang sinasalita."
+        },{
+        "speakerId": "blond_man",
+        "text": "At alin ang lupaing lalong naibigan po ninyo sa Europa?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Pagkatapos ng Espanya, na siyang pangalawa kong bayan, alinman sa mga lupain ng malayang Europa."
+        },{
+        "speakerId": "senor_laruja",
+        "text": "At kayo pong totoong maraming nalakbay, sabihin ninyo, ano po ba ang lalong mahalagang bagay na inyong nakita?"
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Mahalagang bagay, sa anong kaukulan?"
+        },{
+        "speakerId": "senor_laruja",
+        "text": "Halimbawa, tungkol sa pamumuhay ng mga bayan—sa buhay ng pakikipanayam, pamamahala ng bayan, relihiyon—sa kalahatan, ang katangian at kabuuan."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Ang katotohanan, nagustuhan ko ang lahat sa mga bayang iyon, kung ibubukod ang sariling pagmamalaki ng bawat isa sa kanyang bansa."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Bago ko puntahan ang isang lupain, pinagsisikapan kong malaman ang kasaysayan nito, ang kanyang Exodo, kung maaari kong sabihin iyon, at pagkatapos ay nakikita kong likas lamang ang mga nangyayari."
+        },{
+        "speakerId": "crisostomo_ibarra",
+        "text": "Nakikita kong ang ginhawa o paghihirap ng isang bayan ay nagmumula sa kanyang mga kalayaan o mga pagkiling, at dahil dito, sa mga sakripisyo o pagkamakasarili ng kanilang mga ninuno."
+        }
+
+      ]
+    }
+  ]
+}

@@ -165,6 +165,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChapterQuizController
   quizJson: {fileID: 4900000, guid: 5d63ebf340932da4992f5ac73ffe44ba, type: 3}
+  chapterDefinitions:
+  - {fileID: 11400000, guid: 93a423738faf484795026e94ee10c22f, type: 2}
+  - {fileID: 11400000, guid: 7c4c9d2c32be4e5b894c5e5c99a7b002, type: 2}
+  - {fileID: 11400000, guid: 7c4c9d2c32be4e5b894c5e5c99a7b003, type: 2}
   view: {fileID: 100003}
   mainMenuSceneName: MainMenu
 --- !u!114 &100003

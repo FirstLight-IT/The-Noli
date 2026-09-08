@@ -1,0 +1,66 @@
+{
+  "conversationId": "leave_the_gathering",
+  "defaultLanguageCode": "en",
+  "languages": [
+    {
+      "languageCode": "en",
+      "lines": [
+        {
+          "speakerId": "crisostomo_ibarra",
+          "text": "You will now permit me to retire, since, as I have just arrived and must go away tomorrow morning."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "There remain some important business matters for me to attend to."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Gentlemen, all for Spain and the Philippines!"
+        }, {
+          "speakerId": "capitan_tiago",
+          "text": "Don't go!"
+        }, {
+          "speakerId": "capitan_tiago",
+          "text": "Maria Clara will be here. Isabel has gone to get her."
+        }, {
+          "speakerId": "capitan_tiago",
+          "text": "The new curate of your town, who is a saint, is also coming."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "I'll call tomorrow before starting."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "I've a very important visit to make now."
+        }
+      ]
+    },
+    {
+      "languageCode": "fil",
+      "lines": [
+         {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Itulot ninyo sa aking ako'y umalis na, sapagkat bago akong dating at dahil bukas din ay ako'y aalis."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Marami pa akong mahalagang bagay na kailangang gawin."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Mga ginoo, matungkol nawa ang lahat sa Espanya at Pilipinas!"
+        }, {
+          "speakerId": "capitan_tiago",
+          "text": "Huwag po kayong umalis!"
+        }, {
+          "speakerId": "capitan_tiago",
+          "text": "Darating na si Maria Clara. Sinundo siya ni Isabel."
+        }, {
+          "speakerId": "capitan_tiago",
+          "text": "Paririto rin ang bagong kura ng inyong bayan, na isang tunay na santo."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Paririto ako bukas bago ako umalis."
+        }, {
+          "speakerId": "crisostomo_ibarra",
+          "text": "Ngayon ay may gagawin akong mahalagang pagdalaw."
+        }
+      ]
+    }
+  ]
+}

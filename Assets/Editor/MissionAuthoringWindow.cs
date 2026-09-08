@@ -10,12 +10,10 @@ public sealed class MissionAuthoringWindow : EditorWindow
 {
     private const string MenuPath = "Tools/The Noli/Mission Group Builder";
     private const string LegacyMenuPath = "Tools/The Noli/Mission Builder";
-    private const string Chapter1MissionsJsonPath = "Assets/JSON Files/Missions/Missions.json";
-    private const string Chapter1ObjectivesJsonPath = "Assets/JSON Files/Missions/MissionObjectives.json";
     private const string ChapterMissionJsonRoot = "Assets/JSON Files/Missions";
     private const string MissionAssetsRoot = "Assets/ScriptableObjects/Missions";
     private const string MissionStepsRoot = "Assets/Prefabs/Mission Steps";
-    private const string Chapter2Path = "Assets/ScriptableObjects/Chapters/Chapter 2.asset";
+    private const string DefaultChapterPath = "Assets/ScriptableObjects/Chapters/Chapter 3.asset";
     private const string DraftRelativePath = "UserSettings/TheNoli/MissionGroupBuilderDraft.json";
     private const double DraftSaveDelaySeconds = 0.5d;
 
@@ -151,7 +149,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
         if (!restoredDraft && chapter == null)
         {
-            chapter = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(Chapter2Path);
+            chapter = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(DefaultChapterPath);
             makeChapterStartingMission = chapter != null && chapter.StartingMission == null;
         }
 
@@ -1528,14 +1526,6 @@ public sealed class MissionAuthoringWindow : EditorWindow
 
     private string ResolveChapterJsonPath(string fileName)
     {
-        if (chapter != null &&
-            string.Equals(chapter.ChapterId, "chapter_1", StringComparison.Ordinal))
-        {
-            return string.Equals(fileName, "Missions.json", StringComparison.Ordinal)
-                ? Chapter1MissionsJsonPath
-                : Chapter1ObjectivesJsonPath;
-        }
-
         return $"{ChapterMissionJsonRoot}/{SanitizeFileName(chapter?.name ?? string.Empty)}/{fileName}";
     }
 
