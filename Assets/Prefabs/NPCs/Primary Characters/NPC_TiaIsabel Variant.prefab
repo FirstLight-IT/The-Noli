@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 398133046720881372, guid: 043acbe1cd452dc46af1622ad97c8609, type: 3}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_SortingOrder
-      value: -374
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -95,6 +95,14 @@ PrefabInstance:
     - target: {fileID: 5711294660739271175, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.061
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.268
       objectReference: {fileID: 0}
     - target: {fileID: 6375768478794960284, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: npcData

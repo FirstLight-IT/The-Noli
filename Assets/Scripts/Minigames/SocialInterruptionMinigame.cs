@@ -30,6 +30,7 @@ public sealed class SocialInterruptionMinigame : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onGameCompleted;
+    [SerializeField, Min(0f)] private float transitionReturnDelaySeconds = 1.25f;
 
     private readonly HashSet<RhythmInput> chordPresses = new HashSet<RhythmInput>();
     private System.Random random;
@@ -44,6 +45,7 @@ public sealed class SocialInterruptionMinigame : MonoBehaviour
     private bool chordActive;
     private bool gameComplete;
     private bool isConfigured;
+    private Coroutine pendingTransitionReturn;
 
     public int CompletedChords => completedChords;
 
@@ -105,6 +107,12 @@ public sealed class SocialInterruptionMinigame : MonoBehaviour
     {
         if (!isConfigured)
             return;
+
+        if (pendingTransitionReturn != null)
+        {
+            StopCoroutine(pendingTransitionReturn);
+            pendingTransitionReturn = null;
+        }
 
         ClearActiveChord();
         completedChords = 0;
@@ -218,7 +226,12 @@ public sealed class SocialInterruptionMinigame : MonoBehaviour
             : new Color(0.95f, 0.38f, 0.36f));
 
         if (activeChord != null)
-            Destroy(activeChord.gameObject, 0.4f);
+        {
+            GameObject resolvedChord = activeChord.gameObject;
+            activeChord = null;
+            activeLabels = null;
+            StartCoroutine(DestroyAfterRealtime(resolvedChord, 0.4f));
+        }
 
         if (succeeded)
             completedChords++;
@@ -229,12 +242,31 @@ public sealed class SocialInterruptionMinigame : MonoBehaviour
             resultPanel.SetActive(true);
             resultText.text = "Interruption complete!\nYou handled every prompt.";
             onGameCompleted?.Invoke();
+            pendingTransitionReturn = StartCoroutine(ReturnToConversationAfterDelay());
         }
         else
         {
             delayRemaining = nextChordDelay;
             RefreshChordCount();
         }
+    }
+
+    private System.Collections.IEnumerator ReturnToConversationAfterDelay()
+    {
+        if (transitionReturnDelaySeconds > 0f)
+            yield return new WaitForSecondsRealtime(transitionReturnDelaySeconds);
+
+        MinigameTransitionController.TryComplete(gameObject.scene.name);
+        pendingTransitionReturn = null;
+    }
+
+    private static System.Collections.IEnumerator DestroyAfterRealtime(
+        GameObject target,
+        float delaySeconds)
+    {
+        yield return new WaitForSecondsRealtime(delaySeconds);
+        if (target != null)
+            Destroy(target);
     }
 
     private bool IsInsideHitWindow()

@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using NUnit.Framework;
+using UnityEditor;
 using UnityEngine;
 
 public sealed class MissionAuthoringWindowTests
 {
+    private const string IntroduceYourselfMissionPath =
+        "Assets/ScriptableObjects/Missions/Chapter 2/Introduce Yourself.asset";
+
     [Serializable]
     private sealed class TestDocument
     {
@@ -83,5 +87,23 @@ public sealed class MissionAuthoringWindowTests
         Assert.That(parsed.missions, Has.Count.EqualTo(2));
         Assert.That(parsed.missions[0].missionId, Is.EqualTo("existing"));
         Assert.That(parsed.missions[1].missionId, Is.EqualTo("new_mission"));
+    }
+
+    [Test]
+    public void IntroduceYourselfMission_EndsWithHiddenGreetingEtiquetteStep()
+    {
+        MissionInfoSO mission = AssetDatabase.LoadAssetAtPath<MissionInfoSO>(
+            IntroduceYourselfMissionPath);
+
+        Assert.That(mission, Is.Not.Null);
+        Assert.That(mission.MissionStepPrefabs, Has.Length.EqualTo(2));
+
+        MinigameMissionStep minigameStep =
+            mission.MissionStepPrefabs[1] as MinigameMissionStep;
+        Assert.That(minigameStep, Is.Not.Null);
+        Assert.That(minigameStep.ShowAsPlayerObjective, Is.False);
+        Assert.That(
+            minigameStep.MinigameSceneName,
+            Is.EqualTo("Greeting Etiquette Minigame"));
     }
 }

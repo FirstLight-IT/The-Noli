@@ -1,6 +1,13 @@
 {
   "conversationId": "fray_damaso_insult",
   "defaultLanguageCode": "en",
+  "interruptions": [
+    {
+      "interruptionId": "fray_damaso_insult_keeping_composure",
+      "afterLineIndex": 2,
+      "minigameSceneName": "Keeping Composure Minigame"
+    }
+  ],
   "languages": [
     {
       "languageCode": "en",

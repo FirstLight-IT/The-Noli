@@ -48,4 +48,5 @@ MonoBehaviour:
   localizedObjectiveJson: {fileID: 4900000, guid: 22c90fccc2274952bdb533a647acf25e, type: 3}
   objectiveId: leave_the_gathering_step_2
   objectiveDescription: Exit the Mansion
-  targetRoomID: front_yard
+  targetRoomID: zaguan
+  conversationJson: {fileID: 4900000, guid: 1456b2327a21c264e86b58612695b3ec, type: 3}

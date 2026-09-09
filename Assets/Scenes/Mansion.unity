@@ -19089,6 +19089,11 @@ MonoBehaviour:
   portraitImage: {fileID: 1414984980}
   dialogueCloseButton: {fileID: 699992365}
   rapidAdvanceWindowSeconds: 1
+  focusCameraOnSpeakers: 1
+  speakerPanDuration: 0.45
+  speakerReturnDuration: 0.35
+  zoomCameraOnSpeakers: 1
+  speakerZoomScale: 0.9
 --- !u!114 &904082922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29277,7 +29282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5275521149953205963, guid: 0a1fcb0d7e7d5fc4db69818f72fa2a14, type: 3}
       propertyPath: m_SortingOrder
-      value: -391
+      value: -390
       objectReference: {fileID: 0}
     - target: {fileID: 7648871582137082784, guid: 0a1fcb0d7e7d5fc4db69818f72fa2a14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39428,7 +39433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6236937205296950330, guid: 6080dd3f7be20c045a473fda0ee53d58, type: 3}
       propertyPath: m_SortingOrder
-      value: -416
+      value: -417
       objectReference: {fileID: 0}
     - target: {fileID: 6851594864024374417, guid: 6080dd3f7be20c045a473fda0ee53d58, type: 3}
       propertyPath: m_Name
@@ -39525,7 +39530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6454273432741171769, guid: 3c5a2b01af37cd9418bc62252719d5b1, type: 3}
       propertyPath: m_SortingOrder
-      value: -413
+      value: -414
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39850,7 +39855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7777553919456305718, guid: af1b0ee167cab7242941e0c37513a6f6, type: 3}
       propertyPath: m_SortingOrder
-      value: -411
+      value: -413
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39871,7 +39876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 652361087327988944, guid: 0474a377090380f4cb1afc09c6546aa5, type: 3}
       propertyPath: m_SortingOrder
-      value: -385
+      value: -384
       objectReference: {fileID: 0}
     - target: {fileID: 7169504903390929186, guid: 0474a377090380f4cb1afc09c6546aa5, type: 3}
       propertyPath: m_LocalPosition.x

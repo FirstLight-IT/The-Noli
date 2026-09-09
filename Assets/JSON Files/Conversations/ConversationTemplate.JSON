@@ -1,6 +1,7 @@
 {
   "conversationId": "example_conversation",
   "defaultLanguageCode": "en",
+  "interruptions": [],
   "languages": [
     {
       "languageCode": "en",

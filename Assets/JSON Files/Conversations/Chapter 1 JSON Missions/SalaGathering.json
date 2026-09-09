@@ -1,6 +1,13 @@
 {
   "conversationId": "sala_gathering",
   "defaultLanguageCode": "en",
+  "interruptions": [
+    {
+      "interruptionId": "sala_music_social_interruption",
+      "afterLineIndex": 7,
+      "minigameSceneName": "Social Interruption Minigame"
+    }
+  ],
   "languages": [
     {
       "languageCode": "en",

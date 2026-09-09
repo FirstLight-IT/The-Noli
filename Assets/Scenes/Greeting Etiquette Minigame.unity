@@ -1381,6 +1381,7 @@ MonoBehaviour:
   onGameCompleted:
     m_PersistentCalls:
       m_Calls: []
+  transitionReturnDelaySeconds: 1.25
 --- !u!4 &384174474
 Transform:
   m_ObjectHideFlags: 0

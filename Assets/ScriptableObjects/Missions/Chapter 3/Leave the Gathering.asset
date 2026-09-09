@@ -20,3 +20,4 @@ MonoBehaviour:
   missionStepPrefabs:
   - {fileID: 5069995652182963158, guid: 9d4cb64b7bf2efc4eb6e67dce02ef1c7, type: 3}
   - {fileID: 3692869640108070730, guid: 0751214a1d3cc7741a2305dc84cbc538, type: 3}
+  - {fileID: 5234162597698720578, guid: 2db6d7aa57a84d119adb59d844b11a73, type: 3}

@@ -84,6 +84,56 @@ public class ScreenFade : MonoBehaviour
         return true;
     }
 
+    public bool BeginFadeOut(Action actionAtFullFade)
+    {
+        if (IsTransitioning || !isActiveAndEnabled)
+            return false;
+
+        transform.SetAsLastSibling();
+        StartCoroutine(FadeOutAndHold(actionAtFullFade));
+        return true;
+    }
+
+    public bool BeginFadeIn(Action actionAfterFade = null)
+    {
+        if (!IsTransitioning || !isActiveAndEnabled)
+            return false;
+
+        transform.SetAsLastSibling();
+        StartCoroutine(FadeInFromBlack(actionAfterFade));
+        return true;
+    }
+
+    private IEnumerator FadeOutAndHold(Action actionAtFullFade)
+    {
+        IsTransitioning = true;
+        canvasGroup.blocksRaycasts = true;
+
+        yield return FadeTo(1f, fadeOutDuration);
+
+        canvasGroup.alpha = 1f;
+        Canvas.ForceUpdateCanvases();
+        actionAtFullFade?.Invoke();
+    }
+
+    private IEnumerator FadeInFromBlack(Action actionAfterFade)
+    {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+        Canvas.ForceUpdateCanvases();
+        yield return new WaitForEndOfFrame();
+
+        if (holdDuration > 0f)
+            yield return new WaitForSecondsRealtime(holdDuration);
+
+        yield return FadeTo(0f, fadeInDuration);
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.blocksRaycasts = false;
+        IsTransitioning = false;
+        actionAfterFade?.Invoke();
+    }
+
     private IEnumerator FadeOutAndIn(Action actionAtFullFade)
     {
         IsTransitioning = true;

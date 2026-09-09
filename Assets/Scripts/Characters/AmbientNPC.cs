@@ -30,6 +30,8 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     [SerializeField] private GameObject interactionIcon;
     [SerializeField] private GameObject exclamationIcon;
     [SerializeField] private InteractableOutline interactionOutline;
+    [Tooltip("Camera framing point used while this NPC is speaking. Falls back to the NPC root when unassigned.")]
+    [SerializeField] private Transform dialogueCameraFocus;
 
     [Header("Artifact Hint Camera")]
     [SerializeField, Min(0.1f)] private float hintPanDuration = 1.5f;
@@ -42,6 +44,10 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     private Transform originalCameraFollow;
     private GameObject hintCameraTarget;
     private NPCMultiRoomPatrol multiRoomPatrol;
+
+    public Transform DialogueCameraFocus => dialogueCameraFocus != null
+        ? dialogueCameraFocus
+        : transform;
 
     private void Awake()
     {
@@ -166,7 +172,8 @@ public class AmbientNPC : MonoBehaviour, IInteractable
             DialogueController.Instance.ShowAmbientDialogue(
                 npcData,
                 missionDialogue,
-                () => NotifyDialogueFinished());
+                () => NotifyDialogueFinished(),
+                DialogueCameraFocus);
             return;
         }
 
@@ -183,7 +190,8 @@ public class AmbientNPC : MonoBehaviour, IInteractable
             DialogueController.Instance.ShowAmbientDialogue(
                 npcData,
                 dialogue,
-                () => NotifyDialogueFinished());
+                () => NotifyDialogueFinished(),
+                DialogueCameraFocus);
         }
     }
 
@@ -227,6 +235,9 @@ public class AmbientNPC : MonoBehaviour, IInteractable
             yield break;
         }
 
+        // A previous conversation may still be easing back to the player.
+        // Release that temporary follow target before the artifact pan takes ownership.
+        DialogueController.Instance?.ReleaseSpeakerCameraFocus();
         hintCamera = GetActiveHintCamera();
         if (hintCamera == null || hintCamera.Follow == null)
         {
@@ -261,7 +272,9 @@ public class AmbientNPC : MonoBehaviour, IInteractable
                 {
                     NotifyDialogueFinished();
                     StartCoroutine(ReturnFromHint(hint, true));
-                });
+                },
+                transform,
+                false);
 
         if (!dialogueStarted)
             yield return ReturnFromHint(hint, false);
@@ -279,7 +292,9 @@ public class AmbientNPC : MonoBehaviour, IInteractable
             {
                 NotifyDialogueFinished();
                 FinishHint(hint);
-            });
+            },
+            transform,
+            false);
     }
 
     private void NotifyDialogueFinished()

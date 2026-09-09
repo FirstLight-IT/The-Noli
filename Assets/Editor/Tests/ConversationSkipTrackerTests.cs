@@ -1,7 +1,27 @@
+using System.Collections.Generic;
 using NUnit.Framework;
 
 public sealed class ConversationSkipTrackerTests
 {
+    [Test]
+    public void ConversationInterruption_ResolvesOnlyAfterConfiguredLine()
+    {
+        ConversationInterruption configured = new()
+        {
+            interruptionId = "sala_music_interruption",
+            afterLineIndex = 7,
+            minigameSceneName = "Social Interruption Minigame"
+        };
+        Conversation conversation = new()
+        {
+            interruptions = new List<ConversationInterruption> { configured }
+        };
+
+        Assert.That(conversation.TryGetInterruptionAfterLine(6, out _), Is.False);
+        Assert.That(conversation.TryGetInterruptionAfterLine(7, out ConversationInterruption result), Is.True);
+        Assert.That(result, Is.SameAs(configured));
+    }
+
     [Test]
     public void TypewriterSkipFollowedByRapidAdvance_CountsAsSkipped()
     {

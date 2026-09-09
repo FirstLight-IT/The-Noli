@@ -22,12 +22,17 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField] private GameObject interactionIcon;
     [SerializeField] private GameObject missionIcon;
     [SerializeField] private InteractableOutline interactionOutline;
+    [Tooltip("Camera framing point used while this NPC is speaking. Falls back to the NPC root when unassigned.")]
+    [SerializeField] private Transform dialogueCameraFocus;
 
     private Conversation activeMissionConversation;
     private string registeredNpcID;
     private bool interactionEnabled = true;
 
     public bool IsInteractionEnabled => interactionEnabled;
+    public Transform DialogueCameraFocus => dialogueCameraFocus != null
+        ? dialogueCameraFocus
+        : transform;
 
     void Awake()
     {

@@ -25,7 +25,8 @@ public sealed class MissionAuthoringWindow : EditorWindow
         MeetCharacters,
         NPCMovement,
         EnterRoom,
-        SpeakToAmbientNPCs
+        SpeakToAmbientNPCs,
+        Minigame
     }
 
     [Serializable]
@@ -60,6 +61,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
         public bool disableInteractionWhileMoving = true;
         public bool waitForAllRoutesToFinish = true;
         public AmbientNPCTag requiredTag = AmbientNPCTag.Girl;
+        public string minigameSceneName = string.Empty;
     }
 
     [Serializable]
@@ -95,6 +97,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
         public bool disableInteractionWhileMoving = true;
         public bool waitForAllRoutesToFinish = true;
         public AmbientNPCTag requiredTag = AmbientNPCTag.Girl;
+        public string minigameSceneName = string.Empty;
     }
 
     [Serializable]
@@ -422,6 +425,14 @@ public sealed class MissionAuthoringWindow : EditorWindow
                     "Required NPC Tag",
                     step.requiredTag);
                 step.requiredCount = EditorGUILayout.IntField("Required Unique NPCs", step.requiredCount);
+                break;
+            case StepKind.Minigame:
+                step.minigameSceneName = EditorGUILayout.TextField(
+                    "Minigame Scene Name",
+                    step.minigameSceneName).Trim();
+                EditorGUILayout.HelpBox(
+                    "The scene must be enabled in Build Settings. Hidden minigame steps can gate mission completion without adding a HUD objective.",
+                    MessageType.None);
                 break;
         }
     }
@@ -757,6 +768,22 @@ public sealed class MissionAuthoringWindow : EditorWindow
                 step.requiredTag == AmbientNPCTag.None || step.requiredCount < 1:
                 error = $"{prefix} needs an ambient NPC tag and a required count of at least one.";
                 return false;
+            case StepKind.Minigame when string.IsNullOrWhiteSpace(step.minigameSceneName):
+                error = $"{prefix} needs a minigame scene name.";
+                return false;
+            case StepKind.Minigame:
+                bool sceneIsEnabled = EditorBuildSettings.scenes.Any(scene =>
+                    scene.enabled &&
+                    string.Equals(
+                        Path.GetFileNameWithoutExtension(scene.path),
+                        step.minigameSceneName.Trim(),
+                        StringComparison.Ordinal));
+                if (!sceneIsEnabled)
+                {
+                    error = $"{prefix} references scene '{step.minigameSceneName}', which is not enabled in Build Settings.";
+                    return false;
+                }
+                break;
         }
 
         error = string.Empty;
@@ -885,6 +912,52 @@ public sealed class MissionAuthoringWindow : EditorWindow
         {
             error = $"{prefix} conversation '{conversation.conversationId}' has no usable default language block.";
             return false;
+        }
+
+        if (conversation.interruptions != null)
+        {
+            HashSet<string> interruptionIds = new(StringComparer.Ordinal);
+            HashSet<int> interruptionLineIndices = new();
+
+            foreach (ConversationInterruption interruption in conversation.interruptions)
+            {
+                if (interruption == null ||
+                    string.IsNullOrWhiteSpace(interruption.interruptionId) ||
+                    string.IsNullOrWhiteSpace(interruption.minigameSceneName))
+                {
+                    error = $"{prefix} conversation '{conversation.conversationId}' contains an incomplete minigame interruption.";
+                    return false;
+                }
+
+                if (!interruptionIds.Add(interruption.interruptionId.Trim()) ||
+                    !interruptionLineIndices.Add(interruption.afterLineIndex))
+                {
+                    error = $"{prefix} conversation '{conversation.conversationId}' contains a duplicate minigame interruption ID or line index.";
+                    return false;
+                }
+
+                if (interruption.afterLineIndex < 0 ||
+                    conversation.languages.Any(language =>
+                        language?.lines == null ||
+                        interruption.afterLineIndex >= language.lines.Count))
+                {
+                    error = $"{prefix} conversation '{conversation.conversationId}' has interruption '{interruption.interruptionId}' outside a language's line range.";
+                    return false;
+                }
+
+                bool sceneIsEnabled = EditorBuildSettings.scenes.Any(scene =>
+                    scene.enabled &&
+                    string.Equals(
+                        Path.GetFileNameWithoutExtension(scene.path),
+                        interruption.minigameSceneName.Trim(),
+                        StringComparison.Ordinal));
+
+                if (!sceneIsEnabled)
+                {
+                    error = $"{prefix} conversation '{conversation.conversationId}' interruption '{interruption.interruptionId}' references minigame scene '{interruption.minigameSceneName}', which is not enabled in Build Settings.";
+                    return false;
+                }
+            }
         }
 
         if (!speakerIds.Contains(step.targetNpcId.Trim()))
@@ -1117,6 +1190,7 @@ public sealed class MissionAuthoringWindow : EditorWindow
             StepKind.NPCMovement => stepObject.AddComponent<NPCMovementMissionStep>(),
             StepKind.EnterRoom => stepObject.AddComponent<EnterRoomMissionStep>(),
             StepKind.SpeakToAmbientNPCs => stepObject.AddComponent<SpeakToAmbientNPCsMissionStep>(),
+            StepKind.Minigame => stepObject.AddComponent<MinigameMissionStep>(),
             _ => throw new ArgumentOutOfRangeException(nameof(kind), kind, null)
         };
     }
@@ -1152,6 +1226,10 @@ public sealed class MissionAuthoringWindow : EditorWindow
             case StepKind.SpeakToAmbientNPCs:
                 serializedStep.FindProperty("requiredTag").intValue = (int)draft.requiredTag;
                 serializedStep.FindProperty("requiredUniqueCount").intValue = draft.requiredCount;
+                break;
+            case StepKind.Minigame:
+                serializedStep.FindProperty("minigameSceneName").stringValue =
+                    draft.minigameSceneName.Trim();
                 break;
         }
     }
@@ -1347,7 +1425,8 @@ public sealed class MissionAuthoringWindow : EditorWindow
                 movementTargets = step.movementTargets ?? new List<MovementTargetDraft>(),
                 disableInteractionWhileMoving = step.disableInteractionWhileMoving,
                 waitForAllRoutesToFinish = step.waitForAllRoutesToFinish,
-                requiredTag = step.requiredTag
+                requiredTag = step.requiredTag,
+                minigameSceneName = step.minigameSceneName
             });
         }
 
@@ -1387,7 +1466,8 @@ public sealed class MissionAuthoringWindow : EditorWindow
                 movementTargets = savedStep.movementTargets ?? new List<MovementTargetDraft>(),
                 disableInteractionWhileMoving = savedStep.disableInteractionWhileMoving,
                 waitForAllRoutesToFinish = savedStep.waitForAllRoutesToFinish,
-                requiredTag = savedStep.requiredTag
+                requiredTag = savedStep.requiredTag,
+                minigameSceneName = savedStep.minigameSceneName ?? string.Empty
             });
         }
 

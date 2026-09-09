@@ -48,6 +48,7 @@ public sealed class GreetingEtiquetteMinigame : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onGameCompleted;
+    [SerializeField, Min(0f)] private float transitionReturnDelaySeconds = 1.25f;
 
     private readonly List<GreetingEtiquetteInput> currentSequence = new List<GreetingEtiquetteInput>();
     private readonly Color idleColor = new Color(0.20f, 0.16f, 0.27f);
@@ -66,6 +67,7 @@ public sealed class GreetingEtiquetteMinigame : MonoBehaviour
     private bool retryCurrentRound;
     private bool hasActiveVisual;
     private bool isConfigured;
+    private Coroutine pendingTransitionReturn;
 
     public int CompletedCombinations => currentRoundIndex;
     public int CurrentSequenceLength => currentSequence.Count;
@@ -142,6 +144,12 @@ public sealed class GreetingEtiquetteMinigame : MonoBehaviour
     {
         if (!isConfigured)
             return;
+
+        if (pendingTransitionReturn != null)
+        {
+            StopCoroutine(pendingTransitionReturn);
+            pendingTransitionReturn = null;
+        }
 
         currentRoundIndex = 0;
         playerInputIndex = 0;
@@ -257,6 +265,16 @@ public sealed class GreetingEtiquetteMinigame : MonoBehaviour
         if (resultBodyText != null)
             resultBodyText.text = "You remembered and returned all five greeting patterns.";
         onGameCompleted?.Invoke();
+        pendingTransitionReturn = StartCoroutine(ReturnToMissionAfterDelay());
+    }
+
+    private System.Collections.IEnumerator ReturnToMissionAfterDelay()
+    {
+        if (transitionReturnDelaySeconds > 0f)
+            yield return new WaitForSecondsRealtime(transitionReturnDelaySeconds);
+
+        MinigameTransitionController.TryComplete(gameObject.scene.name);
+        pendingTransitionReturn = null;
     }
 
     private void ReadKeyboardPresses()

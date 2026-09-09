@@ -9,6 +9,14 @@ public class DialogueLine
 }
 
 [System.Serializable]
+public sealed class ConversationInterruption
+{
+    public string interruptionId;
+    public int afterLineIndex = -1;
+    public string minigameSceneName;
+}
+
+[System.Serializable]
 public class ConversationLanguageContent
 {
     public string languageCode;
@@ -20,7 +28,28 @@ public class Conversation
 {
     public string conversationId;
     public string defaultLanguageCode = "en";
+    public List<ConversationInterruption> interruptions;
     public List<ConversationLanguageContent> languages;
+
+    public bool TryGetInterruptionAfterLine(
+        int lineIndex,
+        out ConversationInterruption interruption)
+    {
+        if (interruptions != null)
+        {
+            foreach (ConversationInterruption candidate in interruptions)
+            {
+                if (candidate != null && candidate.afterLineIndex == lineIndex)
+                {
+                    interruption = candidate;
+                    return true;
+                }
+            }
+        }
+
+        interruption = null;
+        return false;
+    }
 
     public List<DialogueLine> ResolveLines(string requestedLanguageCode)
     {

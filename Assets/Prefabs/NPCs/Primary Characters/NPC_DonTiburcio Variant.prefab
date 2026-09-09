@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: -7982466338592590197, guid: 811b40211ad0b414facb4c48ec06e313, type: 3}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_SortingOrder
-      value: -541
+      value: -149
       objectReference: {fileID: 0}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -111,6 +111,14 @@ PrefabInstance:
     - target: {fileID: 5850646596006566767, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: isometricMovementOnly
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.926
       objectReference: {fileID: 0}
     - target: {fileID: 6375768478794960284, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: npcData

@@ -42,6 +42,7 @@ public sealed class KeepingComposureMinigame : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent onGameCompleted;
     [SerializeField] private UnityEvent onGameFailed;
+    [SerializeField, Min(0f)] private float transitionReturnDelaySeconds = 1.25f;
 
     private static readonly string[] EnglishProvocations =
     {
@@ -73,6 +74,7 @@ public sealed class KeepingComposureMinigame : MonoBehaviour
     private bool gameEnded;
     private bool isConfigured;
     private bool usesFilipino;
+    private Coroutine pendingTransitionReturn;
 
     public float Composure => composure;
     public bool IsComplete { get; private set; }
@@ -114,6 +116,12 @@ public sealed class KeepingComposureMinigame : MonoBehaviour
     {
         if (!isConfigured)
             return;
+
+        if (pendingTransitionReturn != null)
+        {
+            StopCoroutine(pendingTransitionReturn);
+            pendingTransitionReturn = null;
+        }
 
         usesFilipino = string.Equals(GameLanguage.CurrentCode, "fil", System.StringComparison.OrdinalIgnoreCase);
         composure = startingComposure;
@@ -297,8 +305,20 @@ public sealed class KeepingComposureMinigame : MonoBehaviour
                 : (usesFilipino ? "Nakuha ni Padre Damaso ang reaksiyong nais niya." : "Fray Damaso's provocation broke through your restraint.");
 
         if (succeeded)
+        {
             onGameCompleted?.Invoke();
+            pendingTransitionReturn = StartCoroutine(ReturnToConversationAfterDelay());
+        }
         else
             onGameFailed?.Invoke();
+    }
+
+    private System.Collections.IEnumerator ReturnToConversationAfterDelay()
+    {
+        if (transitionReturnDelaySeconds > 0f)
+            yield return new WaitForSecondsRealtime(transitionReturnDelaySeconds);
+
+        MinigameTransitionController.TryComplete(gameObject.scene.name);
+        pendingTransitionReturn = null;
     }
 }

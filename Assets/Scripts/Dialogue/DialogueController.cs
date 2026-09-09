@@ -2,12 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
     private const float TypingSpeed = 0.05f;
+
+    private enum SpeakerCameraState
+    {
+        None,
+        FocusingSpeaker,
+        TrackingSpeaker,
+        ReturningToPlayer
+    }
 
     public static event Action<string> OnConversationFinished;
     public static event Action<string, string> OnConversationFailed;
@@ -25,6 +34,16 @@ public class DialogueController : MonoBehaviour
     [Tooltip("A line counts as skipped when the player reveals it, then advances within this many seconds.")]
     [SerializeField, Min(0f)] private float rapidAdvanceWindowSeconds = 1f;
 
+    [Header("Speaker Camera Focus")]
+    [Tooltip("Smoothly pan the active Cinemachine camera toward whoever is speaking.")]
+    [SerializeField] private bool focusCameraOnSpeakers = true;
+    [SerializeField, Min(0f)] private float speakerPanDuration = 0.45f;
+    [SerializeField, Min(0f)] private float speakerReturnDuration = 0.35f;
+    [Tooltip("Apply a subtle zoom while the camera is focused on a dialogue speaker.")]
+    [SerializeField] private bool zoomCameraOnSpeakers = true;
+    [Tooltip("Multiplier applied to the normal camera size. A smaller value zooms in farther.")]
+    [SerializeField, Range(0.25f, 1f)] private float speakerZoomScale = 0.9f;
+
     private NPCInfoSO activeNPCDialogue;
     private AmbientNPCInfoSO activeAmbientNPCDialogue;
     private string[] activeNPCDialogueLines;
@@ -32,12 +51,24 @@ public class DialogueController : MonoBehaviour
     private List<DialogueLine> activeConversationLines;
     private ConversationSkipTracker conversationSkipTracker;
     private bool isTyping;
+    private bool isConversationInterrupted;
     private bool announceNPCUnlockOnClose;
     private Action ambientDialogueFinished;
     private int currentLineIndex;
     private readonly HashSet<string> introducedNPCs = new();
     private readonly HashSet<string> newlyUnlockedNPCs = new();
+    private readonly HashSet<string> triggeredConversationInterruptions = new();
     private readonly Dictionary<string, int> nextRepeatDialogueByNPC = new();
+    private CinemachineCamera speakerCamera;
+    private Transform originalCameraFollow;
+    private GameObject speakerCameraTarget;
+    private Transform activeSpeakerTransform;
+    private SpeakerCameraState speakerCameraState;
+    private Vector3 speakerCameraMoveStart;
+    private float speakerCameraMoveElapsed;
+    private bool speakerCameraUsesOrthographicLens;
+    private float originalSpeakerCameraZoom;
+    private float speakerCameraMoveStartZoom;
 
     void Awake()
     {
@@ -52,8 +83,15 @@ public class DialogueController : MonoBehaviour
 
     void OnDestroy()
     {
+        RestoreSpeakerCameraImmediately();
+
         if (Instance == this)
             Instance = null;
+    }
+
+    private void Update()
+    {
+        UpdateSpeakerCameraFocus();
     }
 
     private void HandleNPCInteraction(NPCInfoSO data)
@@ -106,6 +144,7 @@ public class DialogueController : MonoBehaviour
         nameText.SetText(data.DisplayName);
         portraitImage.gameObject.SetActive(true);
         portraitImage.sprite = data.Portrait;
+        FocusCameraOnCharacter(data);
         StartCoroutine(TypeNPCLine());
     }
 
@@ -128,6 +167,7 @@ public class DialogueController : MonoBehaviour
         nameText.SetText(speaker.DisplayName);
         portraitImage.gameObject.SetActive(true);
         portraitImage.sprite = speaker.Portrait;
+        FocusCameraOnCharacter(speaker);
         StartCoroutine(TypeNPCLine());
         return true;
     }
@@ -135,7 +175,9 @@ public class DialogueController : MonoBehaviour
     public bool ShowAmbientDialogue(
         AmbientNPCInfoSO speaker,
         string[] lines,
-        Action onFinished = null)
+        Action onFinished = null,
+        Transform speakerTransform = null,
+        bool focusSpeaker = true)
     {
         if (IsDialogueActive || speaker == null || !HasDialogueLines(lines))
             return false;
@@ -154,6 +196,10 @@ public class DialogueController : MonoBehaviour
         nameText.SetText(speaker.DisplayName);
         portraitImage.sprite = null;
         portraitImage.gameObject.SetActive(false);
+
+        if (focusSpeaker)
+            FocusCameraOnTransform(speakerTransform);
+
         StartCoroutine(TypeNPCLine());
         return true;
     }
@@ -162,6 +208,10 @@ public class DialogueController : MonoBehaviour
     {
         if (!IsDialogueActive)
             return false;
+
+        // Consume the world interaction input while the additive minigame owns input.
+        if (isConversationInterrupted)
+            return true;
 
         if (activeConversation != null)
             AdvanceConversation();
@@ -313,6 +363,8 @@ public class DialogueController : MonoBehaviour
         activeConversation = conversation;
         activeConversationLines = conversation.ResolveLines(GameLanguage.CurrentCode);
         conversationSkipTracker = new ConversationSkipTracker(rapidAdvanceWindowSeconds);
+        isConversationInterrupted = false;
+        triggeredConversationInterruptions.Clear();
         activeNPCDialogue = null;
         activeAmbientNPCDialogue = null;
         ambientDialogueFinished = null;
@@ -327,6 +379,9 @@ public class DialogueController : MonoBehaviour
 
     private void AdvanceConversation()
     {
+        if (isConversationInterrupted)
+            return;
+
         if (isTyping)
         {
             StopAllCoroutines();
@@ -337,8 +392,66 @@ public class DialogueController : MonoBehaviour
             return;
         }
 
+        int completedLineIndex = currentLineIndex;
         conversationSkipTracker.CompleteLine(Time.unscaledTime);
         currentLineIndex++;
+
+        if (TryStartConversationInterruption(completedLineIndex))
+            return;
+
+        if (currentLineIndex >= activeConversationLines.Count)
+        {
+            EndConversation();
+            return;
+        }
+
+        StartCoroutine(TypeConversationLine());
+    }
+
+    private bool TryStartConversationInterruption(int completedLineIndex)
+    {
+        if (activeConversation == null ||
+            !activeConversation.TryGetInterruptionAfterLine(
+                completedLineIndex,
+                out ConversationInterruption interruption) ||
+            interruption == null)
+        {
+            return false;
+        }
+
+        string interruptionId = interruption.interruptionId.Trim();
+        if (!triggeredConversationInterruptions.Add(interruptionId))
+            return false;
+
+        isConversationInterrupted = true;
+        dialogueCloseButton.gameObject.SetActive(false);
+
+        if (MinigameTransitionController.TryStart(
+                interruption.minigameSceneName,
+                HideDialogueForMinigame,
+                ResumeConversationAfterMinigame))
+        {
+            return true;
+        }
+
+        isConversationInterrupted = false;
+        dialoguePanel.SetActive(true);
+        return false;
+    }
+
+    private void HideDialogueForMinigame()
+    {
+        if (isConversationInterrupted)
+            dialoguePanel.SetActive(false);
+    }
+
+    private void ResumeConversationAfterMinigame(bool minigameCompleted)
+    {
+        if (!isConversationInterrupted || activeConversation == null)
+            return;
+
+        isConversationInterrupted = false;
+        dialoguePanel.SetActive(true);
 
         if (currentLineIndex >= activeConversationLines.Count)
         {
@@ -359,6 +472,7 @@ public class DialogueController : MonoBehaviour
         portraitImage.sprite = speaker.Portrait;
         dialogueText.SetText(string.Empty);
         isTyping = true;
+        FocusCameraOnCharacter(speaker);
 
         foreach (char letter in line.text)
         {
@@ -378,6 +492,9 @@ public class DialogueController : MonoBehaviour
 
     public void EndConversation()
     {
+        if (isConversationInterrupted)
+            return;
+
         StopAllCoroutines();
         string finishedConversationId = activeConversation?.conversationId;
         ConversationReadingResult readingResult = null;
@@ -392,6 +509,7 @@ public class DialogueController : MonoBehaviour
         activeConversation = null;
         activeConversationLines = null;
         conversationSkipTracker = null;
+        triggeredConversationInterruptions.Clear();
         ResetDialogueUI();
 
         if (readingResult != null)
@@ -438,6 +556,37 @@ public class DialogueController : MonoBehaviour
             }
         }
 
+        if (conversation.interruptions != null)
+        {
+            HashSet<string> interruptionIds = new(StringComparer.Ordinal);
+            HashSet<int> interruptionLineIndices = new();
+
+            foreach (ConversationInterruption interruption in conversation.interruptions)
+            {
+                if (interruption == null ||
+                    string.IsNullOrWhiteSpace(interruption.interruptionId) ||
+                    string.IsNullOrWhiteSpace(interruption.minigameSceneName))
+                {
+                    reason = $"Conversation '{conversation.conversationId}' contains an incomplete minigame interruption.";
+                    return false;
+                }
+
+                if (!interruptionIds.Add(interruption.interruptionId.Trim()))
+                {
+                    reason = $"Conversation '{conversation.conversationId}' contains duplicate interruption ID '{interruption.interruptionId}'.";
+                    return false;
+                }
+
+                if (interruption.afterLineIndex < 0 ||
+                    interruption.afterLineIndex >= resolvedLines.Count ||
+                    !interruptionLineIndices.Add(interruption.afterLineIndex))
+                {
+                    reason = $"Conversation '{conversation.conversationId}' has an invalid or duplicate interruption line index {interruption.afterLineIndex}.";
+                    return false;
+                }
+            }
+        }
+
         reason = null;
         return true;
     }
@@ -446,12 +595,14 @@ public class DialogueController : MonoBehaviour
     {
         currentLineIndex = 0;
         isTyping = false;
+        isConversationInterrupted = false;
         IsDialogueActive = false;
         dialogueText.SetText(string.Empty);
         nameText.SetText(string.Empty);
         portraitImage.sprite = null;
         dialogueCloseButton.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
+        ReturnSpeakerCameraToPlayer();
     }
 
     void OnEnable()
@@ -467,11 +618,267 @@ public class DialogueController : MonoBehaviour
         NPC.OnNPCInteracted -= HandleNPCInteraction;
         NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
         newlyUnlockedNPCs.Clear();
+        RestoreSpeakerCameraImmediately();
     }
 
     private void HandleNPCUnlocked(NPCInfoSO data)
     {
         if (data != null && !string.IsNullOrWhiteSpace(data.NpcID))
             newlyUnlockedNPCs.Add(data.NpcID);
+    }
+
+    private void FocusCameraOnCharacter(NPCInfoSO speaker)
+    {
+        if (speaker == null || string.IsNullOrWhiteSpace(speaker.NpcID))
+            return;
+
+        bool isPlayerSpeaking = PlayerCharacter.Instance != null &&
+            PlayerCharacter.Instance.CurrentCharacter != null &&
+            string.Equals(
+                PlayerCharacter.Instance.CurrentCharacter.NpcID,
+                speaker.NpcID,
+                StringComparison.OrdinalIgnoreCase);
+
+        if (isPlayerSpeaking)
+        {
+            if (TryPrepareSpeakerCamera())
+                FocusCameraOnTransform(originalCameraFollow);
+
+            return;
+        }
+
+        if (NPC.TryGetById(speaker.NpcID, out NPC npc))
+            FocusCameraOnTransform(npc.DialogueCameraFocus);
+    }
+
+    private void FocusCameraOnTransform(Transform speakerTransform)
+    {
+        if (!focusCameraOnSpeakers ||
+            speakerTransform == null ||
+            AmbientNPC.IsHintCameraPanning ||
+            !TryPrepareSpeakerCamera())
+        {
+            return;
+        }
+
+        if (activeSpeakerTransform == speakerTransform &&
+            speakerCameraState != SpeakerCameraState.ReturningToPlayer)
+        {
+            return;
+        }
+
+        activeSpeakerTransform = speakerTransform;
+        BeginSpeakerCameraMove(SpeakerCameraState.FocusingSpeaker, speakerPanDuration);
+    }
+
+    private bool TryPrepareSpeakerCamera()
+    {
+        if (!focusCameraOnSpeakers || AmbientNPC.IsHintCameraPanning)
+            return false;
+
+        if (speakerCamera != null &&
+            originalCameraFollow != null &&
+            speakerCameraTarget != null)
+        {
+            return true;
+        }
+
+        CinemachineCamera activeCamera = GetActiveCinemachineCamera();
+        if (activeCamera == null || activeCamera.Follow == null)
+            return false;
+
+        speakerCamera = activeCamera;
+        originalCameraFollow = activeCamera.Follow;
+        speakerCameraTarget = new GameObject("Dialogue Speaker Camera Target");
+        speakerCameraTarget.hideFlags = HideFlags.HideAndDontSave;
+        speakerCameraTarget.transform.position = originalCameraFollow.position;
+        Camera mainCamera = Camera.main;
+        speakerCameraUsesOrthographicLens = mainCamera != null && mainCamera.orthographic;
+        originalSpeakerCameraZoom = GetCurrentSpeakerCameraZoom();
+        speakerCamera.Follow = speakerCameraTarget.transform;
+        return true;
+    }
+
+    private void BeginSpeakerCameraMove(SpeakerCameraState state, float duration)
+    {
+        if (speakerCameraTarget == null)
+            return;
+
+        speakerCameraState = state;
+        speakerCameraMoveStart = speakerCameraTarget.transform.position;
+        speakerCameraMoveElapsed = 0f;
+        speakerCameraMoveStartZoom = GetCurrentSpeakerCameraZoom();
+
+        if (duration > 0f)
+            return;
+
+        if (state == SpeakerCameraState.ReturningToPlayer)
+        {
+            RestoreSpeakerCameraImmediately();
+            return;
+        }
+
+        if (activeSpeakerTransform != null)
+            speakerCameraTarget.transform.position = activeSpeakerTransform.position;
+
+        SetSpeakerCameraZoom(GetFocusedSpeakerCameraZoom());
+        speakerCameraState = SpeakerCameraState.TrackingSpeaker;
+    }
+
+    private void UpdateSpeakerCameraFocus()
+    {
+        if (speakerCameraTarget == null)
+            return;
+
+        switch (speakerCameraState)
+        {
+            case SpeakerCameraState.FocusingSpeaker:
+                if (activeSpeakerTransform == null)
+                {
+                    ReturnSpeakerCameraToPlayer();
+                    return;
+                }
+
+                speakerCameraMoveElapsed += Time.unscaledDeltaTime;
+                float focusProgress = Mathf.Clamp01(
+                    speakerCameraMoveElapsed / Mathf.Max(speakerPanDuration, Mathf.Epsilon));
+                float easedFocusProgress = Mathf.SmoothStep(0f, 1f, focusProgress);
+                speakerCameraTarget.transform.position = Vector3.LerpUnclamped(
+                    speakerCameraMoveStart,
+                    activeSpeakerTransform.position,
+                    easedFocusProgress);
+                SetSpeakerCameraZoom(Mathf.LerpUnclamped(
+                    speakerCameraMoveStartZoom,
+                    GetFocusedSpeakerCameraZoom(),
+                    easedFocusProgress));
+
+                if (focusProgress >= 1f)
+                    speakerCameraState = SpeakerCameraState.TrackingSpeaker;
+                break;
+
+            case SpeakerCameraState.TrackingSpeaker:
+                if (activeSpeakerTransform != null)
+                {
+                    speakerCameraTarget.transform.position = activeSpeakerTransform.position;
+                    SetSpeakerCameraZoom(GetFocusedSpeakerCameraZoom());
+                }
+                else
+                    ReturnSpeakerCameraToPlayer();
+                break;
+
+            case SpeakerCameraState.ReturningToPlayer:
+                if (originalCameraFollow == null)
+                {
+                    RestoreSpeakerCameraImmediately();
+                    return;
+                }
+
+                speakerCameraMoveElapsed += Time.unscaledDeltaTime;
+                float returnProgress = Mathf.Clamp01(
+                    speakerCameraMoveElapsed / Mathf.Max(speakerReturnDuration, Mathf.Epsilon));
+                float easedReturnProgress = Mathf.SmoothStep(0f, 1f, returnProgress);
+                speakerCameraTarget.transform.position = Vector3.LerpUnclamped(
+                    speakerCameraMoveStart,
+                    originalCameraFollow.position,
+                    easedReturnProgress);
+                SetSpeakerCameraZoom(Mathf.LerpUnclamped(
+                    speakerCameraMoveStartZoom,
+                    originalSpeakerCameraZoom,
+                    easedReturnProgress));
+
+                if (returnProgress >= 1f)
+                    RestoreSpeakerCameraImmediately();
+                break;
+        }
+    }
+
+    private void ReturnSpeakerCameraToPlayer()
+    {
+        if (speakerCameraTarget == null)
+            return;
+
+        activeSpeakerTransform = null;
+        BeginSpeakerCameraMove(
+            SpeakerCameraState.ReturningToPlayer,
+            speakerReturnDuration);
+    }
+
+    public void ReleaseSpeakerCameraFocus()
+    {
+        RestoreSpeakerCameraImmediately();
+    }
+
+    private float GetCurrentSpeakerCameraZoom()
+    {
+        if (speakerCamera == null)
+            return 0f;
+
+        return speakerCameraUsesOrthographicLens
+            ? speakerCamera.Lens.OrthographicSize
+            : speakerCamera.Lens.FieldOfView;
+    }
+
+    private float GetFocusedSpeakerCameraZoom()
+    {
+        return zoomCameraOnSpeakers
+            ? originalSpeakerCameraZoom * speakerZoomScale
+            : originalSpeakerCameraZoom;
+    }
+
+    private void SetSpeakerCameraZoom(float zoom)
+    {
+        if (speakerCamera == null || zoom <= 0f)
+            return;
+
+        LensSettings lens = speakerCamera.Lens;
+        if (speakerCameraUsesOrthographicLens)
+            lens.OrthographicSize = zoom;
+        else
+            lens.FieldOfView = zoom;
+
+        speakerCamera.Lens = lens;
+    }
+
+    private static CinemachineCamera GetActiveCinemachineCamera()
+    {
+        Camera mainCamera = Camera.main;
+        if (mainCamera == null ||
+            !mainCamera.TryGetComponent(out CinemachineBrain brain))
+        {
+            return null;
+        }
+
+        if (brain.ActiveVirtualCamera is CinemachineCameraManagerBase managerCamera)
+            return managerCamera.LiveChild as CinemachineCamera;
+
+        return brain.ActiveVirtualCamera as CinemachineCamera;
+    }
+
+    private void RestoreSpeakerCameraImmediately()
+    {
+        if (speakerCamera != null && originalSpeakerCameraZoom > 0f)
+            SetSpeakerCameraZoom(originalSpeakerCameraZoom);
+
+        if (speakerCamera != null &&
+            originalCameraFollow != null &&
+            speakerCameraTarget != null &&
+            speakerCamera.Follow == speakerCameraTarget.transform)
+        {
+            speakerCamera.Follow = originalCameraFollow;
+        }
+
+        if (speakerCameraTarget != null)
+            Destroy(speakerCameraTarget);
+
+        speakerCamera = null;
+        originalCameraFollow = null;
+        speakerCameraTarget = null;
+        activeSpeakerTransform = null;
+        speakerCameraState = SpeakerCameraState.None;
+        speakerCameraMoveStart = Vector3.zero;
+        speakerCameraMoveElapsed = 0f;
+        speakerCameraUsesOrthographicLens = false;
+        originalSpeakerCameraZoom = 0f;
+        speakerCameraMoveStartZoom = 0f;
     }
 }

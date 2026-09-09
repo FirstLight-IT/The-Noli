@@ -67,6 +67,9 @@ public sealed class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
+        if (MinigameTransitionController.IsTransitionActive)
+            return;
+
         bool pausePressed = Keyboard.current?.escapeKey.wasPressedThisFrame == true ||
                             Gamepad.current?.startButton.wasPressedThisFrame == true;
 
@@ -91,7 +94,8 @@ public sealed class PauseMenuController : MonoBehaviour
 
     public void Open()
     {
-        if (IsPaused || isBusy || ScreenFade.IsTransitioning ||
+        if (IsPaused || isBusy || MinigameTransitionController.IsTransitionActive ||
+            ScreenFade.IsTransitioning ||
             ChapterController.IsChapterOpening || SaveGameManager.CurrentData == null)
         {
             return;

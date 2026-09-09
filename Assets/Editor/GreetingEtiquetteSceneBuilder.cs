@@ -106,6 +106,7 @@ public static class GreetingEtiquetteSceneBuilder
         Set(serializedGame, "resultPanel", resultPanel);
         Set(serializedGame, "resultTitleText", resultTitle);
         Set(serializedGame, "resultBodyText", resultBody);
+        serializedGame.FindProperty("transitionReturnDelaySeconds").floatValue = 1.25f;
         serializedGame.ApplyModifiedPropertiesWithoutUndo();
 
         EditorSceneManager.SaveScene(scene, ScenePath);
