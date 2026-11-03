@@ -28,6 +28,7 @@ public class Conversation
 {
     public string conversationId;
     public string defaultLanguageCode = "en";
+    public bool fadeCameraReturnOnEnd;
     public List<ConversationInterruption> interruptions;
     public List<ConversationLanguageContent> languages;
 

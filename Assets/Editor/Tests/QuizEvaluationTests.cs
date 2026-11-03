@@ -5,22 +5,41 @@ using UnityEngine;
 
 public sealed class QuizEvaluationTests
 {
-    [Test]
-    public void ChapterOneJson_IsValidOrganizedAndBilingual()
+    [TestCase(
+        "Assets/JSON Files/Quizzes/chapter_1_quiz_completed.json",
+        "chapter_1")]
+    [TestCase(
+        "Assets/JSON Files/Quizzes/chapter_2_quiz.json",
+        "chapter_2")]
+    [TestCase(
+        "Assets/JSON Files/Quizzes/chapter_3_quiz.json",
+        "chapter_3")]
+    public void LiveChapterJson_IsValidOrganizedAndBilingual(
+        string assetPath,
+        string expectedChapterId)
     {
-        TextAsset asset = AssetDatabase.LoadAssetAtPath<TextAsset>(
-            "Assets/JSON Files/Quizzes/chapter_1_quiz.json");
+        TextAsset asset = AssetDatabase.LoadAssetAtPath<TextAsset>(assetPath);
 
         Assert.That(asset, Is.Not.Null);
         Assert.That(
             ChapterQuizJsonLoader.TryLoad(asset, out ChapterQuizDefinition quiz, out string error),
             Is.True,
             error);
-        Assert.That(quiz.answerKey, Has.Count.EqualTo(10));
+        Assert.That(quiz.ChapterId, Is.EqualTo(expectedChapterId));
+        Assert.That(quiz.answerKey, Has.Count.EqualTo(15));
         Assert.That(quiz.QuestionsPerAttempt, Is.EqualTo(5));
         Assert.That(quiz.Languages, Has.Count.EqualTo(2));
         Assert.That(quiz.ResolveLanguageCode("en"), Is.EqualTo("en"));
         Assert.That(quiz.ResolveLanguageCode("fil"), Is.EqualTo("fil"));
+
+        foreach (QuizLanguageContent language in quiz.Languages)
+        {
+            foreach (QuizQuestionLocalization question in language.questions)
+            {
+                Assert.That(question.prompt, Does.Not.Contain("Placeholder").IgnoreCase);
+                Assert.That(question.explanation, Does.Not.Contain("Placeholder").IgnoreCase);
+            }
+        }
     }
 
     [Test]

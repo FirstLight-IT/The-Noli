@@ -10,9 +10,14 @@ public class NPCFixedRoute : MonoBehaviour
     {
         [SerializeField] private string routeId;
         [SerializeField] private Transform[] routePoints = new Transform[0];
+        [Tooltip("After this route finishes, replace the NPC's resting direction with Arrival Facing.")]
+        [SerializeField] private bool overrideArrivalFacing;
+        [SerializeField] private NPCFacingDirection arrivalFacing = NPCFacingDirection.South;
 
         public string RouteId => routeId;
         public Transform[] RoutePoints => routePoints;
+        public bool OverrideArrivalFacing => overrideArrivalFacing;
+        public NPCFacingDirection ArrivalFacing => arrivalFacing;
     }
 
     public event Action RouteCompleted;
@@ -35,6 +40,7 @@ public class NPCFixedRoute : MonoBehaviour
     private Coroutine waitRoutine;
     private int currentPointIndex;
     private bool isFollowingRoute;
+    private RouteDefinition activeRoute;
     private bool shouldResumePatrol;
     private bool hasInteractionLock;
     private bool interactionWasEnabled;
@@ -70,6 +76,7 @@ public class NPCFixedRoute : MonoBehaviour
 
         waitRoutine = null;
         isFollowingRoute = false;
+        activeRoute = null;
         shouldResumePatrol = false;
         RestoreInteractionAfterRoute();
     }
@@ -86,7 +93,7 @@ public class NPCFixedRoute : MonoBehaviour
         // only necessary when this component has multiple routes to choose from.
         if (routes != null && routes.Length == 1 && routes[0] != null)
         {
-            TryBeginRoute(routes[0].RoutePoints, true);
+            TryBeginRoute(routes[0]);
             return;
         }
 
@@ -104,7 +111,8 @@ public class NPCFixedRoute : MonoBehaviour
 
     public bool TryApplyCompletedRoute(string routeId)
     {
-        if (!TryGetRouteDestination(routeId, out Transform destination))
+        if (!TryGetRoute(routeId, out RouteDefinition route) ||
+            !TryGetRouteDestination(route, out Transform destination))
         {
             Debug.LogWarning(
                 $"{gameObject.name} has no valid destination for fixed NPC route '{routeId}'.",
@@ -126,6 +134,7 @@ public class NPCFixedRoute : MonoBehaviour
                 transform.position.z);
 
         Physics2D.SyncTransforms();
+        ApplyArrivalFacing(route);
         return true;
     }
 
@@ -137,7 +146,7 @@ public class NPCFixedRoute : MonoBehaviour
             return false;
         }
 
-        return TryBeginRoute(route.RoutePoints, true);
+        return TryBeginRoute(route);
     }
 
     public bool TryDisableInteractionUntilRouteCompletes()
@@ -180,9 +189,19 @@ public class NPCFixedRoute : MonoBehaviour
         }
 
         currentPointIndex = 0;
+        activeRoute = null;
         activeRoutePoints = requestedRoutePoints;
         isFollowingRoute = true;
         MoveToCurrentPoint();
+        return true;
+    }
+
+    private bool TryBeginRoute(RouteDefinition route)
+    {
+        if (!TryBeginRoute(route.RoutePoints, true))
+            return false;
+
+        activeRoute = route;
         return true;
     }
 
@@ -211,11 +230,11 @@ public class NPCFixedRoute : MonoBehaviour
         return matchingRoute != null;
     }
 
-    private bool TryGetRouteDestination(string routeId, out Transform destination)
+    private static bool TryGetRouteDestination(RouteDefinition route, out Transform destination)
     {
         destination = null;
 
-        if (!TryGetRoute(routeId, out RouteDefinition route) || route.RoutePoints == null)
+        if (route == null || route.RoutePoints == null)
             return false;
 
         for (int index = route.RoutePoints.Length - 1; index >= 0; index--)
@@ -238,6 +257,7 @@ public class NPCFixedRoute : MonoBehaviour
         waitRoutine = null;
         isFollowingRoute = false;
         shouldResumePatrol = false;
+        activeRoute = null;
         activeRoutePoints = null;
         mover.Stop();
         RestoreInteractionAfterRoute();
@@ -342,9 +362,13 @@ public class NPCFixedRoute : MonoBehaviour
 
     private void CompleteRoute()
     {
+        RouteDefinition completedRoute = activeRoute;
         mover.Stop();
         isFollowingRoute = false;
+        activeRoute = null;
         activeRoutePoints = null;
+
+        ApplyArrivalFacing(completedRoute);
 
         bool resumePatrol = shouldResumePatrol && patrol != null;
         shouldResumePatrol = false;
@@ -356,6 +380,12 @@ public class NPCFixedRoute : MonoBehaviour
 
         // External mission logic runs last, so it can override the resumed patrol.
         RouteCompleted?.Invoke();
+    }
+
+    private void ApplyArrivalFacing(RouteDefinition route)
+    {
+        if (route != null && route.OverrideArrivalFacing)
+            mover.SetRestingFacing(route.ArrivalFacing);
     }
 
     private void RestoreInteractionAfterRoute()

@@ -4,8 +4,28 @@ using UnityEngine.InputSystem;
 
 public class InteractionDetector : MonoBehaviour
 {
+    [Tooltip("Point NPCs should face, usually the player's sprite feet. Uses the player's Animator child when unassigned.")]
+    [SerializeField] private Transform facingTarget;
+
     private Dictionary<Collider2D, IInteractable> interactablesInRange = new ();
+    private readonly Dictionary<Collider2D, NPCMover> facingNPCsInRange = new();
     private IInteractable highlightedInteractable;
+
+    private void Awake()
+    {
+        if (facingTarget != null)
+            return;
+
+        Rigidbody2D playerBody = GetComponentInParent<Rigidbody2D>();
+        Animator playerAnimator = playerBody != null
+            ? playerBody.GetComponentInChildren<Animator>(true)
+            : null;
+        facingTarget = playerAnimator != null
+            ? playerAnimator.transform
+            : playerBody != null
+                ? playerBody.transform
+                : transform.parent != null ? transform.parent : transform;
+    }
 
     private void Update()
     {
@@ -94,15 +114,41 @@ public class InteractionDetector : MonoBehaviour
             invalidColliders.Add(kvp.Key);
         }
 
-        if (invalidColliders == null)
-            return;
+        if (invalidColliders != null)
+        {
+            foreach (Collider2D invalidCollider in invalidColliders)
+                interactablesInRange.Remove(invalidCollider);
+        }
 
-        foreach (Collider2D invalidCollider in invalidColliders)
-            interactablesInRange.Remove(invalidCollider);
+        invalidColliders = null;
+        foreach (var kvp in facingNPCsInRange)
+        {
+            if (kvp.Key != null && kvp.Key.enabled && kvp.Key.gameObject.activeInHierarchy &&
+                kvp.Value != null && kvp.Value.isActiveAndEnabled)
+            {
+                continue;
+            }
+
+            invalidColliders ??= new List<Collider2D>();
+            invalidColliders.Add(kvp.Key);
+        }
+
+        if (invalidColliders != null)
+        {
+            foreach (Collider2D invalidCollider in invalidColliders)
+                RemoveFacingNPC(invalidCollider);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        NPCMover mover = collision.GetComponentInParent<NPCMover>();
+        if (mover != null)
+        {
+            facingNPCsInRange[collision] = mover;
+            mover.SetNearbyPlayer(facingTarget);
+        }
+
         if(collision.TryGetComponent(out IInteractable interactable))
         {
             interactablesInRange[collision] = interactable;
@@ -114,6 +160,8 @@ public class InteractionDetector : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        RemoveFacingNPC(collision);
+
         if(collision.TryGetComponent(out IInteractable interactable))
         {
             interactable.showIcon(false);
@@ -122,10 +170,32 @@ public class InteractionDetector : MonoBehaviour
         }
     }
 
+    private void RemoveFacingNPC(Collider2D collision)
+    {
+        if (!facingNPCsInRange.Remove(collision, out NPCMover mover) || mover == null)
+            return;
+
+        foreach (NPCMover remainingMover in facingNPCsInRange.Values)
+        {
+            if (remainingMover == mover)
+                return;
+        }
+
+        mover.ClearNearbyPlayer(facingTarget);
+    }
+
     private void OnDisable()
     {
         highlightedInteractable?.showHighlight(false);
         highlightedInteractable = null;
         interactablesInRange.Clear();
+
+        foreach (NPCMover mover in facingNPCsInRange.Values)
+        {
+            if (mover != null)
+                mover.ClearNearbyPlayer(facingTarget);
+        }
+
+        facingNPCsInRange.Clear();
     }
 }

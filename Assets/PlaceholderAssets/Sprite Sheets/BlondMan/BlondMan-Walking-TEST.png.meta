@@ -1,0 +1,5137 @@
+fileFormatVersion: 2
+guid: 30e6f8e16a8d12c4ab972aeb06685d2e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8307028134994871860
+    second: BLONDMAN_WALKING_390px 24Frames_0
+  - first:
+      213: -2660531424896830224
+    second: BLONDMAN_WALKING_390px 24Frames_1
+  - first:
+      213: 4445517602628278223
+    second: BLONDMAN_WALKING_390px 24Frames_2
+  - first:
+      213: -251570893687473988
+    second: BLONDMAN_WALKING_390px 24Frames_3
+  - first:
+      213: 9139594919316278830
+    second: BLONDMAN_WALKING_390px 24Frames_4
+  - first:
+      213: 6339631574166756602
+    second: BLONDMAN_WALKING_390px 24Frames_5
+  - first:
+      213: -5766346042122946488
+    second: BLONDMAN_WALKING_390px 24Frames_6
+  - first:
+      213: 7827139535950098301
+    second: BLONDMAN_WALKING_390px 24Frames_7
+  - first:
+      213: -4591761965529188621
+    second: BLONDMAN_WALKING_390px 24Frames_8
+  - first:
+      213: -3395418343237452843
+    second: BLONDMAN_WALKING_390px 24Frames_9
+  - first:
+      213: -1057947575677627601
+    second: BLONDMAN_WALKING_390px 24Frames_10
+  - first:
+      213: -6860798811060730439
+    second: BLONDMAN_WALKING_390px 24Frames_11
+  - first:
+      213: -7424256540818586974
+    second: BLONDMAN_WALKING_390px 24Frames_12
+  - first:
+      213: -3725129417894360852
+    second: BLONDMAN_WALKING_390px 24Frames_13
+  - first:
+      213: -426189799304157090
+    second: BLONDMAN_WALKING_390px 24Frames_14
+  - first:
+      213: -594045265313116757
+    second: BLONDMAN_WALKING_390px 24Frames_15
+  - first:
+      213: -6277188290568406725
+    second: BLONDMAN_WALKING_390px 24Frames_16
+  - first:
+      213: -6696814995006600094
+    second: BLONDMAN_WALKING_390px 24Frames_17
+  - first:
+      213: 5322699089466388980
+    second: BLONDMAN_WALKING_390px 24Frames_18
+  - first:
+      213: -6707852210661115782
+    second: BLONDMAN_WALKING_390px 24Frames_19
+  - first:
+      213: -732700302888916173
+    second: BLONDMAN_WALKING_390px 24Frames_20
+  - first:
+      213: 3521278123824895026
+    second: BLONDMAN_WALKING_390px 24Frames_21
+  - first:
+      213: -1344115195492529676
+    second: BLONDMAN_WALKING_390px 24Frames_22
+  - first:
+      213: 406741684250104885
+    second: BLONDMAN_WALKING_390px 24Frames_23
+  - first:
+      213: 5371829283075925587
+    second: BLONDMAN_WALKING_390px 24Frames_24
+  - first:
+      213: -5106903364941925064
+    second: BLONDMAN_WALKING_390px 24Frames_25
+  - first:
+      213: 5564358727761740249
+    second: BLONDMAN_WALKING_390px 24Frames_26
+  - first:
+      213: 8939585507599188817
+    second: BLONDMAN_WALKING_390px 24Frames_27
+  - first:
+      213: -3707351668948397535
+    second: BLONDMAN_WALKING_390px 24Frames_28
+  - first:
+      213: 8216169542079471463
+    second: BLONDMAN_WALKING_390px 24Frames_29
+  - first:
+      213: 3791331826799880866
+    second: BLONDMAN_WALKING_390px 24Frames_30
+  - first:
+      213: -715203425050783515
+    second: BLONDMAN_WALKING_390px 24Frames_31
+  - first:
+      213: -8569580612174588888
+    second: BLONDMAN_WALKING_390px 24Frames_32
+  - first:
+      213: 2695189377434137936
+    second: BLONDMAN_WALKING_390px 24Frames_33
+  - first:
+      213: 6784529167260141476
+    second: BLONDMAN_WALKING_390px 24Frames_34
+  - first:
+      213: 6027935398145673572
+    second: BLONDMAN_WALKING_390px 24Frames_35
+  - first:
+      213: 6415107903894380716
+    second: BLONDMAN_WALKING_390px 24Frames_36
+  - first:
+      213: 1548087964389429475
+    second: BLONDMAN_WALKING_390px 24Frames_37
+  - first:
+      213: -2374623348341339941
+    second: BLONDMAN_WALKING_390px 24Frames_38
+  - first:
+      213: 3392689723378373494
+    second: BLONDMAN_WALKING_390px 24Frames_39
+  - first:
+      213: 5184911659997063910
+    second: BLONDMAN_WALKING_390px 24Frames_40
+  - first:
+      213: -2680393784079978676
+    second: BLONDMAN_WALKING_390px 24Frames_41
+  - first:
+      213: 6187340720002649400
+    second: BLONDMAN_WALKING_390px 24Frames_42
+  - first:
+      213: 1580864056212246188
+    second: BLONDMAN_WALKING_390px 24Frames_43
+  - first:
+      213: 5362937210701160188
+    second: BLONDMAN_WALKING_390px 24Frames_44
+  - first:
+      213: 8293812608088699035
+    second: BLONDMAN_WALKING_390px 24Frames_45
+  - first:
+      213: -8912135025197890874
+    second: BLONDMAN_WALKING_390px 24Frames_46
+  - first:
+      213: 6075035580155710550
+    second: BLONDMAN_WALKING_390px 24Frames_47
+  - first:
+      213: 8637706165466245954
+    second: BLONDMAN_WALKING_390px 24Frames_48
+  - first:
+      213: -7261886946710686080
+    second: BLONDMAN_WALKING_390px 24Frames_49
+  - first:
+      213: -5187896028817715816
+    second: BLONDMAN_WALKING_390px 24Frames_50
+  - first:
+      213: -2069979992467465244
+    second: BLONDMAN_WALKING_390px 24Frames_51
+  - first:
+      213: -5564152865980816838
+    second: BLONDMAN_WALKING_390px 24Frames_52
+  - first:
+      213: -3562953671634115581
+    second: BLONDMAN_WALKING_390px 24Frames_53
+  - first:
+      213: -8318240886008540784
+    second: BLONDMAN_WALKING_390px 24Frames_54
+  - first:
+      213: 8617633134465310494
+    second: BLONDMAN_WALKING_390px 24Frames_55
+  - first:
+      213: 7194539413658597180
+    second: BLONDMAN_WALKING_390px 24Frames_56
+  - first:
+      213: 511006717126973942
+    second: BLONDMAN_WALKING_390px 24Frames_57
+  - first:
+      213: 2685317212731412248
+    second: BLONDMAN_WALKING_390px 24Frames_58
+  - first:
+      213: 2998128775091307867
+    second: BLONDMAN_WALKING_390px 24Frames_59
+  - first:
+      213: 1339989102433628598
+    second: BLONDMAN_WALKING_390px 24Frames_60
+  - first:
+      213: 673566795961658181
+    second: BLONDMAN_WALKING_390px 24Frames_61
+  - first:
+      213: 8161414019398938262
+    second: BLONDMAN_WALKING_390px 24Frames_62
+  - first:
+      213: -7041821509798003781
+    second: BLONDMAN_WALKING_390px 24Frames_63
+  - first:
+      213: -2843624104082683961
+    second: BLONDMAN_WALKING_390px 24Frames_64
+  - first:
+      213: -5034582931996989980
+    second: BLONDMAN_WALKING_390px 24Frames_65
+  - first:
+      213: 3118234320728231944
+    second: BLONDMAN_WALKING_390px 24Frames_66
+  - first:
+      213: -7184387402210534907
+    second: BLONDMAN_WALKING_390px 24Frames_67
+  - first:
+      213: 718954386907864639
+    second: BLONDMAN_WALKING_390px 24Frames_68
+  - first:
+      213: -339433750781831751
+    second: BLONDMAN_WALKING_390px 24Frames_69
+  - first:
+      213: -3293871064728008333
+    second: BLONDMAN_WALKING_390px 24Frames_70
+  - first:
+      213: 7240482626299833463
+    second: BLONDMAN_WALKING_390px 24Frames_71
+  - first:
+      213: 888840231747793605
+    second: BLONDMAN_WALKING_390px 24Frames_72
+  - first:
+      213: 5446577975575094207
+    second: BLONDMAN_WALKING_390px 24Frames_73
+  - first:
+      213: -5525988092992975816
+    second: BLONDMAN_WALKING_390px 24Frames_74
+  - first:
+      213: -4598178910984866686
+    second: BLONDMAN_WALKING_390px 24Frames_75
+  - first:
+      213: 5856018249735761458
+    second: BLONDMAN_WALKING_390px 24Frames_76
+  - first:
+      213: -8118086503171007884
+    second: BLONDMAN_WALKING_390px 24Frames_77
+  - first:
+      213: -1175301240327749894
+    second: BLONDMAN_WALKING_390px 24Frames_78
+  - first:
+      213: -6040115115520369927
+    second: BLONDMAN_WALKING_390px 24Frames_79
+  - first:
+      213: -1960994030813731178
+    second: BLONDMAN_WALKING_390px 24Frames_80
+  - first:
+      213: 7510195442972257683
+    second: BLONDMAN_WALKING_390px 24Frames_81
+  - first:
+      213: 6149163769686766696
+    second: BLONDMAN_WALKING_390px 24Frames_82
+  - first:
+      213: 2356981665137270198
+    second: BLONDMAN_WALKING_390px 24Frames_83
+  - first:
+      213: 4435900769456866714
+    second: BLONDMAN_WALKING_390px 24Frames_84
+  - first:
+      213: 851848953627329813
+    second: BLONDMAN_WALKING_390px 24Frames_85
+  - first:
+      213: -480518919520188240
+    second: BLONDMAN_WALKING_390px 24Frames_86
+  - first:
+      213: -552999093242702584
+    second: BLONDMAN_WALKING_390px 24Frames_87
+  - first:
+      213: 7884976050476052704
+    second: BLONDMAN_WALKING_390px 24Frames_88
+  - first:
+      213: -2531367179511136199
+    second: BLONDMAN_WALKING_390px 24Frames_89
+  - first:
+      213: 2268177938053517538
+    second: BLONDMAN_WALKING_390px 24Frames_90
+  - first:
+      213: 514382280158908796
+    second: BLONDMAN_WALKING_390px 24Frames_91
+  - first:
+      213: 675934676937945311
+    second: BLONDMAN_WALKING_390px 24Frames_92
+  - first:
+      213: -5777873639372390979
+    second: BLONDMAN_WALKING_390px 24Frames_93
+  - first:
+      213: 3404162387715528122
+    second: BLONDMAN_WALKING_390px 24Frames_94
+  - first:
+      213: -8362639791985219331
+    second: BLONDMAN_WALKING_390px 24Frames_95
+  - first:
+      213: -8576351457452870760
+    second: BLONDMAN_WALKING_390px 24Frames_96
+  - first:
+      213: 8052105542708639468
+    second: BLONDMAN_WALKING_390px 24Frames_97
+  - first:
+      213: 4716589997577477084
+    second: BLONDMAN_WALKING_390px 24Frames_98
+  - first:
+      213: -4649096912058549060
+    second: BLONDMAN_WALKING_390px 24Frames_99
+  - first:
+      213: 5912729954802666240
+    second: BLONDMAN_WALKING_390px 24Frames_100
+  - first:
+      213: 8186501288161020936
+    second: BLONDMAN_WALKING_390px 24Frames_101
+  - first:
+      213: -6658116196741380776
+    second: BLONDMAN_WALKING_390px 24Frames_102
+  - first:
+      213: -712739999292077754
+    second: BLONDMAN_WALKING_390px 24Frames_103
+  - first:
+      213: 8868285706942390405
+    second: BLONDMAN_WALKING_390px 24Frames_104
+  - first:
+      213: 3393180189716897951
+    second: BLONDMAN_WALKING_390px 24Frames_105
+  - first:
+      213: -743681745051441894
+    second: BLONDMAN_WALKING_390px 24Frames_106
+  - first:
+      213: 4150906788858099978
+    second: BLONDMAN_WALKING_390px 24Frames_107
+  - first:
+      213: -8855802202702099252
+    second: BLONDMAN_WALKING_390px 24Frames_108
+  - first:
+      213: -6580085293823924657
+    second: BLONDMAN_WALKING_390px 24Frames_109
+  - first:
+      213: 2426962333339436829
+    second: BLONDMAN_WALKING_390px 24Frames_110
+  - first:
+      213: -6218308574282531626
+    second: BLONDMAN_WALKING_390px 24Frames_111
+  - first:
+      213: -27380072799234277
+    second: BLONDMAN_WALKING_390px 24Frames_112
+  - first:
+      213: -7035844071001456215
+    second: BLONDMAN_WALKING_390px 24Frames_113
+  - first:
+      213: 849949325967999868
+    second: BLONDMAN_WALKING_390px 24Frames_114
+  - first:
+      213: 6428181841136839692
+    second: BLONDMAN_WALKING_390px 24Frames_115
+  - first:
+      213: -1365469785542490904
+    second: BLONDMAN_WALKING_390px 24Frames_116
+  - first:
+      213: -5476322105348685566
+    second: BLONDMAN_WALKING_390px 24Frames_117
+  - first:
+      213: 476871824914659225
+    second: BLONDMAN_WALKING_390px 24Frames_118
+  - first:
+      213: -6624614698183114263
+    second: BLONDMAN_WALKING_390px 24Frames_119
+  - first:
+      213: -6046869738222462321
+    second: BLONDMAN_WALKING_390px 24Frames_120
+  - first:
+      213: 1692087335303416945
+    second: BLONDMAN_WALKING_390px 24Frames_121
+  - first:
+      213: -976500670867353534
+    second: BLONDMAN_WALKING_390px 24Frames_122
+  - first:
+      213: -6680745315224402174
+    second: BLONDMAN_WALKING_390px 24Frames_123
+  - first:
+      213: 1580547957490221256
+    second: BLONDMAN_WALKING_390px 24Frames_124
+  - first:
+      213: -1326044851782682199
+    second: BLONDMAN_WALKING_390px 24Frames_125
+  - first:
+      213: -5482047432302454557
+    second: BLONDMAN_WALKING_390px 24Frames_126
+  - first:
+      213: -1035636660637218750
+    second: BLONDMAN_WALKING_390px 24Frames_127
+  - first:
+      213: 2236647473992305278
+    second: BLONDMAN_WALKING_390px 24Frames_128
+  - first:
+      213: 2587131051939515840
+    second: BLONDMAN_WALKING_390px 24Frames_129
+  - first:
+      213: -369903157581720605
+    second: BLONDMAN_WALKING_390px 24Frames_130
+  - first:
+      213: -1893602241426742385
+    second: BLONDMAN_WALKING_390px 24Frames_131
+  - first:
+      213: 2805066102490289876
+    second: BLONDMAN_WALKING_390px 24Frames_132
+  - first:
+      213: -782400039764468676
+    second: BLONDMAN_WALKING_390px 24Frames_133
+  - first:
+      213: -1323132466408712726
+    second: BLONDMAN_WALKING_390px 24Frames_134
+  - first:
+      213: 3020760105847712319
+    second: BLONDMAN_WALKING_390px 24Frames_135
+  - first:
+      213: -8315660889455332689
+    second: BLONDMAN_WALKING_390px 24Frames_136
+  - first:
+      213: 6391317452274638962
+    second: BLONDMAN_WALKING_390px 24Frames_137
+  - first:
+      213: 7535566159858738405
+    second: BLONDMAN_WALKING_390px 24Frames_138
+  - first:
+      213: 595039660707538937
+    second: BLONDMAN_WALKING_390px 24Frames_139
+  - first:
+      213: 4531917358024613602
+    second: BLONDMAN_WALKING_390px 24Frames_140
+  - first:
+      213: -6844548165863279487
+    second: BLONDMAN_WALKING_390px 24Frames_141
+  - first:
+      213: 3660499255156950447
+    second: BLONDMAN_WALKING_390px 24Frames_142
+  - first:
+      213: 6876181651510454391
+    second: BLONDMAN_WALKING_390px 24Frames_143
+  - first:
+      213: 3692639358039425192
+    second: BLONDMAN_WALKING_390px 24Frames_144
+  - first:
+      213: -1684708686209892918
+    second: BLONDMAN_WALKING_390px 24Frames_145
+  - first:
+      213: -8703050819484229206
+    second: BLONDMAN_WALKING_390px 24Frames_146
+  - first:
+      213: -7958577533842623289
+    second: BLONDMAN_WALKING_390px 24Frames_147
+  - first:
+      213: 654517458766044774
+    second: BLONDMAN_WALKING_390px 24Frames_148
+  - first:
+      213: -8628582870102115651
+    second: BLONDMAN_WALKING_390px 24Frames_149
+  - first:
+      213: -1266044933791796993
+    second: BLONDMAN_WALKING_390px 24Frames_150
+  - first:
+      213: 5090670555764105648
+    second: BLONDMAN_WALKING_390px 24Frames_151
+  - first:
+      213: 1047508425819285739
+    second: BLONDMAN_WALKING_390px 24Frames_152
+  - first:
+      213: 7536066095683257786
+    second: BLONDMAN_WALKING_390px 24Frames_153
+  - first:
+      213: -1166545883612203707
+    second: BLONDMAN_WALKING_390px 24Frames_154
+  - first:
+      213: -3446372872456752597
+    second: BLONDMAN_WALKING_390px 24Frames_155
+  - first:
+      213: 4028672787975233727
+    second: BLONDMAN_WALKING_390px 24Frames_156
+  - first:
+      213: 9128170714842638386
+    second: BLONDMAN_WALKING_390px 24Frames_157
+  - first:
+      213: -7549814681916197478
+    second: BLONDMAN_WALKING_390px 24Frames_158
+  - first:
+      213: 7415061083753626868
+    second: BLONDMAN_WALKING_390px 24Frames_159
+  - first:
+      213: 6005186197162581655
+    second: BLONDMAN_WALKING_390px 24Frames_160
+  - first:
+      213: -4864918487246187304
+    second: BLONDMAN_WALKING_390px 24Frames_161
+  - first:
+      213: 3163545117651861089
+    second: BLONDMAN_WALKING_390px 24Frames_162
+  - first:
+      213: -5276209570183374137
+    second: BLONDMAN_WALKING_390px 24Frames_163
+  - first:
+      213: -1438632150295819883
+    second: BLONDMAN_WALKING_390px 24Frames_164
+  - first:
+      213: 4472044556548494304
+    second: BLONDMAN_WALKING_390px 24Frames_165
+  - first:
+      213: -1340472263048917108
+    second: BLONDMAN_WALKING_390px 24Frames_166
+  - first:
+      213: -1098249295538239137
+    second: BLONDMAN_WALKING_390px 24Frames_167
+  - first:
+      213: 53953113799670000
+    second: BLONDMAN_WALKING_390px 24Frames_168
+  - first:
+      213: -8246845557653834146
+    second: BLONDMAN_WALKING_390px 24Frames_169
+  - first:
+      213: -9145733009396365055
+    second: BLONDMAN_WALKING_390px 24Frames_170
+  - first:
+      213: -5690950932026150785
+    second: BLONDMAN_WALKING_390px 24Frames_171
+  - first:
+      213: -9112334775968639404
+    second: BLONDMAN_WALKING_390px 24Frames_172
+  - first:
+      213: -6739944255123504316
+    second: BLONDMAN_WALKING_390px 24Frames_173
+  - first:
+      213: 272065515024695559
+    second: BLONDMAN_WALKING_390px 24Frames_174
+  - first:
+      213: 4962501082110733615
+    second: BLONDMAN_WALKING_390px 24Frames_175
+  - first:
+      213: -7030734026145300346
+    second: BLONDMAN_WALKING_390px 24Frames_176
+  - first:
+      213: -3389264660233730965
+    second: BLONDMAN_WALKING_390px 24Frames_177
+  - first:
+      213: 275934552912438718
+    second: BLONDMAN_WALKING_390px 24Frames_178
+  - first:
+      213: 5536690263304567511
+    second: BLONDMAN_WALKING_390px 24Frames_179
+  - first:
+      213: 7459681638053897367
+    second: BLONDMAN_WALKING_390px 24Frames_180
+  - first:
+      213: 8319421187299075791
+    second: BLONDMAN_WALKING_390px 24Frames_181
+  - first:
+      213: 4411238685419582579
+    second: BLONDMAN_WALKING_390px 24Frames_182
+  - first:
+      213: -646146372844366302
+    second: BLONDMAN_WALKING_390px 24Frames_183
+  - first:
+      213: 6520756605946290902
+    second: BLONDMAN_WALKING_390px 24Frames_184
+  - first:
+      213: 1969749051128706127
+    second: BLONDMAN_WALKING_390px 24Frames_185
+  - first:
+      213: -2714506266770408665
+    second: BLONDMAN_WALKING_390px 24Frames_186
+  - first:
+      213: -2099142149274623936
+    second: BLONDMAN_WALKING_390px 24Frames_187
+  - first:
+      213: 4713457050494439581
+    second: BLONDMAN_WALKING_390px 24Frames_188
+  - first:
+      213: -5680629384164922549
+    second: BLONDMAN_WALKING_390px 24Frames_189
+  - first:
+      213: 5857054203597699766
+    second: BLONDMAN_WALKING_390px 24Frames_190
+  - first:
+      213: 1751846529438395829
+    second: BLONDMAN_WALKING_390px 24Frames_191
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d032fa3e8ea5ef348a7cbcc3d298ef77
+      internalID: -465903860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a499dd8156d6f1c4b875c8ade91b0411
+      internalID: 1103897902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eaa569937cf8e45b48382d9ed7b10e
+      internalID: 23263921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_3
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cad5ceb34fdcc46bb09b1729515e84
+      internalID: 2101777781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa6c37a7f6a662489dbd9722ab4e50d
+      internalID: -1944664549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9700472f6df2541a0f6a49ef54b348
+      internalID: 434806090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_6
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a19107cf490104419f2360c565aca43
+      internalID: 1545995753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_7
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dded75fbe76bf8b4b9ac43d784476b6f
+      internalID: -1360750520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_8
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c98335692cf9c42be33546a48ec641
+      internalID: 1658088388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_9
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb02820602f9443499b8f0bcb0f0096e
+      internalID: 696311146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_10
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0eff97905a50184e904a82d36811bfa
+      internalID: 1676083399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_11
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9886961fc1e0a9b408af7e7dd58e20d1
+      internalID: 18049420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_12
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162da25ed247cc8429b721089797af06
+      internalID: -2055804717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_13
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8371696509281194e9d59f3975e6741c
+      internalID: 2134723817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_14
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49896865dea2bd41855f6efc0c02e37
+      internalID: 56178911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_15
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70951ab5270a9954ebbf2e1ce6e25e16
+      internalID: -1477288639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_16
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525215df6b908b34187f7f72e13bc501
+      internalID: 695186172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_17
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcd6a55f27021441ac6a53e0e99561a
+      internalID: 95805231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_18
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b2efe0f6680854388525f18ae81bb3
+      internalID: 1052416916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_19
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58362701002eda3489235b4bfd9888ab
+      internalID: -1278610162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_20
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d658ad4d323314d8181ed02da0b80d
+      internalID: 1470383860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_21
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5026906d9873aa459f63a6bb1cb9274
+      internalID: 157637718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_22
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1748ab871f27a4aa588f81f8beb1fe
+      internalID: -992243482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_23
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb8b92e183bb447a5aa01eecdc55a3
+      internalID: 726769736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7bc5f35f3f2f54aaec67448a5cbf13
+      internalID: -1129202019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4821d0fa4ca71ee4baf9f3689a1819c2
+      internalID: -1540405642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbb8a9b4591ca1489de0d21812e046a
+      internalID: 724468187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7b09ba000ea1b448b74fdb38a891cb
+      internalID: -1311096479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4329abd92b653cb4c933d0b38e87c65e
+      internalID: 430369394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_29
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3999482407fed4cb52b8141b130ab0
+      internalID: -1217644744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_30
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ecb0c631390d94e8dbd86ab80b065d
+      internalID: -36600869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_31
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fee20fa2b543e4189b63375673050d
+      internalID: -1981333140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_32
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e185273a56cb4d44bbb3c0cf74a1bf27
+      internalID: 1945076427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_33
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e651579a7c7c891459dbdbad704bb49b
+      internalID: -204094353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_34
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f987c0bde33d234cab8b69e0d4e3638
+      internalID: 1655861526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_35
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e12fb7eeacec1841b5fa3d7b339e063
+      internalID: -1411299301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_36
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db287c7ce177cc4429c21817b750013f
+      internalID: 409006670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_37
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c986913941048da4bbf0be21be0786e7
+      internalID: -297260884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_38
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486b9c99362847a40be1d05646bebcea
+      internalID: -1301353989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_39
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11260d8eaf4fdad43b936b213fc54c1a
+      internalID: 1744360027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_40
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d19333425d2a80409e5c55c025979e5
+      internalID: 700803359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_41
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ff494c62f7bc946b845b0a27b1a0bc
+      internalID: 1254851331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_42
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c30c66bce9faf24f8a1a655d80def34
+      internalID: 2028590406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_43
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6f454816bc7df44acbd72b92484f4a
+      internalID: -1551586920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_44
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa76dc93e2af77243a9c4758d06a75e6
+      internalID: -571791025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_45
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04419f038e7496a41b6ed747a281cc83
+      internalID: 502835791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_46
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492e96e517d47e34c9d5801db0e6c42a
+      internalID: 441446146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_47
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257a457458310a943be59b68fcc4006a
+      internalID: 769456223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d184473912b76419601dc44e418bc4
+      internalID: 719691522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b861445fff56bbc479338e0ee001b5cd
+      internalID: -1004232075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_50
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f276865ac170c01409c05219426a4707
+      internalID: 1556631843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_51
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a66add1e28d67e449e10e6c98bfeadc
+      internalID: -1219604505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_52
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155186f08de5c8c44a63267fd32102b7
+      internalID: -1932821796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_53
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ee38f4aefb1e3439d09f5eaf16e993
+      internalID: 1899626709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_54
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177b6b48bb0fd0846b0e1a559e98b82d
+      internalID: -1297662223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_55
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a8149f12ce8b2458c35386fa645219
+      internalID: 1431396079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_56
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5024e6961c1cf5a429cebeb10f0f947a
+      internalID: 331927194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_57
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21369b064956a9646990a82450fd8ffe
+      internalID: -963149771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_58
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd3ee44a9033c443ba5d1f07936d3ae
+      internalID: 784523259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_59
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b2956298165294389701e28096704c
+      internalID: 744111262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_60
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4f48ee07b5772448abf076fe135d50
+      internalID: 1771947146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_61
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb65f38c928e7d40b1fa3a73db022f1
+      internalID: 1931918179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_62
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20fc402cf2a31e4f95fee63fad7df0f
+      internalID: 1425473322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_63
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b87611ec78d59409489ee3534135ed
+      internalID: 366285095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_64
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10048cc04ce899d48a97940539f7de96
+      internalID: -1847434262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_65
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f128319cb2e59341b159544962cfa9c
+      internalID: 1323969312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_66
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6a970842ab9a2469219ca12eb367a4
+      internalID: -1181768538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_67
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12778696d9ae5d40a3a7479d2e064c7
+      internalID: 1155019210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_68
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08616e9e7be1ff146be9cc5a40dbd01f
+      internalID: -737120163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_69
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e9ba2baf93d3c42a662b62b1c2f1c6
+      internalID: 1107981246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_70
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a4fe74beaa17c45a5f86f965f3b21e
+      internalID: -1179134910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_71
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5890c5328cec5cb41b02c2bd0a03fec3
+      internalID: 686413908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e4c7d42b2179f4aa8d7592bf748cf1
+      internalID: -396582725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b876bc5825bfb4890ca2d144333c87
+      internalID: 1315249786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335734b9545a7044eb03dba0b99b7c90
+      internalID: 1411451935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_75
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40aa469162333874b914973643119359
+      internalID: -1136640247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_76
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7906c8bd1f6cb4e89822d24296ea04
+      internalID: 399941538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_77
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff628a075e378a74b859eac8cc8dd068
+      internalID: 105401181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_78
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56746d3faadc1d44097766fbc702211c
+      internalID: -1921795345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_79
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee24918b3c15854e9221f3b9d2a8814
+      internalID: -1238329653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_80
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6e3e8cbaf7f2047b86a4d5b7e1e28c
+      internalID: -752323640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_81
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb562654711141c4f9cdfebe83bfde63
+      internalID: 1515434103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_82
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c729e19eb40cf144c8faaeda5903c4fc
+      internalID: -733061762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_83
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50af057c58b4f434eb628006bebb9ec9
+      internalID: 134148521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_84
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7f82e7c7071f7469024b902f2ede7a
+      internalID: -1866287585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_85
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32cdfc95ee21074abd5e61e1ac8c8de
+      internalID: 2110728415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_86
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270793d686850a546a8a0b0eefc38d9d
+      internalID: -1688368110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_87
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b10212bbb0f4048ace3b3d7bac45ae
+      internalID: -291917818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_88
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44043f94fd2724c41b00f3c765a0cd0b
+      internalID: 106985296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_89
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4654e310a480828438f62bc3fd3bc03d
+      internalID: 460205790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_90
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56982c24fd88c24882a268ce38f2712
+      internalID: 117308499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_91
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f360808cedf8949a72bd15b73dc680
+      internalID: 141546358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_92
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d499d7593a36a4dab62e716c6a613d
+      internalID: -274259199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_93
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c9c215db20c9d4c878bfbe9ca409b3
+      internalID: -1067810781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_94
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb04c27df31abb141b056be8faa806ee
+      internalID: 309000806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_95
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725ca0d84ce45fa43a0c353471bb899e
+      internalID: 960375111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c6c59acad1ee2409d6a8e56d9b9731
+      internalID: 481006142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_97
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69eba61c937a4c347adedf1f5c714085
+      internalID: 470144873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_98
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd366e734034744e8034383d2729670
+      internalID: -941940479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_99
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f514765de2c6e554cb976e78d7847c1d
+      internalID: 118241500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_100
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdadfcb3bf6cac44da0c04a9740cf648
+      internalID: -1230447962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_101
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470787d84ed0e1f4ba45434e22006dae
+      internalID: -434248947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_102
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82128a7ba9a24eb4d92ec0199431347e
+      internalID: 316668738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_103
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a225043d91afcc141907e0ddc36c179e
+      internalID: -27336918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_104
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a8399e85c00d34d9b7de356ba294be
+      internalID: -384882470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_105
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e79d53d346acf8488e667bfb271d06d
+      internalID: -434519315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_106
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f4f1bd33f1529438176009ffb6c8d4
+      internalID: 1555187732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_107
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276e6e10b79da5f449b4ebdb2f317702
+      internalID: 643187879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_108
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7e97a961ceecd499b098f7843db051
+      internalID: 1111481591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_109
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e445a651a01a53f43955cada11a0ccdd
+      internalID: -659505342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_110
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f4670d792530749ac8a3856354476e
+      internalID: -438710784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_111
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0e6f34e615fba4ca7dd84c1b3891c5
+      internalID: -510402362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_112
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ef57c9cfcf1344d874f8a3a958ada6
+      internalID: 786348977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_113
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230ab9c2830789b4893d307c8263aa75
+      internalID: -2125914558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_114
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e08dd902bb75f9469b64120b37e67bc
+      internalID: -996567651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_115
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8d296d94a8b5f49bbae11a92902ad2
+      internalID: -1114567547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_116
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8aa9e66311af849b21f6359bab96f4
+      internalID: 435180023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_117
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fad44c728b0a3439fed251f6cbee12
+      internalID: -1385252953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_118
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf938ead2515a2d4ab353439144846be
+      internalID: -1019948842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_119
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae7691abbc68f64f8e6920bc03285cb
+      internalID: 1360545039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b38446d50d4e7a40ad35ff1e83e3f31
+      internalID: -860583031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_121
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ba20cf4cf2bec448afa574ebd37c1d
+      internalID: 1210743134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_122
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf132152e6c9934f868a5798365ad00
+      internalID: -1309043103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_123
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e45facb61913b54284e805962f697dd
+      internalID: 1920323719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_124
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ced93dfadcad18488d107d82fd21e41
+      internalID: 1348243253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_125
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7217781e1241d4f88f493c55fc215f
+      internalID: -1475392883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_126
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3b84d51b0d0b64a82c3a3645cef4d3
+      internalID: 16126334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_127
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6de6450a0bc3a46855ffa691bcd641
+      internalID: 556587504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_128
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653443eeb68966b4a8fbcd8ef0a29e23
+      internalID: -941212432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_129
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f99405316fb5e40ba7cf695c971ef6
+      internalID: 1660025754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_130
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1405ac9d8dcff554a97ae1b63dbeb01f
+      internalID: -1788960804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_131
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabcd9dee71bf7e439c526b3f4a693fa
+      internalID: 1348840592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_132
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8edc0c35002e04eb4571af99f0d26b
+      internalID: 1620528958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_133
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d8766103b6a3b43ace30898ee19b27
+      internalID: -287749135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_134
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80b6f0a40ba0f344a52183ed8b2edb8
+      internalID: 490428222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_135
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e745de01076e05844bba31efb71ab104
+      internalID: 927660761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_136
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af1d0aafbe462b45bbfb5c9efc983d2
+      internalID: 832350744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_137
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf99918197eb37e408dded3e41b06379
+      internalID: -1908636439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_138
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b83317a9fc3d6940955da9c1954095e
+      internalID: -910149921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_139
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f93b3e31997c94c9958c2ea93667f1
+      internalID: -1541119263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_140
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077bbd1501f196c47a08e93ea16d8440
+      internalID: -782549439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_141
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac4e4c458a461446b7c84e2598ba92d
+      internalID: 52115736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_142
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2f138eaf0ab994b8f5619333f461ba
+      internalID: -1591892997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_143
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4aeee29e674564abf9da0f5497fddd
+      internalID: 1669606406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd29e4447147c0346b068ce0717b49af
+      internalID: 666863351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_145
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28b0f42da6a59d41a4e08e3893a5563
+      internalID: 1569970274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_146
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dd00dc7eec5bb48809d657ebb371c7
+      internalID: -1915006158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_147
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86e8eb64fc8dc240aa57bd539b9c906
+      internalID: -447916548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_148
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c296424a3fb900944836de85e193dc63
+      internalID: 784011333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_149
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266ec163c5a1be74abb2d9827c697e88
+      internalID: 826453251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_150
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6173c2cab546c4b86d2ba025caf448
+      internalID: 468471426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_151
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866d351102879fe4886a595efb176bf8
+      internalID: 267209343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_152
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69da1720fdbfa5949857807991cb9c5b
+      internalID: 1427971181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_153
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e060bb58245a94f86d315e302e5cc2
+      internalID: -1774504915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_154
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0107d3f27cda09144bb177b7153b60b5
+      internalID: -1501188030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_155
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1147839a96810ff48abd3ed9d3164efe
+      internalID: 337449633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_156
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2f4d17e17f1df46b1677cd1c4ae4aa
+      internalID: 1556767654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_157
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cef92a249738b498a66b8ff6f89c43
+      internalID: 311087551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_158
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb9fe3ae2a57084ea3b4c2ffadbcbaf
+      internalID: -91115792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_159
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0da5fa8dd585c4e8d292fb5caf97c5
+      internalID: 1281095267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_160
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d24df389cc95e24ca39e5709dbdc0d7
+      internalID: -1821698455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_161
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947bb5066e815434daa62c04d675d93b
+      internalID: 1601469631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_162
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581a8e7f4d4977f4ab1b260419ea0a40
+      internalID: -1639307586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_163
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70530b4fbe427643b84093835fea53c
+      internalID: -1230342358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_164
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd0a9b01dfea6b469ef7adb36bd478c
+      internalID: -2118001190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_165
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8419705c80f2142b0ce1c0b3da7e94
+      internalID: 1878751547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_166
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138584fc27731494a9b56122f40594ed
+      internalID: 1404537930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_167
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1984a9fcc7d11df46a3720558ea21835
+      internalID: -1930060569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89ddfbf332521846883a2afd746f358
+      internalID: -1594910465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_169
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a6d1bd926d33340af18a171a1293c3
+      internalID: -1797886514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_170
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae0459b3d4379542ab2d256c1e54e58
+      internalID: -293657324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_171
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abecbb9ff44892241849daadfd73268a
+      internalID: -102603033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_172
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f674f2a967122f249ba427229c75fcd4
+      internalID: -230017151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_173
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d09f8d90e040d4682b6d836d854da8
+      internalID: 1032914522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_174
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3805c40bbb9884cb7f8bd0c894ede2
+      internalID: -1595663599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_175
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7148299a69ff043b9bf0e1e667eba7
+      internalID: -1847800438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_176
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb118782089fea469610a9bca0fb08e
+      internalID: -568676682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_177
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fa23e374c48c34989ac5a24dabc9b6
+      internalID: -285567795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_178
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2018414f53a0494faf7663f9105931b
+      internalID: -1823310710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_179
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b19c7ed9d9a88c4cbf71ea8af64c893
+      internalID: 1504148536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_180
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f566eb11061111646987401233cc5166
+      internalID: -323285186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_181
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2167c1bc54810644a8bc07c787a5acf0
+      internalID: -1811476947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_182
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946b3af8c6672774db33010c2ca7b34c
+      internalID: -856861798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_183
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e20a2c72c468d34a9662b9cad0b5962
+      internalID: -15317132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_184
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45f70dfefdf1904facdbc1cb50254c8
+      internalID: -1343323190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_185
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c302e4c227ef1fe43a2484dce90903ce
+      internalID: -933320417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_186
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d32a7adeba1af946a56bec0f42e5094
+      internalID: -1208393782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_187
+      rect:
+        serializedVersion: 2
+        x: 7410
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5918e21bb69c345ac4fe4240c5ec38
+      internalID: 2007580212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_188
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90d0f69a436d79448599eab9b532d0b
+      internalID: 1605825473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_189
+      rect:
+        serializedVersion: 2
+        x: 8190
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345b7a8c480f3074ba2f66fb80fe1f7e
+      internalID: 44356660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_190
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ee583f478065544959962cf1df4538
+      internalID: 1230084698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondMan-Walking-TEST_191
+      rect:
+        serializedVersion: 2
+        x: 8970
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16349de88070034c9afc00733db03ac
+      internalID: -1984371963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e1f1e83287f3b2849986bd3c6e946f4f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BlondMan-Walking-TEST_0: -465903860
+      BlondMan-Walking-TEST_1: 1103897902
+      BlondMan-Walking-TEST_10: 1676083399
+      BlondMan-Walking-TEST_100: -1230447962
+      BlondMan-Walking-TEST_101: -434248947
+      BlondMan-Walking-TEST_102: 316668738
+      BlondMan-Walking-TEST_103: -27336918
+      BlondMan-Walking-TEST_104: -384882470
+      BlondMan-Walking-TEST_105: -434519315
+      BlondMan-Walking-TEST_106: 1555187732
+      BlondMan-Walking-TEST_107: 643187879
+      BlondMan-Walking-TEST_108: 1111481591
+      BlondMan-Walking-TEST_109: -659505342
+      BlondMan-Walking-TEST_11: 18049420
+      BlondMan-Walking-TEST_110: -438710784
+      BlondMan-Walking-TEST_111: -510402362
+      BlondMan-Walking-TEST_112: 786348977
+      BlondMan-Walking-TEST_113: -2125914558
+      BlondMan-Walking-TEST_114: -996567651
+      BlondMan-Walking-TEST_115: -1114567547
+      BlondMan-Walking-TEST_116: 435180023
+      BlondMan-Walking-TEST_117: -1385252953
+      BlondMan-Walking-TEST_118: -1019948842
+      BlondMan-Walking-TEST_119: 1360545039
+      BlondMan-Walking-TEST_12: -2055804717
+      BlondMan-Walking-TEST_120: -860583031
+      BlondMan-Walking-TEST_121: 1210743134
+      BlondMan-Walking-TEST_122: -1309043103
+      BlondMan-Walking-TEST_123: 1920323719
+      BlondMan-Walking-TEST_124: 1348243253
+      BlondMan-Walking-TEST_125: -1475392883
+      BlondMan-Walking-TEST_126: 16126334
+      BlondMan-Walking-TEST_127: 556587504
+      BlondMan-Walking-TEST_128: -941212432
+      BlondMan-Walking-TEST_129: 1660025754
+      BlondMan-Walking-TEST_13: 2134723817
+      BlondMan-Walking-TEST_130: -1788960804
+      BlondMan-Walking-TEST_131: 1348840592
+      BlondMan-Walking-TEST_132: 1620528958
+      BlondMan-Walking-TEST_133: -287749135
+      BlondMan-Walking-TEST_134: 490428222
+      BlondMan-Walking-TEST_135: 927660761
+      BlondMan-Walking-TEST_136: 832350744
+      BlondMan-Walking-TEST_137: -1908636439
+      BlondMan-Walking-TEST_138: -910149921
+      BlondMan-Walking-TEST_139: -1541119263
+      BlondMan-Walking-TEST_14: 56178911
+      BlondMan-Walking-TEST_140: -782549439
+      BlondMan-Walking-TEST_141: 52115736
+      BlondMan-Walking-TEST_142: -1591892997
+      BlondMan-Walking-TEST_143: 1669606406
+      BlondMan-Walking-TEST_144: 666863351
+      BlondMan-Walking-TEST_145: 1569970274
+      BlondMan-Walking-TEST_146: -1915006158
+      BlondMan-Walking-TEST_147: -447916548
+      BlondMan-Walking-TEST_148: 784011333
+      BlondMan-Walking-TEST_149: 826453251
+      BlondMan-Walking-TEST_15: -1477288639
+      BlondMan-Walking-TEST_150: 468471426
+      BlondMan-Walking-TEST_151: 267209343
+      BlondMan-Walking-TEST_152: 1427971181
+      BlondMan-Walking-TEST_153: -1774504915
+      BlondMan-Walking-TEST_154: -1501188030
+      BlondMan-Walking-TEST_155: 337449633
+      BlondMan-Walking-TEST_156: 1556767654
+      BlondMan-Walking-TEST_157: 311087551
+      BlondMan-Walking-TEST_158: -91115792
+      BlondMan-Walking-TEST_159: 1281095267
+      BlondMan-Walking-TEST_16: 695186172
+      BlondMan-Walking-TEST_160: -1821698455
+      BlondMan-Walking-TEST_161: 1601469631
+      BlondMan-Walking-TEST_162: -1639307586
+      BlondMan-Walking-TEST_163: -1230342358
+      BlondMan-Walking-TEST_164: -2118001190
+      BlondMan-Walking-TEST_165: 1878751547
+      BlondMan-Walking-TEST_166: 1404537930
+      BlondMan-Walking-TEST_167: -1930060569
+      BlondMan-Walking-TEST_168: -1594910465
+      BlondMan-Walking-TEST_169: -1797886514
+      BlondMan-Walking-TEST_17: 95805231
+      BlondMan-Walking-TEST_170: -293657324
+      BlondMan-Walking-TEST_171: -102603033
+      BlondMan-Walking-TEST_172: -230017151
+      BlondMan-Walking-TEST_173: 1032914522
+      BlondMan-Walking-TEST_174: -1595663599
+      BlondMan-Walking-TEST_175: -1847800438
+      BlondMan-Walking-TEST_176: -568676682
+      BlondMan-Walking-TEST_177: -285567795
+      BlondMan-Walking-TEST_178: -1823310710
+      BlondMan-Walking-TEST_179: 1504148536
+      BlondMan-Walking-TEST_18: 1052416916
+      BlondMan-Walking-TEST_180: -323285186
+      BlondMan-Walking-TEST_181: -1811476947
+      BlondMan-Walking-TEST_182: -856861798
+      BlondMan-Walking-TEST_183: -15317132
+      BlondMan-Walking-TEST_184: -1343323190
+      BlondMan-Walking-TEST_185: -933320417
+      BlondMan-Walking-TEST_186: -1208393782
+      BlondMan-Walking-TEST_187: 2007580212
+      BlondMan-Walking-TEST_188: 1605825473
+      BlondMan-Walking-TEST_189: 44356660
+      BlondMan-Walking-TEST_19: -1278610162
+      BlondMan-Walking-TEST_190: 1230084698
+      BlondMan-Walking-TEST_191: -1984371963
+      BlondMan-Walking-TEST_2: 23263921
+      BlondMan-Walking-TEST_20: 1470383860
+      BlondMan-Walking-TEST_21: 157637718
+      BlondMan-Walking-TEST_22: -992243482
+      BlondMan-Walking-TEST_23: 726769736
+      BlondMan-Walking-TEST_24: -1129202019
+      BlondMan-Walking-TEST_25: -1540405642
+      BlondMan-Walking-TEST_26: 724468187
+      BlondMan-Walking-TEST_27: -1311096479
+      BlondMan-Walking-TEST_28: 430369394
+      BlondMan-Walking-TEST_29: -1217644744
+      BlondMan-Walking-TEST_3: 2101777781
+      BlondMan-Walking-TEST_30: -36600869
+      BlondMan-Walking-TEST_31: -1981333140
+      BlondMan-Walking-TEST_32: 1945076427
+      BlondMan-Walking-TEST_33: -204094353
+      BlondMan-Walking-TEST_34: 1655861526
+      BlondMan-Walking-TEST_35: -1411299301
+      BlondMan-Walking-TEST_36: 409006670
+      BlondMan-Walking-TEST_37: -297260884
+      BlondMan-Walking-TEST_38: -1301353989
+      BlondMan-Walking-TEST_39: 1744360027
+      BlondMan-Walking-TEST_4: -1944664549
+      BlondMan-Walking-TEST_40: 700803359
+      BlondMan-Walking-TEST_41: 1254851331
+      BlondMan-Walking-TEST_42: 2028590406
+      BlondMan-Walking-TEST_43: -1551586920
+      BlondMan-Walking-TEST_44: -571791025
+      BlondMan-Walking-TEST_45: 502835791
+      BlondMan-Walking-TEST_46: 441446146
+      BlondMan-Walking-TEST_47: 769456223
+      BlondMan-Walking-TEST_48: 719691522
+      BlondMan-Walking-TEST_49: -1004232075
+      BlondMan-Walking-TEST_5: 434806090
+      BlondMan-Walking-TEST_50: 1556631843
+      BlondMan-Walking-TEST_51: -1219604505
+      BlondMan-Walking-TEST_52: -1932821796
+      BlondMan-Walking-TEST_53: 1899626709
+      BlondMan-Walking-TEST_54: -1297662223
+      BlondMan-Walking-TEST_55: 1431396079
+      BlondMan-Walking-TEST_56: 331927194
+      BlondMan-Walking-TEST_57: -963149771
+      BlondMan-Walking-TEST_58: 784523259
+      BlondMan-Walking-TEST_59: 744111262
+      BlondMan-Walking-TEST_6: 1545995753
+      BlondMan-Walking-TEST_60: 1771947146
+      BlondMan-Walking-TEST_61: 1931918179
+      BlondMan-Walking-TEST_62: 1425473322
+      BlondMan-Walking-TEST_63: 366285095
+      BlondMan-Walking-TEST_64: -1847434262
+      BlondMan-Walking-TEST_65: 1323969312
+      BlondMan-Walking-TEST_66: -1181768538
+      BlondMan-Walking-TEST_67: 1155019210
+      BlondMan-Walking-TEST_68: -737120163
+      BlondMan-Walking-TEST_69: 1107981246
+      BlondMan-Walking-TEST_7: -1360750520
+      BlondMan-Walking-TEST_70: -1179134910
+      BlondMan-Walking-TEST_71: 686413908
+      BlondMan-Walking-TEST_72: -396582725
+      BlondMan-Walking-TEST_73: 1315249786
+      BlondMan-Walking-TEST_74: 1411451935
+      BlondMan-Walking-TEST_75: -1136640247
+      BlondMan-Walking-TEST_76: 399941538
+      BlondMan-Walking-TEST_77: 105401181
+      BlondMan-Walking-TEST_78: -1921795345
+      BlondMan-Walking-TEST_79: -1238329653
+      BlondMan-Walking-TEST_8: 1658088388
+      BlondMan-Walking-TEST_80: -752323640
+      BlondMan-Walking-TEST_81: 1515434103
+      BlondMan-Walking-TEST_82: -733061762
+      BlondMan-Walking-TEST_83: 134148521
+      BlondMan-Walking-TEST_84: -1866287585
+      BlondMan-Walking-TEST_85: 2110728415
+      BlondMan-Walking-TEST_86: -1688368110
+      BlondMan-Walking-TEST_87: -291917818
+      BlondMan-Walking-TEST_88: 106985296
+      BlondMan-Walking-TEST_89: 460205790
+      BlondMan-Walking-TEST_9: 696311146
+      BlondMan-Walking-TEST_90: 117308499
+      BlondMan-Walking-TEST_91: 141546358
+      BlondMan-Walking-TEST_92: -274259199
+      BlondMan-Walking-TEST_93: -1067810781
+      BlondMan-Walking-TEST_94: 309000806
+      BlondMan-Walking-TEST_95: 960375111
+      BlondMan-Walking-TEST_96: 481006142
+      BlondMan-Walking-TEST_97: 470144873
+      BlondMan-Walking-TEST_98: -941940479
+      BlondMan-Walking-TEST_99: 118241500
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

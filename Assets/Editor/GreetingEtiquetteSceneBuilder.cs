@@ -9,16 +9,9 @@ using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[InitializeOnLoad]
 public static class GreetingEtiquetteSceneBuilder
 {
     private const string ScenePath = "Assets/Scenes/Greeting Etiquette Minigame.unity";
-    private const string BuilderVersion = "greeting-etiquette-v1";
-
-    static GreetingEtiquetteSceneBuilder()
-    {
-        EditorApplication.delayCall += BuildUpdatedSceneOnce;
-    }
 
     [MenuItem("Tools/The Noli/Minigames/Rebuild Greeting Etiquette Minigame")]
     public static void BuildScene()
@@ -116,15 +109,7 @@ public static class GreetingEtiquetteSceneBuilder
         if (!wasViewingMinigame && canRestorePreviousScene)
             SceneManager.SetActiveScene(previousScene);
         AssetDatabase.SaveAssets();
-        EditorPrefs.SetString(nameof(GreetingEtiquetteSceneBuilder), BuilderVersion);
         Debug.Log($"Built Greeting Etiquette minigame scene at {ScenePath}");
-    }
-
-    private static void BuildUpdatedSceneOnce()
-    {
-        if (!Application.isBatchMode &&
-            EditorPrefs.GetString(nameof(GreetingEtiquetteSceneBuilder)) != BuilderVersion)
-            BuildScene();
     }
 
     private static void CreateCamera()

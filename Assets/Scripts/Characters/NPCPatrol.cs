@@ -201,6 +201,20 @@ public class NPCPatrol : MonoBehaviour
             return;
         }
 
+        NPCWaypoint reachedWaypoint = null;
+        if (useWaypointNetwork)
+        {
+            reachedWaypoint = lastReachedNetworkWaypoint;
+        }
+        else if (waypoints != null && currentWaypointIndex < waypoints.Length &&
+                 waypoints[currentWaypointIndex] != null)
+        {
+            waypoints[currentWaypointIndex].TryGetComponent(out reachedWaypoint);
+        }
+
+        if (reachedWaypoint != null && reachedWaypoint.OverrideWaitFacing)
+            mover.SetRestingFacing(reachedWaypoint.WaitFacing);
+
         waitRoutine = StartCoroutine(WaitThenAdvance(waitDuration));
     }
 

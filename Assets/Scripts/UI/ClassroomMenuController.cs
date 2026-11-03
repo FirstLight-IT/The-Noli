@@ -6,14 +6,6 @@ using UnityEngine.UI;
 
 public sealed class ClassroomMenuController : MonoBehaviour
 {
-    private const int DashboardStudentsPerPage = 12;
-    private static readonly string[] DashboardChapterIds =
-    {
-        "chapter_1",
-        "chapter_2",
-        "chapter_3"
-    };
-
     [SerializeField] private MainMenuController mainMenuController;
     [SerializeField] private Button classroomButton;
     [SerializeField] private GameObject classroomPanel;
@@ -51,24 +43,6 @@ public sealed class ClassroomMenuController : MonoBehaviour
     [SerializeField] private Button closeButton;
     [SerializeField] private TMP_Text statusText;
 
-    [Header("Teacher Classroom Dashboard")]
-    [SerializeField] private GameObject classroomDashboardRoot;
-    [SerializeField] private TMP_Text dashboardTitleText;
-    [SerializeField] private TMP_Text dashboardSummaryText;
-    [SerializeField] private TMP_Text dashboardStatusText;
-    [SerializeField] private Transform dashboardStudentCardsRoot;
-    [SerializeField] private TMP_Text dashboardStudentPageText;
-    [SerializeField] private Button dashboardPreviousStudentsButton;
-    [SerializeField] private Button dashboardNextStudentsButton;
-    [SerializeField] private TMP_Text dashboardAnalyticsOverviewText;
-    [SerializeField] private TMP_Dropdown dashboardChapterDropdown;
-    [SerializeField] private AnalyticsMetricBarView dashboardEngagementMetric;
-    [SerializeField] private AnalyticsMetricBarView dashboardQuizMetric;
-    [SerializeField] private AnalyticsMetricBarView dashboardDialogueMetric;
-    [SerializeField] private AnalyticsMetricBarView dashboardArtifactMetric;
-    [SerializeField] private Button dashboardRefreshButton;
-    [SerializeField] private Button dashboardBackButton;
-
     private bool isBusy;
     private readonly List<ClassroomSummary> teacherClassrooms = new();
     private int selectedClassroomIndex;
@@ -82,9 +56,6 @@ public sealed class ClassroomMenuController : MonoBehaviour
     private bool isReconciling;
     private bool wasInternetReachable;
     private float nextConnectivityCheckTime;
-    private ClassroomDashboardResponse dashboardData;
-    private int dashboardStudentPage;
-
     private void Awake()
     {
         classroomButton.onClick.AddListener(Open);
@@ -108,18 +79,6 @@ public sealed class ClassroomMenuController : MonoBehaviour
         refreshClassroomsButton.onClick.AddListener(RefreshTeacherClassrooms);
         toggleClassroomStatusButton.onClick.AddListener(ToggleClassroomStatus);
         manageClassroomsBackButton.onClick.AddListener(ShowTeacherOptions);
-        if (dashboardRefreshButton != null)
-            dashboardRefreshButton.onClick.AddListener(RefreshClassroomDashboard);
-        if (dashboardBackButton != null)
-            dashboardBackButton.onClick.AddListener(CloseClassroomDashboard);
-        if (dashboardChapterDropdown != null)
-            dashboardChapterDropdown.onValueChanged.AddListener(RenderDashboardChapter);
-        if (dashboardPreviousStudentsButton != null)
-            dashboardPreviousStudentsButton.onClick.AddListener(ShowPreviousDashboardStudents);
-        if (dashboardNextStudentsButton != null)
-            dashboardNextStudentsButton.onClick.AddListener(ShowNextDashboardStudents);
-        if (classroomDashboardRoot != null)
-            classroomDashboardRoot.SetActive(false);
         classroomPanel.SetActive(false);
     }
 
@@ -177,16 +136,6 @@ public sealed class ClassroomMenuController : MonoBehaviour
         refreshClassroomsButton.onClick.RemoveListener(RefreshTeacherClassrooms);
         toggleClassroomStatusButton.onClick.RemoveListener(ToggleClassroomStatus);
         manageClassroomsBackButton.onClick.RemoveListener(ShowTeacherOptions);
-        if (dashboardRefreshButton != null)
-            dashboardRefreshButton.onClick.RemoveListener(RefreshClassroomDashboard);
-        if (dashboardBackButton != null)
-            dashboardBackButton.onClick.RemoveListener(CloseClassroomDashboard);
-        if (dashboardChapterDropdown != null)
-            dashboardChapterDropdown.onValueChanged.RemoveListener(RenderDashboardChapter);
-        if (dashboardPreviousStudentsButton != null)
-            dashboardPreviousStudentsButton.onClick.RemoveListener(ShowPreviousDashboardStudents);
-        if (dashboardNextStudentsButton != null)
-            dashboardNextStudentsButton.onClick.RemoveListener(ShowNextDashboardStudents);
     }
 
     private void Refresh()
@@ -208,8 +157,6 @@ public sealed class ClassroomMenuController : MonoBehaviour
         myClassroomsRoot.SetActive(false);
         createClassroomRoot.SetActive(false);
         manageClassroomsRoot.SetActive(false);
-        if (classroomDashboardRoot != null)
-            classroomDashboardRoot.SetActive(false);
     }
 
     private void Open()
@@ -790,254 +737,6 @@ public sealed class ClassroomMenuController : MonoBehaviour
         SceneManager.LoadScene(TeacherClassroomDashboardLaunchContext.SceneName);
     }
 
-    private async void RefreshClassroomDashboard()
-    {
-        if (isBusy || classroomDashboardRoot == null ||
-            !classroomDashboardRoot.activeSelf)
-            return;
-
-        await LoadClassroomDashboardAsync();
-    }
-
-    private async System.Threading.Tasks.Task LoadClassroomDashboardAsync()
-    {
-        if (teacherClassrooms.Count == 0)
-            return;
-
-        ClassroomSummary selectedRoom = teacherClassrooms[selectedClassroomIndex];
-        isBusy = true;
-        SetInteractable(false);
-        dashboardStatusText.SetText("Loading classroom dashboard...");
-
-        ClassroomDashboardResponse response = await ClassroomService
-            .GetDashboardAsync(selectedRoom.roomId);
-
-        isBusy = false;
-        SetInteractable(true);
-        if (response == null || !response.success)
-        {
-            dashboardStatusText.SetText(
-                response?.error ?? "The classroom dashboard could not be loaded.");
-            return;
-        }
-
-        dashboardData = response;
-        int pageCount = Mathf.Max(1, Mathf.CeilToInt(
-            dashboardData.members.Count / (float)DashboardStudentsPerPage));
-        dashboardStudentPage = Mathf.Clamp(dashboardStudentPage, 0, pageCount - 1);
-        dashboardStatusText.SetText(string.Empty);
-        RenderClassroomDashboard();
-    }
-
-    private void CloseClassroomDashboard()
-    {
-        if (isBusy || classroomDashboardRoot == null)
-            return;
-
-        classroomDashboardRoot.SetActive(false);
-        manageClassroomsRoot.SetActive(true);
-        dashboardData = null;
-        dashboardStudentPage = 0;
-        RenderManagedClassroomCards();
-    }
-
-    private void RenderClassroomDashboard()
-    {
-        ClassroomSummary selectedRoom = teacherClassrooms.Count > 0
-            ? teacherClassrooms[selectedClassroomIndex]
-            : null;
-        string roomName = dashboardData?.roomName ?? selectedRoom?.roomName ?? "Classroom";
-        dashboardTitleText.SetText($"{roomName} Dashboard");
-
-        int totalStudents = dashboardData?.members?.Count ?? 0;
-        int uploadedStudents = dashboardData?.participantCount ?? 0;
-        string joinCode = dashboardData?.joinCode ?? selectedRoom?.joinCode ?? string.Empty;
-        string roomStatus = dashboardData?.status ?? selectedRoom?.status ?? "Unknown";
-        dashboardSummaryText.SetText(
-            $"Join code: {joinCode}     Status: {roomStatus}     " +
-            $"Students: {totalStudents}     Analytics uploaded: {uploadedStudents}");
-
-        PopulateDashboardChapterDropdown();
-        RenderDashboardChapter(dashboardChapterDropdown != null
-            ? dashboardChapterDropdown.value
-            : 0);
-    }
-
-    private void RenderDashboardStudentCards()
-    {
-        if (dashboardStudentCardsRoot == null)
-            return;
-
-        List<ClassroomDashboardMember> members =
-            dashboardData?.members ?? new List<ClassroomDashboardMember>();
-        int firstMemberIndex = dashboardStudentPage * DashboardStudentsPerPage;
-        for (int index = 0; index < dashboardStudentCardsRoot.childCount; index++)
-        {
-            GameObject card = dashboardStudentCardsRoot.GetChild(index).gameObject;
-            int memberIndex = firstMemberIndex + index;
-            bool visible = index < DashboardStudentsPerPage && memberIndex < members.Count;
-            card.SetActive(visible);
-            if (!visible)
-                continue;
-
-            ClassroomDashboardMember member = members[memberIndex];
-            bool uploadedSelectedChapter = HasUploadedSelectedChapter(member);
-            TMP_Text label = card.GetComponentInChildren<TMP_Text>(true);
-            label?.SetText(
-                $"{member.inGameName}\n" +
-                (uploadedSelectedChapter
-                    ? "Analytics uploaded"
-                    : "Not uploaded"));
-            Image background = card.GetComponent<Image>();
-            if (background != null)
-            {
-                background.color = uploadedSelectedChapter
-                    ? new Color(0.20f, 0.42f, 0.32f, 1f)
-                    : new Color(0.18f, 0.32f, 0.42f, 1f);
-            }
-
-            Button button = card.GetComponent<Button>();
-            if (button != null)
-            {
-                button.onClick.RemoveAllListeners();
-                button.enabled = false;
-            }
-        }
-
-        int pageCount = Mathf.Max(1, Mathf.CeilToInt(
-            members.Count / (float)DashboardStudentsPerPage));
-        if (dashboardStudentPageText != null)
-            dashboardStudentPageText.SetText($"Page {dashboardStudentPage + 1} of {pageCount}");
-        if (dashboardPreviousStudentsButton != null)
-            dashboardPreviousStudentsButton.interactable = !isBusy && dashboardStudentPage > 0;
-        if (dashboardNextStudentsButton != null)
-        {
-            dashboardNextStudentsButton.interactable = !isBusy &&
-                dashboardStudentPage + 1 < pageCount;
-        }
-    }
-
-    private void ShowPreviousDashboardStudents()
-    {
-        if (isBusy || dashboardStudentPage <= 0)
-            return;
-
-        dashboardStudentPage--;
-        RenderDashboardStudentCards();
-    }
-
-    private void ShowNextDashboardStudents()
-    {
-        int memberCount = dashboardData?.members?.Count ?? 0;
-        int pageCount = Mathf.Max(1, Mathf.CeilToInt(
-            memberCount / (float)DashboardStudentsPerPage));
-        if (isBusy || dashboardStudentPage + 1 >= pageCount)
-            return;
-
-        dashboardStudentPage++;
-        RenderDashboardStudentCards();
-    }
-
-    private void PopulateDashboardChapterDropdown()
-    {
-        if (dashboardChapterDropdown == null)
-            return;
-
-        List<string> options = new(DashboardChapterIds.Length);
-        foreach (string chapterId in DashboardChapterIds)
-            options.Add(FormatChapterLabel(chapterId));
-
-        dashboardChapterDropdown.ClearOptions();
-        dashboardChapterDropdown.AddOptions(options);
-        dashboardChapterDropdown.SetValueWithoutNotify(0);
-        dashboardChapterDropdown.RefreshShownValue();
-        dashboardChapterDropdown.interactable = !isBusy;
-    }
-
-    private void RenderDashboardChapter(int chapterIndex)
-    {
-        RenderDashboardStudentCards();
-
-        if (dashboardData == null)
-        {
-            dashboardAnalyticsOverviewText.SetText(
-                "Load the dashboard to view classroom analytics.");
-            SetDashboardMetricsVisible(false);
-            return;
-        }
-
-        int safeChapterIndex = Mathf.Clamp(chapterIndex, 0, DashboardChapterIds.Length - 1);
-        string chapterId = DashboardChapterIds[safeChapterIndex];
-        ClassroomChapterAnalyticsAggregate chapter = dashboardData.chapters?.Find(candidate =>
-            string.Equals(candidate.chapterId, chapterId,
-                System.StringComparison.OrdinalIgnoreCase));
-        if (chapter == null)
-        {
-            dashboardAnalyticsOverviewText.SetText(
-                $"UNIQUE UPLOADS\n{dashboardData.participantCount} of " +
-                $"{dashboardData.members.Count} students\n\n" +
-                $"{FormatChapterLabel(chapterId).ToUpperInvariant()} AVERAGE RESULTS\n" +
-                "Chapter participants: 0\nAverage playtime: —\n\n" +
-                "No completed chapter analytics have been uploaded yet.");
-            SetDashboardMetricsVisible(false);
-            return;
-        }
-
-        dashboardAnalyticsOverviewText.SetText(
-            $"UNIQUE UPLOADS\n{dashboardData.participantCount} of " +
-            $"{dashboardData.members.Count} students\n\n" +
-            $"{FormatChapterLabel(chapter.chapterId).ToUpperInvariant()} AVERAGE RESULTS\n" +
-            $"Chapter participants: {chapter.participantCount}\n" +
-            $"Average playtime: {FormatPlaytime(chapter.averagePlayTimeSeconds)}");
-
-        SetDashboardMetricsVisible(true);
-        dashboardEngagementMetric.SetValue(
-            "Engagement", chapter.averageEngagementRatePercent);
-        dashboardQuizMetric.SetValue(
-            "Quiz Score", chapter.averageQuizScoreRatePercent);
-        dashboardDialogueMetric.SetValue(
-            "Dialogue Attention",
-            100d - chapter.averageDialogueSkipRatePercent,
-            $"Skip rate: {chapter.averageDialogueSkipRatePercent:0.0}%");
-        dashboardArtifactMetric.SetValue(
-            "Artifact Discovery", chapter.averageArtifactDiscoveryRatePercent);
-    }
-
-    private bool HasUploadedSelectedChapter(ClassroomDashboardMember member)
-    {
-        if (member?.uploadedChapterIds == null || dashboardChapterDropdown == null)
-            return member?.hasUploadedAnalytics == true;
-
-        int chapterIndex = Mathf.Clamp(
-            dashboardChapterDropdown.value, 0, DashboardChapterIds.Length - 1);
-        string chapterId = DashboardChapterIds[chapterIndex];
-        return member.uploadedChapterIds.Exists(uploadedChapterId =>
-            string.Equals(uploadedChapterId, chapterId,
-                System.StringComparison.OrdinalIgnoreCase));
-    }
-
-    private void SetDashboardMetricsVisible(bool visible)
-    {
-        dashboardEngagementMetric?.SetVisible(visible);
-        dashboardQuizMetric?.SetVisible(visible);
-        dashboardDialogueMetric?.SetVisible(visible);
-        dashboardArtifactMetric?.SetVisible(visible);
-    }
-
-    private static string FormatChapterLabel(string chapterId)
-    {
-        return string.IsNullOrWhiteSpace(chapterId)
-            ? "Unknown Chapter"
-            : System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(
-                chapterId.Replace('_', ' '));
-    }
-
-    private static string FormatPlaytime(double seconds)
-    {
-        int totalSeconds = Mathf.Max(0, (int)System.Math.Round(seconds));
-        return $"{totalSeconds / 60}m {totalSeconds % 60:00}s";
-    }
-
     private async void ReconcilePlayerClassrooms()
     {
         if (isReconciling || !PlayerSession.IsSignedIn ||
@@ -1149,24 +848,5 @@ public sealed class ClassroomMenuController : MonoBehaviour
         playJoinedClassroomButton.interactable = interactable && playerClassrooms.Count > 0;
         leaveJoinedClassroomButton.interactable = interactable && playerClassrooms.Count > 0;
         myClassroomsBackButton.interactable = interactable;
-        if (dashboardRefreshButton != null)
-            dashboardRefreshButton.interactable = interactable;
-        if (dashboardBackButton != null)
-            dashboardBackButton.interactable = interactable;
-        if (dashboardChapterDropdown != null)
-            dashboardChapterDropdown.interactable = interactable;
-        if (dashboardPreviousStudentsButton != null)
-            dashboardPreviousStudentsButton.interactable = interactable;
-        if (dashboardNextStudentsButton != null)
-            dashboardNextStudentsButton.interactable = interactable;
-
-        if (dashboardStudentCardsRoot != null)
-        {
-            foreach (Button button in dashboardStudentCardsRoot
-                         .GetComponentsInChildren<Button>(true))
-            {
-                button.interactable = interactable;
-            }
-        }
     }
 }

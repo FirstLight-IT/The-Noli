@@ -1,0 +1,2641 @@
+fileFormatVersion: 2
+guid: 600118ccf0cd0ac4a9b20fc6011c444b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3188396420857935913
+    second: BlondmanWALKING_390px12Frames_0
+  - first:
+      213: 2038507094436062046
+    second: BlondmanWALKING_390px12Frames_1
+  - first:
+      213: 9057885842444555876
+    second: BlondmanWALKING_390px12Frames_2
+  - first:
+      213: -1189692783457937550
+    second: BlondmanWALKING_390px12Frames_3
+  - first:
+      213: 6674216274412497520
+    second: BlondmanWALKING_390px12Frames_4
+  - first:
+      213: -681959477639819158
+    second: BlondmanWALKING_390px12Frames_5
+  - first:
+      213: 467042356142962302
+    second: BlondmanWALKING_390px12Frames_6
+  - first:
+      213: 6569024613432207142
+    second: BlondmanWALKING_390px12Frames_7
+  - first:
+      213: 4757580198337263142
+    second: BlondmanWALKING_390px12Frames_8
+  - first:
+      213: 3871724025747094232
+    second: BlondmanWALKING_390px12Frames_9
+  - first:
+      213: -6094353120439194819
+    second: BlondmanWALKING_390px12Frames_10
+  - first:
+      213: -8990848719744625131
+    second: BlondmanWALKING_390px12Frames_11
+  - first:
+      213: -8281955442133521828
+    second: BlondmanWALKING_390px12Frames_12
+  - first:
+      213: 3684424405871766268
+    second: BlondmanWALKING_390px12Frames_13
+  - first:
+      213: -3687604343052229647
+    second: BlondmanWALKING_390px12Frames_14
+  - first:
+      213: 508027259355548199
+    second: BlondmanWALKING_390px12Frames_15
+  - first:
+      213: 5988107140791462644
+    second: BlondmanWALKING_390px12Frames_16
+  - first:
+      213: 8465293274767463603
+    second: BlondmanWALKING_390px12Frames_17
+  - first:
+      213: -3028096361295839330
+    second: BlondmanWALKING_390px12Frames_18
+  - first:
+      213: 5212325284661813419
+    second: BlondmanWALKING_390px12Frames_19
+  - first:
+      213: 6258795019368355687
+    second: BlondmanWALKING_390px12Frames_20
+  - first:
+      213: -500101961165024585
+    second: BlondmanWALKING_390px12Frames_21
+  - first:
+      213: 4028511532080546987
+    second: BlondmanWALKING_390px12Frames_22
+  - first:
+      213: -6644899538262025978
+    second: BlondmanWALKING_390px12Frames_23
+  - first:
+      213: 1645486787457127670
+    second: BlondmanWALKING_390px12Frames_24
+  - first:
+      213: -6829367190084138623
+    second: BlondmanWALKING_390px12Frames_25
+  - first:
+      213: -7950954315539341443
+    second: BlondmanWALKING_390px12Frames_26
+  - first:
+      213: 5151532038139891351
+    second: BlondmanWALKING_390px12Frames_27
+  - first:
+      213: 8082799792331168480
+    second: BlondmanWALKING_390px12Frames_28
+  - first:
+      213: -5246507881933946211
+    second: BlondmanWALKING_390px12Frames_29
+  - first:
+      213: 8762936925426304038
+    second: BlondmanWALKING_390px12Frames_30
+  - first:
+      213: 7440322703588330456
+    second: BlondmanWALKING_390px12Frames_31
+  - first:
+      213: -4159838607164674280
+    second: BlondmanWALKING_390px12Frames_32
+  - first:
+      213: -1953127962895177742
+    second: BlondmanWALKING_390px12Frames_33
+  - first:
+      213: 2728772626762157881
+    second: BlondmanWALKING_390px12Frames_34
+  - first:
+      213: -4117377634202404892
+    second: BlondmanWALKING_390px12Frames_35
+  - first:
+      213: -1595303653448639491
+    second: BlondmanWALKING_390px12Frames_36
+  - first:
+      213: -4983711091543700851
+    second: BlondmanWALKING_390px12Frames_37
+  - first:
+      213: 4116930137410274950
+    second: BlondmanWALKING_390px12Frames_38
+  - first:
+      213: -7699995153043457239
+    second: BlondmanWALKING_390px12Frames_39
+  - first:
+      213: -9068342970160093555
+    second: BlondmanWALKING_390px12Frames_40
+  - first:
+      213: -8143447646619885258
+    second: BlondmanWALKING_390px12Frames_41
+  - first:
+      213: 9217797820704584452
+    second: BlondmanWALKING_390px12Frames_42
+  - first:
+      213: 9040327620867334061
+    second: BlondmanWALKING_390px12Frames_43
+  - first:
+      213: -6632259919902357980
+    second: BlondmanWALKING_390px12Frames_44
+  - first:
+      213: -4597648761540857977
+    second: BlondmanWALKING_390px12Frames_45
+  - first:
+      213: 4297484754576788645
+    second: BlondmanWALKING_390px12Frames_46
+  - first:
+      213: 6675399105932048588
+    second: BlondmanWALKING_390px12Frames_47
+  - first:
+      213: 842966049486334593
+    second: BlondmanWALKING_390px12Frames_48
+  - first:
+      213: 529273152290106243
+    second: BlondmanWALKING_390px12Frames_49
+  - first:
+      213: 242303002078231369
+    second: BlondmanWALKING_390px12Frames_50
+  - first:
+      213: 3177439290784269781
+    second: BlondmanWALKING_390px12Frames_51
+  - first:
+      213: -5437040178253549141
+    second: BlondmanWALKING_390px12Frames_52
+  - first:
+      213: 6393479485607746692
+    second: BlondmanWALKING_390px12Frames_53
+  - first:
+      213: 7624589046226751564
+    second: BlondmanWALKING_390px12Frames_54
+  - first:
+      213: 5705831129741604228
+    second: BlondmanWALKING_390px12Frames_55
+  - first:
+      213: -3538135954072306126
+    second: BlondmanWALKING_390px12Frames_56
+  - first:
+      213: 5448946268067872374
+    second: BlondmanWALKING_390px12Frames_57
+  - first:
+      213: 7737991777835753215
+    second: BlondmanWALKING_390px12Frames_58
+  - first:
+      213: 6966182459815505164
+    second: BlondmanWALKING_390px12Frames_59
+  - first:
+      213: 7242321569232949357
+    second: BlondmanWALKING_390px12Frames_60
+  - first:
+      213: 4135222984572192892
+    second: BlondmanWALKING_390px12Frames_61
+  - first:
+      213: -7397621863106385536
+    second: BlondmanWALKING_390px12Frames_62
+  - first:
+      213: 6609745749272266379
+    second: BlondmanWALKING_390px12Frames_63
+  - first:
+      213: 8818353528935557499
+    second: BlondmanWALKING_390px12Frames_64
+  - first:
+      213: 1650661913506935797
+    second: BlondmanWALKING_390px12Frames_65
+  - first:
+      213: 6784947632919524188
+    second: BlondmanWALKING_390px12Frames_66
+  - first:
+      213: 5388524540759207115
+    second: BlondmanWALKING_390px12Frames_67
+  - first:
+      213: -5467816656370110222
+    second: BlondmanWALKING_390px12Frames_68
+  - first:
+      213: -7294129062206204559
+    second: BlondmanWALKING_390px12Frames_69
+  - first:
+      213: 8003092059839157224
+    second: BlondmanWALKING_390px12Frames_70
+  - first:
+      213: -1803418041912039241
+    second: BlondmanWALKING_390px12Frames_71
+  - first:
+      213: 9180485295808895529
+    second: BlondmanWALKING_390px12Frames_72
+  - first:
+      213: 5042641895229560097
+    second: BlondmanWALKING_390px12Frames_73
+  - first:
+      213: 8121289875270871421
+    second: BlondmanWALKING_390px12Frames_74
+  - first:
+      213: 4164769725079730849
+    second: BlondmanWALKING_390px12Frames_75
+  - first:
+      213: 2934528195849453584
+    second: BlondmanWALKING_390px12Frames_76
+  - first:
+      213: 3479957817173503002
+    second: BlondmanWALKING_390px12Frames_77
+  - first:
+      213: 4138775934859604583
+    second: BlondmanWALKING_390px12Frames_78
+  - first:
+      213: -3520794013080971052
+    second: BlondmanWALKING_390px12Frames_79
+  - first:
+      213: 3254232516578756735
+    second: BlondmanWALKING_390px12Frames_80
+  - first:
+      213: -895820987884547674
+    second: BlondmanWALKING_390px12Frames_81
+  - first:
+      213: 6703149187362018342
+    second: BlondmanWALKING_390px12Frames_82
+  - first:
+      213: -7048890480467111831
+    second: BlondmanWALKING_390px12Frames_83
+  - first:
+      213: -817837742224990426
+    second: BlondmanWALKING_390px12Frames_84
+  - first:
+      213: -688328405195363640
+    second: BlondmanWALKING_390px12Frames_85
+  - first:
+      213: -5642288227040049230
+    second: BlondmanWALKING_390px12Frames_86
+  - first:
+      213: -3536529000626433343
+    second: BlondmanWALKING_390px12Frames_87
+  - first:
+      213: -8133561567763313925
+    second: BlondmanWALKING_390px12Frames_88
+  - first:
+      213: -667164234109295134
+    second: BlondmanWALKING_390px12Frames_89
+  - first:
+      213: -127339559848131055
+    second: BlondmanWALKING_390px12Frames_90
+  - first:
+      213: -4703780039477255060
+    second: BlondmanWALKING_390px12Frames_91
+  - first:
+      213: -8450895730615879722
+    second: BlondmanWALKING_390px12Frames_92
+  - first:
+      213: -4963849089487958877
+    second: BlondmanWALKING_390px12Frames_93
+  - first:
+      213: -4065361534049686871
+    second: BlondmanWALKING_390px12Frames_94
+  - first:
+      213: 3978251287220106404
+    second: BlondmanWALKING_390px12Frames_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7c2ab195a80c3d0800000000000000
+      internalID: -3188396420857935913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53a9f3e66b3a4c10800000000000000
+      internalID: 2038507094436062046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46692f6de2314bd70800000000000000
+      internalID: 9057885842444555876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_3
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 277d42a77bc5d7fe0800000000000000
+      internalID: -1189692783457937550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07aec7e07549f9c50800000000000000
+      internalID: 6674216274412497520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a605110e7713986f0800000000000000
+      internalID: -681959477639819158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_6
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7676f46c844b7600800000000000000
+      internalID: 467042356142962302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_7
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627ac6ce41dd92b50800000000000000
+      internalID: 6569024613432207142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_8
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6263350dbf1560240800000000000000
+      internalID: 4757580198337263142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_9
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da3007fc702bb530800000000000000
+      internalID: 3871724025747094232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_10
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bad6050228c6ba0800000000000000
+      internalID: -6094353120439194819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_11
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516985699b61a3380800000000000000
+      internalID: -8990848719744625131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5aa402b765901d80800000000000000
+      internalID: -8281955442133521828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa24c9e974b12330800000000000000
+      internalID: 3684424405871766268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f32f24436ff2dcc0800000000000000
+      internalID: -3687604343052229647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a4a1ac910ec0700800000000000000
+      internalID: 508027259355548199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_16
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faeadbd7b70a1350800000000000000
+      internalID: 5988107140791462644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_17
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b49402e163ca7570800000000000000
+      internalID: 8465293274767463603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_18
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ffe47276a0af5d0800000000000000
+      internalID: -3028096361295839330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_19
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0ed06fa36e55840800000000000000
+      internalID: 5212325284661813419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_20
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7675f6bd8e4bbd650800000000000000
+      internalID: 6258795019368355687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_21
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2584d7ae74f09f0800000000000000
+      internalID: -500101961165024585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_22
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4c93bf4e528e730800000000000000
+      internalID: 4028511532080546987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_23
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6091cbd731398c3a0800000000000000
+      internalID: -6644899538262025978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f41bf8d381f5d610800000000000000
+      internalID: 1645486787457127670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189c35269b63931a0800000000000000
+      internalID: -6829367190084138623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f1bec0d2988a190800000000000000
+      internalID: -7950954315539341443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e4f5e381bed7740800000000000000
+      internalID: 5151532038139891351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea108c269fdb2070800000000000000
+      internalID: 8082799792331168480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_29
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d924a0ae0e8a037b0800000000000000
+      internalID: -5246507881933946211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_30
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6244035a4b43c9970800000000000000
+      internalID: 8762936925426304038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_31
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db08a11416514760800000000000000
+      internalID: 7440322703588330456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_32
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f6ef893d84546c0800000000000000
+      internalID: -4159838607164674280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_33
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f720c2477815e4e0800000000000000
+      internalID: -1953127962895177742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_34
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93fc7f21f3c8ed520800000000000000
+      internalID: 2728772626762157881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_35
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e73a334bd22cd6c0800000000000000
+      internalID: -4117377634202404892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb9f4b87c75cd9e0800000000000000
+      internalID: -1595303653448639491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a0d55ca2d46dab0800000000000000
+      internalID: -4983711091543700851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_38
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6868075c526422930800000000000000
+      internalID: 4116930137410274950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_39
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b7d92643f142590800000000000000
+      internalID: -7699995153043457239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_40
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8662326d16c62280800000000000000
+      internalID: -9068342970160093555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_41
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6312b30e289acfe80800000000000000
+      internalID: -8143447646619885258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_42
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403777aa7423cef70800000000000000
+      internalID: 9217797820704584452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_43
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf13fec212b57d70800000000000000
+      internalID: 9040327620867334061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_44
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426c828fdba75f3a0800000000000000
+      internalID: -6632259919902357980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_45
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fa75e8fced130c0800000000000000
+      internalID: -4597648761540857977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_46
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5acc4308d9bb3ab30800000000000000
+      internalID: 4297484754576788645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_47
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc83a0b7e18c3ac50800000000000000
+      internalID: 6675399105932048588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ae851e721d2bb00800000000000000
+      internalID: 842966049486334593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b2767b02b585700800000000000000
+      internalID: 529273152290106243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_50
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b32eeeb45dc5300800000000000000
+      internalID: 242303002078231369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_51
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5c09e3338881c20800000000000000
+      internalID: 3177439290784269781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_52
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1bba9b3c0cb84b0800000000000000
+      internalID: -5437040178253549141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_53
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c9562d7b33ab850800000000000000
+      internalID: 6393479485607746692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_54
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c401eaa375bffc960800000000000000
+      internalID: 7624589046226751564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_55
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4853d948e2f2f2f40800000000000000
+      internalID: 5705831129741604228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_56
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e7b7a781406eec0800000000000000
+      internalID: -3538135954072306126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_57
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e3064d2cb8e9b40800000000000000
+      internalID: 5448946268067872374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_58
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe1bc8368ed26b60800000000000000
+      internalID: 7737991777835753215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_59
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d2cdde90adca060800000000000000
+      internalID: 6966182459815505164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6097438815e18460800000000000000
+      internalID: 7242321569232949357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_61
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78c4762563436930800000000000000
+      internalID: 4135222984572192892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_62
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08961ea1c1e565990800000000000000
+      internalID: -7397621863106385536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_63
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8685013db88abb50800000000000000
+      internalID: 6609745749272266379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_64
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79240c10d5116a70800000000000000
+      internalID: 8818353528935557499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_65
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3f8d6c34458e610800000000000000
+      internalID: 1650661913506935797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_66
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53bbc78ce9f82e50800000000000000
+      internalID: 6784947632919524188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_67
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc6d6b2582e7ca40800000000000000
+      internalID: 5388524540759207115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_68
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0781488b96e14b0800000000000000
+      internalID: -5467816656370110222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_69
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175985d834c06ca90800000000000000
+      internalID: -7294129062206204559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_70
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3567383d1b01f60800000000000000
+      internalID: 8003092059839157224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_71
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b86d4688d8f8f6e0800000000000000
+      internalID: -1803418041912039241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ad26a7cb2a76f70800000000000000
+      internalID: 9180485295808895529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12519ae26101bf540800000000000000
+      internalID: 5042641895229560097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d792f75fc1e94b070800000000000000
+      internalID: 8121289875270871421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_75
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aabda2cffb3cc930800000000000000
+      internalID: 4164769725079730849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_76
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01089f8a8d989b820800000000000000
+      internalID: 2934528195849453584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_77
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c68f5723b4b4030800000000000000
+      internalID: 3479957817173503002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_78
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762fd3ad8c2ef6930800000000000000
+      internalID: 4138775934859604583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_79
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d89cf2cf70a32fc0800000000000000
+      internalID: -3520794013080971052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_80
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78c33f6b3b592d20800000000000000
+      internalID: 3254232516578756735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_81
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a15dcace876193f0800000000000000
+      internalID: -895820987884547674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_82
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624592dcbae560d50800000000000000
+      internalID: 6703149187362018342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_83
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9601023647f4d2e90800000000000000
+      internalID: -7048890480467111831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f95c218e476a4f0800000000000000
+      internalID: -817837742224990426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_85
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cae48f56f09276f0800000000000000
+      internalID: -688328405195363640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_86
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7c8ea60c092b1b0800000000000000
+      internalID: -5642288227040049230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_87
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c25bcb7c99bbeec0800000000000000
+      internalID: -3536529000626433343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_88
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfac2baf8d8cf1f80800000000000000
+      internalID: -8133561567763313925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_89
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5e113f9a1cdb6f0800000000000000
+      internalID: -667164234109295134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_90
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116c56158599b3ef0800000000000000
+      internalID: -127339559848131055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_91
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64a26dc9f0d8beb0800000000000000
+      internalID: -4703780039477255060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_92
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d776c69b1368ba80800000000000000
+      internalID: -8450895730615879722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_93
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac8c6e7d8ddc1bb0800000000000000
+      internalID: -4963849089487958877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_94
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa6e67593fe497c0800000000000000
+      internalID: -4065361534049686871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlondmanWALKING_390px12Frames_95
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4bef1d776953730800000000000000
+      internalID: 3978251287220106404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 30dfc1af16b4a964a84d92016a59ff30
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BlondmanWALKING_390px12Frames_0: -3188396420857935913
+      BlondmanWALKING_390px12Frames_1: 2038507094436062046
+      BlondmanWALKING_390px12Frames_10: -6094353120439194819
+      BlondmanWALKING_390px12Frames_11: -8990848719744625131
+      BlondmanWALKING_390px12Frames_12: -8281955442133521828
+      BlondmanWALKING_390px12Frames_13: 3684424405871766268
+      BlondmanWALKING_390px12Frames_14: -3687604343052229647
+      BlondmanWALKING_390px12Frames_15: 508027259355548199
+      BlondmanWALKING_390px12Frames_16: 5988107140791462644
+      BlondmanWALKING_390px12Frames_17: 8465293274767463603
+      BlondmanWALKING_390px12Frames_18: -3028096361295839330
+      BlondmanWALKING_390px12Frames_19: 5212325284661813419
+      BlondmanWALKING_390px12Frames_2: 9057885842444555876
+      BlondmanWALKING_390px12Frames_20: 6258795019368355687
+      BlondmanWALKING_390px12Frames_21: -500101961165024585
+      BlondmanWALKING_390px12Frames_22: 4028511532080546987
+      BlondmanWALKING_390px12Frames_23: -6644899538262025978
+      BlondmanWALKING_390px12Frames_24: 1645486787457127670
+      BlondmanWALKING_390px12Frames_25: -6829367190084138623
+      BlondmanWALKING_390px12Frames_26: -7950954315539341443
+      BlondmanWALKING_390px12Frames_27: 5151532038139891351
+      BlondmanWALKING_390px12Frames_28: 8082799792331168480
+      BlondmanWALKING_390px12Frames_29: -5246507881933946211
+      BlondmanWALKING_390px12Frames_3: -1189692783457937550
+      BlondmanWALKING_390px12Frames_30: 8762936925426304038
+      BlondmanWALKING_390px12Frames_31: 7440322703588330456
+      BlondmanWALKING_390px12Frames_32: -4159838607164674280
+      BlondmanWALKING_390px12Frames_33: -1953127962895177742
+      BlondmanWALKING_390px12Frames_34: 2728772626762157881
+      BlondmanWALKING_390px12Frames_35: -4117377634202404892
+      BlondmanWALKING_390px12Frames_36: -1595303653448639491
+      BlondmanWALKING_390px12Frames_37: -4983711091543700851
+      BlondmanWALKING_390px12Frames_38: 4116930137410274950
+      BlondmanWALKING_390px12Frames_39: -7699995153043457239
+      BlondmanWALKING_390px12Frames_4: 6674216274412497520
+      BlondmanWALKING_390px12Frames_40: -9068342970160093555
+      BlondmanWALKING_390px12Frames_41: -8143447646619885258
+      BlondmanWALKING_390px12Frames_42: 9217797820704584452
+      BlondmanWALKING_390px12Frames_43: 9040327620867334061
+      BlondmanWALKING_390px12Frames_44: -6632259919902357980
+      BlondmanWALKING_390px12Frames_45: -4597648761540857977
+      BlondmanWALKING_390px12Frames_46: 4297484754576788645
+      BlondmanWALKING_390px12Frames_47: 6675399105932048588
+      BlondmanWALKING_390px12Frames_48: 842966049486334593
+      BlondmanWALKING_390px12Frames_49: 529273152290106243
+      BlondmanWALKING_390px12Frames_5: -681959477639819158
+      BlondmanWALKING_390px12Frames_50: 242303002078231369
+      BlondmanWALKING_390px12Frames_51: 3177439290784269781
+      BlondmanWALKING_390px12Frames_52: -5437040178253549141
+      BlondmanWALKING_390px12Frames_53: 6393479485607746692
+      BlondmanWALKING_390px12Frames_54: 7624589046226751564
+      BlondmanWALKING_390px12Frames_55: 5705831129741604228
+      BlondmanWALKING_390px12Frames_56: -3538135954072306126
+      BlondmanWALKING_390px12Frames_57: 5448946268067872374
+      BlondmanWALKING_390px12Frames_58: 7737991777835753215
+      BlondmanWALKING_390px12Frames_59: 6966182459815505164
+      BlondmanWALKING_390px12Frames_6: 467042356142962302
+      BlondmanWALKING_390px12Frames_60: 7242321569232949357
+      BlondmanWALKING_390px12Frames_61: 4135222984572192892
+      BlondmanWALKING_390px12Frames_62: -7397621863106385536
+      BlondmanWALKING_390px12Frames_63: 6609745749272266379
+      BlondmanWALKING_390px12Frames_64: 8818353528935557499
+      BlondmanWALKING_390px12Frames_65: 1650661913506935797
+      BlondmanWALKING_390px12Frames_66: 6784947632919524188
+      BlondmanWALKING_390px12Frames_67: 5388524540759207115
+      BlondmanWALKING_390px12Frames_68: -5467816656370110222
+      BlondmanWALKING_390px12Frames_69: -7294129062206204559
+      BlondmanWALKING_390px12Frames_7: 6569024613432207142
+      BlondmanWALKING_390px12Frames_70: 8003092059839157224
+      BlondmanWALKING_390px12Frames_71: -1803418041912039241
+      BlondmanWALKING_390px12Frames_72: 9180485295808895529
+      BlondmanWALKING_390px12Frames_73: 5042641895229560097
+      BlondmanWALKING_390px12Frames_74: 8121289875270871421
+      BlondmanWALKING_390px12Frames_75: 4164769725079730849
+      BlondmanWALKING_390px12Frames_76: 2934528195849453584
+      BlondmanWALKING_390px12Frames_77: 3479957817173503002
+      BlondmanWALKING_390px12Frames_78: 4138775934859604583
+      BlondmanWALKING_390px12Frames_79: -3520794013080971052
+      BlondmanWALKING_390px12Frames_8: 4757580198337263142
+      BlondmanWALKING_390px12Frames_80: 3254232516578756735
+      BlondmanWALKING_390px12Frames_81: -895820987884547674
+      BlondmanWALKING_390px12Frames_82: 6703149187362018342
+      BlondmanWALKING_390px12Frames_83: -7048890480467111831
+      BlondmanWALKING_390px12Frames_84: -817837742224990426
+      BlondmanWALKING_390px12Frames_85: -688328405195363640
+      BlondmanWALKING_390px12Frames_86: -5642288227040049230
+      BlondmanWALKING_390px12Frames_87: -3536529000626433343
+      BlondmanWALKING_390px12Frames_88: -8133561567763313925
+      BlondmanWALKING_390px12Frames_89: -667164234109295134
+      BlondmanWALKING_390px12Frames_9: 3871724025747094232
+      BlondmanWALKING_390px12Frames_90: -127339559848131055
+      BlondmanWALKING_390px12Frames_91: -4703780039477255060
+      BlondmanWALKING_390px12Frames_92: -8450895730615879722
+      BlondmanWALKING_390px12Frames_93: -4963849089487958877
+      BlondmanWALKING_390px12Frames_94: -4065361534049686871
+      BlondmanWALKING_390px12Frames_95: 3978251287220106404
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

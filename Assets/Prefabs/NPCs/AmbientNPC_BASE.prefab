@@ -459,6 +459,8 @@ MonoBehaviour:
   arrivalDistance: 0.05
   isometricMovementOnly: 1
   diagonalAngle: 30
+  defaultFacing: 4
+  turnTowardNearbyPlayer: 1
   ignoreOtherNPCs: 1
   bodyMass: 1000
   obstacleClearance: 0.05

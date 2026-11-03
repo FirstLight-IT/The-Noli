@@ -72,11 +72,24 @@
         "languages": [
             {
                 "languageCode": "en",
-                "description": "Exit the Mansion"
+                "description": "Go to the zaguan"
             },
             {
                 "languageCode": "fil",
-                "description": "Lumabas sa Mansyon"
+                "description": "Pumunta sa zaguan"
+            }
+        ]
+    },
+    {
+        "objectiveId": "leave_the_gathering_step_3",
+        "languages": [
+            {
+                "languageCode": "en",
+                "description": "Exit the mansion"
+            },
+            {
+                "languageCode": "fil",
+                "description": "Lumabas sa mansyon"
             }
         ]
     }

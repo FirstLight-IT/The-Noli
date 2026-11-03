@@ -497,6 +497,7 @@ public class DialogueController : MonoBehaviour
 
         StopAllCoroutines();
         string finishedConversationId = activeConversation?.conversationId;
+        bool fadeCameraReturnOnEnd = activeConversation?.fadeCameraReturnOnEnd == true;
         ConversationReadingResult readingResult = null;
 
         if (activeConversation != null && conversationSkipTracker != null)
@@ -510,7 +511,9 @@ public class DialogueController : MonoBehaviour
         activeConversationLines = null;
         conversationSkipTracker = null;
         triggeredConversationInterruptions.Clear();
-        ResetDialogueUI();
+        bool cameraReturnCoveredByFade =
+            fadeCameraReturnOnEnd && TryFadeSpeakerCameraBackToPlayer();
+        ResetDialogueUI(cameraReturnCoveredByFade);
 
         if (readingResult != null)
             OnConversationReadingCompleted?.Invoke(readingResult);
@@ -591,7 +594,7 @@ public class DialogueController : MonoBehaviour
         return true;
     }
 
-    private void ResetDialogueUI()
+    private void ResetDialogueUI(bool deferSpeakerCameraReturn = false)
     {
         currentLineIndex = 0;
         isTyping = false;
@@ -602,7 +605,9 @@ public class DialogueController : MonoBehaviour
         portraitImage.sprite = null;
         dialogueCloseButton.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
-        ReturnSpeakerCameraToPlayer();
+
+        if (!deferSpeakerCameraReturn)
+            ReturnSpeakerCameraToPlayer();
     }
 
     void OnEnable()
@@ -801,6 +806,28 @@ public class DialogueController : MonoBehaviour
         BeginSpeakerCameraMove(
             SpeakerCameraState.ReturningToPlayer,
             speakerReturnDuration);
+    }
+
+    private bool TryFadeSpeakerCameraBackToPlayer()
+    {
+        return speakerCameraTarget != null &&
+               ScreenFade.Instance != null &&
+               ScreenFade.Instance.BeginTransition(RestoreSpeakerCameraBehindFade);
+    }
+
+    private void RestoreSpeakerCameraBehindFade()
+    {
+        if (speakerCamera != null &&
+            speakerCameraTarget != null &&
+            originalCameraFollow != null)
+        {
+            Transform temporaryFollow = speakerCameraTarget.transform;
+            Vector3 positionDelta = originalCameraFollow.position - temporaryFollow.position;
+            temporaryFollow.position = originalCameraFollow.position;
+            speakerCamera.OnTargetObjectWarped(temporaryFollow, positionDelta);
+        }
+
+        RestoreSpeakerCameraImmediately();
     }
 
     public void ReleaseSpeakerCameraFocus()

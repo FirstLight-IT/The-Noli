@@ -9,27 +9,24 @@ using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[InitializeOnLoad]
 public static class SocialInterruptionSceneBuilder
 {
     private const string ScenePath = "Assets/Scenes/Social Interruption Minigame.unity";
-    private const string BuilderVersion = "social-interruption-v4";
-
-    static SocialInterruptionSceneBuilder()
-    {
-        EditorApplication.delayCall += BuildUpdatedSceneOnce;
-    }
 
     [MenuItem("Tools/The Noli/Minigames/Rebuild Social Interruption Minigame")]
     public static void BuildScene()
     {
         Scene previousScene = SceneManager.GetActiveScene();
         bool wasViewingMinigame = previousScene.IsValid() && previousScene.path == ScenePath;
+        bool canRestorePreviousScene = previousScene.IsValid() && previousScene.isLoaded &&
+                                       !string.IsNullOrEmpty(previousScene.path);
         Scene loadedMinigame = SceneManager.GetSceneByPath(ScenePath);
         if (loadedMinigame.IsValid() && loadedMinigame.isLoaded)
             EditorSceneManager.CloseScene(loadedMinigame, true);
 
-        Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive);
+        Scene scene = EditorSceneManager.NewScene(
+            NewSceneSetup.EmptyScene,
+            canRestorePreviousScene ? NewSceneMode.Additive : NewSceneMode.Single);
         SceneManager.SetActiveScene(scene);
 
         CreateCamera();
@@ -121,20 +118,12 @@ public static class SocialInterruptionSceneBuilder
 
         EditorSceneManager.SaveScene(scene, ScenePath);
         AddToBuildSettings();
-        if (!wasViewingMinigame)
+        if (!wasViewingMinigame && canRestorePreviousScene)
             EditorSceneManager.CloseScene(scene, true);
-        if (!wasViewingMinigame && previousScene.IsValid() && previousScene.isLoaded)
+        if (!wasViewingMinigame && canRestorePreviousScene)
             SceneManager.SetActiveScene(previousScene);
         AssetDatabase.SaveAssets();
-        EditorPrefs.SetString(nameof(SocialInterruptionSceneBuilder), BuilderVersion);
         Debug.Log($"Built Social Interruption minigame scene at {ScenePath}");
-    }
-
-    private static void BuildUpdatedSceneOnce()
-    {
-        if (!Application.isBatchMode &&
-            EditorPrefs.GetString(nameof(SocialInterruptionSceneBuilder)) != BuilderVersion)
-            BuildScene();
     }
 
     private static void CreateCamera()

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using NUnit.Framework;
+using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,6 +34,34 @@ public sealed class ChapterSwitchingTests
         }
 
         createdAssets.Clear();
+    }
+
+    [Test]
+    public void CommittedChapters_AreAvailableAndFinalDependencyIsExplicit()
+    {
+        ChapterDataSO chapter1 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(
+            "Assets/ScriptableObjects/Chapters/Chapter 1.asset");
+        ChapterDataSO chapter2 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(
+            "Assets/ScriptableObjects/Chapters/Chapter 2.asset");
+        ChapterDataSO chapter3 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(
+            "Assets/ScriptableObjects/Chapters/Chapter 3.asset");
+        MissionInfoSO meetNewGuests = AssetDatabase.LoadAssetAtPath<MissionInfoSO>(
+            "Assets/ScriptableObjects/Missions/Chapter 1/Meet New Guests.asset");
+
+        Assert.That(chapter1, Is.Not.Null);
+        Assert.That(chapter2, Is.Not.Null);
+        Assert.That(chapter3, Is.Not.Null);
+        Assert.That(meetNewGuests, Is.Not.Null);
+        foreach (ChapterDataSO chapter in new[] { chapter1, chapter2, chapter3 })
+        {
+            Assert.That(chapter.ContentAvailable, Is.True, $"{chapter.name} is unavailable.");
+            Assert.That(chapter.StartingMission, Is.Not.Null, $"{chapter.name} has no starting mission.");
+            Assert.That(chapter.FinalMission, Is.Not.Null, $"{chapter.name} has no final mission.");
+            Assert.That(chapter.CompletionQuizJson, Is.Not.Null, $"{chapter.name} has no completion quiz.");
+        }
+
+        Assert.That(chapter1.FinalMission, Is.Not.Null);
+        Assert.That(chapter1.FinalMission.Prerequisites, Has.Member(meetNewGuests));
     }
 
     [Test]

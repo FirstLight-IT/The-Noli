@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4361239213602398108, guid: 3d38cc75a137efd44a60de5b6de84b25, type: 3}
+      objectReference: {fileID: 3684424405871766268, guid: 600118ccf0cd0ac4a9b20fc6011c444b, type: 3}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_SortingOrder
       value: 151
@@ -86,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.081
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.712
+      value: 2.445
       objectReference: {fileID: 0}
     - target: {fileID: 6375768478794960284, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: npcData
@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: NPCDialogueData
       value: 
       objectReference: {fileID: 11400000, guid: 738f8da1851a3da45ad2f54218aa26bb, type: 2}
+    - target: {fileID: 7000000000000000001, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
+      propertyPath: m_Controller
+      value:
+      objectReference: {fileID: 9100000, guid: ad4fdeaeedb73474bb138706dc874090, type: 2}
     - target: {fileID: 8929586790137243923, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_Icon
       value: 

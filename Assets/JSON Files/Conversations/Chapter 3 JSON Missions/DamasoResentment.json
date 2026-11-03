@@ -1,6 +1,7 @@
 {
   "conversationId": "damaso_resentment",
   "defaultLanguageCode": "en",
+  "fadeCameraReturnOnEnd": true,
   "languages": [
     {
       "languageCode": "en",

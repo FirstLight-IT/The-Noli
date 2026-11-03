@@ -8,8 +8,7 @@ using UnityEngine;
 
 public sealed class MissionAuthoringWindow : EditorWindow
 {
-    private const string MenuPath = "Tools/The Noli/Mission Group Builder";
-    private const string LegacyMenuPath = "Tools/The Noli/Mission Builder";
+    private const string MenuPath = "Tools/The Noli/Mission Builder";
     private const string ChapterMissionJsonRoot = "Assets/JSON Files/Missions";
     private const string MissionAssetsRoot = "Assets/ScriptableObjects/Missions";
     private const string MissionStepsRoot = "Assets/Prefabs/Mission Steps";
@@ -138,12 +137,6 @@ public sealed class MissionAuthoringWindow : EditorWindow
         window.titleContent = new GUIContent("Mission Groups");
         window.minSize = new Vector2(500f, 650f);
         window.Show();
-    }
-
-    [MenuItem(LegacyMenuPath, false, 1001)]
-    private static void OpenLegacyPath()
-    {
-        Open();
     }
 
     private void OnEnable()

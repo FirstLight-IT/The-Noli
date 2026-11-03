@@ -8,7 +8,13 @@ public class NPCWaypoint : MonoBehaviour
     [SerializeField] private bool overrideWaitTime;
     [SerializeField, Min(0f)] private float waitTime;
 
+    [Header("Facing While Waiting")]
+    [SerializeField] private bool overrideWaitFacing;
+    [SerializeField] private NPCFacingDirection waitFacing = NPCFacingDirection.South;
+
     public NPCWaypoint[] Neighbours => neighbours;
+    public bool OverrideWaitFacing => overrideWaitFacing;
+    public NPCFacingDirection WaitFacing => waitFacing;
 
     public float GetWaitTime(float defaultWaitTime)
     {

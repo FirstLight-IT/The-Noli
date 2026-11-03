@@ -1,0 +1,2641 @@
+fileFormatVersion: 2
+guid: 02a9ed8cd7412b347a44c86db37b43ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -183115641313764918
+    second: Sibyla-Idle_0
+  - first:
+      213: -1102014765397410713
+    second: Sibyla-Idle_1
+  - first:
+      213: 8248060657041841209
+    second: Sibyla-Idle_2
+  - first:
+      213: -90824781488093286
+    second: Sibyla-Idle_3
+  - first:
+      213: -2290541679842400259
+    second: Sibyla-Idle_4
+  - first:
+      213: -3758561768607905467
+    second: Sibyla-Idle_5
+  - first:
+      213: 7279612712621301488
+    second: Sibyla-Idle_6
+  - first:
+      213: -7249888682317102373
+    second: Sibyla-Idle_7
+  - first:
+      213: -4849050435879116018
+    second: Sibyla-Idle_8
+  - first:
+      213: 6572728275633835350
+    second: Sibyla-Idle_9
+  - first:
+      213: -3629228359017226533
+    second: Sibyla-Idle_10
+  - first:
+      213: -6113436955794763450
+    second: Sibyla-Idle_11
+  - first:
+      213: -4360219510216500670
+    second: Sibyla-Idle_12
+  - first:
+      213: 4835144100233922338
+    second: Sibyla-Idle_13
+  - first:
+      213: -3102911628268442735
+    second: Sibyla-Idle_14
+  - first:
+      213: 2089427526989658049
+    second: Sibyla-Idle_15
+  - first:
+      213: 2516993829031073751
+    second: Sibyla-Idle_16
+  - first:
+      213: 1320245801816617146
+    second: Sibyla-Idle_17
+  - first:
+      213: -8641872977393974910
+    second: Sibyla-Idle_18
+  - first:
+      213: -4135491719830755869
+    second: Sibyla-Idle_19
+  - first:
+      213: -5925988081463450545
+    second: Sibyla-Idle_20
+  - first:
+      213: -5970795948720772426
+    second: Sibyla-Idle_21
+  - first:
+      213: 3654812236142899351
+    second: Sibyla-Idle_22
+  - first:
+      213: 634504865071753853
+    second: Sibyla-Idle_23
+  - first:
+      213: 8814319444147799563
+    second: Sibyla-Idle_24
+  - first:
+      213: 4990510056038390487
+    second: Sibyla-Idle_25
+  - first:
+      213: 5089124720425968427
+    second: Sibyla-Idle_26
+  - first:
+      213: 784914436960708757
+    second: Sibyla-Idle_27
+  - first:
+      213: 7670774303346311463
+    second: Sibyla-Idle_28
+  - first:
+      213: 1766190634691375974
+    second: Sibyla-Idle_29
+  - first:
+      213: 259190362702035191
+    second: Sibyla-Idle_30
+  - first:
+      213: 7326742636159084780
+    second: Sibyla-Idle_31
+  - first:
+      213: 2879926213217972432
+    second: Sibyla-Idle_32
+  - first:
+      213: -4322446453932778937
+    second: Sibyla-Idle_33
+  - first:
+      213: 737467248565450060
+    second: Sibyla-Idle_34
+  - first:
+      213: 1201434584867867736
+    second: Sibyla-Idle_35
+  - first:
+      213: -729307421373567556
+    second: Sibyla-Idle_36
+  - first:
+      213: 166558849883476709
+    second: Sibyla-Idle_37
+  - first:
+      213: 4563923522080110165
+    second: Sibyla-Idle_38
+  - first:
+      213: 7398759240627703348
+    second: Sibyla-Idle_39
+  - first:
+      213: 7749160883556946385
+    second: Sibyla-Idle_40
+  - first:
+      213: 7779517549272658101
+    second: Sibyla-Idle_41
+  - first:
+      213: 4171791577795147261
+    second: Sibyla-Idle_42
+  - first:
+      213: 1087681548245839133
+    second: Sibyla-Idle_43
+  - first:
+      213: 1849359757840769158
+    second: Sibyla-Idle_44
+  - first:
+      213: -6318605320336997809
+    second: Sibyla-Idle_45
+  - first:
+      213: 3121065113334136718
+    second: Sibyla-Idle_46
+  - first:
+      213: -3745733994389716915
+    second: Sibyla-Idle_47
+  - first:
+      213: -4257557350151890868
+    second: Sibyla-Idle_48
+  - first:
+      213: -4036858189821111369
+    second: Sibyla-Idle_49
+  - first:
+      213: -2517384580873326124
+    second: Sibyla-Idle_50
+  - first:
+      213: -2638840561546725652
+    second: Sibyla-Idle_51
+  - first:
+      213: 126883844727512337
+    second: Sibyla-Idle_52
+  - first:
+      213: 3622640603060227393
+    second: Sibyla-Idle_53
+  - first:
+      213: -8983210988513635662
+    second: Sibyla-Idle_54
+  - first:
+      213: 5075088670163236681
+    second: Sibyla-Idle_55
+  - first:
+      213: -3075404590522092352
+    second: Sibyla-Idle_56
+  - first:
+      213: -6194990753118330398
+    second: Sibyla-Idle_57
+  - first:
+      213: 1657598563169607140
+    second: Sibyla-Idle_58
+  - first:
+      213: 4334479132853982380
+    second: Sibyla-Idle_59
+  - first:
+      213: 1601013111471156190
+    second: Sibyla-Idle_60
+  - first:
+      213: -726792782571469571
+    second: Sibyla-Idle_61
+  - first:
+      213: -8837706497593557141
+    second: Sibyla-Idle_62
+  - first:
+      213: 2274140393998937769
+    second: Sibyla-Idle_63
+  - first:
+      213: 2147889864796335220
+    second: Sibyla-Idle_64
+  - first:
+      213: -6961431770163610626
+    second: Sibyla-Idle_65
+  - first:
+      213: -8569026403704940087
+    second: Sibyla-Idle_66
+  - first:
+      213: 734312205617069216
+    second: Sibyla-Idle_67
+  - first:
+      213: -8934818275106864567
+    second: Sibyla-Idle_68
+  - first:
+      213: -2940848664775231345
+    second: Sibyla-Idle_69
+  - first:
+      213: 508988875604091858
+    second: Sibyla-Idle_70
+  - first:
+      213: -9113634824517734240
+    second: Sibyla-Idle_71
+  - first:
+      213: -788120256158241327
+    second: Sibyla-Idle_72
+  - first:
+      213: -2981026137464409456
+    second: Sibyla-Idle_73
+  - first:
+      213: -130429490885011651
+    second: Sibyla-Idle_74
+  - first:
+      213: 315164013067751365
+    second: Sibyla-Idle_75
+  - first:
+      213: -1155743880922944645
+    second: Sibyla-Idle_76
+  - first:
+      213: -5099914557021675928
+    second: Sibyla-Idle_77
+  - first:
+      213: -128680447906845513
+    second: Sibyla-Idle_78
+  - first:
+      213: 3465396188303573101
+    second: Sibyla-Idle_79
+  - first:
+      213: -6002950962390808641
+    second: Sibyla-Idle_80
+  - first:
+      213: 7518775024964469157
+    second: Sibyla-Idle_81
+  - first:
+      213: 8344330545505416359
+    second: Sibyla-Idle_82
+  - first:
+      213: 3578894227336611925
+    second: Sibyla-Idle_83
+  - first:
+      213: -7862366676590064281
+    second: Sibyla-Idle_84
+  - first:
+      213: -4580282088230396904
+    second: Sibyla-Idle_85
+  - first:
+      213: 2083499979077416695
+    second: Sibyla-Idle_86
+  - first:
+      213: 6507910093151677792
+    second: Sibyla-Idle_87
+  - first:
+      213: 2415724885781335210
+    second: Sibyla-Idle_88
+  - first:
+      213: -3347893994571316806
+    second: Sibyla-Idle_89
+  - first:
+      213: -170678332778416994
+    second: Sibyla-Idle_90
+  - first:
+      213: -7261374474422381876
+    second: Sibyla-Idle_91
+  - first:
+      213: -477239687951078321
+    second: Sibyla-Idle_92
+  - first:
+      213: -6341519632772756992
+    second: Sibyla-Idle_93
+  - first:
+      213: 6441458937808274492
+    second: Sibyla-Idle_94
+  - first:
+      213: -6994379591660980512
+    second: Sibyla-Idle_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sibyla-Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9dcae5b41757df0800000000000000
+      internalID: -183115641313764918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c704bd86bd4b0f0800000000000000
+      internalID: -1102014765397410713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c9adca77ff67270800000000000000
+      internalID: 8248060657041841209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97899aa7535dbef0800000000000000
+      internalID: -90824781488093286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df764cd5a7c5630e0800000000000000
+      internalID: -2290541679842400259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54903c33cf7e6dbc0800000000000000
+      internalID: -3758561768607905467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_6
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fed53e6131660560800000000000000
+      internalID: 7279612712621301488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_7
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd24d5da7a8336b90800000000000000
+      internalID: -7249888682317102373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_8
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03e877e156b4bcb0800000000000000
+      internalID: -4849050435879116018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_9
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d025afa85073b50800000000000000
+      internalID: 6572728275633835350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_10
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde1104390462adc0800000000000000
+      internalID: -3629228359017226533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_11
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6419b15aa75b82ba0800000000000000
+      internalID: -6113436955794763450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a51d6f4736d73c0800000000000000
+      internalID: -4360219510216500670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227c44401f1e91340800000000000000
+      internalID: 4835144100233922338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b61a3605e30f4d0800000000000000
+      internalID: -3102911628268442735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7342af3432ffc10800000000000000
+      internalID: 2089427526989658049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_16
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d75f394d882ee220800000000000000
+      internalID: 2516993829031073751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_17
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0fa71df84725210800000000000000
+      internalID: 1320245801816617146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_18
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281826c4056e11880800000000000000
+      internalID: -8641872977393974910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_19
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e52beb0138cb96c0800000000000000
+      internalID: -4135491719830755869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_20
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f442c25bc39a2cda0800000000000000
+      internalID: -5925988081463450545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_21
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba282228b8732da0800000000000000
+      internalID: -5970795948720772426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_22
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7907c006d5088b230800000000000000
+      internalID: 3654812236142899351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_23
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7aebd220d63ec800800000000000000
+      internalID: 634504865071753853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b068f3d85d0c25a70800000000000000
+      internalID: 8814319444147799563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dade22847ad14540800000000000000
+      internalID: 4990510056038390487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2326aa48f330a640800000000000000
+      internalID: 5089124720425968427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5986e12958394ea00800000000000000
+      internalID: 784914436960708757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721c62f5690147a60800000000000000
+      internalID: 7670774303346311463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663b66a4605c28810800000000000000
+      internalID: 1766190634691375974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_30
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f83f0af244d89300800000000000000
+      internalID: 259190362702035191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_31
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8a8fcdb91dda560800000000000000
+      internalID: 7326742636159084780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_32
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d07136e1ad87f720800000000000000
+      internalID: 2879926213217972432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_33
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a90b8f9d59304c0800000000000000
+      internalID: -4322446453932778937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_34
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c457a382e820c3a00800000000000000
+      internalID: 737467248565450060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_35
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c0be3b36a5ca010800000000000000
+      internalID: 1201434584867867736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbde8f8a3caf0e5f0800000000000000
+      internalID: -729307421373567556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e29089346cbf4200800000000000000
+      internalID: 166558849883476709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_38
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55672ab3340565f30800000000000000
+      internalID: 4563923522080110165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_39
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ec04c345cada660800000000000000
+      internalID: 7398759240627703348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_40
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d193cb44cc8a8b60800000000000000
+      internalID: 7749160883556946385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_41
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b070505ef566fb60800000000000000
+      internalID: 7779517549272658101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_42
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5327f365e25e930800000000000000
+      internalID: 4171791577795147261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_43
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1da0f7fa98381f00800000000000000
+      internalID: 1087681548245839133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_44
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6806004c6ee3aa910800000000000000
+      internalID: 1849359757840769158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_45
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f428b6540fdcf48a0800000000000000
+      internalID: -6318605320336997809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_46
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f35293f20405b20800000000000000
+      internalID: 3121065113334136718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_47
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40cb4127ca740cc0800000000000000
+      internalID: -3745733994389716915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48d755c52e1ae4c0800000000000000
+      internalID: -4257557350151890868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b316135dd23af7c0800000000000000
+      internalID: -4036858189821111369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_50
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1fff5bf04701dd0800000000000000
+      internalID: -2517384580873326124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_51
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce67d1e8d74f06bd0800000000000000
+      internalID: -2638840561546725652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_52
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d18bc3f28c2c100800000000000000
+      internalID: 126883844727512337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_53
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14dcf465f64364230800000000000000
+      internalID: 3622640603060227393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_54
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b252477339355380800000000000000
+      internalID: -8983210988513635662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_55
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94770bca1465e6640800000000000000
+      internalID: 5075088670163236681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_56
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c43351b1d7f155d0800000000000000
+      internalID: -3075404590522092352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_57
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e16d858bb8f60aa0800000000000000
+      internalID: -6194990753118330398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_58
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed1ce16c19f00710800000000000000
+      internalID: 1657598563169607140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_59
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4da186ec9272c30800000000000000
+      internalID: 4334479132853982380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb2bfd31f0f73610800000000000000
+      internalID: 1601013111471156190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_61
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df48281a0d9e9e5f0800000000000000
+      internalID: -726792782571469571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_62
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f36cdb3c82a5580800000000000000
+      internalID: -8837706497593557141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_63
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae6ca1b3ae5f8f10800000000000000
+      internalID: 2274140393998937769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_64
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ce8d7b376decd10800000000000000
+      internalID: 2147889864796335220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_65
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb774330b6046f90800000000000000
+      internalID: -6961431770163610626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_66
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c95930f2e3b41980800000000000000
+      internalID: -8569026403704940087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_67
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0acf90a7f0dc03a00800000000000000
+      internalID: 734312205617069216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_68
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94246931e16210480800000000000000
+      internalID: -8934818275106864567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_69
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88f3ed78b10037d0800000000000000
+      internalID: -2940848664775231345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_70
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3e1058faa401700800000000000000
+      internalID: 508988875604091858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_71
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 780
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0bdf7c96dd58180800000000000000
+      internalID: -9113634824517734240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dde56b7dc80015f0800000000000000
+      internalID: -788120256158241327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092774aa58441a6d0800000000000000
+      internalID: -2981026137464409456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d37509fa11f903ef0800000000000000
+      internalID: -130429490885011651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_75
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cfc3e40000bf5400800000000000000
+      internalID: 315164013067751365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_76
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ba14e4019f5ffe0800000000000000
+      internalID: -1155743880922944645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_77
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e11eb1bb67939b0800000000000000
+      internalID: -5099914557021675928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_78
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc69fc70d5d63ef0800000000000000
+      internalID: -128680447906845513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_79
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60c3d9097f871030800000000000000
+      internalID: 3465396188303573101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_80
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb74b9a97eb31bca0800000000000000
+      internalID: -6002950962390808641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_81
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1061d8c0e085860800000000000000
+      internalID: 7518775024964469157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_82
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4ba45cb640dc370800000000000000
+      internalID: 8344330545505416359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_83
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 390
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55848158659caa130800000000000000
+      internalID: 3578894227336611925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d0bfb0a2343e290800000000000000
+      internalID: -7862366676590064281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_85
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c51f745b19f60c0800000000000000
+      internalID: -4580282088230396904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_86
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6717e21341aec10800000000000000
+      internalID: 2083499979077416695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_87
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d2c74dfbdb05a50800000000000000
+      internalID: 6507910093151677792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_88
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac411c0cf0668120800000000000000
+      internalID: 2415724885781335210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_89
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1c9eb5624e981d0800000000000000
+      internalID: -3347893994571316806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_90
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94f2ebe5f0a1adf0800000000000000
+      internalID: -170678332778416994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_91
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc217fe436a6a3b90800000000000000
+      internalID: -7261374474422381876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_92
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c25f648018069f0800000000000000
+      internalID: -477239687951078321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_93
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a0a682e756ef7a0800000000000000
+      internalID: -6341519632772756992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_94
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34c35f86c8a46950800000000000000
+      internalID: 6441458937808274492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibyla-Idle_95
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 390
+        height: 390
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e63ec6b1d8feee90800000000000000
+      internalID: -6994379591660980512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a60531c500286894686c5af45b927f5e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Sibyla-Idle_0: -183115641313764918
+      Sibyla-Idle_1: -1102014765397410713
+      Sibyla-Idle_10: -3629228359017226533
+      Sibyla-Idle_11: -6113436955794763450
+      Sibyla-Idle_12: -4360219510216500670
+      Sibyla-Idle_13: 4835144100233922338
+      Sibyla-Idle_14: -3102911628268442735
+      Sibyla-Idle_15: 2089427526989658049
+      Sibyla-Idle_16: 2516993829031073751
+      Sibyla-Idle_17: 1320245801816617146
+      Sibyla-Idle_18: -8641872977393974910
+      Sibyla-Idle_19: -4135491719830755869
+      Sibyla-Idle_2: 8248060657041841209
+      Sibyla-Idle_20: -5925988081463450545
+      Sibyla-Idle_21: -5970795948720772426
+      Sibyla-Idle_22: 3654812236142899351
+      Sibyla-Idle_23: 634504865071753853
+      Sibyla-Idle_24: 8814319444147799563
+      Sibyla-Idle_25: 4990510056038390487
+      Sibyla-Idle_26: 5089124720425968427
+      Sibyla-Idle_27: 784914436960708757
+      Sibyla-Idle_28: 7670774303346311463
+      Sibyla-Idle_29: 1766190634691375974
+      Sibyla-Idle_3: -90824781488093286
+      Sibyla-Idle_30: 259190362702035191
+      Sibyla-Idle_31: 7326742636159084780
+      Sibyla-Idle_32: 2879926213217972432
+      Sibyla-Idle_33: -4322446453932778937
+      Sibyla-Idle_34: 737467248565450060
+      Sibyla-Idle_35: 1201434584867867736
+      Sibyla-Idle_36: -729307421373567556
+      Sibyla-Idle_37: 166558849883476709
+      Sibyla-Idle_38: 4563923522080110165
+      Sibyla-Idle_39: 7398759240627703348
+      Sibyla-Idle_4: -2290541679842400259
+      Sibyla-Idle_40: 7749160883556946385
+      Sibyla-Idle_41: 7779517549272658101
+      Sibyla-Idle_42: 4171791577795147261
+      Sibyla-Idle_43: 1087681548245839133
+      Sibyla-Idle_44: 1849359757840769158
+      Sibyla-Idle_45: -6318605320336997809
+      Sibyla-Idle_46: 3121065113334136718
+      Sibyla-Idle_47: -3745733994389716915
+      Sibyla-Idle_48: -4257557350151890868
+      Sibyla-Idle_49: -4036858189821111369
+      Sibyla-Idle_5: -3758561768607905467
+      Sibyla-Idle_50: -2517384580873326124
+      Sibyla-Idle_51: -2638840561546725652
+      Sibyla-Idle_52: 126883844727512337
+      Sibyla-Idle_53: 3622640603060227393
+      Sibyla-Idle_54: -8983210988513635662
+      Sibyla-Idle_55: 5075088670163236681
+      Sibyla-Idle_56: -3075404590522092352
+      Sibyla-Idle_57: -6194990753118330398
+      Sibyla-Idle_58: 1657598563169607140
+      Sibyla-Idle_59: 4334479132853982380
+      Sibyla-Idle_6: 7279612712621301488
+      Sibyla-Idle_60: 1601013111471156190
+      Sibyla-Idle_61: -726792782571469571
+      Sibyla-Idle_62: -8837706497593557141
+      Sibyla-Idle_63: 2274140393998937769
+      Sibyla-Idle_64: 2147889864796335220
+      Sibyla-Idle_65: -6961431770163610626
+      Sibyla-Idle_66: -8569026403704940087
+      Sibyla-Idle_67: 734312205617069216
+      Sibyla-Idle_68: -8934818275106864567
+      Sibyla-Idle_69: -2940848664775231345
+      Sibyla-Idle_7: -7249888682317102373
+      Sibyla-Idle_70: 508988875604091858
+      Sibyla-Idle_71: -9113634824517734240
+      Sibyla-Idle_72: -788120256158241327
+      Sibyla-Idle_73: -2981026137464409456
+      Sibyla-Idle_74: -130429490885011651
+      Sibyla-Idle_75: 315164013067751365
+      Sibyla-Idle_76: -1155743880922944645
+      Sibyla-Idle_77: -5099914557021675928
+      Sibyla-Idle_78: -128680447906845513
+      Sibyla-Idle_79: 3465396188303573101
+      Sibyla-Idle_8: -4849050435879116018
+      Sibyla-Idle_80: -6002950962390808641
+      Sibyla-Idle_81: 7518775024964469157
+      Sibyla-Idle_82: 8344330545505416359
+      Sibyla-Idle_83: 3578894227336611925
+      Sibyla-Idle_84: -7862366676590064281
+      Sibyla-Idle_85: -4580282088230396904
+      Sibyla-Idle_86: 2083499979077416695
+      Sibyla-Idle_87: 6507910093151677792
+      Sibyla-Idle_88: 2415724885781335210
+      Sibyla-Idle_89: -3347893994571316806
+      Sibyla-Idle_9: 6572728275633835350
+      Sibyla-Idle_90: -170678332778416994
+      Sibyla-Idle_91: -7261374474422381876
+      Sibyla-Idle_92: -477239687951078321
+      Sibyla-Idle_93: -6341519632772756992
+      Sibyla-Idle_94: 6441458937808274492
+      Sibyla-Idle_95: -6994379591660980512
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

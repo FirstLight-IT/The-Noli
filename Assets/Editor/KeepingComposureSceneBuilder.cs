@@ -9,16 +9,9 @@ using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[InitializeOnLoad]
 public static class KeepingComposureSceneBuilder
 {
     private const string ScenePath = "Assets/Scenes/Keeping Composure Minigame.unity";
-    private const string BuilderVersion = "keeping-composure-v1";
-
-    static KeepingComposureSceneBuilder()
-    {
-        EditorApplication.delayCall += BuildUpdatedSceneOnce;
-    }
 
     [MenuItem("Tools/The Noli/Minigames/Rebuild Keeping Composure Minigame")]
     public static void BuildScene()
@@ -142,15 +135,7 @@ public static class KeepingComposureSceneBuilder
         if (!wasViewingMinigame && canRestorePreviousScene)
             SceneManager.SetActiveScene(previousScene);
         AssetDatabase.SaveAssets();
-        EditorPrefs.SetString(nameof(KeepingComposureSceneBuilder), BuilderVersion);
         Debug.Log($"Built Keeping Composure minigame scene at {ScenePath}");
-    }
-
-    private static void BuildUpdatedSceneOnce()
-    {
-        if (!Application.isBatchMode &&
-            EditorPrefs.GetString(nameof(KeepingComposureSceneBuilder)) != BuilderVersion)
-            BuildScene();
     }
 
     private static void CreateCamera()

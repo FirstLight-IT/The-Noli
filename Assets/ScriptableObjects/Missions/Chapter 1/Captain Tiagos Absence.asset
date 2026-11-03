@@ -15,7 +15,7 @@ MonoBehaviour:
   localizedDataJson: {fileID: 4900000, guid: c0f4d285d9f370847a81b9c5d2d2d06a, type: 3}
   missionId: captain_tiago_absence
   prerequisites:
-  - {fileID: 11400000, guid: acbc2b79ca274e8aa7779f8957592253, type: 2}
+  - {fileID: 11400000, guid: 5b99757e8e22d64499a666570ef99f3b, type: 2}
   autoStartWhenAvailable: 1
   missionStepPrefabs:
   - {fileID: 5217455378940479564, guid: aeb40923d47e19e4a9c0b2d13920aef7, type: 3}

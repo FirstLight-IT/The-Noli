@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChapterDataSO
   localizedDataJson: {fileID: 4900000, guid: 5be2d645c5f7807409a7cd19a4828e25, type: 3}
   chapterId: chapter_3
-  contentAvailable: 0
+  contentAvailable: 1
   playerCharacter: {fileID: 11400000, guid: 267694db082408048a4a501f49cdbe66, type: 2}
   openingNarration: {fileID: 0}
   missions:
@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe75098fb6e4bf64dad1261646801a07, type: 2}
   - {fileID: 11400000, guid: 974e3c31e7460984bbafcc74dedef41c, type: 2}
   startingMission: {fileID: 11400000, guid: 0152cd07cd28d354bb03fff09503c754, type: 2}
-  finalMission: {fileID: 0}
-  completionQuizJson: {fileID: 0}
+  finalMission: {fileID: 11400000, guid: 974e3c31e7460984bbafcc74dedef41c, type: 2}
+  completionQuizJson: {fileID: 4900000, guid: 66c24d36c97d4a4ba8c6270705608784, type: 3}
   quizSceneName: ChapterQuiz
   glossary: {fileID: 0}

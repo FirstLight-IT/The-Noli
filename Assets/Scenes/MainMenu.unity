@@ -10214,22 +10214,6 @@ MonoBehaviour:
   manageClassroomsBackButton: {fileID: 1164400987}
   closeButton: {fileID: 319788662}
   statusText: {fileID: 591031683}
-  classroomDashboardRoot: {fileID: 0}
-  dashboardTitleText: {fileID: 0}
-  dashboardSummaryText: {fileID: 0}
-  dashboardStatusText: {fileID: 0}
-  dashboardStudentCardsRoot: {fileID: 0}
-  dashboardStudentPageText: {fileID: 0}
-  dashboardPreviousStudentsButton: {fileID: 0}
-  dashboardNextStudentsButton: {fileID: 0}
-  dashboardAnalyticsOverviewText: {fileID: 0}
-  dashboardChapterDropdown: {fileID: 0}
-  dashboardEngagementMetric: {fileID: 0}
-  dashboardQuizMetric: {fileID: 0}
-  dashboardDialogueMetric: {fileID: 0}
-  dashboardArtifactMetric: {fileID: 0}
-  dashboardRefreshButton: {fileID: 0}
-  dashboardBackButton: {fileID: 0}
 --- !u!1 &493767691
 GameObject:
   m_ObjectHideFlags: 0
