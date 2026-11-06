@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: lieutenant_guevara
-  portrait: {fileID: 21300000, guid: b45d037ab671a154da17833d44f3223e, type: 3}
+  portrait: {fileID: 21300000, guid: a1555669eb9bff94495239c047bfb549, type: 3}

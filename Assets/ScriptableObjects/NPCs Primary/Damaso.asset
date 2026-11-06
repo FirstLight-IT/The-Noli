@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogueSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: fray_damaso
-  portrait: {fileID: 21300000, guid: dfb512c37edbc1a4186f758a9558d61e, type: 3}
+  portrait: {fileID: 21300000, guid: 109ce982fdd665945867bf4976f1186d, type: 3}

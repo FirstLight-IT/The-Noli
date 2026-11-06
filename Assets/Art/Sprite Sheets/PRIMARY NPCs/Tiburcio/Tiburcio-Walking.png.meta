@@ -1,0 +1,2641 @@
+fileFormatVersion: 2
+guid: bfb412f503b8be541bcc1b2aeb03d792
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8592672344202376990
+    second: TIBURCIO_WALKING_0
+  - first:
+      213: 2365801606022210545
+    second: TIBURCIO_WALKING_1
+  - first:
+      213: -2418241753725562939
+    second: TIBURCIO_WALKING_2
+  - first:
+      213: -3913763343080770024
+    second: TIBURCIO_WALKING_3
+  - first:
+      213: -966174280689324391
+    second: TIBURCIO_WALKING_4
+  - first:
+      213: -5421022318365178646
+    second: TIBURCIO_WALKING_5
+  - first:
+      213: -4598314667139577210
+    second: TIBURCIO_WALKING_6
+  - first:
+      213: 3610819425470647268
+    second: TIBURCIO_WALKING_7
+  - first:
+      213: 6826346217942624994
+    second: TIBURCIO_WALKING_8
+  - first:
+      213: -1985468340542648788
+    second: TIBURCIO_WALKING_9
+  - first:
+      213: 6978861901178892576
+    second: TIBURCIO_WALKING_10
+  - first:
+      213: 3057481035695842928
+    second: TIBURCIO_WALKING_11
+  - first:
+      213: -8291867116213865982
+    second: TIBURCIO_WALKING_12
+  - first:
+      213: 5521068757015615369
+    second: TIBURCIO_WALKING_13
+  - first:
+      213: -1217154378561327213
+    second: TIBURCIO_WALKING_14
+  - first:
+      213: 8965101392332642031
+    second: TIBURCIO_WALKING_15
+  - first:
+      213: 8778995715385378499
+    second: TIBURCIO_WALKING_16
+  - first:
+      213: 3458869674282416985
+    second: TIBURCIO_WALKING_17
+  - first:
+      213: 2507511984007062513
+    second: TIBURCIO_WALKING_18
+  - first:
+      213: -6719659675979952124
+    second: TIBURCIO_WALKING_19
+  - first:
+      213: -8700262859437154082
+    second: TIBURCIO_WALKING_20
+  - first:
+      213: 908303336563675199
+    second: TIBURCIO_WALKING_21
+  - first:
+      213: 69788962596030259
+    second: TIBURCIO_WALKING_22
+  - first:
+      213: 8270919393678616893
+    second: TIBURCIO_WALKING_23
+  - first:
+      213: 2444504427687203915
+    second: TIBURCIO_WALKING_24
+  - first:
+      213: -5163472677250710560
+    second: TIBURCIO_WALKING_25
+  - first:
+      213: -8789994734397931259
+    second: TIBURCIO_WALKING_26
+  - first:
+      213: 4753542404752358660
+    second: TIBURCIO_WALKING_27
+  - first:
+      213: 2162319223087073308
+    second: TIBURCIO_WALKING_28
+  - first:
+      213: -2105228608312387053
+    second: TIBURCIO_WALKING_29
+  - first:
+      213: -2524323584375174412
+    second: TIBURCIO_WALKING_30
+  - first:
+      213: -2354056717509582380
+    second: TIBURCIO_WALKING_31
+  - first:
+      213: 3003521156507408033
+    second: TIBURCIO_WALKING_32
+  - first:
+      213: 3919854318334955225
+    second: TIBURCIO_WALKING_33
+  - first:
+      213: 6517854005577429428
+    second: TIBURCIO_WALKING_34
+  - first:
+      213: -564623196987385242
+    second: TIBURCIO_WALKING_35
+  - first:
+      213: -7799259654923021805
+    second: TIBURCIO_WALKING_36
+  - first:
+      213: -7452720647878827065
+    second: TIBURCIO_WALKING_37
+  - first:
+      213: -6805573733186342255
+    second: TIBURCIO_WALKING_38
+  - first:
+      213: 8284371145285052645
+    second: TIBURCIO_WALKING_39
+  - first:
+      213: -4566751320430523832
+    second: TIBURCIO_WALKING_40
+  - first:
+      213: 3523995283322070977
+    second: TIBURCIO_WALKING_41
+  - first:
+      213: -5869269573048372337
+    second: TIBURCIO_WALKING_42
+  - first:
+      213: 6561962851711557671
+    second: TIBURCIO_WALKING_43
+  - first:
+      213: 5836466927990031923
+    second: TIBURCIO_WALKING_44
+  - first:
+      213: -1990356907903745588
+    second: TIBURCIO_WALKING_45
+  - first:
+      213: 4435664368096378037
+    second: TIBURCIO_WALKING_46
+  - first:
+      213: 2193615766323986831
+    second: TIBURCIO_WALKING_47
+  - first:
+      213: 5199688422654564174
+    second: TIBURCIO_WALKING_48
+  - first:
+      213: 2196090410791783413
+    second: TIBURCIO_WALKING_49
+  - first:
+      213: -3735147020657427429
+    second: TIBURCIO_WALKING_50
+  - first:
+      213: 8039140777948993764
+    second: TIBURCIO_WALKING_51
+  - first:
+      213: 2643930081027204795
+    second: TIBURCIO_WALKING_52
+  - first:
+      213: -8574597125746211348
+    second: TIBURCIO_WALKING_53
+  - first:
+      213: 8894646437952031881
+    second: TIBURCIO_WALKING_54
+  - first:
+      213: 3703406292345561144
+    second: TIBURCIO_WALKING_55
+  - first:
+      213: 9090530226441630958
+    second: TIBURCIO_WALKING_56
+  - first:
+      213: -7994812410865207126
+    second: TIBURCIO_WALKING_57
+  - first:
+      213: 772186383995213739
+    second: TIBURCIO_WALKING_58
+  - first:
+      213: 2894959153219396880
+    second: TIBURCIO_WALKING_59
+  - first:
+      213: -2514110692351484061
+    second: TIBURCIO_WALKING_60
+  - first:
+      213: 2405063583312785084
+    second: TIBURCIO_WALKING_61
+  - first:
+      213: -2792950995434553789
+    second: TIBURCIO_WALKING_62
+  - first:
+      213: 997011982169398905
+    second: TIBURCIO_WALKING_63
+  - first:
+      213: -8220942269361059958
+    second: TIBURCIO_WALKING_64
+  - first:
+      213: 6115865342989570731
+    second: TIBURCIO_WALKING_65
+  - first:
+      213: -7818847552863987445
+    second: TIBURCIO_WALKING_66
+  - first:
+      213: -3192166592516438445
+    second: TIBURCIO_WALKING_67
+  - first:
+      213: -8769912309659540917
+    second: TIBURCIO_WALKING_68
+  - first:
+      213: 5369233841982893341
+    second: TIBURCIO_WALKING_69
+  - first:
+      213: -2419257595601503445
+    second: TIBURCIO_WALKING_70
+  - first:
+      213: -6613184584947940173
+    second: TIBURCIO_WALKING_71
+  - first:
+      213: -2996048175940771359
+    second: TIBURCIO_WALKING_72
+  - first:
+      213: 4697454546354661424
+    second: TIBURCIO_WALKING_73
+  - first:
+      213: 3491773531767140089
+    second: TIBURCIO_WALKING_74
+  - first:
+      213: -2472695436063317364
+    second: TIBURCIO_WALKING_75
+  - first:
+      213: 3504714995177110000
+    second: TIBURCIO_WALKING_76
+  - first:
+      213: 4924184849865767072
+    second: TIBURCIO_WALKING_77
+  - first:
+      213: -5916675942473313902
+    second: TIBURCIO_WALKING_78
+  - first:
+      213: -9127317985396855272
+    second: TIBURCIO_WALKING_79
+  - first:
+      213: 2097352954198977633
+    second: TIBURCIO_WALKING_80
+  - first:
+      213: 4155081808380617466
+    second: TIBURCIO_WALKING_81
+  - first:
+      213: 7457424553009030462
+    second: TIBURCIO_WALKING_82
+  - first:
+      213: -741162210322561194
+    second: TIBURCIO_WALKING_83
+  - first:
+      213: -5421606986270843316
+    second: TIBURCIO_WALKING_84
+  - first:
+      213: 4635340998167291635
+    second: TIBURCIO_WALKING_85
+  - first:
+      213: 4143970350869962432
+    second: TIBURCIO_WALKING_86
+  - first:
+      213: -5584918763452530390
+    second: TIBURCIO_WALKING_87
+  - first:
+      213: -4966768185355907645
+    second: TIBURCIO_WALKING_88
+  - first:
+      213: -1985582884763653143
+    second: TIBURCIO_WALKING_89
+  - first:
+      213: -2248672981853520607
+    second: TIBURCIO_WALKING_90
+  - first:
+      213: 892148892103357528
+    second: TIBURCIO_WALKING_91
+  - first:
+      213: 7517002940182520608
+    second: TIBURCIO_WALKING_92
+  - first:
+      213: 762823339602336235
+    second: TIBURCIO_WALKING_93
+  - first:
+      213: -289127302776018022
+    second: TIBURCIO_WALKING_94
+  - first:
+      213: -4539379177427428372
+    second: TIBURCIO_WALKING_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tiburcio-Walking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d32ab3afa1835b478948f3abbcacd59
+      internalID: -762314478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac60caf4702d5344c869469602df75e1
+      internalID: 1676444041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47dbbd03dba42041a040c01f266998b
+      internalID: 1916992082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_3
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e629039471c1d4ba3676be32b8557e
+      internalID: -1993597734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64894927b76a4df40924046a83b8a26c
+      internalID: -1846539691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc5614cce6bce34ea89ac877c231567
+      internalID: -1632351043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_6
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d716b442db2cba344aec777c41f12152
+      internalID: 498666212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_7
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c93a942b22f5d343b8bcb5ec5aea64e
+      internalID: -467704854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_8
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06a10fb3e7ad6e47bd488269977ca96
+      internalID: -574813226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_9
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6424d3681ddc8bd4eb971437c444a49f
+      internalID: -887862587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_10
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e56cfffe0bfa4469c0007c45f4cf51
+      internalID: -1037021709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_11
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b504eac795df72d499ab45053899f0bd
+      internalID: -1721907160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbebc7035f50f164094b52cbca87d4e0
+      internalID: -1098782000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8168d64a9312544f8c1bea1c25efeb8
+      internalID: 1467165243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e994aa9f7c09bdf4bbed0fff583d073e
+      internalID: 1398650875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98615dc801b8c134085fbcfbf019f15e
+      internalID: -821770718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_16
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95329a529cc54924fb677907b7f517fc
+      internalID: -415561604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_17
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b57529e159554746a228b94feac25bf
+      internalID: -1333587353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_18
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6d94cfa0cdf694eb9c8407af048053
+      internalID: -976631357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_19
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427578819ef18284a972a7fdae6402e2
+      internalID: -160116147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_20
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c996f8b29952ef142bb9decb73cb9f6e
+      internalID: -1948838576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_21
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d3312c623948f4784e772266dadeee
+      internalID: 871227527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_22
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b400f9f5671d9f4d976536ea751a463
+      internalID: 916900828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_23
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e228136ebeeac4d9f1c4bd4860d59e
+      internalID: 842861961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f39d830a227181488b7f194ca70e3fe
+      internalID: 1035522250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25902c085e542dd4babf85ebb47323ac
+      internalID: 266318531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30eb5d47c06198f4f9b71c277b97a333
+      internalID: 846946119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6c920572ab6ad43b775120f2bf317c
+      internalID: -1279528534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b60ce0dbe494941b2987f80d2834f5
+      internalID: -602826363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_29
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ae4a23b99b80c4c92a309819f3fd1a
+      internalID: -2070439810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_30
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9a5e88029fa2d4eb52b59dbef9aaf1
+      internalID: -756249188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_31
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6effb87ce01974d8f0f0cacf194a38
+      internalID: 1613840959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_32
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a40010eb36542945b73c31d65720e80
+      internalID: 2106971336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_33
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f45f82394fe75547a4594b7e5bd2df2
+      internalID: -367880636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_34
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b886acb1b5582847ac7411c1e2d6934
+      internalID: 1856181123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_35
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6475f5438b3e0d246bb5292b88048fc2
+      internalID: 78317792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b59db6358c3cd43b8c46300191e797
+      internalID: -442556441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaf4d1afe422ec43a8e39106e2efdbc
+      internalID: -1933226700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_38
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98c2b785c5c8c54a9bf8889287fa0d3
+      internalID: 1361245558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_39
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc3bfd7780f4f840a5aae1e795459d6
+      internalID: -66233287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_40
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d350a6ff013431643832a7fe44c6771d
+      internalID: 1719871546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_41
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b4b24ce4d51d745a8ec300022e9587
+      internalID: 1736574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_42
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2d6be648fcc884fab71098442c87b4
+      internalID: 660192575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_43
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15bb98b102e74741a92e1e4f7e8abf0
+      internalID: 1311215201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_44
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2806be3dbcd784bb893bc80aa128b2
+      internalID: 89663161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_45
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6736c21b261d254ba47808e1e1ad1a1
+      internalID: -999262586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_46
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126f41e7881910c4cad9866eb02993fb
+      internalID: -684981406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_47
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e724b1d037df204c95e1e93ddfa4d73
+      internalID: -18384191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6247df7856d19b4faabdea8ef35dfec
+      internalID: 1360880244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cd1428fb27f7349b2c82b2be0cf63e
+      internalID: -628708182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_50
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528be04f219729f48952bc19764cf33e
+      internalID: 994398308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_51
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad14fa8df96555642bbf2585de675136
+      internalID: 738458418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_52
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52ee0948f9e12f40ae510d1041b64ed
+      internalID: 1150966473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_53
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28aaadf37a38a04fa5e8c1083e4c0a9
+      internalID: -259911349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_54
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5f09df3d0b78d47a536b0a0762de79
+      internalID: -229858849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_55
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61dcc896d112cd42aacf8f5d02032f6
+      internalID: 1736665018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_56
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d61e1d796d6cc44b0c6c6699c016f1
+      internalID: -635210708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_57
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99f11e8fdbe2ca4fa54bddb88e32988
+      internalID: -30959408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_58
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a363427bd2a93ce4189bad00fb702a65
+      internalID: -379749995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_59
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e265de931de3043942df42c6a898d2
+      internalID: 1465088186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bff57c997ebc2e4b832869c322f2a18
+      internalID: 578095887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_61
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cb24bc63fecfc46ab26a3debc319d0
+      internalID: -81925677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_62
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dafba981804bda4297ff58c202a8cab
+      internalID: 1532973897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_63
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1031871537f56ef4c9bb00e2237767ba
+      internalID: -118520064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_64
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60595822721bf4c458d3f01e94cf5c84
+      internalID: -1258781607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_65
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63349bad6515b1479fc7528a75df83e
+      internalID: 1933118999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_66
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c783a06bac78ebf4babd4b109995dd35
+      internalID: -1200531400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_67
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e306e2794a731e64495a52f545b2c433
+      internalID: -1380451870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_68
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8820d13be47674f9fe0df0e6715ac0
+      internalID: -2022491595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_69
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160693334500c744bb926f48816e81cc
+      internalID: 1040559454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_70
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80de54d85ff217b4898370499ff8c6fa
+      internalID: 499784212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_71
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3d25e6a39b5044dbcb55187c2cb91d
+      internalID: -1076077150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b44c1212748d541b6df2fe725b4fe3
+      internalID: 560728953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451a6601aa431f64fa599c9bf2150253
+      internalID: 1576521418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a18853406dc4c4aa25e1f84616ee36
+      internalID: -1809240954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_75
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f472b3f547288af4fb5164fc935c4951
+      internalID: -1188499683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_76
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b22cb566ddd394093a72217e422732
+      internalID: -711540350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_77
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db13ea027210cec41acaf2a968750fc4
+      internalID: 64993245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_78
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564d7e4a9bea7a347b219a54debcd06e
+      internalID: -1380607698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_79
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934ada7aeac97dc4b9a223f19135577a
+      internalID: 1168724317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_80
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7a61acacd714f43a8c3dc784eab7ca
+      internalID: -699661691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_81
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f612edbacf1ce4e44935e53d7b2d29dc
+      internalID: 42113708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_82
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f110a6373d022f4a8d230350f38b5b9
+      internalID: 223492414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_83
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ff5edc193efde4685f8c021bfe7e9d
+      internalID: -762682577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cd10be137ebb64e90677966d4ad40a
+      internalID: 332292631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_85
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47fd1b43a5bdaf45a7f7b890867b850
+      internalID: -1234625112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_86
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a4d6e0212225044bbd31bdb85b32b2
+      internalID: 481100631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_87
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe48aeccd5e9614a8cf4789585335a7
+      internalID: 1923289245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_88
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe45747703f8fbb4c82f83a077dcb887
+      internalID: 172817864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_89
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b86669fb1b8744a871bc96f47e49e4
+      internalID: -1773582854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_90
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6f4f00ca1b37149badd29b6d9bda90
+      internalID: 1633907338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_91
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88701c23950c994988a711496a2b0ff
+      internalID: -1305202474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_92
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f071ae19e33770b44aacc68266805fa0
+      internalID: -2017645121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_93
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162725ff62961a648912e69c47a92a9a
+      internalID: -429625569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_94
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebecaca539ccf404fbf6fec066bb7303
+      internalID: 69254736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiburcio-Walking_95
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c2a4d398b308a4b81f1a433d7ea68a
+      internalID: 224495289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6506c24f2b2587349ba586689cdd0261
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.15000000596046449},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Tiburcio-Walking_0: -762314478
+      Tiburcio-Walking_1: 1676444041
+      Tiburcio-Walking_10: -1037021709
+      Tiburcio-Walking_11: -1721907160
+      Tiburcio-Walking_12: -1098782000
+      Tiburcio-Walking_13: 1467165243
+      Tiburcio-Walking_14: 1398650875
+      Tiburcio-Walking_15: -821770718
+      Tiburcio-Walking_16: -415561604
+      Tiburcio-Walking_17: -1333587353
+      Tiburcio-Walking_18: -976631357
+      Tiburcio-Walking_19: -160116147
+      Tiburcio-Walking_2: 1916992082
+      Tiburcio-Walking_20: -1948838576
+      Tiburcio-Walking_21: 871227527
+      Tiburcio-Walking_22: 916900828
+      Tiburcio-Walking_23: 842861961
+      Tiburcio-Walking_24: 1035522250
+      Tiburcio-Walking_25: 266318531
+      Tiburcio-Walking_26: 846946119
+      Tiburcio-Walking_27: -1279528534
+      Tiburcio-Walking_28: -602826363
+      Tiburcio-Walking_29: -2070439810
+      Tiburcio-Walking_3: -1993597734
+      Tiburcio-Walking_30: -756249188
+      Tiburcio-Walking_31: 1613840959
+      Tiburcio-Walking_32: 2106971336
+      Tiburcio-Walking_33: -367880636
+      Tiburcio-Walking_34: 1856181123
+      Tiburcio-Walking_35: 78317792
+      Tiburcio-Walking_36: -442556441
+      Tiburcio-Walking_37: -1933226700
+      Tiburcio-Walking_38: 1361245558
+      Tiburcio-Walking_39: -66233287
+      Tiburcio-Walking_4: -1846539691
+      Tiburcio-Walking_40: 1719871546
+      Tiburcio-Walking_41: 1736574
+      Tiburcio-Walking_42: 660192575
+      Tiburcio-Walking_43: 1311215201
+      Tiburcio-Walking_44: 89663161
+      Tiburcio-Walking_45: -999262586
+      Tiburcio-Walking_46: -684981406
+      Tiburcio-Walking_47: -18384191
+      Tiburcio-Walking_48: 1360880244
+      Tiburcio-Walking_49: -628708182
+      Tiburcio-Walking_5: -1632351043
+      Tiburcio-Walking_50: 994398308
+      Tiburcio-Walking_51: 738458418
+      Tiburcio-Walking_52: 1150966473
+      Tiburcio-Walking_53: -259911349
+      Tiburcio-Walking_54: -229858849
+      Tiburcio-Walking_55: 1736665018
+      Tiburcio-Walking_56: -635210708
+      Tiburcio-Walking_57: -30959408
+      Tiburcio-Walking_58: -379749995
+      Tiburcio-Walking_59: 1465088186
+      Tiburcio-Walking_6: 498666212
+      Tiburcio-Walking_60: 578095887
+      Tiburcio-Walking_61: -81925677
+      Tiburcio-Walking_62: 1532973897
+      Tiburcio-Walking_63: -118520064
+      Tiburcio-Walking_64: -1258781607
+      Tiburcio-Walking_65: 1933118999
+      Tiburcio-Walking_66: -1200531400
+      Tiburcio-Walking_67: -1380451870
+      Tiburcio-Walking_68: -2022491595
+      Tiburcio-Walking_69: 1040559454
+      Tiburcio-Walking_7: -467704854
+      Tiburcio-Walking_70: 499784212
+      Tiburcio-Walking_71: -1076077150
+      Tiburcio-Walking_72: 560728953
+      Tiburcio-Walking_73: 1576521418
+      Tiburcio-Walking_74: -1809240954
+      Tiburcio-Walking_75: -1188499683
+      Tiburcio-Walking_76: -711540350
+      Tiburcio-Walking_77: 64993245
+      Tiburcio-Walking_78: -1380607698
+      Tiburcio-Walking_79: 1168724317
+      Tiburcio-Walking_8: -574813226
+      Tiburcio-Walking_80: -699661691
+      Tiburcio-Walking_81: 42113708
+      Tiburcio-Walking_82: 223492414
+      Tiburcio-Walking_83: -762682577
+      Tiburcio-Walking_84: 332292631
+      Tiburcio-Walking_85: -1234625112
+      Tiburcio-Walking_86: 481100631
+      Tiburcio-Walking_87: 1923289245
+      Tiburcio-Walking_88: 172817864
+      Tiburcio-Walking_89: -1773582854
+      Tiburcio-Walking_9: -887862587
+      Tiburcio-Walking_90: 1633907338
+      Tiburcio-Walking_91: -1305202474
+      Tiburcio-Walking_92: -2017645121
+      Tiburcio-Walking_93: -429625569
+      Tiburcio-Walking_94: 69254736
+      Tiburcio-Walking_95: 224495289
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

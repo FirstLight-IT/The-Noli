@@ -103,6 +103,47 @@ public sealed class NPCMovementRestoreTests
     }
 
     [Test]
+    public void DialogueFacing_OverridesWalkingWithoutCancellingDestination()
+    {
+        RuntimeAnimatorController controller = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(
+            "Assets/Animators/Player.controller");
+        Assert.That(controller, Is.Not.Null);
+
+        GameObject npcObject = Track(new GameObject("Talking Walking NPC"));
+        GameObject rendererObject = Track(new GameObject("Renderer"));
+        rendererObject.transform.SetParent(npcObject.transform, false);
+        rendererObject.AddComponent<SpriteRenderer>();
+        Animator animator = rendererObject.AddComponent<Animator>();
+        animator.runtimeAnimatorController = controller;
+        NPCMover mover = InitializeMover(npcObject);
+
+        GameObject destination = Track(new GameObject("Route Destination"));
+        destination.transform.position = new Vector3(5f, 0f, 0f);
+        GameObject player = Track(new GameObject("Player Feet"));
+        player.transform.position = new Vector3(-2f, 0f, 0f);
+
+        mover.MoveDirectlyTo(destination.transform);
+        MethodInfo updateAnimation = typeof(NPCMover).GetMethod(
+            "UpdateAnimation", BindingFlags.Instance | BindingFlags.NonPublic);
+        Assert.That(updateAnimation, Is.Not.Null);
+        updateAnimation.Invoke(mover, new object[] { Vector2.right });
+        Assert.That(animator.GetBool("isWalking"), Is.True);
+
+        mover.BeginDialogueFacing(player.transform);
+
+        Assert.That(mover.HasDestination, Is.True);
+        Assert.That(mover.Destination, Is.EqualTo(destination.transform));
+        Assert.That(mover.CurrentFacing, Is.EqualTo(Vector2.left));
+        Assert.That(animator.GetBool("isWalking"), Is.False);
+
+        mover.EndDialogueFacing();
+        updateAnimation.Invoke(mover, new object[] { Vector2.right });
+
+        Assert.That(mover.CurrentFacing, Is.EqualTo(Vector2.right));
+        Assert.That(animator.GetBool("isWalking"), Is.True);
+    }
+
+    [Test]
     public void NearbyPlayer_SlightlyOffCentreInFrontStillFacesSouth()
     {
         GameObject npcObject = Track(new GameObject("Facing NPC"));

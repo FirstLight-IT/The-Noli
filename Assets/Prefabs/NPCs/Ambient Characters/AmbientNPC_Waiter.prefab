@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 2692702913631902986, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9169070366482076292, guid: 2a664bbf90f2558449b6751a9262e4b3, type: 3}
+      objectReference: {fileID: 1725605708, guid: dc343461ca1bc814f8f0e3ed03e92e74, type: 3}
     - target: {fileID: 2692702913631902986, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmbientNPC_Waiter
       objectReference: {fileID: 0}
+    - target: {fileID: 7000000000000000002, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
+      propertyPath: m_Controller
+      value:
+      objectReference: {fileID: 9100000, guid: 0d657c1412a64aefab16d75e915f8049, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

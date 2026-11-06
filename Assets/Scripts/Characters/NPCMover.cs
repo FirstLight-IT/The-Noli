@@ -70,6 +70,7 @@ public class NPCMover : MonoBehaviour
     private Vector2 nearbyFacing;
     private bool hasNearbyFacing;
     private Transform nearbyPlayer;
+    private Transform dialoguePlayer;
 
     public bool HasDestination => destination != null;
     public bool IsBlocked { get; private set; }
@@ -105,7 +106,7 @@ public class NPCMover : MonoBehaviour
 
     private void Update()
     {
-        if (nearbyPlayer != null && destination == null)
+        if (dialoguePlayer != null || (nearbyPlayer != null && destination == null))
             RefreshIdleFacing();
     }
 
@@ -245,6 +246,32 @@ public class NPCMover : MonoBehaviour
             return;
 
         nearbyPlayer = null;
+        hasNearbyFacing = false;
+        RefreshIdleFacing();
+    }
+
+    public void BeginDialogueFacing(Transform player)
+    {
+        if (!turnTowardNearbyPlayer)
+            return;
+
+        Transform target = nearbyPlayer != null ? nearbyPlayer : player;
+        if (target == null)
+            return;
+
+        if (dialoguePlayer != target)
+            hasNearbyFacing = false;
+
+        dialoguePlayer = target;
+        RefreshIdleFacing();
+    }
+
+    public void EndDialogueFacing()
+    {
+        if (dialoguePlayer == null)
+            return;
+
+        dialoguePlayer = null;
         hasNearbyFacing = false;
         RefreshIdleFacing();
     }
@@ -412,7 +439,7 @@ public class NPCMover : MonoBehaviour
 
     private void RefreshIdleFacing()
     {
-        if (destination != null)
+        if (destination != null && dialoguePlayer == null)
             return;
 
         currentFacing = ResolveIdleFacing();
@@ -426,9 +453,13 @@ public class NPCMover : MonoBehaviour
 
     private Vector2 ResolveIdleFacing()
     {
-        if (turnTowardNearbyPlayer && nearbyPlayer != null && destination == null)
+        Transform playerToFace = dialoguePlayer != null
+            ? dialoguePlayer
+            : destination == null ? nearbyPlayer : null;
+
+        if (turnTowardNearbyPlayer && playerToFace != null)
         {
-            Vector2 playerDirection = (Vector2)nearbyPlayer.position - body.position;
+            Vector2 playerDirection = (Vector2)playerToFace.position - body.position;
             if (playerDirection.sqrMagnitude >= NearbyFacingMinimumDistanceSqr)
             {
                 Vector2 isometricDirection = ToIsometricFacingSpace(playerDirection);
@@ -531,6 +562,7 @@ public class NPCMover : MonoBehaviour
         ActiveMovers.Remove(this);
 
         nearbyPlayer = null;
+        dialoguePlayer = null;
         hasNearbyFacing = false;
 
         if (body == null)

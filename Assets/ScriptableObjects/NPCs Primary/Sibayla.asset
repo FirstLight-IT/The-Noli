@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: fray_sibyla
-  portrait: {fileID: 21300000, guid: 5c10deae04182a74a86e30f4a4a4a17b, type: 3}
+  portrait: {fileID: 21300000, guid: 24eaffd3ca6a0264091d1b28b097f1ea, type: 3}

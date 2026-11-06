@@ -22,34 +22,34 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -729307421373567556, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.11111111
+    - time: 0.125
       value: {fileID: 166558849883476709, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.22222222
+    - time: 0.25
       value: {fileID: 4563923522080110165, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.33333334
+    - time: 0.375
       value: {fileID: 7398759240627703348, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.44444445
+    - time: 0.5
       value: {fileID: 7749160883556946385, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.5555556
+    - time: 0.625
       value: {fileID: 7779517549272658101, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.6666667
+    - time: 0.75
       value: {fileID: 4171791577795147261, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.7777778
+    - time: 0.875
       value: {fileID: 1087681548245839133, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 0.8888889
-      value: {fileID: 1849359757840769158, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
     - time: 1
+      value: {fileID: 1849359757840769158, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
+    - time: 1.125
       value: {fileID: -6318605320336997809, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 1.1111112
+    - time: 1.25
       value: {fileID: 3121065113334136718, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
-    - time: 1.2222222
+    - time: 1.375
       value: {fileID: -3745733994389716915, guid: 02a9ed8cd7412b347a44c86db37b43ca, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 9
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -83,7 +83,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3333334
+    m_StopTime: 1.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -103,3 +103,4 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
+

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: dona_victorina
-  portrait: {fileID: 21300000, guid: 36afaede06121314da7a09f3ac2106c9, type: 3}
+  portrait: {fileID: 21300000, guid: aa377e33ed21aaa4394943a113fbb5c7, type: 3}

@@ -140,6 +140,9 @@ public class NPCInfoSO : ScriptableObject
     [Header("Unity Asset References")]
     [SerializeField] private Sprite portrait;
 
+    [Header("Playable Character")]
+    [SerializeField] private RuntimeAnimatorController playerAnimatorController;
+
     public string NpcID => npcID;
     private PrimaryNPCLanguageContent LocalizedContent =>
         PrimaryNPCJson.Resolve(localizedDataJson, npcID, GameLanguage.CurrentCode);
@@ -156,6 +159,7 @@ public class NPCInfoSO : ScriptableObject
     public string Alias => LocalizedContent?.alias ?? string.Empty;
     public string CharacterCategory => LocalizedContent?.characterCategory ?? string.Empty;
     public Sprite Portrait => portrait;
+    public RuntimeAnimatorController PlayerAnimatorController => playerAnimatorController;
     public string Description => LocalizedContent?.description ?? string.Empty;
     public string Biography => LocalizedContent?.biography ?? string.Empty;
     public string[] CharacterFacts => LocalizedContent?.characterFacts ?? Array.Empty<string>();

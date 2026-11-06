@@ -8,6 +8,7 @@ public class PlayerCharacter : MonoBehaviour
     public static event Action<NPCInfoSO> OnCharacterChanged;
 
     [SerializeField] private NPCInfoSO currentCharacter;
+    [SerializeField] private Animator characterAnimator;
 
     public NPCInfoSO CurrentCharacter => currentCharacter;
 
@@ -23,7 +24,12 @@ public class PlayerCharacter : MonoBehaviour
         Instance = this;
 
         if (currentCharacter == null)
+        {
             Debug.LogError("Player Character needs a character data asset.", this);
+            return;
+        }
+
+        ApplyCharacterAppearance(currentCharacter);
     }
 
     private void OnDestroy()
@@ -34,10 +40,25 @@ public class PlayerCharacter : MonoBehaviour
 
     public void SetCharacter(NPCInfoSO character)
     {
-        if (character == null || character == currentCharacter)
+        if (character == null)
             return;
 
+        bool characterChanged = character != currentCharacter;
         currentCharacter = character;
-        OnCharacterChanged?.Invoke(currentCharacter);
+        ApplyCharacterAppearance(currentCharacter);
+
+        if (characterChanged)
+            OnCharacterChanged?.Invoke(currentCharacter);
+    }
+
+    private void ApplyCharacterAppearance(NPCInfoSO character)
+    {
+        if (characterAnimator == null)
+            characterAnimator = GetComponentInChildren<Animator>(true);
+
+        if (characterAnimator == null || character.PlayerAnimatorController == null)
+            return;
+
+        characterAnimator.runtimeAnimatorController = character.PlayerAnimatorController;
     }
 }

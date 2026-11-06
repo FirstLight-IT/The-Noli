@@ -65,6 +65,26 @@ public sealed class ChapterSwitchingTests
     }
 
     [Test]
+    public void CommittedChapters_UseBlondManThenIbarraPlayerControllers()
+    {
+        ChapterDataSO chapter1 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(
+            "Assets/ScriptableObjects/Chapters/Chapter 1.asset");
+        ChapterDataSO chapter2 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(
+            "Assets/ScriptableObjects/Chapters/Chapter 2.asset");
+        ChapterDataSO chapter3 = AssetDatabase.LoadAssetAtPath<ChapterDataSO>(
+            "Assets/ScriptableObjects/Chapters/Chapter 3.asset");
+
+        Assert.That(chapter1.PlayerCharacter.NpcID, Is.EqualTo("blond_man"));
+        Assert.That(chapter2.PlayerCharacter.NpcID, Is.EqualTo("crisostomo_ibarra"));
+        Assert.That(chapter3.PlayerCharacter, Is.SameAs(chapter2.PlayerCharacter));
+        Assert.That(chapter1.PlayerCharacter.PlayerAnimatorController, Is.Not.Null);
+        Assert.That(chapter2.PlayerCharacter.PlayerAnimatorController, Is.Not.Null);
+        Assert.That(
+            chapter2.PlayerCharacter.PlayerAnimatorController,
+            Is.Not.SameAs(chapter1.PlayerCharacter.PlayerAnimatorController));
+    }
+
+    [Test]
     public void ChapterController_ActivatesEveryRootForRequestedChapter()
     {
         ChapterDataSO chapter1 = CreateChapter("chapter_1");
@@ -133,6 +153,26 @@ public sealed class ChapterSwitchingTests
 
         Assert.That(player.CurrentCharacter, Is.SameAs(ibarra));
         Assert.That(playerBody.position, Is.EqualTo(chapter2Position));
+    }
+
+    [Test]
+    public void PlayerCharacter_SwapsAnimatorControllerWithIdentity()
+    {
+        NPCInfoSO blondMan = AssetDatabase.LoadAssetAtPath<NPCInfoSO>(
+            "Assets/ScriptableObjects/NPCs Primary/Blond Man.asset");
+        NPCInfoSO ibarra = AssetDatabase.LoadAssetAtPath<NPCInfoSO>(
+            "Assets/ScriptableObjects/NPCs Primary/Ibarra.asset");
+        GameObject playerObject = CreateSceneObject("Player", false);
+        Animator animator = playerObject.AddComponent<Animator>();
+        PlayerCharacter player = playerObject.AddComponent<PlayerCharacter>();
+        SetPrivateField(player, "currentCharacter", blondMan);
+        SetPrivateField(player, "characterAnimator", animator);
+
+        playerObject.SetActive(true);
+        Assert.That(animator.runtimeAnimatorController, Is.SameAs(blondMan.PlayerAnimatorController));
+
+        player.SetCharacter(ibarra);
+        Assert.That(animator.runtimeAnimatorController, Is.SameAs(ibarra.PlayerAnimatorController));
     }
 
     [Test]

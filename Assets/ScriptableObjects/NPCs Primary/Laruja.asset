@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: senor_laruja
-  portrait: {fileID: 21300000, guid: 888204882d06bc64dac0d2a764ad1dca, type: 3}
+  portrait: {fileID: 21300000, guid: 989467054f1f2fc4e99004a3430e617f, type: 3}

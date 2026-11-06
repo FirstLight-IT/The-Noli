@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfoSO
   localizedDataJson: {fileID: 4900000, guid: 38b04323043262f4398fb35083f9290d, type: 3}
   npcID: young_poet
-  portrait: {fileID: 21300000, guid: 0273c0d72b9430545a5c2d10b2d7fe05, type: 3}
+  portrait: {fileID: 21300000, guid: 113984977b520b64d82e5c5c4b6f69a1, type: 3}

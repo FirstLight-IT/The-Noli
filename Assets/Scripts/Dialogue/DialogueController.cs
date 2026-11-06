@@ -69,6 +69,7 @@ public class DialogueController : MonoBehaviour
     private bool speakerCameraUsesOrthographicLens;
     private float originalSpeakerCameraZoom;
     private float speakerCameraMoveStartZoom;
+    private NPCMover activeDialogueFacingMover;
 
     void Awake()
     {
@@ -83,6 +84,7 @@ public class DialogueController : MonoBehaviour
 
     void OnDestroy()
     {
+        ClearDialogueSpeakerFacing();
         RestoreSpeakerCameraImmediately();
 
         if (Instance == this)
@@ -196,6 +198,8 @@ public class DialogueController : MonoBehaviour
         nameText.SetText(speaker.DisplayName);
         portraitImage.sprite = null;
         portraitImage.gameObject.SetActive(false);
+
+        FocusSpeakerTowardsPlayer(speakerTransform);
 
         if (focusSpeaker)
             FocusCameraOnTransform(speakerTransform);
@@ -596,6 +600,7 @@ public class DialogueController : MonoBehaviour
 
     private void ResetDialogueUI(bool deferSpeakerCameraReturn = false)
     {
+        ClearDialogueSpeakerFacing();
         currentLineIndex = 0;
         isTyping = false;
         isConversationInterrupted = false;
@@ -623,6 +628,7 @@ public class DialogueController : MonoBehaviour
         NPC.OnNPCInteracted -= HandleNPCInteraction;
         NPC.OnMissionConversationInteracted -= HandleConversationInteraction;
         newlyUnlockedNPCs.Clear();
+        ClearDialogueSpeakerFacing();
         RestoreSpeakerCameraImmediately();
     }
 
@@ -653,7 +659,37 @@ public class DialogueController : MonoBehaviour
         }
 
         if (NPC.TryGetById(speaker.NpcID, out NPC npc))
-            FocusCameraOnTransform(npc.DialogueCameraFocus);
+        {
+            Transform speakerTransform = npc.DialogueCameraFocus;
+            FocusSpeakerTowardsPlayer(speakerTransform);
+            FocusCameraOnTransform(speakerTransform);
+        }
+    }
+
+    private void FocusSpeakerTowardsPlayer(Transform speakerTransform)
+    {
+        NPCMover nextMover = speakerTransform != null
+            ? speakerTransform.GetComponentInParent<NPCMover>()
+            : null;
+
+        if (nextMover == activeDialogueFacingMover)
+            return;
+
+        ClearDialogueSpeakerFacing();
+
+        if (nextMover == null || PlayerCharacter.Instance == null)
+            return;
+
+        activeDialogueFacingMover = nextMover;
+        activeDialogueFacingMover.BeginDialogueFacing(PlayerCharacter.Instance.transform);
+    }
+
+    private void ClearDialogueSpeakerFacing()
+    {
+        if (activeDialogueFacingMover != null)
+            activeDialogueFacingMover.EndDialogueFacing();
+
+        activeDialogueFacingMover = null;
     }
 
     private void FocusCameraOnTransform(Transform speakerTransform)
