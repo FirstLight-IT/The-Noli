@@ -7,27 +7,43 @@
       "lines": [
         {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "What!"
         },  {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "The curate of my native town! Padre Damaso,"
         },  {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "my father’s intimate friend!"
         },  {
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "..."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "..."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Pardon me, perhaps I’m mistaken."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "You are not mistaken,"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "but your father was never an intimate friend of mine."
         }
       ]
@@ -37,27 +53,43 @@
       "lines": [
         {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Aba!"
         },  {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Ang kura ng aking bayan! Si Padre Damaso,"
         },  {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "ang matalik na kaibigan ng aking ama!"
         },  {
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "..."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "..."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Paumanhin po, marahil ay nagkamali ako."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Hindi ka nagkamali,"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "ngunit kailanma’y hindi ako naging matalik na kaibigan ng iyong ama."
         }
       ]

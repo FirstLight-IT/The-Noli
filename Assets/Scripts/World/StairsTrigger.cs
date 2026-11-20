@@ -50,6 +50,32 @@ public class StairsTrigger : MonoBehaviour
         return movement.normalized * inputMagnitude;
     }
 
+    public Vector2 GetIsometricFacingDirection(Vector2 movementDirection, float diagonalAngle)
+    {
+        if (movementDirection.sqrMagnitude <= Mathf.Epsilon || bottom == null || top == null)
+            return movementDirection;
+
+        Vector2 slope = (Vector2)(top.position - bottom.position);
+        if (slope.sqrMagnitude <= Mathf.Epsilon)
+            return movementDirection;
+
+        float horizontalDirection = Mathf.Sign(slope.x);
+        if (Mathf.Approximately(horizontalDirection, 0f))
+            horizontalDirection = Mathf.Sign(movementDirection.x);
+
+        if (Mathf.Approximately(horizontalDirection, 0f))
+            horizontalDirection = 1f;
+
+        float travelDirection = Mathf.Sign(Vector2.Dot(movementDirection, slope));
+        if (Mathf.Approximately(travelDirection, 0f))
+            travelDirection = Mathf.Sign(movementDirection.y);
+
+        if (Mathf.Approximately(travelDirection, 0f))
+            travelDirection = 1f;
+
+        return IsometricGeometry.Axis(diagonalAngle, horizontalDirection) * travelDirection;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (TryGetPlayerBody(other, out PlayerMovement player))

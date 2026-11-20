@@ -26,11 +26,19 @@ public class DialogueController : MonoBehaviour
     public bool IsDialogueActive { get; private set; }
 
     [SerializeField] private SpeakerRegistry speakerRegistry;
+
+    [Header("Primary Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Image portraitImage;
     [SerializeField] private Button dialogueCloseButton;
+
+    [Header("Ambient Dialogue UI")]
+    [SerializeField] private GameObject ambientDialoguePanel;
+    [SerializeField] private TMP_Text ambientDialogueText;
+    [SerializeField] private TMP_Text ambientNameText;
+
     [Tooltip("A line counts as skipped when the player reveals it, then advances within this many seconds.")]
     [SerializeField, Min(0f)] private float rapidAdvanceWindowSeconds = 1f;
 
@@ -70,6 +78,7 @@ public class DialogueController : MonoBehaviour
     private float originalSpeakerCameraZoom;
     private float speakerCameraMoveStartZoom;
     private NPCMover activeDialogueFacingMover;
+    private Transform activeDialogueFacingTarget;
 
     void Awake()
     {
@@ -141,6 +150,7 @@ public class DialogueController : MonoBehaviour
         currentLineIndex = 0;
         IsDialogueActive = true;
 
+        ambientDialoguePanel.SetActive(false);
         dialoguePanel.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
         nameText.SetText(data.DisplayName);
@@ -164,6 +174,7 @@ public class DialogueController : MonoBehaviour
         currentLineIndex = 0;
         IsDialogueActive = true;
 
+        ambientDialoguePanel.SetActive(false);
         dialoguePanel.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
         nameText.SetText(speaker.DisplayName);
@@ -193,13 +204,14 @@ public class DialogueController : MonoBehaviour
         currentLineIndex = 0;
         IsDialogueActive = true;
 
-        dialoguePanel.SetActive(true);
+        dialoguePanel.SetActive(false);
+        ambientDialoguePanel.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
-        nameText.SetText(speaker.DisplayName);
-        portraitImage.sprite = null;
-        portraitImage.gameObject.SetActive(false);
+        ambientNameText.SetText(speaker.DisplayName);
 
-        FocusSpeakerTowardsPlayer(speakerTransform);
+        FocusSpeakerTowardsTarget(
+            speakerTransform,
+            PlayerCharacter.Instance != null ? PlayerCharacter.Instance.transform : null);
 
         if (focusSpeaker)
             FocusCameraOnTransform(speakerTransform);
@@ -233,7 +245,7 @@ public class DialogueController : MonoBehaviour
         {
             StopAllCoroutines();
             isTyping = false;
-            dialogueText.SetText(activeNPCDialogueLines[currentLineIndex]);
+            GetActiveNPCDialogueText().SetText(activeNPCDialogueLines[currentLineIndex]);
             ShowNPCCloseButton();
             return;
         }
@@ -252,11 +264,12 @@ public class DialogueController : MonoBehaviour
     private IEnumerator TypeNPCLine()
     {
         isTyping = true;
-        dialogueText.SetText(string.Empty);
+        TMP_Text activeDialogueText = GetActiveNPCDialogueText();
+        activeDialogueText.SetText(string.Empty);
 
         foreach (char letter in activeNPCDialogueLines[currentLineIndex])
         {
-            dialogueText.text += letter;
+            activeDialogueText.text += letter;
             yield return new WaitForSeconds(TypingSpeed);
         }
 
@@ -266,9 +279,18 @@ public class DialogueController : MonoBehaviour
 
     private void ShowNPCCloseButton()
     {
+        if (activeAmbientNPCDialogue != null)
+        {
+            dialogueCloseButton.gameObject.SetActive(false);
+            return;
+        }
+
         dialogueCloseButton.gameObject.SetActive(
             currentLineIndex == activeNPCDialogueLines.Length - 1);
     }
+
+    private TMP_Text GetActiveNPCDialogueText() =>
+        activeAmbientNPCDialogue != null ? ambientDialogueText : dialogueText;
 
     public void EndNPCDialogue()
     {
@@ -375,6 +397,7 @@ public class DialogueController : MonoBehaviour
         currentLineIndex = 0;
         IsDialogueActive = true;
 
+        ambientDialoguePanel.SetActive(false);
         dialoguePanel.SetActive(true);
         portraitImage.gameObject.SetActive(true);
         dialogueCloseButton.gameObject.SetActive(false);
@@ -476,7 +499,7 @@ public class DialogueController : MonoBehaviour
         portraitImage.sprite = speaker.Portrait;
         dialogueText.SetText(string.Empty);
         isTyping = true;
-        FocusCameraOnCharacter(speaker);
+        FocusCameraOnCharacter(speaker, line.facingTargetId);
 
         foreach (char letter in line.text)
         {
@@ -561,6 +584,12 @@ public class DialogueController : MonoBehaviour
                 reason = $"Conversation '{conversation.conversationId}' references unknown speaker '{line?.speakerId}'.";
                 return false;
             }
+
+            if (!IsValidFacingTarget(line.facingTargetId))
+            {
+                reason = $"Conversation '{conversation.conversationId}' references unknown facing target '{line.facingTargetId}'.";
+                return false;
+            }
         }
 
         if (conversation.interruptions != null)
@@ -607,9 +636,12 @@ public class DialogueController : MonoBehaviour
         IsDialogueActive = false;
         dialogueText.SetText(string.Empty);
         nameText.SetText(string.Empty);
+        ambientDialogueText.SetText(string.Empty);
+        ambientNameText.SetText(string.Empty);
         portraitImage.sprite = null;
         dialogueCloseButton.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
+        ambientDialoguePanel.SetActive(false);
 
         if (!deferSpeakerCameraReturn)
             ReturnSpeakerCameraToPlayer();
@@ -638,7 +670,7 @@ public class DialogueController : MonoBehaviour
             newlyUnlockedNPCs.Add(data.NpcID);
     }
 
-    private void FocusCameraOnCharacter(NPCInfoSO speaker)
+    private void FocusCameraOnCharacter(NPCInfoSO speaker, string facingTargetId = "player")
     {
         if (speaker == null || string.IsNullOrWhiteSpace(speaker.NpcID))
             return;
@@ -661,27 +693,63 @@ public class DialogueController : MonoBehaviour
         if (NPC.TryGetById(speaker.NpcID, out NPC npc))
         {
             Transform speakerTransform = npc.DialogueCameraFocus;
-            FocusSpeakerTowardsPlayer(speakerTransform);
+            FocusSpeakerTowardsTarget(
+                speakerTransform,
+                ResolveFacingTarget(facingTargetId));
             FocusCameraOnTransform(speakerTransform);
         }
     }
 
-    private void FocusSpeakerTowardsPlayer(Transform speakerTransform)
+    private bool IsValidFacingTarget(string facingTargetId)
+    {
+        if (string.IsNullOrWhiteSpace(facingTargetId) ||
+            string.Equals(facingTargetId, "player", StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(facingTargetId, "none", StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
+        return speakerRegistry != null &&
+               speakerRegistry.TryGetSpeaker(facingTargetId.Trim(), out _);
+    }
+
+    private static Transform ResolveFacingTarget(string facingTargetId)
+    {
+        string targetId = string.IsNullOrWhiteSpace(facingTargetId)
+            ? "player"
+            : facingTargetId.Trim();
+
+        if (string.Equals(targetId, "none", StringComparison.OrdinalIgnoreCase))
+            return null;
+
+        if (string.Equals(targetId, "player", StringComparison.OrdinalIgnoreCase))
+            return PlayerCharacter.Instance != null ? PlayerCharacter.Instance.transform : null;
+
+        return NPC.TryGetById(targetId, out NPC targetNPC)
+            ? targetNPC.transform
+            : null;
+    }
+
+    private void FocusSpeakerTowardsTarget(
+        Transform speakerTransform,
+        Transform facingTarget)
     {
         NPCMover nextMover = speakerTransform != null
             ? speakerTransform.GetComponentInParent<NPCMover>()
             : null;
 
-        if (nextMover == activeDialogueFacingMover)
+        if (nextMover == activeDialogueFacingMover &&
+            facingTarget == activeDialogueFacingTarget)
             return;
 
         ClearDialogueSpeakerFacing();
 
-        if (nextMover == null || PlayerCharacter.Instance == null)
+        if (nextMover == null || facingTarget == null)
             return;
 
         activeDialogueFacingMover = nextMover;
-        activeDialogueFacingMover.BeginDialogueFacing(PlayerCharacter.Instance.transform);
+        activeDialogueFacingTarget = facingTarget;
+        activeDialogueFacingMover.BeginDialogueFacing(facingTarget);
     }
 
     private void ClearDialogueSpeakerFacing()
@@ -690,6 +758,7 @@ public class DialogueController : MonoBehaviour
             activeDialogueFacingMover.EndDialogueFacing();
 
         activeDialogueFacingMover = null;
+        activeDialogueFacingTarget = null;
     }
 
     private void FocusCameraOnTransform(Transform speakerTransform)

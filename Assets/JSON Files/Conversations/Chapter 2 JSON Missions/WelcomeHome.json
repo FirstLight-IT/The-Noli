@@ -7,18 +7,28 @@
       "lines": [
         {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Crisostomo!"
         }, {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "At last, you've arrived. Welcome home."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Capitan Tiago. It is good to see you again."
         }, {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Come, come."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Everyone is already gathered inside. Follow me."
         }
         
@@ -29,18 +39,28 @@
       "lines": [
         {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Crisostomo!"
         }, {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Sa wakas, dumating ka na. Maligayang pagbabalik."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Capitan Tiago. Ikinagagalak kong makita kayong muli."
         }, {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Halika, halika."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Nasa loob na ang lahat. Sumunod ka sa akin."
         }
         

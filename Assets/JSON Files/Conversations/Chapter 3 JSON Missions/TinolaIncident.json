@@ -7,21 +7,33 @@
       "lines": [
         {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Father Damaso, is something wrong?"
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "Hmph."
         },{
         "speakerId": "crisostomo_ibarra",
+
+        "facingTargetId": "player",
           "text": "Is the tinola not to your liking?"
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "A neck and a tough wing..."
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "while the others are served the better pieces."
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "I've lost my appetite."
         }
       ]
@@ -31,21 +43,33 @@
       "lines": [
         {
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Padre Damaso, may problema po ba?"
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "Hmph."
         },{
         "speakerId": "crisostomo_ibarra",
+
+        "facingTargetId": "player",
           "text": "Hindi po ba ninyo nagustuhan ang tinola?"
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "Isang leeg at matigas na pakpak..."
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "samantalang ang iba'y nabigyan ng mas magagandang bahagi."
         },{
         "speakerId": "fray_damaso",
+
+        "facingTargetId": "player",
           "text": "Nawalan na ako ng gana."
         }
       ]

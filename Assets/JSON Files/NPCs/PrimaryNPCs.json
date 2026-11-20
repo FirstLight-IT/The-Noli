@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "defaultLanguageCode": "en",
   "npcs": [
     {
@@ -32,6 +32,47 @@
                 "but that is precisely why I came."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][blond_man][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][blond_man][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][blond_man][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][blond_man][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][blond_man][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][blond_man][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -59,6 +100,47 @@
               "lines": [
                 "Marami pa akong hindi nauunawaan dito",
                 "ngunit iyon mismo ang dahilan kung bakit ako dumating."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][blond_man][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][blond_man][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][blond_man][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][blond_man][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][blond_man][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][blond_man][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -97,6 +179,47 @@
                 "Experience has taught me more than any book could."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][fray_damaso][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][fray_damaso][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][fray_damaso][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][fray_damaso][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][fray_damaso][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][fray_damaso][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -126,6 +249,47 @@
               "lines": [
                 "Huwag mo akong lapitan dala ang mga teorya at magagandang talumpati",
                 "Mas marami akong natutuhan sa karanasan kaysa sa maituturo ng alinmang aklat."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][fray_damaso][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][fray_damaso][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][fray_damaso][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][fray_damaso][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][fray_damaso][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][fray_damaso][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -163,6 +327,47 @@
                 "I will not remain silent when an honorable man is slandered."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][lieutenant_guevara][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][lieutenant_guevara][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][lieutenant_guevara][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][lieutenant_guevara][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][lieutenant_guevara][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][lieutenant_guevara][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -193,6 +398,47 @@
                 "Hindi ako mananahimik kapag sinisiraan ang isang marangal na tao."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][lieutenant_guevara][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][lieutenant_guevara][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][lieutenant_guevara][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][lieutenant_guevara][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][lieutenant_guevara][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][lieutenant_guevara][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -217,7 +463,48 @@
             "His appearance shows faint traces of Spanish ancestry."
           ],
           "introductionLines": [],
-          "repeatDialogues": []
+          "repeatDialogues": [],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][crisostomo_ibarra][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][crisostomo_ibarra][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][crisostomo_ibarra][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][crisostomo_ibarra][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][crisostomo_ibarra][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][crisostomo_ibarra][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "languageCode": "fil",
@@ -236,7 +523,48 @@
             "Makikita sa kaniyang anyo ang bahagyang bakas ng lahing Espanyol."
           ],
           "introductionLines": [],
-          "repeatDialogues": []
+          "repeatDialogues": [],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][crisostomo_ibarra][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][crisostomo_ibarra][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][crisostomo_ibarra][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][crisostomo_ibarra][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][crisostomo_ibarra][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][crisostomo_ibarra][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -272,6 +600,47 @@
                 "..."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][tia_isabel][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][tia_isabel][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][tia_isabel][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][tia_isabel][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][tia_isabel][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][tia_isabel][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -301,6 +670,47 @@
             {
               "lines": [
                 "..."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][tia_isabel][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][tia_isabel][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][tia_isabel][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][tia_isabel][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][tia_isabel][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][tia_isabel][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -336,6 +746,47 @@
                 "He does not enjoy being treated without proper deference."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][senor_laruja][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][senor_laruja][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][senor_laruja][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][senor_laruja][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][senor_laruja][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][senor_laruja][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -362,6 +813,47 @@
               "lines": [
                 "Mag-ingat kapag sinasalungat si Padre Damaso.",
                 "Hindi niya gusto ang pagtrato sa kaniya nang walang nararapat na paggalang."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][senor_laruja][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][senor_laruja][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][senor_laruja][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][senor_laruja][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][senor_laruja][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][senor_laruja][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -403,6 +895,47 @@
                 "..."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][fray_sibyla][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][fray_sibyla][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][fray_sibyla][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][fray_sibyla][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][fray_sibyla][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][fray_sibyla][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -435,6 +968,47 @@
             {
               "lines": [
                 "..."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][fray_sibyla][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][fray_sibyla][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][fray_sibyla][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][fray_sibyla][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][fray_sibyla][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][fray_sibyla][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -470,6 +1044,47 @@
                 "..."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][capitan_tiago][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][capitan_tiago][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][capitan_tiago][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][capitan_tiago][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][capitan_tiago][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][capitan_tiago][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -496,6 +1111,47 @@
             {
               "lines": [
                 "..."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][capitan_tiago][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][capitan_tiago][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][capitan_tiago][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][capitan_tiago][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][capitan_tiago][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][capitan_tiago][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -530,6 +1186,47 @@
                 "I believe I am more comfortable observing the conversation than joining its disputes."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][don_tiburcio][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][don_tiburcio][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][don_tiburcio][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][don_tiburcio][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][don_tiburcio][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][don_tiburcio][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -555,6 +1252,47 @@
               "lines": [
                 "Napakasigla ng pagtitipong ito.",
                 "Sa palagay ko ay mas komportable akong pagmasdan ang usapan kaysa sumali sa mga pagtatalo nito."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][don_tiburcio][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][don_tiburcio][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][don_tiburcio][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][don_tiburcio][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][don_tiburcio][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][don_tiburcio][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -589,6 +1327,47 @@
                 "..."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][capitan_tinong][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][capitan_tinong][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][capitan_tinong][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][capitan_tinong][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][capitan_tinong][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][capitan_tinong][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -614,6 +1393,47 @@
             {
               "lines": [
                 "..."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][capitan_tinong][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][capitan_tinong][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][capitan_tinong][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][capitan_tinong][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][capitan_tinong][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][capitan_tinong][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -651,6 +1471,47 @@
                 "Surely such a well-known fact should not cause so much argument."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][dona_victorina][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][dona_victorina][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][dona_victorina][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][dona_victorina][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][dona_victorina][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][dona_victorina][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -679,6 +1540,47 @@
               "lines": [
                 "Sinasabing naimbento ng mga Tsino ang pulbura ilang siglo na ang nakalipas.",
                 "Tiyak na hindi dapat pagmulan ng napakaraming pagtatalo ang isang kilalang katotohanan."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][dona_victorina][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][dona_victorina][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][dona_victorina][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][dona_victorina][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][dona_victorina][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][dona_victorina][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -715,6 +1617,47 @@
                 "..."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][young_poet][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][young_poet][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][young_poet][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][young_poet][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][young_poet][en] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][young_poet][en] Repeat dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -742,6 +1685,47 @@
             {
               "lines": [
                 "..."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_1][young_poet][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][young_poet][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_2][young_poet][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][young_poet][fil] Repeat dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "introductionLines": [
+                "[PLACEHOLDER][chapter_3][young_poet][fil] Introduction dialogue."
+              ],
+              "repeatDialogues": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][young_poet][fil] Repeat dialogue."
+                  ]
+                }
               ]
             }
           ]

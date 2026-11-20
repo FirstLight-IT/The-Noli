@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8419424670149421253, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_Radius
-      value: 0.40314865
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8419424670149421253, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_Offset.x
-      value: -0.023059845
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8419424670149421253, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_Offset.y
-      value: 0.3505051
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_Size.x
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 1869716278, guid: 08e285fae805e5c43a026fd4f497b528, type: 3}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_SortingOrder
-      value: -23
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 2679655459794864117, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -86,12 +86,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6000000000000000002, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.963
+      value: 2.26
       objectReference: {fileID: 0}
-    - target: {fileID: 7000000000000000001, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 37de80ce84ee485499b54f70050fc7f1, type: 2}
     - target: {fileID: 6375768478794960284, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
       propertyPath: npcData
       value: 
@@ -100,6 +96,10 @@ PrefabInstance:
       propertyPath: NPCDialogueData
       value: 
       objectReference: {fileID: 11400000, guid: e07e2641c86f9a642bc029cb1dc944d5, type: 2}
+    - target: {fileID: 7000000000000000001, guid: 6b77bf7bf5a0be941869efce0ab20e1f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 37de80ce84ee485499b54f70050fc7f1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

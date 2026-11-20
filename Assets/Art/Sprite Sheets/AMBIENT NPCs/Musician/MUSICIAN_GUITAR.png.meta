@@ -1,0 +1,2641 @@
+fileFormatVersion: 2
+guid: 95f3417a5020f6e4eb1ec6077040d09c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3181493651417672434
+    second: MUSICIAN_GUITAR_0
+  - first:
+      213: 2859187783032198833
+    second: MUSICIAN_GUITAR_1
+  - first:
+      213: 6720303794340764648
+    second: MUSICIAN_GUITAR_2
+  - first:
+      213: 7260356557633286756
+    second: MUSICIAN_GUITAR_3
+  - first:
+      213: 2958647070082294742
+    second: MUSICIAN_GUITAR_4
+  - first:
+      213: -5987193771252591904
+    second: MUSICIAN_GUITAR_5
+  - first:
+      213: -7470196751290883592
+    second: MUSICIAN_GUITAR_6
+  - first:
+      213: 7772589187926067381
+    second: MUSICIAN_GUITAR_7
+  - first:
+      213: 506654450071158786
+    second: MUSICIAN_GUITAR_8
+  - first:
+      213: 454525840253241948
+    second: MUSICIAN_GUITAR_9
+  - first:
+      213: 3427670583053563305
+    second: MUSICIAN_GUITAR_10
+  - first:
+      213: -6175643038226384060
+    second: MUSICIAN_GUITAR_11
+  - first:
+      213: -8409813266451620340
+    second: MUSICIAN_GUITAR_12
+  - first:
+      213: 134235421545111935
+    second: MUSICIAN_GUITAR_13
+  - first:
+      213: 612537330671123562
+    second: MUSICIAN_GUITAR_14
+  - first:
+      213: -1174146486851473527
+    second: MUSICIAN_GUITAR_15
+  - first:
+      213: 4934180099936734362
+    second: MUSICIAN_GUITAR_16
+  - first:
+      213: 8556653030716729606
+    second: MUSICIAN_GUITAR_17
+  - first:
+      213: -7165210382245824751
+    second: MUSICIAN_GUITAR_18
+  - first:
+      213: 8428208974259400499
+    second: MUSICIAN_GUITAR_19
+  - first:
+      213: 6359850465357023870
+    second: MUSICIAN_GUITAR_20
+  - first:
+      213: -3364533466113960362
+    second: MUSICIAN_GUITAR_21
+  - first:
+      213: 1178504597421181642
+    second: MUSICIAN_GUITAR_22
+  - first:
+      213: -2703023395060377888
+    second: MUSICIAN_GUITAR_23
+  - first:
+      213: -1765783370075000102
+    second: MUSICIAN_GUITAR_24
+  - first:
+      213: -102087552577770751
+    second: MUSICIAN_GUITAR_25
+  - first:
+      213: 887705691005888642
+    second: MUSICIAN_GUITAR_26
+  - first:
+      213: 2135298735697545189
+    second: MUSICIAN_GUITAR_27
+  - first:
+      213: 1522741496278136047
+    second: MUSICIAN_GUITAR_28
+  - first:
+      213: -7271620815913908812
+    second: MUSICIAN_GUITAR_29
+  - first:
+      213: -5691552641313878676
+    second: MUSICIAN_GUITAR_30
+  - first:
+      213: 5471962212264373146
+    second: MUSICIAN_GUITAR_31
+  - first:
+      213: 6344494670381124265
+    second: MUSICIAN_GUITAR_32
+  - first:
+      213: 331573610226809999
+    second: MUSICIAN_GUITAR_33
+  - first:
+      213: 1782183693332325816
+    second: MUSICIAN_GUITAR_34
+  - first:
+      213: -7466802829597085752
+    second: MUSICIAN_GUITAR_35
+  - first:
+      213: 4514979059258949736
+    second: MUSICIAN_GUITAR_36
+  - first:
+      213: -1457455113274868974
+    second: MUSICIAN_GUITAR_37
+  - first:
+      213: -5051874673247174921
+    second: MUSICIAN_GUITAR_38
+  - first:
+      213: 6126542259401419488
+    second: MUSICIAN_GUITAR_39
+  - first:
+      213: 5376081090856874688
+    second: MUSICIAN_GUITAR_40
+  - first:
+      213: -1206536583829505955
+    second: MUSICIAN_GUITAR_41
+  - first:
+      213: 6556485045429806538
+    second: MUSICIAN_GUITAR_42
+  - first:
+      213: 1369267467431831629
+    second: MUSICIAN_GUITAR_43
+  - first:
+      213: -9169674670720179817
+    second: MUSICIAN_GUITAR_44
+  - first:
+      213: 534460816751462599
+    second: MUSICIAN_GUITAR_45
+  - first:
+      213: 1780207654177029529
+    second: MUSICIAN_GUITAR_46
+  - first:
+      213: 7560900141533455830
+    second: MUSICIAN_GUITAR_47
+  - first:
+      213: 3615222117642439028
+    second: MUSICIAN_GUITAR_48
+  - first:
+      213: 4269011729592999995
+    second: MUSICIAN_GUITAR_49
+  - first:
+      213: 5717275999873804297
+    second: MUSICIAN_GUITAR_50
+  - first:
+      213: 6102311041482606904
+    second: MUSICIAN_GUITAR_51
+  - first:
+      213: -2469323640082750166
+    second: MUSICIAN_GUITAR_52
+  - first:
+      213: -2357429674867425223
+    second: MUSICIAN_GUITAR_53
+  - first:
+      213: -7748616216734145044
+    second: MUSICIAN_GUITAR_54
+  - first:
+      213: -1287687913082553832
+    second: MUSICIAN_GUITAR_55
+  - first:
+      213: 8268500483882974068
+    second: MUSICIAN_GUITAR_56
+  - first:
+      213: 6197159471193598362
+    second: MUSICIAN_GUITAR_57
+  - first:
+      213: -3464404145326869033
+    second: MUSICIAN_GUITAR_58
+  - first:
+      213: -4223766317462269204
+    second: MUSICIAN_GUITAR_59
+  - first:
+      213: 4876267772455747560
+    second: MUSICIAN_GUITAR_60
+  - first:
+      213: 2410916734737835309
+    second: MUSICIAN_GUITAR_61
+  - first:
+      213: 8476274186709302138
+    second: MUSICIAN_GUITAR_62
+  - first:
+      213: 9221267204830606324
+    second: MUSICIAN_GUITAR_63
+  - first:
+      213: 6385633447091818050
+    second: MUSICIAN_GUITAR_64
+  - first:
+      213: -5278032806832307124
+    second: MUSICIAN_GUITAR_65
+  - first:
+      213: 6483004572122625321
+    second: MUSICIAN_GUITAR_66
+  - first:
+      213: 1511124920706797917
+    second: MUSICIAN_GUITAR_67
+  - first:
+      213: -8093866479351892065
+    second: MUSICIAN_GUITAR_68
+  - first:
+      213: -2985066475236425276
+    second: MUSICIAN_GUITAR_69
+  - first:
+      213: -8801653356408977110
+    second: MUSICIAN_GUITAR_70
+  - first:
+      213: 2722824208058132224
+    second: MUSICIAN_GUITAR_71
+  - first:
+      213: -615334445720022432
+    second: MUSICIAN_GUITAR_72
+  - first:
+      213: -5267795946591849826
+    second: MUSICIAN_GUITAR_73
+  - first:
+      213: -1821502369209252121
+    second: MUSICIAN_GUITAR_74
+  - first:
+      213: -2587128957391539293
+    second: MUSICIAN_GUITAR_75
+  - first:
+      213: 4167075408724133453
+    second: MUSICIAN_GUITAR_76
+  - first:
+      213: -2835499488644098053
+    second: MUSICIAN_GUITAR_77
+  - first:
+      213: 3940503336156850998
+    second: MUSICIAN_GUITAR_78
+  - first:
+      213: 8519116360620274905
+    second: MUSICIAN_GUITAR_79
+  - first:
+      213: -8908281135767554556
+    second: MUSICIAN_GUITAR_80
+  - first:
+      213: -720785398443461972
+    second: MUSICIAN_GUITAR_81
+  - first:
+      213: -3624536754339681614
+    second: MUSICIAN_GUITAR_82
+  - first:
+      213: -4632746493238901144
+    second: MUSICIAN_GUITAR_83
+  - first:
+      213: 24561330208739986
+    second: MUSICIAN_GUITAR_84
+  - first:
+      213: 1441100486138442121
+    second: MUSICIAN_GUITAR_85
+  - first:
+      213: 1450696146101226270
+    second: MUSICIAN_GUITAR_86
+  - first:
+      213: -274782403921842547
+    second: MUSICIAN_GUITAR_87
+  - first:
+      213: -693992599073032048
+    second: MUSICIAN_GUITAR_88
+  - first:
+      213: 3862937086036171707
+    second: MUSICIAN_GUITAR_89
+  - first:
+      213: 932230634357223519
+    second: MUSICIAN_GUITAR_90
+  - first:
+      213: 110904147423205761
+    second: MUSICIAN_GUITAR_91
+  - first:
+      213: 1534821916678487047
+    second: MUSICIAN_GUITAR_92
+  - first:
+      213: 704245671715087991
+    second: MUSICIAN_GUITAR_93
+  - first:
+      213: 7216325835804544710
+    second: MUSICIAN_GUITAR_94
+  - first:
+      213: 2665034247799642705
+    second: MUSICIAN_GUITAR_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 16384
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05d61c516019d3d0800000000000000
+      internalID: -3181493651417672434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b655c9d320eda720800000000000000
+      internalID: 2859187783032198833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb146cf1b0534d50800000000000000
+      internalID: 6720303794340764648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_3
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462f86872d7f1c460800000000000000
+      internalID: 7260356557633286756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3610ca5d93f0920800000000000000
+      internalID: 2958647070082294742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2de0f8cf639eca0800000000000000
+      internalID: -5987193771252591904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_6
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1a70d22a7845890800000000000000
+      internalID: -7470196751290883592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_7
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8006b7fa8cddb60800000000000000
+      internalID: 7772589187926067381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_8
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200cc58b98ff70700800000000000000
+      internalID: 506654450071158786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_9
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ac781f7dcce4600800000000000000
+      internalID: 454525840253241948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_10
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5b6f51c38819f20800000000000000
+      internalID: 3427670583053563305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_11
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bf6ee6065bb4aa0800000000000000
+      internalID: -6175643038226384060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e98c924675a4b80800000000000000
+      internalID: -8409813266451620340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71a8799766ecd100800000000000000
+      internalID: 134235421545111935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c7156f47b208800800000000000000
+      internalID: 612537330671123562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fe1f8bdf794bfe0800000000000000
+      internalID: -1174146486851473527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_16
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9cc78298aab97440800000000000000
+      internalID: 4934180099936734362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_17
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609e32aa8965fb670800000000000000
+      internalID: 8556653030716729606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_18
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117fb49ce1f009c90800000000000000
+      internalID: -7165210382245824751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_19
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33fad73586307f470800000000000000
+      internalID: 8428208974259400499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_20
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a45346d4ab24850800000000000000
+      internalID: 6359850465357023870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_21
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6561d5d73a6ce41d0800000000000000
+      internalID: -3364533466113960362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_22
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca4477ffa3ea5010800000000000000
+      internalID: 1178504597421181642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_23
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e61bdd1b8eec7ad0800000000000000
+      internalID: -2703023395060377888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad23364616dae77e0800000000000000
+      internalID: -1765783370075000102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bec9c69ef459ef0800000000000000
+      internalID: -102087552577770751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288af796f93c15c00800000000000000
+      internalID: 887705691005888642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7c79603ea12ad10800000000000000
+      internalID: 2135298735697545189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4b762b25dd12510800000000000000
+      internalID: 1522741496278136047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_29
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b58d160563061b90800000000000000
+      internalID: -7271620815913908812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_30
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6dcc02270b8301b0800000000000000
+      internalID: -5691552641313878676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_31
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9be06ee3a050fb40800000000000000
+      internalID: 5471962212264373146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_32
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa0d63c94c2c0850800000000000000
+      internalID: 6344494670381124265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_33
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c7676117cf99400800000000000000
+      internalID: 331573610226809999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_34
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5219d60a69bb810800000000000000
+      internalID: 1782183693332325816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_35
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfebf52366906890800000000000000
+      internalID: -7466802829597085752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8600573788d68ae30800000000000000
+      internalID: 4514979059258949736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bbc21eb4416cbe0800000000000000
+      internalID: -1457455113274868974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_38
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe3f4b20c224e9b0800000000000000
+      internalID: -5051874673247174921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_39
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea6a01a9b9d50550800000000000000
+      internalID: 6126542259401419488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_40
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2f738b44dab9a40800000000000000
+      internalID: 5376081090856874688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_41
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5834589e55814fe0800000000000000
+      internalID: -1206536583829505955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_42
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5210c39605dfa50800000000000000
+      internalID: 6556485045429806538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_43
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48e5c6c18d900310800000000000000
+      internalID: 1369267467431831629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_44
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791a3d15875ceb080800000000000000
+      internalID: -9169674670720179817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_45
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c806d8f749ca6700800000000000000
+      internalID: 534460816751462599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_46
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d37a5fd6194b810800000000000000
+      internalID: 1780207654177029529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_47
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d56d4e8e96bde860800000000000000
+      internalID: 7560900141533455830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479863a9c59db2230800000000000000
+      internalID: 3615222117642439028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30ed54cc839e3b30800000000000000
+      internalID: 4269011729592999995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_50
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908285ffa38d75f40800000000000000
+      internalID: 5717275999873804297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_51
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839c3809f83cfa450800000000000000
+      internalID: 6102311041482606904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_52
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25a46d7b333bbdd0800000000000000
+      internalID: -2469323640082750166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_53
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930009e633ab84fd0800000000000000
+      internalID: -2357429674867425223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_54
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5eab4da92677490800000000000000
+      internalID: -7748616216734145044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_55
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a762f5aa6312ee0800000000000000
+      internalID: -1287687913082553832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_56
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b7df6b16d9fb270800000000000000
+      internalID: 8268500483882974068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_57
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9921f084bbb00650800000000000000
+      internalID: 6197159471193598362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_58
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5b667f8c6fbefc0800000000000000
+      internalID: -3464404145326869033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_59
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2d669a9ea2265c0800000000000000
+      internalID: -4223766317462269204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eff8e614bbfba340800000000000000
+      internalID: 4876267772455747560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_61
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25e7152ffb457120800000000000000
+      internalID: 2410916734737835309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_62
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bfe9da676c1a570800000000000000
+      internalID: 8476274186709302138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_63
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f333ea9aa588ff70800000000000000
+      internalID: 9221267204830606324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_64
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ec2cf99c35e9850800000000000000
+      internalID: 6385633447091818050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_65
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4407eb5029a0c6b0800000000000000
+      internalID: -5278032806832307124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_66
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9253a965f4248f950800000000000000
+      internalID: 6483004572122625321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_67
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5118fdeb1898f410800000000000000
+      internalID: 1511124920706797917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_68
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97f9c6f15fccaf80800000000000000
+      internalID: -8093866479351892065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_69
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c10b983bd9e296d0800000000000000
+      internalID: -2985066475236425276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_70
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a294e1fc7ee3ad580800000000000000
+      internalID: -8801653356408977110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_71
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007a32be03a69c520800000000000000
+      internalID: 2722824208058132224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062dbc0f494e577f0800000000000000
+      internalID: -615334445720022432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92762e1f7705e6b0800000000000000
+      internalID: -5267795946591849826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e600c5fe39b8b6e0800000000000000
+      internalID: -1821502369209252121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_75
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a3fc82abeba81cd0800000000000000
+      internalID: -2587128957391539293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_76
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d468441910d64d930800000000000000
+      internalID: 4167075408724133453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_77
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7119afc3846a8d0800000000000000
+      internalID: -2835499488644098053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_78
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63beed318ea7fa630800000000000000
+      internalID: 3940503336156850998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_79
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d47dfa913bf93670800000000000000
+      internalID: 8519116360620274905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_80
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406f24f418d6f5480800000000000000
+      internalID: -8908281135767554556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_81
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca23d7ebf714ff5f0800000000000000
+      internalID: -720785398443461972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_82
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba6c3a860f03bdc0800000000000000
+      internalID: -3624536754339681614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_83
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8660f081c9d25bfb0800000000000000
+      internalID: -4632746493238901144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2929d425662475000800000000000000
+      internalID: 24561330208739986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_85
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981bce1c141dff310800000000000000
+      internalID: 1441100486138442121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_86
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b44617578e12410800000000000000
+      internalID: 1450696146101226270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_87
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ee5b70cd6cf2cf0800000000000000
+      internalID: -274782403921842547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_88
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098708778617e56f0800000000000000
+      internalID: -693992599073032048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_89
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb5ed220d8eb9530800000000000000
+      internalID: 3862937086036171707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_90
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f507991a2d2ffec00800000000000000
+      internalID: 932230634357223519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_91
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18917470cb20a8100800000000000000
+      internalID: 110904147423205761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_92
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70cfa11c668cc4510800000000000000
+      internalID: 1534821916678487047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_93
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7762f2905bbf5c900800000000000000
+      internalID: 704245671715087991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_94
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce8a9a2d1a852460800000000000000
+      internalID: 7216325835804544710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_GUITAR_95
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a1956478a1cf420800000000000000
+      internalID: 2665034247799642705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 10005b01d84a6d74aba44e20f3e97112
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.15000000596046449},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MUSICIAN_GUITAR_0: -3181493651417672434
+      MUSICIAN_GUITAR_1: 2859187783032198833
+      MUSICIAN_GUITAR_10: 3427670583053563305
+      MUSICIAN_GUITAR_11: -6175643038226384060
+      MUSICIAN_GUITAR_12: -8409813266451620340
+      MUSICIAN_GUITAR_13: 134235421545111935
+      MUSICIAN_GUITAR_14: 612537330671123562
+      MUSICIAN_GUITAR_15: -1174146486851473527
+      MUSICIAN_GUITAR_16: 4934180099936734362
+      MUSICIAN_GUITAR_17: 8556653030716729606
+      MUSICIAN_GUITAR_18: -7165210382245824751
+      MUSICIAN_GUITAR_19: 8428208974259400499
+      MUSICIAN_GUITAR_2: 6720303794340764648
+      MUSICIAN_GUITAR_20: 6359850465357023870
+      MUSICIAN_GUITAR_21: -3364533466113960362
+      MUSICIAN_GUITAR_22: 1178504597421181642
+      MUSICIAN_GUITAR_23: -2703023395060377888
+      MUSICIAN_GUITAR_24: -1765783370075000102
+      MUSICIAN_GUITAR_25: -102087552577770751
+      MUSICIAN_GUITAR_26: 887705691005888642
+      MUSICIAN_GUITAR_27: 2135298735697545189
+      MUSICIAN_GUITAR_28: 1522741496278136047
+      MUSICIAN_GUITAR_29: -7271620815913908812
+      MUSICIAN_GUITAR_3: 7260356557633286756
+      MUSICIAN_GUITAR_30: -5691552641313878676
+      MUSICIAN_GUITAR_31: 5471962212264373146
+      MUSICIAN_GUITAR_32: 6344494670381124265
+      MUSICIAN_GUITAR_33: 331573610226809999
+      MUSICIAN_GUITAR_34: 1782183693332325816
+      MUSICIAN_GUITAR_35: -7466802829597085752
+      MUSICIAN_GUITAR_36: 4514979059258949736
+      MUSICIAN_GUITAR_37: -1457455113274868974
+      MUSICIAN_GUITAR_38: -5051874673247174921
+      MUSICIAN_GUITAR_39: 6126542259401419488
+      MUSICIAN_GUITAR_4: 2958647070082294742
+      MUSICIAN_GUITAR_40: 5376081090856874688
+      MUSICIAN_GUITAR_41: -1206536583829505955
+      MUSICIAN_GUITAR_42: 6556485045429806538
+      MUSICIAN_GUITAR_43: 1369267467431831629
+      MUSICIAN_GUITAR_44: -9169674670720179817
+      MUSICIAN_GUITAR_45: 534460816751462599
+      MUSICIAN_GUITAR_46: 1780207654177029529
+      MUSICIAN_GUITAR_47: 7560900141533455830
+      MUSICIAN_GUITAR_48: 3615222117642439028
+      MUSICIAN_GUITAR_49: 4269011729592999995
+      MUSICIAN_GUITAR_5: -5987193771252591904
+      MUSICIAN_GUITAR_50: 5717275999873804297
+      MUSICIAN_GUITAR_51: 6102311041482606904
+      MUSICIAN_GUITAR_52: -2469323640082750166
+      MUSICIAN_GUITAR_53: -2357429674867425223
+      MUSICIAN_GUITAR_54: -7748616216734145044
+      MUSICIAN_GUITAR_55: -1287687913082553832
+      MUSICIAN_GUITAR_56: 8268500483882974068
+      MUSICIAN_GUITAR_57: 6197159471193598362
+      MUSICIAN_GUITAR_58: -3464404145326869033
+      MUSICIAN_GUITAR_59: -4223766317462269204
+      MUSICIAN_GUITAR_6: -7470196751290883592
+      MUSICIAN_GUITAR_60: 4876267772455747560
+      MUSICIAN_GUITAR_61: 2410916734737835309
+      MUSICIAN_GUITAR_62: 8476274186709302138
+      MUSICIAN_GUITAR_63: 9221267204830606324
+      MUSICIAN_GUITAR_64: 6385633447091818050
+      MUSICIAN_GUITAR_65: -5278032806832307124
+      MUSICIAN_GUITAR_66: 6483004572122625321
+      MUSICIAN_GUITAR_67: 1511124920706797917
+      MUSICIAN_GUITAR_68: -8093866479351892065
+      MUSICIAN_GUITAR_69: -2985066475236425276
+      MUSICIAN_GUITAR_7: 7772589187926067381
+      MUSICIAN_GUITAR_70: -8801653356408977110
+      MUSICIAN_GUITAR_71: 2722824208058132224
+      MUSICIAN_GUITAR_72: -615334445720022432
+      MUSICIAN_GUITAR_73: -5267795946591849826
+      MUSICIAN_GUITAR_74: -1821502369209252121
+      MUSICIAN_GUITAR_75: -2587128957391539293
+      MUSICIAN_GUITAR_76: 4167075408724133453
+      MUSICIAN_GUITAR_77: -2835499488644098053
+      MUSICIAN_GUITAR_78: 3940503336156850998
+      MUSICIAN_GUITAR_79: 8519116360620274905
+      MUSICIAN_GUITAR_8: 506654450071158786
+      MUSICIAN_GUITAR_80: -8908281135767554556
+      MUSICIAN_GUITAR_81: -720785398443461972
+      MUSICIAN_GUITAR_82: -3624536754339681614
+      MUSICIAN_GUITAR_83: -4632746493238901144
+      MUSICIAN_GUITAR_84: 24561330208739986
+      MUSICIAN_GUITAR_85: 1441100486138442121
+      MUSICIAN_GUITAR_86: 1450696146101226270
+      MUSICIAN_GUITAR_87: -274782403921842547
+      MUSICIAN_GUITAR_88: -693992599073032048
+      MUSICIAN_GUITAR_89: 3862937086036171707
+      MUSICIAN_GUITAR_9: 454525840253241948
+      MUSICIAN_GUITAR_90: 932230634357223519
+      MUSICIAN_GUITAR_91: 110904147423205761
+      MUSICIAN_GUITAR_92: 1534821916678487047
+      MUSICIAN_GUITAR_93: 704245671715087991
+      MUSICIAN_GUITAR_94: 7216325835804544710
+      MUSICIAN_GUITAR_95: 2665034247799642705
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

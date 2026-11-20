@@ -7,48 +7,78 @@
       "lines": [
         {
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "For you, Fray Sibyla."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "For you, Fray Damaso."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "You are an older friend of the family—the confessor of the deceased lady."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Age, dignity, and authority all favor you."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Not so very old, either!"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Besides, you are the curate of the district."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Since you command it, I obey."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "I don't command it! I don't command it!"
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Lieutenant, here we are in the world and not in the church. The seat of honor belongs to you."
         },{
           "speakerId": "lieutenant_guevara",
+
+          "facingTargetId": "player",
           "text": "No. I decline."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "How's this, Don Santiago?"
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Aren't you going to sit down with us?"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Sit still, don't get up!"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "This fiesta is for the special purpose of giving thanks to the Virgin for your safe arrival."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "I ordered tinola, as you doubtless have not tasted any for so long a time."
         }
       ]
@@ -58,48 +88,78 @@
       "lines": [
         {
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Para sa inyo, Fray Sibyla."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Para sa inyo, Fray Damaso."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Kayo ang mas matagal nang kaibigan ng pamilyang ito—kumpesor ng yumaong ginang."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Nasa inyo ang edad, karangalan, at kapangyarihan."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Hindi naman ako ganoon katanda!"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Bukod dito, kayo ang kura ng bayang ito."
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Dahil ipinag-uutos ninyo, susunod ako."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Hindi ako nag-uutos! Hindi ako nag-uutos!"
         },{
           "speakerId": "fray_sibyla",
+
+          "facingTargetId": "player",
           "text": "Ginoong Teniente, narito tayo sa mundo at wala sa simbahan. Nararapat sa inyo ang marangal na upuang ito."
         },{
           "speakerId": "lieutenant_guevara",
+
+          "facingTargetId": "player",
           "text": "Hindi. Tumatanggi ako."
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Bakit po, Don Santiago?"
         },{
           "speakerId": "crisostomo_ibarra",
+
+          "facingTargetId": "player",
           "text": "Hindi po ba kayo makikisalo sa amin?"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Manatili kayong nakaupo! Huwag kayong tumindig!"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Ang pagdiriwang na ito ay ginawa upang magpasalamat sa Mahal na Birhen sa inyong ligtas na pagdating."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Nagpagawa ako ng tinola para sa inyo. Marahil ay matagal na kayong hindi nakatitikim nito."
         }
       ]

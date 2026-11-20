@@ -41,7 +41,7 @@ public class NPCMover : MonoBehaviour
     [SerializeField, Range(1f, 89f)] private float diagonalAngle = IsometricGeometry.GroundAngle;
 
     [Header("Facing")]
-    [Tooltip("Idle direction used when this NPC first appears. Prefab variants and scene instances can override it.")]
+    [HideInInspector]
     [SerializeField] private NPCFacingDirection defaultFacing = NPCFacingDirection.South;
     [Tooltip("When enabled, an idle NPC faces the player while the player's interaction detector overlaps it.")]
     [SerializeField] private bool turnTowardNearbyPlayer = true;
@@ -173,7 +173,11 @@ public class NPCMover : MonoBehaviour
             remainingDistance / Time.fixedDeltaTime);
 
         body.linearVelocity = direction * allowedSpeed;
-        UpdateAnimation(direction);
+
+        Vector2 animationDirection = activeSlope != null
+            ? activeSlope.GetIsometricFacingDirection(direction, diagonalAngle)
+            : direction;
+        UpdateAnimation(animationDirection);
     }
 
     public void MoveTo(Transform newDestination)
@@ -228,6 +232,16 @@ public class NPCMover : MonoBehaviour
         RefreshIdleFacing();
     }
 
+    public void SetDefaultFacing(NPCFacingDirection facing)
+    {
+        defaultFacing = facing;
+        restingFacing = GetFacingVector(defaultFacing);
+        currentFacing = restingFacing;
+
+        if (body != null)
+            RefreshIdleFacing();
+    }
+
     public void SetNearbyPlayer(Transform player)
     {
         if (!turnTowardNearbyPlayer || player == null)
@@ -250,13 +264,9 @@ public class NPCMover : MonoBehaviour
         RefreshIdleFacing();
     }
 
-    public void BeginDialogueFacing(Transform player)
+    public void BeginDialogueFacing(Transform target)
     {
-        if (!turnTowardNearbyPlayer)
-            return;
-
-        Transform target = nearbyPlayer != null ? nearbyPlayer : player;
-        if (target == null)
+        if (!turnTowardNearbyPlayer || target == null)
             return;
 
         if (dialoguePlayer != target)

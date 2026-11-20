@@ -10,6 +10,7 @@ public sealed class TeacherReviewRequest
     public string fullName = string.Empty;
     public string schoolEmail = string.Empty;
     public string teacherVerificationStatus = string.Empty;
+    public string submittedAtUtc = string.Empty;
 }
 
 [Serializable]

@@ -1,0 +1,2641 @@
+fileFormatVersion: 2
+guid: 9f655d4e50bc6aa40ae395df7f2666f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2297431327034547411
+    second: MUSICIAN_DRUMMER_0
+  - first:
+      213: 5811752305559549481
+    second: MUSICIAN_DRUMMER_1
+  - first:
+      213: 6715798012461087991
+    second: MUSICIAN_DRUMMER_2
+  - first:
+      213: 4843128772517520868
+    second: MUSICIAN_DRUMMER_3
+  - first:
+      213: 3449877191099400639
+    second: MUSICIAN_DRUMMER_4
+  - first:
+      213: 547623794609538299
+    second: MUSICIAN_DRUMMER_5
+  - first:
+      213: 5746508389822906275
+    second: MUSICIAN_DRUMMER_6
+  - first:
+      213: -5176404913377550028
+    second: MUSICIAN_DRUMMER_7
+  - first:
+      213: -631919343689731083
+    second: MUSICIAN_DRUMMER_8
+  - first:
+      213: 6503962333902766192
+    second: MUSICIAN_DRUMMER_9
+  - first:
+      213: -1313898197263048809
+    second: MUSICIAN_DRUMMER_10
+  - first:
+      213: -4073110504100325461
+    second: MUSICIAN_DRUMMER_11
+  - first:
+      213: -2035360458298276475
+    second: MUSICIAN_DRUMMER_12
+  - first:
+      213: -6549911770232174162
+    second: MUSICIAN_DRUMMER_13
+  - first:
+      213: 6734153800295157119
+    second: MUSICIAN_DRUMMER_14
+  - first:
+      213: -3876934772154179600
+    second: MUSICIAN_DRUMMER_15
+  - first:
+      213: 5137273766795868166
+    second: MUSICIAN_DRUMMER_16
+  - first:
+      213: -1195671290290947075
+    second: MUSICIAN_DRUMMER_17
+  - first:
+      213: 8859175348209043149
+    second: MUSICIAN_DRUMMER_18
+  - first:
+      213: 6457167595883273831
+    second: MUSICIAN_DRUMMER_19
+  - first:
+      213: 1618236151277147268
+    second: MUSICIAN_DRUMMER_20
+  - first:
+      213: 2481960445277852025
+    second: MUSICIAN_DRUMMER_21
+  - first:
+      213: 7878143740275740328
+    second: MUSICIAN_DRUMMER_22
+  - first:
+      213: -6379110919550076706
+    second: MUSICIAN_DRUMMER_23
+  - first:
+      213: -8545317980001373217
+    second: MUSICIAN_DRUMMER_24
+  - first:
+      213: 57724579812785423
+    second: MUSICIAN_DRUMMER_25
+  - first:
+      213: 3005196477195187657
+    second: MUSICIAN_DRUMMER_26
+  - first:
+      213: 4108731742211334779
+    second: MUSICIAN_DRUMMER_27
+  - first:
+      213: -4394951139077743244
+    second: MUSICIAN_DRUMMER_28
+  - first:
+      213: 5640118629790323864
+    second: MUSICIAN_DRUMMER_29
+  - first:
+      213: 1250478311588983917
+    second: MUSICIAN_DRUMMER_30
+  - first:
+      213: -4303335934098404365
+    second: MUSICIAN_DRUMMER_31
+  - first:
+      213: 5282295367055509688
+    second: MUSICIAN_DRUMMER_32
+  - first:
+      213: 1666548663981613233
+    second: MUSICIAN_DRUMMER_33
+  - first:
+      213: -2767991800838419315
+    second: MUSICIAN_DRUMMER_34
+  - first:
+      213: 7218030132109391758
+    second: MUSICIAN_DRUMMER_35
+  - first:
+      213: 1569380057636991467
+    second: MUSICIAN_DRUMMER_36
+  - first:
+      213: 7141823593656409000
+    second: MUSICIAN_DRUMMER_37
+  - first:
+      213: 8991639388362064087
+    second: MUSICIAN_DRUMMER_38
+  - first:
+      213: 1094460146249849359
+    second: MUSICIAN_DRUMMER_39
+  - first:
+      213: -8945356162439464965
+    second: MUSICIAN_DRUMMER_40
+  - first:
+      213: -9169423096005101581
+    second: MUSICIAN_DRUMMER_41
+  - first:
+      213: 1410269269240843644
+    second: MUSICIAN_DRUMMER_42
+  - first:
+      213: -6877392260905827754
+    second: MUSICIAN_DRUMMER_43
+  - first:
+      213: -4012415043881322667
+    second: MUSICIAN_DRUMMER_44
+  - first:
+      213: -6182025327745986929
+    second: MUSICIAN_DRUMMER_45
+  - first:
+      213: 7020648895639877915
+    second: MUSICIAN_DRUMMER_46
+  - first:
+      213: 5439317249405998881
+    second: MUSICIAN_DRUMMER_47
+  - first:
+      213: -878818378325618883
+    second: MUSICIAN_DRUMMER_48
+  - first:
+      213: -5094736109356845024
+    second: MUSICIAN_DRUMMER_49
+  - first:
+      213: 4219557005266184588
+    second: MUSICIAN_DRUMMER_50
+  - first:
+      213: -3706149556015283452
+    second: MUSICIAN_DRUMMER_51
+  - first:
+      213: 946085079165234576
+    second: MUSICIAN_DRUMMER_52
+  - first:
+      213: -6451337910928320446
+    second: MUSICIAN_DRUMMER_53
+  - first:
+      213: 1614636163174424144
+    second: MUSICIAN_DRUMMER_54
+  - first:
+      213: -3183965370968364816
+    second: MUSICIAN_DRUMMER_55
+  - first:
+      213: 7533057748251132316
+    second: MUSICIAN_DRUMMER_56
+  - first:
+      213: -8757211563484680912
+    second: MUSICIAN_DRUMMER_57
+  - first:
+      213: -5027747718568350837
+    second: MUSICIAN_DRUMMER_58
+  - first:
+      213: -6144088201741101590
+    second: MUSICIAN_DRUMMER_59
+  - first:
+      213: -2464241514699380263
+    second: MUSICIAN_DRUMMER_60
+  - first:
+      213: -6846327121055915686
+    second: MUSICIAN_DRUMMER_61
+  - first:
+      213: -9189785485931973845
+    second: MUSICIAN_DRUMMER_62
+  - first:
+      213: 2820740321488509766
+    second: MUSICIAN_DRUMMER_63
+  - first:
+      213: -7850137648449180746
+    second: MUSICIAN_DRUMMER_64
+  - first:
+      213: -1459721934812865222
+    second: MUSICIAN_DRUMMER_65
+  - first:
+      213: 414636881827534466
+    second: MUSICIAN_DRUMMER_66
+  - first:
+      213: -5177823469657785098
+    second: MUSICIAN_DRUMMER_67
+  - first:
+      213: 8923601028070944401
+    second: MUSICIAN_DRUMMER_68
+  - first:
+      213: 3923517262986851097
+    second: MUSICIAN_DRUMMER_69
+  - first:
+      213: 8907829215179060782
+    second: MUSICIAN_DRUMMER_70
+  - first:
+      213: -1153764133902909789
+    second: MUSICIAN_DRUMMER_71
+  - first:
+      213: 6657566697647863303
+    second: MUSICIAN_DRUMMER_72
+  - first:
+      213: 4510273835902071063
+    second: MUSICIAN_DRUMMER_73
+  - first:
+      213: -7486448672077084031
+    second: MUSICIAN_DRUMMER_74
+  - first:
+      213: 4875773660181603564
+    second: MUSICIAN_DRUMMER_75
+  - first:
+      213: 7420176980353178310
+    second: MUSICIAN_DRUMMER_76
+  - first:
+      213: -1637575734017433000
+    second: MUSICIAN_DRUMMER_77
+  - first:
+      213: 8030572873953712619
+    second: MUSICIAN_DRUMMER_78
+  - first:
+      213: -2656329468279206512
+    second: MUSICIAN_DRUMMER_79
+  - first:
+      213: -1590551897539098475
+    second: MUSICIAN_DRUMMER_80
+  - first:
+      213: 7514090051521915243
+    second: MUSICIAN_DRUMMER_81
+  - first:
+      213: 4081712883257492597
+    second: MUSICIAN_DRUMMER_82
+  - first:
+      213: -5348835649908831608
+    second: MUSICIAN_DRUMMER_83
+  - first:
+      213: 2018905999190209143
+    second: MUSICIAN_DRUMMER_84
+  - first:
+      213: -5570129886786068429
+    second: MUSICIAN_DRUMMER_85
+  - first:
+      213: -6486958315936785861
+    second: MUSICIAN_DRUMMER_86
+  - first:
+      213: 4390734579991420423
+    second: MUSICIAN_DRUMMER_87
+  - first:
+      213: 4052381671502623097
+    second: MUSICIAN_DRUMMER_88
+  - first:
+      213: 1079003969829616531
+    second: MUSICIAN_DRUMMER_89
+  - first:
+      213: -511186891124313753
+    second: MUSICIAN_DRUMMER_90
+  - first:
+      213: -2691311027598110955
+    second: MUSICIAN_DRUMMER_91
+  - first:
+      213: -6836940105787854963
+    second: MUSICIAN_DRUMMER_92
+  - first:
+      213: -4881206325771564027
+    second: MUSICIAN_DRUMMER_93
+  - first:
+      213: -3531018853720296771
+    second: MUSICIAN_DRUMMER_94
+  - first:
+      213: 4533458184891753975
+    second: MUSICIAN_DRUMMER_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 16384
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2360406162ed10e0800000000000000
+      internalID: -2297431327034547411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9263f6f0eed77a050800000000000000
+      internalID: 5811752305559549481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc7404e5be433d50800000000000000
+      internalID: 6715798012461087991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_3
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5616765ff363340800000000000000
+      internalID: 4843128772517520868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1c33ee60d60ef20800000000000000
+      internalID: 3449877191099400639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4c04490fc899700800000000000000
+      internalID: 547623794609538299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_6
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af323a2fe2bfbf40800000000000000
+      internalID: 5746508389822906275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_7
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4316b843827b928b0800000000000000
+      internalID: -5176404913377550028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_8
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3fca874b8fa37f0800000000000000
+      internalID: -631919343689731083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_9
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0708bc08847b24a50800000000000000
+      internalID: 6503962333902766192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_10
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f1c190d8814cde0800000000000000
+      internalID: -1313898197263048809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_11
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2730
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba71038a3976977c0800000000000000
+      internalID: -4073110504100325461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585414d6272f0c3e0800000000000000
+      internalID: -2035360458298276475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea94929a2f90a15a0800000000000000
+      internalID: -6549911770232174162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d8079c335847d50800000000000000
+      internalID: 6734153800295157119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffd3689d5c523ac0800000000000000
+      internalID: -3876934772154179600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_16
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608fccfb5434b4740800000000000000
+      internalID: 5137273766795868166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_17
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb3312eb4f186fe0800000000000000
+      internalID: -1195671290290947075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_18
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6c5e09a0d12fa70800000000000000
+      internalID: 8859175348209043149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_19
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e19c787b77c9950800000000000000
+      internalID: 6457167595883273831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_20
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484d19fa431257610800000000000000
+      internalID: 1618236151277147268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_21
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9715b5fffd1b17220800000000000000
+      internalID: 2481960445277852025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_22
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae4a98ddf9c45d60800000000000000
+      internalID: 7878143740275740328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_23
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2340
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8f669aa68d877a0800000000000000
+      internalID: -6379110919550076706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3724d729ee86980800000000000000
+      internalID: -8545317980001373217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dbc8213341dc000800000000000000
+      internalID: 57724579812785423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c57977164a94b920800000000000000
+      internalID: 3005196477195187657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72e0e320c5250930800000000000000
+      internalID: 4108731742211334779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_28
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d9216793ff103c0800000000000000
+      internalID: -4394951139077743244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_29
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89417bbd20ab54e40800000000000000
+      internalID: 5640118629790323864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_30
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64779926679a5110800000000000000
+      internalID: 1250478311588983917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_31
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb04ea94ca7744c0800000000000000
+      internalID: -4303335934098404365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_32
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8090846ab7e4940800000000000000
+      internalID: 5282295367055509688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_33
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0a68d1e25c02710800000000000000
+      internalID: 1666548663981613233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_34
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c05d16f1e1699d0800000000000000
+      internalID: -2767991800838419315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_35
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1950
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87327299289b2460800000000000000
+      internalID: 7218030132109391758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1f805f8de87c510800000000000000
+      internalID: 1569380057636991467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8abd46c28badc1360800000000000000
+      internalID: 7141823593656409000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_38
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d04bbb4268b8cc70800000000000000
+      internalID: 8991639388362064087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_39
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a5b0e44bd403f00800000000000000
+      internalID: 1094460146249849359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_40
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7b17cf6f5bbd380800000000000000
+      internalID: -8945356162439464965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_41
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f77a5f964aafb080800000000000000
+      internalID: -9169423096005101581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_42
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d00cead68429310800000000000000
+      internalID: 1410269269240843644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_43
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65200bb3d289e80a0800000000000000
+      internalID: -6877392260905827754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_44
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557350ab6c90158c0800000000000000
+      internalID: -4012415043881322667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_45
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e8b3bd7b8053aa0800000000000000
+      internalID: -6182025327745986929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_46
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b197a5d39fa5e6160800000000000000
+      internalID: 7020648895639877915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_47
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1560
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127df7738365c7b40800000000000000
+      internalID: 5439317249405998881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f01d1575fcdc3f0800000000000000
+      internalID: -878818378325618883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_49
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028fd69608cdb49b0800000000000000
+      internalID: -5094736109356845024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_50
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89e6687db0ee8a30800000000000000
+      internalID: 4219557005266184588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_51
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403cc356d9c119cc0800000000000000
+      internalID: -3706149556015283452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_52
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09de0feed5b212d00800000000000000
+      internalID: 946085079165234576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_53
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2485b15c95e3876a0800000000000000
+      internalID: -6451337910928320446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_54
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ed2832907586610800000000000000
+      internalID: 1614636163174424144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_55
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8294e4d5840d3d0800000000000000
+      internalID: -3183965370968364816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_56
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9143053c1cca8860800000000000000
+      internalID: 7533057748251132316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_57
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d6d8f0b72287680800000000000000
+      internalID: -8757211563484680912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_58
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8be37e861ad93ab0800000000000000
+      internalID: -5027747718568350837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_59
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 1170
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae59d825550dbbaa0800000000000000
+      internalID: -6144088201741101590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9a29306614dcdd0800000000000000
+      internalID: -2464241514699380263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_61
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51e65db1c5fcf0a0800000000000000
+      internalID: -6846327121055915686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_62
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b23fbf44ac2577080800000000000000
+      internalID: -9189785485931973845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_63
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b91f1a068452720800000000000000
+      internalID: 2820740321488509766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_64
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb244a8665be0390800000000000000
+      internalID: -7850137648449180746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_65
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d12ac52a60ebbe0800000000000000
+      internalID: -1459721934812865222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_66
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2861b141c0611c500800000000000000
+      internalID: 414636881827534466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_67
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcfd55dcfca428b0800000000000000
+      internalID: -5177823469657785098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_68
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19eaa731bdff6db70800000000000000
+      internalID: 8923601028070944401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_69
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913b17ab922237630800000000000000
+      internalID: 3923517262986851097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_70
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26389ab977fe9b70800000000000000
+      internalID: 8907829215179060782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_71
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 780
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae712412a10dffe0800000000000000
+      internalID: -1153764133902909789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70675c163ad646c50800000000000000
+      internalID: 6657566697647863303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7117ea44826b79e30800000000000000
+      internalID: 4510273835902071063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a86aff89aca1890800000000000000
+      internalID: -7486448672077084031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_75
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4a45c9f4a3aa340800000000000000
+      internalID: 4875773660181603564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_76
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca5b7c56a3c9f660800000000000000
+      internalID: 7420176980353178310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_77
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8526711db892649e0800000000000000
+      internalID: -1637575734017433000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_78
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be916e62b73527f60800000000000000
+      internalID: 8030572873953712619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_79
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09dc0d42c62d22bd0800000000000000
+      internalID: -2656329468279206512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_80
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598cb5ee9793de9e0800000000000000
+      internalID: -1590551897539098475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_81
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69a24b2719674860800000000000000
+      internalID: 7514090051521915243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_82
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574c2b1dd3825a830800000000000000
+      internalID: 4081712883257492597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_83
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 390
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a0d35d05e15c5b0800000000000000
+      internalID: -5348835649908831608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77233a44f48940c10800000000000000
+      internalID: 2018905999190209143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_85
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3306459316ce2b2b0800000000000000
+      internalID: -5570129886786068429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_86
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a52d1f7c1b9f5a0800000000000000
+      internalID: -6486958315936785861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_87
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e996f56d50fec30800000000000000
+      internalID: 4390734579991420423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_88
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971b738e8a3fc3830800000000000000
+      internalID: 4052381671502623097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_89
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b3eecc46469fe00800000000000000
+      internalID: 1079003969829616531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_90
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761f2bc1b36e7e8f0800000000000000
+      internalID: -511186891124313753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_91
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f4ceb21ea86aad0800000000000000
+      internalID: -2691311027598110955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_92
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fa4eb823f4e11a0800000000000000
+      internalID: -6836940105787854963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_93
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c0ffc55b8724cb0800000000000000
+      internalID: -4881206325771564027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_94
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db27bc88f0d4ffec0800000000000000
+      internalID: -3531018853720296771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUSICIAN_DRUMMER_95
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 390
+        height: 390
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f56f8a23341aee30800000000000000
+      internalID: 4533458184891753975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5c56ca2a7818ac041878f3165950d170
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.15000000596046449},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MUSICIAN_DRUMMER_0: -2297431327034547411
+      MUSICIAN_DRUMMER_1: 5811752305559549481
+      MUSICIAN_DRUMMER_10: -1313898197263048809
+      MUSICIAN_DRUMMER_11: -4073110504100325461
+      MUSICIAN_DRUMMER_12: -2035360458298276475
+      MUSICIAN_DRUMMER_13: -6549911770232174162
+      MUSICIAN_DRUMMER_14: 6734153800295157119
+      MUSICIAN_DRUMMER_15: -3876934772154179600
+      MUSICIAN_DRUMMER_16: 5137273766795868166
+      MUSICIAN_DRUMMER_17: -1195671290290947075
+      MUSICIAN_DRUMMER_18: 8859175348209043149
+      MUSICIAN_DRUMMER_19: 6457167595883273831
+      MUSICIAN_DRUMMER_2: 6715798012461087991
+      MUSICIAN_DRUMMER_20: 1618236151277147268
+      MUSICIAN_DRUMMER_21: 2481960445277852025
+      MUSICIAN_DRUMMER_22: 7878143740275740328
+      MUSICIAN_DRUMMER_23: -6379110919550076706
+      MUSICIAN_DRUMMER_24: -8545317980001373217
+      MUSICIAN_DRUMMER_25: 57724579812785423
+      MUSICIAN_DRUMMER_26: 3005196477195187657
+      MUSICIAN_DRUMMER_27: 4108731742211334779
+      MUSICIAN_DRUMMER_28: -4394951139077743244
+      MUSICIAN_DRUMMER_29: 5640118629790323864
+      MUSICIAN_DRUMMER_3: 4843128772517520868
+      MUSICIAN_DRUMMER_30: 1250478311588983917
+      MUSICIAN_DRUMMER_31: -4303335934098404365
+      MUSICIAN_DRUMMER_32: 5282295367055509688
+      MUSICIAN_DRUMMER_33: 1666548663981613233
+      MUSICIAN_DRUMMER_34: -2767991800838419315
+      MUSICIAN_DRUMMER_35: 7218030132109391758
+      MUSICIAN_DRUMMER_36: 1569380057636991467
+      MUSICIAN_DRUMMER_37: 7141823593656409000
+      MUSICIAN_DRUMMER_38: 8991639388362064087
+      MUSICIAN_DRUMMER_39: 1094460146249849359
+      MUSICIAN_DRUMMER_4: 3449877191099400639
+      MUSICIAN_DRUMMER_40: -8945356162439464965
+      MUSICIAN_DRUMMER_41: -9169423096005101581
+      MUSICIAN_DRUMMER_42: 1410269269240843644
+      MUSICIAN_DRUMMER_43: -6877392260905827754
+      MUSICIAN_DRUMMER_44: -4012415043881322667
+      MUSICIAN_DRUMMER_45: -6182025327745986929
+      MUSICIAN_DRUMMER_46: 7020648895639877915
+      MUSICIAN_DRUMMER_47: 5439317249405998881
+      MUSICIAN_DRUMMER_48: -878818378325618883
+      MUSICIAN_DRUMMER_49: -5094736109356845024
+      MUSICIAN_DRUMMER_5: 547623794609538299
+      MUSICIAN_DRUMMER_50: 4219557005266184588
+      MUSICIAN_DRUMMER_51: -3706149556015283452
+      MUSICIAN_DRUMMER_52: 946085079165234576
+      MUSICIAN_DRUMMER_53: -6451337910928320446
+      MUSICIAN_DRUMMER_54: 1614636163174424144
+      MUSICIAN_DRUMMER_55: -3183965370968364816
+      MUSICIAN_DRUMMER_56: 7533057748251132316
+      MUSICIAN_DRUMMER_57: -8757211563484680912
+      MUSICIAN_DRUMMER_58: -5027747718568350837
+      MUSICIAN_DRUMMER_59: -6144088201741101590
+      MUSICIAN_DRUMMER_6: 5746508389822906275
+      MUSICIAN_DRUMMER_60: -2464241514699380263
+      MUSICIAN_DRUMMER_61: -6846327121055915686
+      MUSICIAN_DRUMMER_62: -9189785485931973845
+      MUSICIAN_DRUMMER_63: 2820740321488509766
+      MUSICIAN_DRUMMER_64: -7850137648449180746
+      MUSICIAN_DRUMMER_65: -1459721934812865222
+      MUSICIAN_DRUMMER_66: 414636881827534466
+      MUSICIAN_DRUMMER_67: -5177823469657785098
+      MUSICIAN_DRUMMER_68: 8923601028070944401
+      MUSICIAN_DRUMMER_69: 3923517262986851097
+      MUSICIAN_DRUMMER_7: -5176404913377550028
+      MUSICIAN_DRUMMER_70: 8907829215179060782
+      MUSICIAN_DRUMMER_71: -1153764133902909789
+      MUSICIAN_DRUMMER_72: 6657566697647863303
+      MUSICIAN_DRUMMER_73: 4510273835902071063
+      MUSICIAN_DRUMMER_74: -7486448672077084031
+      MUSICIAN_DRUMMER_75: 4875773660181603564
+      MUSICIAN_DRUMMER_76: 7420176980353178310
+      MUSICIAN_DRUMMER_77: -1637575734017433000
+      MUSICIAN_DRUMMER_78: 8030572873953712619
+      MUSICIAN_DRUMMER_79: -2656329468279206512
+      MUSICIAN_DRUMMER_8: -631919343689731083
+      MUSICIAN_DRUMMER_80: -1590551897539098475
+      MUSICIAN_DRUMMER_81: 7514090051521915243
+      MUSICIAN_DRUMMER_82: 4081712883257492597
+      MUSICIAN_DRUMMER_83: -5348835649908831608
+      MUSICIAN_DRUMMER_84: 2018905999190209143
+      MUSICIAN_DRUMMER_85: -5570129886786068429
+      MUSICIAN_DRUMMER_86: -6486958315936785861
+      MUSICIAN_DRUMMER_87: 4390734579991420423
+      MUSICIAN_DRUMMER_88: 4052381671502623097
+      MUSICIAN_DRUMMER_89: 1079003969829616531
+      MUSICIAN_DRUMMER_9: 6503962333902766192
+      MUSICIAN_DRUMMER_90: -511186891124313753
+      MUSICIAN_DRUMMER_91: -2691311027598110955
+      MUSICIAN_DRUMMER_92: -6836940105787854963
+      MUSICIAN_DRUMMER_93: -4881206325771564027
+      MUSICIAN_DRUMMER_94: -3531018853720296771
+      MUSICIAN_DRUMMER_95: 4533458184891753975
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

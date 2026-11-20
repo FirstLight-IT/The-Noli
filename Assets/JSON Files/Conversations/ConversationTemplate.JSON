@@ -8,6 +8,7 @@
       "lines": [
         {
           "speakerId": "npc_id_here",
+          "facingTargetId": "player",
           "text": "English dialogue here."
         }
       ]
@@ -17,6 +18,7 @@
       "lines": [
         {
           "speakerId": "npc_id_here",
+          "facingTargetId": "player",
           "text": ""
         }
       ]

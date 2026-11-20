@@ -447,7 +447,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2692702913631902986}
   orderOffset: 0
   unitsPerLayer: 10
-  sortPointYOffset: 0
+  sortPointYOffset: 1
 --- !u!114 &2467173465767164909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmbientNPC
   npcData: {fileID: 0}
+  defaultIdleDirection: 4
   artifactHints: []
   interactionIcon: {fileID: 5355804470298920203}
   exclamationIcon: {fileID: 1224665165022314388}
@@ -503,6 +504,7 @@ MonoBehaviour:
   patrolOnStart: 0
   waitAtWaypoint: 1
   useWaypointNetwork: 0
+  followWaypointEdgesDirectly: 1
   startingWaypoint: {fileID: 0}
   pingPongPatrol: 0
   waypoints: []

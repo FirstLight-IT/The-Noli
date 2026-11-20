@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -25,10 +27,18 @@ public sealed class LibrarianDashboardController : MonoBehaviour
 
     [Header("Global Analytics")]
     [SerializeField] private TMP_Dropdown chapterDropdown;
+    [SerializeField] private Button[] chapterTabButtons;
+    [SerializeField] private Image[] chapterTabBackgrounds;
+    [SerializeField] private TMP_Text[] chapterTabTexts;
     [SerializeField] private TMP_Text globalParticipantsText;
     [SerializeField] private TMP_Text globalAveragePlaytimeText;
     [SerializeField] private TMP_Text globalResultsHeaderText;
     [SerializeField] private TMP_Text globalAnalyticsText;
+    [SerializeField] private TMP_Text engagementCardText;
+    [SerializeField] private TMP_Text quizScoreCardText;
+    [SerializeField] private TMP_Text dialogueSkipCardText;
+    [SerializeField] private TMP_Text artifactDiscoveryAverageText;
+    [SerializeField] private GameObject artifactDiscoveryTable;
     [SerializeField] private AnalyticsMetricBarView engagementMetric;
     [SerializeField] private AnalyticsMetricBarView quizScoreMetric;
     [SerializeField] private AnalyticsMetricBarView dialogueAttentionMetric;
@@ -41,26 +51,54 @@ public sealed class LibrarianDashboardController : MonoBehaviour
     [SerializeField] private Button refreshTeachersButton;
     [SerializeField] private Button approveTeacherButton;
     [SerializeField] private Button rejectTeacherButton;
+    [SerializeField] private TMP_Text pendingRequestCountText;
+    [SerializeField] private TMP_Text approvedAccountCountText;
+    [SerializeField] private TMP_Text declinedRequestCountText;
+    [SerializeField] private Button pendingRequestsTabButton;
+    [SerializeField] private Button allRequestsTabButton;
+    [SerializeField] private Image pendingRequestsTabBackground;
+    [SerializeField] private Image allRequestsTabBackground;
+    [SerializeField] private TMP_Text pendingRequestsTabText;
+    [SerializeField] private TMP_Text allRequestsTabText;
+    [SerializeField] private Transform teacherTableContent;
+    [SerializeField] private TeacherRequestRowView teacherRequestRowTemplate;
+    [SerializeField] private TMP_Text teacherTableEmptyText;
 
     private readonly List<TeacherReviewRequest> teacherRequests = new();
     private readonly List<GlobalChapterAnalyticsAggregate> analyticsChapters = new();
-    private int analyticsParticipantCount;
     private int selectedTeacherIndex;
     private int pendingDecision;
     private bool isBusy;
+    private UnityAction[] chapterTabActions;
+    private bool showAllTeacherRequests;
+    private string pendingReviewAccountId = string.Empty;
+    private int pendingReviewDecision;
+    private string dashboardStatusMessage = string.Empty;
+    private readonly List<TeacherRequestRowView> activeTeacherRows = new();
+
+    private static readonly Color SelectedChapterColor =
+        new(0.525f, 0.357f, 0.196f, 1f);
+    private static readonly Color UnselectedChapterColor =
+        new(0.953f, 0.898f, 0.784f, 1f);
+    private static readonly Color SelectedChapterTextColor = Color.white;
+    private static readonly Color UnselectedChapterTextColor =
+        new(0.235f, 0.161f, 0.118f, 1f);
 
     private void Awake()
     {
         backButton.onClick.AddListener(ReturnToMainMenu);
         teacherVerificationTabButton.onClick.AddListener(ShowTeacherVerification);
         globalAnalyticsTabButton.onClick.AddListener(ShowGlobalAnalytics);
-        previousTeacherButton.onClick.AddListener(ShowPreviousTeacher);
-        nextTeacherButton.onClick.AddListener(ShowNextTeacher);
-        refreshTeachersButton.onClick.AddListener(RefreshPendingTeachers);
-        approveTeacherButton.onClick.AddListener(ApproveSelectedTeacher);
-        rejectTeacherButton.onClick.AddListener(RejectSelectedTeacher);
+        previousTeacherButton?.onClick.AddListener(ShowPreviousTeacher);
+        nextTeacherButton?.onClick.AddListener(ShowNextTeacher);
+        refreshTeachersButton?.onClick.AddListener(RefreshPendingTeachers);
+        approveTeacherButton?.onClick.AddListener(ApproveSelectedTeacher);
+        rejectTeacherButton?.onClick.AddListener(RejectSelectedTeacher);
+        pendingRequestsTabButton?.onClick.AddListener(ShowPendingTeacherRequests);
+        allRequestsTabButton?.onClick.AddListener(ShowAllTeacherRequests);
         if (chapterDropdown != null)
             chapterDropdown.onValueChanged.AddListener(ShowSelectedAnalyticsChapter);
+        BindChapterTabs();
 
         teacherVerificationRoot.SetActive(false);
         globalAnalyticsRoot.SetActive(false);
@@ -87,13 +125,16 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         backButton.onClick.RemoveListener(ReturnToMainMenu);
         teacherVerificationTabButton.onClick.RemoveListener(ShowTeacherVerification);
         globalAnalyticsTabButton.onClick.RemoveListener(ShowGlobalAnalytics);
-        previousTeacherButton.onClick.RemoveListener(ShowPreviousTeacher);
-        nextTeacherButton.onClick.RemoveListener(ShowNextTeacher);
-        refreshTeachersButton.onClick.RemoveListener(RefreshPendingTeachers);
-        approveTeacherButton.onClick.RemoveListener(ApproveSelectedTeacher);
-        rejectTeacherButton.onClick.RemoveListener(RejectSelectedTeacher);
+        previousTeacherButton?.onClick.RemoveListener(ShowPreviousTeacher);
+        nextTeacherButton?.onClick.RemoveListener(ShowNextTeacher);
+        refreshTeachersButton?.onClick.RemoveListener(RefreshPendingTeachers);
+        approveTeacherButton?.onClick.RemoveListener(ApproveSelectedTeacher);
+        rejectTeacherButton?.onClick.RemoveListener(RejectSelectedTeacher);
+        pendingRequestsTabButton?.onClick.RemoveListener(ShowPendingTeacherRequests);
+        allRequestsTabButton?.onClick.RemoveListener(ShowAllTeacherRequests);
         if (chapterDropdown != null)
             chapterDropdown.onValueChanged.RemoveListener(ShowSelectedAnalyticsChapter);
+        UnbindChapterTabs();
     }
 
     private void ReturnToMainMenu()
@@ -124,7 +165,7 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         teacherVerificationRoot.SetActive(false);
         globalAnalyticsRoot.SetActive(true);
         SetBusy(true);
-        statusText.SetText("Loading Global Analytics...");
+        SetStatusText("Loading Global Analytics...");
         globalAnalyticsText.SetText("Loading aggregated results...");
         if (chapterDropdown != null)
             chapterDropdown.gameObject.SetActive(false);
@@ -137,11 +178,11 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         if (!result.Success)
         {
             globalAnalyticsText.SetText("Global Analytics could not be loaded.");
-            statusText.SetText(result.Error);
+            SetStatusText(result.Error);
             return;
         }
 
-        statusText.SetText(string.Empty);
+        SetStatusText(string.Empty);
         RenderGlobalAnalytics(result.Response);
     }
 
@@ -157,13 +198,24 @@ public sealed class LibrarianDashboardController : MonoBehaviour
             }
         }
 
-        analyticsParticipantCount = response?.participantCount ?? 0;
         PopulateChapterDropdown();
         ShowSelectedAnalyticsChapter(0);
     }
 
     private void PopulateChapterDropdown()
     {
+        bool hasChapterTabs = chapterTabButtons != null &&
+                              chapterTabButtons.Length >= DashboardChapterIds.Length;
+
+        if (hasChapterTabs)
+        {
+            if (chapterDropdown != null)
+                chapterDropdown.gameObject.SetActive(false);
+
+            UpdateChapterTabState(0);
+            return;
+        }
+
         if (chapterDropdown == null)
             return;
 
@@ -181,6 +233,7 @@ public sealed class LibrarianDashboardController : MonoBehaviour
     private void ShowSelectedAnalyticsChapter(int chapterIndex)
     {
         int safeIndex = Mathf.Clamp(chapterIndex, 0, DashboardChapterIds.Length - 1);
+        UpdateChapterTabState(safeIndex);
         string selectedChapterId = DashboardChapterIds[safeIndex];
         GlobalChapterAnalyticsAggregate chapter = analyticsChapters.Find(candidate =>
             string.Equals(candidate.chapterId, selectedChapterId,
@@ -189,11 +242,12 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         if (chapter == null)
         {
             SetText(globalParticipantsText,
-                $"<b>UNIQUE PARTICIPANTS</b>\n{analyticsParticipantCount}");
-            SetText(globalAveragePlaytimeText, "<b>AVERAGE PLAYTIME</b>\n—");
+                "<size=34><b>0</b></size>\n" +
+                "<size=15>UNIQUE PARTICIPANTS</size>");
+            SetText(globalAveragePlaytimeText,
+                "<size=34><b>—</b></size>\n<size=15>AVERAGE PLAYTIME</size>");
             SetText(globalResultsHeaderText,
-                $"<b>{FormatChapterLabel(selectedChapterId)} AVERAGE RESULTS</b>\n" +
-                "Chapter participants: 0");
+                $"<b>{FormatChapterLabel(selectedChapterId)} AVERAGE RESULTS</b>");
             globalAnalyticsText.SetText(
                 "No official submissions have been received for this chapter yet.");
             SetMetricsVisible(false);
@@ -201,37 +255,143 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         }
 
         SetText(globalParticipantsText,
-            $"<b>UNIQUE PARTICIPANTS</b>\n{analyticsParticipantCount}");
+            $"<size=34><b>{chapter.participantCount}</b></size>\n" +
+            "<size=15>UNIQUE PARTICIPANTS</size>");
         SetText(globalAveragePlaytimeText,
-            $"<b>AVERAGE PLAYTIME</b>\n{FormatPlaytime(chapter.averagePlayTimeSeconds)}");
+            $"<size=34><b>{FormatPlaytime(chapter.averagePlayTimeSeconds)}</b></size>\n" +
+            "<size=15>AVERAGE PLAYTIME</size>");
         SetText(globalResultsHeaderText,
-            $"<b>{FormatChapterLabel(chapter.chapterId)} AVERAGE RESULTS</b>\n" +
-            $"Chapter participants: {chapter.participantCount}");
+            $"<b>{FormatChapterLabel(chapter.chapterId)} AVERAGE RESULTS</b>");
 
         globalAnalyticsText.SetText(string.Empty);
-        engagementMetric.SetValue("Engagement", chapter.averageEngagementRatePercent);
-        quizScoreMetric.SetValue("Quiz Score", chapter.averageQuizScoreRatePercent);
-        dialogueAttentionMetric.SetValue(
-            "Dialogue Attention",
-            100d - chapter.averageDialogueSkipRatePercent,
-            $"Skip rate: {chapter.averageDialogueSkipRatePercent:0.0}%");
-        artifactDiscoveryMetric.SetValue(
-            "Artifact Discovery",
-            chapter.averageArtifactDiscoveryRatePercent);
+        SetMetricsVisible(true);
+        SetText(engagementCardText,
+            $"<size=34><b>{chapter.averageEngagementRatePercent:0.#}%</b></size>\n" +
+            "<size=14>PLAYER ENGAGEMENT</size>");
+        SetText(quizScoreCardText,
+            $"<size=34><b>{chapter.averageQuizScoreRatePercent:0.#}</b></size>\n" +
+            "<size=14>AVERAGE QUIZ SCORE</size>");
+        SetText(dialogueSkipCardText,
+            $"<size=34><b>{chapter.averageDialogueSkipRatePercent:0.#}%</b></size>\n" +
+            "<size=14>DIALOGUE SKIP RATE</size>");
+        SetText(artifactDiscoveryAverageText,
+            $"CHAPTER AVERAGE  {chapter.averageArtifactDiscoveryRatePercent:0.#}%");
+
+        if (engagementCardText == null)
+            engagementMetric?.SetValue("Engagement", chapter.averageEngagementRatePercent);
+        if (quizScoreCardText == null)
+            quizScoreMetric?.SetValue("Quiz Score", chapter.averageQuizScoreRatePercent);
+        if (dialogueSkipCardText == null)
+        {
+            dialogueAttentionMetric?.SetValue(
+                "Dialogue Attention",
+                100d - chapter.averageDialogueSkipRatePercent,
+                $"Skip rate: {chapter.averageDialogueSkipRatePercent:0.0}%");
+        }
+        if (artifactDiscoveryTable == null)
+        {
+            artifactDiscoveryMetric?.SetValue(
+                "Artifact Discovery",
+                chapter.averageArtifactDiscoveryRatePercent);
+        }
     }
 
     private void SetMetricsVisible(bool visible)
     {
-        engagementMetric?.SetVisible(visible);
-        quizScoreMetric?.SetVisible(visible);
-        dialogueAttentionMetric?.SetVisible(visible);
-        artifactDiscoveryMetric?.SetVisible(visible);
+        if (engagementCardText != null)
+            engagementCardText.gameObject.SetActive(visible);
+        if (quizScoreCardText != null)
+            quizScoreCardText.gameObject.SetActive(visible);
+        if (dialogueSkipCardText != null)
+            dialogueSkipCardText.gameObject.SetActive(visible);
+        if (artifactDiscoveryTable != null)
+            artifactDiscoveryTable.SetActive(visible);
+
+        // Retain compatibility with the previous bar-based scene layout.
+        if (engagementCardText == null)
+            engagementMetric?.SetVisible(visible);
+        if (quizScoreCardText == null)
+            quizScoreMetric?.SetVisible(visible);
+        if (dialogueSkipCardText == null)
+            dialogueAttentionMetric?.SetVisible(visible);
+        if (artifactDiscoveryTable == null)
+            artifactDiscoveryMetric?.SetVisible(visible);
+    }
+
+    private void BindChapterTabs()
+    {
+        if (chapterTabButtons == null)
+            return;
+
+        int count = Mathf.Min(chapterTabButtons.Length, DashboardChapterIds.Length);
+        chapterTabActions = new UnityAction[count];
+        for (int index = 0; index < count; index++)
+        {
+            int tabIndex = index;
+            chapterTabActions[index] = () => ShowSelectedAnalyticsChapter(tabIndex);
+            chapterTabButtons[index]?.onClick.AddListener(chapterTabActions[index]);
+        }
+    }
+
+    private void UnbindChapterTabs()
+    {
+        if (chapterTabButtons == null || chapterTabActions == null)
+            return;
+
+        int count = Mathf.Min(chapterTabButtons.Length, chapterTabActions.Length);
+        for (int index = 0; index < count; index++)
+            chapterTabButtons[index]?.onClick.RemoveListener(chapterTabActions[index]);
+    }
+
+    private void UpdateChapterTabState(int selectedIndex)
+    {
+        if (chapterTabButtons == null)
+            return;
+
+        for (int index = 0; index < chapterTabButtons.Length; index++)
+        {
+            bool selected = index == selectedIndex;
+            if (chapterTabBackgrounds != null && index < chapterTabBackgrounds.Length &&
+                chapterTabBackgrounds[index] != null)
+            {
+                chapterTabBackgrounds[index].color = selected
+                    ? SelectedChapterColor
+                    : UnselectedChapterColor;
+            }
+
+            if (chapterTabTexts != null && index < chapterTabTexts.Length &&
+                chapterTabTexts[index] != null)
+            {
+                chapterTabTexts[index].color = selected
+                    ? SelectedChapterTextColor
+                    : UnselectedChapterTextColor;
+            }
+        }
     }
 
     private static void SetText(TMP_Text target, string value)
     {
         if (target != null)
             target.SetText(value);
+    }
+
+    private void SetStatusText(string value)
+    {
+        dashboardStatusMessage = value ?? string.Empty;
+        SetText(statusText, dashboardStatusMessage);
+
+        if (teacherVerificationRoot == null || !teacherVerificationRoot.activeSelf ||
+            teacherTableEmptyText == null)
+            return;
+
+        if (string.IsNullOrWhiteSpace(dashboardStatusMessage))
+        {
+            teacherTableEmptyText.gameObject.SetActive(false);
+            return;
+        }
+
+        teacherTableEmptyText.SetText(dashboardStatusMessage);
+        teacherTableEmptyText.gameObject.SetActive(true);
     }
 
     private static string FormatPlaytime(double seconds)
@@ -267,29 +427,46 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         await LoadPendingTeachers();
     }
 
+    private void ShowPendingTeacherRequests()
+    {
+        showAllTeacherRequests = false;
+        ResetDecision();
+        RenderTeacherRequest();
+    }
+
+    private void ShowAllTeacherRequests()
+    {
+        showAllTeacherRequests = true;
+        ResetDecision();
+        RenderTeacherRequest();
+    }
+
     private async Task LoadPendingTeachers()
     {
         SetBusy(true);
-        statusText.SetText("Loading Teacher requests...");
+        SetStatusText("Loading Teacher requests...");
         TeacherRequestListResult result =
             await LibrarianVerificationService.GetPendingTeachersAsync();
 
         teacherRequests.Clear();
         selectedTeacherIndex = 0;
         pendingDecision = 0;
+        pendingReviewAccountId = string.Empty;
+        pendingReviewDecision = 0;
 
         if (!result.Success)
         {
             SetBusy(false);
-            teacherRequestText.SetText("Teacher requests could not be loaded.");
-            statusText.SetText(result.Error);
+            SetText(teacherRequestText, "Teacher requests could not be loaded.");
+            SetText(teacherTableEmptyText, "Teacher requests could not be loaded.");
+            SetStatusText(result.Error);
             RenderTeacherRequest();
             return;
         }
 
         teacherRequests.AddRange(result.Requests);
         SetBusy(false);
-        statusText.SetText(string.Empty);
+        SetStatusText(string.Empty);
         RenderTeacherRequest();
     }
 
@@ -330,7 +507,7 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         if (pendingDecision != decision)
         {
             pendingDecision = decision;
-            statusText.SetText(approve
+            SetStatusText(approve
                 ? "Press Approve again to confirm. Teacher access remains locked until email confirmation."
                 : "Press Reject again to confirm this Teacher request rejection.");
             return;
@@ -338,7 +515,7 @@ public sealed class LibrarianDashboardController : MonoBehaviour
 
         TeacherReviewRequest request = teacherRequests[selectedTeacherIndex];
         SetBusy(true);
-        statusText.SetText("Saving review...");
+        SetStatusText("Saving review...");
         AccountOperationResult result = await LibrarianVerificationService.ReviewAsync(
             request.accountId,
             approve);
@@ -347,30 +524,81 @@ public sealed class LibrarianDashboardController : MonoBehaviour
         {
             SetBusy(false);
             ResetDecision();
-            statusText.SetText(result.Error);
+            SetStatusText(result.Error);
             return;
         }
 
         await LoadPendingTeachers();
-        statusText.SetText(approve
+        SetStatusText(approve
             ? "Teacher approved and awaiting email confirmation."
             : "Teacher request rejected.");
+    }
+
+    private async void ReviewTeacherRequest(TeacherReviewRequest request, bool approve)
+    {
+        if (request == null || isBusy)
+            return;
+
+        int decision = approve ? 1 : -1;
+        if (!string.Equals(pendingReviewAccountId, request.accountId,
+                StringComparison.Ordinal) || pendingReviewDecision != decision)
+        {
+            pendingReviewAccountId = request.accountId;
+            pendingReviewDecision = decision;
+            SetStatusText(approve
+                ? $"Press Approve again to confirm {request.fullName}. Teacher access remains locked until email confirmation."
+                : $"Press Decline again to confirm the rejection of {request.fullName}.");
+            return;
+        }
+
+        SetBusy(true);
+        SetStatusText("Saving review...");
+        AccountOperationResult result = await LibrarianVerificationService.ReviewAsync(
+            request.accountId,
+            approve);
+
+        if (!result.Success)
+        {
+            SetBusy(false);
+            ResetDecision();
+            SetStatusText(result.Error);
+            return;
+        }
+
+        await LoadPendingTeachers();
+        SetStatusText(approve
+            ? "Teacher approved and awaiting email confirmation."
+            : "Teacher request declined.");
     }
 
     private void ResetDecision()
     {
         pendingDecision = 0;
-        statusText.SetText(string.Empty);
+        pendingReviewAccountId = string.Empty;
+        pendingReviewDecision = 0;
+        SetStatusText(string.Empty);
     }
 
     private void RenderTeacherRequest()
     {
+        if (teacherTableContent != null && teacherRequestRowTemplate != null)
+        {
+            RenderTeacherRequestTable();
+            return;
+        }
+
         bool hasRequests = teacherRequests.Count > 0;
-        previousTeacherButton.interactable = !isBusy && hasRequests && selectedTeacherIndex > 0;
-        nextTeacherButton.interactable = !isBusy && hasRequests &&
-                                         selectedTeacherIndex + 1 < teacherRequests.Count;
-        approveTeacherButton.interactable = !isBusy && hasRequests;
-        rejectTeacherButton.interactable = !isBusy && hasRequests;
+        if (previousTeacherButton != null)
+            previousTeacherButton.interactable = !isBusy && hasRequests && selectedTeacherIndex > 0;
+        if (nextTeacherButton != null)
+        {
+            nextTeacherButton.interactable = !isBusy && hasRequests &&
+                                             selectedTeacherIndex + 1 < teacherRequests.Count;
+        }
+        if (approveTeacherButton != null)
+            approveTeacherButton.interactable = !isBusy && hasRequests;
+        if (rejectTeacherButton != null)
+            rejectTeacherButton.interactable = !isBusy && hasRequests;
 
         if (!hasRequests)
         {
@@ -387,13 +615,115 @@ public sealed class LibrarianDashboardController : MonoBehaviour
             $"In-game name: {request.inGameName}");
     }
 
+    private void RenderTeacherRequestTable()
+    {
+        int pendingCount = 0;
+        int approvedCount = 0;
+        int declinedCount = 0;
+        foreach (TeacherReviewRequest request in teacherRequests)
+        {
+            if (IsTeacherStatus(request, "Pending"))
+                pendingCount++;
+            else if (IsTeacherStatus(request, "Rejected"))
+                declinedCount++;
+            else
+                approvedCount++;
+        }
+
+        SetText(pendingRequestCountText,
+            $"<size=34><b>{pendingCount}</b></size>\n<size=14>PENDING REQUESTS</size>");
+        SetText(approvedAccountCountText,
+            $"<size=34><b>{approvedCount}</b></size>\n<size=14>APPROVED ACCOUNTS</size>");
+        SetText(declinedRequestCountText,
+            $"<size=34><b>{declinedCount}</b></size>\n<size=14>DECLINED REQUESTS</size>");
+
+        Color selectedBackground = new(0.525f, 0.357f, 0.196f, 1f);
+        Color unselectedBackground = new(0.953f, 0.898f, 0.784f, 1f);
+        Color ink = new(0.235f, 0.161f, 0.118f, 1f);
+        if (pendingRequestsTabBackground != null)
+            pendingRequestsTabBackground.color = showAllTeacherRequests
+                ? unselectedBackground
+                : selectedBackground;
+        if (allRequestsTabBackground != null)
+            allRequestsTabBackground.color = showAllTeacherRequests
+                ? selectedBackground
+                : unselectedBackground;
+        if (pendingRequestsTabText != null)
+            pendingRequestsTabText.color = showAllTeacherRequests ? ink : Color.white;
+        if (allRequestsTabText != null)
+            allRequestsTabText.color = showAllTeacherRequests ? Color.white : ink;
+
+        foreach (TeacherRequestRowView row in activeTeacherRows)
+        {
+            if (row != null)
+            {
+                row.gameObject.SetActive(false);
+                Destroy(row.gameObject);
+            }
+        }
+        activeTeacherRows.Clear();
+
+        int visibleCount = 0;
+        foreach (TeacherReviewRequest request in teacherRequests)
+        {
+            if (!showAllTeacherRequests && !IsTeacherStatus(request, "Pending"))
+                continue;
+
+            TeacherRequestRowView row = Instantiate(teacherRequestRowTemplate, teacherTableContent);
+            row.name = $"Teacher Request - {request.fullName}";
+            row.gameObject.SetActive(true);
+            row.Bind(request, ReviewTeacherRequest);
+            row.SetInteractable(!isBusy);
+            activeTeacherRows.Add(row);
+            visibleCount++;
+        }
+
+        if (teacherTableEmptyText != null)
+        {
+            bool hasStatusMessage = !string.IsNullOrWhiteSpace(dashboardStatusMessage);
+            teacherTableEmptyText.gameObject.SetActive(hasStatusMessage || visibleCount == 0);
+            teacherTableEmptyText.SetText(hasStatusMessage
+                ? dashboardStatusMessage
+                : showAllTeacherRequests
+                    ? "No Teacher account requests have been received."
+                    : "No pending Teacher account requests.");
+        }
+
+        ResizeTeacherApplicationsPanel(visibleCount);
+    }
+
+    private void ResizeTeacherApplicationsPanel(int visibleRequestCount)
+    {
+        if (teacherTableContent?.parent?.parent is not RectTransform applicationsPanel)
+            return;
+
+        Vector2 anchorMin = applicationsPanel.anchorMin;
+        anchorMin.y = showAllTeacherRequests
+            ? 0.045f
+            : Mathf.Clamp(0.40f - visibleRequestCount * 0.09f, 0.045f, 0.22f);
+        applicationsPanel.anchorMin = anchorMin;
+    }
+
+    private static bool IsTeacherStatus(TeacherReviewRequest request, string status)
+    {
+        return request != null && string.Equals(
+            request.teacherVerificationStatus,
+            status,
+            StringComparison.OrdinalIgnoreCase);
+    }
+
     private void SetBusy(bool busy)
     {
         isBusy = busy;
         backButton.interactable = !busy;
         teacherVerificationTabButton.interactable = !busy;
         globalAnalyticsTabButton.interactable = !busy;
-        refreshTeachersButton.interactable = !busy;
+        if (refreshTeachersButton != null)
+            refreshTeachersButton.interactable = !busy;
+        if (pendingRequestsTabButton != null)
+            pendingRequestsTabButton.interactable = !busy;
+        if (allRequestsTabButton != null)
+            allRequestsTabButton.interactable = !busy;
         RenderTeacherRequest();
     }
 }

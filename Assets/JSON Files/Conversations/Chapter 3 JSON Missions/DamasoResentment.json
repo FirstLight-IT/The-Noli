@@ -8,33 +8,53 @@
       "lines": [
         {
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Do you see?"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "That comes from pride."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "They can't stand to have the curate correct them."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "They even think that they are respectable persons."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "It's the evil result of sending young men to Europe."
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "The government ought to prohibit it."
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "And how about the lieutenant?"
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "He didn't get the frown off his face the whole evening."
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "He did well to leave us."
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "so old and still only a lieutenant!"
         }
       ]
@@ -44,33 +64,53 @@
       "lines": [
         {
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Nakita na ninyo?"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Iyan ay sa pagmamataas!"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "THindi nila maipagpaumanhin na sila'y mapagsabihan ng kura!"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Ang akala nila'y mga taong may kabuluhan na!"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Iyan ang masamang nakukuha sa pagpapadala sa Europa ng mga bata!"
         },{
           "speakerId": "fray_damaso",
+
+          "facingTargetId": "player",
           "text": "Dapat ipagbawal iyan ng gobyerno."
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "At ang teniente?"
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "Sa buong gabing ito'y hindi niya inalis ang pagkakunot ng kanyang mga kilay."
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "Mabuti at tayo'y iniwan!"
         },{
           "speakerId": "dona_victorina",
+
+          "facingTargetId": "player",
           "text": "sMatanda na'y teniente pa hanggang ngayon!"
         }
       ]

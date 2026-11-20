@@ -19,6 +19,11 @@ public class NPC : MonoBehaviour, IInteractable
 
     [FormerlySerializedAs("NPCDialogueData")]
     [SerializeField] private NPCInfoSO npcData;
+
+    [Header("Facing")]
+    [Tooltip("Direction this NPC faces when it first appears and has no movement or interaction target.")]
+    [SerializeField] private NPCFacingDirection defaultIdleDirection = NPCFacingDirection.South;
+
     [SerializeField] private GameObject interactionIcon;
     [SerializeField] private GameObject missionIcon;
     [SerializeField] private InteractableOutline interactionOutline;
@@ -36,11 +41,16 @@ public class NPC : MonoBehaviour, IInteractable
 
     void Awake()
     {
+        GetComponent<NPCMover>()?.SetDefaultFacing(defaultIdleDirection);
+
         if (interactionOutline == null)
             interactionOutline = GetComponent<InteractableOutline>();
 
         if (interactionOutline == null)
             interactionOutline = gameObject.AddComponent<InteractableOutline>();
+
+        if (interactionIcon != null)
+            interactionIcon.SetActive(false);
 
         if (missionIcon != null)
             missionIcon.SetActive(false);
@@ -144,8 +154,9 @@ public class NPC : MonoBehaviour, IInteractable
 
         public void showIcon(bool visible)
         {
-            if (interactionIcon != null)
-                interactionIcon.SetActive(visible);
+            // NPCs remain interactable without showing the nearby "E" prompt.
+            if (interactionIcon != null && interactionIcon.activeSelf)
+                interactionIcon.SetActive(false);
         }
 
         public void showHighlight(bool visible)

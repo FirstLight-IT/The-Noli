@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>Creates and queues the lower-left journal unlock notifications.</summary>
+/// <summary>Creates and queues the lower-right journal unlock notifications.</summary>
 public sealed class UnlockNotificationController : MonoBehaviour
 {
     private struct Notification
@@ -78,9 +78,9 @@ public sealed class UnlockNotificationController : MonoBehaviour
         GameObject cardObject = new("Unlock Card", typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
         cardObject.transform.SetParent(transform, false);
         card = cardObject.GetComponent<RectTransform>();
-        card.anchorMin = new Vector2(0f, 0f);
-        card.anchorMax = new Vector2(0f, 0f);
-        card.pivot = new Vector2(0f, 0f);
+        card.anchorMin = new Vector2(1f, 0f);
+        card.anchorMax = new Vector2(1f, 0f);
+        card.pivot = new Vector2(1f, 0f);
         card.anchoredPosition = settings.HiddenPosition;
         card.sizeDelta = settings.CardSize;
         cardObject.GetComponent<Image>().color = settings.BackgroundColor;

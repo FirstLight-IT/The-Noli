@@ -21,6 +21,8 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     public static bool IsHintCameraPanning { get; private set; }
     public static event Action<AmbientNPCInfoSO, string> OnAmbientDialogueFinished;
 
+    [Header("Interaction")]
+    [SerializeField] private bool interactionEnabled = true;
     [SerializeField] private AmbientNPCInfoSO npcData;
     [SerializeField, Tooltip(
         "Optional stable ID for missions that count individual ambient NPC placements. " +
@@ -32,6 +34,10 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     [SerializeField] private InteractableOutline interactionOutline;
     [Tooltip("Camera framing point used while this NPC is speaking. Falls back to the NPC root when unassigned.")]
     [SerializeField] private Transform dialogueCameraFocus;
+
+    [Header("Facing")]
+    [Tooltip("Direction this ambient NPC faces when it first appears and has no movement or interaction target.")]
+    [SerializeField] private NPCFacingDirection defaultIdleDirection = NPCFacingDirection.South;
 
     [Header("Artifact Hint Camera")]
     [SerializeField, Min(0.1f)] private float hintPanDuration = 1.5f;
@@ -45,19 +51,30 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     private GameObject hintCameraTarget;
     private NPCMultiRoomPatrol multiRoomPatrol;
 
+    public bool IsInteractionEnabled => interactionEnabled;
     public Transform DialogueCameraFocus => dialogueCameraFocus != null
         ? dialogueCameraFocus
         : transform;
 
     private void Awake()
     {
+        GetComponent<NPCMover>()?.SetDefaultFacing(defaultIdleDirection);
         multiRoomPatrol = GetComponent<NPCMultiRoomPatrol>();
 
         if (interactionOutline == null)
             interactionOutline = GetComponent<InteractableOutline>();
 
-        if (interactionOutline == null)
+        if (interactionEnabled && interactionOutline == null)
             interactionOutline = gameObject.AddComponent<InteractableOutline>();
+
+        if (interactionIcon != null)
+            interactionIcon.SetActive(false);
+
+        if (!interactionEnabled)
+        {
+            showIcon(false);
+            showHighlight(false);
+        }
 
         SetHintIcon(false);
     }
@@ -84,7 +101,7 @@ public class AmbientNPC : MonoBehaviour, IInteractable
 
     private void HandleArtifactPassed(ArtifactInfoSO artifact)
     {
-        if (artifact == null || artifactHints == null)
+        if (!interactionEnabled || artifact == null || artifactHints == null)
             return;
 
         foreach (AmbientArtifactHint hint in artifactHints)
@@ -103,7 +120,7 @@ public class AmbientNPC : MonoBehaviour, IInteractable
 
     private void HandleArtifactDiscovered(ArtifactInfoSO artifact)
     {
-        if (artifact == null || artifactHints == null)
+        if (!interactionEnabled || artifact == null || artifactHints == null)
             return;
 
         foreach (AmbientArtifactHint hint in artifactHints)
@@ -121,6 +138,12 @@ public class AmbientNPC : MonoBehaviour, IInteractable
     private void SelectReadyHint()
     {
         activeHint = null;
+
+        if (!interactionEnabled)
+        {
+            SetHintIcon(false);
+            return;
+        }
 
         if (artifactHints != null)
         {
@@ -161,7 +184,7 @@ public class AmbientNPC : MonoBehaviour, IInteractable
 
     public void interact()
     {
-        if (DialogueController.Instance == null || npcData == null)
+        if (!interactionEnabled || DialogueController.Instance == null || npcData == null)
             return;
 
         string activeMissionId = MissionController.Instance?.ActiveMissionInfo?.MissionId;
@@ -394,20 +417,49 @@ public class AmbientNPC : MonoBehaviour, IInteractable
         IsHintCameraPanning = false;
     }
 
-    public void showIcon(bool visible)
+    public void SetInteractionEnabled(bool enabled)
     {
-        if (interactionIcon != null)
-            interactionIcon.SetActive(visible);
+        interactionEnabled = enabled;
+
+        if (interactionEnabled)
+        {
+            if (interactionOutline == null)
+                interactionOutline = GetComponent<InteractableOutline>();
+
+            if (interactionOutline == null)
+                interactionOutline = gameObject.AddComponent<InteractableOutline>();
+
+            SelectReadyHint();
+            return;
+        }
+
+        bool wasHandlingHintCamera = hintCamera != null || hintCameraTarget != null;
+        StopAllCoroutines();
+        activeHint = null;
+        showIcon(false);
+        showHighlight(false);
+        SetHintIcon(false);
+
+        if (wasHandlingHintCamera)
+            RestoreHintCameraImmediately();
     }
 
-    public void showHighlight(bool visible) => interactionOutline?.SetHighlighted(visible);
+    public void showIcon(bool visible)
+    {
+        // Ambient NPCs remain interactable without showing the nearby "E" prompt.
+        if (interactionIcon != null && interactionIcon.activeSelf)
+            interactionIcon.SetActive(false);
+    }
+
+    public void showHighlight(bool visible) =>
+        interactionOutline?.SetHighlighted(interactionEnabled && visible);
     public void setInteracted() { }
-    public bool canInteract() => true;
+    public bool canInteract() => interactionEnabled;
     public int incrementCounter() => 0;
 
     private void SetHintIcon(bool visible)
     {
         if (exclamationIcon != null)
-            exclamationIcon.SetActive(visible);
+            exclamationIcon.SetActive(interactionEnabled && visible);
     }
 }

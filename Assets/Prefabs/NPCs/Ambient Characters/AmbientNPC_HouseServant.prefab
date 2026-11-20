@@ -43,11 +43,23 @@ PrefabInstance:
     - target: {fileID: 2692702913631902986, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5611551936427635918, guid: 1fe0585c7c627c649a3e628b07a5e4bb, type: 3}
+      objectReference: {fileID: -7091046857623527, guid: dfdecd777ded18c4b917dd330dd9f36b, type: 3}
+    - target: {fileID: 2692702913631902986, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 2692702913631902986, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000000000000002, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.696
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000000000000000002, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a4a732dc096149bcb19dac31b8d78d8f, type: 2}
     - target: {fileID: 7500956902878148072, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

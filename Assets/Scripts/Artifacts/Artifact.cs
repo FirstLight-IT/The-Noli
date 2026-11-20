@@ -30,6 +30,9 @@ public class Artifact : MonoBehaviour, IInteractable
 
         if (interactionOutline == null)
             interactionOutline = gameObject.AddComponent<InteractableOutline>();
+
+        if (interactionIcon != null)
+            interactionIcon.SetActive(false);
     }
 
     void OnEnable()
@@ -162,8 +165,9 @@ public class Artifact : MonoBehaviour, IInteractable
 
         public void showIcon(bool visible)
         {
-            if (interactionIcon != null)
-                interactionIcon.SetActive(visible);
+            // Artifacts remain interactable without showing the nearby "E" prompt.
+            if (interactionIcon != null && interactionIcon.activeSelf)
+                interactionIcon.SetActive(false);
         }
 
         public void showHighlight(bool visible)

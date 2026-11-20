@@ -1,295 +1,295 @@
 fileFormatVersion: 2
-guid: 2998dd0e40dfc804ab81cc9b05d6995c
+guid: 3d644314eb781ef4c8f801a4ccd923a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1816012617507101302
-    second: VICTORINA_WALKING_0
+      213: 4683725130210216489
+    second: VICTORINA_WALKING_2_0
   - first:
-      213: 7649637178084230524
-    second: VICTORINA_WALKING_1
+      213: -6959006835928778366
+    second: VICTORINA_WALKING_2_1
   - first:
-      213: -3639403161588611541
-    second: VICTORINA_WALKING_2
+      213: -5456980077866812771
+    second: VICTORINA_WALKING_2_2
   - first:
-      213: -5570970138023925665
-    second: VICTORINA_WALKING_3
+      213: 8344169983878232513
+    second: VICTORINA_WALKING_2_3
   - first:
-      213: -7267276351522414413
-    second: VICTORINA_WALKING_4
+      213: -3802035642473262825
+    second: VICTORINA_WALKING_2_4
   - first:
-      213: -6904048764701794985
-    second: VICTORINA_WALKING_5
+      213: 5573800952174040138
+    second: VICTORINA_WALKING_2_5
   - first:
-      213: -5669820333305224658
-    second: VICTORINA_WALKING_6
+      213: 350414658135659117
+    second: VICTORINA_WALKING_2_6
   - first:
-      213: -3496252378764011066
-    second: VICTORINA_WALKING_7
+      213: 8052010940350678818
+    second: VICTORINA_WALKING_2_7
   - first:
-      213: -109924917773056243
-    second: VICTORINA_WALKING_8
+      213: 6080787742679728880
+    second: VICTORINA_WALKING_2_8
   - first:
-      213: 553988521026802131
-    second: VICTORINA_WALKING_9
+      213: -4698205542711331001
+    second: VICTORINA_WALKING_2_9
   - first:
-      213: 8127906751538901702
-    second: VICTORINA_WALKING_10
+      213: -474231162891892366
+    second: VICTORINA_WALKING_2_10
   - first:
-      213: -4852209004309174813
-    second: VICTORINA_WALKING_11
+      213: -868170290008927232
+    second: VICTORINA_WALKING_2_11
   - first:
-      213: 3786517010100631126
-    second: VICTORINA_WALKING_12
+      213: 8363361592786188511
+    second: VICTORINA_WALKING_2_12
   - first:
-      213: 1519521809523488073
-    second: VICTORINA_WALKING_13
+      213: -2889503545140674269
+    second: VICTORINA_WALKING_2_13
   - first:
-      213: -5176259290195202933
-    second: VICTORINA_WALKING_14
+      213: 8223392564239924112
+    second: VICTORINA_WALKING_2_14
   - first:
-      213: -669153695079172831
-    second: VICTORINA_WALKING_15
+      213: 2266781765462123495
+    second: VICTORINA_WALKING_2_15
   - first:
-      213: -4816183758826193764
-    second: VICTORINA_WALKING_16
+      213: -4332373316836974844
+    second: VICTORINA_WALKING_2_16
   - first:
-      213: -4104267041167236836
-    second: VICTORINA_WALKING_17
+      213: 5345525447924382731
+    second: VICTORINA_WALKING_2_17
   - first:
-      213: -9083140576020168186
-    second: VICTORINA_WALKING_18
+      213: 8868398438990267429
+    second: VICTORINA_WALKING_2_18
   - first:
-      213: -5674395591333065995
-    second: VICTORINA_WALKING_19
+      213: -4535596387814822949
+    second: VICTORINA_WALKING_2_19
   - first:
-      213: -4370745498003268697
-    second: VICTORINA_WALKING_20
+      213: 8410944168813310074
+    second: VICTORINA_WALKING_2_20
   - first:
-      213: -7904838864734550814
-    second: VICTORINA_WALKING_21
+      213: 1035406895823301910
+    second: VICTORINA_WALKING_2_21
   - first:
-      213: -8934667149016328305
-    second: VICTORINA_WALKING_22
+      213: 2262937373052576346
+    second: VICTORINA_WALKING_2_22
   - first:
-      213: -4178296424510333279
-    second: VICTORINA_WALKING_23
+      213: -4304117960765150280
+    second: VICTORINA_WALKING_2_23
   - first:
-      213: 4758646943517735136
-    second: VICTORINA_WALKING_24
+      213: 1706478604514604133
+    second: VICTORINA_WALKING_2_24
   - first:
-      213: 2741889918233769360
-    second: VICTORINA_WALKING_25
+      213: 1170429438982951915
+    second: VICTORINA_WALKING_2_25
   - first:
-      213: -3047887083450962609
-    second: VICTORINA_WALKING_26
+      213: -8756593584281557498
+    second: VICTORINA_WALKING_2_26
   - first:
-      213: -2077716781177510724
-    second: VICTORINA_WALKING_27
+      213: -7935953673118159933
+    second: VICTORINA_WALKING_2_27
   - first:
-      213: 9001085017504673620
-    second: VICTORINA_WALKING_28
+      213: -8307306996600689848
+    second: VICTORINA_WALKING_2_28
   - first:
-      213: -4842065204711124867
-    second: VICTORINA_WALKING_29
+      213: 3510618228562948032
+    second: VICTORINA_WALKING_2_29
   - first:
-      213: 5783825317145619231
-    second: VICTORINA_WALKING_30
+      213: -5681844383232594500
+    second: VICTORINA_WALKING_2_30
   - first:
-      213: -7589095456455470857
-    second: VICTORINA_WALKING_31
+      213: 3420607377902982305
+    second: VICTORINA_WALKING_2_31
   - first:
-      213: 9062829587243807530
-    second: VICTORINA_WALKING_32
+      213: 3460498897929962595
+    second: VICTORINA_WALKING_2_32
   - first:
-      213: 4592064131552190691
-    second: VICTORINA_WALKING_33
+      213: -4511761889384975431
+    second: VICTORINA_WALKING_2_33
   - first:
-      213: -7934800363859382817
-    second: VICTORINA_WALKING_34
+      213: 1826528494282363914
+    second: VICTORINA_WALKING_2_34
   - first:
-      213: -3178299464093873500
-    second: VICTORINA_WALKING_35
+      213: -3308510052315871512
+    second: VICTORINA_WALKING_2_35
   - first:
-      213: -2232572839675452991
-    second: VICTORINA_WALKING_36
+      213: -294001790535565056
+    second: VICTORINA_WALKING_2_36
   - first:
-      213: 7287137278063263077
-    second: VICTORINA_WALKING_37
+      213: 5568256005681186097
+    second: VICTORINA_WALKING_2_37
   - first:
-      213: 2668477502265223646
-    second: VICTORINA_WALKING_38
+      213: -2255250396916201696
+    second: VICTORINA_WALKING_2_38
   - first:
-      213: 1689790944090673742
-    second: VICTORINA_WALKING_39
+      213: -3338131128665798061
+    second: VICTORINA_WALKING_2_39
   - first:
-      213: 6580687618485673930
-    second: VICTORINA_WALKING_40
+      213: 3593406136679126206
+    second: VICTORINA_WALKING_2_40
   - first:
-      213: -7732685414677942625
-    second: VICTORINA_WALKING_41
+      213: 4372387215987560540
+    second: VICTORINA_WALKING_2_41
   - first:
-      213: -1024874191734714211
-    second: VICTORINA_WALKING_42
+      213: 2878044148052779730
+    second: VICTORINA_WALKING_2_42
   - first:
-      213: 3156918137419075332
-    second: VICTORINA_WALKING_43
+      213: 8739941845549844561
+    second: VICTORINA_WALKING_2_43
   - first:
-      213: 1758052526647702774
-    second: VICTORINA_WALKING_44
+      213: -3925951822976226875
+    second: VICTORINA_WALKING_2_44
   - first:
-      213: 8333902606478441561
-    second: VICTORINA_WALKING_45
+      213: 40766871003816189
+    second: VICTORINA_WALKING_2_45
   - first:
-      213: -1462066134719141353
-    second: VICTORINA_WALKING_46
+      213: 4752354137112939099
+    second: VICTORINA_WALKING_2_46
   - first:
-      213: 5177168953653561257
-    second: VICTORINA_WALKING_47
+      213: -374434751699261046
+    second: VICTORINA_WALKING_2_47
   - first:
-      213: 4314979396933474553
-    second: VICTORINA_WALKING_48
+      213: 8106136989472899955
+    second: VICTORINA_WALKING_2_48
   - first:
-      213: -4713910667033985622
-    second: VICTORINA_WALKING_49
+      213: 5936618827120284584
+    second: VICTORINA_WALKING_2_49
   - first:
-      213: 2223165979675153447
-    second: VICTORINA_WALKING_50
+      213: -463399009913727077
+    second: VICTORINA_WALKING_2_50
   - first:
-      213: -2246531673918345280
-    second: VICTORINA_WALKING_51
+      213: 1558818695251449130
+    second: VICTORINA_WALKING_2_51
   - first:
-      213: 8786592767477063186
-    second: VICTORINA_WALKING_52
+      213: -2829255538176030476
+    second: VICTORINA_WALKING_2_52
   - first:
-      213: -2454300738713342410
-    second: VICTORINA_WALKING_53
+      213: 6881580837472136302
+    second: VICTORINA_WALKING_2_53
   - first:
-      213: 5386588211089302513
-    second: VICTORINA_WALKING_54
+      213: 8913020924455855853
+    second: VICTORINA_WALKING_2_54
   - first:
-      213: 3863287741697304516
-    second: VICTORINA_WALKING_55
+      213: -6704192975038916566
+    second: VICTORINA_WALKING_2_55
   - first:
-      213: -920450175931704116
-    second: VICTORINA_WALKING_56
+      213: 715967470651852440
+    second: VICTORINA_WALKING_2_56
   - first:
-      213: -2773877619417165940
-    second: VICTORINA_WALKING_57
+      213: 3475888640210670558
+    second: VICTORINA_WALKING_2_57
   - first:
-      213: -2454857327785511436
-    second: VICTORINA_WALKING_58
+      213: 4192123496272645866
+    second: VICTORINA_WALKING_2_58
   - first:
-      213: 1751244826360087531
-    second: VICTORINA_WALKING_59
+      213: 213307859916654483
+    second: VICTORINA_WALKING_2_59
   - first:
-      213: 5480728711715175856
-    second: VICTORINA_WALKING_60
+      213: -3546758120101958275
+    second: VICTORINA_WALKING_2_60
   - first:
-      213: -6339856629509720899
-    second: VICTORINA_WALKING_61
+      213: 1825827142180158222
+    second: VICTORINA_WALKING_2_61
   - first:
-      213: -1947298916025054644
-    second: VICTORINA_WALKING_62
+      213: -7135710994133879297
+    second: VICTORINA_WALKING_2_62
   - first:
-      213: 6041809561412067853
-    second: VICTORINA_WALKING_63
+      213: 7753364542725298343
+    second: VICTORINA_WALKING_2_63
   - first:
-      213: -4833790681920058851
-    second: VICTORINA_WALKING_64
+      213: 7857454503481441437
+    second: VICTORINA_WALKING_2_64
   - first:
-      213: 589088338765686983
-    second: VICTORINA_WALKING_65
+      213: 4555019285570112910
+    second: VICTORINA_WALKING_2_65
   - first:
-      213: -6549247528360779541
-    second: VICTORINA_WALKING_66
+      213: -4938411978477945137
+    second: VICTORINA_WALKING_2_66
   - first:
-      213: 7385933179070129867
-    second: VICTORINA_WALKING_67
+      213: 3881177198495408316
+    second: VICTORINA_WALKING_2_67
   - first:
-      213: -5629659311271066101
-    second: VICTORINA_WALKING_68
+      213: 7622818756406823118
+    second: VICTORINA_WALKING_2_68
   - first:
-      213: -8026184582488202998
-    second: VICTORINA_WALKING_69
+      213: 1805148500614405852
+    second: VICTORINA_WALKING_2_69
   - first:
-      213: 269683985201435328
-    second: VICTORINA_WALKING_70
+      213: 1194098332293925830
+    second: VICTORINA_WALKING_2_70
   - first:
-      213: -1341782413695817389
-    second: VICTORINA_WALKING_71
+      213: -5834654803361579354
+    second: VICTORINA_WALKING_2_71
   - first:
-      213: 2891408153451092472
-    second: VICTORINA_WALKING_72
+      213: -8011924262854255189
+    second: VICTORINA_WALKING_2_72
   - first:
-      213: 8048913009977945806
-    second: VICTORINA_WALKING_73
+      213: 6420447048728451734
+    second: VICTORINA_WALKING_2_73
   - first:
-      213: 1408149634861935670
-    second: VICTORINA_WALKING_74
+      213: -2120254562789269381
+    second: VICTORINA_WALKING_2_74
   - first:
-      213: 7212294005099335720
-    second: VICTORINA_WALKING_75
+      213: -2450261604539221746
+    second: VICTORINA_WALKING_2_75
   - first:
-      213: 3143123434849273729
-    second: VICTORINA_WALKING_76
+      213: 9006008485529905046
+    second: VICTORINA_WALKING_2_76
   - first:
-      213: 5609431702064443456
-    second: VICTORINA_WALKING_77
+      213: 5435113597298078299
+    second: VICTORINA_WALKING_2_77
   - first:
-      213: 5735756456427517739
-    second: VICTORINA_WALKING_78
+      213: -3347603188761501412
+    second: VICTORINA_WALKING_2_78
   - first:
-      213: -7309456881299021627
-    second: VICTORINA_WALKING_79
+      213: -3618549152579628552
+    second: VICTORINA_WALKING_2_79
   - first:
-      213: 2636000505704588048
-    second: VICTORINA_WALKING_80
+      213: 6599735410725060987
+    second: VICTORINA_WALKING_2_80
   - first:
-      213: 7137298523247523352
-    second: VICTORINA_WALKING_81
+      213: -8830203432067733342
+    second: VICTORINA_WALKING_2_81
   - first:
-      213: 5444397871859564391
-    second: VICTORINA_WALKING_82
+      213: -5082704074663714333
+    second: VICTORINA_WALKING_2_82
   - first:
-      213: 3067360823569513209
-    second: VICTORINA_WALKING_83
+      213: 8171371107659608940
+    second: VICTORINA_WALKING_2_83
   - first:
-      213: -2773192972851861294
-    second: VICTORINA_WALKING_84
+      213: 8057129025406592634
+    second: VICTORINA_WALKING_2_84
   - first:
-      213: -8094364199537428985
-    second: VICTORINA_WALKING_85
+      213: -522011239029216284
+    second: VICTORINA_WALKING_2_85
   - first:
-      213: 8293167915086886493
-    second: VICTORINA_WALKING_86
+      213: 5862757674813421212
+    second: VICTORINA_WALKING_2_86
   - first:
-      213: 5018419423196563877
-    second: VICTORINA_WALKING_87
+      213: -8943887570480090238
+    second: VICTORINA_WALKING_2_87
   - first:
-      213: 7081933256706992349
-    second: VICTORINA_WALKING_88
+      213: -7348381558842435654
+    second: VICTORINA_WALKING_2_88
   - first:
-      213: 6932360931130696382
-    second: VICTORINA_WALKING_89
+      213: -5942214512080876861
+    second: VICTORINA_WALKING_2_89
   - first:
-      213: 3105710835076925681
-    second: VICTORINA_WALKING_90
+      213: -7658416152773490833
+    second: VICTORINA_WALKING_2_90
   - first:
-      213: 4387173206418576788
-    second: VICTORINA_WALKING_91
+      213: 3489511432970432754
+    second: VICTORINA_WALKING_2_91
   - first:
-      213: 4211435028344674533
-    second: VICTORINA_WALKING_92
+      213: -4091866821091326394
+    second: VICTORINA_WALKING_2_92
   - first:
-      213: -7100314764585711105
-    second: VICTORINA_WALKING_93
+      213: -4028450244513194676
+    second: VICTORINA_WALKING_2_93
   - first:
-      213: 5269640118570289988
-    second: VICTORINA_WALKING_94
+      213: -3926020422549281535
+    second: VICTORINA_WALKING_2_94
   - first:
-      213: 1201825703336982944
-    second: VICTORINA_WALKING_95
+      213: 3277627712296850990
+    second: VICTORINA_WALKING_2_95
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -357,7 +357,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -426,8 +426,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b6e5e675720e2441a3530a28e9cb970
-      internalID: -1203631531
+      spriteID: c6448e1cce0bb0244a5d29019b3e58e2
+      internalID: 1126955741
       vertices: []
       indices: 
       edges: []
@@ -448,8 +448,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c32a98dab2944a47999db46f75e7ca3
-      internalID: -1524427276
+      spriteID: 5f30b75b2d575394586718c6c64908a9
+      internalID: -1866038346
       vertices: []
       indices: 
       edges: []
@@ -470,8 +470,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a1f9bd55312894bbaf8fc023319664
-      internalID: 1491490157
+      spriteID: 014fe864210794e40a8439b36d7ba413
+      internalID: 817662692
       vertices: []
       indices: 
       edges: []
@@ -492,8 +492,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 246323eb079b6bc4f8d139ffc923216d
-      internalID: -241289771
+      spriteID: 0748efe1378ebdb40b9fab31640fd34a
+      internalID: 163196717
       vertices: []
       indices: 
       edges: []
@@ -514,8 +514,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ea63626675633c43b79e0749558710e
-      internalID: 1334973640
+      spriteID: 7638b817525143840b98463768132722
+      internalID: 1845545656
       vertices: []
       indices: 
       edges: []
@@ -536,8 +536,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22a9f1df7b50cb0449e78a4090e74df9
-      internalID: 530110480
+      spriteID: ccdb2efe9be1fe248b556f2fdd232616
+      internalID: -562095464
       vertices: []
       indices: 
       edges: []
@@ -558,8 +558,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2225817cabccc204980995e94ae0d51d
-      internalID: 417433809
+      spriteID: 509798638b47b964d834f895f56a1d29
+      internalID: 65062999
       vertices: []
       indices: 
       edges: []
@@ -580,8 +580,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e2504c301f5514d92af8040ffea11a
-      internalID: -2097438704
+      spriteID: abbb85f1f4886004691baca9e6705829
+      internalID: -353441747
       vertices: []
       indices: 
       edges: []
@@ -602,8 +602,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a41fef53be0fe04bb91dc69f68d4e58
-      internalID: -341468356
+      spriteID: 3daed00283e719345a4ffeaa67e61127
+      internalID: -1412199208
       vertices: []
       indices: 
       edges: []
@@ -624,8 +624,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a6a4bd9d89d03a45b3f65f626e143c6
-      internalID: -1724282350
+      spriteID: 5791cb81f08d50f438bd297245cd46c1
+      internalID: -49312395
       vertices: []
       indices: 
       edges: []
@@ -646,8 +646,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a565e402afcd7c46bbd5876b653ba9e
-      internalID: 315704713
+      spriteID: f34669071000a0443b51e98d2ff3b96b
+      internalID: -1492365033
       vertices: []
       indices: 
       edges: []
@@ -668,8 +668,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49109535836bc304681811deef0f7d29
-      internalID: -1136501380
+      spriteID: a4081d872a9c1264492aa244ad64f15c
+      internalID: 1851815486
       vertices: []
       indices: 
       edges: []
@@ -690,8 +690,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e5ec0287a14ec74296ccd70a9c9d23d
-      internalID: -701792145
+      spriteID: fc2f1255815095349859055af1824361
+      internalID: 1743122241
       vertices: []
       indices: 
       edges: []
@@ -712,8 +712,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7d9092eae1c72428c1a989172f63b0
-      internalID: -1427556760
+      spriteID: 754ef944660f540408e4f543d6ce816c
+      internalID: 1051944440
       vertices: []
       indices: 
       edges: []
@@ -734,8 +734,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50483e173b9edb34a9d92f09c30c1a34
-      internalID: -1878501588
+      spriteID: 93491a2b1584eb746aafb3e9d91a5922
+      internalID: 269285511
       vertices: []
       indices: 
       edges: []
@@ -756,8 +756,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f6b63e39caf6da419381ff0c5068cea
-      internalID: -630098071
+      spriteID: 414b0ee1be66f624db3e2614565314fb
+      internalID: -228873245
       vertices: []
       indices: 
       edges: []
@@ -778,8 +778,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcd9a8e3ca6dc424a9938c2ca6ccf3c8
-      internalID: -1954529201
+      spriteID: 098331b39e31c524e802861d98a2fc09
+      internalID: 180610406
       vertices: []
       indices: 
       edges: []
@@ -800,8 +800,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f22ae471a7b4023448829d29c949f68e
-      internalID: -1415792175
+      spriteID: 3aab7b6bbffb16d478860ec1bd393747
+      internalID: -1841933740
       vertices: []
       indices: 
       edges: []
@@ -822,8 +822,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74f6b1738dbea18499ae28de83787b86
-      internalID: 975899870
+      spriteID: ca8db28c68236a64888b292f2b15aa57
+      internalID: 1908583296
       vertices: []
       indices: 
       edges: []
@@ -844,8 +844,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71ee225c3be0e041b45cba722674e29
-      internalID: -1149218129
+      spriteID: 30ceca6aad947d04a94c25d2e1b7f787
+      internalID: -1350923527
       vertices: []
       indices: 
       edges: []
@@ -866,8 +866,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b21dd6eb57a996941844c58060a874ab
-      internalID: -1338342159
+      spriteID: 23e18edeb2575ca42b4b7b370f58e7c0
+      internalID: -2140937501
       vertices: []
       indices: 
       edges: []
@@ -888,8 +888,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6385b1389411f8742b1a7bdf31d0ebb6
-      internalID: 1454998518
+      spriteID: cddb25f5445fb244e83062820b2d0d1e
+      internalID: 594741438
       vertices: []
       indices: 
       edges: []
@@ -910,8 +910,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52b637e6e176ad40b375751c7f3e0ee
-      internalID: -477920271
+      spriteID: b84fdf45ed0330244bd74f9a3559fe87
+      internalID: -1045272122
       vertices: []
       indices: 
       edges: []
@@ -932,8 +932,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4254f3e2bdeebcb41a6df8605fdeed55
-      internalID: -1536145265
+      spriteID: 08898dab249ce204aa47d71349de63ee
+      internalID: -618383068
       vertices: []
       indices: 
       edges: []
@@ -954,8 +954,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef20cea64050e384e8f2a8f3ba92bb01
-      internalID: -98522929
+      spriteID: 47506372253672a4da7fcb4b036affad
+      internalID: 929614791
       vertices: []
       indices: 
       edges: []
@@ -976,8 +976,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e771ba0162ae70640bf9d9c092f24772
-      internalID: 210006809
+      spriteID: 4aae08d09963e6c4aa066757f76f8028
+      internalID: 1432342680
       vertices: []
       indices: 
       edges: []
@@ -998,8 +998,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16b06d3ee44cfa94292c7a383d97cbd2
-      internalID: -781660542
+      spriteID: 3f86a089861ddbf4d8924d08dd7e8c38
+      internalID: -1008269957
       vertices: []
       indices: 
       edges: []
@@ -1020,8 +1020,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3200c2513473e4342b44d7d59f2ea394
-      internalID: -608774089
+      spriteID: 766414a2f3ec7334cb8b54ceb6c67810
+      internalID: 1602656003
       vertices: []
       indices: 
       edges: []
@@ -1042,8 +1042,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1656a9b8278de1248b364357609f228a
-      internalID: 240255017
+      spriteID: f2641bc41e02223498b22966c3e6a0df
+      internalID: -1656427573
       vertices: []
       indices: 
       edges: []
@@ -1064,8 +1064,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc863ef1d19b58409e8a46c94cb235f
-      internalID: -833776934
+      spriteID: 06c1b063649c5654781b97f17694cf7a
+      internalID: -946139854
       vertices: []
       indices: 
       edges: []
@@ -1086,8 +1086,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff1aad027bdb21148951eec7ada987fc
-      internalID: 1849807526
+      spriteID: 1addc75044c335f43980bc74ca642592
+      internalID: -777316190
       vertices: []
       indices: 
       edges: []
@@ -1108,8 +1108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c66964ac74ba624285016b51f086ad3
-      internalID: 844112729
+      spriteID: ea7bb4ded957f084e8526e983829aee9
+      internalID: 1947234766
       vertices: []
       indices: 
       edges: []
@@ -1130,8 +1130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68e685f2934cacb4faca17f141183e3b
-      internalID: 1444413248
+      spriteID: 739dc1db69940c7408adac4870d585a9
+      internalID: 1131535970
       vertices: []
       indices: 
       edges: []
@@ -1152,8 +1152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65e4abe530f764846a1109a3f2d45f37
-      internalID: 552274620
+      spriteID: ccfaa3e6c6907644b9eeb692c9753691
+      internalID: 15199731
       vertices: []
       indices: 
       edges: []
@@ -1174,8 +1174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35710754a37e59046b1d6b25cdf83b1e
-      internalID: -1690180401
+      spriteID: ae898e9305fde0a44a9294e676c88ef3
+      internalID: -1000403535
       vertices: []
       indices: 
       edges: []
@@ -1196,8 +1196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8420caf7491ae814398fc6c3413ffefe
-      internalID: -198140793
+      spriteID: 84cd4efcd4130a7488a335f7c024fcf6
+      internalID: 262470425
       vertices: []
       indices: 
       edges: []
@@ -1218,8 +1218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca82cb716a8ac84fb85f6904486a16a
-      internalID: -2086656856
+      spriteID: c40276db70ceffa45a52c6976641f036
+      internalID: -351107436
       vertices: []
       indices: 
       edges: []
@@ -1240,8 +1240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eff699a152c2b6c479e18d3a9115e83b
-      internalID: 1146631465
+      spriteID: 15db5ae1ba3cf1640983e570f263b02d
+      internalID: -1461877383
       vertices: []
       indices: 
       edges: []
@@ -1262,8 +1262,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be87cd47a3dbe943803f023828632de
-      internalID: -1390377483
+      spriteID: 66327f63bb6d2c7459b4221c747357e7
+      internalID: -249017613
       vertices: []
       indices: 
       edges: []
@@ -1284,8 +1284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9e0a9e0da7333840b889a2d0f5542de
-      internalID: 880474690
+      spriteID: 628ff004dd2f0d945b35943d08bfecdf
+      internalID: -1897956166
       vertices: []
       indices: 
       edges: []
@@ -1306,8 +1306,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 498bbba23ba76ef478ce6f7c640018ee
-      internalID: -1600968678
+      spriteID: 643257b9840c7b341bef45507594fb76
+      internalID: -1130412700
       vertices: []
       indices: 
       edges: []
@@ -1328,8 +1328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c108554feb998246abb7a5cc152956d
-      internalID: 1851197674
+      spriteID: 5d25caccbd56f6e4ab2cbfa7384b2856
+      internalID: 25784027
       vertices: []
       indices: 
       edges: []
@@ -1350,8 +1350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08a16d58e7712ac46b6a6b62425b4fdc
-      internalID: 282290996
+      spriteID: 538a46fadcd2a5e4aa5796cd94275995
+      internalID: -1217642393
       vertices: []
       indices: 
       edges: []
@@ -1372,8 +1372,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63e6b169e7303954ca924bf16535c03f
-      internalID: 196817450
+      spriteID: 4dc505e0b99e5eb4fa89ed1c0e571df1
+      internalID: -1862467796
       vertices: []
       indices: 
       edges: []
@@ -1394,8 +1394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d40a4233bb91b654886431bee7cce7c9
-      internalID: 1297285572
+      spriteID: d14362f1220179e4bb37f8cd2ee935b8
+      internalID: 1808501046
       vertices: []
       indices: 
       edges: []
@@ -1416,8 +1416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff239b85e096a8247bc2ca5361e415cf
-      internalID: 1481873792
+      spriteID: e88d831ecead89740a9670ca6e0dbff3
+      internalID: -1308929556
       vertices: []
       indices: 
       edges: []
@@ -1438,8 +1438,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605f1378f61118d4a90a4c95f246a10d
-      internalID: 214913508
+      spriteID: 4fb6b69bbd2dd384a8568f3d55eaf89c
+      internalID: -1954097488
       vertices: []
       indices: 
       edges: []
@@ -1460,8 +1460,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c429e9e51719824fad2b6e21a3bb71a
-      internalID: 443970788
+      spriteID: b6b0449ce1af5884196165f3ae00ce27
+      internalID: -1022222890
       vertices: []
       indices: 
       edges: []
@@ -1482,8 +1482,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d5b60e71efc982418b19dc7b54357cb
-      internalID: -1035942020
+      spriteID: ab38e97300bc92d459be113344a39dd1
+      internalID: -404016105
       vertices: []
       indices: 
       edges: []
@@ -1504,8 +1504,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09dffa356513d5b4d85ae1f041e3f93c
-      internalID: -796036237
+      spriteID: c6b0ada3baa1f374fb8bfac08458e158
+      internalID: -1537195892
       vertices: []
       indices: 
       edges: []
@@ -1526,8 +1526,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 686bc358e172baf4aba4b65f5c8b1b32
-      internalID: 499724263
+      spriteID: 94c59a8f43b770b4397693d47ed11a00
+      internalID: 918211425
       vertices: []
       indices: 
       edges: []
@@ -1548,8 +1548,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57b7b83325a289c42a9d27555aa320c2
-      internalID: -1758331260
+      spriteID: 68c45f7f72a3e8c49b87806673d524b6
+      internalID: -564736309
       vertices: []
       indices: 
       edges: []
@@ -1570,8 +1570,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7173b588550738d4d8621b4ad3aa1517
-      internalID: -602697518
+      spriteID: f07f41c721fc7ad4fa45277d2fcd04ff
+      internalID: 779987832
       vertices: []
       indices: 
       edges: []
@@ -1592,8 +1592,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52c67ad66a976b54a896a896b825ef1b
-      internalID: -105943594
+      spriteID: ba6a10cf478225548b9d37dbcb95d51b
+      internalID: 810630727
       vertices: []
       indices: 
       edges: []
@@ -1614,8 +1614,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3505020d303392f4dba9bc68bda1ff6d
-      internalID: 1131707294
+      spriteID: e7fb2f365af314f41a62e8267277949f
+      internalID: 523682601
       vertices: []
       indices: 
       edges: []
@@ -1636,8 +1636,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b819b44b07f534741bf30645193505b0
-      internalID: 1138163275
+      spriteID: 08adf17cd86a6ce4da7cfbe0f6e4c38f
+      internalID: 1617603547
       vertices: []
       indices: 
       edges: []
@@ -1658,8 +1658,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd79ef54379980a40a12f450c423f879
-      internalID: -703372084
+      spriteID: 139b4213a7419a04aacf5cea5d464a76
+      internalID: 644488808
       vertices: []
       indices: 
       edges: []
@@ -1680,8 +1680,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 114575098abb8be44b6e4aba84863641
-      internalID: -1904609975
+      spriteID: bd8f3ac76c7e471459650bafbf51b4d1
+      internalID: -1285907797
       vertices: []
       indices: 
       edges: []
@@ -1702,8 +1702,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60db5357b9b1c154b878a9eef3bc77af
-      internalID: -1539600083
+      spriteID: 7913f9c02b67e3541b7904437ba71b1e
+      internalID: 1232521683
       vertices: []
       indices: 
       edges: []
@@ -1724,8 +1724,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c28dd39defdec16419664a20401787c7
-      internalID: -1559615925
+      spriteID: 2c7d4bdf4e3fbf146aae96449199b19b
+      internalID: -259959399
       vertices: []
       indices: 
       edges: []
@@ -1746,8 +1746,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa28705abb335374ca74f2e2e3b9c6f6
-      internalID: 875271915
+      spriteID: 4f4c448a41080e54a9a5fc1b27c5201c
+      internalID: 889510480
       vertices: []
       indices: 
       edges: []
@@ -1768,8 +1768,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28dcaadcb89212648b82f5e880af692f
-      internalID: -806356439
+      spriteID: 83878ae728c316945b1292ec34187a34
+      internalID: -634437320
       vertices: []
       indices: 
       edges: []
@@ -1790,8 +1790,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1e766cc6af5dd84384c6edeef72dad4
-      internalID: 1369443769
+      spriteID: b7d026d0335ba1e41bc7313d7d074755
+      internalID: -1299935330
       vertices: []
       indices: 
       edges: []
@@ -1812,8 +1812,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8d2d58cb6f9bae4094738c802324fb8
-      internalID: -1026069022
+      spriteID: 5cdef9d801c736f47b177961dbf27e4c
+      internalID: -78898977
       vertices: []
       indices: 
       edges: []
@@ -1834,8 +1834,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b204af2b4055dfe40b7582316de4409c
-      internalID: -1688636603
+      spriteID: e642f4f9e9cf0f24f89f5abb3109a7be
+      internalID: -405329624
       vertices: []
       indices: 
       edges: []
@@ -1856,8 +1856,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4509cb9610260844db9697f2dfceb2cf
-      internalID: 1800946033
+      spriteID: 59bc06c8badaed44a8be2676beed18c7
+      internalID: 592730739
       vertices: []
       indices: 
       edges: []
@@ -1878,8 +1878,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48e5b48c52652147a0b9c5b22915baf
-      internalID: 1791619526
+      spriteID: 5ecc07b5c3ea9fb4d87d4ebae646d3de
+      internalID: -8839798
       vertices: []
       indices: 
       edges: []
@@ -1900,8 +1900,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f0f3a4c00037046a7a926edb167474
-      internalID: 1236716563
+      spriteID: df13e857f9234e4418954624469262cf
+      internalID: 2109534631
       vertices: []
       indices: 
       edges: []
@@ -1922,8 +1922,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fc3de0aba85fba43be5fa5687de3e2f
-      internalID: 1022200364
+      spriteID: c916d5365615a664dafaba5874b72284
+      internalID: 1147788735
       vertices: []
       indices: 
       edges: []
@@ -1944,8 +1944,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28a0be881777c184faf4614ccc60527a
-      internalID: 1627943436
+      spriteID: 5bc3d4a9ca44fbc41bc1052cefe60423
+      internalID: 1597133142
       vertices: []
       indices: 
       edges: []
@@ -1966,8 +1966,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f068a45bc898ea499c2457dafe9fe4a
-      internalID: -141527636
+      spriteID: 4a414a89559c78843ab56123e3c01083
+      internalID: 229890664
       vertices: []
       indices: 
       edges: []
@@ -1988,8 +1988,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3997988e6f6430c44a7faef5f2c564ff
-      internalID: 608953274
+      spriteID: c7c64cc1973e8234b90468c35e369a29
+      internalID: 2124204871
       vertices: []
       indices: 
       edges: []
@@ -2010,8 +2010,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43436b9cefd5c214592c255547724f92
-      internalID: -25812049
+      spriteID: 97c1dae9029593c4baf500bb65a9c6c4
+      internalID: 531350452
       vertices: []
       indices: 
       edges: []
@@ -2032,8 +2032,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 504489d1b120610469425e0de7260524
-      internalID: -661495350
+      spriteID: 3b0d5a466bbfd6544a82c354de621b72
+      internalID: 1598543768
       vertices: []
       indices: 
       edges: []
@@ -2054,8 +2054,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8877965c5629d314296f219a081f34ca
-      internalID: 331807743
+      spriteID: 3d55be383e1ea0a4fb5586e3e5548f50
+      internalID: 1377620961
       vertices: []
       indices: 
       edges: []
@@ -2076,8 +2076,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6749264e157dfe342905b112821c2148
-      internalID: -743613291
+      spriteID: e824205022b1b054ab7bdfb506a64de1
+      internalID: 1741820870
       vertices: []
       indices: 
       edges: []
@@ -2098,8 +2098,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca9205a705564b74c884083196b12c7d
-      internalID: -888241191
+      spriteID: 158c78d9b5a77c441ab03093c46ac249
+      internalID: -995385809
       vertices: []
       indices: 
       edges: []
@@ -2120,8 +2120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f1004d9b2b13b449a0a835145e5db2e
-      internalID: 428411818
+      spriteID: e16df87a37a49dc48b0242c894dc66b6
+      internalID: -1527854212
       vertices: []
       indices: 
       edges: []
@@ -2142,8 +2142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89dc6d5c6ccc4614c885283613fec361
-      internalID: -1190273325
+      spriteID: 22cb34a207d49be409ab3f52e4700ba5
+      internalID: -2010727708
       vertices: []
       indices: 
       edges: []
@@ -2164,8 +2164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7309b86b98f0c1545ab7b6f7529042e9
-      internalID: 1423604950
+      spriteID: 7a707c1beb40e2a4c8279a076d7c1824
+      internalID: 707179391
       vertices: []
       indices: 
       edges: []
@@ -2186,8 +2186,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 443a8c71f0a027d408c2f175de6601a3
-      internalID: -1617679522
+      spriteID: fc105ae66cffc7944bec914e21cd9c86
+      internalID: -112628189
       vertices: []
       indices: 
       edges: []
@@ -2208,8 +2208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3846c94604ec7b458660f10e91c64e0
-      internalID: 2127118398
+      spriteID: cec853b2da1b0514093b300d0e0e173b
+      internalID: -1180425527
       vertices: []
       indices: 
       edges: []
@@ -2230,8 +2230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e01b5bb933c605b45a6b7344472eebae
-      internalID: -1728276000
+      spriteID: 4404d62344d7686468c842f614051067
+      internalID: 1410287423
       vertices: []
       indices: 
       edges: []
@@ -2252,8 +2252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ed187106a8e1e4468e94d976a3c0760
-      internalID: 586312979
+      spriteID: 17dd891a5a82032429090826b0052131
+      internalID: -799076311
       vertices: []
       indices: 
       edges: []
@@ -2274,8 +2274,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d90056b5e7107741823cf3e1844933a
-      internalID: 922289307
+      spriteID: 996dd2dce132d934d9bfb106fbedb201
+      internalID: -730447579
       vertices: []
       indices: 
       edges: []
@@ -2296,8 +2296,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc1201862c053e49a215ecd6b86b621
-      internalID: -225377374
+      spriteID: ccf0a2d14a803074ba3a02ceb86458a1
+      internalID: -1305308772
       vertices: []
       indices: 
       edges: []
@@ -2318,8 +2318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0b2d42234f13d441ab45d628bc9242e
-      internalID: 2106885544
+      spriteID: daa4ee47bdc346544a437cb7810aeaed
+      internalID: -73738386
       vertices: []
       indices: 
       edges: []
@@ -2340,8 +2340,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a326af2cd25ff2340ad482d810684b13
-      internalID: -2033110442
+      spriteID: 649f3fca3462eaf40a4caa8380979162
+      internalID: -439372739
       vertices: []
       indices: 
       edges: []
@@ -2362,8 +2362,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 142a2628f7d9a8045a3327e23051c6c9
-      internalID: 1790567008
+      spriteID: 80b62201adb7b174bb0853cd8e262bed
+      internalID: -1822133099
       vertices: []
       indices: 
       edges: []
@@ -2384,8 +2384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a97526c76b724847bd90d34afc5463e
-      internalID: -1047705135
+      spriteID: ce573032c5ffdfa4ab5f058f5edf6353
+      internalID: -1740537033
       vertices: []
       indices: 
       edges: []
@@ -2406,8 +2406,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385bdc2cb6473bd45ac4f1f37ea4abea
-      internalID: 281399874
+      spriteID: de38341373d11584295a095d494a0473
+      internalID: -1296858064
       vertices: []
       indices: 
       edges: []
@@ -2428,8 +2428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63ead9e898cd68540840228cff9d495a
-      internalID: -58569424
+      spriteID: f0cf8dba10d0e2044911752a014a27d7
+      internalID: -872747930
       vertices: []
       indices: 
       edges: []
@@ -2450,8 +2450,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb90b29281b9e9341a561e1e08b09b4b
-      internalID: 2016120118
+      spriteID: 60e932303eca23b4da915891b973c159
+      internalID: -270232561
       vertices: []
       indices: 
       edges: []
@@ -2472,8 +2472,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 243f8fcf16b6c8148b7fc188659d5ab3
-      internalID: 1062335437
+      spriteID: 7ef007fa4b9dea04b861f45040bc8fc8
+      internalID: -1625356884
       vertices: []
       indices: 
       edges: []
@@ -2494,8 +2494,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00973fd31585ed3458631c07578fa256
-      internalID: 1880522061
+      spriteID: 59ce3014cf22f714da4bf508d35aecf7
+      internalID: 2028419817
       vertices: []
       indices: 
       edges: []
@@ -2516,8 +2516,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b7ec9775212b30428992d04a90d86fa
-      internalID: 1069952040
+      spriteID: f5978f4a8699b3d4584086096fe75ed1
+      internalID: -1151311548
       vertices: []
       indices: 
       edges: []
@@ -2526,7 +2526,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 21478a4f16e331041b9527e6241109f3
+    spriteID: c4c84615567f04d438bcc2f6aacd50de
     internalID: 0
     vertices: []
     indices: 
@@ -2538,102 +2538,102 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":390.0,"y":390.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.15000000596046449},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Victorina-Walking_0: -1203631531
-      Victorina-Walking_1: -1524427276
-      Victorina-Walking_10: 315704713
-      Victorina-Walking_11: -1136501380
-      Victorina-Walking_12: -701792145
-      Victorina-Walking_13: -1427556760
-      Victorina-Walking_14: -1878501588
-      Victorina-Walking_15: -630098071
-      Victorina-Walking_16: -1954529201
-      Victorina-Walking_17: -1415792175
-      Victorina-Walking_18: 975899870
-      Victorina-Walking_19: -1149218129
-      Victorina-Walking_2: 1491490157
-      Victorina-Walking_20: -1338342159
-      Victorina-Walking_21: 1454998518
-      Victorina-Walking_22: -477920271
-      Victorina-Walking_23: -1536145265
-      Victorina-Walking_24: -98522929
-      Victorina-Walking_25: 210006809
-      Victorina-Walking_26: -781660542
-      Victorina-Walking_27: -608774089
-      Victorina-Walking_28: 240255017
-      Victorina-Walking_29: -833776934
-      Victorina-Walking_3: -241289771
-      Victorina-Walking_30: 1849807526
-      Victorina-Walking_31: 844112729
-      Victorina-Walking_32: 1444413248
-      Victorina-Walking_33: 552274620
-      Victorina-Walking_34: -1690180401
-      Victorina-Walking_35: -198140793
-      Victorina-Walking_36: -2086656856
-      Victorina-Walking_37: 1146631465
-      Victorina-Walking_38: -1390377483
-      Victorina-Walking_39: 880474690
-      Victorina-Walking_4: 1334973640
-      Victorina-Walking_40: -1600968678
-      Victorina-Walking_41: 1851197674
-      Victorina-Walking_42: 282290996
-      Victorina-Walking_43: 196817450
-      Victorina-Walking_44: 1297285572
-      Victorina-Walking_45: 1481873792
-      Victorina-Walking_46: 214913508
-      Victorina-Walking_47: 443970788
-      Victorina-Walking_48: -1035942020
-      Victorina-Walking_49: -796036237
-      Victorina-Walking_5: 530110480
-      Victorina-Walking_50: 499724263
-      Victorina-Walking_51: -1758331260
-      Victorina-Walking_52: -602697518
-      Victorina-Walking_53: -105943594
-      Victorina-Walking_54: 1131707294
-      Victorina-Walking_55: 1138163275
-      Victorina-Walking_56: -703372084
-      Victorina-Walking_57: -1904609975
-      Victorina-Walking_58: -1539600083
-      Victorina-Walking_59: -1559615925
-      Victorina-Walking_6: 417433809
-      Victorina-Walking_60: 875271915
-      Victorina-Walking_61: -806356439
-      Victorina-Walking_62: 1369443769
-      Victorina-Walking_63: -1026069022
-      Victorina-Walking_64: -1688636603
-      Victorina-Walking_65: 1800946033
-      Victorina-Walking_66: 1791619526
-      Victorina-Walking_67: 1236716563
-      Victorina-Walking_68: 1022200364
-      Victorina-Walking_69: 1627943436
-      Victorina-Walking_7: -2097438704
-      Victorina-Walking_70: -141527636
-      Victorina-Walking_71: 608953274
-      Victorina-Walking_72: -25812049
-      Victorina-Walking_73: -661495350
-      Victorina-Walking_74: 331807743
-      Victorina-Walking_75: -743613291
-      Victorina-Walking_76: -888241191
-      Victorina-Walking_77: 428411818
-      Victorina-Walking_78: -1190273325
-      Victorina-Walking_79: 1423604950
-      Victorina-Walking_8: -341468356
-      Victorina-Walking_80: -1617679522
-      Victorina-Walking_81: 2127118398
-      Victorina-Walking_82: -1728276000
-      Victorina-Walking_83: 586312979
-      Victorina-Walking_84: 922289307
-      Victorina-Walking_85: -225377374
-      Victorina-Walking_86: 2106885544
-      Victorina-Walking_87: -2033110442
-      Victorina-Walking_88: 1790567008
-      Victorina-Walking_89: -1047705135
-      Victorina-Walking_9: -1724282350
-      Victorina-Walking_90: 281399874
-      Victorina-Walking_91: -58569424
-      Victorina-Walking_92: 2016120118
-      Victorina-Walking_93: 1062335437
-      Victorina-Walking_94: 1880522061
-      Victorina-Walking_95: 1069952040
+      Victorina-Walking_0: 1126955741
+      Victorina-Walking_1: -1866038346
+      Victorina-Walking_10: -1492365033
+      Victorina-Walking_11: 1851815486
+      Victorina-Walking_12: 1743122241
+      Victorina-Walking_13: 1051944440
+      Victorina-Walking_14: 269285511
+      Victorina-Walking_15: -228873245
+      Victorina-Walking_16: 180610406
+      Victorina-Walking_17: -1841933740
+      Victorina-Walking_18: 1908583296
+      Victorina-Walking_19: -1350923527
+      Victorina-Walking_2: 817662692
+      Victorina-Walking_20: -2140937501
+      Victorina-Walking_21: 594741438
+      Victorina-Walking_22: -1045272122
+      Victorina-Walking_23: -618383068
+      Victorina-Walking_24: 929614791
+      Victorina-Walking_25: 1432342680
+      Victorina-Walking_26: -1008269957
+      Victorina-Walking_27: 1602656003
+      Victorina-Walking_28: -1656427573
+      Victorina-Walking_29: -946139854
+      Victorina-Walking_3: 163196717
+      Victorina-Walking_30: -777316190
+      Victorina-Walking_31: 1947234766
+      Victorina-Walking_32: 1131535970
+      Victorina-Walking_33: 15199731
+      Victorina-Walking_34: -1000403535
+      Victorina-Walking_35: 262470425
+      Victorina-Walking_36: -351107436
+      Victorina-Walking_37: -1461877383
+      Victorina-Walking_38: -249017613
+      Victorina-Walking_39: -1897956166
+      Victorina-Walking_4: 1845545656
+      Victorina-Walking_40: -1130412700
+      Victorina-Walking_41: 25784027
+      Victorina-Walking_42: -1217642393
+      Victorina-Walking_43: -1862467796
+      Victorina-Walking_44: 1808501046
+      Victorina-Walking_45: -1308929556
+      Victorina-Walking_46: -1954097488
+      Victorina-Walking_47: -1022222890
+      Victorina-Walking_48: -404016105
+      Victorina-Walking_49: -1537195892
+      Victorina-Walking_5: -562095464
+      Victorina-Walking_50: 918211425
+      Victorina-Walking_51: -564736309
+      Victorina-Walking_52: 779987832
+      Victorina-Walking_53: 810630727
+      Victorina-Walking_54: 523682601
+      Victorina-Walking_55: 1617603547
+      Victorina-Walking_56: 644488808
+      Victorina-Walking_57: -1285907797
+      Victorina-Walking_58: 1232521683
+      Victorina-Walking_59: -259959399
+      Victorina-Walking_6: 65062999
+      Victorina-Walking_60: 889510480
+      Victorina-Walking_61: -634437320
+      Victorina-Walking_62: -1299935330
+      Victorina-Walking_63: -78898977
+      Victorina-Walking_64: -405329624
+      Victorina-Walking_65: 592730739
+      Victorina-Walking_66: -8839798
+      Victorina-Walking_67: 2109534631
+      Victorina-Walking_68: 1147788735
+      Victorina-Walking_69: 1597133142
+      Victorina-Walking_7: -353441747
+      Victorina-Walking_70: 229890664
+      Victorina-Walking_71: 2124204871
+      Victorina-Walking_72: 531350452
+      Victorina-Walking_73: 1598543768
+      Victorina-Walking_74: 1377620961
+      Victorina-Walking_75: 1741820870
+      Victorina-Walking_76: -995385809
+      Victorina-Walking_77: -1527854212
+      Victorina-Walking_78: -2010727708
+      Victorina-Walking_79: 707179391
+      Victorina-Walking_8: -1412199208
+      Victorina-Walking_80: -112628189
+      Victorina-Walking_81: -1180425527
+      Victorina-Walking_82: 1410287423
+      Victorina-Walking_83: -799076311
+      Victorina-Walking_84: -730447579
+      Victorina-Walking_85: -1305308772
+      Victorina-Walking_86: -73738386
+      Victorina-Walking_87: -439372739
+      Victorina-Walking_88: -1822133099
+      Victorina-Walking_89: -1740537033
+      Victorina-Walking_9: -49312395
+      Victorina-Walking_90: -1296858064
+      Victorina-Walking_91: -872747930
+      Victorina-Walking_92: -270232561
+      Victorina-Walking_93: -1625356884
+      Victorina-Walking_94: 2028419817
+      Victorina-Walking_95: -1151311548
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

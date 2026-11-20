@@ -16,6 +16,8 @@ public class NPCPatrol : MonoBehaviour
 
     [Header("Waypoint Network")]
     [SerializeField] private bool useWaypointNetwork;
+    [Tooltip("Move directly along each waypoint edge instead of splitting travel into isometric diagonal legs.")]
+    [SerializeField] private bool followWaypointEdgesDirectly = true;
     [SerializeField] private NPCWaypoint startingWaypoint;
 
     [Header("Simple Patrol")]
@@ -453,9 +455,13 @@ public class NPCPatrol : MonoBehaviour
 
     private void MoveAlongWaypointEdge(Transform target)
     {
-        // A waypoint-network destination must stay on its selected graph edge.
-        // Free-form and fixed routes may still use isometric corner splitting.
-        mover.MoveDirectlyTo(target);
+        if (followWaypointEdgesDirectly)
+        {
+            mover.MoveDirectlyTo(target);
+            return;
+        }
+
+        mover.MoveTo(target);
     }
 
     private void AdvanceSimplePatrol()

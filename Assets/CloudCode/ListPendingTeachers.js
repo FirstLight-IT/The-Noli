@@ -21,24 +21,24 @@ module.exports = async ({ context }) => {
     throw new Error("Only a verified Librarian may view Teacher requests.");
   }
 
-  const query = {
-    fields: [
-      {
-        asc: true,
-        key: TEACHER_REQUEST_STATUS_KEY,
-        op: "EQ",
-        value: "Pending"
+  const statuses = [
+    "Pending",
+    "AwaitingEmailConfirmation",
+    "Verified",
+    "Rejected"
+  ];
+  const resultByAccountId = new Map();
+  for (const status of statuses) {
+    const results = await queryByStatus(cloudSave, context.projectId, status);
+    for (const result of results) {
+      const accountId = result.id || result.playerId;
+      if (accountId) {
+        resultByAccountId.set(accountId, result);
       }
-    ],
-    returnKeys: [TEACHER_REQUEST_STATUS_KEY],
-    limit: 100
-  };
+    }
+  }
 
-  const response = await cloudSave.queryProtectedPlayerData(
-    context.projectId,
-    query
-  );
-  const results = response.data.results || [];
+  const results = Array.from(resultByAccountId.values());
   const requests = [];
 
   for (const result of results) {
@@ -56,7 +56,7 @@ module.exports = async ({ context }) => {
     if (
       profile &&
       profile.role === "Teacher" &&
-      profile.teacherVerificationStatus === "Pending"
+      typeof profile.teacherVerificationStatus === "string"
     ) {
       requests.push({
         accountId: targetAccountId,
@@ -64,13 +64,35 @@ module.exports = async ({ context }) => {
         inGameName: profile.inGameName,
         fullName: profile.fullName,
         schoolEmail: profile.schoolEmail,
-        teacherVerificationStatus: profile.teacherVerificationStatus
+        teacherVerificationStatus: profile.teacherVerificationStatus,
+        submittedAtUtc: profile.createdAtUtc || ""
       });
     }
   }
 
+  requests.sort((left, right) =>
+    String(right.submittedAtUtc).localeCompare(String(left.submittedAtUtc))
+  );
   return { requests };
 };
+
+async function queryByStatus(cloudSave, projectId, status) {
+  const query = {
+    fields: [
+      {
+        asc: true,
+        key: TEACHER_REQUEST_STATUS_KEY,
+        op: "EQ",
+        value: status
+      }
+    ],
+    returnKeys: [TEACHER_REQUEST_STATUS_KEY],
+    limit: 100
+  };
+
+  const response = await cloudSave.queryProtectedPlayerData(projectId, query);
+  return response.data.results || [];
+}
 
 async function loadProfile(cloudSave, projectId, playerId) {
   const response = await cloudSave.getProtectedItems(

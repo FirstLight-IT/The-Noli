@@ -11,8 +11,8 @@ public sealed class UnlockNotificationSettings : ScriptableObject
 
     [Header("Position and Size")]
     [SerializeField] private Vector2 cardSize = new(360f, 92f);
-    [SerializeField] private Vector2 visiblePosition = new(32f, 32f);
-    [SerializeField] private Vector2 hiddenPosition = new(-390f, 32f);
+    [SerializeField] private Vector2 visiblePosition = new(-32f, 32f);
+    [SerializeField] private Vector2 hiddenPosition = new(390f, 32f);
 
     [Header("Timing")]
     [Min(0.01f)] [SerializeField] private float slideInDuration = 0.28f;

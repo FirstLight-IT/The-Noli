@@ -37,12 +37,21 @@ public sealed class PrimaryNPCLanguageContent
     public string[] characterFacts = Array.Empty<string>();
     public string[] introductionLines = Array.Empty<string>();
     public PrimaryNPCDialogueSequence[] repeatDialogues = Array.Empty<PrimaryNPCDialogueSequence>();
+    public PrimaryNPCChapterDialogue[] chapterDialogues = Array.Empty<PrimaryNPCChapterDialogue>();
 }
 
 [Serializable]
 public sealed class PrimaryNPCDialogueSequence
 {
     public string[] lines = Array.Empty<string>();
+}
+
+[Serializable]
+public sealed class PrimaryNPCChapterDialogue
+{
+    public string chapterId = string.Empty;
+    public string[] introductionLines = Array.Empty<string>();
+    public PrimaryNPCDialogueSequence[] repeatDialogues = Array.Empty<PrimaryNPCDialogueSequence>();
 }
 
 public static class PrimaryNPCJson
@@ -163,18 +172,64 @@ public class NPCInfoSO : ScriptableObject
     public string Description => LocalizedContent?.description ?? string.Empty;
     public string Biography => LocalizedContent?.biography ?? string.Empty;
     public string[] CharacterFacts => LocalizedContent?.characterFacts ?? Array.Empty<string>();
-    public string[] IntroductionLines => LocalizedContent?.introductionLines ?? Array.Empty<string>();
+    public string[] IntroductionLines
+    {
+        get
+        {
+            PrimaryNPCLanguageContent content = LocalizedContent;
+            PrimaryNPCChapterDialogue chapterDialogue = GetActiveChapterDialogue(content);
+            return chapterDialogue != null
+                ? chapterDialogue.introductionLines ?? Array.Empty<string>()
+                : content?.introductionLines ?? Array.Empty<string>();
+        }
+    }
 
     public string[] GetRepeatDialogueLines(int index)
     {
-        PrimaryNPCDialogueSequence[] localizedDialogues = LocalizedContent?.repeatDialogues;
+        PrimaryNPCLanguageContent content = LocalizedContent;
+        PrimaryNPCChapterDialogue chapterDialogue = GetActiveChapterDialogue(content);
+        PrimaryNPCDialogueSequence[] localizedDialogues = chapterDialogue != null
+            ? chapterDialogue.repeatDialogues
+            : content?.repeatDialogues;
+
         if (localizedDialogues != null && index >= 0 && index < localizedDialogues.Length)
             return localizedDialogues[index]?.lines ?? Array.Empty<string>();
 
         return Array.Empty<string>();
     }
 
-    public int RepeatDialogueCount =>
-        LocalizedContent?.repeatDialogues?.Length ?? 0;
+    public int RepeatDialogueCount
+    {
+        get
+        {
+            PrimaryNPCLanguageContent content = LocalizedContent;
+            PrimaryNPCChapterDialogue chapterDialogue = GetActiveChapterDialogue(content);
+            return chapterDialogue != null
+                ? chapterDialogue.repeatDialogues?.Length ?? 0
+                : content?.repeatDialogues?.Length ?? 0;
+        }
+    }
+
+    private static PrimaryNPCChapterDialogue GetActiveChapterDialogue(
+        PrimaryNPCLanguageContent content)
+    {
+        string chapterId = ChapterController.Instance?.ActiveChapter?.ChapterId;
+        if (content?.chapterDialogues == null || string.IsNullOrWhiteSpace(chapterId))
+            return null;
+
+        foreach (PrimaryNPCChapterDialogue chapterDialogue in content.chapterDialogues)
+        {
+            if (chapterDialogue != null &&
+                string.Equals(
+                    chapterDialogue.chapterId,
+                    chapterId,
+                    StringComparison.OrdinalIgnoreCase))
+            {
+                return chapterDialogue;
+            }
+        }
+
+        return null;
+    }
 
 }

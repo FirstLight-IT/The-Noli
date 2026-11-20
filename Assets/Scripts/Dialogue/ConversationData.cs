@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueLine
 {
     public string speakerId;
+    public string facingTargetId = "player";
     public string text;
 }
 

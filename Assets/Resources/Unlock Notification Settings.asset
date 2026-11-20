@@ -17,8 +17,8 @@ MonoBehaviour:
   categoryTextColor: {r: 0.8018868, g: 0.4803756, b: 0.4803756, a: 1}
   nameTextColor: {r: 1, g: 1, b: 1, a: 1}
   cardSize: {x: 360, y: 92}
-  visiblePosition: {x: 32, y: 32}
-  hiddenPosition: {x: -390, y: 32}
+  visiblePosition: {x: -32, y: 32}
+  hiddenPosition: {x: 390, y: 32}
   slideInDuration: 0.28
   visibleDuration: 2.6
   slideOutDuration: 0.24

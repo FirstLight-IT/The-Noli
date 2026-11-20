@@ -9,9 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2467173465767164909, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
+      propertyPath: interactionEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467173465767164909, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: npcData
       value: 
       objectReference: {fileID: 11400000, guid: c34497cecc203c54588647b56829c818, type: 2}
+    - target: {fileID: 8070450532247928830, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
+      propertyPath: turnTowardNearbyPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2512939599337691593, guid: 7a2be664e55ba3e468bf14c0710f14ff, type: 3}
       propertyPath: m_Offset.x
       value: -0.12

@@ -13,6 +13,7 @@ public enum AmbientNPCTag
 [Serializable]
 public sealed class AmbientNPCDatabase
 {
+    public int schemaVersion = 1;
     public string defaultLanguageCode = "en";
     public List<AmbientNPCEntry> npcs = new();
 }
@@ -30,8 +31,16 @@ public sealed class AmbientNPCLanguageContent
     public string languageCode = string.Empty;
     public string displayName = string.Empty;
     public NPCDialogueSequence[] dialogueVariations = Array.Empty<NPCDialogueSequence>();
+    public AmbientNPCChapterDialogue[] chapterDialogues = Array.Empty<AmbientNPCChapterDialogue>();
     public AmbientNPCMissionDialogue[] missionDialogueOverrides =
         Array.Empty<AmbientNPCMissionDialogue>();
+}
+
+[Serializable]
+public sealed class AmbientNPCChapterDialogue
+{
+    public string chapterId = string.Empty;
+    public NPCDialogueSequence[] dialogueVariations = Array.Empty<NPCDialogueSequence>();
 }
 
 [Serializable]
@@ -110,8 +119,17 @@ public class AmbientNPCInfoSO : ScriptableObject
     public string NpcID => npcID;
     public AmbientNPCTag Tags => tags;
     public string DisplayName => LocalizedContent?.displayName ?? string.Empty;
-    public NPCDialogueSequence[] DialogueVariations =>
-        LocalizedContent?.dialogueVariations ?? Array.Empty<NPCDialogueSequence>();
+    public NPCDialogueSequence[] DialogueVariations
+    {
+        get
+        {
+            AmbientNPCLanguageContent content = LocalizedContent;
+            AmbientNPCChapterDialogue chapterDialogue = GetActiveChapterDialogue(content);
+            return chapterDialogue != null
+                ? chapterDialogue.dialogueVariations ?? Array.Empty<NPCDialogueSequence>()
+                : content?.dialogueVariations ?? Array.Empty<NPCDialogueSequence>();
+        }
+    }
 
     public NPCDialogueSequence[] GetMissionDialogueVariations(string missionId)
     {
@@ -140,4 +158,26 @@ public class AmbientNPCInfoSO : ScriptableObject
 
     public bool HasTag(AmbientNPCTag tag) =>
         tag != AmbientNPCTag.None && (tags & tag) == tag;
+
+    private static AmbientNPCChapterDialogue GetActiveChapterDialogue(
+        AmbientNPCLanguageContent content)
+    {
+        string chapterId = ChapterController.Instance?.ActiveChapter?.ChapterId;
+        if (content?.chapterDialogues == null || string.IsNullOrWhiteSpace(chapterId))
+            return null;
+
+        foreach (AmbientNPCChapterDialogue chapterDialogue in content.chapterDialogues)
+        {
+            if (chapterDialogue != null &&
+                string.Equals(
+                    chapterDialogue.chapterId,
+                    chapterId,
+                    StringComparison.OrdinalIgnoreCase))
+            {
+                return chapterDialogue;
+            }
+        }
+
+        return null;
+    }
 }

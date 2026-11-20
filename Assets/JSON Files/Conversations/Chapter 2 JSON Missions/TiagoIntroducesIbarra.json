@@ -7,15 +7,23 @@
       "lines": [
         {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Good evening, gentlemen!."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Good evening, Padre!"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "I have the honor of presenting to you Don Crisostomo Ibarra, the son of my deceased friend."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "The young gentleman has just arrived from Europe and I went to meet him."
         }
       ]
@@ -25,15 +33,23 @@
       "lines": [
         {
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Magandang gabi po, mga ginoo!"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Magandang gabi po, among!"
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "May kapurihan akong ipakilala po sa inyo si Don Crisostomo Ibarra, na anak ng nasira kong kaibigan!."
         },{
           "speakerId": "capitan_tiago",
+
+          "facingTargetId": "player",
           "text": "Bagong galing sa Europa ang ginoong ito, at siya'y aking sinalubong."
         }
       ]

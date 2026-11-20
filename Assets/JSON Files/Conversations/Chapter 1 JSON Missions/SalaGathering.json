@@ -14,186 +14,232 @@
       "lines": [
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "You’ll see, when you’ve been here a few months you’ll be convinced of what I say. It’s one thing to govern in Madrid and another to live in the Philippines."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "But—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "I, for example, who can look back over twenty-three years of bananas and morisqueta, know whereof I speak. Don’t come at me with theories and fine speeches, for I know the Indios."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Mark well that the moment I arrived in the country I was assigned to a toxin, small it is true, but especially devoted to agriculture."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "I didn’t understand Tagalog very well then, but I was, soon confessing the women, and we understood one another and they came to like me so well that three years later,"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "when I was transferred to another and larger town, made vacant by the death of the native curate, all fell to weeping, they heaped gifts upon me, they escorted me with music—"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "But that only goes to show—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Wait, wait! Don’t be so hasty! My successor remained a shorter time, and when he left he had more attendance, more tears, and more music."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Yet he had been more given to whipping and had raised the fees in the parish to almost double."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "But you will allow me—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "But that isn’t all. I stayed in the town of San Diego twenty years and it has been only a few months since I left it.”"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Twenty years, no one can deny, are more than sufficient to get acquainted with a town. San Diego has a population of six thousand souls and I knew every inhabitant as well as if I had been his mother and wet-nurse."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "I knew in which foot this one was lame, where the shoe pinched that one, who was courting that girl, what affairs she had had and with whom, who was the real father of the child, and so on."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "for I was the confessor of every last one, and they took care not to fail in their duty."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Our host, Santiago, will tell you whether I am speaking the truth, for he has a lot of land there and that was where we first became friends."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Well then, you may see what the Indian is: when I left I was escorted by only a few old women and some of the tertiary brethren"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "and that after I had been there twenty years!"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "But I don’t see what that has to do with the abolition of the tobacco monopoly."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "What? How’s that? Is it possible that you don’t see it as clear as day?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Don’t you see, my son, that all this proves plainly that the reforms of the ministers are irrational?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Do you really believe so?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Do I believe so? "
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "As I believe the Gospel! The Indio is so indolent!"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ah, pardon me for interrupting you, but you have said something that awakens all my interest."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Does this indolence actually, naturally, exist among the natives or is there some truth in what a foreign traveler says"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "that with this indolence we excuse our own, as well as our backwardness and our colonial system."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "He referred to other colonies whose inhabitants belong to the same race—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Bah, jealousy!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ask Señor Laruja, who also knows this country."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ask him if there is any equal to the ignorance and indolence of the Indio"
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "It’s true."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "In no part of the world can you find any one more indolent than the Indian, in no part of the world."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Gentlemen, I believe that we are in the house of an Indio. Those young ladies—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Bah, don’t be so apprehensive!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Santiago doesn’t consider himself an Indian"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "and besides, he’s not here. And what if he were! These are the nonsensical ideas of the newcomers."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Let a few months pass and you will change your opinion, after you have attended a lot of fiestas and bailúhan, slept on cots, and eaten your fill of tinola."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ah, is this thing that you call tinola a variety of lotus which makes people—er—forgetful?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Nothing of the kind! You’re getting absurd."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Tinola is a stew of chicken and squash. How long has it been since you got here?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Four days"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Have you come as a government employee?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "No, sir, I’ve come at my own expense to study the country."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Man, what a rare bird!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "To come at one’s own expense and for such foolishness! What a wonder!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "When there are so many books! And with two fingerbreadths of forehead! Many have written books as big as that! With two fingerbreadths of forehead!"
         }
       ]
@@ -203,186 +249,232 @@
       "lines": [
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Makikita rin ninyo, kapag po kayo'y nanirahan nang ilang buwan dito, kayo'y maniniwala sa aking sinasabi: iba ang mamahala ng bayan sa Madrid at iba ang manirahan sa Pilipinas!"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ngunit—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ako, halimbawa, mayroon na ritong dalawampu't tatlong taong saging at morisqueta; makapagsasabi ako ng mapapaniwalaan tungkol sa bagay na iyan. Huwag kayong tumutol sa akin ayon sa mga karunungan at mabubuting pananalita, kilala ko ang Indio."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Isipin ninyong mula nang ako'y dumating sa lupaing ito'y itinalaga ako sa isang bayang maliit nga, ngunit totoong abala sa pagsasaka."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hindi ko pa nauunawaang mabuti ang wikang Tagalog, gayunma'y kinukumpisal ko na ang mga babae at nagkakaunawaan kami, at lubha nila akong nagustuhan na anupa't nang makaraan ang tatlong taon,"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "nang ako'y ilipat sa ibang bayang lalong malaki, na walang namamahala dahil sa pagkamatay ng paring Indio roon, nagsipanangis ang lahat ng babae, pinuspos ako ng mga handog, inihatid nila akong may kasamang musika—"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Datapwat iya'y nagpapakilala lamang—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hintay kayo! Hintay kayo! Huwag naman sana kayong napakabilis! Ang humalili sa akin ay hindi totoong nagtagal na gaya ko, at nang siya'y umalis ay lalo pang marami ang naghatid, lalo pang marami ang umiyak at lalo pang mainam ang musika."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Gayong siya'y lalong mainam mamalo at pinataas pa ang mga bayarin sa parokya, hanggang sa halos nag-ibayo ang laki."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ngunit itutulot ninyo sa aking—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hindi lamang iyan. Nanirahan ako sa bayang San Diego nang dalawampung taon, may ilang buwan lamang ngayong aking iniwan."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hindi maikakait sa akin ninuman na ang dalawampung taon ay higit kaysa sapat upang makilala ang isang bayan. May anim na libo ang dami ng taong naninirahan sa San Diego, at bawat tagaroon ay kilala ko, na parang siya'y aking ipinanganak at pinasuso."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Nalalaman ko kung alin ang lisyang kaasalan nito, kung ano ang pangangailangan niyon, kung sino ang umiibig sa bawat dalaga, kung anu-anong mga pagkadupilas ang nangyari sa babaeng ito, kung sino ang tunay na ama ng batang ipinanganak, at iba pa;"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "palibhasa'y kinukumpisal ko ang lahat-lahat ng taong-bayan; nag-iingat silang mabuti sa kani-kanilang katungkulan."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Magsabi kung nagsisinungaling ako si Santiago, na siyang may-ari nitong bahay; doon ay marami siyang mga lupa at doon kami naging magkaibigan."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ngayon ay makikita ninyo kung ano ang Indio; nang ako'y umalis, bahagya na akong inihatid ng ilang matatandang babae at ilang hermano tercero,"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "gayong nanirahan ako roon nang dalawampung taon!"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ngunit hindi ko mapagwari kung ano ang kinalaman ng inyong mga sinabi sa pag-aalis ng monopolyo sa tabako."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Paano? Paano? Mangyayari bang hindi ninyo mapagwari iyang kasingliwanag ng araw?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hindi ba ninyo nakikita, anak ng Diyos, na ang lahat ng ito'y nagpapatibay na totoong pawang kahangalan ang mga pagbabagong utos na ginagawa ng mga ministro?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Inaakala ba ninyo?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Na kung inaakala ko?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Sinasampalatayanan kong gaya ng pagsampalataya sa Ebanghelyo! Napakatamad ng Indio!"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ah! Ipatawad po ninyong salubungin ko ang inyong pananalita, ngunit sinabi po ninyo ang isang salitang totoong nakaakit sa aking pag-iisip."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Tunay nga kayang katutubo ng mga dalisay na tagarito ang katamaran, o may katotohanan ang sinasabi ng isang manlalakbay na tagaibang lupain,"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "na tinatakpan natin ng katamarang ito ang ating sariling katamaran, ang pagkahuli natin sa pagsulong sa mga karunungan at ang ating paraan ng pamamahala sa lupaing nasasakupan?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ang sinabi niya'y ukol sa mga ibang lupaing sakop, na ang mga nananahan doo'y pawang sa lahi ring iyan!—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Oho! Mga kainggitan!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Itanong po ninyo kay Ginoong Laruja na nakakikilala rin sa lupaing ito;"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "itanong ninyo sa kanya kung may katulad ang kamangmangan at katamaran ng Indio!"
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "Tunay nga."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "Hindi po kayo makakakita sa alinmang panig ng daigdig ng hihigit pa sa katamaran ng Indio, sa alinmang panig ng daigdig!"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Mga ginoo, tila mandin tayo'y nasa bahay ng isang Indio. Ang mga binibining iyan—"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Bah! Huwag kayong napakamapag-alala!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hindi ipinapalagay ni Santiago na siya'y Indio,"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "bukod sa roo'y hindi siya naririto, at kahit naririto man siya! Iya'y mga kahangalan ng mga bagong dating."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hayaan ninyong makaraan ang ilang buwan; magbabago kayo ng isipan kapag kayo'y nakapagmalimit sa maraming mga pista at bailuhan, nakatulog sa mga katre at nakakain ng maraming tinola."
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Tinatawag po ba ninyong tinola ang bungang-kahoy na kahawig ng loto na... ganyan... nakapagpapalimot sa mga tao?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ano bang loto! Nagsasalita kayo ng mga kahangalan."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ang tinola ay ang pinaghalong inahing manok at saka upo. Buhat pa kailan dumating kayo?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Apat na araw."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Naparito ba kayong may katungkulan?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Hindi po; naparito ako sa aking sariling gugol upang makilala ko ang lupaing ito."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Aba, napakatanging ibon!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Pumarito sa sariling gugol at sa mga kahangalan lamang! Kakaiba namang totoo!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ganyang karaming mga libro... sapat na ang magkaroon ng dalawang daliring noo... Sa ganya'y marami nang sumulat ng mga dakilang libro! Sapat na ang magkaroon ng dalawang daliring noo..."
         }
       ]

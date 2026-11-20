@@ -7,98 +7,122 @@
       "lines": [
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "But can you tell me, Señor Laruja, what kind of man our host is?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "I haven’t been introduced to him yet."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "They say that he has gone out."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "I haven’t seen him either."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "There’s no need of introductions here."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Santiago is made of the right stuff."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "No, he’s not the man who invented gunpowder."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "You too, Señor Laruja."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "How could the poor man invent gunpowder if, as is said, the Chinese invented it centuries ago?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "The Chinese! Are you crazy?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Out with you!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "A Franciscan, one of my Order, Fray What-do-you-call-him Savalls, invented it in the—ah the seventh century!"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "A Franciscan?"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Well, he must have been a missionary in China, that Padre Savalls."
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "Schwartz, perhaps you mean, señora."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "I don’t know. Fray Damaso said a Franciscan and I was only repeating."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Well, Savalls or Chevas, what does it matter?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "The difference of a letter doesn’t make him a Chinaman."
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "And in the fourteenth century, not the seventh."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Well, neither does a century more or less make him a Dominican."
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "Don’t get angry, your Reverence."
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "So much the better that he did invent it so as to save his brethren the trouble."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "And did you say, Padre Sibyla, that it was in the fourteenth century?"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Was that before or after Christ?"
         }
       ]
@@ -108,98 +132,122 @@
       "lines": [
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ngunit masasabi po ba ninyo sa akin, Ginoong Laruja, kung anong tao kaya ang may-ari ng bahay?"
         },
         {
           "speakerId": "blond_man",
+          "facingTargetId": "player",
           "text": "Ako'y hindi pa naipakikilala sa kanya."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "Ang sabi nila'y umalis daw."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "Ako ma'y hindi ko pa siya nakikita."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Dito'y hindi kailangan ang mga pagpapakilala!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Si Santiago'y isang taong mabait."
         },
         {
           "speakerId": "senor_laruja",
+          "facingTargetId": "player",
           "text": "Isang taong hindi nakatuklas ng pulbura."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Kayo po naman, Ginoong Laruja!"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Paano po bang matutuklasan pa ng abang iyon ang pulbura, ay ayon sa sabi'y natuklasan na ito ng mga Intsik noong malaong panahon?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ng mga Intsik? Nasisira ba ang isip ninyo?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Tumahan nga kayo!"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Ang nakatuklas ng paggawa ng pulbura'y isang Franciscano, isa sa aming samahan, Fray... hindi ko maalaman... Savalls, noong siglong... ikapito!"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Isang Franciscano?"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Marahil naging misyonero sa China ang Padre Savalls na iyan."
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "Marahil Schwartz ang ibig po ninyong sabihin, ginang."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Hindi ko alam; sinabi ni Fray Damasong Franciscano: wala akong ginawa kundi inulit ko lamang ang kanyang sinabi."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Mabuti! Savalls o Chevas, ano ngayon?"
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Hindi dahil sa isang letra ay magiging Intsik siya!"
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "At noong ikalabing-apat na siglo at hindi noong ikapito."
         },
         {
           "speakerId": "fray_damaso",
+          "facingTargetId": "player",
           "text": "Mabuti, datapwat hindi sa paglabis o pagkulang ng isang siglo'y magiging Dominicano na siya!"
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "Aba, huwag po sanang magalit ang inyong Kagalang-galang!"
         },
         {
           "speakerId": "fray_sibyla",
+          "facingTargetId": "player",
           "text": "Lalong mabuti kung siya ang nakatuklas ng paggawa ng pulbura, sapagkat sa gayo'y naibsan na niya sa pagpapagod sa gayong bagay ang kanyang mga kapatid."
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "At sinasabi po ninyo, Padre Sibyla, na nangyari ang bagay na iyon noong ikalabing-apat na siglo?"
         },
         {
           "speakerId": "dona_victorina",
+          "facingTargetId": "player",
           "text": "Nang hindi pa o nang makapagkatawang-tao na si Cristo?"
         }
       ]

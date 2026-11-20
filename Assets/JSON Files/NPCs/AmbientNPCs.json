@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "defaultLanguageCode": "en",
   "npcs": [
     {
@@ -24,6 +24,38 @@
                 "This evening is far more entertaining than I expected."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_cadet][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_cadet][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_cadet][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -43,6 +75,38 @@
             {
               "lines": [
                 "Higit na kawili-wili ang gabing ito kaysa sa inaasahan ko."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_cadet][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_cadet][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_cadet][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -83,6 +147,38 @@
                 }
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_filipina_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_filipina_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_filipina_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -116,6 +212,38 @@
                 }
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_filipina_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_filipina_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_filipina_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -142,6 +270,38 @@
                 "Perhaps the meal will provide more interest than the conversation."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_foreign_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_foreign_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_foreign_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -161,6 +321,38 @@
             {
               "lines": [
                 "Marahil ay mas kawili-wili ang pagkain kaysa sa usapan."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_foreign_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_foreign_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_foreign_guest][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -196,17 +388,49 @@
               "dialogueVariations": [
                 {
                   "lines": [
-                    "Ah, Se\u00f1or Ibarra. It is an honor to make your acquaintance."
+                    "Ah, Señor Ibarra. It is an honor to make your acquaintance."
                   ]
                 },
                 {
                   "lines": [
-                    "Welcome home, Se\u00f1or Ibarra. We have heard of your studies in Europe."
+                    "Welcome home, Señor Ibarra. We have heard of your studies in Europe."
                   ]
                 },
                 {
                   "lines": [
                     "Good evening. Capitan Tiago must be pleased to see you safely returned."
+                  ]
+                }
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_gentleman][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_gentleman][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_gentleman][en] Default dialogue."
                   ]
                 }
               ]
@@ -239,17 +463,49 @@
               "dialogueVariations": [
                 {
                   "lines": [
-                    "Ah, Se\u00f1or Ibarra. Isang karangalang makilala kayo."
+                    "Ah, Señor Ibarra. Isang karangalang makilala kayo."
                   ]
                 },
                 {
                   "lines": [
-                    "Maligayang pagbabalik, Se\u00f1or Ibarra. Nabalitaan namin ang inyong pag-aaral sa Europa."
+                    "Maligayang pagbabalik, Señor Ibarra. Nabalitaan namin ang inyong pag-aaral sa Europa."
                   ]
                 },
                 {
                   "lines": [
                     "Magandang gabi. Tiyak na natutuwa si Kapitan Tiago sa inyong ligtas na pagbabalik."
+                  ]
+                }
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_gentleman][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_gentleman][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_gentleman][fil] Default dialogue."
                   ]
                 }
               ]
@@ -280,6 +536,38 @@
                 "Pardon me. I must carry these dishes to the dining table."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_house_servant][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_house_servant][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_house_servant][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -299,6 +587,38 @@
             {
               "lines": [
                 "Paumanhin. Kailangan kong dalhin ang mga putahe sa hapag-kainan."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_house_servant][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_house_servant][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_house_servant][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -327,6 +647,38 @@
                 "Another piece after this one, unless they finally call everyone to dinner."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_musician][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_musician][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_musician][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -346,6 +698,38 @@
             {
               "lines": [
                 "Isa pang tugtugin pagkatapos nito, maliban kung tawagin na rin sa wakas ang lahat para sa hapunan."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_musician][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_musician][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_musician][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -374,6 +758,38 @@
                 "I should remember who attended tonight. The names may become useful later."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_newspaper_reporter][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_newspaper_reporter][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_newspaper_reporter][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -393,6 +809,38 @@
             {
               "lines": [
                 "Dapat kong tandaan kung sino ang mga dumalo ngayong gabi. Maaaring mapakinabangan ang mga pangalan nila balang araw."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_newspaper_reporter][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_newspaper_reporter][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_newspaper_reporter][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -421,6 +869,38 @@
                 "I know several people here by face, though very few by name."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_shopkeeper][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_shopkeeper][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_shopkeeper][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -440,6 +920,38 @@
             {
               "lines": [
                 "Kilala ko sa mukha ang ilan sa mga narito, bagaman kakaunti lamang ang kilala ko sa pangalan."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_shopkeeper][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_shopkeeper][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_shopkeeper][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
@@ -480,6 +992,38 @@
                 }
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_spanish_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_spanish_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_spanish_guest][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -513,6 +1057,38 @@
                 }
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_spanish_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_spanish_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_spanish_guest][fil] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -539,6 +1115,38 @@
                 "Please excuse me. This dish must be served while it is still hot."
               ]
             }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_waiter][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_waiter][en] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_waiter][en] Default dialogue."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -558,6 +1166,38 @@
             {
               "lines": [
                 "Paumanhin po. Kailangang ihain ang putaheng ito habang mainit pa."
+              ]
+            }
+          ],
+          "chapterDialogues": [
+            {
+              "chapterId": "chapter_1",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_1][ambient_waiter][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_2",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_2][ambient_waiter][fil] Default dialogue."
+                  ]
+                }
+              ]
+            },
+            {
+              "chapterId": "chapter_3",
+              "dialogueVariations": [
+                {
+                  "lines": [
+                    "[PLACEHOLDER][chapter_3][ambient_waiter][fil] Default dialogue."
+                  ]
+                }
               ]
             }
           ]
